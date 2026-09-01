@@ -1,0 +1,118 @@
+{
+  "ar": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "de": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "es": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "fr": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "hi": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "it": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "pt": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "tr": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ],
+
+  "ur": [
+    "appName",
+    "ofTotal",
+    "transactionCount",
+    "amountRequired",
+    "titleRequired",
+    "budgetUsed",
+    "monthsToGo",
+    "paidOff",
+    "dueInDays",
+    "memberSince"
+  ]
+}
