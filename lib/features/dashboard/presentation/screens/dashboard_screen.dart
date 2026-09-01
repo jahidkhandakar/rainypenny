@@ -21,6 +21,7 @@ import '../../../financial/domain/services/savings_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 import '../../../financial/presentation/widgets/insight_card.dart';
 import '../../../savings/presentation/widgets/savings_goal_card.dart';
+import '../../../transactions/presentation/widgets/transaction_detail_sheet.dart';
 import '../../../transactions/presentation/widgets/transaction_tile.dart';
 import '../widgets/balance_card.dart';
 import '../widgets/dashboard_header.dart';
@@ -238,7 +239,7 @@ class _RecentTransactionsSection extends ConsumerWidget {
                   for (final Transaction transaction in recent)
                     TransactionTile(
                       transaction: transaction,
-                      onTap: () => context.go(AppRoutes.transactions),
+                      onTap: () => showTransactionDetail(context, transaction),
                     ),
                 ],
               );

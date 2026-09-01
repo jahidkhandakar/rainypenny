@@ -16,6 +16,7 @@ class TransactionDraft {
     this.title = '',
     this.note = '',
     this.isSaving = false,
+    this.editingId,
   });
 
   final TransactionType type;
@@ -26,7 +27,12 @@ class TransactionDraft {
   final String note;
   final bool isSaving;
 
+  /// Set when the form is editing an existing row rather than creating one.
+  final String? editingId;
+
   bool get isIncome => type == TransactionType.income;
+
+  bool get isEditing => editingId != null;
 
   bool get isValid => amount > 0 && title.trim().isNotEmpty;
 
@@ -38,6 +44,7 @@ class TransactionDraft {
     String? title,
     String? note,
     bool? isSaving,
+    String? editingId,
   }) {
     return TransactionDraft(
       type: type ?? this.type,
@@ -47,11 +54,12 @@ class TransactionDraft {
       title: title ?? this.title,
       note: note ?? this.note,
       isSaving: isSaving ?? this.isSaving,
+      editingId: editingId ?? this.editingId,
     );
   }
 }
 
-/// Drives the Add Transaction form.
+/// Drives the Add / Edit Transaction form.
 ///
 /// Switching type swaps the category to a sensible default for that type, so
 /// the form is never left in an impossible state.
@@ -65,6 +73,22 @@ class AddTransactionController extends Notifier<TransactionDraft> {
     );
   }
 
+  /// Resets the form back to a blank expense.
+  void reset() => state = build();
+
+  /// Loads an existing row into the form for editing.
+  void startEdit(Transaction transaction) {
+    state = TransactionDraft(
+      type: transaction.type,
+      category: transaction.category,
+      date: transaction.date,
+      amount: transaction.amount,
+      title: transaction.title,
+      note: transaction.note ?? '',
+      editingId: transaction.id,
+    );
+  }
+
   void setType(TransactionType type) {
     if (type == state.type) return;
     final categories = type == TransactionType.income
@@ -73,7 +97,8 @@ class AddTransactionController extends Notifier<TransactionDraft> {
     state = state.copyWith(type: type, category: categories.first);
   }
 
-  void setCategory(Category category) => state = state.copyWith(category: category);
+  void setCategory(Category category) =>
+      state = state.copyWith(category: category);
 
   void setDate(DateTime date) => state = state.copyWith(date: date);
 
@@ -89,8 +114,10 @@ class AddTransactionController extends Notifier<TransactionDraft> {
     state = state.copyWith(isSaving: true);
 
     final draft = state;
+    final repository = ref.read(transactionRepositoryProvider);
+
     final transaction = Transaction(
-      id: 'tx-${DateTime.now().microsecondsSinceEpoch}',
+      id: draft.editingId ?? 'tx-${DateTime.now().microsecondsSinceEpoch}',
       title: draft.title.trim(),
       amount: draft.amount,
       date: draft.date,
@@ -99,9 +126,13 @@ class AddTransactionController extends Notifier<TransactionDraft> {
       note: draft.note.trim().isEmpty ? null : draft.note.trim(),
     );
 
-    await ref.read(transactionRepositoryProvider).addTransaction(transaction);
-    ref.invalidate(transactionsProvider);
+    if (draft.isEditing) {
+      await repository.updateTransaction(transaction);
+    } else {
+      await repository.addTransaction(transaction);
+    }
 
+    ref.invalidate(transactionsProvider);
     state = build();
     return true;
   }
@@ -111,3 +142,24 @@ final addTransactionControllerProvider =
     NotifierProvider<AddTransactionController, TransactionDraft>(
   AddTransactionController.new,
 );
+
+/// Deletes a transaction and refreshes the derived figures. Returns the
+/// removed row so the caller can offer an undo.
+final deleteTransactionProvider =
+    Provider<Future<void> Function(Transaction)>((ref) {
+  return (transaction) async {
+    await ref
+        .read(transactionRepositoryProvider)
+        .deleteTransaction(transaction.id);
+    ref.invalidate(transactionsProvider);
+  };
+});
+
+/// Re-inserts a previously deleted transaction, backing the undo action.
+final restoreTransactionProvider =
+    Provider<Future<void> Function(Transaction)>((ref) {
+  return (transaction) async {
+    await ref.read(transactionRepositoryProvider).addTransaction(transaction);
+    ref.invalidate(transactionsProvider);
+  };
+});

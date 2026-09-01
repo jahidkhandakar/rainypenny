@@ -1,6 +1,7 @@
 /// Every navigable location in the app, in one place.
 abstract final class AppRoutes {
   static const splash = '/';
+  static const signIn = '/sign-in';
 
   // Bottom-navigation branches.
   static const home = '/home';
@@ -15,6 +16,7 @@ abstract final class AppRoutes {
   static const loans = '/loans';
   static const notifications = '/notifications';
   static const settings = '/settings';
+  static const notificationSettings = '/settings/notifications';
 
   /// The four branches, in bottom-navigation order.
   static const branches = [home, transactions, reports, profile];

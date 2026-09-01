@@ -5,6 +5,8 @@ import 'core/localization/generated/app_localizations.dart';
 import 'core/routing/app_router.dart';
 import 'core/settings/settings_providers.dart';
 import 'core/theme/app_theme.dart';
+import 'features/notifications/data/services/local_notification_service.dart';
+import 'features/notifications/presentation/widgets/notification_sync.dart';
 
 class RainyPennyApp extends ConsumerWidget {
   const RainyPennyApp({super.key});
@@ -13,11 +15,15 @@ class RainyPennyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(localeProvider);
     final themeMode = ref.watch(themeModeProvider);
+    final router = ref.watch(appRouterProvider);
+
+    // Tapping a notification deep-links to the screen it is about.
+    LocalNotificationService.onNotificationTapped = router.go;
 
     return MaterialApp.router(
       title: 'RainyPenny',
       debugShowCheckedModeBanner: false,
-      routerConfig: appRouter,
+      routerConfig: router,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: themeMode,
@@ -32,7 +38,9 @@ class RainyPennyApp extends ConsumerWidget {
         );
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaler: scale),
-          child: child ?? const SizedBox.shrink(),
+          // Inside the localisations scope, so notification copy is rendered
+          // in the language the user has chosen.
+          child: NotificationSync(child: child ?? const SizedBox.shrink()),
         );
       },
     );

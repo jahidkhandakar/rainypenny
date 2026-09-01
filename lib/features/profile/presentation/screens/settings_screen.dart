@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/config/app_config.dart';
 import '../../../../core/localization/app_locales.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/settings/settings_providers.dart';
@@ -131,6 +132,24 @@ class SettingsScreen extends ConsumerWidget {
             'Arabic and Urdu switch the whole interface to right-to-left. '
             'Strings that are not translated yet fall back to English.',
             style: AppTypography.caption.copyWith(color: context.textSecondary),
+          ),
+          const SizedBox(height: AppSpacing.xl),
+          // Makes it obvious at a glance whether this build is talking to a
+          // real backend or the bundled demo data.
+          FadeSlideIn(
+            index: 3,
+            child: SettingsGroup(
+              title: l10n.dataSource,
+              children: [
+                SettingsTile(
+                  icon: AppConfig.hasBackend
+                      ? Icons.cloud_done_outlined
+                      : Icons.science_outlined,
+                  label: AppConfig.backendLabel,
+                  value: AppConfig.hasBackend ? 'Live' : 'Offline',
+                ),
+              ],
+            ),
           ),
         ],
       ),

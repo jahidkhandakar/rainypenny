@@ -6,13 +6,14 @@ import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../../core/settings/settings_providers.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
 import '../../../financial/data/demo_dataset.dart';
-import '../../../financial/domain/entities/category.dart';
 import '../../../financial/domain/entities/transaction.dart';
+import '../../../financial/presentation/widgets/category_picker_sheet.dart';
 import '../controllers/add_transaction_controller.dart';
 
 /// The core interaction: log money in or out in a handful of taps.
@@ -38,6 +39,17 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
   @override
   void initState() {
     super.initState();
+    final draft = ref.read(addTransactionControllerProvider);
+
+    if (draft.isEditing) {
+      // The controller was seeded by the detail sheet; mirror it into the
+      // text fields so the form opens pre-filled.
+      _amountController.text = draft.amount.toStringAsFixed(2);
+      _titleController.text = draft.title;
+      _noteController.text = draft.note;
+      return;
+    }
+
     if (widget.startAsIncome) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         ref
@@ -45,6 +57,12 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
             .setType(TransactionType.income);
       });
     }
+  }
+
+  void _close() {
+    // Drop any half-finished draft so the next Add opens clean.
+    ref.read(addTransactionControllerProvider.notifier).reset();
+    Navigator.of(context).pop();
   }
 
   @override
@@ -61,13 +79,11 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
         ? DemoDataset.incomeCategories
         : DemoDataset.expenseCategories;
 
-    final selected = await showModalBottomSheet<Category>(
-      context: context,
-      isScrollControlled: true,
-      builder: (context) => _CategorySheet(
-        categories: categories,
-        selected: draft.category,
-      ),
+    final selected = await showCategoryPicker(
+      context,
+      categories: categories,
+      title: AppL10n.of(context).selectCategory,
+      selected: draft.category,
     );
 
     if (selected != null) {
@@ -99,11 +115,16 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
       return;
     }
 
+    final wasEditing = draft.isEditing;
     final saved = await controller.submit();
     if (!mounted || !saved) return;
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(l10n.transactionSaved)),
+      SnackBar(
+        content: Text(
+          wasEditing ? l10n.transactionUpdated : l10n.transactionSaved,
+        ),
+      ),
     );
     Navigator.of(context).pop();
   }
@@ -112,7 +133,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
   Widget build(BuildContext context) {
     final l10n = AppL10n.of(context);
     final draft = ref.watch(addTransactionControllerProvider);
-    final money = ref.watch(moneyFormatterProvider);
+    final symbol = ref.watch(currencyProvider).symbol;
     final dates = ref.watch(dateFormatterProvider);
     final accent = draft.isIncome ? AppColors.income : AppColors.primary;
 
@@ -120,9 +141,11 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.close_rounded),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: _close,
         ),
-        title: Text(l10n.addTransaction),
+        title: Text(
+          draft.isEditing ? l10n.editTransaction : l10n.addTransaction,
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -162,7 +185,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              money.format(0).replaceAll(RegExp(r'[\d.,\s]'), ''),
+                              symbol,
                               style: AppTypography.display.copyWith(
                                 fontSize: 30,
                                 color: accent,
@@ -422,91 +445,6 @@ class _SelectorTile extends StatelessWidget {
             size: 20,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _CategorySheet extends StatelessWidget {
-  const _CategorySheet({required this.categories, required this.selected});
-
-  final List<Category> categories;
-  final Category selected;
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppL10n.of(context);
-
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.page,
-          0,
-          AppSpacing.page,
-          AppSpacing.xl,
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              l10n.selectCategory,
-              style: AppTypography.sectionTitle.copyWith(
-                color: context.textPrimary,
-              ),
-            ),
-            const SizedBox(height: AppSpacing.lg),
-            GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: categories.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: AppSpacing.md,
-                crossAxisSpacing: AppSpacing.md,
-                childAspectRatio: 0.86,
-              ),
-              itemBuilder: (context, index) {
-                final category = categories[index];
-                final isSelected = category.id == selected.id;
-                return InkWell(
-                  onTap: () => Navigator.of(context).pop(category),
-                  borderRadius: BorderRadius.circular(AppRadius.md),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconBadge(
-                        icon: iconForCategory(category.icon),
-                        size: 50,
-                        radius: 17,
-                        background: isSelected
-                            ? AppColors.primary
-                            : context.tintFill,
-                        foreground:
-                            isSelected ? Colors.white : AppColors.primary,
-                      ),
-                      const SizedBox(height: AppSpacing.sm),
-                      Text(
-                        category.name,
-                        maxLines: 2,
-                        textAlign: TextAlign.center,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTypography.caption.copyWith(
-                          fontSize: 11,
-                          color: isSelected
-                              ? AppColors.primary
-                              : context.textSecondary,
-                          fontWeight:
-                              isSelected ? FontWeight.w700 : FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
       ),
     );
   }

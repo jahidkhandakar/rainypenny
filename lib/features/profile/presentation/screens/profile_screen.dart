@@ -15,6 +15,7 @@ import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/entrance.dart';
 import '../../../../core/widgets/states.dart';
+import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../financial/domain/entities/user_profile.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 import '../widgets/settings_tile.dart';
@@ -87,7 +88,7 @@ class ProfileScreen extends ConsumerWidget {
                 SettingsTile(
                   icon: Icons.notifications_none_rounded,
                   label: l10n.notifications,
-                  onTap: () => context.push(AppRoutes.notifications),
+                  onTap: () => context.push(AppRoutes.notificationSettings),
                 ),
               ],
             ),
@@ -165,7 +166,7 @@ class ProfileScreen extends ConsumerWidget {
                 icon: Icons.logout_rounded,
                 label: l10n.logOut,
                 danger: true,
-                onTap: () => _comingSoon(context),
+                onTap: () => _signOut(context, ref),
               ),
             ),
           ),
@@ -179,6 +180,31 @@ class ProfileScreen extends ConsumerWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _signOut(BuildContext context, WidgetRef ref) async {
+    final l10n = AppL10n.of(context);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.signOutConfirm),
+        content: Text(l10n.signOutBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(l10n.cancel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: TextButton.styleFrom(foregroundColor: AppColors.error),
+            child: Text(l10n.logOut),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+    // The router redirect takes it from here.
+    await ref.read(authControllerProvider.notifier).signOut();
   }
 
   void _comingSoon(BuildContext context) {

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/localization/generated/app_localizations.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../core/routing/app_routes.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/app_typography.dart';
@@ -25,7 +28,17 @@ class NotificationsScreen extends ConsumerWidget {
     final insights = ref.watch(insightsProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.notifications)),
+      appBar: AppBar(
+        title: Text(l10n.notifications),
+        actions: [
+          IconButton(
+            tooltip: l10n.notificationSettings,
+            icon: const Icon(Icons.tune_rounded),
+            onPressed: () => context.push(AppRoutes.notificationSettings),
+          ),
+          const SizedBox(width: AppSpacing.sm),
+        ],
+      ),
       body: insights.when(
         data: (list) {
           if (list.isEmpty) {
@@ -52,7 +65,7 @@ class NotificationsScreen extends ConsumerWidget {
             ),
             children: [
               if (urgent.isNotEmpty) ...[
-                _GroupLabel(l10n.upcomingPayments),
+                _GroupLabel(l10n.needsAttention),
                 for (var i = 0; i < urgent.length; i++)
                   Padding(
                     padding: const EdgeInsets.only(bottom: AppSpacing.md),

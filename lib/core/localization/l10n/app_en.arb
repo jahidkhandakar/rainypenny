@@ -1,34 +1,46 @@
 {
   "@@locale": "en",
-
   "appName": "RainyPenny",
   "appTagline": "Save for a rainy day",
-
   "navHome": "Home",
   "navTransactions": "Transactions",
   "navAdd": "Add",
   "navReports": "Reports",
   "navProfile": "Profile",
-
   "greetingMorning": "Good morning, {name}",
-  "@greetingMorning": { "placeholders": { "name": { "type": "String" } } },
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingAfternoon": "Good afternoon, {name}",
-  "@greetingAfternoon": { "placeholders": { "name": { "type": "String" } } },
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingEvening": "Good evening, {name}",
-  "@greetingEvening": { "placeholders": { "name": { "type": "String" } } },
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingSubtitle": "Here is your financial overview",
-
   "totalBalance": "Total balance",
   "vsLastPeriod": "vs. last period",
   "income": "Income",
   "expenses": "Expenses",
   "netBalance": "Net balance",
   "lastThirtyDays": "Last 30 days",
-
   "quickActions": "Quick actions",
   "addIncome": "Add income",
   "addExpense": "Add expense",
-
   "spendingOverview": "Spending overview",
   "recentTransactions": "Recent transactions",
   "seeAll": "See all",
@@ -38,8 +50,13 @@
   "financialInsight": "Financial insight",
   "financialHealth": "Financial health",
   "ofTotal": "of {total}",
-  "@ofTotal": { "placeholders": { "total": { "type": "String" } } },
-
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
   "searchTransactions": "Search transactions",
   "filterAll": "All",
   "filterIncome": "Income",
@@ -49,8 +66,13 @@
   "noTransactionsTitle": "No transactions found",
   "noTransactionsBody": "Try a different search or filter to see more of your activity.",
   "transactionCount": "{count, plural, =0{No transactions} =1{1 transaction} other{{count} transactions}}",
-  "@transactionCount": { "placeholders": { "count": { "type": "int" } } },
-
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "addTransaction": "Add transaction",
   "amount": "Amount",
   "category": "Category",
@@ -65,18 +87,22 @@
   "titleRequired": "Give this transaction a name",
   "descriptionLabel": "Description",
   "descriptionHint": "e.g. Groceries",
-
   "budget": "Budget",
   "budgets": "Budgets",
   "totalBudget": "Total budget",
   "spent": "Spent",
   "remaining": "Remaining",
   "budgetUsed": "{percent}% used",
-  "@budgetUsed": { "placeholders": { "percent": { "type": "int" } } },
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "onTrack": "On track",
   "approachingLimit": "Approaching limit",
   "overBudget": "Over budget",
-
   "savings": "Savings",
   "yourGoals": "Your goals",
   "saved": "Saved",
@@ -85,20 +111,36 @@
   "addFunds": "Add funds",
   "goalComplete": "Goal reached",
   "monthsToGo": "{count, plural, =1{1 month to go} other{{count} months to go}}",
-  "@monthsToGo": { "placeholders": { "count": { "type": "int" } } },
-
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "loansAndDebts": "Loans & debts",
   "totalOutstanding": "Total outstanding",
   "monthlyPayment": "Monthly",
   "nextPayment": "Next payment",
   "paidOff": "{percent}% paid off",
-  "@paidOff": { "placeholders": { "percent": { "type": "int" } } },
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "interestRate": "Interest",
   "upcomingPayments": "Upcoming payments",
   "dueInDays": "{count, plural, =0{Due today} =1{Due tomorrow} other{Due in {count} days}}",
-  "@dueInDays": { "placeholders": { "count": { "type": "int" } } },
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "overdue": "Overdue",
-
   "reports": "Reports",
   "week": "Week",
   "month": "Month",
@@ -108,7 +150,6 @@
   "budgetPerformance": "Budget performance",
   "insights": "Insights",
   "savingsRate": "Savings rate",
-
   "profile": "Profile",
   "account": "Account",
   "personalInformation": "Personal information",
@@ -125,22 +166,355 @@
   "termsAndConditions": "Terms & conditions",
   "logOut": "Log out",
   "memberSince": "Member since {date}",
-  "@memberSince": { "placeholders": { "date": { "type": "String" } } },
-
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "themeSystem": "System",
   "themeLight": "Light",
   "themeDark": "Dark",
-
   "dashboard": "Dashboard",
   "settings": "Settings",
   "noNotificationsTitle": "You are all caught up",
   "noNotificationsBody": "New insights and reminders will show up here.",
-
   "cancel": "Cancel",
   "save": "Save",
   "done": "Done",
   "retry": "Retry",
   "close": "Close",
   "somethingWentWrong": "Something went wrong",
-  "comingSoon": "Coming soon in the full release"
+  "comingSoon": "Coming soon in the full release",
+  "edit": "Edit",
+  "delete": "Delete",
+  "undo": "Undo",
+  "add": "Add",
+  "create": "Create",
+  "nameRequired": "Give this a name",
+  "amountAboveZero": "Enter an amount greater than zero",
+  "editTransaction": "Edit transaction",
+  "deleteTransaction": "Delete transaction?",
+  "deleteTransactionBody": "{title} will be removed from your ledger.",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "transactionDeleted": "Transaction deleted",
+  "transactionUpdated": "Transaction updated",
+  "newBudget": "New budget",
+  "editBudget": "Edit budget",
+  "budgetLimit": "Monthly limit",
+  "deleteBudget": "Delete budget?",
+  "deleteBudgetBody": "The {category} budget will be removed. Your transactions are not affected.",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetSaved": "Budget saved",
+  "budgetDeleted": "Budget deleted",
+  "allCategoriesBudgeted": "Every category already has a budget",
+  "noBudgetsTitle": "No budgets yet",
+  "noBudgetsBody": "Set a monthly limit on a category to start tracking it.",
+  "newGoal": "New goal",
+  "editGoal": "Edit goal",
+  "goalName": "Goal name",
+  "goalNameHint": "e.g. Emergency fund",
+  "targetAmount": "Target amount",
+  "alreadySaved": "Already saved",
+  "deleteGoal": "Delete goal?",
+  "deleteGoalBody": "{name} and its progress will be removed.",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "goalSaved": "Goal saved",
+  "goalDeleted": "Goal deleted",
+  "noGoalsTitle": "No savings goals yet",
+  "noGoalsBody": "Set a target and RainyPenny will track your progress.",
+  "fundsAdded": "Funds added",
+  "newDebt": "New loan or card",
+  "editDebt": "Edit loan",
+  "debtName": "Name",
+  "debtNameHint": "e.g. Car loan",
+  "lender": "Lender",
+  "lenderHint": "e.g. Meridian Bank",
+  "originalAmount": "Original amount",
+  "creditLimit": "Credit limit",
+  "remainingBalance": "Remaining balance",
+  "interestRatePercent": "Interest rate (%)",
+  "kindLoan": "Loan",
+  "kindCreditCard": "Credit card",
+  "recordPayment": "Record payment",
+  "paymentRecorded": "Payment recorded",
+  "deleteDebt": "Delete this debt?",
+  "deleteDebtBody": "{name} will be removed from your debts.",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "debtSaved": "Saved",
+  "debtDeleted": "Deleted",
+  "noDebtsTitle": "No debts tracked",
+  "noDebtsBody": "Add a loan or credit card to keep an eye on repayments.",
+  "insightBudgetExceededTitle": "{subject} budget exceeded",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "You are {amount} over your {subject} budget for this period.",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingTitle": "{subject} is close to its limit",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "Your {subject} budget is {percent}% used, with {amount} left.",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "insightOverIncomeTitle": "Spending is above income",
+  "insightOverIncomeBody": "You spent more than you earned this period. Review your largest categories to bring things back in line.",
+  "insightCategoryUpTitle": "{subject} spending is up",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightCategoryUpBody": "Your {subject} spending is {percent}% higher than the previous period.",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "Spending is trending down",
+  "insightTrendDownBody": "Overall spending is {percent}% lower than the previous period.",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "Spending is trending up",
+  "insightTrendUpBody": "Overall spending is {percent}% higher than the previous period.",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "Strong savings this period",
+  "insightSavingsStrongBody": "You kept {percent}% of your income — well above the {target}% target.",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsLowTitle": "Savings rate is below target",
+  "insightSavingsLowBody": "You kept {percent}% of your income this period. Aim for {target}%.",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "{subject} is nearly funded",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalNearlyBody": "Only {amount} left to reach {subject}.",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "On track for {subject}",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "At {amount} a month you will reach this goal in {months, plural, =1{1 month} other{{months} months}}.",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtOverdueTitle": "{subject} payment overdue",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "The {subject} payment of {amount} is {days, plural, =1{1 day} other{{days} days}} overdue.",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "{subject} payment coming up",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "{amount} is due {days, plural, =0{today} =1{tomorrow} other{in {days} days}}.",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "signIn": "Sign in",
+  "signUp": "Create account",
+  "signInSubtitle": "Welcome back. Your money is waiting.",
+  "signUpSubtitle": "A few details and you are set up.",
+  "emailLabel": "Email",
+  "emailHint": "you@email.com",
+  "passwordLabel": "Password",
+  "passwordHint": "At least 8 characters",
+  "fullNameLabel": "Full name",
+  "fullNameHint": "Alex Morgan",
+  "forgotPassword": "Forgot password?",
+  "resetSent": "Check your inbox for a reset link",
+  "noAccountYet": "New here?",
+  "haveAccount": "Already have an account?",
+  "emailInvalid": "Enter a valid email address",
+  "passwordTooShort": "Use at least 8 characters",
+  "signOutConfirm": "Sign out?",
+  "signOutBody": "You will need to sign in again to see your finances.",
+  "dataSource": "Data source",
+  "insightWeeklySummaryTitle": "Your week in review",
+  "insightWeeklySummaryBody": "See where your money went this week and how your budgets are holding up.",
+  "notificationSettings": "Notifications",
+  "alertsSection": "Alerts",
+  "budgetAlerts": "Budget alerts",
+  "budgetAlertsBody": "When a budget nears or passes its limit",
+  "paymentReminders": "Payment reminders",
+  "paymentRemindersBody": "A few days before a payment falls due",
+  "savingsUpdates": "Savings updates",
+  "savingsUpdatesBody": "Progress towards your goals",
+  "weeklySummaryLabel": "Weekly summary",
+  "weeklySummaryBody": "A digest of the week just gone",
+  "scheduleSection": "Timing",
+  "reminderTime": "Reminder time",
+  "quietHours": "Quiet hours",
+  "quietHoursValue": "{start} – {end}",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDay": "Summary day",
+  "permissionRequired": "Notifications are turned off",
+  "permissionRequiredBody": "Allow notifications so RainyPenny can warn you before a budget or a payment gets away from you.",
+  "allowNotifications": "Allow notifications",
+  "permissionDenied": "Notifications are blocked. You can turn them on in your device settings.",
+  "upcomingAlerts": "Scheduled",
+  "noScheduledAlerts": "Nothing scheduled right now",
+  "noScheduledAlertsBody": "Alerts appear here as your budgets and payments approach their limits.",
+  "scheduledFor": "Scheduled for {date}",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "everyWeek": "Every week",
+  "allNotificationsOff": "All notifications are off",
+  "needsAttention": "Needs attention"
 }

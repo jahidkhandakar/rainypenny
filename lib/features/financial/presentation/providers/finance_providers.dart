@@ -189,7 +189,6 @@ final insightsProvider = FutureProvider<List<Insight>>((ref) async {
   final budgets = await ref.watch(budgetsProvider.future);
   final goals = await ref.watch(savingsGoalsProvider.future);
   final loans = await ref.watch(loansProvider.future);
-  final profile = await ref.watch(profileProvider.future);
 
   return InsightEngine.generate(
     summary: summary,
@@ -197,7 +196,6 @@ final insightsProvider = FutureProvider<List<Insight>>((ref) async {
     goals: goals,
     loans: loans,
     now: DateTime.now(),
-    currencySymbol: profile.currencySymbol,
   );
 });
 

@@ -1,11 +1,11 @@
-import '../../../financial/data/datasources/mock_finance_data_source.dart';
+import '../../../financial/data/datasources/finance_data_source.dart';
 import '../../../financial/domain/entities/budget.dart';
 import '../../domain/repositories/budget_repository.dart';
 
-class MockBudgetRepository implements BudgetRepository {
-  MockBudgetRepository(this._dataSource);
+class BudgetRepositoryImpl implements BudgetRepository {
+  BudgetRepositoryImpl(this._dataSource);
 
-  final MockFinanceDataSource _dataSource;
+  final FinanceDataSource _dataSource;
 
   @override
   Future<List<Budget>> getBudgets(Map<String, double> spendByCategoryId) =>

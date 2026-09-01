@@ -20,6 +20,26 @@ class SavingsGoal {
   final DateTime targetDate;
   final double monthlyContribution;
 
+  SavingsGoal copyWith({
+    String? id,
+    String? name,
+    double? saved,
+    double? target,
+    CategoryIcon? icon,
+    DateTime? targetDate,
+    double? monthlyContribution,
+  }) {
+    return SavingsGoal(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      saved: saved ?? this.saved,
+      target: target ?? this.target,
+      icon: icon ?? this.icon,
+      targetDate: targetDate ?? this.targetDate,
+      monthlyContribution: monthlyContribution ?? this.monthlyContribution,
+    );
+  }
+
   double get remaining => (target - saved).clamp(0, double.infinity);
 
   double get progress => target <= 0 ? 0 : (saved / target).clamp(0.0, 1.0);

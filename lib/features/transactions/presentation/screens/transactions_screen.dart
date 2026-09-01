@@ -14,6 +14,7 @@ import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/entrance.dart';
 import '../../../../core/widgets/states.dart';
 import '../controllers/transaction_list_controller.dart';
+import '../widgets/transaction_detail_sheet.dart';
 import '../widgets/transaction_tile.dart';
 
 /// The full ledger: search, type filter and day grouping.
@@ -306,6 +307,7 @@ class _DayGroup extends ConsumerWidget {
                   TransactionTile(
                     transaction: transaction,
                     showDate: false,
+                    onTap: () => showTransactionDetail(context, transaction),
                   ),
               ],
             ),

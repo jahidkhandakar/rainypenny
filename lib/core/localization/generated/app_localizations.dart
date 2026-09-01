@@ -814,6 +814,766 @@ abstract class AppL10n {
   /// In en, this message translates to:
   /// **'Coming soon in the full release'**
   String get comingSoon;
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @undo.
+  ///
+  /// In en, this message translates to:
+  /// **'Undo'**
+  String get undo;
+
+  /// No description provided for @add.
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// No description provided for @create.
+  ///
+  /// In en, this message translates to:
+  /// **'Create'**
+  String get create;
+
+  /// No description provided for @nameRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Give this a name'**
+  String get nameRequired;
+
+  /// No description provided for @amountAboveZero.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an amount greater than zero'**
+  String get amountAboveZero;
+
+  /// No description provided for @editTransaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit transaction'**
+  String get editTransaction;
+
+  /// No description provided for @deleteTransaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete transaction?'**
+  String get deleteTransaction;
+
+  /// No description provided for @deleteTransactionBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{title} will be removed from your ledger.'**
+  String deleteTransactionBody(String title);
+
+  /// No description provided for @transactionDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction deleted'**
+  String get transactionDeleted;
+
+  /// No description provided for @transactionUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction updated'**
+  String get transactionUpdated;
+
+  /// No description provided for @newBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'New budget'**
+  String get newBudget;
+
+  /// No description provided for @editBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit budget'**
+  String get editBudget;
+
+  /// No description provided for @budgetLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly limit'**
+  String get budgetLimit;
+
+  /// No description provided for @deleteBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete budget?'**
+  String get deleteBudget;
+
+  /// No description provided for @deleteBudgetBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The {category} budget will be removed. Your transactions are not affected.'**
+  String deleteBudgetBody(String category);
+
+  /// No description provided for @budgetSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Budget saved'**
+  String get budgetSaved;
+
+  /// No description provided for @budgetDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Budget deleted'**
+  String get budgetDeleted;
+
+  /// No description provided for @allCategoriesBudgeted.
+  ///
+  /// In en, this message translates to:
+  /// **'Every category already has a budget'**
+  String get allCategoriesBudgeted;
+
+  /// No description provided for @noBudgetsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No budgets yet'**
+  String get noBudgetsTitle;
+
+  /// No description provided for @noBudgetsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a monthly limit on a category to start tracking it.'**
+  String get noBudgetsBody;
+
+  /// No description provided for @newGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'New goal'**
+  String get newGoal;
+
+  /// No description provided for @editGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit goal'**
+  String get editGoal;
+
+  /// No description provided for @goalName.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal name'**
+  String get goalName;
+
+  /// No description provided for @goalNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Emergency fund'**
+  String get goalNameHint;
+
+  /// No description provided for @targetAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Target amount'**
+  String get targetAmount;
+
+  /// No description provided for @alreadySaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Already saved'**
+  String get alreadySaved;
+
+  /// No description provided for @deleteGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete goal?'**
+  String get deleteGoal;
+
+  /// No description provided for @deleteGoalBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} and its progress will be removed.'**
+  String deleteGoalBody(String name);
+
+  /// No description provided for @goalSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal saved'**
+  String get goalSaved;
+
+  /// No description provided for @goalDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal deleted'**
+  String get goalDeleted;
+
+  /// No description provided for @noGoalsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No savings goals yet'**
+  String get noGoalsTitle;
+
+  /// No description provided for @noGoalsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a target and RainyPenny will track your progress.'**
+  String get noGoalsBody;
+
+  /// No description provided for @fundsAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'Funds added'**
+  String get fundsAdded;
+
+  /// No description provided for @newDebt.
+  ///
+  /// In en, this message translates to:
+  /// **'New loan or card'**
+  String get newDebt;
+
+  /// No description provided for @editDebt.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit loan'**
+  String get editDebt;
+
+  /// No description provided for @debtName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get debtName;
+
+  /// No description provided for @debtNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Car loan'**
+  String get debtNameHint;
+
+  /// No description provided for @lender.
+  ///
+  /// In en, this message translates to:
+  /// **'Lender'**
+  String get lender;
+
+  /// No description provided for @lenderHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Meridian Bank'**
+  String get lenderHint;
+
+  /// No description provided for @originalAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Original amount'**
+  String get originalAmount;
+
+  /// No description provided for @creditLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'Credit limit'**
+  String get creditLimit;
+
+  /// No description provided for @remainingBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Remaining balance'**
+  String get remainingBalance;
+
+  /// No description provided for @interestRatePercent.
+  ///
+  /// In en, this message translates to:
+  /// **'Interest rate (%)'**
+  String get interestRatePercent;
+
+  /// No description provided for @kindLoan.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan'**
+  String get kindLoan;
+
+  /// No description provided for @kindCreditCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Credit card'**
+  String get kindCreditCard;
+
+  /// No description provided for @recordPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Record payment'**
+  String get recordPayment;
+
+  /// No description provided for @paymentRecorded.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment recorded'**
+  String get paymentRecorded;
+
+  /// No description provided for @deleteDebt.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete this debt?'**
+  String get deleteDebt;
+
+  /// No description provided for @deleteDebtBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} will be removed from your debts.'**
+  String deleteDebtBody(String name);
+
+  /// No description provided for @debtSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get debtSaved;
+
+  /// No description provided for @debtDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Deleted'**
+  String get debtDeleted;
+
+  /// No description provided for @noDebtsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No debts tracked'**
+  String get noDebtsTitle;
+
+  /// No description provided for @noDebtsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a loan or credit card to keep an eye on repayments.'**
+  String get noDebtsBody;
+
+  /// No description provided for @insightBudgetExceededTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} budget exceeded'**
+  String insightBudgetExceededTitle(String subject);
+
+  /// No description provided for @insightBudgetExceededBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You are {amount} over your {subject} budget for this period.'**
+  String insightBudgetExceededBody(String amount, String subject);
+
+  /// No description provided for @insightBudgetApproachingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} is close to its limit'**
+  String insightBudgetApproachingTitle(String subject);
+
+  /// No description provided for @insightBudgetApproachingBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your {subject} budget is {percent}% used, with {amount} left.'**
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  );
+
+  /// No description provided for @insightOverIncomeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Spending is above income'**
+  String get insightOverIncomeTitle;
+
+  /// No description provided for @insightOverIncomeBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You spent more than you earned this period. Review your largest categories to bring things back in line.'**
+  String get insightOverIncomeBody;
+
+  /// No description provided for @insightCategoryUpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} spending is up'**
+  String insightCategoryUpTitle(String subject);
+
+  /// No description provided for @insightCategoryUpBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your {subject} spending is {percent}% higher than the previous period.'**
+  String insightCategoryUpBody(String subject, int percent);
+
+  /// No description provided for @insightTrendDownTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Spending is trending down'**
+  String get insightTrendDownTitle;
+
+  /// No description provided for @insightTrendDownBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Overall spending is {percent}% lower than the previous period.'**
+  String insightTrendDownBody(int percent);
+
+  /// No description provided for @insightTrendUpTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Spending is trending up'**
+  String get insightTrendUpTitle;
+
+  /// No description provided for @insightTrendUpBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Overall spending is {percent}% higher than the previous period.'**
+  String insightTrendUpBody(int percent);
+
+  /// No description provided for @insightSavingsStrongTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Strong savings this period'**
+  String get insightSavingsStrongTitle;
+
+  /// No description provided for @insightSavingsStrongBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You kept {percent}% of your income — well above the {target}% target.'**
+  String insightSavingsStrongBody(int percent, int target);
+
+  /// No description provided for @insightSavingsLowTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Savings rate is below target'**
+  String get insightSavingsLowTitle;
+
+  /// No description provided for @insightSavingsLowBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You kept {percent}% of your income this period. Aim for {target}%.'**
+  String insightSavingsLowBody(int percent, int target);
+
+  /// No description provided for @insightGoalNearlyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} is nearly funded'**
+  String insightGoalNearlyTitle(String subject);
+
+  /// No description provided for @insightGoalNearlyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Only {amount} left to reach {subject}.'**
+  String insightGoalNearlyBody(String amount, String subject);
+
+  /// No description provided for @insightGoalOnTrackTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'On track for {subject}'**
+  String insightGoalOnTrackTitle(String subject);
+
+  /// No description provided for @insightGoalOnTrackBody.
+  ///
+  /// In en, this message translates to:
+  /// **'At {amount} a month you will reach this goal in {months, plural, =1{1 month} other{{months} months}}.'**
+  String insightGoalOnTrackBody(String amount, int months);
+
+  /// No description provided for @insightDebtOverdueTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} payment overdue'**
+  String insightDebtOverdueTitle(String subject);
+
+  /// No description provided for @insightDebtOverdueBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The {subject} payment of {amount} is {days, plural, =1{1 day} other{{days} days}} overdue.'**
+  String insightDebtOverdueBody(String subject, String amount, int days);
+
+  /// No description provided for @insightDebtDueTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{subject} payment coming up'**
+  String insightDebtDueTitle(String subject);
+
+  /// No description provided for @insightDebtDueBody.
+  ///
+  /// In en, this message translates to:
+  /// **'{amount} is due {days, plural, =0{today} =1{tomorrow} other{in {days} days}}.'**
+  String insightDebtDueBody(String amount, int days);
+
+  /// No description provided for @signIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get signIn;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get signUp;
+
+  /// No description provided for @signInSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome back. Your money is waiting.'**
+  String get signInSubtitle;
+
+  /// No description provided for @signUpSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'A few details and you are set up.'**
+  String get signUpSubtitle;
+
+  /// No description provided for @emailLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get emailLabel;
+
+  /// No description provided for @emailHint.
+  ///
+  /// In en, this message translates to:
+  /// **'you@email.com'**
+  String get emailHint;
+
+  /// No description provided for @passwordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get passwordLabel;
+
+  /// No description provided for @passwordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters'**
+  String get passwordHint;
+
+  /// No description provided for @fullNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullNameLabel;
+
+  /// No description provided for @fullNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Alex Morgan'**
+  String get fullNameHint;
+
+  /// No description provided for @forgotPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password?'**
+  String get forgotPassword;
+
+  /// No description provided for @resetSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your inbox for a reset link'**
+  String get resetSent;
+
+  /// No description provided for @noAccountYet.
+  ///
+  /// In en, this message translates to:
+  /// **'New here?'**
+  String get noAccountYet;
+
+  /// No description provided for @haveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get haveAccount;
+
+  /// No description provided for @emailInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email address'**
+  String get emailInvalid;
+
+  /// No description provided for @passwordTooShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Use at least 8 characters'**
+  String get passwordTooShort;
+
+  /// No description provided for @signOutConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out?'**
+  String get signOutConfirm;
+
+  /// No description provided for @signOutBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You will need to sign in again to see your finances.'**
+  String get signOutBody;
+
+  /// No description provided for @dataSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Data source'**
+  String get dataSource;
+
+  /// No description provided for @insightWeeklySummaryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your week in review'**
+  String get insightWeeklySummaryTitle;
+
+  /// No description provided for @insightWeeklySummaryBody.
+  ///
+  /// In en, this message translates to:
+  /// **'See where your money went this week and how your budgets are holding up.'**
+  String get insightWeeklySummaryBody;
+
+  /// No description provided for @notificationSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notificationSettings;
+
+  /// No description provided for @alertsSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Alerts'**
+  String get alertsSection;
+
+  /// No description provided for @budgetAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'Budget alerts'**
+  String get budgetAlerts;
+
+  /// No description provided for @budgetAlertsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'When a budget nears or passes its limit'**
+  String get budgetAlertsBody;
+
+  /// No description provided for @paymentReminders.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment reminders'**
+  String get paymentReminders;
+
+  /// No description provided for @paymentRemindersBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A few days before a payment falls due'**
+  String get paymentRemindersBody;
+
+  /// No description provided for @savingsUpdates.
+  ///
+  /// In en, this message translates to:
+  /// **'Savings updates'**
+  String get savingsUpdates;
+
+  /// No description provided for @savingsUpdatesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress towards your goals'**
+  String get savingsUpdatesBody;
+
+  /// No description provided for @weeklySummaryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly summary'**
+  String get weeklySummaryLabel;
+
+  /// No description provided for @weeklySummaryBody.
+  ///
+  /// In en, this message translates to:
+  /// **'A digest of the week just gone'**
+  String get weeklySummaryBody;
+
+  /// No description provided for @scheduleSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Timing'**
+  String get scheduleSection;
+
+  /// No description provided for @reminderTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder time'**
+  String get reminderTime;
+
+  /// No description provided for @quietHours.
+  ///
+  /// In en, this message translates to:
+  /// **'Quiet hours'**
+  String get quietHours;
+
+  /// No description provided for @quietHoursValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{start} – {end}'**
+  String quietHoursValue(String start, String end);
+
+  /// No description provided for @summaryDay.
+  ///
+  /// In en, this message translates to:
+  /// **'Summary day'**
+  String get summaryDay;
+
+  /// No description provided for @permissionRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications are turned off'**
+  String get permissionRequired;
+
+  /// No description provided for @permissionRequiredBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow notifications so RainyPenny can warn you before a budget or a payment gets away from you.'**
+  String get permissionRequiredBody;
+
+  /// No description provided for @allowNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow notifications'**
+  String get allowNotifications;
+
+  /// No description provided for @permissionDenied.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications are blocked. You can turn them on in your device settings.'**
+  String get permissionDenied;
+
+  /// No description provided for @upcomingAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'Scheduled'**
+  String get upcomingAlerts;
+
+  /// No description provided for @noScheduledAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing scheduled right now'**
+  String get noScheduledAlerts;
+
+  /// No description provided for @noScheduledAlertsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Alerts appear here as your budgets and payments approach their limits.'**
+  String get noScheduledAlertsBody;
+
+  /// No description provided for @scheduledFor.
+  ///
+  /// In en, this message translates to:
+  /// **'Scheduled for {date}'**
+  String scheduledFor(String date);
+
+  /// No description provided for @everyWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'Every week'**
+  String get everyWeek;
+
+  /// No description provided for @allNotificationsOff.
+  ///
+  /// In en, this message translates to:
+  /// **'All notifications are off'**
+  String get allNotificationsOff;
+
+  /// No description provided for @needsAttention.
+  ///
+  /// In en, this message translates to:
+  /// **'Needs attention'**
+  String get needsAttention;
 }
 
 class _AppL10nDelegate extends LocalizationsDelegate<AppL10n> {

@@ -18,6 +18,7 @@ import '../../../financial/domain/entities/loan.dart';
 import '../../../financial/domain/rules/debt_rules.dart';
 import '../../../financial/domain/services/debt_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
+import '../widgets/loan_editor_sheet.dart';
 
 /// Debt tracking. Serious in tone — deep blue and charcoal — but never
 /// alarming: red appears only when a payment is actually overdue.
@@ -30,7 +31,17 @@ class LoansScreen extends ConsumerWidget {
     final loans = ref.watch(loansProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.loansAndDebts)),
+      appBar: AppBar(
+        title: Text(l10n.loansAndDebts),
+        actions: [
+          IconButton(
+            tooltip: l10n.newDebt,
+            icon: const Icon(Icons.add_rounded),
+            onPressed: () => showLoanEditor(context),
+          ),
+          const SizedBox(width: AppSpacing.sm),
+        ],
+      ),
       body: loans.when(
         data: (list) => ListView(
           padding: const EdgeInsets.fromLTRB(
@@ -57,8 +68,10 @@ class LoansScreen extends ConsumerWidget {
             if (list.isEmpty)
               EmptyState(
                 icon: Icons.account_balance_rounded,
-                title: l10n.loansAndDebts,
-                message: l10n.noNotificationsBody,
+                title: l10n.noDebtsTitle,
+                message: l10n.noDebtsBody,
+                actionLabel: l10n.newDebt,
+                onAction: () => showLoanEditor(context),
               ),
           ],
         ),
@@ -264,6 +277,7 @@ class _LoanCard extends ConsumerWidget {
     final days = loan.daysUntilPayment(DateTime.now());
 
     return AppCard(
+      onTap: () => showLoanEditor(context, loan: loan),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -340,9 +354,22 @@ class _LoanCard extends ConsumerWidget {
             height: 7,
           ),
           const SizedBox(height: AppSpacing.sm),
-          Text(
-            l10n.paidOff(loan.percentPaid),
-            style: AppTypography.caption.copyWith(color: context.textSecondary),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  l10n.paidOff(loan.percentPaid),
+                  style: AppTypography.caption.copyWith(
+                    color: context.textSecondary,
+                  ),
+                ),
+              ),
+              TextButton.icon(
+                onPressed: () => showPaymentSheet(context, loan),
+                icon: const Icon(Icons.payments_outlined, size: 16),
+                label: Text(l10n.recordPayment),
+              ),
+            ],
           ),
         ],
       ),

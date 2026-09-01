@@ -59,13 +59,16 @@ void main() {
       expect(InsightEngine.headline(insights), insights.first);
     });
 
-    test('flags the exceeded budget as critical', () {
+    test('flags the exceeded budget as critical, with the overspend', () {
       final exceeded = budgets.firstWhere((b) => b.isExceeded);
       final match = insights.firstWhere(
         (i) => i.id == 'budget-exceeded-${exceeded.id}',
       );
+      expect(match.code, InsightCode.budgetExceeded);
       expect(match.level, InsightLevel.critical);
       expect(match.topic, InsightTopic.budget);
+      expect(match.subject, exceeded.category.name);
+      expect(match.amount, closeTo(exceeded.spent - exceeded.limit, 0.001));
     });
 
     test('reports the category that rose most against the previous period', () {
@@ -73,8 +76,15 @@ void main() {
         (i) => i.id == 'spending-category-rise',
       );
       // Food is seeded at 742.00 against 628.80 — an 18% increase.
-      expect(rise.title, contains('Food'));
-      expect(rise.message, contains('18%'));
+      expect(rise.code, InsightCode.categorySpendingUp);
+      expect(rise.subject, 'Food & Dining');
+      expect(rise.percent, 18);
+    });
+
+    test('carries raw numbers, never formatted prose', () {
+      for (final insight in insights) {
+        expect(insight.subject, isNot(contains(r'$')));
+      }
     });
 
     test('celebrates a strong savings rate', () {
@@ -89,16 +99,10 @@ void main() {
       expect(insights.any((i) => i.id == 'debt-due-loan-car'), isFalse);
     });
 
-    test('uses the supplied currency symbol', () {
-      final euro = InsightEngine.generate(
-        summary: summary,
-        budgets: budgets,
-        goals: goals,
-        loans: loans,
-        now: now,
-        currencySymbol: '€',
-      );
-      expect(euro.any((i) => i.message.contains('€')), isTrue);
+    test('every emitted code is one the presenter can render', () {
+      for (final insight in insights) {
+        expect(InsightCode.values, contains(insight.code));
+      }
     });
   });
 

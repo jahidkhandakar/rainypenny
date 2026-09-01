@@ -30,6 +30,32 @@ class Loan {
   final double interestRate;
   final CategoryIcon icon;
 
+  Loan copyWith({
+    String? id,
+    String? name,
+    String? lender,
+    LoanKind? kind,
+    double? principal,
+    double? remaining,
+    double? monthlyPayment,
+    DateTime? nextPaymentDate,
+    double? interestRate,
+    CategoryIcon? icon,
+  }) {
+    return Loan(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      lender: lender ?? this.lender,
+      kind: kind ?? this.kind,
+      principal: principal ?? this.principal,
+      remaining: remaining ?? this.remaining,
+      monthlyPayment: monthlyPayment ?? this.monthlyPayment,
+      nextPaymentDate: nextPaymentDate ?? this.nextPaymentDate,
+      interestRate: interestRate ?? this.interestRate,
+      icon: icon ?? this.icon,
+    );
+  }
+
   double get paidOff => (principal - remaining).clamp(0, double.infinity);
 
   double get progress => principal <= 0 ? 0 : (paidOff / principal).clamp(0.0, 1.0);

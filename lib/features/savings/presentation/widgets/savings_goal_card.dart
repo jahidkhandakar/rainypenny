@@ -19,11 +19,13 @@ class SavingsGoalCard extends ConsumerWidget {
     super.key,
     required this.goal,
     this.onAddFunds,
+    this.onTap,
     this.highlighted = false,
   });
 
   final SavingsGoal goal;
   final VoidCallback? onAddFunds;
+  final VoidCallback? onTap;
 
   /// The featured goal on the dashboard gets a tinted surface.
   final bool highlighted;
@@ -35,6 +37,7 @@ class SavingsGoalCard extends ConsumerWidget {
     final l10n = AppL10n.of(context);
 
     return AppCard(
+      onTap: onTap,
       color: highlighted ? context.tintFill : null,
       borderColor: highlighted
           ? AppColors.accent.withValues(alpha: 0.28)

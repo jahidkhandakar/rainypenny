@@ -4,9 +4,17 @@
     {
       "name": "rainypenny-web",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8080", "--bind", "127.0.0.1", "--directory", "build/web"],
-      "port": 8080,
-      "url": "http://127.0.0.1:8080"
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8092",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "build/web"
+      ],
+      "port": 8092,
+      "url": "http://127.0.0.1:8092"
     }
   ]
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../../core/di/providers.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
@@ -15,6 +14,8 @@ import '../../../../core/widgets/states.dart';
 import '../../../financial/domain/entities/savings_goal.dart';
 import '../../../financial/domain/services/savings_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
+import '../controllers/savings_controller.dart';
+import '../widgets/goal_editor_sheet.dart';
 import '../widgets/savings_goal_card.dart';
 
 /// Goals the user is putting money aside for. Deliberately the most
@@ -34,8 +35,11 @@ class SavingsScreen extends ConsumerWidget {
     );
     if (amount == null || amount <= 0) return;
 
-    await ref.read(savingsRepositoryProvider).contribute(goal.id, amount);
-    ref.invalidate(savingsGoalsProvider);
+    await ref.read(savingsControllerProvider).contribute(goal.id, amount);
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(AppL10n.of(context).fundsAdded)),
+    );
   }
 
   @override
@@ -44,7 +48,17 @@ class SavingsScreen extends ConsumerWidget {
     final goals = ref.watch(savingsGoalsProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.savings)),
+      appBar: AppBar(
+        title: Text(l10n.savings),
+        actions: [
+          IconButton(
+            tooltip: l10n.newGoal,
+            icon: const Icon(Icons.add_rounded),
+            onPressed: () => showGoalEditor(context),
+          ),
+          const SizedBox(width: AppSpacing.sm),
+        ],
+      ),
       body: goals.when(
         data: (list) => ListView(
           padding: const EdgeInsets.fromLTRB(
@@ -65,14 +79,17 @@ class SavingsScreen extends ConsumerWidget {
                   child: SavingsGoalCard(
                     goal: list[i],
                     onAddFunds: () => _addFunds(context, ref, list[i]),
+                    onTap: () => showGoalEditor(context, goal: list[i]),
                   ),
                 ),
               ),
             if (list.isEmpty)
               EmptyState(
                 icon: Icons.savings_rounded,
-                title: l10n.savingsGoals,
-                message: l10n.noTransactionsBody,
+                title: l10n.noGoalsTitle,
+                message: l10n.noGoalsBody,
+                actionLabel: l10n.newGoal,
+                onAction: () => showGoalEditor(context),
               ),
           ],
         ),

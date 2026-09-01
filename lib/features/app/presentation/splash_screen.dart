@@ -8,6 +8,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/widgets/brand_mark.dart';
+import '../../auth/presentation/controllers/auth_controller.dart';
 import '../../financial/presentation/providers/finance_providers.dart';
 
 /// Brand moment while the first data load is kicked off.
@@ -36,7 +37,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     ref.read(profileProvider.future).ignore();
 
     Future<void>.delayed(const Duration(milliseconds: 1400), () {
-      if (mounted) context.go(AppRoutes.home);
+      if (!mounted) return;
+      final signedIn = ref.read(currentUserProvider) != null;
+      context.go(signedIn ? AppRoutes.home : AppRoutes.signIn);
     });
   }
 

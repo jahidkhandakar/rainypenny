@@ -1,16 +1,16 @@
-import '../../../financial/data/datasources/mock_finance_data_source.dart';
+import '../../../financial/data/datasources/finance_data_source.dart';
 import '../../../financial/domain/entities/category.dart';
 import '../../../financial/domain/entities/transaction.dart';
 import '../../domain/repositories/transaction_repository.dart';
 
-/// Mock implementation of [TransactionRepository].
+/// Ledger repository.
 ///
-/// Replace with `SupabaseTransactionRepository` — same contract, same call
-/// sites — once the backend is wired up.
-class MockTransactionRepository implements TransactionRepository {
-  MockTransactionRepository(this._dataSource);
+/// Backend-agnostic: it talks to whichever [FinanceDataSource] the composition
+/// root supplies — in-memory for the demo build, Supabase for a configured one.
+class TransactionRepositoryImpl implements TransactionRepository {
+  TransactionRepositoryImpl(this._dataSource);
 
-  final MockFinanceDataSource _dataSource;
+  final FinanceDataSource _dataSource;
 
   @override
   Future<List<Transaction>> getTransactions() => _dataSource.fetchTransactions();

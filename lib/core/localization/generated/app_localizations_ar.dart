@@ -398,4 +398,462 @@ class AppL10nAr extends AppL10n {
 
   @override
   String get comingSoon => 'قريبًا في الإصدار الكامل';
+
+  @override
+  String get edit => 'تعديل';
+
+  @override
+  String get delete => 'حذف';
+
+  @override
+  String get undo => 'تراجع';
+
+  @override
+  String get add => 'إضافة';
+
+  @override
+  String get create => 'إنشاء';
+
+  @override
+  String get nameRequired => 'Give this a name';
+
+  @override
+  String get amountAboveZero => 'Enter an amount greater than zero';
+
+  @override
+  String get editTransaction => 'تعديل المعاملة';
+
+  @override
+  String get deleteTransaction => 'حذف المعاملة؟';
+
+  @override
+  String deleteTransactionBody(String title) {
+    return '$title will be removed from your ledger.';
+  }
+
+  @override
+  String get transactionDeleted => 'تم حذف المعاملة';
+
+  @override
+  String get transactionUpdated => 'تم تحديث المعاملة';
+
+  @override
+  String get newBudget => 'ميزانية جديدة';
+
+  @override
+  String get editBudget => 'تعديل الميزانية';
+
+  @override
+  String get budgetLimit => 'الحد الشهري';
+
+  @override
+  String get deleteBudget => 'Delete budget?';
+
+  @override
+  String deleteBudgetBody(String category) {
+    return 'The $category budget will be removed. Your transactions are not affected.';
+  }
+
+  @override
+  String get budgetSaved => 'تم حفظ الميزانية';
+
+  @override
+  String get budgetDeleted => 'تم حذف الميزانية';
+
+  @override
+  String get allCategoriesBudgeted => 'Every category already has a budget';
+
+  @override
+  String get noBudgetsTitle => 'No budgets yet';
+
+  @override
+  String get noBudgetsBody =>
+      'Set a monthly limit on a category to start tracking it.';
+
+  @override
+  String get newGoal => 'هدف جديد';
+
+  @override
+  String get editGoal => 'تعديل الهدف';
+
+  @override
+  String get goalName => 'اسم الهدف';
+
+  @override
+  String get goalNameHint => 'e.g. Emergency fund';
+
+  @override
+  String get targetAmount => 'المبلغ المستهدف';
+
+  @override
+  String get alreadySaved => 'المدخر حاليًا';
+
+  @override
+  String get deleteGoal => 'Delete goal?';
+
+  @override
+  String deleteGoalBody(String name) {
+    return '$name and its progress will be removed.';
+  }
+
+  @override
+  String get goalSaved => 'تم حفظ الهدف';
+
+  @override
+  String get goalDeleted => 'تم حذف الهدف';
+
+  @override
+  String get noGoalsTitle => 'No savings goals yet';
+
+  @override
+  String get noGoalsBody =>
+      'Set a target and RainyPenny will track your progress.';
+
+  @override
+  String get fundsAdded => 'تمت إضافة المبلغ';
+
+  @override
+  String get newDebt => 'قرض أو بطاقة جديدة';
+
+  @override
+  String get editDebt => 'تعديل القرض';
+
+  @override
+  String get debtName => 'الاسم';
+
+  @override
+  String get debtNameHint => 'e.g. Car loan';
+
+  @override
+  String get lender => 'الجهة المقرضة';
+
+  @override
+  String get lenderHint => 'e.g. Meridian Bank';
+
+  @override
+  String get originalAmount => 'المبلغ الأصلي';
+
+  @override
+  String get creditLimit => 'حد الائتمان';
+
+  @override
+  String get remainingBalance => 'الرصيد المتبقي';
+
+  @override
+  String get interestRatePercent => 'نسبة الفائدة (%)';
+
+  @override
+  String get kindLoan => 'قرض';
+
+  @override
+  String get kindCreditCard => 'بطاقة ائتمان';
+
+  @override
+  String get recordPayment => 'تسجيل دفعة';
+
+  @override
+  String get paymentRecorded => 'تم تسجيل الدفعة';
+
+  @override
+  String get deleteDebt => 'Delete this debt?';
+
+  @override
+  String deleteDebtBody(String name) {
+    return '$name will be removed from your debts.';
+  }
+
+  @override
+  String get debtSaved => 'تم الحفظ';
+
+  @override
+  String get debtDeleted => 'تم الحذف';
+
+  @override
+  String get noDebtsTitle => 'No debts tracked';
+
+  @override
+  String get noDebtsBody =>
+      'Add a loan or credit card to keep an eye on repayments.';
+
+  @override
+  String insightBudgetExceededTitle(String subject) {
+    return 'تم تجاوز ميزانية $subject';
+  }
+
+  @override
+  String insightBudgetExceededBody(String amount, String subject) {
+    return 'لقد تجاوزت ميزانية $subject بمقدار $amount في هذه الفترة.';
+  }
+
+  @override
+  String insightBudgetApproachingTitle(String subject) {
+    return '$subject يقترب من الحد';
+  }
+
+  @override
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  ) {
+    return 'تم استخدام $percent% من ميزانية $subject، وتبقّى $amount.';
+  }
+
+  @override
+  String get insightOverIncomeTitle => 'الإنفاق يتجاوز الدخل';
+
+  @override
+  String get insightOverIncomeBody =>
+      'أنفقت أكثر مما كسبت في هذه الفترة. راجع أكبر فئات الإنفاق لديك.';
+
+  @override
+  String insightCategoryUpTitle(String subject) {
+    return 'ارتفع الإنفاق على $subject';
+  }
+
+  @override
+  String insightCategoryUpBody(String subject, int percent) {
+    return 'إنفاقك على $subject أعلى بنسبة $percent% من الفترة السابقة.';
+  }
+
+  @override
+  String get insightTrendDownTitle => 'الإنفاق في انخفاض';
+
+  @override
+  String insightTrendDownBody(int percent) {
+    return 'إجمالي الإنفاق أقل بنسبة $percent% من الفترة السابقة.';
+  }
+
+  @override
+  String get insightTrendUpTitle => 'الإنفاق في ارتفاع';
+
+  @override
+  String insightTrendUpBody(int percent) {
+    return 'إجمالي الإنفاق أعلى بنسبة $percent% من الفترة السابقة.';
+  }
+
+  @override
+  String get insightSavingsStrongTitle => 'ادخار ممتاز هذه الفترة';
+
+  @override
+  String insightSavingsStrongBody(int percent, int target) {
+    return 'احتفظت بنسبة $percent% من دخلك، وهي أعلى بكثير من هدف $target%.';
+  }
+
+  @override
+  String get insightSavingsLowTitle => 'معدل الادخار دون الهدف';
+
+  @override
+  String insightSavingsLowBody(int percent, int target) {
+    return 'احتفظت بنسبة $percent% من دخلك في هذه الفترة. استهدف $target%.';
+  }
+
+  @override
+  String insightGoalNearlyTitle(String subject) {
+    return '$subject على وشك الاكتمال';
+  }
+
+  @override
+  String insightGoalNearlyBody(String amount, String subject) {
+    return 'لم يتبقَّ سوى $amount للوصول إلى $subject.';
+  }
+
+  @override
+  String insightGoalOnTrackTitle(String subject) {
+    return 'أنت على المسار نحو $subject';
+  }
+
+  @override
+  String insightGoalOnTrackBody(String amount, int months) {
+    String _temp0 = intl.Intl.pluralLogic(
+      months,
+      locale: localeName,
+      other: '$months أشهر',
+      one: 'شهر واحد',
+    );
+    return 'بمبلغ $amount شهريًا ستصل إلى هذا الهدف خلال $_temp0.';
+  }
+
+  @override
+  String insightDebtOverdueTitle(String subject) {
+    return 'دفعة $subject متأخرة';
+  }
+
+  @override
+  String insightDebtOverdueBody(String subject, String amount, int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: '$days أيام',
+      one: 'يوم واحد',
+    );
+    return 'دفعة $subject البالغة $amount متأخرة منذ $_temp0.';
+  }
+
+  @override
+  String insightDebtDueTitle(String subject) {
+    return 'دفعة $subject قادمة';
+  }
+
+  @override
+  String insightDebtDueBody(String amount, int days) {
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: 'خلال $days أيام',
+      one: 'غدًا',
+      zero: 'اليوم',
+    );
+    return 'مبلغ $amount مستحق $_temp0.';
+  }
+
+  @override
+  String get signIn => 'Sign in';
+
+  @override
+  String get signUp => 'Create account';
+
+  @override
+  String get signInSubtitle => 'Welcome back. Your money is waiting.';
+
+  @override
+  String get signUpSubtitle => 'A few details and you are set up.';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get emailHint => 'you@email.com';
+
+  @override
+  String get passwordLabel => 'Password';
+
+  @override
+  String get passwordHint => 'At least 8 characters';
+
+  @override
+  String get fullNameLabel => 'Full name';
+
+  @override
+  String get fullNameHint => 'Alex Morgan';
+
+  @override
+  String get forgotPassword => 'Forgot password?';
+
+  @override
+  String get resetSent => 'Check your inbox for a reset link';
+
+  @override
+  String get noAccountYet => 'New here?';
+
+  @override
+  String get haveAccount => 'Already have an account?';
+
+  @override
+  String get emailInvalid => 'Enter a valid email address';
+
+  @override
+  String get passwordTooShort => 'Use at least 8 characters';
+
+  @override
+  String get signOutConfirm => 'Sign out?';
+
+  @override
+  String get signOutBody =>
+      'You will need to sign in again to see your finances.';
+
+  @override
+  String get dataSource => 'Data source';
+
+  @override
+  String get insightWeeklySummaryTitle => 'أسبوعك في لمحة';
+
+  @override
+  String get insightWeeklySummaryBody =>
+      'اطّلع على أوجه إنفاقك هذا الأسبوع وحالة ميزانياتك.';
+
+  @override
+  String get notificationSettings => 'Notifications';
+
+  @override
+  String get alertsSection => 'Alerts';
+
+  @override
+  String get budgetAlerts => 'Budget alerts';
+
+  @override
+  String get budgetAlertsBody => 'When a budget nears or passes its limit';
+
+  @override
+  String get paymentReminders => 'Payment reminders';
+
+  @override
+  String get paymentRemindersBody => 'A few days before a payment falls due';
+
+  @override
+  String get savingsUpdates => 'Savings updates';
+
+  @override
+  String get savingsUpdatesBody => 'Progress towards your goals';
+
+  @override
+  String get weeklySummaryLabel => 'Weekly summary';
+
+  @override
+  String get weeklySummaryBody => 'A digest of the week just gone';
+
+  @override
+  String get scheduleSection => 'Timing';
+
+  @override
+  String get reminderTime => 'Reminder time';
+
+  @override
+  String get quietHours => 'Quiet hours';
+
+  @override
+  String quietHoursValue(String start, String end) {
+    return '$start – $end';
+  }
+
+  @override
+  String get summaryDay => 'Summary day';
+
+  @override
+  String get permissionRequired => 'Notifications are turned off';
+
+  @override
+  String get permissionRequiredBody =>
+      'Allow notifications so RainyPenny can warn you before a budget or a payment gets away from you.';
+
+  @override
+  String get allowNotifications => 'Allow notifications';
+
+  @override
+  String get permissionDenied =>
+      'Notifications are blocked. You can turn them on in your device settings.';
+
+  @override
+  String get upcomingAlerts => 'Scheduled';
+
+  @override
+  String get noScheduledAlerts => 'Nothing scheduled right now';
+
+  @override
+  String get noScheduledAlertsBody =>
+      'Alerts appear here as your budgets and payments approach their limits.';
+
+  @override
+  String scheduledFor(String date) {
+    return 'Scheduled for $date';
+  }
+
+  @override
+  String get everyWeek => 'Every week';
+
+  @override
+  String get allNotificationsOff => 'All notifications are off';
+
+  @override
+  String get needsAttention => 'يحتاج إلى انتباه';
 }
