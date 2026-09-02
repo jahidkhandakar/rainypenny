@@ -13,6 +13,7 @@ import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/editor_sheet.dart';
 import '../../../financial/domain/entities/budget.dart';
 import '../../../financial/domain/entities/category.dart';
+import '../../../financial/presentation/widgets/category_picker_sheet.dart';
 import '../controllers/budget_controller.dart';
 
 /// Opens the budget editor. Pass [budget] to edit, or [category] to create a
@@ -34,6 +35,34 @@ Future<void> showBudgetEditor(
       category: category ?? budget!.category,
     ),
   );
+}
+
+/// The full "add a budget" flow: choose a category that does not have a limit
+/// yet, then set one.
+///
+/// Lives here rather than on the Budget screen because the quick-action sheet
+/// starts the same flow, and the two must not drift apart.
+Future<void> startAddBudget(BuildContext context, WidgetRef ref) async {
+  final l10n = AppL10n.of(context);
+  final messenger = ScaffoldMessenger.of(context);
+  final available = await ref.read(unbudgetedCategoriesProvider.future);
+
+  if (!context.mounted) return;
+  if (available.isEmpty) {
+    messenger.showSnackBar(
+      SnackBar(content: Text(l10n.allCategoriesBudgeted)),
+    );
+    return;
+  }
+
+  final category = await showCategoryPicker(
+    context,
+    categories: available,
+    title: l10n.selectCategory,
+  );
+  if (category == null || !context.mounted) return;
+
+  await showBudgetEditor(context, category: category);
 }
 
 class _BudgetEditorSheet extends ConsumerStatefulWidget {

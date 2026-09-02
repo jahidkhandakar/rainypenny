@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../features/financial/domain/entities/category.dart';
 import '../../features/financial/domain/entities/insight.dart';
 import '../theme/app_colors.dart';
+import '../theme/app_theme.dart';
 
 /// Maps domain enums onto Material icons.
 ///
@@ -47,14 +48,18 @@ Color colorForInsight(InsightLevel level) {
 
 /// Stable chart colour for a category, so the same category keeps the same
 /// colour across the donut, the legend and the budget bars.
-Color chartColorForCategory(String categoryId, int index) {
-  const byId = <String, Color>{
+Color chartColorForCategory(
+  BuildContext context,
+  String categoryId,
+  int index,
+) {
+  final byId = <String, Color>{
     'food': AppColors.primaryDark,
     'housing': AppColors.primary,
     'transport': AppColors.primaryLight,
-    'shopping': AppColors.accent,
-    'bills': AppColors.chartSlate,
+    'shopping': context.brandSecondary,
+    'bills': context.chartSlateColor,
   };
-  return byId[categoryId] ??
-      AppColors.chartSeries[index % AppColors.chartSeries.length];
+  final series = context.chartSeries;
+  return byId[categoryId] ?? series[index % series.length];
 }

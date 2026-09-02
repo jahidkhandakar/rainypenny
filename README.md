@@ -178,12 +178,36 @@ value.
 - `app_typography.dart` — type scale, tabular figures for all money
 - `app_dimens.dart` — 4pt spacing scale, radii, motion durations
 
+Two brand colours, both taken from the logo:
+
+| Token       | Hex       | Role                                          |
+| ----------- | --------- | --------------------------------------------- |
+| `primary`   | `#02B3AA` | teal — buttons, selection, focus, nav, income  |
+| `secondary` | `#243570` | navy — savings, health, expenses, the gradient |
+
+The navy is darker than the dark theme's own cards, so anything painted in it
+goes through `context.brandSecondary` (and `context.expenseColor`), which lifts
+it on dark surfaces. Reach for `AppColors.secondary` directly only when filling
+a shape that carries white content.
+
 The brand gradient appears in exactly four places: the splash, the balance
 card, the centre Add button and the profile avatar. Everywhere else is neutral,
 so the brand colour means something when it does appear.
 
 Expenses are not red. Red is reserved for exceeded budgets, overdue payments
 and errors.
+
+### Brand assets
+
+`assets/logo/logo.svg` is the supplied artwork and the source of truth.
+`logo_mark.svg` beside it is the same path with its viewBox trimmed to the
+drawing, which is what `BrandMark` renders so the mark fills the box it is
+given. The launcher icons in `assets/icon/` are generated from the same file;
+after changing it, regenerate them with:
+
+```bash
+dart run flutter_launcher_icons
+```
 
 ---
 

@@ -96,7 +96,6 @@
   "themeSystem": "Sistema",
   "themeLight": "Claro",
   "themeDark": "Oscuro",
-  "dashboard": "Panel",
   "settings": "Ajustes",
   "noNotificationsTitle": "Todo al día",
   "noNotificationsBody": "Aquí aparecerán nuevos análisis y recordatorios.",
@@ -106,5 +105,11 @@
   "retry": "Reintentar",
   "close": "Cerrar",
   "somethingWentWrong": "Algo salió mal",
-  "comingSoon": "Disponible próximamente"
+  "comingSoon": "Disponible próximamente",
+  "quickActionsTitle": "¿Qué quieres hacer?",
+  "createSection": "Registrar",
+  "jumpToSection": "Ir a",
+  "addLoanAction": "Añadir préstamo",
+  "addBudgetAction": "Añadir presupuesto",
+  "addGoalAction": "Añadir meta"
 }

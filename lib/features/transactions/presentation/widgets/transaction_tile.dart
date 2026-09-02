@@ -58,7 +58,7 @@ class TransactionTile extends ConsumerWidget {
               background: isIncome
                   ? AppColors.income.withValues(alpha: 0.12)
                   : context.tintFill,
-              foreground: isIncome ? AppColors.income : AppColors.primary,
+              foreground: isIncome ? AppColors.income : context.expenseColor,
             ),
             const SizedBox(width: AppSpacing.md),
             Expanded(

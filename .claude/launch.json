@@ -7,14 +7,14 @@
       "runtimeArgs": [
         "-m",
         "http.server",
-        "8092",
+        "8096",
         "--bind",
         "127.0.0.1",
         "--directory",
         "build/web"
       ],
-      "port": 8092,
-      "url": "http://127.0.0.1:8092"
+      "port": 8096,
+      "url": "http://127.0.0.1:8096"
     }
   ]
 }

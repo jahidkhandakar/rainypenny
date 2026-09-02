@@ -34,10 +34,7 @@ class ReportsScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.menu_rounded),
-          onPressed: openAppDrawer,
-        ),
+        leading: const DrawerLogoButton(),
         title: Text(l10n.reports),
       ),
       body: ListView(
@@ -88,7 +85,7 @@ class _ReportBody extends ConsumerWidget {
     final dates = ref.watch(dateFormatterProvider);
     final budgets = ref.watch(budgetsProvider);
     final insights = ref.watch(insightsProvider);
-    final slices = buildSpendingSlices(data.summary.spendingByCategory);
+    final slices = buildSpendingSlices(context, data.summary.spendingByCategory);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -217,7 +214,7 @@ class _TotalsCard extends ConsumerWidget {
                   child: _Total(
                     label: l10n.expenses,
                     value: money.format(summary.expenses, decimals: false),
-                    color: AppColors.expense,
+                    color: context.expenseColor,
                     change: summary.expenseChange,
                     goodWhenRising: false,
                   ),

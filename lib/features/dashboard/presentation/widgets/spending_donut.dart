@@ -26,6 +26,7 @@ class SpendingSlice {
 /// Collapses a category breakdown into the top [maxSlices] plus an "Other"
 /// remainder, so the donut never grows past a readable number of colours.
 List<SpendingSlice> buildSpendingSlices(
+  BuildContext context,
   Map<Category, double> spending, {
   int maxSlices = 5,
   String otherLabel = 'Other',
@@ -41,7 +42,7 @@ List<SpendingSlice> buildSpendingSlices(
       SpendingSlice(
         label: entries[i].key.name,
         amount: entries[i].value,
-        color: chartColorForCategory(entries[i].key.id, i),
+        color: chartColorForCategory(context, entries[i].key.id, i),
       ),
     );
   }

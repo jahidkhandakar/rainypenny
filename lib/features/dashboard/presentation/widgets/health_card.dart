@@ -18,7 +18,7 @@ class HealthCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppL10n.of(context);
-    final color = _colorFor(health.band);
+    final color = _colorFor(context, health.band);
 
     return AppCard(
       child: Column(
@@ -86,8 +86,9 @@ class HealthCard extends StatelessWidget {
     );
   }
 
-  static Color _colorFor(HealthBand band) => switch (band) {
-        HealthBand.excellent => AppColors.accent,
+  static Color _colorFor(BuildContext context, HealthBand band) =>
+      switch (band) {
+        HealthBand.excellent => context.brandSecondary,
         HealthBand.good => AppColors.success,
         HealthBand.fair => AppColors.warning,
         HealthBand.needsWork => AppColors.error,

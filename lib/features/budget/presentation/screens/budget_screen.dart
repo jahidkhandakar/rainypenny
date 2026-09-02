@@ -15,37 +15,12 @@ import '../../../../core/widgets/states.dart';
 import '../../../financial/domain/entities/budget.dart';
 import '../../../financial/domain/services/budget_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
-import '../../../financial/presentation/widgets/category_picker_sheet.dart';
-import '../controllers/budget_controller.dart';
 import '../widgets/budget_editor_sheet.dart';
 import '../widgets/budget_row.dart';
 
 /// Category budgets for the active period, with status-driven colour.
 class BudgetScreen extends ConsumerWidget {
   const BudgetScreen({super.key});
-
-  Future<void> _addBudget(BuildContext context, WidgetRef ref) async {
-    final l10n = AppL10n.of(context);
-    final messenger = ScaffoldMessenger.of(context);
-    final available = await ref.read(unbudgetedCategoriesProvider.future);
-
-    if (!context.mounted) return;
-    if (available.isEmpty) {
-      messenger.showSnackBar(
-        SnackBar(content: Text(l10n.allCategoriesBudgeted)),
-      );
-      return;
-    }
-
-    final category = await showCategoryPicker(
-      context,
-      categories: available,
-      title: l10n.selectCategory,
-    );
-    if (category == null || !context.mounted) return;
-
-    await showBudgetEditor(context, category: category);
-  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -61,7 +36,7 @@ class BudgetScreen extends ConsumerWidget {
           IconButton(
             tooltip: l10n.newBudget,
             icon: const Icon(Icons.add_rounded),
-            onPressed: () => _addBudget(context, ref),
+            onPressed: () => startAddBudget(context, ref),
           ),
           const SizedBox(width: AppSpacing.sm),
         ],
@@ -107,7 +82,7 @@ class BudgetScreen extends ConsumerWidget {
                 title: l10n.noBudgetsTitle,
                 message: l10n.noBudgetsBody,
                 actionLabel: l10n.newBudget,
-                onAction: () => _addBudget(context, ref),
+                onAction: () => startAddBudget(context, ref),
               ),
           ],
         ),
@@ -191,7 +166,7 @@ class _BudgetSummaryCard extends ConsumerWidget {
               _Figure(
                 label: l10n.remaining,
                 value: money.format(remaining, decimals: false),
-                color: AppColors.accent,
+                color: context.brandSecondary,
               ),
             ],
           ),

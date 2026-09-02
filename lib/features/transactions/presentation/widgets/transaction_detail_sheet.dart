@@ -65,7 +65,7 @@ class _TransactionDetailSheet extends ConsumerWidget {
         content: Text(l10n.transactionDeleted),
         action: SnackBarAction(
           label: l10n.undo,
-          textColor: AppColors.accent,
+          textColor: AppColors.primaryLight,
           onPressed: () => ref.read(restoreTransactionProvider)(transaction),
         ),
       ),
@@ -78,7 +78,7 @@ class _TransactionDetailSheet extends ConsumerWidget {
     final money = ref.watch(moneyFormatterProvider);
     final dates = ref.watch(dateFormatterProvider);
     final isIncome = transaction.isIncome;
-    final accent = isIncome ? AppColors.income : AppColors.primary;
+    final accent = isIncome ? AppColors.income : context.expenseColor;
 
     return SafeArea(
       child: Padding(

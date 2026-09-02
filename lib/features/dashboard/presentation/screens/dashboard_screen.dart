@@ -139,7 +139,7 @@ class _SpendingSection extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
     final dates = ref.watch(dateFormatterProvider);
-    final slices = buildSpendingSlices(summary.spendingByCategory);
+    final slices = buildSpendingSlices(context, summary.spendingByCategory);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,

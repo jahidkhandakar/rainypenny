@@ -53,7 +53,7 @@ class IncomeExpenseCards extends StatelessWidget {
               label: l10n.expenses,
               amount: summary.expenses,
               change: summary.expenseChange,
-              color: AppColors.expense,
+              color: context.expenseColor,
               icon: Icons.arrow_upward_rounded,
               goodWhenRising: false,
               onTap: onExpenseTap,

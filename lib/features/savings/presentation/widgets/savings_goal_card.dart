@@ -40,7 +40,7 @@ class SavingsGoalCard extends ConsumerWidget {
       onTap: onTap,
       color: highlighted ? context.tintFill : null,
       borderColor: highlighted
-          ? AppColors.accent.withValues(alpha: 0.28)
+          ? context.brandSecondary.withValues(alpha: 0.28)
           : null,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,8 +49,8 @@ class SavingsGoalCard extends ConsumerWidget {
             children: [
               IconBadge(
                 icon: iconForCategory(goal.icon),
-                background: AppColors.accent.withValues(alpha: 0.14),
-                foreground: AppColors.accent,
+                background: context.brandSecondary.withValues(alpha: 0.14),
+                foreground: context.brandSecondary,
               ),
               const SizedBox(width: AppSpacing.md),
               Expanded(
@@ -85,7 +85,7 @@ class SavingsGoalCard extends ConsumerWidget {
                 Text(
                   '${goal.percentComplete}%',
                   style: AppTypography.amountMedium.copyWith(
-                    color: AppColors.accent,
+                    color: context.brandSecondary,
                   ),
                 ),
             ],
@@ -111,7 +111,7 @@ class SavingsGoalCard extends ConsumerWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.md),
-          AppProgressBar(value: goal.progress, color: AppColors.accent),
+          AppProgressBar(value: goal.progress, color: context.brandSecondary),
           const SizedBox(height: AppSpacing.md),
           Row(
             children: [

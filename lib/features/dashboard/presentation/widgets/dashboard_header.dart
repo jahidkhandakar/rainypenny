@@ -9,6 +9,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/widgets/brand_mark.dart';
 import '../../../../core/widgets/states.dart';
 import '../../../financial/domain/entities/insight.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
@@ -50,9 +51,9 @@ class DashboardHeader extends ConsumerWidget {
     return Row(
       children: [
         _CircleButton(
-          icon: Icons.menu_rounded,
           onTap: openAppDrawer,
           tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          child: const BrandMark(size: 24),
         ),
         const SizedBox(width: AppSpacing.md),
         Expanded(
@@ -84,10 +85,14 @@ class DashboardHeader extends ConsumerWidget {
         ),
         const SizedBox(width: AppSpacing.sm),
         _CircleButton(
-          icon: Icons.notifications_none_rounded,
           badgeCount: alerts,
           tooltip: l10n.notifications,
           onTap: () => context.push(AppRoutes.notifications),
+          child: Icon(
+            Icons.notifications_none_rounded,
+            size: 21,
+            color: context.textPrimary,
+          ),
         ),
       ],
     );
@@ -96,13 +101,14 @@ class DashboardHeader extends ConsumerWidget {
 
 class _CircleButton extends StatelessWidget {
   const _CircleButton({
-    required this.icon,
+    required this.child,
     required this.onTap,
     this.badgeCount = 0,
     this.tooltip,
   });
 
-  final IconData icon;
+  /// Either an icon or the brand mark — the button is only the frame.
+  final Widget child;
   final VoidCallback onTap;
   final int badgeCount;
   final String? tooltip;
@@ -123,7 +129,7 @@ class _CircleButton extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Icon(icon, size: 21, color: context.textPrimary),
+            child,
             if (badgeCount > 0)
               PositionedDirectional(
                 top: 9,

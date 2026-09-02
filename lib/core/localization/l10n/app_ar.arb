@@ -96,7 +96,6 @@
   "themeSystem": "النظام",
   "themeLight": "فاتح",
   "themeDark": "داكن",
-  "dashboard": "لوحة التحكم",
   "settings": "الإعدادات",
   "noNotificationsTitle": "لا يوجد جديد",
   "noNotificationsBody": "ستظهر هنا الرؤى والتذكيرات الجديدة.",
@@ -169,5 +168,12 @@
   "debtDeleted": "تم الحذف",
   "insightWeeklySummaryTitle": "أسبوعك في لمحة",
   "insightWeeklySummaryBody": "اطّلع على أوجه إنفاقك هذا الأسبوع وحالة ميزانياتك.",
-  "needsAttention": "يحتاج إلى انتباه"
+  "needsAttention": "يحتاج إلى انتباه",
+  "quickActionsTitle": "ماذا تريد أن تفعل؟",
+  "createSection": "تسجيل",
+  "jumpToSection": "انتقل إلى",
+  "addLoanAction": "إضافة قرض",
+  "addBudgetAction": "إضافة ميزانية",
+  "addGoalAction": "إضافة هدف",
+  "longPressHint": "نصيحة: اضغط مطوّلًا على + لتسجيل مصروف مباشرة"
 }

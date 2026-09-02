@@ -96,7 +96,6 @@
   "themeSystem": "System",
   "themeLight": "Hell",
   "themeDark": "Dunkel",
-  "dashboard": "Übersicht",
   "settings": "Einstellungen",
   "noNotificationsTitle": "Alles erledigt",
   "noNotificationsBody": "Neue Insights und Erinnerungen erscheinen hier.",
@@ -106,5 +105,11 @@
   "retry": "Erneut versuchen",
   "close": "Schließen",
   "somethingWentWrong": "Etwas ist schiefgelaufen",
-  "comingSoon": "Bald verfügbar"
+  "comingSoon": "Bald verfügbar",
+  "quickActionsTitle": "Was möchtest du tun?",
+  "createSection": "Erfassen",
+  "jumpToSection": "Gehe zu",
+  "addLoanAction": "Kredit hinzufügen",
+  "addBudgetAction": "Budget hinzufügen",
+  "addGoalAction": "Ziel hinzufügen"
 }

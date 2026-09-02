@@ -96,7 +96,6 @@
   "themeSystem": "سسٹم",
   "themeLight": "لائٹ",
   "themeDark": "ڈارک",
-  "dashboard": "ڈیش بورڈ",
   "settings": "ترتیبات",
   "noNotificationsTitle": "سب کچھ اپ ٹو ڈیٹ ہے",
   "noNotificationsBody": "نئی بصیرتیں اور یاد دہانیاں یہاں دکھائی دیں گی۔",
@@ -169,5 +168,12 @@
   "debtDeleted": "حذف ہو گیا",
   "insightWeeklySummaryTitle": "آپ کے ہفتے کا جائزہ",
   "insightWeeklySummaryBody": "دیکھیں اس ہفتے آپ کا پیسہ کہاں گیا اور آپ کے بجٹ کیسے چل رہے ہیں۔",
-  "needsAttention": "توجہ درکار"
+  "needsAttention": "توجہ درکار",
+  "quickActionsTitle": "آپ کیا کرنا چاہیں گے؟",
+  "createSection": "درج کریں",
+  "jumpToSection": "یہاں جائیں",
+  "addLoanAction": "قرض شامل کریں",
+  "addBudgetAction": "بجٹ شامل کریں",
+  "addGoalAction": "ہدف شامل کریں",
+  "longPressHint": "اشارہ: خرچ فوراً درج کرنے کے لیے + دبائے رکھیں"
 }

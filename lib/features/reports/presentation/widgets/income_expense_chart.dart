@@ -43,7 +43,7 @@ class IncomeExpenseChart extends ConsumerWidget {
           children: [
             _LegendDot(color: AppColors.income, label: l10n.income),
             const SizedBox(width: AppSpacing.lg),
-            _LegendDot(color: AppColors.expense, label: l10n.expenses),
+            _LegendDot(color: context.expenseColor, label: l10n.expenses),
           ],
         ),
         const SizedBox(height: AppSpacing.lg),
@@ -127,7 +127,7 @@ class IncomeExpenseChart extends ConsumerWidget {
                       ),
                       BarChartRodData(
                         toY: buckets[i].expenses,
-                        color: AppColors.expense,
+                        color: context.expenseColor,
                         width: 9,
                         borderRadius: const BorderRadius.vertical(
                           top: Radius.circular(4),

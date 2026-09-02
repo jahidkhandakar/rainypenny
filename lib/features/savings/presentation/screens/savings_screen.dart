@@ -135,7 +135,7 @@ class _SavingsSummaryCard extends ConsumerWidget {
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [AppColors.primaryLight, AppColors.accent],
+          colors: [AppColors.primaryLight, AppColors.secondary],
         ),
         borderRadius: BorderRadius.circular(AppRadius.xl),
       ),
@@ -304,7 +304,7 @@ class _ContributeSheetState extends ConsumerState<_ContributeSheet> {
                     ? () => Navigator.of(context).pop(_amount)
                     : null,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.accent,
+                  backgroundColor: AppColors.secondary,
                 ),
                 child: Text(l10n.addFunds),
               ),

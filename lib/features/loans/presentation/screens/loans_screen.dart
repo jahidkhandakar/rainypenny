@@ -137,7 +137,7 @@ class _OutstandingCard extends ConsumerWidget {
           const SizedBox(height: AppSpacing.lg),
           AppProgressBar(
             value: progress,
-            color: AppColors.accent,
+            color: AppColors.secondary,
             trackColor: Colors.white.withValues(alpha: 0.18),
             height: 7,
           ),

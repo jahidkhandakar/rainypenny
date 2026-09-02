@@ -135,7 +135,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
     final draft = ref.watch(addTransactionControllerProvider);
     final symbol = ref.watch(currencyProvider).symbol;
     final dates = ref.watch(dateFormatterProvider);
-    final accent = draft.isIncome ? AppColors.income : AppColors.primary;
+    final accent = draft.isIncome ? AppColors.income : context.expenseColor;
 
     return Scaffold(
       appBar: AppBar(

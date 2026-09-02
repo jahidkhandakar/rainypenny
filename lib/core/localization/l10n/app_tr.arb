@@ -96,7 +96,6 @@
   "themeSystem": "Sistem",
   "themeLight": "Açık",
   "themeDark": "Koyu",
-  "dashboard": "Kontrol paneli",
   "settings": "Ayarlar",
   "noNotificationsTitle": "Her şey güncel",
   "noNotificationsBody": "Yeni içgörüler ve hatırlatmalar burada görünecek.",
@@ -106,5 +105,11 @@
   "retry": "Tekrar dene",
   "close": "Kapat",
   "somethingWentWrong": "Bir şeyler ters gitti",
-  "comingSoon": "Yakında"
+  "comingSoon": "Yakında",
+  "quickActionsTitle": "Ne yapmak istersiniz?",
+  "createSection": "Kaydet",
+  "jumpToSection": "Şuraya git",
+  "addLoanAction": "Kredi ekle",
+  "addBudgetAction": "Bütçe ekle",
+  "addGoalAction": "Hedef ekle"
 }

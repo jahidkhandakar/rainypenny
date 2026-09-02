@@ -9,10 +9,11 @@ import '../theme/app_colors.dart';
 import '../theme/app_dimens.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_typography.dart';
-import '../widgets/brand_mark.dart';
 import '../widgets/states.dart';
 
-/// Secondary navigation: the modules that would crowd the bottom bar.
+/// Secondary navigation: only what the bottom bar and the app bar do not
+/// already reach. Home, Transactions and Reports live in the bottom bar and
+/// Notifications behind the bell, so none of them appear here.
 class AppDrawer extends ConsumerWidget {
   const AppDrawer({super.key});
 
@@ -20,7 +21,6 @@ class AppDrawer extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
     final profile = ref.watch(profileProvider);
-    final location = GoRouterState.of(context).uri.path;
 
     return Drawer(
       child: SafeArea(
@@ -28,18 +28,11 @@ class AppDrawer extends ConsumerWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(
-                AppSpacing.xl,
-                AppSpacing.xl,
                 AppSpacing.lg,
                 AppSpacing.lg,
+                AppSpacing.lg,
+                0,
               ),
-              child: Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: BrandLockup(tagline: l10n.appTagline),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
               child: profile.when(
                 data: (user) => _ProfileTile(
                   name: user.name,
@@ -67,66 +60,32 @@ class AppDrawer extends ConsumerWidget {
                 ),
                 children: [
                   _DrawerItem(
-                    icon: Icons.dashboard_rounded,
-                    label: l10n.dashboard,
-                    route: AppRoutes.home,
-                    selected: location == AppRoutes.home,
-                  ),
-                  _DrawerItem(
-                    icon: Icons.receipt_long_rounded,
-                    label: l10n.navTransactions,
-                    route: AppRoutes.transactions,
-                    selected: location == AppRoutes.transactions,
-                  ),
-                  _DrawerItem(
                     icon: Icons.savings_rounded,
                     label: l10n.savings,
                     route: AppRoutes.savings,
-                    selected: location == AppRoutes.savings,
-                    push: true,
                   ),
                   _DrawerItem(
                     icon: Icons.donut_small_rounded,
                     label: l10n.budget,
                     route: AppRoutes.budget,
-                    selected: location == AppRoutes.budget,
-                    push: true,
                   ),
                   _DrawerItem(
                     icon: Icons.account_balance_rounded,
                     label: l10n.loansAndDebts,
                     route: AppRoutes.loans,
-                    selected: location == AppRoutes.loans,
-                    push: true,
-                  ),
-                  _DrawerItem(
-                    icon: Icons.insert_chart_rounded,
-                    label: l10n.reports,
-                    route: AppRoutes.reports,
-                    selected: location == AppRoutes.reports,
                   ),
                   const SizedBox(height: AppSpacing.md),
                   Divider(color: context.borderColor, height: 1),
                   const SizedBox(height: AppSpacing.md),
                   _DrawerItem(
-                    icon: Icons.notifications_rounded,
-                    label: l10n.notifications,
-                    route: AppRoutes.notifications,
-                    selected: location == AppRoutes.notifications,
-                    push: true,
-                  ),
-                  _DrawerItem(
                     icon: Icons.settings_rounded,
                     label: l10n.settings,
                     route: AppRoutes.settings,
-                    selected: location == AppRoutes.settings,
-                    push: true,
                   ),
                   _DrawerItem(
                     icon: Icons.help_outline_rounded,
                     label: l10n.helpAndSupport,
                     route: null,
-                    selected: false,
                   ),
                 ],
               ),
@@ -138,7 +97,6 @@ class AppDrawer extends ConsumerWidget {
                 icon: Icons.logout_rounded,
                 label: l10n.logOut,
                 route: null,
-                selected: false,
                 danger: true,
               ),
             ),
@@ -224,35 +182,23 @@ class _DrawerItem extends StatelessWidget {
     required this.icon,
     required this.label,
     required this.route,
-    required this.selected,
-    this.push = false,
     this.danger = false,
   });
 
   final IconData icon;
   final String label;
   final String? route;
-  final bool selected;
-  final bool push;
   final bool danger;
 
   @override
   Widget build(BuildContext context) {
-    final foreground = danger
-        ? AppColors.error
-        : selected
-            ? AppColors.primary
-            : context.textPrimary;
-    final iconColor = danger
-        ? AppColors.error
-        : selected
-            ? AppColors.primary
-            : context.textSecondary;
+    final foreground = danger ? AppColors.error : context.textPrimary;
+    final iconColor = danger ? AppColors.error : context.textSecondary;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Material(
-        color: selected ? context.tintFill : Colors.transparent,
+        color: Colors.transparent,
         borderRadius: BorderRadius.circular(AppRadius.md),
         child: InkWell(
           borderRadius: BorderRadius.circular(AppRadius.md),
@@ -265,11 +211,9 @@ class _DrawerItem extends StatelessWidget {
               );
               return;
             }
-            if (push) {
-              context.push(target);
-            } else {
-              context.go(target);
-            }
+            // Every drawer destination is pushed above the shell; the bottom
+            // bar owns the four branch routes.
+            context.push(target);
           },
           child: Padding(
             padding: const EdgeInsets.symmetric(
@@ -284,7 +228,7 @@ class _DrawerItem extends StatelessWidget {
                   label,
                   style: AppTypography.title.copyWith(
                     color: foreground,
-                    fontWeight: selected ? FontWeight.w700 : FontWeight.w600,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../localization/generated/app_localizations.dart';
@@ -7,7 +8,9 @@ import '../theme/app_colors.dart';
 import '../theme/app_dimens.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_typography.dart';
+import '../widgets/brand_mark.dart';
 import 'app_drawer.dart';
+import 'quick_action_sheet.dart';
 
 /// Key for the shell's Scaffold.
 ///
@@ -19,8 +22,25 @@ final appShellScaffoldKey = GlobalKey<ScaffoldState>();
 /// Opens the app drawer from anywhere inside the shell.
 void openAppDrawer() => appShellScaffoldKey.currentState?.openDrawer();
 
+/// The drawer handle used across the app: the brand mark standing in for the
+/// usual hamburger, so the logo is the first thing on every screen.
+class DrawerLogoButton extends StatelessWidget {
+  const DrawerLogoButton({super.key, this.size = 26});
+
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+      icon: BrandMark(size: size),
+      onPressed: openAppDrawer,
+    );
+  }
+}
+
 /// Scaffold shared by the four bottom-navigation destinations.
-class AppShell extends StatelessWidget {
+class AppShell extends ConsumerWidget {
   const AppShell({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
@@ -33,7 +53,7 @@ class AppShell extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       key: appShellScaffoldKey,
       drawer: const AppDrawer(),
@@ -42,7 +62,11 @@ class AppShell extends StatelessWidget {
       bottomNavigationBar: _BottomNav(
         currentIndex: navigationShell.currentIndex,
         onSelect: _goToBranch,
-        onAdd: () => context.push(AppRoutes.addTransaction),
+        onAdd: () => showQuickActionSheet(context, ref),
+        // Logging an expense is the most frequent thing anyone does here, so
+        // it keeps a one-gesture route even though the button now opens a menu.
+        onAddLongPress: () =>
+            context.push('${AppRoutes.addTransaction}?type=expense'),
       ),
     );
   }
@@ -53,11 +77,13 @@ class _BottomNav extends StatelessWidget {
     required this.currentIndex,
     required this.onSelect,
     required this.onAdd,
+    required this.onAddLongPress,
   });
 
   final int currentIndex;
   final ValueChanged<int> onSelect;
   final VoidCallback onAdd;
+  final VoidCallback onAddLongPress;
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +117,11 @@ class _BottomNav extends StatelessWidget {
             children: [
               _navButton(context, items[0], 0),
               _navButton(context, items[1], 1),
-              _AddButton(onTap: onAdd, label: l10n.navAdd),
+              _AddButton(
+                onTap: onAdd,
+                onLongPress: onAddLongPress,
+                label: l10n.navAdd,
+              ),
               _navButton(context, items[2], 2),
               _navButton(context, items[3], 3),
             ],
@@ -141,9 +171,14 @@ class _BottomNav extends StatelessWidget {
 
 /// The centre action — the strongest focal point in the bar.
 class _AddButton extends StatelessWidget {
-  const _AddButton({required this.onTap, required this.label});
+  const _AddButton({
+    required this.onTap,
+    required this.onLongPress,
+    required this.label,
+  });
 
   final VoidCallback onTap;
+  final VoidCallback onLongPress;
   final String label;
 
   @override
@@ -155,6 +190,7 @@ class _AddButton extends StatelessWidget {
           label: label,
           child: InkResponse(
             onTap: onTap,
+            onLongPress: onLongPress,
             radius: 34,
             child: Container(
               width: 52,

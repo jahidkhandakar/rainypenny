@@ -43,10 +43,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.menu_rounded),
-          onPressed: openAppDrawer,
-        ),
+        leading: const DrawerLogoButton(),
         title: Text(l10n.navTransactions),
         actions: [
           IconButton(

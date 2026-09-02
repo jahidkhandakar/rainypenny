@@ -1,11 +1,11 @@
 {
-    "name": "rainypenny",
-    "short_name": "rainypenny",
+    "name": "RainyPenny",
+    "short_name": "RainyPenny",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#FFFFFF",
+    "theme_color": "#02B3AA",
+    "description": "RainyPenny — a personal finance app.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

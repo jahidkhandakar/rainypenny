@@ -171,7 +171,7 @@ class _GoalEditorSheetState extends ConsumerState<_GoalEditorSheet> {
     return EditorSheet(
       title: _isEditing ? l10n.editGoal : l10n.newGoal,
       submitLabel: l10n.save,
-      accent: AppColors.accent,
+      accent: AppColors.secondary,
       onSubmit: _isValid ? _save : null,
       onDelete: _isEditing ? _delete : null,
       deleteLabel: l10n.delete,
@@ -252,7 +252,7 @@ class _GoalEditorSheetState extends ConsumerState<_GoalEditorSheet> {
                     height: 46,
                     decoration: BoxDecoration(
                       color: _icon == icon
-                          ? AppColors.accent
+                          ? AppColors.secondary
                           : context.subtleFill,
                       borderRadius: BorderRadius.circular(15),
                     ),

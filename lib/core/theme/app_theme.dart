@@ -27,8 +27,8 @@ abstract final class AppTheme {
       onPrimary: Colors.white,
       primaryContainer:
           isDark ? AppColors.darkSelectedBackground : AppColors.selectedBackground,
-      onPrimaryContainer: isDark ? AppColors.accent : AppColors.primary,
-      secondary: AppColors.accent,
+      onPrimaryContainer: isDark ? AppColors.primaryLight : AppColors.primary,
+      secondary: AppColors.secondary,
       onSecondary: Colors.white,
       surface: surface,
       onSurface: textPrimary,
@@ -72,7 +72,7 @@ abstract final class AppTheme {
         foregroundColor: textPrimary,
         elevation: 0,
         scrolledUnderElevation: 0,
-        centerTitle: false,
+        centerTitle: true,
         titleTextStyle: AppTypography.heading.copyWith(color: textPrimary),
         systemOverlayStyle:
             isDark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
@@ -193,4 +193,19 @@ extension AppThemeX on BuildContext {
       isDark ? AppColors.darkSurfaceElevated : AppColors.surfaceSecondary;
   Color get tintFill =>
       isDark ? AppColors.darkSelectedBackground : AppColors.selectedBackground;
+
+  /// The brand navy, resolved for the current theme. Always paint the second
+  /// brand colour through this rather than [AppColors.secondary] — the raw
+  /// navy is reserved for surfaces that carry white content.
+  Color get brandSecondary =>
+      isDark ? AppColors.secondaryOnDark : AppColors.secondary;
+
+  /// Expenses and outgoing amounts — the navy side of the brand.
+  Color get expenseColor => brandSecondary;
+
+  Color get chartSlateColor =>
+      isDark ? AppColors.chartSlateOnDark : AppColors.chartSlate;
+
+  List<Color> get chartSeries =>
+      isDark ? AppColors.darkChartSeries : AppColors.chartSeries;
 }

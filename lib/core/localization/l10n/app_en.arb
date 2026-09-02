@@ -176,7 +176,6 @@
   "themeSystem": "System",
   "themeLight": "Light",
   "themeDark": "Dark",
-  "dashboard": "Dashboard",
   "settings": "Settings",
   "noNotificationsTitle": "You are all caught up",
   "noNotificationsBody": "New insights and reminders will show up here.",
@@ -516,5 +515,12 @@
   },
   "everyWeek": "Every week",
   "allNotificationsOff": "All notifications are off",
-  "needsAttention": "Needs attention"
+  "needsAttention": "Needs attention",
+  "quickActionsTitle": "What would you like to do?",
+  "createSection": "Record",
+  "jumpToSection": "Jump to",
+  "addLoanAction": "Add loan",
+  "addBudgetAction": "Add budget",
+  "addGoalAction": "Add goal",
+  "longPressHint": "Tip: hold + to log an expense straight away"
 }

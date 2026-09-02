@@ -44,7 +44,7 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('the add flow opens from the centre button', (tester) async {
+  testWidgets('the centre button opens the quick-action menu', (tester) async {
     await tester.pumpWidget(bootApp());
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
@@ -52,7 +52,74 @@ void main() {
     await tester.tap(find.byIcon(Icons.add_rounded).first);
     await tester.pumpAndSettle();
 
+    expect(find.text('What would you like to do?'), findsOneWidget);
+
+    // Scoped to the sheet: "Reports" also labels a bottom-nav tab.
+    Finder inSheet(String label) => find.descendant(
+          of: find.byType(BottomSheet),
+          matching: find.text(label),
+        );
+
+    for (final label in [
+      'Add expense',
+      'Add income',
+      'Add loan',
+      'Add budget',
+      'Add goal',
+      'Reports',
+      'Budgets',
+      'Savings',
+    ]) {
+      expect(inSheet(label), findsOneWidget, reason: 'missing "$label"');
+    }
+  });
+
+  testWidgets('choosing Add expense reaches the transaction form',
+      (tester) async {
+    await tester.pumpWidget(bootApp());
+    await tester.pump(const Duration(milliseconds: 1500));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.add_rounded).first);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Add expense'));
+    await tester.pumpAndSettle();
+
     expect(find.text('Add transaction'), findsOneWidget);
     expect(find.text('Save expense'), findsOneWidget);
+    // The menu must be gone, not stacked underneath.
+    expect(find.text('What would you like to do?'), findsNothing);
+  });
+
+  testWidgets('choosing an editor closes the menu before opening it',
+      (tester) async {
+    await tester.pumpWidget(bootApp());
+    await tester.pump(const Duration(milliseconds: 1500));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.add_rounded).first);
+    await tester.pumpAndSettle();
+
+    // Add budget chains a category picker after the menu closes; the two must
+    // never be on screen together.
+    await tester.tap(find.text('Add budget'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Select category'), findsOneWidget);
+    expect(find.text('What would you like to do?'), findsNothing);
+  });
+
+  testWidgets('long-pressing the centre button skips the menu',
+      (tester) async {
+    await tester.pumpWidget(bootApp());
+    await tester.pump(const Duration(milliseconds: 1500));
+    await tester.pumpAndSettle();
+
+    await tester.longPress(find.byIcon(Icons.add_rounded).first);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Add transaction'), findsOneWidget);
+    expect(find.text('What would you like to do?'), findsNothing);
   });
 }
