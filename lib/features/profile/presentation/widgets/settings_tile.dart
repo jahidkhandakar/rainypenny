@@ -19,13 +19,15 @@ class SettingsGroup extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-            left: AppSpacing.xs,
+          padding: const EdgeInsetsDirectional.only(
+            start: AppSpacing.xs,
             bottom: AppSpacing.sm,
           ),
           child: Text(
             title.toUpperCase(),
-            style: AppTypography.overline.copyWith(color: context.textSecondary),
+            style: AppTypography.overline.copyWith(
+              color: context.textSecondary,
+            ),
           ),
         ),
         AppCard(
@@ -87,7 +89,7 @@ class SettingsTile extends StatelessWidget {
               background: danger
                   ? AppColors.error.withValues(alpha: 0.10)
                   : context.tintFill,
-              foreground: danger ? AppColors.error : AppColors.primary,
+              foreground: danger ? AppColors.error : context.accent,
             ),
             const SizedBox(width: AppSpacing.md),
             Expanded(

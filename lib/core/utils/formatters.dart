@@ -5,10 +5,19 @@ import 'package:intl/intl.dart';
 /// Everything takes an explicit [locale] so switching language in Settings
 /// re-formats amounts and dates too, not just the labels.
 class MoneyFormatter {
-  const MoneyFormatter({required this.symbol, required this.locale});
+  const MoneyFormatter({
+    required this.symbol,
+    required this.locale,
+    this.decimalDigits = 2,
+  });
 
   final String symbol;
   final String locale;
+
+  /// How many minor units this currency has, from its ISO 4217 entry. The yen
+  /// has none and the Kuwaiti dinar has three, so this is read rather than
+  /// assumed — printing `¥1,250.00` would look broken to a Japanese user.
+  final int decimalDigits;
 
   /// Wraps a monetary string in a bidirectional isolate.
   ///
@@ -22,7 +31,7 @@ class MoneyFormatter {
     return NumberFormat.currency(
       locale: locale,
       symbol: symbol,
-      decimalDigits: decimals ? 2 : 0,
+      decimalDigits: decimals ? decimalDigits : 0,
     ).format(amount);
   }
 
@@ -48,9 +57,8 @@ class MoneyFormatter {
   }
 
   /// `$420 / $600`
-  String formatRatio(double value, double total) => _isolate(
-        '${_raw(value, false)} / ${_raw(total, false)}',
-      );
+  String formatRatio(double value, double total) =>
+      _isolate('${_raw(value, false)} / ${_raw(total, false)}');
 }
 
 /// `+8.4%` / `-4.2%`

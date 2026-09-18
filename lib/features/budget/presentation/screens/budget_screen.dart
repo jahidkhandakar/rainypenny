@@ -140,8 +140,8 @@ class _BudgetSummaryCard extends ConsumerWidget {
     final color = progress >= 0.9
         ? AppColors.error
         : progress >= 0.7
-            ? AppColors.warning
-            : AppColors.success;
+        ? AppColors.warning
+        : AppColors.success;
 
     return AppCard(
       padding: const EdgeInsets.all(AppSpacing.xl),
@@ -238,7 +238,7 @@ class _BudgetWarning extends ConsumerWidget {
     final message = budget.isExceeded
         ? '${budget.category.name} is ${money.format(budget.remaining.abs(), decimals: false)} over its limit.'
         : '${budget.category.name} ${l10n.budgetUsed(budget.percentUsed).toLowerCase()}, '
-            '${money.format(budget.remaining, decimals: false)} ${l10n.remaining.toLowerCase()}.';
+              '${money.format(budget.remaining, decimals: false)} ${l10n.remaining.toLowerCase()}.';
 
     return AppCard(
       color: color.withValues(alpha: 0.07),

@@ -199,7 +199,7 @@ abstract final class InsightEngine {
             level: InsightLevel.critical,
             topic: InsightTopic.debt,
             subject: loan.name,
-            amount: loan.monthlyPayment,
+            amount: loan.installmentAmount,
             days: days.abs(),
           ),
         );
@@ -213,7 +213,7 @@ abstract final class InsightEngine {
                 : InsightLevel.informative,
             topic: InsightTopic.debt,
             subject: loan.name,
-            amount: loan.monthlyPayment,
+            amount: loan.installmentAmount,
             days: days,
           ),
         );

@@ -51,14 +51,18 @@ class _NotificationSyncState extends ConsumerState<NotificationSync> {
   String? _lastSynced;
 
   String _signatureFor(List<ScheduledNotification> schedule, String locale) {
-    final entries = schedule
-        .map((n) => '${n.id}@${n.scheduledFor.toIso8601String()}')
-        .toList()
-      ..sort();
+    final entries =
+        schedule
+            .map((n) => '${n.id}@${n.scheduledFor.toIso8601String()}')
+            .toList()
+          ..sort();
     return '$locale|${entries.join(';')}';
   }
 
-  Future<void> _sync(List<ScheduledNotification> schedule, String locale) async {
+  Future<void> _sync(
+    List<ScheduledNotification> schedule,
+    String locale,
+  ) async {
     final signature = _signatureFor(schedule, locale);
     if (signature == _lastSynced) return;
     _lastSynced = signature;
@@ -80,9 +84,9 @@ class _NotificationSyncState extends ConsumerState<NotificationSync> {
 
     // Web has no notification scheduler, so skip the work entirely.
     if (!kIsWeb) {
-      ref.watch(notificationScheduleProvider).whenData(
-            (schedule) => _sync(schedule, '$locale-$currency'),
-          );
+      ref
+          .watch(notificationScheduleProvider)
+          .whenData((schedule) => _sync(schedule, '$locale-$currency'));
     }
 
     return widget.child;

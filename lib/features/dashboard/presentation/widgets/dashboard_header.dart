@@ -25,11 +25,15 @@ class DashboardHeader extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
     final profile = ref.watch(profileProvider);
-    final alerts = ref.watch(insightsProvider).maybeWhen(
+    final alerts = ref
+        .watch(insightsProvider)
+        .maybeWhen(
           data: (insights) => insights
-              .where((i) =>
-                  i.level == InsightLevel.warning ||
-                  i.level == InsightLevel.critical)
+              .where(
+                (i) =>
+                    i.level == InsightLevel.warning ||
+                    i.level == InsightLevel.critical,
+              )
               .length,
           orElse: () => 0,
         );
@@ -43,10 +47,10 @@ class DashboardHeader extends ConsumerWidget {
     final greeting = firstName == null
         ? null
         : hour < 12
-            ? l10n.greetingMorning(firstName)
-            : hour < 18
-                ? l10n.greetingAfternoon(firstName)
-                : l10n.greetingEvening(firstName);
+        ? l10n.greetingMorning(firstName)
+        : hour < 18
+        ? l10n.greetingAfternoon(firstName)
+        : l10n.greetingEvening(firstName);
 
     return Row(
       children: [

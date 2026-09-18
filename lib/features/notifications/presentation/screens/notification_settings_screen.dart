@@ -140,10 +140,54 @@ class NotificationSettingsScreen extends ConsumerWidget {
                   onChanged: (v) =>
                       toggle(NotificationChannel.weeklySummary, v),
                 ),
+                _ChannelTile(
+                  icon: Icons.edit_calendar_rounded,
+                  label: l10n.dailyReminders,
+                  description: l10n.dailyRemindersBody,
+                  value: preferences.dailyReminders,
+                  onChanged: (v) =>
+                      toggle(NotificationChannel.dailyReminders, v),
+                ),
+                _ChannelTile(
+                  icon: Icons.celebration_rounded,
+                  label: l10n.weekendGreeting,
+                  description: l10n.weekendGreetingBody,
+                  value: preferences.weekendGreeting,
+                  onChanged: (v) =>
+                      toggle(NotificationChannel.weekendGreeting, v),
+                ),
               ],
             ),
           ),
           const SizedBox(height: AppSpacing.xl),
+
+          // The four slots only matter while the daily reminders are on, so
+          // the group folds away rather than sitting there doing nothing.
+          AnimatedCrossFade(
+            duration: AppDuration.normal,
+            crossFadeState: preferences.dailyReminders
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            firstChild: Padding(
+              padding: const EdgeInsets.only(bottom: AppSpacing.xl),
+              child: SettingsGroup(
+                title: l10n.reminderTimesSection,
+                children: [
+                  for (final slot in DailyReminderSlot.values)
+                    _SlotTile(
+                      slot: slot,
+                      label: _slotLabel(l10n, slot),
+                      hour: NotificationPreferences.hourFor(slot),
+                      value: preferences.enabledSlots.contains(slot),
+                      onChanged: (v) => ref
+                          .read(notificationPreferencesProvider.notifier)
+                          .setSlot(slot, v),
+                    ),
+                ],
+              ),
+            ),
+            secondChild: const SizedBox(width: double.infinity),
+          ),
 
           FadeSlideIn(
             index: 2,
@@ -171,8 +215,8 @@ class NotificationSettingsScreen extends ConsumerWidget {
           const SizedBox(height: AppSpacing.xl),
 
           Padding(
-            padding: const EdgeInsets.only(
-              left: AppSpacing.xs,
+            padding: const EdgeInsetsDirectional.only(
+              start: AppSpacing.xs,
               bottom: AppSpacing.sm,
             ),
             child: Text(
@@ -227,6 +271,69 @@ class NotificationSettingsScreen extends ConsumerWidget {
 
   static String _formatHour(BuildContext context, int hour) {
     return TimeOfDay(hour: hour, minute: 0).format(context);
+  }
+
+  static String _slotLabel(AppL10n l10n, DailyReminderSlot slot) =>
+      switch (slot) {
+        DailyReminderSlot.morning => l10n.slotMorning,
+        DailyReminderSlot.noon => l10n.slotNoon,
+        DailyReminderSlot.afternoon => l10n.slotAfternoon,
+        DailyReminderSlot.evening => l10n.slotEvening,
+      };
+}
+
+/// One of the four daily reminder slots, with the hour it lands at.
+class _SlotTile extends StatelessWidget {
+  const _SlotTile({
+    required this.slot,
+    required this.label,
+    required this.hour,
+    required this.value,
+    required this.onChanged,
+  });
+
+  final DailyReminderSlot slot;
+  final String label;
+  final int hour;
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final icon = switch (slot) {
+      DailyReminderSlot.morning => Icons.wb_twilight_rounded,
+      DailyReminderSlot.noon => Icons.light_mode_rounded,
+      DailyReminderSlot.afternoon => Icons.wb_cloudy_rounded,
+      DailyReminderSlot.evening => Icons.nightlight_round,
+    };
+
+    return InkWell(
+      onTap: () => onChanged(!value),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.lg,
+          vertical: AppSpacing.md,
+        ),
+        child: Row(
+          children: [
+            IconBadge(icon: icon, size: 34, radius: 11),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Text(
+                label,
+                style: AppTypography.title.copyWith(color: context.textPrimary),
+              ),
+            ),
+            Text(
+              TimeOfDay(hour: hour, minute: 0).format(context),
+              style: AppTypography.body.copyWith(color: context.textSecondary),
+            ),
+            const SizedBox(width: AppSpacing.sm),
+            Switch(value: value, onChanged: onChanged),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -394,12 +501,14 @@ class _ScheduledCard extends ConsumerWidget {
                 Text(
                   notification.repeatsWeekly
                       ? l10n.everyWeek
+                      : notification.repeatsDaily
+                      ? l10n.everyDay
                       : l10n.scheduledFor(
                           '${dates.short(notification.scheduledFor)}, '
                           '${TimeOfDay.fromDateTime(notification.scheduledFor).format(context)}',
                         ),
                   style: AppTypography.caption.copyWith(
-                    color: AppColors.primary,
+                    color: context.accent,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

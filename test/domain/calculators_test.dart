@@ -12,7 +12,11 @@ import 'package:rainypenny/features/financial/domain/services/debt_calculator.da
 import 'package:rainypenny/features/financial/domain/services/savings_calculator.dart';
 
 const _food = Category(id: 'food', name: 'Food', icon: CategoryIcon.food);
-const _rent = Category(id: 'housing', name: 'Housing', icon: CategoryIcon.housing);
+const _rent = Category(
+  id: 'housing',
+  name: 'Housing',
+  icon: CategoryIcon.housing,
+);
 const _pay = Category(
   id: 'salary',
   name: 'Salary',
@@ -184,7 +188,7 @@ void main() {
         kind: LoanKind.loan,
         principal: 12000,
         remaining: 6200,
-        monthlyPayment: 420,
+        installmentAmount: 420,
         nextPaymentDate: now.add(const Duration(days: 14)),
         interestRate: 5.9,
         icon: CategoryIcon.transport,
@@ -196,7 +200,7 @@ void main() {
         kind: LoanKind.creditCard,
         principal: 5000,
         remaining: 2250,
-        monthlyPayment: 85,
+        installmentAmount: 85,
         nextPaymentDate: now.add(const Duration(days: 2)),
         interestRate: 19.99,
         icon: CategoryIcon.other,

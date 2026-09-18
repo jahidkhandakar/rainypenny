@@ -37,9 +37,9 @@ class SavingsScreen extends ConsumerWidget {
 
     await ref.read(savingsControllerProvider).contribute(goal.id, amount);
     if (!context.mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(AppL10n.of(context).fundsAdded)),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(AppL10n.of(context).fundsAdded)));
   }
 
   @override
@@ -132,10 +132,10 @@ class _SavingsSummaryCard extends ConsumerWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(AppSpacing.xxl),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [AppColors.primaryLight, AppColors.secondary],
+          colors: [context.accentLight, AppColors.secondary],
         ),
         borderRadius: BorderRadius.circular(AppRadius.xl),
       ),
@@ -238,9 +238,7 @@ class _ContributeSheetState extends ConsumerState<_ContributeSheet> {
     final presets = [50.0, 100.0, 250.0, widget.goal.monthlyContribution];
 
     return Padding(
-      padding: EdgeInsets.only(
-        bottom: MediaQuery.viewInsetsOf(context).bottom,
-      ),
+      padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(
@@ -279,7 +277,8 @@ class _ContributeSheetState extends ConsumerState<_ContributeSheet> {
                 ),
                 decoration: InputDecoration(hintText: '0'),
                 onChanged: (value) => setState(
-                  () => _amount = double.tryParse(value.replaceAll(',', '.')) ?? 0,
+                  () => _amount =
+                      double.tryParse(value.replaceAll(',', '.')) ?? 0,
                 ),
               ),
               const SizedBox(height: AppSpacing.md),
@@ -293,7 +292,7 @@ class _ContributeSheetState extends ConsumerState<_ContributeSheet> {
                       backgroundColor: context.tintFill,
                       side: BorderSide(color: context.borderColor),
                       labelStyle: AppTypography.label.copyWith(
-                        color: AppColors.primary,
+                        color: context.accent,
                       ),
                     ),
                 ],

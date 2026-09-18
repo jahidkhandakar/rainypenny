@@ -31,8 +31,8 @@ class TrendChip extends StatelessWidget {
     final color = onDark
         ? Colors.white
         : isGood
-            ? AppColors.success
-            : AppColors.error;
+        ? AppColors.success
+        : AppColors.error;
 
     final background = onDark
         ? Colors.white.withValues(alpha: 0.16)

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
+import '../../../../core/routing/app_routes.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
@@ -19,6 +21,7 @@ import '../../../financial/domain/rules/debt_rules.dart';
 import '../../../financial/domain/services/debt_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 import '../widgets/loan_editor_sheet.dart';
+import '../widgets/loan_status_visuals.dart';
 
 /// Debt tracking. Serious in tone — deep blue and charcoal — but never
 /// alarming: red appears only when a payment is actually overdue.
@@ -53,8 +56,10 @@ class LoansScreen extends ConsumerWidget {
           children: [
             FadeSlideIn(index: 0, child: _OutstandingCard(loans: list)),
             const SizedBox(height: AppSpacing.xl),
-            if (DebtCalculator.upcomingPayments(list, DateTime.now())
-                .isNotEmpty) ...[
+            if (DebtCalculator.upcomingPayments(
+              list,
+              DateTime.now(),
+            ).isNotEmpty) ...[
               SectionHeader(title: l10n.upcomingPayments),
               FadeSlideIn(index: 1, child: _PaymentSchedule(loans: list)),
               const SizedBox(height: AppSpacing.xl),
@@ -63,7 +68,10 @@ class LoansScreen extends ConsumerWidget {
             for (var i = 0; i < list.length; i++)
               Padding(
                 padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                child: FadeSlideIn(index: i + 2, child: _LoanCard(loan: list[i])),
+                child: FadeSlideIn(
+                  index: i + 2,
+                  child: _LoanCard(loan: list[i]),
+                ),
               ),
             if (list.isEmpty)
               EmptyState(
@@ -113,7 +121,7 @@ class _OutstandingCard extends ConsumerWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(AppSpacing.xxl),
       decoration: BoxDecoration(
-        color: AppColors.primaryDark,
+        color: context.accentDark,
         borderRadius: BorderRadius.circular(AppRadius.xl),
       ),
       child: Column(
@@ -212,7 +220,7 @@ class _PaymentSchedule extends ConsumerWidget {
                     ),
                   ),
                   Text(
-                    money.format(loan.monthlyPayment, decimals: false),
+                    money.format(loan.installmentAmount, decimals: false),
                     style: AppTypography.amountMedium.copyWith(
                       color: context.textPrimary,
                     ),
@@ -236,8 +244,8 @@ class _DueBadge extends StatelessWidget {
     final color = DebtRules.isOverdue(days)
         ? AppColors.error
         : DebtRules.isUrgent(days)
-            ? AppColors.warning
-            : AppColors.primary;
+        ? AppColors.warning
+        : context.accent;
 
     return Container(
       width: 46,
@@ -274,10 +282,15 @@ class _LoanCard extends ConsumerWidget {
     final l10n = AppL10n.of(context);
     final money = ref.watch(moneyFormatterProvider);
     final dates = ref.watch(dateFormatterProvider);
-    final days = loan.daysUntilPayment(DateTime.now());
+    final now = DateTime.now();
+    final days = loan.daysUntilPayment(now);
+    final status = loan.statusAt(
+      now,
+      dueSoonWindowDays: DebtRules.reminderWindowDays,
+    );
 
     return AppCard(
-      onTap: () => showLoanEditor(context, loan: loan),
+      onTap: () => context.push(AppRoutes.loanDetailPath(loan.id)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -287,8 +300,8 @@ class _LoanCard extends ConsumerWidget {
                 icon: loan.kind == LoanKind.creditCard
                     ? Icons.credit_card_rounded
                     : iconForCategory(loan.icon),
-                background: AppColors.primaryDark.withValues(alpha: 0.10),
-                foreground: AppColors.primaryDark,
+                background: context.accentDark.withValues(alpha: 0.10),
+                foreground: context.accentDark,
               ),
               const SizedBox(width: AppSpacing.md),
               Expanded(
@@ -313,19 +326,19 @@ class _LoanCard extends ConsumerWidget {
                   ],
                 ),
               ),
-              if (DebtRules.isOverdue(days))
-                StatusChip(
-                  label: l10n.overdue,
-                  color: AppColors.error,
-                  icon: Icons.error_rounded,
-                )
-              else if (DebtRules.isDueSoon(days))
+              if (status == LoanStatus.dueSoon)
                 StatusChip(
                   label: l10n.dueInDays(days),
                   color: DebtRules.isUrgent(days)
                       ? AppColors.warning
-                      : AppColors.primary,
+                      : context.accent,
                   icon: Icons.schedule_rounded,
+                )
+              else
+                StatusChip(
+                  label: status.label(l10n),
+                  color: status.color,
+                  icon: status.icon,
                 ),
             ],
           ),
@@ -338,19 +351,25 @@ class _LoanCard extends ConsumerWidget {
                 emphasised: true,
               ),
               _LoanFigure(
-                label: l10n.monthlyPayment,
-                value: money.format(loan.monthlyPayment, decimals: false),
+                label: l10n.installmentAmount,
+                value: money.format(loan.installmentAmount, decimals: false),
               ),
-              _LoanFigure(
-                label: l10n.nextPayment,
-                value: dates.short(loan.nextPaymentDate),
-              ),
+              if (loan.hasSchedule)
+                _LoanFigure(
+                  label: l10n.remainingInstallments,
+                  value: '${loan.remainingInstallments}',
+                )
+              else
+                _LoanFigure(
+                  label: l10n.nextPayment,
+                  value: dates.short(loan.nextPaymentDate),
+                ),
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
           AppProgressBar(
             value: loan.progress,
-            color: AppColors.primaryLight,
+            color: context.accentLight,
             height: 7,
           ),
           const SizedBox(height: AppSpacing.sm),
@@ -358,7 +377,12 @@ class _LoanCard extends ConsumerWidget {
             children: [
               Expanded(
                 child: Text(
-                  l10n.paidOff(loan.percentPaid),
+                  loan.hasSchedule
+                      ? '${l10n.paidOff(loan.percentPaid)} · '
+                            '${l10n.installmentsPaidOf(loan.paidInstallments, loan.totalInstallments)}'
+                      : l10n.paidOff(loan.percentPaid),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: AppTypography.caption.copyWith(
                     color: context.textSecondary,
                   ),
@@ -409,7 +433,7 @@ class _LoanFigure extends StatelessWidget {
               style: emphasised
                   ? AppTypography.amountLarge.copyWith(
                       fontSize: 19,
-                      color: AppColors.primaryDark,
+                      color: context.accentDark,
                     )
                   : AppTypography.amountMedium.copyWith(
                       color: context.textPrimary,

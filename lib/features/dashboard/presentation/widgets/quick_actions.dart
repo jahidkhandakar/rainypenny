@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -90,7 +89,7 @@ class _QuickActionButton extends StatelessWidget {
                 color: context.tintFill,
                 borderRadius: BorderRadius.circular(17),
               ),
-              child: Icon(action.icon, size: 23, color: AppColors.primary),
+              child: Icon(action.icon, size: 23, color: context.accent),
             ),
             const SizedBox(height: AppSpacing.sm),
             Text(

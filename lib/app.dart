@@ -15,6 +15,7 @@ class RainyPennyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(localeProvider);
     final themeMode = ref.watch(themeModeProvider);
+    final accent = ref.watch(accentProvider);
     final router = ref.watch(appRouterProvider);
 
     // Tapping a notification deep-links to the screen it is about.
@@ -24,18 +25,17 @@ class RainyPennyApp extends ConsumerWidget {
       title: 'RainyPenny',
       debugShowCheckedModeBanner: false,
       routerConfig: router,
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
+      theme: AppTheme.light(accent),
+      darkTheme: AppTheme.dark(accent),
       themeMode: themeMode,
       locale: locale,
       localizationsDelegates: AppL10n.localizationsDelegates,
       supportedLocales: AppL10n.supportedLocales,
       builder: (context, child) {
         // Keep the layout readable regardless of the device text-size setting.
-        final scale = MediaQuery.textScalerOf(context).clamp(
-          minScaleFactor: 0.9,
-          maxScaleFactor: 1.3,
-        );
+        final scale = MediaQuery.textScalerOf(
+          context,
+        ).clamp(minScaleFactor: 0.9, maxScaleFactor: 1.3);
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaler: scale),
           // Inside the localisations scope, so notification copy is rendered

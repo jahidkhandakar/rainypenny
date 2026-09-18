@@ -8,8 +8,8 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/widgets/brand_mark.dart';
-import '../../auth/presentation/controllers/auth_controller.dart';
 import '../../financial/presentation/providers/finance_providers.dart';
+import '../../../core/theme/app_theme.dart';
 
 /// Brand moment while the first data load is kicked off.
 ///
@@ -36,10 +36,13 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     ref.read(transactionsProvider.future).ignore();
     ref.read(profileProvider.future).ignore();
 
+    // Always aims at the dashboard: the router's redirect owns the decision
+    // about where the user actually belongs — sign-in, setup, a pending
+    // password reset — and duplicating that logic here is how the two drift
+    // apart.
     Future<void>.delayed(const Duration(milliseconds: 1400), () {
       if (!mounted) return;
-      final signedIn = ref.read(currentUserProvider) != null;
-      context.go(signedIn ? AppRoutes.home : AppRoutes.signIn);
+      context.go(AppRoutes.home);
     });
   }
 
@@ -57,7 +60,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     return Scaffold(
       backgroundColor: AppColors.charcoal,
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.brandGradient),
+        decoration: BoxDecoration(gradient: context.brandGradient),
         child: Center(
           child: FadeTransition(
             opacity: fade,

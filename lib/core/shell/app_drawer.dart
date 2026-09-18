@@ -132,8 +132,8 @@ class _ProfileTile extends StatelessWidget {
             Container(
               width: 46,
               height: 46,
-              decoration: const BoxDecoration(
-                gradient: AppColors.brandGradient,
+              decoration: BoxDecoration(
+                gradient: context.brandGradient,
                 shape: BoxShape.circle,
               ),
               alignment: Alignment.center,

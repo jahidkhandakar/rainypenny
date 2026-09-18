@@ -21,10 +21,10 @@ final notificationServiceProvider = Provider<NotificationService>((ref) {
 
 final notificationPreferencesRepositoryProvider =
     Provider<NotificationPreferencesRepository>((ref) {
-  return LocalNotificationPreferencesRepository(
-    ref.watch(settingsStoreProvider),
-  );
-});
+      return LocalNotificationPreferencesRepository(
+        ref.watch(settingsStoreProvider),
+      );
+    });
 
 /// The user's channel choices, persisted on every change.
 class NotificationPreferencesNotifier
@@ -49,38 +49,41 @@ class NotificationPreferencesNotifier
     await _persist();
   }
 
+  Future<void> setSlot(DailyReminderSlot slot, bool enabled) async {
+    state = state.withSlot(slot, enabled);
+    await _persist();
+  }
+
   Future<void> setSummarySlot(int weekday, int hour) async {
     state = state.copyWith(summaryWeekday: weekday, summaryHour: hour);
     await _persist();
   }
 
   Future<void> _persist() {
-    return ref
-        .read(notificationPreferencesRepositoryProvider)
-        .save(state);
+    return ref.read(notificationPreferencesRepositoryProvider).save(state);
   }
 }
 
-final notificationPreferencesProvider = NotifierProvider<
-    NotificationPreferencesNotifier, NotificationPreferences>(
-  NotificationPreferencesNotifier.new,
-);
+final notificationPreferencesProvider =
+    NotifierProvider<NotificationPreferencesNotifier, NotificationPreferences>(
+      NotificationPreferencesNotifier.new,
+    );
 
 /// The schedule the app intends to deliver, recomputed whenever the ledger,
 /// the debts or the preferences change.
 final notificationScheduleProvider =
     FutureProvider<List<ScheduledNotification>>((ref) async {
-  final insights = await ref.watch(insightsProvider.future);
-  final loans = await ref.watch(loansProvider.future);
-  final preferences = ref.watch(notificationPreferencesProvider);
+      final insights = await ref.watch(insightsProvider.future);
+      final loans = await ref.watch(loansProvider.future);
+      final preferences = ref.watch(notificationPreferencesProvider);
 
-  return NotificationScheduler.build(
-    insights: insights,
-    loans: loans,
-    preferences: preferences,
-    now: DateTime.now(),
-  );
-});
+      return NotificationScheduler.build(
+        insights: insights,
+        loans: loans,
+        preferences: preferences,
+        now: DateTime.now(),
+      );
+    });
 
 /// Whether the OS has granted permission to post notifications.
 final notificationPermissionProvider = FutureProvider<bool>((ref) {
@@ -89,7 +92,9 @@ final notificationPermissionProvider = FutureProvider<bool>((ref) {
 
 /// Insights that would reach the device, for the preview in Settings.
 final deliverableInsightsProvider = Provider<List<Insight>>((ref) {
-  return ref.watch(notificationScheduleProvider).maybeWhen(
+  return ref
+      .watch(notificationScheduleProvider)
+      .maybeWhen(
         data: (schedule) => schedule.map((n) => n.insight).toList(),
         orElse: () => const [],
       );
@@ -97,8 +102,7 @@ final deliverableInsightsProvider = Provider<List<Insight>>((ref) {
 
 /// Loans with a reminder booked, exposed for the schedule preview.
 final remindableLoansProvider = Provider<List<Loan>>((ref) {
-  return ref.watch(loansProvider).maybeWhen(
-        data: (loans) => loans,
-        orElse: () => const [],
-      );
+  return ref
+      .watch(loansProvider)
+      .maybeWhen(data: (loans) => loans, orElse: () => const []);
 });

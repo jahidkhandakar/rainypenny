@@ -6,7 +6,7 @@ abstract final class DebtCalculator {
       loans.fold(0.0, (sum, l) => sum + l.remaining);
 
   static double totalMonthlyPayments(List<Loan> loans) =>
-      loans.fold(0.0, (sum, l) => sum + l.monthlyPayment);
+      loans.fold(0.0, (sum, l) => sum + l.installmentAmount);
 
   static double totalPaidOff(List<Loan> loans) =>
       loans.fold(0.0, (sum, l) => sum + l.paidOff);
@@ -29,8 +29,7 @@ abstract final class DebtCalculator {
     return loans.where((l) {
       final days = l.daysUntilPayment(now);
       return DebtRules.isOverdue(days) || DebtRules.isDueSoon(days);
-    }).toList()
-      ..sort((a, b) => a.nextPaymentDate.compareTo(b.nextPaymentDate));
+    }).toList()..sort((a, b) => a.nextPaymentDate.compareTo(b.nextPaymentDate));
   }
 
   /// All payments ordered by due date, for the schedule timeline.

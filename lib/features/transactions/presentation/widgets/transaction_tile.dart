@@ -35,12 +35,7 @@ class TransactionTile extends ConsumerWidget {
     final isIncome = transaction.isIncome;
 
     final subtitle = showDate
-        ? '${dates.dayHeading(
-            transaction.date,
-            now: DateTime.now(),
-            todayLabel: l10n.today,
-            yesterdayLabel: l10n.yesterday,
-          )} · ${transaction.category.name}'
+        ? '${dates.dayHeading(transaction.date, now: DateTime.now(), todayLabel: l10n.today, yesterdayLabel: l10n.yesterday)} · ${transaction.category.name}'
         : transaction.category.name;
 
     return InkWell(

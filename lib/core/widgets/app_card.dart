@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../theme/app_colors.dart';
 import '../theme/app_dimens.dart';
 import '../theme/app_theme.dart';
 
@@ -76,11 +75,7 @@ class IconBadge extends StatelessWidget {
         color: background ?? context.tintFill,
         borderRadius: BorderRadius.circular(radius ?? size / 3),
       ),
-      child: Icon(
-        icon,
-        size: size * 0.48,
-        color: foreground ?? AppColors.primary,
-      ),
+      child: Icon(icon, size: size * 0.48, color: foreground ?? context.accent),
     );
   }
 }

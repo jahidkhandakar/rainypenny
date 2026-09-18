@@ -156,14 +156,16 @@ void main() {
       expect((await repository.getGoals()).length, before + 1);
 
       await repository.contribute('goal-test', 150);
-      var stored =
-          (await repository.getGoals()).firstWhere((g) => g.id == 'goal-test');
+      var stored = (await repository.getGoals()).firstWhere(
+        (g) => g.id == 'goal-test',
+      );
       expect(stored.saved, 250);
       expect(stored.progress, closeTo(250 / 900, 0.0001));
 
       await repository.updateGoal(stored.copyWith(target: 500));
-      stored =
-          (await repository.getGoals()).firstWhere((g) => g.id == 'goal-test');
+      stored = (await repository.getGoals()).firstWhere(
+        (g) => g.id == 'goal-test',
+      );
       expect(stored.target, 500);
       expect(stored.saved, 250, reason: 'update must not reset progress');
 
@@ -175,8 +177,9 @@ void main() {
       final repository = SavingsRepositoryImpl(source);
       await repository.contribute('goal-macbook', 1000);
 
-      final goal = (await repository.getGoals())
-          .firstWhere((g) => g.id == 'goal-macbook');
+      final goal = (await repository.getGoals()).firstWhere(
+        (g) => g.id == 'goal-macbook',
+      );
       expect(goal.saved, 2700);
       expect(goal.isComplete, isTrue);
       expect(goal.remaining, 0);
@@ -196,7 +199,7 @@ void main() {
         kind: LoanKind.loan,
         principal: 900,
         remaining: 600,
-        monthlyPayment: 50,
+        installmentAmount: 50,
         nextPaymentDate: DateTime.now().add(const Duration(days: 20)),
         interestRate: 0,
         icon: CategoryIcon.other,
@@ -205,36 +208,42 @@ void main() {
       await repository.addLoan(loan);
       expect((await repository.getLoans()).length, before + 1);
 
-      await repository.updateLoan(loan.copyWith(monthlyPayment: 75));
-      final stored =
-          (await repository.getLoans()).firstWhere((l) => l.id == 'loan-test');
-      expect(stored.monthlyPayment, 75);
+      await repository.updateLoan(loan.copyWith(installmentAmount: 75));
+      final stored = (await repository.getLoans()).firstWhere(
+        (l) => l.id == 'loan-test',
+      );
+      expect(stored.installmentAmount, 75);
 
       await repository.deleteLoan('loan-test');
       expect((await repository.getLoans()).length, before);
     });
 
-    test('recording a payment reduces the balance and rolls the due date',
-        () async {
-      final repository = LoanRepositoryImpl(source);
-      final before =
-          (await repository.getLoans()).firstWhere((l) => l.id == 'loan-car');
+    test(
+      'recording a payment reduces the balance and rolls the due date',
+      () async {
+        final repository = LoanRepositoryImpl(source);
+        final before = (await repository.getLoans()).firstWhere(
+          (l) => l.id == 'loan-car',
+        );
 
-      await repository.recordPayment('loan-car', 420);
+        await repository.recordPayment('loan-car', 420);
 
-      final after =
-          (await repository.getLoans()).firstWhere((l) => l.id == 'loan-car');
-      expect(after.remaining, before.remaining - 420);
-      expect(after.percentPaid, greaterThan(before.percentPaid));
-      expect(after.nextPaymentDate.isAfter(before.nextPaymentDate), isTrue);
-    });
+        final after = (await repository.getLoans()).firstWhere(
+          (l) => l.id == 'loan-car',
+        );
+        expect(after.remaining, before.remaining - 420);
+        expect(after.percentPaid, greaterThan(before.percentPaid));
+        expect(after.nextPaymentDate.isAfter(before.nextPaymentDate), isTrue);
+      },
+    );
 
     test('a payment never drives the balance below zero', () async {
       final repository = LoanRepositoryImpl(source);
       await repository.recordPayment('loan-card', 99999);
 
-      final loan =
-          (await repository.getLoans()).firstWhere((l) => l.id == 'loan-card');
+      final loan = (await repository.getLoans()).firstWhere(
+        (l) => l.id == 'loan-card',
+      );
       expect(loan.remaining, 0);
       expect(loan.progress, 1.0);
     });
@@ -248,7 +257,7 @@ void main() {
         kind: LoanKind.loan,
         principal: 1000,
         remaining: 1000,
-        monthlyPayment: 100,
+        installmentAmount: 100,
         // 31 January has no counterpart in February.
         nextPaymentDate: DateTime(2027, 1, 31),
         interestRate: 3,
@@ -258,8 +267,9 @@ void main() {
       await repository.addLoan(loan);
       await repository.recordPayment('loan-eom', 100);
 
-      final stored =
-          (await repository.getLoans()).firstWhere((l) => l.id == 'loan-eom');
+      final stored = (await repository.getLoans()).firstWhere(
+        (l) => l.id == 'loan-eom',
+      );
       expect(stored.nextPaymentDate.month, 2);
       expect(stored.nextPaymentDate.day, 28);
     });

@@ -7,7 +7,6 @@ import '../../features/loans/presentation/widgets/loan_editor_sheet.dart';
 import '../../features/savings/presentation/widgets/goal_editor_sheet.dart';
 import '../localization/generated/app_localizations.dart';
 import '../routing/app_routes.dart';
-import '../theme/app_colors.dart';
 import '../theme/app_dimens.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_typography.dart';
@@ -119,7 +118,7 @@ class _QuickActionSheet extends ConsumerWidget {
                     child: _HeroAction(
                       label: l10n.addIncome,
                       icon: Icons.arrow_downward_rounded,
-                      color: AppColors.primary,
+                      color: context.accent,
                       onTap: () => choose(QuickAction.addIncome),
                     ),
                   ),
@@ -290,7 +289,7 @@ class _SecondaryAction extends StatelessWidget {
                     color: context.tintFill,
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Icon(icon, size: 20, color: AppColors.primary),
+                  child: Icon(icon, size: 20, color: context.accent),
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 Padding(

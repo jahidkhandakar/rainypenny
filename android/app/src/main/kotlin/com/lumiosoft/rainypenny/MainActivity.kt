@@ -1,4 +1,4 @@
-package com.example.rainypenny
+package com.lumiosoft.rainypenny
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -13,7 +13,8 @@ class TransactionRepositoryImpl implements TransactionRepository {
   final FinanceDataSource _dataSource;
 
   @override
-  Future<List<Transaction>> getTransactions() => _dataSource.fetchTransactions();
+  Future<List<Transaction>> getTransactions() =>
+      _dataSource.fetchTransactions();
 
   @override
   Future<void> addTransaction(Transaction transaction) =>
@@ -29,4 +30,20 @@ class TransactionRepositoryImpl implements TransactionRepository {
 
   @override
   Future<List<Category>> getCategories() => _dataSource.fetchCategories();
+
+  @override
+  Future<void> addCategory(Category category) =>
+      _dataSource.insertCategory(category);
+
+  @override
+  Future<void> updateCategory(Category category) =>
+      _dataSource.updateCategory(category);
+
+  @override
+  Future<void> deleteCategory(String categoryId) =>
+      _dataSource.deleteCategory(categoryId);
+
+  @override
+  Future<int> countCategoryUsage(String categoryId) =>
+      _dataSource.countCategoryUsage(categoryId);
 }

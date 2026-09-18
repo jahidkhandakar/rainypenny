@@ -90,8 +90,9 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
     final total = widget.slices.fold(0.0, (sum, s) => sum + s.amount);
     if (total <= 0) return const SizedBox.shrink();
 
-    final highlighted =
-        _touchedIndex == null ? null : widget.slices[_touchedIndex!];
+    final highlighted = _touchedIndex == null
+        ? null
+        : widget.slices[_touchedIndex!];
 
     return Row(
       children: [

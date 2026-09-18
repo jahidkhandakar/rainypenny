@@ -27,56 +27,83 @@ InsightText presentInsight(
 
   return switch (insight.code) {
     InsightCode.budgetExceeded => InsightText(
-        l10n.insightBudgetExceededTitle(subject),
-        l10n.insightBudgetExceededBody(amount(), subject),
-      ),
+      l10n.insightBudgetExceededTitle(subject),
+      l10n.insightBudgetExceededBody(amount(), subject),
+    ),
     InsightCode.budgetApproaching => InsightText(
-        l10n.insightBudgetApproachingTitle(subject),
-        l10n.insightBudgetApproachingBody(subject, percent, amount()),
-      ),
+      l10n.insightBudgetApproachingTitle(subject),
+      l10n.insightBudgetApproachingBody(subject, percent, amount()),
+    ),
     InsightCode.spendingOverIncome => InsightText(
-        l10n.insightOverIncomeTitle,
-        l10n.insightOverIncomeBody,
-      ),
+      l10n.insightOverIncomeTitle,
+      l10n.insightOverIncomeBody,
+    ),
     InsightCode.categorySpendingUp => InsightText(
-        l10n.insightCategoryUpTitle(subject),
-        l10n.insightCategoryUpBody(subject, percent),
-      ),
+      l10n.insightCategoryUpTitle(subject),
+      l10n.insightCategoryUpBody(subject, percent),
+    ),
     InsightCode.spendingTrendDown => InsightText(
-        l10n.insightTrendDownTitle,
-        l10n.insightTrendDownBody(percent),
-      ),
+      l10n.insightTrendDownTitle,
+      l10n.insightTrendDownBody(percent),
+    ),
     InsightCode.spendingTrendUp => InsightText(
-        l10n.insightTrendUpTitle,
-        l10n.insightTrendUpBody(percent),
-      ),
+      l10n.insightTrendUpTitle,
+      l10n.insightTrendUpBody(percent),
+    ),
     InsightCode.savingsRateStrong => InsightText(
-        l10n.insightSavingsStrongTitle,
-        l10n.insightSavingsStrongBody(percent, insight.targetPercent ?? 0),
-      ),
+      l10n.insightSavingsStrongTitle,
+      l10n.insightSavingsStrongBody(percent, insight.targetPercent ?? 0),
+    ),
     InsightCode.savingsRateLow => InsightText(
-        l10n.insightSavingsLowTitle,
-        l10n.insightSavingsLowBody(percent, insight.targetPercent ?? 0),
-      ),
+      l10n.insightSavingsLowTitle,
+      l10n.insightSavingsLowBody(percent, insight.targetPercent ?? 0),
+    ),
     InsightCode.goalNearlyFunded => InsightText(
-        l10n.insightGoalNearlyTitle(subject),
-        l10n.insightGoalNearlyBody(amount(), subject),
-      ),
+      l10n.insightGoalNearlyTitle(subject),
+      l10n.insightGoalNearlyBody(amount(), subject),
+    ),
     InsightCode.goalOnTrack => InsightText(
-        l10n.insightGoalOnTrackTitle(subject),
-        l10n.insightGoalOnTrackBody(amount(), insight.months ?? 0),
-      ),
+      l10n.insightGoalOnTrackTitle(subject),
+      l10n.insightGoalOnTrackBody(amount(), insight.months ?? 0),
+    ),
     InsightCode.debtOverdue => InsightText(
-        l10n.insightDebtOverdueTitle(subject),
-        l10n.insightDebtOverdueBody(subject, amount(), insight.days ?? 0),
-      ),
+      l10n.insightDebtOverdueTitle(subject),
+      l10n.insightDebtOverdueBody(subject, amount(), insight.days ?? 0),
+    ),
     InsightCode.debtDueSoon => InsightText(
-        l10n.insightDebtDueTitle(subject),
-        l10n.insightDebtDueBody(amount(), insight.days ?? 0),
-      ),
+      l10n.insightDebtDueTitle(subject),
+      l10n.insightDebtDueBody(amount(), insight.days ?? 0),
+    ),
+    InsightCode.debtDueToday => InsightText(
+      l10n.insightDebtDueTodayTitle(subject),
+      l10n.insightDebtDueTodayBody(amount()),
+    ),
     InsightCode.weeklySummary => InsightText(
-        l10n.insightWeeklySummaryTitle,
-        l10n.insightWeeklySummaryBody,
-      ),
+      l10n.insightWeeklySummaryTitle,
+      l10n.insightWeeklySummaryBody,
+    ),
+
+    // The engagement nudges carry no figures — they are prompts, not
+    // observations, so the copy is fixed and simply changes with the hour.
+    InsightCode.expenseReminderMorning => InsightText(
+      l10n.remindMorningTitle,
+      l10n.remindMorningBody,
+    ),
+    InsightCode.expenseReminderNoon => InsightText(
+      l10n.remindNoonTitle,
+      l10n.remindNoonBody,
+    ),
+    InsightCode.expenseReminderAfternoon => InsightText(
+      l10n.remindAfternoonTitle,
+      l10n.remindAfternoonBody,
+    ),
+    InsightCode.expenseReminderEvening => InsightText(
+      l10n.remindEveningTitle,
+      l10n.remindEveningBody,
+    ),
+    InsightCode.happyWeekend => InsightText(
+      l10n.happyWeekendTitle,
+      l10n.happyWeekendBody,
+    ),
   };
 }

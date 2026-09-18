@@ -18,7 +18,7 @@ class EditorSheet extends StatelessWidget {
     this.subtitle,
     this.onDelete,
     this.deleteLabel,
-    this.accent = AppColors.primary,
+    this.accent,
     this.isBusy = false,
   });
 
@@ -31,7 +31,10 @@ class EditorSheet extends StatelessWidget {
   final VoidCallback? onSubmit;
   final VoidCallback? onDelete;
   final String? deleteLabel;
-  final Color accent;
+
+  /// Colour of the primary action. Null takes the current accent — the
+  /// common case; the loan sheets pass a deeper shade of their own.
+  final Color? accent;
   final bool isBusy;
 
   @override
@@ -116,7 +119,7 @@ class EditorSheet extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: isBusy ? null : onSubmit,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: accent,
+                          backgroundColor: accent ?? context.accent,
                         ),
                         child: isBusy
                             ? const SizedBox(
@@ -156,7 +159,10 @@ class SheetField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(bottom: AppSpacing.sm, left: 2),
+            padding: const EdgeInsetsDirectional.only(
+              bottom: AppSpacing.sm,
+              start: 2,
+            ),
             child: Text(
               label,
               style: AppTypography.label.copyWith(color: context.textSecondary),

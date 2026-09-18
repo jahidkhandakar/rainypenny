@@ -49,9 +49,7 @@ Future<void> startAddBudget(BuildContext context, WidgetRef ref) async {
 
   if (!context.mounted) return;
   if (available.isEmpty) {
-    messenger.showSnackBar(
-      SnackBar(content: Text(l10n.allCategoriesBudgeted)),
-    );
+    messenger.showSnackBar(SnackBar(content: Text(l10n.allCategoriesBudgeted)));
     return;
   }
 
@@ -219,8 +217,7 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
                 },
                 backgroundColor: context.tintFill,
                 side: BorderSide(color: context.borderColor),
-                labelStyle:
-                    AppTypography.label.copyWith(color: AppColors.primary),
+                labelStyle: AppTypography.label.copyWith(color: context.accent),
               ),
           ],
         ),

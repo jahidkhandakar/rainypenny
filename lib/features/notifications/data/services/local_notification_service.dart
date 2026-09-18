@@ -17,7 +17,7 @@ import '../../domain/services/notification_service.dart';
 /// financial data leaves the device.
 class LocalNotificationService implements NotificationService {
   LocalNotificationService({FlutterLocalNotificationsPlugin? plugin})
-      : _plugin = plugin ?? FlutterLocalNotificationsPlugin();
+    : _plugin = plugin ?? FlutterLocalNotificationsPlugin();
 
   final FlutterLocalNotificationsPlugin _plugin;
   bool _initialised = false;
@@ -45,6 +45,16 @@ class LocalNotificationService implements NotificationService {
       id: 'weekly_summary',
       name: 'Weekly summary',
       description: 'A digest of the week just gone.',
+    ),
+    NotificationChannel.dailyReminders: (
+      id: 'daily_reminders',
+      name: 'Daily expense reminders',
+      description: 'Gentle nudges to keep your expenses up to date.',
+    ),
+    NotificationChannel.weekendGreeting: (
+      id: 'weekend_greeting',
+      name: 'Happy Weekend',
+      description: 'A friendly hello at the start of your weekend.',
     ),
   };
 
@@ -85,8 +95,10 @@ class LocalNotificationService implements NotificationService {
   }
 
   Future<void> _createAndroidChannels() async {
-    final android = _plugin.resolvePlatformSpecificImplementation<
-        AndroidFlutterLocalNotificationsPlugin>();
+    final android = _plugin
+        .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin
+        >();
     if (android == null) return;
 
     for (final channel in _channels.values) {
@@ -106,8 +118,10 @@ class LocalNotificationService implements NotificationService {
     if (kIsWeb) return false;
 
     if (Platform.isAndroid) {
-      final android = _plugin.resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>();
+      final android = _plugin
+          .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin
+          >();
       return await android?.areNotificationsEnabled() ?? false;
     }
     // iOS has no synchronous query; requesting again is a no-op once granted.
@@ -120,14 +134,22 @@ class LocalNotificationService implements NotificationService {
     await initialize();
 
     if (Platform.isAndroid) {
-      final android = _plugin.resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>();
+      final android = _plugin
+          .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin
+          >();
       return await android?.requestNotificationsPermission() ?? false;
     }
     if (Platform.isIOS || Platform.isMacOS) {
-      final ios = _plugin.resolvePlatformSpecificImplementation<
-          IOSFlutterLocalNotificationsPlugin>();
-      return await ios?.requestPermissions(alert: true, badge: true, sound: true) ??
+      final ios = _plugin
+          .resolvePlatformSpecificImplementation<
+            IOSFlutterLocalNotificationsPlugin
+          >();
+      return await ios?.requestPermissions(
+            alert: true,
+            badge: true,
+            sound: true,
+          ) ??
           false;
     }
     return false;
@@ -155,9 +177,17 @@ class LocalNotificationService implements NotificationService {
         body: copy.body,
         payload: notification.route,
         scheduledDate: tz.TZDateTime.from(notification.scheduledFor, tz.local),
+        // `allowWhileIdle` is what makes these arrive with the app closed and
+        // the device dozing. Inexact rather than exact on purpose: exact alarms
+        // need a restricted permission on Android 14+ that Play only grants to
+        // alarm and calendar apps, and a reminder that lands a few minutes
+        // late is no worse for the user than one that never ships.
         androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-        matchDateTimeComponents:
-            notification.repeatsWeekly ? DateTimeComponents.dayOfWeekAndTime : null,
+        matchDateTimeComponents: switch (notification.repeat) {
+          NotificationRepeat.weekly => DateTimeComponents.dayOfWeekAndTime,
+          NotificationRepeat.daily => DateTimeComponents.time,
+          NotificationRepeat.once => null,
+        },
         notificationDetails: NotificationDetails(
           android: AndroidNotificationDetails(
             channel.id,

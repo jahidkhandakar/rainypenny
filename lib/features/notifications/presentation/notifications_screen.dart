@@ -50,9 +50,11 @@ class NotificationsScreen extends ConsumerWidget {
           }
 
           final urgent = list
-              .where((i) =>
-                  i.level == InsightLevel.critical ||
-                  i.level == InsightLevel.warning)
+              .where(
+                (i) =>
+                    i.level == InsightLevel.critical ||
+                    i.level == InsightLevel.warning,
+              )
               .toList();
           final rest = list.where((i) => !urgent.contains(i)).toList();
 
@@ -118,8 +120,8 @@ class _GroupLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        left: AppSpacing.xs,
+      padding: const EdgeInsetsDirectional.only(
+        start: AppSpacing.xs,
         bottom: AppSpacing.sm,
       ),
       child: Text(

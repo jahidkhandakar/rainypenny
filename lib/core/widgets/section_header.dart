@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../theme/app_colors.dart';
 import '../theme/app_dimens.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_typography.dart';
@@ -59,10 +58,10 @@ class SectionHeader extends StatelessWidget {
                 children: [
                   Text(actionLabel!),
                   const SizedBox(width: 2),
-                  const Icon(
+                  Icon(
                     Icons.arrow_forward_rounded,
                     size: 14,
-                    color: AppColors.primary,
+                    color: context.accentOnSurface,
                   ),
                 ],
               ),

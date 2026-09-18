@@ -39,10 +39,15 @@ class IncomeExpenseChart extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
+        // Wrap rather than Row: the two labels are a translated pair, and in
+        // several languages — Malay's "Pendapatan"/"Perbelanjaan" among them —
+        // they are together wider than a phone. Wrapping keeps both fully
+        // readable instead of truncating a legend, which would be useless.
+        Wrap(
+          spacing: AppSpacing.lg,
+          runSpacing: AppSpacing.sm,
           children: [
             _LegendDot(color: AppColors.income, label: l10n.income),
-            const SizedBox(width: AppSpacing.lg),
             _LegendDot(color: context.expenseColor, label: l10n.expenses),
           ],
         ),
@@ -53,7 +58,45 @@ class IncomeExpenseChart extends ConsumerWidget {
             BarChartData(
               maxY: ceiling,
               alignment: BarChartAlignment.spaceAround,
-              barTouchData: BarTouchData(enabled: false),
+              // Touching a column names the period and the exact figure, so
+              // the chart answers "how much, and when?" rather than only
+              // showing a shape.
+              barTouchData: BarTouchData(
+                touchTooltipData: BarTouchTooltipData(
+                  getTooltipColor: (_) => context.tooltipBackground,
+                  tooltipBorderRadius: BorderRadius.circular(AppRadius.sm),
+                  fitInsideHorizontally: true,
+                  fitInsideVertically: true,
+                  tooltipPadding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.sm,
+                    vertical: 6,
+                  ),
+                  getTooltipItem: (group, groupIndex, rod, rodIndex) {
+                    final bucket = buckets[group.x];
+                    final isIncome = rodIndex == 0;
+                    return BarTooltipItem(
+                      '${isIncome ? l10n.income : l10n.expenses}\n',
+                      AppTypography.caption.copyWith(
+                        color: Colors.white.withValues(alpha: 0.75),
+                      ),
+                      children: [
+                        TextSpan(
+                          text: money.format(rod.toY),
+                          style: AppTypography.title.copyWith(
+                            color: Colors.white,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '\n${dates.range(bucket.start, bucket.end)}',
+                          style: AppTypography.caption.copyWith(
+                            color: Colors.white.withValues(alpha: 0.65),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
               gridData: FlGridData(
                 show: true,
                 drawVerticalLine: false,

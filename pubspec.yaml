@@ -46,6 +46,9 @@ dependencies:
   timezone: ^0.11.1
   flutter_timezone: ^5.1.0
   flutter_svg: ^2.3.0
+  pdf: ^3.12.0
+  printing: ^5.14.3
+  in_app_review: ^2.0.10
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +76,10 @@ flutter:
   # `dart run flutter_launcher_icons`, never loaded at runtime.
   assets:
     - assets/logo/
+    # Bundled rather than fetched at runtime: the PDF report has to render
+    # Arabic, Urdu and Hindi correctly with no network, and the built-in PDF
+    # base fonts cover none of those scripts.
+    - assets/fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

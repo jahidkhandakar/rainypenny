@@ -11,8 +11,7 @@ class SavingsRepositoryImpl implements SavingsRepository {
   Future<List<SavingsGoal>> getGoals() => _dataSource.fetchSavingsGoals();
 
   @override
-  Future<void> addGoal(SavingsGoal goal) =>
-      _dataSource.insertSavingsGoal(goal);
+  Future<void> addGoal(SavingsGoal goal) => _dataSource.insertSavingsGoal(goal);
 
   @override
   Future<void> updateGoal(SavingsGoal goal) =>

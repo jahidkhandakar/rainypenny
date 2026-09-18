@@ -3,7 +3,18 @@
 enum InsightLevel { positive, informative, warning, critical }
 
 /// The feature an insight points at, so tapping it can deep-link.
-enum InsightTopic { spending, budget, savings, debt, income }
+enum InsightTopic {
+  spending,
+  budget,
+  savings,
+  debt,
+  income,
+
+  /// Nudges and greetings rather than observations about the ledger. They
+  /// carry no figures and are never shown on the dashboard — they exist only
+  /// to arrive as a notification.
+  engagement,
+}
 
 /// Which observation was made.
 ///
@@ -23,6 +34,20 @@ enum InsightCode {
   goalOnTrack,
   debtOverdue,
   debtDueSoon,
+
+  /// The installment falls due today — the last nudge before it is late.
+  debtDueToday,
+
+  /// Gentle prompts through the day to keep the ledger current. Four slots so
+  /// the wording can change with the time of day instead of repeating one
+  /// message four times, which is what makes reminders feel like nagging.
+  expenseReminderMorning,
+  expenseReminderNoon,
+  expenseReminderAfternoon,
+  expenseReminderEvening,
+
+  /// A friendly weekend greeting.
+  happyWeekend,
 
   /// The recurring weekly digest. Carries no figures: it fires in the future,
   /// so any number computed now would be stale by delivery time.

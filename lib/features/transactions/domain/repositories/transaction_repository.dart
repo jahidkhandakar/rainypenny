@@ -16,4 +16,12 @@ abstract interface class TransactionRepository {
   Future<void> deleteTransaction(String id);
 
   Future<List<Category>> getCategories();
+
+  Future<void> addCategory(Category category);
+
+  Future<void> updateCategory(Category category);
+
+  Future<void> deleteCategory(String categoryId);
+
+  Future<int> countCategoryUsage(String categoryId);
 }

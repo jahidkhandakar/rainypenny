@@ -39,6 +39,8 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
   late final TextEditingController _remainingController;
   late final TextEditingController _paymentController;
   late final TextEditingController _rateController;
+  late final TextEditingController _totalInstallmentsController;
+  late final TextEditingController _paidInstallmentsController;
 
   late String _name;
   late String _lender;
@@ -48,11 +50,18 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
   late double _rate;
   late LoanKind _kind;
   late DateTime _nextPayment;
+  late DateTime? _startDate;
+  late int _totalInstallments;
+  late int _paidInstallments;
   bool _busy = false;
 
   bool get _isEditing => widget.loan != null;
 
-  bool get _isValid => _name.trim().isNotEmpty && _remaining > 0;
+  bool get _isValid =>
+      _name.trim().isNotEmpty &&
+      _remaining > 0 &&
+      // A plan cannot have settled more installments than it contains.
+      (_totalInstallments == 0 || _paidInstallments <= _totalInstallments);
 
   @override
   void initState() {
@@ -63,11 +72,14 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     _lender = loan?.lender ?? '';
     _principal = loan?.principal ?? 0;
     _remaining = loan?.remaining ?? 0;
-    _payment = loan?.monthlyPayment ?? 0;
+    _payment = loan?.installmentAmount ?? 0;
     _rate = loan?.interestRate ?? 0;
     _kind = loan?.kind ?? LoanKind.loan;
     _nextPayment =
         loan?.nextPaymentDate ?? DateTime.now().add(const Duration(days: 30));
+    _startDate = loan?.startDate;
+    _totalInstallments = loan?.totalInstallments ?? 0;
+    _paidInstallments = loan?.paidInstallments ?? 0;
 
     _nameController = TextEditingController(text: _name);
     _lenderController = TextEditingController(text: _lender);
@@ -76,6 +88,12 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     _paymentController = TextEditingController(text: _text(_payment));
     _rateController = TextEditingController(
       text: _rate > 0 ? _rate.toString() : '',
+    );
+    _totalInstallmentsController = TextEditingController(
+      text: _totalInstallments > 0 ? '$_totalInstallments' : '',
+    );
+    _paidInstallmentsController = TextEditingController(
+      text: _paidInstallments > 0 ? '$_paidInstallments' : '',
     );
   }
 
@@ -90,10 +108,12 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     _remainingController.dispose();
     _paymentController.dispose();
     _rateController.dispose();
+    _totalInstallmentsController.dispose();
+    _paidInstallmentsController.dispose();
     super.dispose();
   }
 
-  Future<void> _pickDate() async {
+  Future<void> _pickNextPayment() async {
     final now = DateTime.now();
     final picked = await showDatePicker(
       context: context,
@@ -102,6 +122,17 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
       lastDate: DateTime(now.year + 30),
     );
     if (picked != null) setState(() => _nextPayment = picked);
+  }
+
+  Future<void> _pickStartDate() async {
+    final now = DateTime.now();
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: _startDate ?? now,
+      firstDate: DateTime(now.year - 40),
+      lastDate: DateTime(now.year + 5),
+    );
+    if (picked != null) setState(() => _startDate = picked);
   }
 
   Future<void> _save() async {
@@ -119,12 +150,15 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
       // outstanding, so the payoff bar starts at zero rather than complete.
       principal: _principal > 0 ? _principal : _remaining,
       remaining: _remaining,
-      monthlyPayment: _payment,
+      installmentAmount: _payment,
       nextPaymentDate: _nextPayment,
       interestRate: _rate,
       icon: _kind == LoanKind.creditCard
           ? CategoryIcon.other
           : CategoryIcon.transport,
+      totalInstallments: _totalInstallments,
+      paidInstallments: _paidInstallments,
+      startDate: _startDate,
     );
 
     await ref.read(loanControllerProvider).save(loan);
@@ -175,7 +209,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     return EditorSheet(
       title: _isEditing ? l10n.editDebt : l10n.newDebt,
       submitLabel: l10n.save,
-      accent: AppColors.primaryDark,
+      accent: context.accentDark,
       onSubmit: _isValid ? _save : null,
       onDelete: _isEditing ? _delete : null,
       deleteLabel: l10n.delete,
@@ -224,7 +258,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
           ),
         ),
         SheetField(
-          label: l10n.monthlyPayment,
+          label: l10n.installmentAmount,
           child: AmountField(
             controller: _paymentController,
             symbol: symbol,
@@ -244,10 +278,85 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
                 _rate = double.tryParse(value.replaceAll(',', '.')) ?? 0,
           ),
         ),
+        // A credit card revolves and has no term, so the installment plan is
+        // only asked for on fixed-term loans. Leaving the count at zero keeps
+        // a loan open-ended too.
+        if (!isCard) ...[
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: SheetField(
+                  label: l10n.numberOfInstallments,
+                  child: TextField(
+                    controller: _totalInstallmentsController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly,
+                      LengthLimitingTextInputFormatter(4),
+                    ],
+                    decoration: const InputDecoration(hintText: '12'),
+                    onChanged: (value) => setState(
+                      () => _totalInstallments = int.tryParse(value) ?? 0,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: AppSpacing.md),
+              Expanded(
+                child: SheetField(
+                  label: l10n.paidInstallments,
+                  child: TextField(
+                    controller: _paidInstallmentsController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly,
+                      LengthLimitingTextInputFormatter(4),
+                    ],
+                    decoration: const InputDecoration(hintText: '0'),
+                    onChanged: (value) => setState(
+                      () => _paidInstallments = int.tryParse(value) ?? 0,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SheetField(
+            label: l10n.startDate,
+            child: InkWell(
+              onTap: _pickStartDate,
+              borderRadius: BorderRadius.circular(AppRadius.md),
+              child: InputDecorator(
+                decoration: const InputDecoration(),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.event_available_rounded,
+                      size: 18,
+                      color: context.textSecondary,
+                    ),
+                    const SizedBox(width: AppSpacing.md),
+                    Text(
+                      _startDate == null
+                          ? l10n.notSet
+                          : dates.long(_startDate!),
+                      style: AppTypography.title.copyWith(
+                        color: _startDate == null
+                            ? context.textSecondary
+                            : context.textPrimary,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
         SheetField(
           label: l10n.nextPayment,
           child: InkWell(
-            onTap: _pickDate,
+            onTap: _pickNextPayment,
             borderRadius: BorderRadius.circular(AppRadius.md),
             child: InputDecorator(
               decoration: const InputDecoration(),
@@ -296,7 +405,7 @@ class _KindToggle extends StatelessWidget {
             curve: Curves.easeOut,
             padding: const EdgeInsets.symmetric(vertical: 11),
             decoration: BoxDecoration(
-              color: selected ? AppColors.primaryDark : Colors.transparent,
+              color: selected ? context.accentDark : Colors.transparent,
               borderRadius: BorderRadius.circular(AppRadius.sm),
             ),
             child: Row(
@@ -368,7 +477,7 @@ class _PaymentSheetState extends ConsumerState<_PaymentSheet> {
   @override
   void initState() {
     super.initState();
-    _amount = widget.loan.monthlyPayment;
+    _amount = widget.loan.installmentAmount;
     _controller = TextEditingController(
       text: _amount > 0 ? _amount.toStringAsFixed(0) : '',
     );
@@ -406,19 +515,19 @@ class _PaymentSheetState extends ConsumerState<_PaymentSheet> {
     final symbol = ref.watch(currencyProvider).symbol;
 
     final presets = <double>{
-      widget.loan.monthlyPayment,
-      widget.loan.monthlyPayment * 2,
+      widget.loan.installmentAmount,
+      widget.loan.installmentAmount * 2,
       widget.loan.remaining,
-    }.where((value) => value > 0).toList()
-      ..sort();
+    }.where((value) => value > 0).toList()..sort();
 
     return EditorSheet(
       title: l10n.recordPayment,
-      subtitle: '${widget.loan.name} · '
+      subtitle:
+          '${widget.loan.name} · '
           '${money.format(widget.loan.remaining, decimals: false)} '
           '${l10n.remaining.toLowerCase()}',
       submitLabel: l10n.recordPayment,
-      accent: AppColors.primaryDark,
+      accent: context.accentDark,
       onSubmit: _amount > 0 ? _submit : null,
       isBusy: _busy,
       children: [
@@ -441,8 +550,7 @@ class _PaymentSheetState extends ConsumerState<_PaymentSheet> {
                 onPressed: () => _setAmount(preset),
                 backgroundColor: context.tintFill,
                 side: BorderSide(color: context.borderColor),
-                labelStyle:
-                    AppTypography.label.copyWith(color: AppColors.primary),
+                labelStyle: AppTypography.label.copyWith(color: context.accent),
               ),
           ],
         ),

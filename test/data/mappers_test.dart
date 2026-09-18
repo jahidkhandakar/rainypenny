@@ -126,7 +126,7 @@ void main() {
         kind: LoanKind.creditCard,
         principal: 5000,
         remaining: 2250,
-        monthlyPayment: 85,
+        installmentAmount: 85,
         nextPaymentDate: DateTime(2026, 9, 10),
         interestRate: 19.99,
         icon: CategoryIcon.other,
@@ -171,8 +171,14 @@ void main() {
       expect(profile.currencySymbol, '€');
     });
 
-    test('an unknown currency code is shown as-is rather than lost', () {
-      expect(ProfileMapper.symbolFor('JPY'), 'JPY');
+    test('world currencies resolve to their own symbol', () {
+      expect(ProfileMapper.symbolFor('JPY'), '¥');
+      expect(ProfileMapper.symbolFor('NGN'), '₦');
+      expect(ProfileMapper.symbolFor('kwd'), 'د.ك');
+    });
+
+    test('an unrecognised currency code falls back to the dollar', () {
+      expect(ProfileMapper.symbolFor('ZZZ'), r'$');
     });
   });
 }

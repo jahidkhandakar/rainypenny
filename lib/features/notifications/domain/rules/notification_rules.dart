@@ -22,14 +22,26 @@ abstract final class NotificationRules {
   }
 
   static NotificationChannel channelFor(Insight insight) {
+    if (insight.code == InsightCode.happyWeekend) {
+      return NotificationChannel.weekendGreeting;
+    }
     return switch (insight.topic) {
       InsightTopic.budget => NotificationChannel.budgetAlerts,
       InsightTopic.debt => NotificationChannel.paymentReminders,
       InsightTopic.savings => NotificationChannel.savingsUpdates,
-      InsightTopic.spending || InsightTopic.income =>
-        NotificationChannel.budgetAlerts,
+      InsightTopic.engagement => NotificationChannel.dailyReminders,
+      InsightTopic.spending ||
+      InsightTopic.income => NotificationChannel.budgetAlerts,
     };
   }
+
+  /// The insight code that carries the copy for a given time of day.
+  static InsightCode codeForSlot(DailyReminderSlot slot) => switch (slot) {
+    DailyReminderSlot.morning => InsightCode.expenseReminderMorning,
+    DailyReminderSlot.noon => InsightCode.expenseReminderNoon,
+    DailyReminderSlot.afternoon => InsightCode.expenseReminderAfternoon,
+    DailyReminderSlot.evening => InsightCode.expenseReminderEvening,
+  };
 
   /// A stable 32-bit id per insight, so re-running the scheduler replaces a
   /// pending notification rather than adding a second copy.

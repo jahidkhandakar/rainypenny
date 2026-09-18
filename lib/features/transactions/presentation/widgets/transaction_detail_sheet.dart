@@ -35,6 +35,7 @@ class _TransactionDetailSheet extends ConsumerWidget {
     final l10n = AppL10n.of(context);
     final messenger = ScaffoldMessenger.of(context);
     final navigator = Navigator.of(context);
+    final undoColor = context.accentLight;
 
     final confirmed = await showDialog<bool>(
       context: context,
@@ -65,7 +66,7 @@ class _TransactionDetailSheet extends ConsumerWidget {
         content: Text(l10n.transactionDeleted),
         action: SnackBarAction(
           label: l10n.undo,
-          textColor: AppColors.primaryLight,
+          textColor: undoColor,
           onPressed: () => ref.read(restoreTransactionProvider)(transaction),
         ),
       ),

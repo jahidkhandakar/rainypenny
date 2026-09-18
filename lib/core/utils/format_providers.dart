@@ -11,6 +11,7 @@ final moneyFormatterProvider = Provider<MoneyFormatter>((ref) {
   return MoneyFormatter(
     symbol: currency.symbol,
     locale: locale.toLanguageTag(),
+    decimalDigits: currency.decimalDigits,
   );
 });
 

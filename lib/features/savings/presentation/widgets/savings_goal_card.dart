@@ -120,8 +120,8 @@ class SavingsGoalCard extends ConsumerWidget {
                   goal.isComplete
                       ? l10n.goalComplete
                       : '${money.format(goal.remaining, decimals: false)} ${l10n.remaining.toLowerCase()}'
-                          ' · ${l10n.monthlyContribution} '
-                          '${money.format(goal.monthlyContribution, decimals: false)}',
+                            ' · ${l10n.monthlyContribution} '
+                            '${money.format(goal.monthlyContribution, decimals: false)}',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.caption.copyWith(
@@ -130,10 +130,7 @@ class SavingsGoalCard extends ConsumerWidget {
                 ),
               ),
               if (onAddFunds != null)
-                TextButton(
-                  onPressed: onAddFunds,
-                  child: Text(l10n.addFunds),
-                ),
+                TextButton(onPressed: onAddFunds, child: Text(l10n.addFunds)),
             ],
           ),
         ],
