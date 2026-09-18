@@ -18,6 +18,7 @@ import '../../../dashboard/presentation/widgets/spending_donut.dart';
 import '../../../financial/domain/entities/period_summary.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 import '../../../financial/presentation/widgets/insight_card.dart';
+import '../controllers/report_export_controller.dart';
 import '../controllers/reports_controller.dart';
 import '../widgets/income_expense_chart.dart';
 
@@ -36,6 +37,10 @@ class ReportsScreen extends ConsumerWidget {
       appBar: AppBar(
         leading: const DrawerLogoButton(),
         title: Text(l10n.reports),
+        actions: [
+          _ExportButton(enabled: report.hasValue),
+          const SizedBox(width: AppSpacing.sm),
+        ],
       ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(
@@ -85,7 +90,10 @@ class _ReportBody extends ConsumerWidget {
     final dates = ref.watch(dateFormatterProvider);
     final budgets = ref.watch(budgetsProvider);
     final insights = ref.watch(insightsProvider);
-    final slices = buildSpendingSlices(context, data.summary.spendingByCategory);
+    final slices = buildSpendingSlices(
+      context,
+      data.summary.spendingByCategory,
+    );
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -242,7 +250,7 @@ class _TotalsCard extends ConsumerWidget {
                       money.formatSigned(summary.net, decimals: false),
                       style: AppTypography.amountLarge.copyWith(
                         color: summary.net >= 0
-                            ? AppColors.primaryLight
+                            ? context.accentLight
                             : AppColors.error,
                       ),
                     ),
@@ -316,70 +324,263 @@ class _Total extends StatelessWidget {
   }
 }
 
-class _RangeSelector extends StatelessWidget {
+/// The period control: four presets plus an exact date range.
+///
+/// A custom range wins over whichever preset is highlighted, so choosing dates
+/// deselects the presets and clearing them hands control back.
+class _RangeSelector extends ConsumerWidget {
   const _RangeSelector({required this.selected, required this.onSelect});
 
   final ReportRange selected;
   final ValueChanged<ReportRange> onSelect;
 
+  Future<void> _pickRange(BuildContext context, WidgetRef ref) async {
+    final existing = ref.read(customReportRangeProvider);
+    final now = DateTime.now();
+
+    final picked = await showDateRangePicker(
+      context: context,
+      // Ten years back covers any ledger this app will hold; allowing future
+      // dates would let someone pick a window that cannot contain anything.
+      firstDate: DateTime(now.year - 10),
+      lastDate: DateTime(now.year, now.month, now.day),
+      initialDateRange: existing == null
+          ? null
+          : DateTimeRange(start: existing.start, end: existing.end),
+      // The picker inherits the app's locale and direction from the ambient
+      // localisations, so Arabic and Urdu get a right-to-left calendar without
+      // anything extra here.
+    );
+
+    if (picked == null) return;
+    ref
+        .read(customReportRangeProvider.notifier)
+        .select(picked.start, picked.end);
+  }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
+    final dates = ref.watch(dateFormatterProvider);
+    final custom = ref.watch(customReportRangeProvider);
+
     final labels = {
       ReportRange.week: l10n.week,
       ReportRange.month: l10n.month,
+      ReportRange.cycle: l10n.cycleRangeLabel,
       ReportRange.quarter: l10n.quarter,
     };
 
-    return Container(
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-        color: context.subtleFill,
-        borderRadius: BorderRadius.circular(AppRadius.md),
-      ),
-      child: Row(
-        children: [
-          for (final entry in labels.entries)
-            Expanded(
-              child: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: () => onSelect(entry.key),
-                child: AnimatedContainer(
-                  duration: AppDuration.fast,
-                  curve: Curves.easeOut,
-                  padding: const EdgeInsets.symmetric(vertical: 9),
-                  decoration: BoxDecoration(
-                    color: selected == entry.key
-                        ? context.cardColor
-                        : Colors.transparent,
-                    borderRadius: BorderRadius.circular(AppRadius.sm),
-                    boxShadow: selected == entry.key
-                        ? [
-                            BoxShadow(
-                              color: Colors.black.withValues(alpha: 0.05),
-                              blurRadius: 6,
-                              offset: const Offset(0, 2),
-                            ),
-                          ]
-                        : null,
-                  ),
-                  child: Text(
-                    entry.value,
-                    textAlign: TextAlign.center,
-                    style: AppTypography.label.copyWith(
-                      color: selected == entry.key
-                          ? AppColors.primary
-                          : context.textSecondary,
-                      fontWeight: selected == entry.key
-                          ? FontWeight.w700
-                          : FontWeight.w500,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(4),
+          decoration: BoxDecoration(
+            color: context.subtleFill,
+            borderRadius: BorderRadius.circular(AppRadius.md),
+          ),
+          child: Row(
+            children: [
+              for (final entry in labels.entries)
+                Expanded(
+                  child: GestureDetector(
+                    behavior: HitTestBehavior.opaque,
+                    onTap: () {
+                      // Picking a preset is how you get out of a custom range.
+                      ref.read(customReportRangeProvider.notifier).clear();
+                      onSelect(entry.key);
+                    },
+                    child: _Segment(
+                      label: entry.value,
+                      isSelected: custom == null && selected == entry.key,
                     ),
                   ),
                 ),
-              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: AppSpacing.md),
+        if (custom == null)
+          OutlinedButton.icon(
+            onPressed: () => _pickRange(context, ref),
+            icon: const Icon(Icons.date_range_rounded, size: 18),
+            label: Text(l10n.selectDateRange),
+          )
+        else
+          // Once a range is chosen the control becomes a statement of what is
+          // on screen, with the way out attached to it.
+          AppCard(
+            onTap: () => _pickRange(context, ref),
+            color: context.tintFill,
+            borderColor: context.accent.withValues(alpha: 0.28),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.lg,
+              vertical: AppSpacing.md,
             ),
-        ],
+            child: Row(
+              children: [
+                Icon(
+                  Icons.date_range_rounded,
+                  size: 18,
+                  color: context.accentOnSurface,
+                ),
+                const SizedBox(width: AppSpacing.md),
+                Expanded(
+                  child: Text(
+                    l10n.rangeApplied(
+                      dates.short(custom.start),
+                      dates.short(custom.end),
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTypography.label.copyWith(
+                      color: context.accentOnSurface,
+                    ),
+                  ),
+                ),
+                IconButton(
+                  tooltip: l10n.clearFilters,
+                  visualDensity: VisualDensity.compact,
+                  icon: const Icon(Icons.close_rounded, size: 18),
+                  onPressed: () =>
+                      ref.read(customReportRangeProvider.notifier).clear(),
+                ),
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _Segment extends StatelessWidget {
+  const _Segment({required this.label, required this.isSelected});
+
+  final String label;
+  final bool isSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: AppDuration.fast,
+      curve: Curves.easeOut,
+      padding: const EdgeInsets.symmetric(vertical: 9),
+      decoration: BoxDecoration(
+        color: isSelected ? context.cardColor : Colors.transparent,
+        borderRadius: BorderRadius.circular(AppRadius.sm),
+        boxShadow: isSelected
+            ? [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 6,
+                  offset: const Offset(0, 2),
+                ),
+              ]
+            : null,
+      ),
+      child: Text(
+        label,
+        textAlign: TextAlign.center,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: AppTypography.label.copyWith(
+          color: isSelected ? context.accent : context.textSecondary,
+          fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+        ),
       ),
     );
   }
 }
+
+/// Produces the branded PDF and hands it to the share sheet.
+///
+/// Disabled until the report data has actually loaded — offering an export of
+/// figures that are still resolving would produce an empty document.
+class _ExportButton extends ConsumerStatefulWidget {
+  const _ExportButton({required this.enabled});
+
+  final bool enabled;
+
+  @override
+  ConsumerState<_ExportButton> createState() => _ExportButtonState();
+}
+
+class _ExportButtonState extends ConsumerState<_ExportButton> {
+  bool _busy = false;
+
+  Future<void> _run(Future<void> Function(AppL10n) action) async {
+    if (_busy) return;
+    final l10n = AppL10n.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+
+    setState(() => _busy = true);
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(l10n.preparingReport),
+        duration: const Duration(seconds: 1),
+      ),
+    );
+
+    try {
+      await action(l10n);
+    } catch (_) {
+      messenger.showSnackBar(SnackBar(content: Text(l10n.reportFailed)));
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppL10n.of(context);
+    final controller = ref.read(reportExportControllerProvider);
+
+    if (_busy) {
+      return const Padding(
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.md),
+        child: Center(
+          child: SizedBox(
+            width: 18,
+            height: 18,
+            child: CircularProgressIndicator(strokeWidth: 2),
+          ),
+        ),
+      );
+    }
+
+    return PopupMenuButton<_ExportAction>(
+      enabled: widget.enabled,
+      tooltip: l10n.exportPdf,
+      icon: const Icon(Icons.ios_share_rounded),
+      onSelected: (action) => switch (action) {
+        _ExportAction.share => _run(controller.share),
+        _ExportAction.save => _run(controller.printOrSave),
+      },
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          value: _ExportAction.share,
+          child: Row(
+            children: [
+              const Icon(Icons.share_outlined, size: 18),
+              const SizedBox(width: AppSpacing.md),
+              Text(l10n.sharePdf),
+            ],
+          ),
+        ),
+        PopupMenuItem(
+          value: _ExportAction.save,
+          child: Row(
+            children: [
+              const Icon(Icons.picture_as_pdf_outlined, size: 18),
+              const SizedBox(width: AppSpacing.md),
+              Text(l10n.exportPdf),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+enum _ExportAction { share, save }

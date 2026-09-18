@@ -11,7 +11,7 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
-import '../../../financial/data/demo_dataset.dart';
+import '../../../categories/presentation/widgets/category_editor_sheet.dart';
 import '../../../financial/domain/entities/transaction.dart';
 import '../../../financial/presentation/widgets/category_picker_sheet.dart';
 import '../controllers/add_transaction_controller.dart';
@@ -75,19 +75,23 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
 
   Future<void> _pickCategory() async {
     final draft = ref.read(addTransactionControllerProvider);
-    final categories = draft.isIncome
-        ? DemoDataset.incomeCategories
-        : DemoDataset.expenseCategories;
+    final notifier = ref.read(addTransactionControllerProvider.notifier);
 
     final selected = await showCategoryPicker(
       context,
-      categories: categories,
+      categories: notifier.categoriesFor(draft.type),
       title: AppL10n.of(context).selectCategory,
       selected: draft.category,
+      // Creating one from here is the whole point: the moment someone notices a
+      // category is missing is the moment they are filing a transaction.
+      onAddCategory: () => showCategoryEditor(
+        context,
+        isIncome: draft.isIncome,
+      ),
     );
 
     if (selected != null) {
-      ref.read(addTransactionControllerProvider.notifier).setCategory(selected);
+      notifier.setCategory(selected);
     }
   }
 
@@ -199,8 +203,8 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                                 textAlign: TextAlign.center,
                                 keyboardType:
                                     const TextInputType.numberWithOptions(
-                                  decimal: true,
-                                ),
+                                      decimal: true,
+                                    ),
                                 inputFormatters: [
                                   FilteringTextInputFormatter.allow(
                                     RegExp(r'^\d*[.,]?\d{0,2}'),
@@ -224,13 +228,16 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                                   isDense: true,
                                 ),
                                 onChanged: (value) {
-                                  final parsed = double.tryParse(
+                                  final parsed =
+                                      double.tryParse(
                                         value.replaceAll(',', '.'),
                                       ) ??
                                       0;
                                   ref
-                                      .read(addTransactionControllerProvider
-                                          .notifier)
+                                      .read(
+                                        addTransactionControllerProvider
+                                            .notifier,
+                                      )
                                       .setAmount(parsed);
                                 },
                               ),
@@ -271,7 +278,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                   _FieldLabel(l10n.category),
                   _SelectorTile(
                     icon: iconForCategory(draft.category.icon),
-                    label: draft.category.name,
+                    label: categoryDisplayName(draft.category, l10n),
                     accent: accent,
                     onTap: _pickCategory,
                   ),
@@ -376,7 +383,7 @@ class _TypeToggle extends StatelessWidget {
       ),
       child: Row(
         children: [
-          option(TransactionType.expense, l10n.expenses, AppColors.primary),
+          option(TransactionType.expense, l10n.expenses, context.accent),
           option(TransactionType.income, l10n.income, AppColors.income),
         ],
       ),
@@ -392,7 +399,10 @@ class _FieldLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: AppSpacing.sm, left: 2),
+      padding: const EdgeInsetsDirectional.only(
+        bottom: AppSpacing.sm,
+        start: 2,
+      ),
       child: Text(
         text,
         style: AppTypography.label.copyWith(color: context.textSecondary),

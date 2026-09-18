@@ -9,4 +9,8 @@ class ProfileRepositoryImpl implements ProfileRepository {
 
   @override
   Future<UserProfile> getProfile() => _dataSource.fetchProfile();
+
+  @override
+  Future<void> updateName(String name) =>
+      _dataSource.updateProfileName(name.trim());
 }

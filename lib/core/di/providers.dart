@@ -18,6 +18,7 @@ import '../../features/savings/domain/repositories/savings_repository.dart';
 import '../../features/transactions/data/repositories/transaction_repository_impl.dart';
 import '../../features/transactions/domain/repositories/transaction_repository.dart';
 import '../config/app_config.dart';
+import '../settings/settings_providers.dart';
 
 /// Composition root.
 ///
@@ -40,7 +41,10 @@ final financeDataSourceProvider = Provider<FinanceDataSource>((ref) {
   if (AppConfig.hasBackend) {
     return SupabaseFinanceDataSource(ref.watch(supabaseClientProvider));
   }
-  return MockFinanceDataSource();
+  // The demo ledger is regenerated when the payday changes, so its salary row
+  // keeps landing on the cycle boundary rather than drifting into the previous
+  // period and leaving the home screen reporting the wrong monthly salary.
+  return MockFinanceDataSource(payday: ref.watch(paydayProvider));
 });
 
 final authRepositoryProvider = Provider<AuthRepository>((ref) {

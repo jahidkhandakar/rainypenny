@@ -1,3 +1,4 @@
+import '../../../../core/settings/world_currencies.dart';
 import '../../domain/entities/category.dart';
 import '../../domain/entities/loan.dart';
 import '../../domain/entities/savings_goal.dart';
@@ -11,6 +12,8 @@ import '../../domain/entities/user_profile.dart';
 
 double _num(Object? value) => (value as num?)?.toDouble() ?? 0;
 
+int _int(Object? value) => (value as num?)?.toInt() ?? 0;
+
 DateTime _date(Object? value) =>
     DateTime.tryParse(value as String? ?? '')?.toLocal() ?? DateTime.now();
 
@@ -21,7 +24,19 @@ abstract final class CategoryMapper {
       name: row['name'] as String,
       icon: iconFromKey(row['icon'] as String?),
       isIncome: row['is_income'] as bool? ?? false,
+      // A null user_id is one of the seeded categories every account shares.
+      isCustom: row['user_id'] != null,
     );
+  }
+
+  static Map<String, dynamic> toRow(Category category, String userId) {
+    return {
+      'id': category.id,
+      'user_id': userId,
+      'name': category.name,
+      'icon': category.icon.name,
+      'is_income': category.isIncome,
+    };
   }
 
   static CategoryIcon iconFromKey(String? key) {
@@ -46,7 +61,8 @@ abstract final class TransactionMapper {
       type: row['type'] == 'income'
           ? TransactionType.income
           : TransactionType.expense,
-      category: categories[categoryId] ??
+      category:
+          categories[categoryId] ??
           Category(id: categoryId, name: categoryId, icon: CategoryIcon.other),
       note: row['note'] as String?,
       account: row['account'] as String? ?? 'Main Account',
@@ -109,10 +125,13 @@ abstract final class LoanMapper {
       kind: row['kind'] == 'credit_card' ? LoanKind.creditCard : LoanKind.loan,
       principal: _num(row['principal']),
       remaining: _num(row['remaining']),
-      monthlyPayment: _num(row['monthly_payment']),
+      installmentAmount: _num(row['monthly_payment']),
       nextPaymentDate: _date(row['next_payment_date']),
       interestRate: _num(row['interest_rate']),
       icon: CategoryMapper.iconFromKey(row['icon'] as String?),
+      totalInstallments: _int(row['total_installments']),
+      paidInstallments: _int(row['paid_installments']),
+      startDate: row['start_date'] == null ? null : _date(row['start_date']),
     );
   }
 
@@ -129,11 +148,17 @@ abstract final class LoanMapper {
       'kind': loan.kind == LoanKind.creditCard ? 'credit_card' : 'loan',
       'principal': loan.principal,
       'remaining': loan.remaining,
-      'monthly_payment': loan.monthlyPayment,
-      'next_payment_date':
-          loan.nextPaymentDate.toIso8601String().split('T').first,
+      'monthly_payment': loan.installmentAmount,
+      'next_payment_date': loan.nextPaymentDate
+          .toIso8601String()
+          .split('T')
+          .first,
       'interest_rate': loan.interestRate,
       'icon': loan.icon.name,
+      'total_installments': loan.totalInstallments,
+      'paid_installments': loan.paidInstallments,
+      if (loan.startDate != null)
+        'start_date': loan.startDate!.toIso8601String().split('T').first,
     };
   }
 }
@@ -151,33 +176,15 @@ abstract final class ProfileMapper {
       memberSince: _date(row['created_at']),
       currencyCode: row['currency_code'] as String? ?? 'USD',
       currencySymbol: symbolFor(row['currency_code'] as String? ?? 'USD'),
+      avatarUrl: row['avatar_url'] as String?,
     );
   }
 
-  /// `Alex Morgan` becomes `AM`; a single word gives its first two letters.
-  static String initialsFor(String value) {
-    final parts = value
-        .trim()
-        .split(RegExp(r'\s+'))
-        .where((part) => part.isNotEmpty)
-        .toList();
-    if (parts.isEmpty) return '?';
-    if (parts.length == 1) {
-      final word = parts.first;
-      return word.substring(0, word.length >= 2 ? 2 : 1).toUpperCase();
-    }
-    return '${parts.first[0]}${parts[1][0]}'.toUpperCase();
-  }
+  /// Delegates to the entity so a profile renamed in the app and one loaded
+  /// from a row derive the same badge.
+  static String initialsFor(String value) => UserProfile.initialsFor(value);
 
-  static String symbolFor(String code) {
-    return const {
-      'USD': '\$',
-      'EUR': '€',
-      'GBP': '£',
-      'AED': 'د.إ',
-      'INR': '₹',
-      'TRY': '₺',
-    }[code] ??
-        code;
-  }
+  /// Delegates to the shared ISO 4217 table so a profile row and the settings
+  /// picker can never disagree about what a currency looks like.
+  static String symbolFor(String code) => Currencies.symbolFor(code);
 }

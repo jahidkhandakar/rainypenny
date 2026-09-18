@@ -27,12 +27,13 @@ abstract final class HealthCalculator {
     final debt = _debtFactor(loans, summary.income);
     final trend = _trendFactor(summary);
 
-    final score = (savings.score * _savingsWeight +
-            budget.score * _budgetWeight +
-            debt.score * _debtWeight +
-            trend.score * _trendWeight)
-        .round()
-        .clamp(0, 100);
+    final score =
+        (savings.score * _savingsWeight +
+                budget.score * _budgetWeight +
+                debt.score * _debtWeight +
+                trend.score * _trendWeight)
+            .round()
+            .clamp(0, 100);
 
     return FinancialHealth(
       score: score,
@@ -50,12 +51,15 @@ abstract final class HealthCalculator {
 
   static HealthFactor _savingsFactor(PeriodSummary summary) {
     final rate = summary.savingsRate;
-    final score =
-        ((rate / SavingsRules.strongSavingsRate) * 100).clamp(0.0, 100.0);
+    final score = ((rate / SavingsRules.strongSavingsRate) * 100).clamp(
+      0.0,
+      100.0,
+    );
     return HealthFactor(
-      label: 'Savings rate',
-      detail: '${(rate * 100).round()}% kept',
+      kind: HealthFactorKind.savingsRate,
       score: score.round(),
+      value: rate,
+      weight: _savingsWeight,
     );
   }
 
@@ -63,23 +67,26 @@ abstract final class HealthCalculator {
     final used = BudgetCalculator.overallProgress(budgets);
     // Spending up to 70% of the total budget is a clean 100; past that the
     // score falls away linearly, hitting zero at 100% used.
-    final score = (used <= 0.70 ? 1.0 : (1 - (used - 0.70) / 0.30))
-        .clamp(0.0, 1.0);
+    final score = (used <= 0.70 ? 1.0 : (1 - (used - 0.70) / 0.30)).clamp(
+      0.0,
+      1.0,
+    );
     return HealthFactor(
-      label: 'Budget control',
-      detail: '${(used * 100).round()}% used',
+      kind: HealthFactorKind.budgetControl,
       score: (score * 100).round(),
+      value: used,
+      weight: _budgetWeight,
     );
   }
 
   static HealthFactor _debtFactor(List<Loan> loans, double income) {
     final dti = DebtCalculator.debtToIncome(loans, income);
-    final score =
-        (1 - dti / DebtRules.concerningDebtToIncome).clamp(0.0, 1.0);
+    final score = (1 - dti / DebtRules.concerningDebtToIncome).clamp(0.0, 1.0);
     return HealthFactor(
-      label: 'Debt load',
-      detail: '${(dti * 100).round()}% of income',
+      kind: HealthFactorKind.debtLoad,
       score: (score * 100).round(),
+      value: dti,
+      weight: _debtWeight,
     );
   }
 
@@ -87,11 +94,11 @@ abstract final class HealthCalculator {
     final change = summary.expenseChange;
     // Flat spending sits at 50; every 1% swing moves the score by 5 points.
     final score = (50 - change * 500).clamp(0.0, 100.0);
-    final direction = change <= 0 ? 'Down' : 'Up';
     return HealthFactor(
-      label: 'Spending trend',
-      detail: '$direction ${(change.abs() * 100).toStringAsFixed(1)}%',
+      kind: HealthFactorKind.spendingTrend,
       score: score.round(),
+      value: change,
+      weight: _trendWeight,
     );
   }
 }

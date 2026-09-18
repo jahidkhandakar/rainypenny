@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/di/providers.dart';
-import '../../../financial/data/demo_dataset.dart';
 import '../../../financial/domain/entities/category.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 
@@ -32,10 +31,18 @@ final budgetControllerProvider = Provider<BudgetController>(
 
 /// Expense categories that do not have a budget yet — the choices offered
 /// when adding one.
-final unbudgetedCategoriesProvider = FutureProvider<List<Category>>((ref) async {
+///
+/// Reads the live category list rather than the bundled demo set, so a category
+/// the user created can actually be budgeted for, and a build on a real backend
+/// offers what is in the database instead of the hardcoded fourteen.
+final unbudgetedCategoriesProvider = FutureProvider<List<Category>>((
+  ref,
+) async {
   final budgets = await ref.watch(budgetsProvider.future);
+  final categories = await ref.watch(categoriesProvider.future);
   final taken = budgets.map((b) => b.category.id).toSet();
-  return DemoDataset.expenseCategories
-      .where((category) => !taken.contains(category.id))
+
+  return categories
+      .where((category) => !category.isIncome && !taken.contains(category.id))
       .toList();
 });

@@ -33,16 +33,47 @@ interface AlertPayload {
   route: string;
 }
 
+/// Constant-time string comparison, so a rejected call takes the same time
+/// whether the key was wrong in the first character or the last.
+function timingSafeEqual(a: string, b: string): boolean {
+  if (a.length === 0 || b.length === 0) return false;
+  const encoder = new TextEncoder();
+  const left = encoder.encode(a);
+  const right = encoder.encode(b);
+  // Fold the length difference into the result rather than returning early.
+  let mismatch = left.length ^ right.length;
+  for (let i = 0; i < Math.max(left.length, right.length); i++) {
+    mismatch |= (left[i] ?? 0) ^ (right[i] ?? 0);
+  }
+  return mismatch === 0;
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method !== 'POST') {
     return new Response('Method not allowed', { status: 405 });
   }
 
-  // The service role key is required: this reads across users, which the
-  // anon key is correctly forbidden from doing by row-level security.
+  const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+
+  // Only the cron trigger may run this.
+  //
+  // Supabase's own `verify_jwt` is not enough on its own: it proves the caller
+  // holds *a* valid token, and the anon key ships inside the mobile app, so
+  // every user — and anyone who has read the bundle — would pass it. This
+  // function reads every account's debts with the service role, so it has to
+  // check for the service role specifically.
+  //
+  // Compared byte-by-byte in constant time so a wrong key cannot be recovered
+  // by timing the rejection.
+  const presented = (req.headers.get('Authorization') ?? '')
+    .replace(/^Bearer\s+/i, '');
+  if (!timingSafeEqual(presented, serviceRoleKey)) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
   const supabase = createClient(
     Deno.env.get('SUPABASE_URL')!,
-    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
+    serviceRoleKey,
   );
 
   const today = new Date();
@@ -52,19 +83,26 @@ Deno.serve(async (req: Request) => {
 
   // Payments falling due inside the reminder window, for users who have not
   // silenced payment reminders.
+  // PostgREST caps an unbounded select at 1,000 rows and says nothing about it,
+  // so the range is explicit: silently alerting the first thousand users and
+  // no one else is the kind of bug that only shows up once the app is working.
   const { data: loans, error } = await supabase
     .from('loans')
     .select('id, user_id, name, monthly_payment, next_payment_date')
     .lte('next_payment_date', horizonDate)
-    .gte('next_payment_date', today.toISOString().split('T')[0]);
+    .gte('next_payment_date', today.toISOString().split('T')[0])
+    .range(0, 9999);
 
   if (error) {
     return Response.json({ error: error.message }, { status: 500 });
   }
 
+  // Only the users who actually have a loan due, rather than the whole table.
+  const affected = [...new Set((loans ?? []).map((row) => row.user_id))];
   const { data: preferences } = await supabase
     .from('notification_preferences')
-    .select('user_id, payment_reminders');
+    .select('user_id, payment_reminders')
+    .in('user_id', affected.length > 0 ? affected : ['']);
 
   const optedOut = new Set(
     (preferences ?? [])
@@ -100,5 +138,8 @@ Deno.serve(async (req: Request) => {
   //
   // for (const alert of alerts) { await sendPush(alert.userId, alert.payload); }
 
-  return Response.json({ scheduled: alerts.length, alerts });
+  // A count, not the alerts themselves. The body used to carry every user's id,
+  // loan name and payment amount, which is a lot of other people's financial
+  // detail to hand back over HTTP for the sake of a debugging convenience.
+  return Response.json({ scheduled: alerts.length });
 });

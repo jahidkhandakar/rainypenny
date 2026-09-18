@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -40,33 +41,96 @@ class DrawerLogoButton extends StatelessWidget {
 }
 
 /// Scaffold shared by the four bottom-navigation destinations.
-class AppShell extends ConsumerWidget {
+///
+/// Owns the Android back behaviour for the whole shell. Back is a system
+/// gesture people use constantly and reflexively, so it has to be predictable:
+/// from a secondary tab it returns Home rather than leaving the app, and from
+/// Home it takes two presses — one stray swipe at the edge of the screen should
+/// never throw away what someone was in the middle of.
+class AppShell extends ConsumerStatefulWidget {
   const AppShell({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
 
+  @override
+  ConsumerState<AppShell> createState() => _AppShellState();
+}
+
+class _AppShellState extends ConsumerState<AppShell> {
+  /// How long the second press has to arrive within. Long enough not to feel
+  /// like a race, short enough that a press minutes later is not treated as a
+  /// confirmation of something the user has long forgotten.
+  static const _exitWindow = Duration(seconds: 2);
+
+  DateTime? _lastBackPress;
+
   void _goToBranch(int index) {
-    navigationShell.goBranch(
+    widget.navigationShell.goBranch(
       index,
-      initialLocation: index == navigationShell.currentIndex,
+      initialLocation: index == widget.navigationShell.currentIndex,
     );
   }
 
+  void _handleBack() {
+    // An open drawer swallows the gesture: closing it is what the user meant.
+    final scaffold = appShellScaffoldKey.currentState;
+    if (scaffold != null && scaffold.isDrawerOpen) {
+      Navigator.of(context).pop();
+      return;
+    }
+
+    // Anywhere but Home, back means "up to Home" rather than "out of the app".
+    if (widget.navigationShell.currentIndex != 0) {
+      _goToBranch(0);
+      return;
+    }
+
+    final now = DateTime.now();
+    final last = _lastBackPress;
+    if (last != null && now.difference(last) < _exitWindow) {
+      // Confirmed. Popping the root route is what actually backgrounds the app
+      // on Android; `SystemNavigator.pop` is the supported way to ask for it.
+      SystemNavigator.pop();
+      return;
+    }
+
+    setState(() => _lastBackPress = now);
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(AppL10n.of(context).pressBackAgainToExit),
+          duration: _exitWindow,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+  }
+
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      key: appShellScaffoldKey,
-      drawer: const AppDrawer(),
-      drawerEdgeDragWidth: 40,
-      body: navigationShell,
-      bottomNavigationBar: _BottomNav(
-        currentIndex: navigationShell.currentIndex,
-        onSelect: _goToBranch,
-        onAdd: () => showQuickActionSheet(context, ref),
-        // Logging an expense is the most frequent thing anyone does here, so
-        // it keeps a one-gesture route even though the button now opens a menu.
-        onAddLongPress: () =>
-            context.push('${AppRoutes.addTransaction}?type=expense'),
+  Widget build(BuildContext context) {
+    return PopScope(
+      // Never let the framework pop on its own: every case is decided above,
+      // and the only route out of the app is the confirmed second press.
+      canPop: false,
+      onPopInvokedWithResult: (didPop, _) {
+        if (didPop) return;
+        _handleBack();
+      },
+      child: Scaffold(
+        key: appShellScaffoldKey,
+        drawer: const AppDrawer(),
+        drawerEdgeDragWidth: 40,
+        body: widget.navigationShell,
+        bottomNavigationBar: _BottomNav(
+          currentIndex: widget.navigationShell.currentIndex,
+          onSelect: _goToBranch,
+          onAdd: () => showQuickActionSheet(context, ref),
+          // Logging an expense is the most frequent thing anyone does here, so
+          // it keeps a one-gesture route even though the button now opens a
+          // menu.
+          onAddLongPress: () =>
+              context.push('${AppRoutes.addTransaction}?type=expense'),
+        ),
       ),
     );
   }
@@ -133,7 +197,7 @@ class _BottomNav extends StatelessWidget {
 
   Widget _navButton(BuildContext context, _NavItem item, int index) {
     final selected = currentIndex == index;
-    final color = selected ? AppColors.primary : AppColors.navUnselected;
+    final color = selected ? context.accent : AppColors.navUnselected;
 
     return Expanded(
       child: InkResponse(
@@ -196,17 +260,21 @@ class _AddButton extends StatelessWidget {
               width: 52,
               height: 52,
               decoration: BoxDecoration(
-                gradient: AppColors.brandGradient,
+                gradient: context.brandGradient,
                 borderRadius: BorderRadius.circular(18),
                 boxShadow: [
                   BoxShadow(
-                    color: AppColors.primary.withValues(alpha: 0.28),
+                    color: context.accent.withValues(alpha: 0.28),
                     blurRadius: 14,
                     offset: const Offset(0, 6),
                   ),
                 ],
               ),
-              child: const Icon(Icons.add_rounded, color: Colors.white, size: 28),
+              child: const Icon(
+                Icons.add_rounded,
+                color: Colors.white,
+                size: 28,
+              ),
             ),
           ),
         ),

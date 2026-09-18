@@ -36,8 +36,25 @@ abstract interface class FinanceDataSource {
   Future<void> deleteLoan(String loanId);
   Future<void> recordLoanPayment(String loanId, double amount);
 
-  // Reference data and profile
+  // Categories — the seeded set plus whatever the user has added.
   Future<List<Category>> fetchCategories();
+  Future<void> insertCategory(Category category);
+  Future<void> updateCategory(Category category);
+
+  /// Removes a user-created category. Throws if anything still refers to it,
+  /// so a delete can never orphan a transaction or a budget.
+  Future<void> deleteCategory(String categoryId);
+
+  /// How many transactions and budgets point at [categoryId] — what the
+  /// confirmation dialog needs in order to explain why a delete is blocked.
+  Future<int> countCategoryUsage(String categoryId);
+
+  // Profile
   Future<UserProfile> fetchProfile();
+
+  /// Renames the signed-in user. The badge initials are derived from the name,
+  /// so they follow automatically wherever the profile is read.
+  Future<void> updateProfileName(String name);
+
   Future<Map<Category, double>> fetchPreviousPeriodSpending();
 }

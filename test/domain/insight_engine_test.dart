@@ -3,20 +3,25 @@ import 'package:rainypenny/features/financial/data/demo_dataset.dart';
 import 'package:rainypenny/features/financial/domain/entities/financial_health.dart';
 import 'package:rainypenny/features/financial/domain/entities/insight.dart';
 import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
+import 'package:rainypenny/features/financial/domain/entities/salary_cycle.dart';
 import 'package:rainypenny/features/financial/domain/services/balance_calculator.dart';
 import 'package:rainypenny/features/financial/domain/services/health_calculator.dart';
 import 'package:rainypenny/features/financial/domain/services/insight_engine.dart';
 
 PeriodSummary _summary() {
+  // Scoped to the salary cycle, which is the period the app reports on. A
+  // trailing thirty-day window now straddles two cycles and would pull in part
+  // of the previous month's spending alongside this one's.
+  final cycle = SalaryCycle.current(1);
   final inPeriod = BalanceCalculator.inRange(
-    DemoDataset.transactions,
-    DemoDataset.periodStart,
-    DemoDataset.periodEnd,
+    DemoDataset.transactionsFor(),
+    cycle.start,
+    cycle.end,
   );
 
   return PeriodSummary(
-    start: DemoDataset.periodStart,
-    end: DemoDataset.periodEnd,
+    start: cycle.start,
+    end: cycle.end,
     income: BalanceCalculator.totalIncome(inPeriod),
     expenses: BalanceCalculator.totalExpenses(inPeriod),
     balance: DemoDataset.totalBalance,
@@ -51,10 +56,7 @@ void main() {
 
     test('the most severe insight comes first', () {
       for (var i = 1; i < insights.length; i++) {
-        expect(
-          insights[i].level.index <= insights[i - 1].level.index,
-          isTrue,
-        );
+        expect(insights[i].level.index <= insights[i - 1].level.index, isTrue);
       }
       expect(InsightEngine.headline(insights), insights.first);
     });
@@ -72,9 +74,7 @@ void main() {
     });
 
     test('reports the category that rose most against the previous period', () {
-      final rise = insights.firstWhere(
-        (i) => i.id == 'spending-category-rise',
-      );
+      final rise = insights.firstWhere((i) => i.id == 'spending-category-rise');
       // Food is seeded at 742.00 against 628.80 — an 18% increase.
       expect(rise.code, InsightCode.categorySpendingUp);
       expect(rise.subject, 'Food & Dining');
@@ -88,10 +88,7 @@ void main() {
     });
 
     test('celebrates a strong savings rate', () {
-      expect(
-        insights.any((i) => i.id == 'savings-rate-strong'),
-        isTrue,
-      );
+      expect(insights.any((i) => i.id == 'savings-rate-strong'), isTrue);
     });
 
     test('raises the credit card payment that is nine days out', () {
@@ -116,17 +113,29 @@ void main() {
     test('scores inside 0-100 with all four factors explained', () {
       expect(health.score, inInclusiveRange(0, 100));
       expect(health.factors.length, 4);
+      // Each factor names which of the four it is and carries the raw figure
+      // behind it, so the presentation layer can word it in any language. The
+      // calculator used to emit English prose here, which is why the health
+      // card stayed in English in all forty locales.
+      expect(
+        health.factors.map((f) => f.kind).toSet(),
+        HealthFactorKind.values.toSet(),
+      );
       for (final factor in health.factors) {
         expect(factor.score, inInclusiveRange(0, 100));
-        expect(factor.detail, isNotEmpty);
+        expect(factor.value, isA<double>());
+        expect(factor.weight, greaterThan(0));
       }
+      // The weights are what the score is actually blended from, so they have
+      // to add up to exactly one.
+      expect(
+        health.factors.fold(0.0, (sum, f) => sum + f.weight),
+        closeTo(1.0, 0.0001),
+      );
     });
 
     test('the seeded picture lands in a healthy band', () {
-      expect(
-        health.band,
-        anyOf(HealthBand.good, HealthBand.excellent),
-      );
+      expect(health.band, anyOf(HealthBand.good, HealthBand.excellent));
     });
 
     test('band boundaries', () {

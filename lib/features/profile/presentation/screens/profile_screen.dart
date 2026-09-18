@@ -18,6 +18,8 @@ import '../../../../core/widgets/states.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
 import '../../../financial/domain/entities/user_profile.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
+import '../../../review/data/services/review_service.dart';
+import '../../../review/presentation/controllers/review_prompt_controller.dart';
 import '../widgets/settings_tile.dart';
 
 /// Account, preferences and support — the screen that makes the product feel
@@ -34,10 +36,10 @@ class ProfileScreen extends ConsumerWidget {
     final themeMode = ref.watch(themeModeProvider);
 
     String themeLabel() => switch (themeMode) {
-          ThemeMode.light => l10n.themeLight,
-          ThemeMode.dark => l10n.themeDark,
-          ThemeMode.system => l10n.themeSystem,
-        };
+      ThemeMode.light => l10n.themeLight,
+      ThemeMode.dark => l10n.themeDark,
+      ThemeMode.system => l10n.themeSystem,
+    };
 
     return Scaffold(
       appBar: AppBar(
@@ -75,12 +77,18 @@ class ProfileScreen extends ConsumerWidget {
                 SettingsTile(
                   icon: Icons.person_outline_rounded,
                   label: l10n.personalInformation,
-                  onTap: () => _comingSoon(context),
+                  onTap: () => context.push(AppRoutes.personalInformation),
+                ),
+                SettingsTile(
+                  icon: Icons.event_repeat_rounded,
+                  label: l10n.payday,
+                  value: l10n.paydayDayOfMonth(ref.watch(paydayProvider)),
+                  onTap: () => context.push(AppRoutes.payday),
                 ),
                 SettingsTile(
                   icon: Icons.lock_outline_rounded,
                   label: l10n.changePassword,
-                  onTap: () => _comingSoon(context),
+                  onTap: () => context.push(AppRoutes.resetPassword),
                 ),
                 SettingsTile(
                   icon: Icons.notifications_none_rounded,
@@ -97,23 +105,36 @@ class ProfileScreen extends ConsumerWidget {
             child: SettingsGroup(
               title: l10n.preferences,
               children: [
+                // Settings is reachable from the icon in the corner too, but an
+                // icon is not a signpost: a named row is what someone looking
+                // for settings actually scans for.
+                SettingsTile(
+                  icon: Icons.settings_outlined,
+                  label: l10n.settings,
+                  onTap: () => context.push(AppRoutes.settings),
+                ),
                 SettingsTile(
                   icon: Icons.language_rounded,
                   label: l10n.language,
-                  value: AppLocales.byCode(locale.languageCode).nativeName,
-                  onTap: () => context.push(AppRoutes.settings),
+                  value: AppLocales.byLocale(locale).nativeName,
+                  onTap: () => context.push(AppRoutes.language),
                 ),
                 SettingsTile(
                   icon: Icons.payments_outlined,
                   label: l10n.currency,
                   value: currency.code,
-                  onTap: () => context.push(AppRoutes.settings),
+                  onTap: () => context.push(AppRoutes.currency),
                 ),
                 SettingsTile(
-                  icon: Icons.dark_mode_outlined,
-                  label: l10n.theme,
+                  icon: Icons.category_outlined,
+                  label: l10n.manageCategories,
+                  onTap: () => context.push(AppRoutes.categories),
+                ),
+                SettingsTile(
+                  icon: Icons.palette_outlined,
+                  label: l10n.appearance,
                   value: themeLabel(),
-                  onTap: () => context.push(AppRoutes.settings),
+                  onTap: () => context.push(AppRoutes.appearance),
                 ),
               ],
             ),
@@ -140,6 +161,16 @@ class ProfileScreen extends ConsumerWidget {
             child: SettingsGroup(
               title: l10n.help,
               children: [
+                SettingsTile(
+                  icon: Icons.school_outlined,
+                  label: l10n.beginnersGuide,
+                  onTap: () => context.push(AppRoutes.tutorial),
+                ),
+                SettingsTile(
+                  icon: Icons.star_outline_rounded,
+                  label: l10n.rateAction,
+                  onTap: () => _rate(context, ref),
+                ),
                 SettingsTile(
                   icon: Icons.help_outline_rounded,
                   label: l10n.helpAndSupport,
@@ -171,12 +202,32 @@ class ProfileScreen extends ConsumerWidget {
           Center(
             child: Text(
               'RainyPenny · 1.0.0',
-              style: AppTypography.caption.copyWith(color: context.textDisabled),
+              style: AppTypography.caption.copyWith(
+                color: context.textDisabled,
+              ),
             ),
           ),
         ],
       ),
     );
+  }
+
+  /// Rating on purpose, rather than because the app asked.
+  ///
+  /// Marks the prompt settled either way, so someone who came here of their
+  /// own accord is never interrupted by the automatic ask afterwards.
+  Future<void> _rate(BuildContext context, WidgetRef ref) async {
+    final l10n = AppL10n.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    final service = ref.read(reviewServiceProvider);
+
+    ref.read(reviewPromptProvider.notifier).markRated();
+    if (await service.isAvailable()) {
+      await service.requestReview();
+    } else {
+      await service.openStoreListing();
+    }
+    messenger.showSnackBar(SnackBar(content: Text(l10n.rateThanks)));
   }
 
   Future<void> _signOut(BuildContext context, WidgetRef ref) async {
@@ -205,9 +256,9 @@ class ProfileScreen extends ConsumerWidget {
   }
 
   void _comingSoon(BuildContext context) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(AppL10n.of(context).comingSoon)),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(AppL10n.of(context).comingSoon)));
   }
 }
 
@@ -227,11 +278,11 @@ class _ProfileHeader extends ConsumerWidget {
           width: 88,
           height: 88,
           decoration: BoxDecoration(
-            gradient: AppColors.brandGradient,
+            gradient: context.brandGradient,
             shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: AppColors.primary.withValues(alpha: 0.24),
+                color: context.accent.withValues(alpha: 0.24),
                 blurRadius: 18,
                 offset: const Offset(0, 8),
               ),
@@ -268,7 +319,7 @@ class _ProfileHeader extends ConsumerWidget {
           ),
           child: Text(
             l10n.memberSince(dates.monthYear(user.memberSince)),
-            style: AppTypography.caption.copyWith(color: AppColors.primary),
+            style: AppTypography.caption.copyWith(color: context.accent),
           ),
         ),
       ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
+import '../../../../core/settings/settings_providers.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
@@ -8,19 +10,26 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/app_progress_bar.dart';
 import '../../../financial/domain/entities/financial_health.dart';
+import '../../../financial/presentation/widgets/health_presenter.dart';
 
 /// The 0-100 score, shown alongside the factors that produced it.
-class HealthCard extends StatelessWidget {
-  const HealthCard({super.key, required this.health});
+class HealthCard extends ConsumerWidget {
+  const HealthCard({super.key, required this.health, this.onTap});
 
   final FinancialHealth health;
 
+  /// Opens the breakdown. The card was previously the one element on the home
+  /// screen that looked interactive and did nothing.
+  final VoidCallback? onTap;
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
-    final color = _colorFor(context, health.band);
+    final locale = ref.watch(localeProvider).toLanguageTag();
+    final color = healthBandColor(context, health.band);
 
     return AppCard(
+      onTap: onTap,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -57,12 +66,12 @@ class HealthCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      _labelFor(health.band),
+                      healthBandLabel(health.band, l10n),
                       style: AppTypography.title.copyWith(color: color),
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      _summaryFor(health.band),
+                      healthBandSummary(health.band, l10n),
                       style: AppTypography.body.copyWith(
                         fontSize: 13,
                         color: context.textSecondary,
@@ -71,6 +80,12 @@ class HealthCard extends StatelessWidget {
                   ],
                 ),
               ),
+              if (onTap != null)
+                Icon(
+                  Icons.chevron_right_rounded,
+                  size: 20,
+                  color: context.textDisabled,
+                ),
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
@@ -79,59 +94,48 @@ class HealthCard extends StatelessWidget {
           for (final factor in health.factors)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6),
-              child: _FactorRow(factor: factor),
+              child: HealthFactorRow(factor: factor, localeName: locale),
             ),
         ],
       ),
     );
   }
-
-  static Color _colorFor(BuildContext context, HealthBand band) =>
-      switch (band) {
-        HealthBand.excellent => context.brandSecondary,
-        HealthBand.good => AppColors.success,
-        HealthBand.fair => AppColors.warning,
-        HealthBand.needsWork => AppColors.error,
-      };
-
-  static String _labelFor(HealthBand band) => switch (band) {
-        HealthBand.excellent => 'Excellent',
-        HealthBand.good => 'Good',
-        HealthBand.fair => 'Fair',
-        HealthBand.needsWork => 'Needs work',
-      };
-
-  static String _summaryFor(HealthBand band) => switch (band) {
-        HealthBand.excellent =>
-          'You are saving well and staying inside your budgets.',
-        HealthBand.good =>
-          'You are on track with your spending this period.',
-        HealthBand.fair =>
-          'A few budgets are running hot. Small changes will help.',
-        HealthBand.needsWork =>
-          'Spending is outpacing your plan. Start with your largest category.',
-      };
 }
 
-class _FactorRow extends StatelessWidget {
-  const _FactorRow({required this.factor});
+Color healthBandColor(BuildContext context, HealthBand band) => switch (band) {
+  HealthBand.excellent => context.brandSecondary,
+  HealthBand.good => AppColors.success,
+  HealthBand.fair => AppColors.warning,
+  HealthBand.needsWork => AppColors.error,
+};
+
+/// Colour for a single factor's own sub-score, on the same scale the bands use.
+Color healthFactorColor(int score) => score >= 70
+    ? AppColors.success
+    : score >= 45
+    ? AppColors.warning
+    : AppColors.error;
+
+class HealthFactorRow extends StatelessWidget {
+  const HealthFactorRow({
+    super.key,
+    required this.factor,
+    required this.localeName,
+  });
 
   final HealthFactor factor;
+  final String localeName;
 
   @override
   Widget build(BuildContext context) {
-    final color = factor.score >= 70
-        ? AppColors.success
-        : factor.score >= 45
-            ? AppColors.warning
-            : AppColors.error;
+    final l10n = AppL10n.of(context);
 
     return Row(
       children: [
         Expanded(
           flex: 5,
           child: Text(
-            factor.label,
+            healthFactorLabel(factor.kind, l10n),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: AppTypography.caption.copyWith(
@@ -144,7 +148,7 @@ class _FactorRow extends StatelessWidget {
           flex: 4,
           child: AppProgressBar(
             value: factor.score / 100,
-            color: color,
+            color: healthFactorColor(factor.score),
             height: 6,
           ),
         ),
@@ -152,7 +156,7 @@ class _FactorRow extends StatelessWidget {
         Expanded(
           flex: 4,
           child: Text(
-            factor.detail,
+            healthFactorDetail(factor, l10n, localeName),
             textAlign: TextAlign.end,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,

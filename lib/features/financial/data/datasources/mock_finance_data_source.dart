@@ -14,21 +14,36 @@ import 'finance_data_source.dart';
 /// `insert`, `update`, `delete`), including a small artificial latency so the
 /// UI exercises its real loading states.
 class MockFinanceDataSource implements FinanceDataSource {
-  MockFinanceDataSource({this.latency = const Duration(milliseconds: 550)});
+  MockFinanceDataSource({
+    this.latency = const Duration(milliseconds: 550),
+    this.payday = 1,
+  });
 
   /// Simulated round-trip time. Set to [Duration.zero] in tests.
   final Duration latency;
+
+  /// Which day the seeded salary lands on, so the demo ledger lines up with
+  /// whatever cycle the user has configured rather than only with the default.
+  final int payday;
 
   List<Transaction>? _transactions;
   List<SavingsGoal>? _goals;
   List<Loan>? _loans;
   Map<String, double>? _budgetLimits;
+  List<Category>? _categories;
 
-  List<Transaction> get _ledger => _transactions ??= DemoDataset.transactions;
+  List<Transaction> get _ledger =>
+      _transactions ??= DemoDataset.transactionsFor(payday: payday);
   List<SavingsGoal> get _savings => _goals ??= DemoDataset.savingsGoals;
   List<Loan> get _debts => _loans ??= DemoDataset.loans;
   Map<String, double> get _limits =>
       _budgetLimits ??= Map.of(DemoDataset.budgetLimits);
+
+  /// The seeded set, plus anything the user adds during the session.
+  List<Category> get _catalogue => _categories ??= [
+    ...DemoDataset.expenseCategories,
+    ...DemoDataset.incomeCategories,
+  ];
 
   Future<T> _withLatency<T>(T value) async {
     if (latency > Duration.zero) await Future<void>.delayed(latency);
@@ -183,6 +198,11 @@ class MockFinanceDataSource implements FinanceDataSource {
         due.month + 1,
         due.day.clamp(1, _daysInMonth(due.year, due.month + 1)),
       ),
+      // Mirrors `record_loan_payment` in the database: an open-ended debt
+      // keeps counting, a fixed term stops at its own length.
+      paidInstallments: loan.hasSchedule
+          ? (loan.paidInstallments + 1).clamp(0, loan.totalInstallments)
+          : loan.paidInstallments + 1,
     );
   }
 
@@ -197,13 +217,58 @@ class MockFinanceDataSource implements FinanceDataSource {
   // ---------------------------------------------------------------------------
 
   @override
-  Future<List<Category>> fetchCategories() => _withLatency([
-    ...DemoDataset.expenseCategories,
-    ...DemoDataset.incomeCategories,
-  ]);
+  Future<List<Category>> fetchCategories() =>
+      _withLatency(List<Category>.unmodifiable(_catalogue));
 
   @override
-  Future<UserProfile> fetchProfile() => _withLatency(DemoDataset.profile);
+  Future<void> insertCategory(Category category) async {
+    await _withLatency(null);
+    _catalogue.add(category);
+  }
+
+  @override
+  Future<void> updateCategory(Category category) async {
+    await _withLatency(null);
+    final index = _catalogue.indexWhere((c) => c.id == category.id);
+    if (index == -1) return;
+    _catalogue[index] = category;
+
+    // Transactions hold a Category rather than an id, so a rename has to be
+    // pushed through the ledger for the change to show up everywhere.
+    for (var i = 0; i < _ledger.length; i++) {
+      if (_ledger[i].category.id == category.id) {
+        _ledger[i] = _ledger[i].copyWith(category: category);
+      }
+    }
+  }
+
+  @override
+  Future<void> deleteCategory(String categoryId) async {
+    await _withLatency(null);
+    if (await countCategoryUsage(categoryId) > 0) {
+      throw StateError('Category $categoryId is still in use');
+    }
+    _catalogue.removeWhere((c) => c.id == categoryId);
+  }
+
+  @override
+  Future<int> countCategoryUsage(String categoryId) async {
+    final inLedger = _ledger.where((t) => t.category.id == categoryId).length;
+    final inBudgets = _limits.containsKey(categoryId) ? 1 : 0;
+    return inLedger + inBudgets;
+  }
+
+  UserProfile? _profile;
+
+  @override
+  Future<UserProfile> fetchProfile() =>
+      _withLatency(_profile ??= DemoDataset.profile);
+
+  @override
+  Future<void> updateProfileName(String name) async {
+    await _withLatency(null);
+    _profile = (_profile ??= DemoDataset.profile).copyWith(name: name);
+  }
 
   @override
   Future<Map<Category, double>> fetchPreviousPeriodSpending() =>

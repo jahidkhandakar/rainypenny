@@ -29,9 +29,10 @@ final reportDataProvider = FutureProvider<ReportData>((ref) async {
   );
   final daily = BalanceCalculator.dailyTotals(inRange, range.start, range.end);
 
-  // Roughly a bar per day for a week, per five days for a month, per fortnight
-  // for a quarter — always six or seven readable columns.
-  final bucketCount = range.days <= 7 ? range.days : (range.days <= 31 ? 6 : 6);
+  // A bar per day for a week or less, otherwise six columns however long the
+  // window is. A custom range can be any length at all, so this has to cope
+  // with two days as readily as with a year.
+  final bucketCount = range.days <= 7 ? range.days : 6;
 
   return ReportData(
     summary: summary,

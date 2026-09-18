@@ -3,18 +3,17 @@
   "configurations": [
     {
       "name": "rainypenny-web",
-      "runtimeExecutable": "python",
+      "runtimeExecutable": "F:\\INSTALLED PROGRAMS\\flutter\\flutter\\bin\\flutter.bat",
       "runtimeArgs": [
-        "-m",
-        "http.server",
-        "8096",
-        "--bind",
-        "127.0.0.1",
-        "--directory",
-        "build/web"
+        "run",
+        "-d",
+        "web-server",
+        "--web-port",
+        "8770",
+        "--web-hostname",
+        "127.0.0.1"
       ],
-      "port": 8096,
-      "url": "http://127.0.0.1:8096"
+      "port": 8770
     }
   ]
 }

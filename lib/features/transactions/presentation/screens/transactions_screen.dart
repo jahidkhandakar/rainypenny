@@ -11,8 +11,10 @@ import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
+import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/widgets/entrance.dart';
 import '../../../../core/widgets/states.dart';
+import '../../../dashboard/presentation/widgets/cycle_navigator.dart';
 import '../controllers/transaction_list_controller.dart';
 import '../widgets/transaction_detail_sheet.dart';
 import '../widgets/transaction_tile.dart';
@@ -39,13 +41,26 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
     final l10n = AppL10n.of(context);
     final groups = ref.watch(groupedTransactionsProvider);
     final query = ref.watch(transactionQueryProvider);
-    final count = ref.watch(filteredTransactionCountProvider);
 
     return Scaffold(
       appBar: AppBar(
         leading: const DrawerLogoButton(),
         title: Text(l10n.navTransactions),
         actions: [
+          // Stepping outside the salary cycle to search the whole ledger is a
+          // real need — "when did I last pay for that?" — but it is not the
+          // default, so it lives behind a toggle rather than in the chip row.
+          IconButton(
+            tooltip: query.wholeHistory ? l10n.salaryCycle : l10n.allTime,
+            icon: Icon(
+              query.wholeHistory
+                  ? Icons.event_repeat_rounded
+                  : Icons.history_rounded,
+            ),
+            onPressed: () => ref
+                .read(transactionQueryProvider.notifier)
+                .setWholeHistory(!query.wholeHistory),
+          ),
           IconButton(
             tooltip: l10n.addTransaction,
             icon: const Icon(Icons.add_rounded),
@@ -56,6 +71,14 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
       ),
       body: Column(
         children: [
+          // The same period control as the home screen: the two have to agree
+          // about which month is being looked at, or the ledger stops matching
+          // the figures it is supposed to explain.
+          if (!query.wholeHistory)
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: AppSpacing.page),
+              child: CycleNavigator(),
+            ),
           Padding(
             padding: const EdgeInsets.fromLTRB(
               AppSpacing.page,
@@ -97,12 +120,14 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                 const SizedBox(height: AppSpacing.md),
                 _FilterBar(
                   selected: query.filter,
-                  onSelect: (filter) =>
-                      ref.read(transactionQueryProvider.notifier).filter(filter),
+                  onSelect: (filter) => ref
+                      .read(transactionQueryProvider.notifier)
+                      .filter(filter),
                 ),
               ],
             ),
           ),
+          const _CategoryFilterBar(),
           Expanded(
             child: groups.when(
               data: (list) {
@@ -131,14 +156,9 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                   itemCount: list.length + 1,
                   itemBuilder: (context, index) {
                     if (index == 0) {
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                        child: Text(
-                          l10n.transactionCount(count),
-                          style: AppTypography.caption.copyWith(
-                            color: context.textSecondary,
-                          ),
-                        ),
+                      return const Padding(
+                        padding: EdgeInsets.only(bottom: AppSpacing.md),
+                        child: _ResultsSummary(),
                       );
                     }
                     final group = list[index - 1];
@@ -169,6 +189,152 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// How many rows the filter matched, and what they add up to.
+///
+/// The total is the half the client asked for and the half a filtered list is
+/// useless without: "show me Food this month" is really a question about a
+/// number, not about a list.
+class _ResultsSummary extends ConsumerWidget {
+  const _ResultsSummary();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppL10n.of(context);
+    final money = ref.watch(moneyFormatterProvider);
+    final count = ref.watch(filteredTransactionCountProvider);
+    final total = ref.watch(filteredTotalProvider);
+
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            l10n.transactionCount(count),
+            style: AppTypography.caption.copyWith(
+              color: context.textSecondary,
+            ),
+          ),
+        ),
+        if (total > 0)
+          Text(
+            money.format(total, decimals: false),
+            style: AppTypography.caption.copyWith(
+              color: context.textPrimary,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+/// Horizontal chips for the categories present in the period being viewed.
+class _CategoryFilterBar extends ConsumerWidget {
+  const _CategoryFilterBar();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppL10n.of(context);
+    final categories = ref.watch(cycleCategoriesProvider);
+    final selected = ref.watch(transactionQueryProvider).categoryId;
+    final notifier = ref.read(transactionQueryProvider.notifier);
+
+    return categories.maybeWhen(
+      data: (list) {
+        if (list.isEmpty) return const SizedBox.shrink();
+
+        return SizedBox(
+          height: 38,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.page),
+            itemCount: list.length + 1,
+            separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
+            itemBuilder: (context, index) {
+              if (index == 0) {
+                return _Chip(
+                  label: l10n.allCategories,
+                  isSelected: selected == null,
+                  onTap: () => notifier.selectCategory(null),
+                );
+              }
+              final category = list[index - 1];
+              return _Chip(
+                label: categoryDisplayName(category, l10n),
+                icon: iconForCategory(category.icon),
+                color: categoryColor(context, category),
+                isSelected: selected == category.id,
+                onTap: () => notifier.selectCategory(category.id),
+              );
+            },
+          ),
+        );
+      },
+      orElse: () => const SizedBox.shrink(),
+    );
+  }
+}
+
+class _Chip extends StatelessWidget {
+  const _Chip({
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+    this.icon,
+    this.color,
+  });
+
+  final String label;
+  final bool isSelected;
+  final VoidCallback onTap;
+  final IconData? icon;
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    final tint = color ?? context.accent;
+
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(AppRadius.pill),
+      child: AnimatedContainer(
+        duration: AppDuration.fast,
+        curve: Curves.easeOut,
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppSpacing.md,
+          vertical: AppSpacing.sm,
+        ),
+        decoration: BoxDecoration(
+          color: isSelected ? tint : context.subtleFill,
+          borderRadius: BorderRadius.circular(AppRadius.pill),
+          border: Border.all(
+            color: isSelected ? tint : context.borderColor,
+          ),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (icon != null) ...[
+              Icon(
+                icon,
+                size: 15,
+                color: isSelected ? Colors.white : tint,
+              ),
+              const SizedBox(width: 6),
+            ],
+            Text(
+              label,
+              style: AppTypography.caption.copyWith(
+                color: isSelected ? Colors.white : context.textSecondary,
+                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -226,7 +392,7 @@ class _FilterBar extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: AppTypography.label.copyWith(
                       color: selected == entry.key
-                          ? AppColors.primary
+                          ? context.accent
                           : context.textSecondary,
                       fontWeight: selected == entry.key
                           ? FontWeight.w700
@@ -259,11 +425,9 @@ class _DayGroup extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(
-              left: AppSpacing.xs,
-              right: AppSpacing.xs,
-              bottom: AppSpacing.sm,
-            ),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.xs,
+            ).copyWith(bottom: AppSpacing.sm),
             child: Row(
               children: [
                 Expanded(

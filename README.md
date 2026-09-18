@@ -1,10 +1,35 @@
 # RainyPenny
 
-A personal finance app: track income and expenses, set category budgets, save
-towards goals, pay down debt, and see where the money actually went.
+A monthly salary assistant: what came in, where it went, what is left, and what
+rolls into next month. Budgets, savings goals and debts hang off the same
+cycle.
 
 Built with Flutter, Riverpod, GoRouter and Supabase, in a feature-first clean
 architecture.
+
+## The salary cycle
+
+The app's primary period is not a rolling thirty days — it is the user's own
+pay period. One setting, the payday, defines it: someone paid on the 25th has a
+financial month running from the 25th to the 24th, and every figure in the app
+is scoped to that window.
+
+`SalaryCycle` (`features/financial/domain/entities/salary_cycle.dart`) derives
+the window from the payday and a date. Nothing about a cycle is stored — a
+stored copy would drift from the payday the user actually chose — and a payday
+past the end of a short month clamps to that month's last day, so the 31st
+means 28 February rather than rolling into March.
+
+`CycleSummary` answers the four questions in the order people ask them:
+
+```
+salary in  →  spent so far  →  what is left  →  what carries forward
+```
+
+Every one of those is derived from the ledger. There is no stored balance
+anywhere: the remaining figure is the whole ledger replayed to the close of the
+cycle, which is what guarantees that logging an expense moves it immediately
+and that the headline number can never disagree with the list beneath it.
 
 ---
 
@@ -92,23 +117,38 @@ so an insight reads identically on the dashboard and on a lock screen.
 
 ## Localization
 
-Ten languages, ARB files in `lib/core/localization/l10n/`. English is the
-template; untranslated keys fall back to it automatically.
+Forty locales, ARB files in `lib/core/localization/l10n/`. English is the
+template; untranslated keys fall back to it automatically and are listed in
+`l10n_untranslated.json`.
 
-Arabic and Urdu switch the entire interface to right-to-left — there are no
-separate RTL screens, the layout adapts. Money is wrapped in a Unicode
-bidirectional isolate so a figure like `−$84.50` keeps its sign on the correct
-side in an RTL layout.
+Arabic, Urdu, Persian and Hebrew switch the entire interface to right-to-left —
+there are no separate RTL screens, the layout adapts. Money is wrapped in a
+Unicode bidirectional isolate so a figure like `−$84.50` keeps its sign on the
+correct side in an RTL layout.
 
-After editing an ARB file:
+Category names follow the interface language. The seeded categories are shared
+by every account and stored with one English name, so it is the stable id that
+gets translated (`categoryDisplayName` in `core/utils/category_visuals.dart`);
+a category the user created is shown exactly as they typed it.
+
+Translations live in `tool/i18n/<locale>.json`, which is the source of truth.
+To add or change copy: edit `app_en.arb`, add the translations, then
 
 ```bash
+dart run tool/merge_arb.dart      # or: python tool/merge_arb.py
 flutter gen-l10n
 ```
 
-Currently fully translated: English, plus Arabic and Urdu for the insight and
-action strings. The other seven have the core interface translated and fall
-back to English elsewhere.
+The merge refuses a translation that drops a placeholder the template declares,
+or a plural carrying both `=1{}` and `one{}` — both fail at runtime rather than
+merely reading oddly. There are two implementations of the same tool so the
+workflow runs with either Dart or Python available; they produce byte-identical
+output.
+
+**Currently complete: English, Arabic, Urdu and Hindi.** The other 36 locales
+carry the pre-existing interface and fall back to English for strings added
+with the salary cycle, the health breakdown and the category filters.
+`l10n_untranslated.json` lists exactly which.
 
 ---
 
@@ -231,7 +271,17 @@ flutter test
 - Remote push delivery. The scheduling, rules, localisation and the server
   function are done; connecting a push provider and storing device tokens is
   not.
+- Quick login (Face ID, fingerprint, PIN) and social sign-up. Both need
+  platform credentials the repository does not carry.
+- New-device login alerts by email. Needs a device table and an email provider.
+- Delete account. Needs a service-role function; the anon key cannot remove an
+  auth user.
+- Profile photo. Name editing works; the photo needs a storage bucket.
+- A calendar view of the cycle, and the nudge for a day with nothing logged.
 - Recurring transactions.
 - Multi-account and multi-currency conversion. Currency changes the display
   format only; no FX is applied.
-- Full translations for the seven non-RTL languages beyond the core interface.
+- PDF export covers Latin, Arabic and Devanagari. Chinese, Japanese, Korean,
+  Thai, Tamil, Telugu, Bengali, Gurmukhi and Hebrew need their own bundled
+  fonts or they render as empty boxes.
+- Translations for the 36 locales listed in `l10n_untranslated.json`.

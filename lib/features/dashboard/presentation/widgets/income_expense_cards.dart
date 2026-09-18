@@ -9,20 +9,29 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/trend_chip.dart';
-import '../../../financial/domain/entities/period_summary.dart';
 
 /// The two compact summary cards under the balance hero.
 ///
 /// Colour carries the meaning: teal for money in, deep blue for money out.
+///
+/// Takes the four figures rather than a summary object so it can be fed by
+/// either a salary cycle or an arbitrary reporting window without the widget
+/// needing to know which.
 class IncomeExpenseCards extends StatelessWidget {
   const IncomeExpenseCards({
     super.key,
-    required this.summary,
+    required this.income,
+    required this.expenses,
+    required this.incomeChange,
+    required this.expenseChange,
     this.onIncomeTap,
     this.onExpenseTap,
   });
 
-  final PeriodSummary summary;
+  final double income;
+  final double expenses;
+  final double incomeChange;
+  final double expenseChange;
   final VoidCallback? onIncomeTap;
   final VoidCallback? onExpenseTap;
 
@@ -30,37 +39,39 @@ class IncomeExpenseCards extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppL10n.of(context);
 
-    // IntrinsicHeight keeps the two cards the same height without asking for
-    // an unbounded height from the surrounding scroll view.
-    return IntrinsicHeight(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: _SummaryCard(
-              label: l10n.income,
-              amount: summary.income,
-              change: summary.incomeChange,
-              color: AppColors.income,
-              icon: Icons.arrow_downward_rounded,
-              goodWhenRising: true,
-              onTap: onIncomeTap,
-            ),
+    // Both cards hold the same three rows, so they come out the same height on
+    // their own. IntrinsicHeight used to force that, but it under-measures the
+    // FittedBox holding the amount, and in a script with taller glyphs than
+    // Latin — Arabic, Urdu, Devanagari — the content then overflowed the height
+    // it had reported. Letting each card size itself is both simpler and right
+    // in every language.
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: _SummaryCard(
+            label: l10n.income,
+            amount: income,
+            change: incomeChange,
+            color: AppColors.income,
+            icon: Icons.arrow_downward_rounded,
+            goodWhenRising: true,
+            onTap: onIncomeTap,
           ),
-          const SizedBox(width: AppSpacing.md),
-          Expanded(
-            child: _SummaryCard(
-              label: l10n.expenses,
-              amount: summary.expenses,
-              change: summary.expenseChange,
-              color: context.expenseColor,
-              icon: Icons.arrow_upward_rounded,
-              goodWhenRising: false,
-              onTap: onExpenseTap,
-            ),
+        ),
+        const SizedBox(width: AppSpacing.md),
+        Expanded(
+          child: _SummaryCard(
+            label: l10n.expenses,
+            amount: expenses,
+            change: expenseChange,
+            color: context.expenseColor,
+            icon: Icons.arrow_upward_rounded,
+            goodWhenRising: false,
+            onTap: onExpenseTap,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

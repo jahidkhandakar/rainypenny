@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/config/app_config.dart';
 import '../../../../core/localization/app_locales.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
+import '../../../../core/routing/app_routes.dart';
 import '../../../../core/settings/settings_providers.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
-import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/entrance.dart';
+import '../widgets/appearance_pickers.dart';
 import '../widgets/settings_tile.dart';
 
-/// Language, currency and theme.
+/// Language, currency, appearance and the guide.
 ///
-/// Switching language re-renders the whole app, flips to RTL for Arabic and
-/// Urdu, and re-formats every amount and date — no separate screens involved.
+/// Every long list — forty languages, a hundred and fifty-seven currencies,
+/// ten accents — now lives behind its own searchable screen. Inlining them
+/// here made this page a five-screen scroll in which the one row someone
+/// actually came for was impossible to find.
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
@@ -26,6 +29,13 @@ class SettingsScreen extends ConsumerWidget {
     final locale = ref.watch(localeProvider);
     final currency = ref.watch(currencyProvider);
     final themeMode = ref.watch(themeModeProvider);
+    final accent = ref.watch(accentProvider);
+
+    final themeLabel = switch (themeMode) {
+      ThemeMode.light => l10n.themeLight,
+      ThemeMode.dark => l10n.themeDark,
+      ThemeMode.system => l10n.themeSystem,
+    };
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settings)),
@@ -39,105 +49,104 @@ class SettingsScreen extends ConsumerWidget {
         children: [
           FadeSlideIn(
             child: SettingsGroup(
-              title: l10n.theme,
+              title: l10n.appearance,
               children: [
-                for (final mode in ThemeMode.values)
-                  SettingsTile(
-                    icon: switch (mode) {
-                      ThemeMode.system => Icons.brightness_auto_rounded,
-                      ThemeMode.light => Icons.light_mode_rounded,
-                      ThemeMode.dark => Icons.dark_mode_rounded,
-                    },
-                    label: switch (mode) {
-                      ThemeMode.system => l10n.themeSystem,
-                      ThemeMode.light => l10n.themeLight,
-                      ThemeMode.dark => l10n.themeDark,
-                    },
-                    onTap: () =>
-                        ref.read(themeModeProvider.notifier).select(mode),
-                    trailing: _Check(selected: themeMode == mode),
-                  ),
+                SettingsTile(
+                  icon: switch (themeMode) {
+                    ThemeMode.system => Icons.brightness_auto_rounded,
+                    ThemeMode.light => Icons.light_mode_rounded,
+                    ThemeMode.dark => Icons.dark_mode_rounded,
+                  },
+                  label: l10n.theme,
+                  value: themeLabel,
+                  onTap: () => context.push(AppRoutes.appearance),
+                ),
+                SettingsTile(
+                  icon: Icons.palette_outlined,
+                  label: l10n.accentColor,
+                  value: accentName(l10n, accent),
+                  onTap: () => context.push(AppRoutes.appearance),
+                ),
               ],
             ),
           ),
-          const SizedBox(height: AppSpacing.xl),
-
-          FadeSlideIn(
-            index: 1,
-            child: SettingsGroup(
-              title: l10n.currency,
-              children: [
-                for (final option in Currencies.values)
-                  SettingsTile(
-                    icon: Icons.payments_outlined,
-                    label: '${option.name} (${option.symbol})',
-                    value: option.code,
-                    onTap: () =>
-                        ref.read(currencyProvider.notifier).select(option),
-                    trailing: _Check(selected: currency.code == option.code),
-                  ),
-              ],
-            ),
-          ),
+          const SizedBox(height: AppSpacing.lg),
+          // The swatches are repeated here rather than only on the Appearance
+          // screen: changing colour is the single most-used setting, and it is
+          // not worth a second tap.
+          const FadeSlideIn(index: 1, child: AccentPicker()),
           const SizedBox(height: AppSpacing.xl),
 
           FadeSlideIn(
             index: 2,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: SettingsGroup(
+              title: l10n.preferences,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: AppSpacing.xs,
-                    bottom: AppSpacing.sm,
-                  ),
-                  child: Text(
-                    l10n.language.toUpperCase(),
-                    style: AppTypography.overline.copyWith(
-                      color: context.textSecondary,
-                    ),
-                  ),
+                SettingsTile(
+                  icon: Icons.language_rounded,
+                  label: l10n.language,
+                  value: AppLocales.byLocale(locale).nativeName,
+                  onTap: () => context.push(AppRoutes.language),
                 ),
-                AppCard(
-                  padding: EdgeInsets.zero,
-                  child: Column(
-                    children: [
-                      for (var i = 0; i < AppLocales.values.length; i++) ...[
-                        _LanguageTile(
-                          option: AppLocales.values[i],
-                          selected: locale.languageCode ==
-                              AppLocales.values[i].locale.languageCode,
-                          onTap: () => ref
-                              .read(localeProvider.notifier)
-                              .select(AppLocales.values[i].locale),
-                        ),
-                        if (i != AppLocales.values.length - 1)
-                          Padding(
-                            padding:
-                                const EdgeInsetsDirectional.only(start: 60),
-                            child: Divider(
-                              color: context.borderColor,
-                              height: 1,
-                            ),
-                          ),
-                      ],
-                    ],
-                  ),
+                SettingsTile(
+                  icon: Icons.payments_outlined,
+                  label: l10n.currency,
+                  value: '${currency.symbol}  ${currency.code}',
+                  onTap: () => context.push(AppRoutes.currency),
+                ),
+                SettingsTile(
+                  icon: Icons.event_repeat_rounded,
+                  label: l10n.payday,
+                  value: l10n.paydayDayOfMonth(ref.watch(paydayProvider)),
+                  onTap: () => context.push(AppRoutes.payday),
+                ),
+                SettingsTile(
+                  icon: Icons.category_outlined,
+                  label: l10n.manageCategories,
+                  onTap: () => context.push(AppRoutes.categories),
+                ),
+                SettingsTile(
+                  icon: Icons.notifications_none_rounded,
+                  label: l10n.notifications,
+                  onTap: () => context.push(AppRoutes.notificationSettings),
                 ),
               ],
             ),
           ),
           const SizedBox(height: AppSpacing.lg),
           Text(
-            'Arabic and Urdu switch the whole interface to right-to-left. '
-            'Strings that are not translated yet fall back to English.',
-            style: AppTypography.caption.copyWith(color: context.textSecondary),
+            l10n.languageNote,
+            style: AppTypography.caption.copyWith(
+              color: context.textSecondary,
+              height: 1.5,
+            ),
           ),
           const SizedBox(height: AppSpacing.xl),
+
+          FadeSlideIn(
+            index: 3,
+            child: SettingsGroup(
+              title: l10n.help,
+              children: [
+                SettingsTile(
+                  icon: Icons.school_outlined,
+                  label: l10n.beginnersGuide,
+                  onTap: () => context.push(AppRoutes.tutorial),
+                ),
+                SettingsTile(
+                  icon: Icons.restart_alt_rounded,
+                  label: l10n.replaySetup,
+                  onTap: () => _confirmReplaySetup(context, ref),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: AppSpacing.xl),
+
           // Makes it obvious at a glance whether this build is talking to a
           // real backend or the bundled demo data.
           FadeSlideIn(
-            index: 3,
+            index: 4,
             child: SettingsGroup(
               title: l10n.dataSource,
               children: [
@@ -155,92 +164,31 @@ class SettingsScreen extends ConsumerWidget {
       ),
     );
   }
-}
 
-class _LanguageTile extends StatelessWidget {
-  const _LanguageTile({
-    required this.option,
-    required this.selected,
-    required this.onTap,
-  });
-
-  final AppLocale option;
-  final bool selected;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.lg,
-          vertical: AppSpacing.md,
-        ),
-        child: Row(
-          children: [
-            Container(
-              width: 34,
-              height: 34,
-              decoration: BoxDecoration(
-                color: selected ? AppColors.primary : context.tintFill,
-                borderRadius: BorderRadius.circular(11),
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                option.locale.languageCode.toUpperCase(),
-                style: AppTypography.caption.copyWith(
-                  fontWeight: FontWeight.w800,
-                  color: selected ? Colors.white : AppColors.primary,
-                ),
-              ),
-            ),
-            const SizedBox(width: AppSpacing.md),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    option.nativeName,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    option.isRtl
-                        ? '${option.englishName} · RTL'
-                        : option.englishName,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            _Check(selected: selected),
-          ],
-        ),
+  /// Setup writes real preferences, so re-running it is worth a confirmation —
+  /// but it only re-asks the questions; nothing recorded is touched.
+  Future<void> _confirmReplaySetup(BuildContext context, WidgetRef ref) async {
+    final l10n = AppL10n.of(context);
+    final router = GoRouter.of(context);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.replaySetup),
+        content: Text(l10n.replaySetupBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text(l10n.cancel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: Text(l10n.continueLabel),
+          ),
+        ],
       ),
     );
-  }
-}
-
-class _Check extends StatelessWidget {
-  const _Check({required this.selected});
-
-  final bool selected;
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedOpacity(
-      duration: AppDuration.fast,
-      opacity: selected ? 1 : 0,
-      child: const Icon(
-        Icons.check_circle_rounded,
-        size: 21,
-        color: AppColors.primary,
-      ),
-    );
+    if (confirmed != true) return;
+    ref.read(onboardingCompleteProvider.notifier).reset();
+    router.go(AppRoutes.onboarding);
   }
 }

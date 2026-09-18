@@ -522,5 +522,781 @@
   "addLoanAction": "Add loan",
   "addBudgetAction": "Add budget",
   "addGoalAction": "Add goal",
-  "longPressHint": "Tip: hold + to log an expense straight away"
+  "longPressHint": "Tip: hold + to log an expense straight away",
+  "searchCurrencies": "Search currencies",
+  "@searchCurrencies": {
+    "description": "Currency picker: searchCurrencies"
+  },
+  "noCurrenciesFound": "No currencies found",
+  "@noCurrenciesFound": {
+    "description": "Currency picker: noCurrenciesFound"
+  },
+  "noCurrenciesFoundMessage": "Try a different code, symbol or name.",
+  "@noCurrenciesFoundMessage": {
+    "description": "Currency picker: noCurrenciesFoundMessage"
+  },
+  "popularCurrencies": "Popular",
+  "@popularCurrencies": {
+    "description": "Currency picker: popularCurrencies"
+  },
+  "allCurrencies": "All currencies",
+  "@allCurrencies": {
+    "description": "Currency picker: allCurrencies"
+  },
+  "totalLoanAmount": "Total loan amount",
+  "@totalLoanAmount": {
+    "description": "Loan detail: the original amount borrowed"
+  },
+  "installmentAmount": "Installment amount",
+  "@installmentAmount": {
+    "description": "Loan detail: what falls due each cycle"
+  },
+  "numberOfInstallments": "Number of installments",
+  "@numberOfInstallments": {
+    "description": "Loan editor: length of the repayment plan"
+  },
+  "paidInstallments": "Paid installments",
+  "@paidInstallments": {
+    "description": "Loan detail: installments already settled"
+  },
+  "remainingInstallments": "Remaining installments",
+  "@remainingInstallments": {
+    "description": "Loan detail: installments still to pay"
+  },
+  "installmentsPaidOf": "{paid} of {total} paid",
+  "@installmentsPaidOf": {
+    "description": "Loan detail: installment counter",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "finalPayment": "Final payment",
+  "@finalPayment": {
+    "description": "Loan detail: date of the last installment"
+  },
+  "paymentDueDate": "Payment due date",
+  "@paymentDueDate": {
+    "description": "Loan detail: the day of the month a payment falls due"
+  },
+  "dueOnDayOfMonth": "Day {day} of each month",
+  "@dueOnDayOfMonth": {
+    "description": "Loan detail: recurring due day",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "loanStatus": "Status",
+  "@loanStatus": {
+    "description": "Loan detail: current standing of the debt"
+  },
+  "statusActive": "On track",
+  "@statusActive": {
+    "description": "Loan status: being repaid normally"
+  },
+  "statusDueSoon": "Due soon",
+  "@statusDueSoon": {
+    "description": "Loan status: inside the reminder window"
+  },
+  "statusOverdue": "Overdue",
+  "@statusOverdue": {
+    "description": "Loan status: the due date has passed"
+  },
+  "statusCompleted": "Paid off",
+  "@statusCompleted": {
+    "description": "Loan status: fully repaid"
+  },
+  "repaymentProgress": "Repayment progress",
+  "@repaymentProgress": {
+    "description": "Loan detail: section heading for the progress bars"
+  },
+  "byAmount": "By amount",
+  "@byAmount": {
+    "description": "Loan detail: progress measured in money"
+  },
+  "byInstallments": "By installments",
+  "@byInstallments": {
+    "description": "Loan detail: progress measured in payments"
+  },
+  "startDate": "Start date",
+  "@startDate": {
+    "description": "Loan editor: when repayment began"
+  },
+  "openEnded": "Open-ended",
+  "@openEnded": {
+    "description": "Loan detail: a revolving balance with no fixed term"
+  },
+  "loanDetails": "Loan details",
+  "@loanDetails": {
+    "description": "Title of the loan detail screen"
+  },
+  "notSet": "Not set",
+  "@notSet": {
+    "description": "Shown where an optional value has not been entered"
+  },
+  "insightDebtDueTodayTitle": "{subject} is due today",
+  "@insightDebtDueTodayTitle": {
+    "description": "Notification: an installment falls due today",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "Your {amount} payment is due today. A quick tap keeps it on time.",
+  "@insightDebtDueTodayBody": {
+    "description": "Notification body: installment due today",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "remindMorningTitle": "Good morning ☀️",
+  "@remindMorningTitle": {
+    "description": "Morning expense reminder title"
+  },
+  "remindMorningBody": "Start the day on top of your money. Anything to add from yesterday?",
+  "@remindMorningBody": {
+    "description": "Morning expense reminder body"
+  },
+  "remindNoonTitle": "Midday check-in",
+  "@remindNoonTitle": {
+    "description": "Noon expense reminder title"
+  },
+  "remindNoonBody": "Lunch, coffee, a fare? Add it in a few seconds.",
+  "@remindNoonBody": {
+    "description": "Noon expense reminder body"
+  },
+  "remindAfternoonTitle": "Quick catch-up",
+  "@remindAfternoonTitle": {
+    "description": "Afternoon expense reminder title"
+  },
+  "remindAfternoonBody": "Log what you have spent so far and keep today accurate.",
+  "@remindAfternoonBody": {
+    "description": "Afternoon expense reminder body"
+  },
+  "remindEveningTitle": "Wrapping up the day",
+  "@remindEveningTitle": {
+    "description": "Evening expense reminder title"
+  },
+  "remindEveningBody": "Two minutes now and today's numbers are complete.",
+  "@remindEveningBody": {
+    "description": "Evening expense reminder body"
+  },
+  "happyWeekendTitle": "Happy weekend! 🎉",
+  "@happyWeekendTitle": {
+    "description": "Weekend greeting title"
+  },
+  "happyWeekendBody": "Enjoy it — and keep an eye on the weekend spending.",
+  "@happyWeekendBody": {
+    "description": "Weekend greeting body"
+  },
+  "dailyReminders": "Daily expense reminders",
+  "@dailyReminders": {
+    "description": "Notification setting: the daily nudges"
+  },
+  "dailyRemindersBody": "Friendly nudges to keep your expenses up to date",
+  "@dailyRemindersBody": {
+    "description": "Notification setting description"
+  },
+  "weekendGreeting": "Happy Weekend",
+  "@weekendGreeting": {
+    "description": "Notification setting: the weekend greeting"
+  },
+  "weekendGreetingBody": "A friendly hello at the start of your weekend",
+  "@weekendGreetingBody": {
+    "description": "Notification setting description"
+  },
+  "reminderTimesSection": "Reminder times",
+  "@reminderTimesSection": {
+    "description": "Section heading for the four daily slots"
+  },
+  "slotMorning": "Morning",
+  "@slotMorning": {
+    "description": "Daily reminder slot"
+  },
+  "slotNoon": "Noon",
+  "@slotNoon": {
+    "description": "Daily reminder slot"
+  },
+  "slotAfternoon": "Afternoon",
+  "@slotAfternoon": {
+    "description": "Daily reminder slot"
+  },
+  "slotEvening": "Evening",
+  "@slotEvening": {
+    "description": "Daily reminder slot"
+  },
+  "everyDay": "Every day",
+  "@everyDay": {
+    "description": "How often a repeating notification arrives"
+  },
+  "financialReport": "Financial Report",
+  "@financialReport": {
+    "description": "Title of the exported PDF"
+  },
+  "preparedFor": "Prepared for",
+  "@preparedFor": {
+    "description": "PDF cover: whose report this is"
+  },
+  "generatedOn": "Generated on",
+  "@generatedOn": {
+    "description": "PDF cover: the date the report was produced"
+  },
+  "reportDisclaimer": "Generated by RainyPenny from your own records.",
+  "@reportDisclaimer": {
+    "description": "PDF footer note"
+  },
+  "pageOf": "Page {page} of {total}",
+  "@pageOf": {
+    "description": "PDF footer page number",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "overview": "Overview",
+  "@overview": {
+    "description": "PDF section: the headline totals"
+  },
+  "description": "Description",
+  "@description": {
+    "description": "Table column heading"
+  },
+  "totalIncome": "Total income",
+  "@totalIncome": {
+    "description": "Summary table row"
+  },
+  "totalExpenses": "Total expenses",
+  "@totalExpenses": {
+    "description": "Summary table row"
+  },
+  "totalSaved": "Total saved",
+  "@totalSaved": {
+    "description": "Summary table row"
+  },
+  "shareOfTotal": "Share",
+  "@shareOfTotal": {
+    "description": "Table column: this category's share of all spending"
+  },
+  "used": "Used",
+  "@used": {
+    "description": "Table column: percentage of a budget consumed"
+  },
+  "goal": "Goal",
+  "@goal": {
+    "description": "Table column heading for a savings goal"
+  },
+  "targetDate": "Target date",
+  "@targetDate": {
+    "description": "Table column heading"
+  },
+  "progress": "Progress",
+  "@progress": {
+    "description": "Table column heading"
+  },
+  "paidOffShort": "Paid",
+  "@paidOffShort": {
+    "description": "Table column: percentage of a debt repaid"
+  },
+  "transactions": "Transactions",
+  "@transactions": {
+    "description": "PDF section listing individual entries"
+  },
+  "andMoreTransactions": "{count, plural, =1{and 1 more transaction} other{and {count} more transactions}}",
+  "@andMoreTransactions": {
+    "description": "PDF note when the transaction table is truncated",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportPdf": "Export PDF",
+  "@exportPdf": {
+    "description": "Button that produces the report"
+  },
+  "sharePdf": "Share report",
+  "@sharePdf": {
+    "description": "Button that opens the share sheet"
+  },
+  "preparingReport": "Preparing your report…",
+  "@preparingReport": {
+    "description": "Progress message while the PDF builds"
+  },
+  "reportReady": "Report ready",
+  "@reportReady": {
+    "description": "Confirmation once the PDF is produced"
+  },
+  "reportFailed": "Could not create the report",
+  "@reportFailed": {
+    "description": "Error message when export fails"
+  },
+  "categories": "Categories",
+  "@categories": {
+    "description": "Title of the category management screen"
+  },
+  "categoriesIntro": "Add your own categories to file income and expenses exactly the way you think about them.",
+  "@categoriesIntro": {
+    "description": "Explains what the screen is for"
+  },
+  "expenseCategories": "Expense categories",
+  "@expenseCategories": {
+    "description": "Section heading"
+  },
+  "incomeCategories": "Income categories",
+  "@incomeCategories": {
+    "description": "Section heading"
+  },
+  "newCategory": "New category",
+  "@newCategory": {
+    "description": "Title of the create form"
+  },
+  "editCategory": "Edit category",
+  "@editCategory": {
+    "description": "Title of the edit form"
+  },
+  "categoryName": "Name",
+  "@categoryName": {
+    "description": "Category form field label"
+  },
+  "categoryNameHint": "e.g. Pet care",
+  "@categoryNameHint": {
+    "description": "Category name placeholder"
+  },
+  "icon": "Icon",
+  "@icon": {
+    "description": "Category form field label"
+  },
+  "categorySaved": "Category saved",
+  "@categorySaved": {
+    "description": "Confirmation"
+  },
+  "categoryDeleted": "Category deleted",
+  "@categoryDeleted": {
+    "description": "Confirmation"
+  },
+  "deleteCategory": "Delete this category?",
+  "@deleteCategory": {
+    "description": "Delete confirmation title"
+  },
+  "deleteCategoryBody": "{name} will be removed from your categories.",
+  "@deleteCategoryBody": {
+    "description": "Delete confirmation body",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{1 record still uses this category} other{{count} records still use this category}}",
+  "@categoryInUse": {
+    "description": "Explains why a category cannot be deleted",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noCategoriesYet": "Nothing here yet.",
+  "@noCategoriesYet": {
+    "description": "Empty group in the category list"
+  },
+  "builtIn": "Built-in",
+  "@builtIn": {
+    "description": "Marks a shared, read-only category"
+  },
+  "manageCategories": "Manage categories",
+  "@manageCategories": {
+    "description": "Settings row that opens the category screen"
+  },
+  "expense": "Expense",
+  "@expense": {
+    "description": "Singular label for an outgoing transaction"
+  },
+  "languageNote": "Arabic, Urdu, Persian and Hebrew switch the whole interface to right-to-left, including charts and PDF reports.",
+  "@languageNote": {
+    "description": "Note under the language picker explaining RTL support"
+  },
+  "next": "Next",
+  "back": "Back",
+  "skip": "Skip",
+  "continueLabel": "Continue",
+  "@continueLabel": {
+    "description": "Primary action that advances a multi-step flow. Named with a suffix because \"continue\" is a Dart keyword."
+  },
+  "selected": "Selected",
+  "passwordRequired": "Enter your password",
+  "newPasswordLabel": "New password",
+  "confirmPasswordLabel": "Confirm password",
+  "passwordsDoNotMatch": "Both passwords must match",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+  "savePassword": "Save password",
+  "backToSignIn": "Back to sign in",
+  "alreadyHaveAccount": "I already have an account",
+  "getStarted": "Get started",
+  "acceptTerms": "I agree to the Terms of Service and the Privacy Policy",
+  "acceptTermsRequired": "Please accept to continue",
+  "passwordStrengthTooShort": "Too short",
+  "passwordStrengthWeak": "Weak",
+  "passwordStrengthFair": "Fair",
+  "passwordStrengthGood": "Good",
+  "passwordStrengthStrong": "Strong",
+  "passwordAdvice": "A long phrase you will remember beats a short one full of symbols. Avoid anything you already use somewhere else.",
+  "authInvalidCredentials": "That email and password do not match an account",
+  "authEmailNotConfirmed": "Confirm your email address before signing in",
+  "authEmailAlreadyRegistered": "An account with this email already exists",
+  "authWeakPassword": "Choose a longer password",
+  "authRateLimited": "Too many attempts. Try again in a few minutes",
+  "authNetworkError": "No connection. Check your network and try again",
+  "authGenericError": "Something went wrong. Please try again",
+  "confirmEmailTitle": "Check your email",
+  "confirmEmailBody": "We sent a confirmation link to {email}. Open it to finish setting up your account.",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resendConfirmation": "Resend confirmation email",
+  "confirmationResent": "Confirmation email sent",
+  "forgotPasswordTitle": "Reset your password",
+  "forgotPasswordSubtitle": "Enter the email you signed up with and we will send you a link to choose a new password.",
+  "sendResetLink": "Send reset link",
+  "resetLinkSentTitle": "Reset link sent",
+  "resetLinkSentBody": "If {email} has an account, a reset link is on its way.",
+  "@resetLinkSentBody": {
+    "description": "Deliberately conditional: confirming whether an address is registered would let anyone enumerate the app users.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "The link expires in an hour. If it does not arrive, check your spam folder before asking for another.",
+  "tryAnotherEmail": "Use a different email",
+  "resetPasswordTitle": "Choose a new password",
+  "resetPasswordSubtitle": "Pick something you have not used on this account before.",
+  "passwordChangedTitle": "Password updated",
+  "passwordChangedBody": "Your new password is saved. You are signed in and ready to go.",
+  "demoModeHint": "Demo build — no account needed",
+  "demoModeFill": "Fill in",
+  "welcomeTrackTitle": "See where your money goes",
+  "welcomeTrackBody": "Record what comes in and what goes out. RainyPenny turns it into a picture you can actually read.",
+  "welcomeBudgetTitle": "Set limits that hold",
+  "welcomeBudgetBody": "Give each part of your spending a monthly ceiling, and get told before you go through it rather than after.",
+  "welcomeGoalsTitle": "Save for what matters",
+  "welcomeGoalsBody": "Name a goal, set a target, and watch it fill up. A rainy day fund is easier to build when you can see it.",
+  "welcomePrivacyTitle": "Your money stays yours",
+  "welcomePrivacyBody": "Your figures are yours alone. Nothing is sold, and nothing is shared with anyone.",
+  "stepOf": "Step {step} of {total}",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "What should we call you?",
+  "onboardingNameBody": "We will use it to greet you, and nowhere else.",
+  "onboardingNameHint": "A first name is plenty. You can change it later.",
+  "onboardingCurrencyTitle": "Which currency do you use?",
+  "onboardingCurrencyBody": "Every amount in the app is shown in this currency. Choosing it does not convert anything.",
+  "onboardingCurrencySearch": "Search all currencies",
+  "onboardingAppearanceTitle": "Make it yours",
+  "onboardingAppearanceBody": "Pick a look. Everything changes as you tap, and you can come back to it any time.",
+  "onboardingNotificationsTitle": "Stay on top of it",
+  "onboardingNotificationsBody": "A quiet nudge at the right moment is what turns this into a habit.",
+  "onboardingNotifyReminders": "A gentle reminder to record what you spent",
+  "onboardingNotifyBudget": "A heads-up before a budget runs out",
+  "onboardingNotifySummary": "A weekly summary of where your money went",
+  "onboardingNotifyEnable": "Turn on notifications",
+  "onboardingNotifyDone": "Notification settings saved",
+  "onboardingNotifyLater": "You can change all of this in Settings, whenever you like.",
+  "onboardingReadyTitle": "You are all set",
+  "onboardingReadyTitleNamed": "You are all set, {name}",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "That is setup done. Would you like a quick tour of how everything works?",
+  "onboardingTakeTour": "Show me around",
+  "onboardingGoToApp": "Take me to the app",
+  "onboardingTourLater": "Not now? The guide stays in Settings for whenever you want it.",
+  "beginnersGuide": "Beginner’s guide",
+  "guideFinish": "Finish",
+  "chapterOf": "Chapter {number} of {total}",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "guideOpenScreen": "Open {screen}",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "Your dashboard",
+  "guideDashboardBody": "Everything opens here. The card at the top is what you have left; under it sits what came in and what went out this period, then your spending, budgets and goals.",
+  "guideDashboardTip1": "Pull the screen down to refresh everything at once.",
+  "guideDashboardTip2": "Tap the income or expenses card to jump to that list.",
+  "guideDashboardTip3": "The rings and insights update the moment you record something.",
+  "guideAddTitle": "Recording money",
+  "guideAddBody": "The button in the middle of the bar is where everything starts. It opens a short menu: money out, money in, a debt, a budget or a savings goal.",
+  "guideAddTip1": "Tap the centre button to record money in or out.",
+  "guideAddTip2": "Hold it down to go straight to a new expense and skip the menu.",
+  "guideAddTip3": "Always pick a category — that is what makes the charts and budgets work.",
+  "guideCategoriesTitle": "Categories",
+  "guideCategoriesBody": "Categories are how spending gets grouped. The ones that ship with the app cover most people, and you can rename them or add your own.",
+  "guideCategoriesTip1": "Settings, then Manage categories, to change or add one.",
+  "guideCategoriesTip2": "Anything left uncategorised lands in Other, so the charts stay honest.",
+  "guideBudgetTitle": "Budgets",
+  "guideBudgetBody": "A budget is a monthly ceiling for one category. The bar fills as you spend and turns as it gets close, so you find out before you have gone through it.",
+  "guideBudgetTip1": "Start with two or three categories, not all of them at once.",
+  "guideBudgetTip2": "Set the limit slightly above what you usually spend, then tighten it.",
+  "guideBudgetTip3": "Leave budget alerts on and the app warns you as one runs low.",
+  "guideSavingsTitle": "Savings goals",
+  "guideSavingsBody": "Name what you are saving for, set a target and a date, and the app works out what you need to put aside each month to get there.",
+  "guideSavingsTip1": "A named goal is easier to keep than a vague intention to save.",
+  "guideSavingsTip2": "Several small goals get finished more often than one large one.",
+  "guideLoansTitle": "Debts and loans",
+  "guideLoansBody": "Record what you owe, what it costs and when the next payment falls due. Everything you are paying off sits in one list with the total left on it.",
+  "guideLoansTip1": "Add the due date and payment reminders will chase it for you.",
+  "guideLoansTip2": "A debt marked overdue shows in red on the dashboard until it is paid.",
+  "guideReportsTitle": "Reports",
+  "guideReportsBody": "The deeper view: income against expenses, spending by category, how your budgets held up, and what share of your income you kept.",
+  "guideReportsTip1": "Switch between week, month and quarter at the top of the screen.",
+  "guideReportsTip2": "Export or share a PDF — it comes out in your own language and direction.",
+  "guideSettingsTitle": "Settings",
+  "guideSettingsBody": "Language, currency, colours and alerts all live here, and none of them are locked in by setup — change any of them whenever you like.",
+  "guideSettingsTip1": "Forty languages, and the whole layout mirrors for right-to-left ones.",
+  "guideSettingsTip2": "Pick which alerts you want and the hours they may arrive.",
+  "guideSettingsTip3": "Quiet hours hold everything back until the morning.",
+  "guideHabitTitle": "Make it stick",
+  "guideHabitBody": "The app is only as good as what you put into it. A minute a day beats an hour once a month, and after a fortnight the numbers start telling you something.",
+  "guideHabitTip1": "Record what you spend as it happens, not at the end of the week.",
+  "guideHabitTip2": "Glance at the dashboard once a day. Ten seconds is enough.",
+  "guideHabitTip3": "This guide stays in Settings — come back to it whenever you like.",
+  "appearance": "Appearance",
+  "themeCaption": "Light, dark, or whatever your phone is doing.",
+  "accentColor": "Accent colour",
+  "accentColorCaption": "Colours the buttons, highlights and charts.",
+  "accentSemanticsNote": "Money in and money out keep their own colours in every theme, so a figure never changes meaning because you changed the accent.",
+  "accentTeal": "Teal",
+  "accentGreen": "Green",
+  "accentSky": "Sky",
+  "accentBlue": "Blue",
+  "accentIndigo": "Indigo",
+  "accentViolet": "Violet",
+  "accentPink": "Pink",
+  "accentCrimson": "Crimson",
+  "accentOrange": "Orange",
+  "accentSlate": "Slate",
+  "searchLanguages": "Search languages",
+  "suggestedLanguages": "Suggested",
+  "allLanguages": "All languages",
+  "noLanguagesFound": "No languages found",
+  "noLanguagesFoundMessage": "Try the name in English, or the two-letter code.",
+  "rightToLeft": "Right to left",
+  "replayGuide": "Replay the guide",
+  "replaySetup": "Run setup again",
+  "replaySetupBody": "Go through the first-run questions again. Nothing you have recorded is deleted.",
+  "rateTitle": "Enjoying RainyPenny?",
+  "rateBody": "You have been keeping at this for a while now. A rating takes a moment and helps other people find the app.",
+  "rateAction": "Rate the app",
+  "rateLater": "Maybe later",
+  "rateNever": "No thanks",
+  "rateThanks": "Thank you",
+
+  "monthlySalary": "Monthly salary",
+  "remainingAmount": "Remaining",
+  "carriedForward": "Carried forward",
+  "carriedForwardHint": "Left over from last cycle",
+  "totalSpending": "Total spending",
+  "salaryCycle": "Salary cycle",
+  "payday": "Salary day",
+  "paydayDescription": "The day your salary arrives. Your financial month runs from this day until the day before the next one.",
+  "paydayUpdated": "Salary day updated",
+  "paydayDayOfMonth": "Day {day}",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "In shorter months the cycle starts on the last day instead.",
+  "daysLeftInCycle": "{count, plural, =0{Last day of the cycle} =1{1 day to payday} other{{count} days to payday}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "Next payday",
+  "spentSoFar": "Spent so far",
+  "dailyAllowance": "Safe to spend daily",
+  "overspentNotice": "You have spent more than came in this cycle.",
+  "backToThisMonth": "Back to this month",
+  "cycleRangeLabel": "Cycle",
+  "noSalaryRecorded": "No salary recorded yet",
+  "addSalaryAction": "Add your salary",
+  "cycleOf": "{start} – {end}",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "healthExcellent": "Excellent",
+  "healthGood": "Good",
+  "healthFair": "Fair",
+  "healthNeedsWork": "Needs work",
+  "healthExcellentBody": "You are saving well and staying inside your budgets.",
+  "healthGoodBody": "You are on track with your spending this period.",
+  "healthFairBody": "A few budgets are running hot. Small changes will help.",
+  "healthNeedsWorkBody": "Spending is outpacing your plan. Start with your largest category.",
+  "factorSavingsRate": "Savings rate",
+  "factorBudgetControl": "Budget control",
+  "factorDebtLoad": "Debt load",
+  "factorSpendingTrend": "Spending trend",
+  "factorKept": "{percent}% kept",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "{percent}% used",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorOfIncome": "{percent}% of income",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendUp": "Up {percent}%",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendDown": "Down {percent}%",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "How this score works",
+  "healthScoreExplainer": "Your score blends four things: how much of your income you keep, how well you stay inside your budgets, how much of your income goes to debt, and whether your spending is rising or falling.",
+  "scoreWeightLabel": "{percent}% of the score",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "viewHealthDetails": "See the breakdown",
+
+  "saveChanges": "Save changes",
+  "profileUpdated": "Profile updated",
+  "changePhoto": "Change photo",
+  "removePhoto": "Remove photo",
+  "personalInformationIntro": "Your name and photo appear across the app. Your email is the address you sign in with.",
+  "nameRequired": "Enter your name",
+  "emailNotEditable": "Contact support to change the address you sign in with.",
+
+  "pressBackAgainToExit": "Press back again to exit",
+
+  "categoryHousing": "Housing",
+  "categoryFood": "Food & Dining",
+  "categoryTransport": "Transportation",
+  "categoryShopping": "Shopping",
+  "categoryBills": "Bills & Utilities",
+  "categoryEntertainment": "Entertainment",
+  "categoryHealth": "Health & Fitness",
+  "categoryEducation": "Education",
+  "categoryTravel": "Travel",
+  "categoryOther": "Other",
+  "categorySalary": "Salary",
+  "categoryFreelance": "Freelance",
+  "categoryInvestments": "Investments",
+  "categoryRefunds": "Refunds & Gifts",
+
+  "addCategory": "New category",
+  "filterByCategory": "Filter by category",
+  "allCategories": "All categories",
+  "clearFilters": "Clear filters",
+  "spentInCategory": "{category}  ·  {amount}",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "allTime": "All time",
+  "customRange": "Custom",
+  "selectDateRange": "Choose a period",
+  "rangeApplied": "Showing {start} – {end}",
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  }
 }

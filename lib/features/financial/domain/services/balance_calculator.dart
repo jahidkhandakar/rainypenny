@@ -16,14 +16,31 @@ abstract final class BalanceCalculator {
     );
   }
 
-  static double totalIncome(Iterable<Transaction> transactions) =>
-      transactions.where((t) => t.isIncome).fold(0.0, (sum, t) => sum + t.amount);
+  static double totalIncome(Iterable<Transaction> transactions) => transactions
+      .where((t) => t.isIncome)
+      .fold(0.0, (sum, t) => sum + t.amount);
 
   static double totalExpenses(Iterable<Transaction> transactions) =>
-      transactions.where((t) => !t.isIncome).fold(0.0, (sum, t) => sum + t.amount);
+      transactions
+          .where((t) => !t.isIncome)
+          .fold(0.0, (sum, t) => sum + t.amount);
 
   static double net(Iterable<Transaction> transactions) =>
       transactions.fold(0.0, (sum, t) => sum + t.signedAmount);
+
+  /// The balance as at [moment]: the whole ledger replayed up to that point.
+  ///
+  /// Deriving it rather than storing it is what guarantees the headline figure
+  /// agrees with the transaction list underneath it — and that logging an
+  /// expense moves it the instant the row lands.
+  static double balanceAt(
+    Iterable<Transaction> transactions,
+    DateTime moment,
+  ) {
+    return transactions
+        .where((t) => !t.date.isAfter(moment))
+        .fold(0.0, (sum, t) => sum + t.signedAmount);
+  }
 
   /// Expense totals per category, sorted from biggest spend down.
   static Map<Category, double> spendingByCategory(

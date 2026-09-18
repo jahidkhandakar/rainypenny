@@ -12,22 +12,24 @@ import '../../../../core/widgets/section_header.dart';
 import '../../../../core/widgets/states.dart';
 import '../../../budget/presentation/widgets/budget_row.dart';
 import '../../../financial/domain/entities/budget.dart';
+import '../../../financial/domain/entities/cycle_summary.dart';
 import '../../../financial/domain/entities/insight.dart';
-import '../../../financial/domain/entities/period_summary.dart';
 import '../../../financial/domain/entities/savings_goal.dart';
 import '../../../financial/domain/entities/transaction.dart';
 import '../../../financial/domain/services/budget_calculator.dart';
 import '../../../financial/domain/services/savings_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 import '../../../financial/presentation/widgets/insight_card.dart';
+import '../../../review/presentation/widgets/review_prompt.dart';
 import '../../../savings/presentation/widgets/savings_goal_card.dart';
 import '../../../transactions/presentation/widgets/transaction_detail_sheet.dart';
 import '../../../transactions/presentation/widgets/transaction_tile.dart';
-import '../widgets/balance_card.dart';
+import '../widgets/cycle_navigator.dart';
 import '../widgets/dashboard_header.dart';
 import '../widgets/health_card.dart';
 import '../widgets/income_expense_cards.dart';
 import '../widgets/quick_actions.dart';
+import '../widgets/salary_card.dart';
 import '../widgets/spending_donut.dart';
 
 /// The home screen: the whole financial picture, ordered by what matters most.
@@ -37,36 +39,45 @@ class DashboardScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
-    final summary = ref.watch(dashboardSummaryProvider);
+    final summary = ref.watch(cycleSummaryProvider);
 
-    return Scaffold(
-      body: SafeArea(
-        bottom: false,
-        child: RefreshIndicator(
-          onRefresh: () async {
-            ref.invalidate(transactionsProvider);
-            await ref.read(dashboardSummaryProvider.future);
-          },
-          child: ListView(
-            padding: const EdgeInsets.fromLTRB(
-              AppSpacing.page,
-              AppSpacing.lg,
-              AppSpacing.page,
-              AppSpacing.section,
-            ),
-            children: [
-              const DashboardHeader(),
-              const SizedBox(height: AppSpacing.xl),
-              summary.when(
-                data: (data) => _DashboardBody(summary: data),
-                loading: () => const _DashboardSkeleton(),
-                error: (_, _) => ErrorState(
-                  message: l10n.somethingWentWrong,
-                  retryLabel: l10n.retry,
-                  onRetry: () => ref.invalidate(transactionsProvider),
-                ),
+    // Wraps the screen rather than sitting inside it: the prompt counts one
+    // use per session and asks on the fifth, and none of that is the
+    // dashboard's business.
+    return ReviewPromptScope(
+      child: Scaffold(
+        body: SafeArea(
+          bottom: false,
+          child: RefreshIndicator(
+            onRefresh: () async {
+              ref.invalidate(transactionsProvider);
+              await ref.read(cycleSummaryProvider.future);
+            },
+            child: ListView(
+              padding: const EdgeInsets.fromLTRB(
+                AppSpacing.page,
+                AppSpacing.lg,
+                AppSpacing.page,
+                AppSpacing.section,
               ),
-            ],
+              children: [
+                const DashboardHeader(),
+                const SizedBox(height: AppSpacing.lg),
+                // Above the figures, because it decides which figures these
+                // are: every number below belongs to the cycle named here.
+                const CycleNavigator(),
+                const SizedBox(height: AppSpacing.lg),
+                summary.when(
+                  data: (data) => _DashboardBody(summary: data),
+                  loading: () => const _DashboardSkeleton(),
+                  error: (_, _) => ErrorState(
+                    message: l10n.somethingWentWrong,
+                    retryLabel: l10n.retry,
+                    onRetry: () => ref.invalidate(transactionsProvider),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -77,21 +88,34 @@ class DashboardScreen extends ConsumerWidget {
 class _DashboardBody extends ConsumerWidget {
   const _DashboardBody({required this.summary});
 
-  final PeriodSummary summary;
+  final CycleSummary summary;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
+    final salary = ref
+        .watch(cycleSalaryProvider)
+        .maybeWhen(data: (value) => value, orElse: () => 0.0);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        FadeSlideIn(index: 0, child: BalanceCard(summary: summary)),
+        FadeSlideIn(
+          index: 0,
+          child: SalaryCard(
+            summary: summary,
+            salary: salary,
+            onTap: () => context.go(AppRoutes.transactions),
+          ),
+        ),
         const SizedBox(height: AppSpacing.lg),
         FadeSlideIn(
           index: 1,
           child: IncomeExpenseCards(
-            summary: summary,
+            income: summary.income,
+            expenses: summary.expenses,
+            incomeChange: summary.incomeChange,
+            expenseChange: summary.expenseChange,
             onIncomeTap: () => context.go(AppRoutes.transactions),
             onExpenseTap: () => context.go(AppRoutes.transactions),
           ),
@@ -133,7 +157,7 @@ class _DashboardBody extends ConsumerWidget {
 class _SpendingSection extends ConsumerWidget {
   const _SpendingSection({required this.summary});
 
-  final PeriodSummary summary;
+  final CycleSummary summary;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -146,7 +170,7 @@ class _SpendingSection extends ConsumerWidget {
       children: [
         SectionHeader(
           title: l10n.spendingOverview,
-          subtitle: dates.range(summary.start, summary.end),
+          subtitle: dates.range(summary.cycle.start, summary.cycle.end),
           actionLabel: l10n.seeAll,
           onAction: () => context.go(AppRoutes.reports),
         ),
@@ -157,12 +181,14 @@ class _SpendingSection extends ConsumerWidget {
                   icon: Icons.donut_large_rounded,
                   title: l10n.spendingOverview,
                   message: l10n.noTransactionsBody,
+                  // An empty donut is the clearest possible moment to offer the
+                  // one action that fills it.
+                  actionLabel: l10n.addExpense,
+                  onAction: () =>
+                      context.push('${AppRoutes.addTransaction}?type=expense'),
                   compact: true,
                 )
-              : SpendingDonut(
-                  slices: slices,
-                  centerLabel: l10n.expenses,
-                ),
+              : SpendingDonut(slices: slices, centerLabel: l10n.expenses),
         ),
       ],
     );
@@ -363,9 +389,16 @@ class _HealthSection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SectionHeader(title: l10n.financialHealth),
+        SectionHeader(
+          title: l10n.financialHealth,
+          actionLabel: l10n.viewHealthDetails,
+          onAction: () => context.push(AppRoutes.financialHealth),
+        ),
         health.when(
-          data: (value) => HealthCard(health: value),
+          data: (value) => HealthCard(
+            health: value,
+            onTap: () => context.push(AppRoutes.financialHealth),
+          ),
           loading: () => const SkeletonCard(height: 150, lines: 4),
           error: (_, _) => const SizedBox.shrink(),
         ),

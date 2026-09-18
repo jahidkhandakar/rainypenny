@@ -32,7 +32,9 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
     final rows = await _client.from('categories').select();
     return {
       for (final row in rows as List)
-        row['id'] as String: CategoryMapper.fromRow(row as Map<String, dynamic>),
+        row['id'] as String: CategoryMapper.fromRow(
+          row as Map<String, dynamic>,
+        ),
     };
   }
 
@@ -94,7 +96,8 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
       final categoryId = map['category_id'] as String;
       return Budget(
         id: map['id'] as String,
-        category: categories[categoryId] ??
+        category:
+            categories[categoryId] ??
             Category(
               id: categoryId,
               name: categoryId,
@@ -103,8 +106,7 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
         limit: (map['monthly_limit'] as num).toDouble(),
         spent: spendByCategoryId[categoryId] ?? 0,
       );
-    }).toList()
-      ..sort((a, b) => b.ratio.compareTo(a.ratio));
+    }).toList()..sort((a, b) => b.ratio.compareTo(a.ratio));
 
     return budgets;
   }
@@ -129,8 +131,10 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
 
   @override
   Future<List<SavingsGoal>> fetchSavingsGoals() async {
-    final rows =
-        await _client.from('savings_goals').select().order('created_at');
+    final rows = await _client
+        .from('savings_goals')
+        .select()
+        .order('created_at');
     return (rows as List)
         .map((row) => SavingsGoalMapper.fromRow(row as Map<String, dynamic>))
         .toList();
@@ -179,8 +183,10 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
 
   @override
   Future<List<Loan>> fetchLoans() async {
-    final rows =
-        await _client.from('loans').select().order('next_payment_date');
+    final rows = await _client
+        .from('loans')
+        .select()
+        .order('next_payment_date');
     return (rows as List)
         .map((row) => LoanMapper.fromRow(row as Map<String, dynamic>))
         .toList();
@@ -222,6 +228,8 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
 
   @override
   Future<List<Category>> fetchCategories() async {
+    // RLS returns the shared seeded rows plus this user's own; no filter is
+    // needed here, and adding one would be a second, weaker gate.
     final rows = await _client.from('categories').select().order('name');
     return (rows as List)
         .map((row) => CategoryMapper.fromRow(row as Map<String, dynamic>))
@@ -229,10 +237,70 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
   }
 
   @override
+  Future<void> insertCategory(Category category) async {
+    await _client
+        .from('categories')
+        .insert(CategoryMapper.toRow(category, _userId));
+  }
+
+  @override
+  Future<void> updateCategory(Category category) async {
+    await _client
+        .from('categories')
+        .update({
+          'name': category.name,
+          'icon': category.icon.name,
+          'is_income': category.isIncome,
+        })
+        // The user_id match is belt-and-braces alongside RLS: a seeded row has
+        // a null user_id and can never be edited by anyone.
+        .eq('id', category.id)
+        .eq('user_id', _userId);
+  }
+
+  @override
+  Future<void> deleteCategory(String categoryId) async {
+    if (await countCategoryUsage(categoryId) > 0) {
+      throw StateError('Category $categoryId is still in use');
+    }
+    await _client
+        .from('categories')
+        .delete()
+        .eq('id', categoryId)
+        .eq('user_id', _userId);
+  }
+
+  @override
+  Future<int> countCategoryUsage(String categoryId) async {
+    final transactions = await _client
+        .from('transactions')
+        .count()
+        .eq('user_id', _userId)
+        .eq('category_id', categoryId);
+    final budgets = await _client
+        .from('budgets')
+        .count()
+        .eq('user_id', _userId)
+        .eq('category_id', categoryId);
+    return transactions + budgets;
+  }
+
+  @override
   Future<UserProfile> fetchProfile() async {
-    final row =
-        await _client.from('profiles').select().eq('id', _userId).single();
+    final row = await _client
+        .from('profiles')
+        .select()
+        .eq('id', _userId)
+        .single();
     return ProfileMapper.fromRow(row);
+  }
+
+  @override
+  Future<void> updateProfileName(String name) async {
+    await _client
+        .from('profiles')
+        .update({'full_name': name})
+        .eq('id', _userId);
   }
 
   @override
