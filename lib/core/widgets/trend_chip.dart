@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_colors.dart';
@@ -39,10 +40,7 @@ class TrendChip extends StatelessWidget {
         : color.withValues(alpha: 0.10);
 
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.sm,
-        vertical: 5,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: 5),
       decoration: BoxDecoration(
         color: background,
         borderRadius: BorderRadius.circular(AppRadius.pill),
@@ -51,25 +49,20 @@ class TrendChip extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
-            rising ? Icons.arrow_upward_rounded : Icons.arrow_downward_rounded,
+            rising ? CupertinoIcons.arrow_up : CupertinoIcons.arrow_down,
             size: 12,
             color: color,
           ),
           const SizedBox(width: 3),
           Text(
             '${(change.abs() * 100).toStringAsFixed(1)}%',
-            style: AppTypography.caption.copyWith(
-              color: color,
-              fontWeight: FontWeight.w700,
-            ),
+            style: AppTypography.caption.copyWith(color: color, fontWeight: FontWeight.w700),
           ),
           if (label != null) ...[
             const SizedBox(width: 4),
             Text(
               label!,
-              style: AppTypography.caption.copyWith(
-                color: onDark ? Colors.white70 : color,
-              ),
+              style: AppTypography.caption.copyWith(color: onDark ? Colors.white70 : color),
             ),
           ],
         ],
@@ -80,12 +73,7 @@ class TrendChip extends StatelessWidget {
 
 /// Status pill with an explicit colour, used for budget and payment states.
 class StatusChip extends StatelessWidget {
-  const StatusChip({
-    super.key,
-    required this.label,
-    required this.color,
-    this.icon,
-  });
+  const StatusChip({super.key, required this.label, required this.color, this.icon});
 
   final String label;
   final Color color;
@@ -94,10 +82,7 @@ class StatusChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.sm,
-        vertical: 5,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: 5),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.10),
         borderRadius: BorderRadius.circular(AppRadius.pill),
@@ -105,16 +90,10 @@ class StatusChip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (icon != null) ...[
-            Icon(icon, size: 12, color: color),
-            const SizedBox(width: 4),
-          ],
+          if (icon != null) ...[Icon(icon, size: 12, color: color), const SizedBox(width: 4)],
           Text(
             label,
-            style: AppTypography.caption.copyWith(
-              color: color,
-              fontWeight: FontWeight.w700,
-            ),
+            style: AppTypography.caption.copyWith(color: color, fontWeight: FontWeight.w700),
           ),
         ],
       ),

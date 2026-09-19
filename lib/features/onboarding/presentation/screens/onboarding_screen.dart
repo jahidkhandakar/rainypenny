@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -42,10 +43,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   void initState() {
     super.initState();
     // Prefer whatever the account already knows over an empty field.
-    final existing =
-        ref.read(displayNameProvider) ??
-        ref.read(currentUserProvider)?.name ??
-        '';
+    final existing = ref.read(displayNameProvider) ?? ref.read(currentUserProvider)?.name ?? '';
     _nameController = TextEditingController(text: existing);
   }
 
@@ -58,11 +56,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 
   void _goTo(int index) {
     if (index < 0 || index >= _stepCount) return;
-    _pageController.animateToPage(
-      index,
-      duration: AppDuration.normal,
-      curve: Curves.easeOutCubic,
-    );
+    _pageController.animateToPage(index, duration: AppDuration.normal, curve: Curves.easeOutCubic);
   }
 
   void _saveName() {
@@ -157,11 +151,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
 }
 
 class _OnboardingHeader extends StatelessWidget {
-  const _OnboardingHeader({
-    required this.index,
-    required this.stepCount,
-    required this.onSkip,
-  });
+  const _OnboardingHeader({required this.index, required this.stepCount, required this.onSkip});
 
   final int index;
   final int stepCount;
@@ -254,7 +244,7 @@ class _CurrencyStep extends ConsumerWidget {
     final selected = ref.watch(currencyProvider);
 
     return OnboardingStep(
-      art: const OnboardingArt(icon: Icons.payments_rounded, size: 140),
+      art: const OnboardingArt(icon: CupertinoIcons.money_dollar_circle, size: 140),
       title: l10n.onboardingCurrencyTitle,
       body: l10n.onboardingCurrencyBody,
       children: [
@@ -292,11 +282,7 @@ class _CurrencyStep extends ConsumerWidget {
 }
 
 class _CurrencyChip extends StatelessWidget {
-  const _CurrencyChip({
-    required this.option,
-    required this.selected,
-    required this.onTap,
-  });
+  const _CurrencyChip({required this.option, required this.selected, required this.onTap});
 
   final CurrencyOption option;
   final bool selected;
@@ -309,10 +295,7 @@ class _CurrencyChip extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppRadius.pill),
       child: AnimatedContainer(
         duration: AppDuration.fast,
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.md,
-          vertical: AppSpacing.sm,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: AppSpacing.sm),
         decoration: BoxDecoration(
           color: selected ? context.accent : context.subtleFill,
           borderRadius: BorderRadius.circular(AppRadius.pill),
@@ -338,7 +321,7 @@ class _AppearanceStep extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppL10n.of(context);
     return OnboardingStep(
-      art: const OnboardingArt(icon: Icons.palette_rounded, size: 130),
+      art: const OnboardingArt(icon: CupertinoIcons.paintbrush, size: 130),
       title: l10n.onboardingAppearanceTitle,
       body: l10n.onboardingAppearanceBody,
       children: [
@@ -371,9 +354,7 @@ class _NotificationsStepState extends ConsumerState<_NotificationsStep> {
   bool _asked = false;
 
   Future<void> _enable() async {
-    final granted = await ref
-        .read(notificationServiceProvider)
-        .requestPermission();
+    final granted = await ref.read(notificationServiceProvider).requestPermission();
     if (!mounted) return;
     setState(() => _asked = true);
     if (!granted) return;
@@ -389,42 +370,24 @@ class _NotificationsStepState extends ConsumerState<_NotificationsStep> {
     final l10n = AppL10n.of(context);
 
     return OnboardingStep(
-      art: const OnboardingArt(
-        icon: Icons.notifications_active_rounded,
-        size: 130,
-      ),
+      art: const OnboardingArt(icon: CupertinoIcons.bell_fill, size: 130),
       title: l10n.onboardingNotificationsTitle,
       body: l10n.onboardingNotificationsBody,
       children: [
-        _Bullet(
-          icon: Icons.alarm_rounded,
-          text: l10n.onboardingNotifyReminders,
-        ),
-        _Bullet(
-          icon: Icons.pie_chart_outline_rounded,
-          text: l10n.onboardingNotifyBudget,
-        ),
-        _Bullet(
-          icon: Icons.event_available_rounded,
-          text: l10n.onboardingNotifySummary,
-        ),
+        _Bullet(icon: CupertinoIcons.alarm, text: l10n.onboardingNotifyReminders),
+        _Bullet(icon: CupertinoIcons.chart_pie, text: l10n.onboardingNotifyBudget),
+        _Bullet(icon: CupertinoIcons.calendar_badge_plus, text: l10n.onboardingNotifySummary),
         const SizedBox(height: AppSpacing.xl),
         if (_asked)
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.check_circle_rounded,
-                size: 18,
-                color: context.accentOnSurface,
-              ),
+              Icon(Icons.check_circle_rounded, size: 18, color: context.accentOnSurface),
               const SizedBox(width: AppSpacing.sm),
               Flexible(
                 child: Text(
                   l10n.onboardingNotifyDone,
-                  style: AppTypography.caption.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textSecondary),
                 ),
               ),
             ],
@@ -474,10 +437,7 @@ class _Bullet extends StatelessWidget {
               padding: const EdgeInsets.only(top: 5),
               child: Text(
                 text,
-                style: AppTypography.body.copyWith(
-                  fontSize: 14,
-                  color: context.textSecondary,
-                ),
+                style: AppTypography.body.copyWith(fontSize: 14, color: context.textSecondary),
               ),
             ),
           ),
@@ -499,10 +459,8 @@ class _ReadyStep extends ConsumerWidget {
     final name = ref.watch(displayNameProvider);
 
     return OnboardingStep(
-      art: const OnboardingArt(icon: Icons.celebration_rounded, size: 140),
-      title: name == null
-          ? l10n.onboardingReadyTitle
-          : l10n.onboardingReadyTitleNamed(name),
+      art: const OnboardingArt(icon: CupertinoIcons.sparkles, size: 140),
+      title: name == null ? l10n.onboardingReadyTitle : l10n.onboardingReadyTitleNamed(name),
       body: l10n.onboardingReadyBody,
       children: [
         ElevatedButton.icon(
@@ -511,10 +469,7 @@ class _ReadyStep extends ConsumerWidget {
           label: Text(l10n.onboardingTakeTour),
         ),
         const SizedBox(height: AppSpacing.md),
-        OutlinedButton(
-          onPressed: onSkipTour,
-          child: Text(l10n.onboardingGoToApp),
-        ),
+        OutlinedButton(onPressed: onSkipTour, child: Text(l10n.onboardingGoToApp)),
         const SizedBox(height: AppSpacing.lg),
         Text(
           l10n.onboardingTourLater,

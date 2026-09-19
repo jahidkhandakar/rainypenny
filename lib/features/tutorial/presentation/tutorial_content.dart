@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/localization/generated/app_localizations.dart';
@@ -40,11 +41,7 @@ List<TutorialChapter> tutorialChapters(AppL10n l10n) => [
     icon: Icons.dashboard_rounded,
     title: l10n.guideDashboardTitle,
     body: l10n.guideDashboardBody,
-    tips: [
-      l10n.guideDashboardTip1,
-      l10n.guideDashboardTip2,
-      l10n.guideDashboardTip3,
-    ],
+    tips: [l10n.guideDashboardTip1, l10n.guideDashboardTip2, l10n.guideDashboardTip3],
     destination: AppRoutes.home,
     destinationLabel: l10n.navHome,
   ),
@@ -65,7 +62,7 @@ List<TutorialChapter> tutorialChapters(AppL10n l10n) => [
     destinationLabel: l10n.manageCategories,
   ),
   TutorialChapter(
-    icon: Icons.pie_chart_rounded,
+    icon: CupertinoIcons.chart_pie_fill,
     title: l10n.guideBudgetTitle,
     body: l10n.guideBudgetBody,
     tips: [l10n.guideBudgetTip1, l10n.guideBudgetTip2, l10n.guideBudgetTip3],
@@ -89,7 +86,7 @@ List<TutorialChapter> tutorialChapters(AppL10n l10n) => [
     destinationLabel: l10n.loansAndDebts,
   ),
   TutorialChapter(
-    icon: Icons.bar_chart_rounded,
+    icon: CupertinoIcons.chart_bar_fill,
     title: l10n.guideReportsTitle,
     body: l10n.guideReportsBody,
     tips: [l10n.guideReportsTip1, l10n.guideReportsTip2],
@@ -97,14 +94,10 @@ List<TutorialChapter> tutorialChapters(AppL10n l10n) => [
     destinationLabel: l10n.navReports,
   ),
   TutorialChapter(
-    icon: Icons.tune_rounded,
+    icon: CupertinoIcons.slider_horizontal_3,
     title: l10n.guideSettingsTitle,
     body: l10n.guideSettingsBody,
-    tips: [
-      l10n.guideSettingsTip1,
-      l10n.guideSettingsTip2,
-      l10n.guideSettingsTip3,
-    ],
+    tips: [l10n.guideSettingsTip1, l10n.guideSettingsTip2, l10n.guideSettingsTip3],
     destination: AppRoutes.settings,
     destinationLabel: l10n.settings,
   ),

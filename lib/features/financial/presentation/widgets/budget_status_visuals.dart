@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -24,8 +24,8 @@ String labelForBudgetStatus(BudgetStatus status, AppL10n l10n) {
 
 IconData iconForBudgetStatus(BudgetStatus status) {
   return switch (status) {
-    BudgetStatus.onTrack => Icons.check_circle_rounded,
-    BudgetStatus.approaching => Icons.warning_amber_rounded,
-    BudgetStatus.exceeded => Icons.error_rounded,
+    BudgetStatus.onTrack => CupertinoIcons.checkmark_circle_fill,
+    BudgetStatus.approaching => CupertinoIcons.exclamationmark_triangle_fill,
+    BudgetStatus.exceeded => CupertinoIcons.exclamationmark_circle_fill,
   };
 }

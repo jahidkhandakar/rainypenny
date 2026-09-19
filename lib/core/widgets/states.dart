@@ -52,10 +52,7 @@ class EmptyState extends StatelessWidget {
             const SizedBox(height: AppSpacing.xl),
             SizedBox(
               width: 200,
-              child: ElevatedButton(
-                onPressed: onAction,
-                child: Text(actionLabel!),
-              ),
+              child: ElevatedButton(onPressed: onAction, child: Text(actionLabel!)),
             ),
           ],
         ],
@@ -66,12 +63,7 @@ class EmptyState extends StatelessWidget {
 
 /// Error state that mirrors [EmptyState] so failures never look unfinished.
 class ErrorState extends StatelessWidget {
-  const ErrorState({
-    super.key,
-    required this.message,
-    required this.retryLabel,
-    this.onRetry,
-  });
+  const ErrorState({super.key, required this.message, required this.retryLabel, this.onRetry});
 
   final String message;
   final String retryLabel;
@@ -109,12 +101,7 @@ class ErrorState extends StatelessWidget {
 
 /// A single shimmering placeholder block.
 class Skeleton extends StatefulWidget {
-  const Skeleton({
-    super.key,
-    this.width,
-    this.height = 16,
-    this.radius = AppRadius.sm,
-  });
+  const Skeleton({super.key, this.width, this.height = 16, this.radius = AppRadius.sm});
 
   final double? width;
   final double height;
@@ -124,8 +111,7 @@ class Skeleton extends StatefulWidget {
   State<Skeleton> createState() => _SkeletonState();
 }
 
-class _SkeletonState extends State<Skeleton>
-    with SingleTickerProviderStateMixin {
+class _SkeletonState extends State<Skeleton> with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     vsync: this,
     duration: const Duration(milliseconds: 1250),
@@ -146,11 +132,7 @@ class _SkeletonState extends State<Skeleton>
           width: widget.width,
           height: widget.height,
           decoration: BoxDecoration(
-            color: Color.lerp(
-              context.subtleFill,
-              context.borderColor,
-              _controller.value,
-            ),
+            color: Color.lerp(context.subtleFill, context.borderColor, _controller.value),
             borderRadius: BorderRadius.circular(widget.radius),
           ),
         );

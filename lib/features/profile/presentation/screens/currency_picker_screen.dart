@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -18,8 +19,7 @@ class CurrencyPickerScreen extends ConsumerStatefulWidget {
   const CurrencyPickerScreen({super.key});
 
   @override
-  ConsumerState<CurrencyPickerScreen> createState() =>
-      _CurrencyPickerScreenState();
+  ConsumerState<CurrencyPickerScreen> createState() => _CurrencyPickerScreenState();
 }
 
 class _CurrencyPickerScreenState extends ConsumerState<CurrencyPickerScreen> {
@@ -73,9 +73,7 @@ class _CurrencyPickerScreenState extends ConsumerState<CurrencyPickerScreen> {
                   borderRadius: BorderRadius.circular(AppRadius.md),
                   borderSide: BorderSide.none,
                 ),
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.md,
-                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
               ),
             ),
           ),
@@ -145,11 +143,7 @@ class _Heading extends StatelessWidget {
 }
 
 class _CurrencyRow extends StatelessWidget {
-  const _CurrencyRow({
-    required this.option,
-    required this.selected,
-    required this.onTap,
-  });
+  const _CurrencyRow({required this.option, required this.selected, required this.onTap});
 
   final CurrencyOption option;
   final bool selected;
@@ -195,16 +189,12 @@ class _CurrencyRow extends StatelessWidget {
                 children: [
                   Text(
                     option.name,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                   const SizedBox(height: 1),
                   Text(
                     option.code,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -213,7 +203,7 @@ class _CurrencyRow extends StatelessWidget {
               duration: AppDuration.fast,
               opacity: selected ? 1 : 0,
               child: Icon(
-                Icons.check_circle_rounded,
+                CupertinoIcons.checkmark_circle_fill,
                 size: 21,
                 color: context.accentOnSurface,
               ),

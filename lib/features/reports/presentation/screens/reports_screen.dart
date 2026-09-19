@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -52,8 +53,7 @@ class ReportsScreen extends ConsumerWidget {
         children: [
           _RangeSelector(
             selected: selectedRange,
-            onSelect: (range) =>
-                ref.read(reportRangeProvider.notifier).select(range),
+            onSelect: (range) => ref.read(reportRangeProvider.notifier).select(range),
           ),
           const SizedBox(height: AppSpacing.xl),
           report.when(
@@ -90,10 +90,7 @@ class _ReportBody extends ConsumerWidget {
     final dates = ref.watch(dateFormatterProvider);
     final budgets = ref.watch(budgetsProvider);
     final insights = ref.watch(insightsProvider);
-    final slices = buildSpendingSlices(
-      context,
-      data.summary.spendingByCategory,
-    );
+    final slices = buildSpendingSlices(context, data.summary.spendingByCategory);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -124,10 +121,7 @@ class _ReportBody extends ConsumerWidget {
               children: [
                 SectionHeader(title: l10n.spendingByCategory),
                 AppCard(
-                  child: SpendingDonut(
-                    slices: slices,
-                    centerLabel: l10n.expenses,
-                  ),
+                  child: SpendingDonut(slices: slices, centerLabel: l10n.expenses),
                 ),
               ],
             ),
@@ -216,9 +210,7 @@ class _TotalsCard extends ConsumerWidget {
               Container(width: 1, height: 52, color: context.borderColor),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    start: AppSpacing.lg,
-                  ),
+                  padding: const EdgeInsetsDirectional.only(start: AppSpacing.lg),
                   child: _Total(
                     label: l10n.expenses,
                     value: money.format(summary.expenses, decimals: false),
@@ -241,17 +233,13 @@ class _TotalsCard extends ConsumerWidget {
                   children: [
                     Text(
                       l10n.netBalance,
-                      style: AppTypography.caption.copyWith(
-                        color: context.textSecondary,
-                      ),
+                      style: AppTypography.caption.copyWith(color: context.textSecondary),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       money.formatSigned(summary.net, decimals: false),
                       style: AppTypography.amountLarge.copyWith(
-                        color: summary.net >= 0
-                            ? context.accentLight
-                            : AppColors.error,
+                        color: summary.net >= 0 ? context.accentLight : AppColors.error,
                       ),
                     ),
                   ],
@@ -262,9 +250,7 @@ class _TotalsCard extends ConsumerWidget {
                 children: [
                   Text(
                     l10n.savingsRate,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                   const SizedBox(height: 4),
                   Text(
@@ -304,18 +290,12 @@ class _Total extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          label,
-          style: AppTypography.caption.copyWith(color: context.textSecondary),
-        ),
+        Text(label, style: AppTypography.caption.copyWith(color: context.textSecondary)),
         const SizedBox(height: 4),
         FittedBox(
           fit: BoxFit.scaleDown,
           alignment: AlignmentDirectional.centerStart,
-          child: Text(
-            value,
-            style: AppTypography.amountLarge.copyWith(color: color),
-          ),
+          child: Text(value, style: AppTypography.amountLarge.copyWith(color: color)),
         ),
         const SizedBox(height: AppSpacing.sm),
         TrendChip(change: change, goodWhenRising: goodWhenRising),
@@ -353,9 +333,7 @@ class _RangeSelector extends ConsumerWidget {
     );
 
     if (picked == null) return;
-    ref
-        .read(customReportRangeProvider.notifier)
-        .select(picked.start, picked.end);
+    ref.read(customReportRangeProvider.notifier).select(picked.start, picked.end);
   }
 
   @override
@@ -414,37 +392,24 @@ class _RangeSelector extends ConsumerWidget {
             onTap: () => _pickRange(context, ref),
             color: context.tintFill,
             borderColor: context.accent.withValues(alpha: 0.28),
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.lg,
-              vertical: AppSpacing.md,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.md),
             child: Row(
               children: [
-                Icon(
-                  Icons.date_range_rounded,
-                  size: 18,
-                  color: context.accentOnSurface,
-                ),
+                Icon(CupertinoIcons.calendar, size: 18, color: context.accentOnSurface),
                 const SizedBox(width: AppSpacing.md),
                 Expanded(
                   child: Text(
-                    l10n.rangeApplied(
-                      dates.short(custom.start),
-                      dates.short(custom.end),
-                    ),
+                    l10n.rangeApplied(dates.short(custom.start), dates.short(custom.end)),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: AppTypography.label.copyWith(
-                      color: context.accentOnSurface,
-                    ),
+                    style: AppTypography.label.copyWith(color: context.accentOnSurface),
                   ),
                 ),
                 IconButton(
                   tooltip: l10n.clearFilters,
                   visualDensity: VisualDensity.compact,
                   icon: const Icon(Icons.close_rounded, size: 18),
-                  onPressed: () =>
-                      ref.read(customReportRangeProvider.notifier).clear(),
+                  onPressed: () => ref.read(customReportRangeProvider.notifier).clear(),
                 ),
               ],
             ),
@@ -516,10 +481,7 @@ class _ExportButtonState extends ConsumerState<_ExportButton> {
 
     setState(() => _busy = true);
     messenger.showSnackBar(
-      SnackBar(
-        content: Text(l10n.preparingReport),
-        duration: const Duration(seconds: 1),
-      ),
+      SnackBar(content: Text(l10n.preparingReport), duration: const Duration(seconds: 1)),
     );
 
     try {
@@ -540,11 +502,7 @@ class _ExportButtonState extends ConsumerState<_ExportButton> {
       return const Padding(
         padding: EdgeInsets.symmetric(horizontal: AppSpacing.md),
         child: Center(
-          child: SizedBox(
-            width: 18,
-            height: 18,
-            child: CircularProgressIndicator(strokeWidth: 2),
-          ),
+          child: SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2)),
         ),
       );
     }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -34,9 +35,7 @@ void main() {
     return ProviderScope(
       overrides: [
         settingsStoreProvider.overrideWithValue(store),
-        financeDataSourceProvider.overrideWithValue(
-          MockFinanceDataSource(latency: Duration.zero),
-        ),
+        financeDataSourceProvider.overrideWithValue(MockFinanceDataSource(latency: Duration.zero)),
         // Signed in, so the walk measures the app rather than the sign-in form.
         authRepositoryProvider.overrideWithValue(
           MockAuthRepository(latency: Duration.zero, startSignedIn: true),
@@ -71,10 +70,10 @@ void main() {
     // for every language — so the loop asserts it found each one rather than
     // quietly moving on.
     for (final icon in [
-      Icons.receipt_long_outlined,
-      Icons.insert_chart_outlined_rounded,
-      Icons.person_outline,
-      Icons.home_outlined,
+      CupertinoIcons.doc_plaintext,
+      CupertinoIcons.chart_bar,
+      CupertinoIcons.person,
+      CupertinoIcons.house,
     ]) {
       final target = find.byIcon(icon);
       if (target.evaluate().isEmpty) {
@@ -118,10 +117,7 @@ void main() {
       testWidgets('${locale.englishName} is ${expected.name}', (tester) async {
         await walkApp(tester, code);
 
-        expect(
-          Directionality.of(tester.element(find.byType(Scaffold).first)),
-          expected,
-        );
+        expect(Directionality.of(tester.element(find.byType(Scaffold).first)), expected);
       });
     }
   });

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -56,9 +57,7 @@ class _TutorialScreenState extends ConsumerState<TutorialScreen> {
   /// thought they had finished.
   void _visit(String destination) {
     ref.read(tutorialCompleteProvider.notifier).complete();
-    context.go(
-      AppRoutes.branches.contains(destination) ? destination : AppRoutes.home,
-    );
+    context.go(AppRoutes.branches.contains(destination) ? destination : AppRoutes.home);
     if (!AppRoutes.branches.contains(destination)) {
       context.push(destination);
     }
@@ -69,10 +68,7 @@ class _TutorialScreenState extends ConsumerState<TutorialScreen> {
       _close();
       return;
     }
-    _controller.nextPage(
-      duration: AppDuration.normal,
-      curve: Curves.easeOutCubic,
-    );
+    _controller.nextPage(duration: AppDuration.normal, curve: Curves.easeOutCubic);
   }
 
   @override
@@ -209,27 +205,19 @@ class _ChapterPage extends StatelessWidget {
               Text(
                 l10n.chapterOf(number, total),
                 textAlign: TextAlign.center,
-                style: AppTypography.overline.copyWith(
-                  color: context.accentOnSurface,
-                ),
+                style: AppTypography.overline.copyWith(color: context.accentOnSurface),
               ),
               const SizedBox(height: AppSpacing.sm),
               Text(
                 chapter.title,
                 textAlign: TextAlign.center,
-                style: AppTypography.heading.copyWith(
-                  fontSize: 23,
-                  color: context.textPrimary,
-                ),
+                style: AppTypography.heading.copyWith(fontSize: 23, color: context.textPrimary),
               ),
               const SizedBox(height: AppSpacing.md),
               Text(
                 chapter.body,
                 textAlign: TextAlign.center,
-                style: AppTypography.body.copyWith(
-                  color: context.textSecondary,
-                  height: 1.6,
-                ),
+                style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.6),
               ),
               const SizedBox(height: AppSpacing.xl),
               Container(
@@ -244,8 +232,7 @@ class _ChapterPage extends StatelessWidget {
                   children: [
                     for (var i = 0; i < chapter.tips.length; i++) ...[
                       _Tip(text: chapter.tips[i]),
-                      if (i != chapter.tips.length - 1)
-                        const SizedBox(height: AppSpacing.md),
+                      if (i != chapter.tips.length - 1) const SizedBox(height: AppSpacing.md),
                     ],
                   ],
                 ),
@@ -255,9 +242,7 @@ class _ChapterPage extends StatelessWidget {
                 OutlinedButton.icon(
                   onPressed: () => onVisit(chapter.destination!),
                   icon: const Icon(Icons.arrow_forward_rounded, size: 18),
-                  label: Text(
-                    l10n.guideOpenScreen(chapter.destinationLabel ?? ''),
-                  ),
+                  label: Text(l10n.guideOpenScreen(chapter.destinationLabel ?? '')),
                 ),
               ],
             ],
@@ -280,11 +265,7 @@ class _Tip extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 2),
-          child: Icon(
-            Icons.check_circle_outline_rounded,
-            size: 17,
-            color: context.accentOnSurface,
-          ),
+          child: Icon(CupertinoIcons.checkmark_circle, size: 17, color: context.accentOnSurface),
         ),
         const SizedBox(width: AppSpacing.sm + 2),
         Expanded(

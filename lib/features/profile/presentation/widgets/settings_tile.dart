@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_colors.dart';
@@ -19,15 +20,10 @@ class SettingsGroup extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.only(
-            start: AppSpacing.xs,
-            bottom: AppSpacing.sm,
-          ),
+          padding: const EdgeInsetsDirectional.only(start: AppSpacing.xs, bottom: AppSpacing.sm),
           child: Text(
             title.toUpperCase(),
-            style: AppTypography.overline.copyWith(
-              color: context.textSecondary,
-            ),
+            style: AppTypography.overline.copyWith(color: context.textSecondary),
           ),
         ),
         AppCard(
@@ -76,46 +72,32 @@ class SettingsTile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.lg,
-          vertical: AppSpacing.md,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.md),
         child: Row(
           children: [
             IconBadge(
               icon: icon,
               size: 34,
               radius: 11,
-              background: danger
-                  ? AppColors.error.withValues(alpha: 0.10)
-                  : context.tintFill,
+              background: danger ? AppColors.error.withValues(alpha: 0.10) : context.tintFill,
               foreground: danger ? AppColors.error : context.accent,
             ),
             const SizedBox(width: AppSpacing.md),
             Expanded(
-              child: Text(
-                label,
-                style: AppTypography.title.copyWith(color: color),
-              ),
+              child: Text(label, style: AppTypography.title.copyWith(color: color)),
             ),
             if (value != null)
               Padding(
                 padding: const EdgeInsetsDirectional.only(end: AppSpacing.sm),
                 child: Text(
                   value!,
-                  style: AppTypography.body.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.body.copyWith(color: context.textSecondary),
                 ),
               ),
             trailing ??
                 (onTap == null
                     ? const SizedBox.shrink()
-                    : Icon(
-                        Icons.chevron_right_rounded,
-                        size: 20,
-                        color: context.textDisabled,
-                      )),
+                    : Icon(CupertinoIcons.forward, size: 20, color: context.textDisabled)),
           ],
         ),
       ),

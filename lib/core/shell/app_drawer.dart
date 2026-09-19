@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -27,12 +28,7 @@ class AppDrawer extends ConsumerWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(
-                AppSpacing.lg,
-                AppSpacing.lg,
-                AppSpacing.lg,
-                0,
-              ),
+              padding: const EdgeInsets.fromLTRB(AppSpacing.lg, AppSpacing.lg, AppSpacing.lg, 0),
               child: profile.when(
                 data: (user) => _ProfileTile(
                   name: user.name,
@@ -60,17 +56,17 @@ class AppDrawer extends ConsumerWidget {
                 ),
                 children: [
                   _DrawerItem(
-                    icon: Icons.savings_rounded,
+                    icon: CupertinoIcons.money_dollar_circle,
                     label: l10n.savings,
                     route: AppRoutes.savings,
                   ),
                   _DrawerItem(
-                    icon: Icons.donut_small_rounded,
+                    icon: CupertinoIcons.chart_pie,
                     label: l10n.budget,
                     route: AppRoutes.budget,
                   ),
                   _DrawerItem(
-                    icon: Icons.account_balance_rounded,
+                    icon: CupertinoIcons.creditcard,
                     label: l10n.loansAndDebts,
                     route: AppRoutes.loans,
                   ),
@@ -78,12 +74,12 @@ class AppDrawer extends ConsumerWidget {
                   Divider(color: context.borderColor, height: 1),
                   const SizedBox(height: AppSpacing.md),
                   _DrawerItem(
-                    icon: Icons.settings_rounded,
+                    icon: CupertinoIcons.gear,
                     label: l10n.settings,
                     route: AppRoutes.settings,
                   ),
                   _DrawerItem(
-                    icon: Icons.help_outline_rounded,
+                    icon: CupertinoIcons.question_circle,
                     label: l10n.helpAndSupport,
                     route: null,
                   ),
@@ -94,7 +90,7 @@ class AppDrawer extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.all(AppSpacing.md),
               child: _DrawerItem(
-                icon: Icons.logout_rounded,
+                icon: CupertinoIcons.arrow_right_square,
                 label: l10n.logOut,
                 route: null,
                 danger: true,
@@ -132,44 +128,27 @@ class _ProfileTile extends StatelessWidget {
             Container(
               width: 46,
               height: 46,
-              decoration: BoxDecoration(
-                gradient: context.brandGradient,
-                shape: BoxShape.circle,
-              ),
+              decoration: BoxDecoration(gradient: context.brandGradient, shape: BoxShape.circle),
               alignment: Alignment.center,
-              child: Text(
-                initials,
-                style: AppTypography.title.copyWith(color: Colors.white),
-              ),
+              child: Text(initials, style: AppTypography.title.copyWith(color: Colors.white)),
             ),
             const SizedBox(width: AppSpacing.md),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    name,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
-                  ),
+                  Text(name, style: AppTypography.title.copyWith(color: context.textPrimary)),
                   const SizedBox(height: 2),
                   Text(
                     email,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
             ),
-            Icon(
-              Icons.chevron_right_rounded,
-              color: context.textDisabled,
-              size: 20,
-            ),
+            Icon(CupertinoIcons.chevron_right, color: context.textDisabled, size: 20),
           ],
         ),
       ),
@@ -206,9 +185,9 @@ class _DrawerItem extends StatelessWidget {
             Navigator.of(context).pop();
             final target = route;
             if (target == null) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(AppL10n.of(context).comingSoon)),
-              );
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(AppL10n.of(context).comingSoon)));
               return;
             }
             // Every drawer destination is pushed above the shell; the bottom
@@ -216,10 +195,7 @@ class _DrawerItem extends StatelessWidget {
             context.push(target);
           },
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.md,
-              vertical: 13,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: 13),
             child: Row(
               children: [
                 Icon(icon, size: 21, color: iconColor),

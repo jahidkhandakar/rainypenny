@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -39,8 +40,7 @@ class ThemeModePicker extends ConsumerWidget {
               onTap: () => ref.read(themeModeProvider.notifier).select(mode),
             ),
           ),
-          if (mode != ThemeMode.values.last)
-            const SizedBox(width: AppSpacing.md),
+          if (mode != ThemeMode.values.last) const SizedBox(width: AppSpacing.md),
         ],
       ],
     );
@@ -94,24 +94,19 @@ class _ThemeModeCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(AppRadius.sm),
                   border: Border.all(color: context.borderColor),
-                  gradient: LinearGradient(
-                    colors: preview,
-                    stops: const [0.5, 0.5],
-                  ),
+                  gradient: LinearGradient(colors: preview, stops: const [0.5, 0.5]),
                 ),
                 alignment: Alignment.center,
                 child: Icon(
                   switch (mode) {
                     ThemeMode.system => Icons.brightness_auto_rounded,
-                    ThemeMode.light => Icons.light_mode_rounded,
-                    ThemeMode.dark => Icons.dark_mode_rounded,
+                    ThemeMode.light => CupertinoIcons.sun_max,
+                    ThemeMode.dark => CupertinoIcons.moon,
                   },
                   size: 19,
                   // Sits over the seam on the system card, so it needs a
                   // colour that works on both halves.
-                  color: mode == ThemeMode.light
-                      ? const Color(0xFF6B7488)
-                      : Colors.white70,
+                  color: mode == ThemeMode.light ? const Color(0xFF6B7488) : Colors.white70,
                 ),
               ),
               const SizedBox(height: AppSpacing.sm),
@@ -121,9 +116,7 @@ class _ThemeModeCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: AppTypography.caption.copyWith(
                   fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
-                  color: selected
-                      ? context.accentOnSurface
-                      : context.textSecondary,
+                  color: selected ? context.accentOnSurface : context.textSecondary,
                 ),
               ),
             ],
@@ -162,11 +155,7 @@ class AccentPicker extends ConsumerWidget {
 }
 
 class _AccentSwatch extends StatelessWidget {
-  const _AccentSwatch({
-    required this.accent,
-    required this.selected,
-    required this.onTap,
-  });
+  const _AccentSwatch({required this.accent, required this.selected, required this.onTap});
 
   final AccentPalette accent;
   final bool selected;
@@ -190,22 +179,12 @@ class _AccentSwatch extends StatelessWidget {
             padding: const EdgeInsets.all(3),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(
-                color: selected ? accent.base : Colors.transparent,
-                width: 2,
-              ),
+              border: Border.all(color: selected ? accent.base : Colors.transparent, width: 2),
             ),
             child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: accent.gradient,
-              ),
+              decoration: BoxDecoration(shape: BoxShape.circle, gradient: accent.gradient),
               child: selected
-                  ? const Icon(
-                      Icons.check_rounded,
-                      size: 19,
-                      color: Colors.white,
-                    )
+                  ? const Icon(Icons.check_rounded, size: 19, color: Colors.white)
                   : null,
             ),
           ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -128,8 +129,7 @@ class _AppShellState extends ConsumerState<AppShell> {
           // Logging an expense is the most frequent thing anyone does here, so
           // it keeps a one-gesture route even though the button now opens a
           // menu.
-          onAddLongPress: () =>
-              context.push('${AppRoutes.addTransaction}?type=expense'),
+          onAddLongPress: () => context.push('${AppRoutes.addTransaction}?type=expense'),
         ),
       ),
     );
@@ -154,18 +154,10 @@ class _BottomNav extends StatelessWidget {
     final l10n = AppL10n.of(context);
 
     final items = <_NavItem>[
-      _NavItem(l10n.navHome, Icons.home_rounded, Icons.home_outlined),
-      _NavItem(
-        l10n.navTransactions,
-        Icons.receipt_long_rounded,
-        Icons.receipt_long_outlined,
-      ),
-      _NavItem(
-        l10n.navReports,
-        Icons.insert_chart_rounded,
-        Icons.insert_chart_outlined_rounded,
-      ),
-      _NavItem(l10n.navProfile, Icons.person_rounded, Icons.person_outline),
+      _NavItem(l10n.navHome, CupertinoIcons.house_fill, CupertinoIcons.house),
+      _NavItem(l10n.navTransactions, CupertinoIcons.doc_text_fill, CupertinoIcons.doc_text),
+      _NavItem(l10n.navReports, CupertinoIcons.chart_bar_fill, CupertinoIcons.chart_bar),
+      _NavItem(l10n.navProfile, CupertinoIcons.person_fill, CupertinoIcons.person),
     ];
 
     return Container(
@@ -181,11 +173,7 @@ class _BottomNav extends StatelessWidget {
             children: [
               _navButton(context, items[0], 0),
               _navButton(context, items[1], 1),
-              _AddButton(
-                onTap: onAdd,
-                onLongPress: onAddLongPress,
-                label: l10n.navAdd,
-              ),
+              _AddButton(onTap: onAdd, onLongPress: onAddLongPress, label: l10n.navAdd),
               _navButton(context, items[2], 2),
               _navButton(context, items[3], 3),
             ],
@@ -235,11 +223,7 @@ class _BottomNav extends StatelessWidget {
 
 /// The centre action — the strongest focal point in the bar.
 class _AddButton extends StatelessWidget {
-  const _AddButton({
-    required this.onTap,
-    required this.onLongPress,
-    required this.label,
-  });
+  const _AddButton({required this.onTap, required this.onLongPress, required this.label});
 
   final VoidCallback onTap;
   final VoidCallback onLongPress;
@@ -270,11 +254,7 @@ class _AddButton extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Icon(
-                Icons.add_rounded,
-                color: Colors.white,
-                size: 28,
-              ),
+              child: const Icon(CupertinoIcons.add, color: Colors.white, size: 28),
             ),
           ),
         ),

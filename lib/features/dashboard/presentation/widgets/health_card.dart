@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -81,11 +82,7 @@ class HealthCard extends ConsumerWidget {
                 ),
               ),
               if (onTap != null)
-                Icon(
-                  Icons.chevron_right_rounded,
-                  size: 20,
-                  color: context.textDisabled,
-                ),
+                Icon(CupertinoIcons.chevron_forward, size: 20, color: context.textDisabled),
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
@@ -117,11 +114,7 @@ Color healthFactorColor(int score) => score >= 70
     : AppColors.error;
 
 class HealthFactorRow extends StatelessWidget {
-  const HealthFactorRow({
-    super.key,
-    required this.factor,
-    required this.localeName,
-  });
+  const HealthFactorRow({super.key, required this.factor, required this.localeName});
 
   final HealthFactor factor;
   final String localeName;
@@ -160,10 +153,7 @@ class HealthFactorRow extends StatelessWidget {
             textAlign: TextAlign.end,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: AppTypography.caption.copyWith(
-              fontSize: 11,
-              color: context.textSecondary,
-            ),
+            style: AppTypography.caption.copyWith(fontSize: 11, color: context.textSecondary),
           ),
         ),
       ],

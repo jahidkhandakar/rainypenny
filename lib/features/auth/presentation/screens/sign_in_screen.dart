@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -77,9 +78,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
         .read(authControllerProvider.notifier)
         .resendConfirmation(_emailController.text);
     if (!mounted || !sent) return;
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text(l10n.confirmationResent)));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(l10n.confirmationResent)));
   }
 
   void _fillDemoCredentials() {
@@ -109,9 +108,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 autofillHints: const [AutofillHints.username],
-                errorText: _showValidation && !_emailValid
-                    ? l10n.emailInvalid
-                    : null,
+                errorText: _showValidation && !_emailValid ? l10n.emailInvalid : null,
                 onChanged: (_) => setState(() {}),
               ),
               const SizedBox(height: AppSpacing.lg),
@@ -121,15 +118,12 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                 obscure: _obscurePassword,
                 autofillHints: const [AutofillHints.password],
                 textInputAction: TextInputAction.done,
-                errorText: _showValidation && !_passwordValid
-                    ? l10n.passwordRequired
-                    : null,
+                errorText: _showValidation && !_passwordValid ? l10n.passwordRequired : null,
                 onSubmitted: (_) => _submit(),
                 onChanged: (_) => setState(() {}),
                 suffix: ObscureToggle(
                   obscured: _obscurePassword,
-                  onChanged: (value) =>
-                      setState(() => _obscurePassword = value),
+                  onChanged: (value) => setState(() => _obscurePassword = value),
                 ),
               ),
             ],
@@ -138,10 +132,8 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
         Align(
           alignment: AlignmentDirectional.centerEnd,
           child: TextButton(
-            onPressed: () => context.push(
-              AppRoutes.forgotPassword,
-              extra: _emailController.text.trim(),
-            ),
+            onPressed: () =>
+                context.push(AppRoutes.forgotPassword, extra: _emailController.text.trim()),
             child: Text(l10n.forgotPassword),
           ),
         ),
@@ -158,11 +150,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
           ),
         ],
         const SizedBox(height: AppSpacing.xl),
-        AuthSubmitButton(
-          label: l10n.signIn,
-          isBusy: form.isSubmitting,
-          onPressed: _submit,
-        ),
+        AuthSubmitButton(label: l10n.signIn, isBusy: form.isSubmitting, onPressed: _submit),
         const SizedBox(height: AppSpacing.lg),
         AuthFooterPrompt(
           prompt: l10n.noAccountYet,
@@ -197,18 +185,12 @@ class _DemoCredentialsHint extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(
-            Icons.science_outlined,
-            size: 18,
-            color: context.accentOnSurface,
-          ),
+          Icon(CupertinoIcons.lab_flask, size: 18, color: context.accentOnSurface),
           const SizedBox(width: AppSpacing.sm),
           Expanded(
             child: Text(
               l10n.demoModeHint,
-              style: AppTypography.caption.copyWith(
-                color: context.textSecondary,
-              ),
+              style: AppTypography.caption.copyWith(color: context.textSecondary),
             ),
           ),
           TextButton(onPressed: onFill, child: Text(l10n.demoModeFill)),

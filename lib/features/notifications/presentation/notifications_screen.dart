@@ -1,9 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../core/localization/generated/app_localizations.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/localization/generated/app_localizations.dart';
 import '../../../core/routing/app_routes.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../../../core/theme/app_theme.dart';
@@ -43,18 +43,14 @@ class NotificationsScreen extends ConsumerWidget {
         data: (list) {
           if (list.isEmpty) {
             return EmptyState(
-              icon: Icons.notifications_none_rounded,
+              icon: CupertinoIcons.bell,
               title: l10n.noNotificationsTitle,
               message: l10n.noNotificationsBody,
             );
           }
 
           final urgent = list
-              .where(
-                (i) =>
-                    i.level == InsightLevel.critical ||
-                    i.level == InsightLevel.warning,
-              )
+              .where((i) => i.level == InsightLevel.critical || i.level == InsightLevel.warning)
               .toList();
           final rest = list.where((i) => !urgent.contains(i)).toList();
 
@@ -120,10 +116,7 @@ class _GroupLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(
-        start: AppSpacing.xs,
-        bottom: AppSpacing.sm,
-      ),
+      padding: const EdgeInsetsDirectional.only(start: AppSpacing.xs, bottom: AppSpacing.sm),
       child: Text(
         text.toUpperCase(),
         style: AppTypography.overline.copyWith(color: context.textSecondary),

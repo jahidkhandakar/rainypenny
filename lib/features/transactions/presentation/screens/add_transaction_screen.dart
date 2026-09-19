@@ -1,12 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
+import '../../../../core/settings/settings_providers.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../../../core/settings/settings_providers.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/utils/format_providers.dart';
@@ -26,8 +27,7 @@ class AddTransactionScreen extends ConsumerStatefulWidget {
   final bool startAsIncome;
 
   @override
-  ConsumerState<AddTransactionScreen> createState() =>
-      _AddTransactionScreenState();
+  ConsumerState<AddTransactionScreen> createState() => _AddTransactionScreenState();
 }
 
 class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
@@ -52,9 +52,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
 
     if (widget.startAsIncome) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        ref
-            .read(addTransactionControllerProvider.notifier)
-            .setType(TransactionType.income);
+        ref.read(addTransactionControllerProvider.notifier).setType(TransactionType.income);
       });
     }
   }
@@ -84,10 +82,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
       selected: draft.category,
       // Creating one from here is the whole point: the moment someone notices a
       // category is missing is the moment they are filing a transaction.
-      onAddCategory: () => showCategoryEditor(
-        context,
-        isIncome: draft.isIncome,
-      ),
+      onAddCategory: () => showCategoryEditor(context, isIncome: draft.isIncome),
     );
 
     if (selected != null) {
@@ -124,11 +119,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
     if (!mounted || !saved) return;
 
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          wasEditing ? l10n.transactionUpdated : l10n.transactionSaved,
-        ),
-      ),
+      SnackBar(content: Text(wasEditing ? l10n.transactionUpdated : l10n.transactionSaved)),
     );
     Navigator.of(context).pop();
   }
@@ -143,13 +134,8 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.close_rounded),
-          onPressed: _close,
-        ),
-        title: Text(
-          draft.isEditing ? l10n.editTransaction : l10n.addTransaction,
-        ),
+        leading: IconButton(icon: const Icon(Icons.close_rounded), onPressed: _close),
+        title: Text(draft.isEditing ? l10n.editTransaction : l10n.addTransaction),
       ),
       body: SafeArea(
         child: Column(
@@ -166,9 +152,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                   _TypeToggle(
                     type: draft.type,
                     onChanged: (type) {
-                      ref
-                          .read(addTransactionControllerProvider.notifier)
-                          .setType(type);
+                      ref.read(addTransactionControllerProvider.notifier).setType(type);
                     },
                   ),
                   const SizedBox(height: AppSpacing.section),
@@ -179,9 +163,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                       children: [
                         Text(
                           l10n.amount.toUpperCase(),
-                          style: AppTypography.overline.copyWith(
-                            color: context.textSecondary,
-                          ),
+                          style: AppTypography.overline.copyWith(color: context.textSecondary),
                         ),
                         const SizedBox(height: AppSpacing.md),
                         Row(
@@ -190,10 +172,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                           children: [
                             Text(
                               symbol,
-                              style: AppTypography.display.copyWith(
-                                fontSize: 30,
-                                color: accent,
-                              ),
+                              style: AppTypography.display.copyWith(fontSize: 30, color: accent),
                             ),
                             const SizedBox(width: 6),
                             IntrinsicWidth(
@@ -201,14 +180,9 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                                 controller: _amountController,
                                 autofocus: true,
                                 textAlign: TextAlign.center,
-                                keyboardType:
-                                    const TextInputType.numberWithOptions(
-                                      decimal: true,
-                                    ),
+                                keyboardType: const TextInputType.numberWithOptions(decimal: true),
                                 inputFormatters: [
-                                  FilteringTextInputFormatter.allow(
-                                    RegExp(r'^\d*[.,]?\d{0,2}'),
-                                  ),
+                                  FilteringTextInputFormatter.allow(RegExp(r'^\d*[.,]?\d{0,2}')),
                                 ],
                                 style: AppTypography.display.copyWith(
                                   fontSize: 46,
@@ -228,16 +202,9 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                                   isDense: true,
                                 ),
                                 onChanged: (value) {
-                                  final parsed =
-                                      double.tryParse(
-                                        value.replaceAll(',', '.'),
-                                      ) ??
-                                      0;
+                                  final parsed = double.tryParse(value.replaceAll(',', '.')) ?? 0;
                                   ref
-                                      .read(
-                                        addTransactionControllerProvider
-                                            .notifier,
-                                      )
+                                      .read(addTransactionControllerProvider.notifier)
                                       .setAmount(parsed);
                                 },
                               ),
@@ -249,9 +216,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                             padding: const EdgeInsets.only(top: AppSpacing.sm),
                             child: Text(
                               l10n.amountRequired,
-                              style: AppTypography.caption.copyWith(
-                                color: AppColors.error,
-                              ),
+                              style: AppTypography.caption.copyWith(color: AppColors.error),
                             ),
                           ),
                       ],
@@ -269,9 +234,8 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                           ? l10n.titleRequired
                           : null,
                     ),
-                    onChanged: (value) => ref
-                        .read(addTransactionControllerProvider.notifier)
-                        .setTitle(value),
+                    onChanged: (value) =>
+                        ref.read(addTransactionControllerProvider.notifier).setTitle(value),
                   ),
                   const SizedBox(height: AppSpacing.xl),
 
@@ -286,7 +250,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
 
                   _FieldLabel(l10n.date),
                   _SelectorTile(
-                    icon: Icons.calendar_today_rounded,
+                    icon: CupertinoIcons.calendar_today,
                     label: dates.long(draft.date),
                     accent: accent,
                     onTap: _pickDate,
@@ -299,9 +263,8 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                     maxLines: 3,
                     textCapitalization: TextCapitalization.sentences,
                     decoration: InputDecoration(hintText: l10n.noteHint),
-                    onChanged: (value) => ref
-                        .read(addTransactionControllerProvider.notifier)
-                        .setNote(value),
+                    onChanged: (value) =>
+                        ref.read(addTransactionControllerProvider.notifier).setNote(value),
                   ),
                 ],
               ),
@@ -324,10 +287,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
                     ? const SizedBox(
                         width: 20,
                         height: 20,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2.2,
-                          color: Colors.white,
-                        ),
+                        child: CircularProgressIndicator(strokeWidth: 2.2, color: Colors.white),
                       )
                     : Text(draft.isIncome ? l10n.saveIncome : l10n.saveExpense),
               ),
@@ -399,14 +359,8 @@ class _FieldLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(
-        bottom: AppSpacing.sm,
-        start: 2,
-      ),
-      child: Text(
-        text,
-        style: AppTypography.label.copyWith(color: context.textSecondary),
-      ),
+      padding: const EdgeInsetsDirectional.only(bottom: AppSpacing.sm, start: 2),
+      child: Text(text, style: AppTypography.label.copyWith(color: context.textSecondary)),
     );
   }
 }
@@ -429,10 +383,7 @@ class _SelectorTile extends StatelessWidget {
     return AppCard(
       onTap: onTap,
       radius: AppRadius.md,
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.md,
-        vertical: AppSpacing.md,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: AppSpacing.md),
       color: context.subtleFill,
       child: Row(
         children: [
@@ -444,16 +395,9 @@ class _SelectorTile extends StatelessWidget {
           ),
           const SizedBox(width: AppSpacing.md),
           Expanded(
-            child: Text(
-              label,
-              style: AppTypography.title.copyWith(color: context.textPrimary),
-            ),
+            child: Text(label, style: AppTypography.title.copyWith(color: context.textPrimary)),
           ),
-          Icon(
-            Icons.chevron_right_rounded,
-            color: context.textDisabled,
-            size: 20,
-          ),
+          Icon(CupertinoIcons.forward, color: context.textDisabled, size: 20),
         ],
       ),
     );

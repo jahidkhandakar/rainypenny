@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -73,16 +74,11 @@ class _GoalEditorSheetState extends ConsumerState<_GoalEditorSheet> {
     _saved = goal?.saved ?? 0;
     _monthly = goal?.monthlyContribution ?? 0;
     _icon = goal?.icon ?? CategoryIcon.housing;
-    _targetDate =
-        goal?.targetDate ?? DateTime.now().add(const Duration(days: 365));
+    _targetDate = goal?.targetDate ?? DateTime.now().add(const Duration(days: 365));
 
     _nameController = TextEditingController(text: _name);
-    _targetController = TextEditingController(
-      text: _target > 0 ? _target.toStringAsFixed(0) : '',
-    );
-    _savedController = TextEditingController(
-      text: _saved > 0 ? _saved.toStringAsFixed(0) : '',
-    );
+    _targetController = TextEditingController(text: _target > 0 ? _target.toStringAsFixed(0) : '');
+    _savedController = TextEditingController(text: _saved > 0 ? _saved.toStringAsFixed(0) : '');
     _monthlyController = TextEditingController(
       text: _monthly > 0 ? _monthly.toStringAsFixed(0) : '',
     );
@@ -141,10 +137,7 @@ class _GoalEditorSheetState extends ConsumerState<_GoalEditorSheet> {
         title: Text(l10n.deleteGoal),
         content: Text(l10n.deleteGoalBody(widget.goal!.name)),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text(l10n.cancel),
-          ),
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: Text(l10n.cancel)),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             style: TextButton.styleFrom(foregroundColor: AppColors.error),
@@ -220,17 +213,11 @@ class _GoalEditorSheetState extends ConsumerState<_GoalEditorSheet> {
               decoration: const InputDecoration(),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.calendar_today_rounded,
-                    size: 18,
-                    color: context.textSecondary,
-                  ),
+                  Icon(CupertinoIcons.calendar_today, size: 18, color: context.textSecondary),
                   const SizedBox(width: AppSpacing.md),
                   Text(
                     dates.long(_targetDate),
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                 ],
               ),
@@ -251,17 +238,13 @@ class _GoalEditorSheetState extends ConsumerState<_GoalEditorSheet> {
                     width: 46,
                     height: 46,
                     decoration: BoxDecoration(
-                      color: _icon == icon
-                          ? AppColors.secondary
-                          : context.subtleFill,
+                      color: _icon == icon ? AppColors.secondary : context.subtleFill,
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Icon(
                       iconForCategory(icon),
                       size: 21,
-                      color: _icon == icon
-                          ? Colors.white
-                          : context.textSecondary,
+                      color: _icon == icon ? Colors.white : context.textSecondary,
                     ),
                   ),
                 ),

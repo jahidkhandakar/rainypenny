@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -29,11 +30,9 @@ class CycleNavigator extends ConsumerWidget {
         Row(
           children: [
             _ArrowButton(
-              icon: Icons.chevron_left_rounded,
+              icon: CupertinoIcons.chevron_back,
               onTap: notifier.previous,
-              semanticLabel: MaterialLocalizations.of(
-                context,
-              ).previousMonthTooltip,
+              semanticLabel: MaterialLocalizations.of(context).previousMonthTooltip,
             ),
             Expanded(
               child: Column(
@@ -42,31 +41,22 @@ class CycleNavigator extends ConsumerWidget {
                     dates.monthYear(cycle.labelMonth),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    l10n.cycleOf(
-                      dates.short(cycle.start),
-                      dates.short(cycle.end),
-                    ),
+                    l10n.cycleOf(dates.short(cycle.start), dates.short(cycle.end)),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
             ),
             _ArrowButton(
-              icon: Icons.chevron_right_rounded,
+              icon: CupertinoIcons.chevron_forward,
               onTap: notifier.next,
-              semanticLabel: MaterialLocalizations.of(
-                context,
-              ).nextMonthTooltip,
+              semanticLabel: MaterialLocalizations.of(context).nextMonthTooltip,
             ),
           ],
         ),
@@ -92,11 +82,7 @@ class CycleNavigator extends ConsumerWidget {
 }
 
 class _ArrowButton extends StatelessWidget {
-  const _ArrowButton({
-    required this.icon,
-    required this.onTap,
-    required this.semanticLabel,
-  });
+  const _ArrowButton({required this.icon, required this.onTap, required this.semanticLabel});
 
   final IconData icon;
   final VoidCallback onTap;
@@ -111,9 +97,7 @@ class _ArrowButton extends StatelessWidget {
       style: IconButton.styleFrom(
         foregroundColor: context.accentOnSurface,
         backgroundColor: context.subtleFill,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppRadius.md),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.md)),
       ),
     );
   }

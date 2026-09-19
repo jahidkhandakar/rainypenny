@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,9 +27,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
     final l10n = AppL10n.of(context);
     final messenger = ScaffoldMessenger.of(context);
 
-    final granted = await ref
-        .read(notificationServiceProvider)
-        .requestPermission();
+    final granted = await ref.read(notificationServiceProvider).requestPermission();
     ref.invalidate(notificationPermissionProvider);
 
     if (granted) return;
@@ -42,9 +41,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
       initialTime: TimeOfDay(hour: preferences.reminderHour, minute: 0),
     );
     if (picked == null) return;
-    await ref
-        .read(notificationPreferencesProvider.notifier)
-        .setReminderHour(picked.hour);
+    await ref.read(notificationPreferencesProvider.notifier).setReminderHour(picked.hour);
   }
 
   Future<void> _pickQuietHours(BuildContext context, WidgetRef ref) async {
@@ -64,9 +61,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
     );
     if (end == null) return;
 
-    await ref
-        .read(notificationPreferencesProvider.notifier)
-        .setQuietHours(start.hour, end.hour);
+    await ref.read(notificationPreferencesProvider.notifier).setQuietHours(start.hour, end.hour);
   }
 
   @override
@@ -77,9 +72,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
     final schedule = ref.watch(notificationScheduleProvider);
 
     void toggle(NotificationChannel channel, bool value) {
-      ref
-          .read(notificationPreferencesProvider.notifier)
-          .setChannel(channel, value);
+      ref.read(notificationPreferencesProvider.notifier).setChannel(channel, value);
     }
 
     return Scaffold(
@@ -98,9 +91,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: AppSpacing.xl),
               child: FadeSlideIn(
-                child: _PermissionCard(
-                  onAllow: () => _requestPermission(context, ref),
-                ),
+                child: _PermissionCard(onAllow: () => _requestPermission(context, ref)),
               ),
             ),
 
@@ -110,7 +101,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
               title: l10n.alertsSection,
               children: [
                 _ChannelTile(
-                  icon: Icons.donut_small_rounded,
+                  icon: CupertinoIcons.chart_pie_fill,
                   label: l10n.budgetAlerts,
                   description: l10n.budgetAlertsBody,
                   value: preferences.budgetAlerts,
@@ -121,40 +112,35 @@ class NotificationSettingsScreen extends ConsumerWidget {
                   label: l10n.paymentReminders,
                   description: l10n.paymentRemindersBody,
                   value: preferences.paymentReminders,
-                  onChanged: (v) =>
-                      toggle(NotificationChannel.paymentReminders, v),
+                  onChanged: (v) => toggle(NotificationChannel.paymentReminders, v),
                 ),
                 _ChannelTile(
                   icon: Icons.savings_rounded,
                   label: l10n.savingsUpdates,
                   description: l10n.savingsUpdatesBody,
                   value: preferences.savingsUpdates,
-                  onChanged: (v) =>
-                      toggle(NotificationChannel.savingsUpdates, v),
+                  onChanged: (v) => toggle(NotificationChannel.savingsUpdates, v),
                 ),
                 _ChannelTile(
-                  icon: Icons.insert_chart_rounded,
+                  icon: CupertinoIcons.chart_bar_fill,
                   label: l10n.weeklySummaryLabel,
                   description: l10n.weeklySummaryBody,
                   value: preferences.weeklySummary,
-                  onChanged: (v) =>
-                      toggle(NotificationChannel.weeklySummary, v),
+                  onChanged: (v) => toggle(NotificationChannel.weeklySummary, v),
                 ),
                 _ChannelTile(
-                  icon: Icons.edit_calendar_rounded,
+                  icon: CupertinoIcons.calendar_badge_plus,
                   label: l10n.dailyReminders,
                   description: l10n.dailyRemindersBody,
                   value: preferences.dailyReminders,
-                  onChanged: (v) =>
-                      toggle(NotificationChannel.dailyReminders, v),
+                  onChanged: (v) => toggle(NotificationChannel.dailyReminders, v),
                 ),
                 _ChannelTile(
-                  icon: Icons.celebration_rounded,
+                  icon: CupertinoIcons.sparkles,
                   label: l10n.weekendGreeting,
                   description: l10n.weekendGreetingBody,
                   value: preferences.weekendGreeting,
-                  onChanged: (v) =>
-                      toggle(NotificationChannel.weekendGreeting, v),
+                  onChanged: (v) => toggle(NotificationChannel.weekendGreeting, v),
                 ),
               ],
             ),
@@ -179,9 +165,8 @@ class NotificationSettingsScreen extends ConsumerWidget {
                       label: _slotLabel(l10n, slot),
                       hour: NotificationPreferences.hourFor(slot),
                       value: preferences.enabledSlots.contains(slot),
-                      onChanged: (v) => ref
-                          .read(notificationPreferencesProvider.notifier)
-                          .setSlot(slot, v),
+                      onChanged: (v) =>
+                          ref.read(notificationPreferencesProvider.notifier).setSlot(slot, v),
                     ),
                 ],
               ),
@@ -195,13 +180,13 @@ class NotificationSettingsScreen extends ConsumerWidget {
               title: l10n.scheduleSection,
               children: [
                 SettingsTile(
-                  icon: Icons.schedule_rounded,
+                  icon: CupertinoIcons.clock,
                   label: l10n.reminderTime,
                   value: _formatHour(context, preferences.reminderHour),
                   onTap: () => _pickReminderHour(context, ref),
                 ),
                 SettingsTile(
-                  icon: Icons.bedtime_outlined,
+                  icon: CupertinoIcons.moon,
                   label: l10n.quietHours,
                   value: l10n.quietHoursValue(
                     _formatHour(context, preferences.quietHourStart),
@@ -215,15 +200,10 @@ class NotificationSettingsScreen extends ConsumerWidget {
           const SizedBox(height: AppSpacing.xl),
 
           Padding(
-            padding: const EdgeInsetsDirectional.only(
-              start: AppSpacing.xs,
-              bottom: AppSpacing.sm,
-            ),
+            padding: const EdgeInsetsDirectional.only(start: AppSpacing.xs, bottom: AppSpacing.sm),
             child: Text(
               l10n.upcomingAlerts.toUpperCase(),
-              style: AppTypography.overline.copyWith(
-                color: context.textSecondary,
-              ),
+              style: AppTypography.overline.copyWith(color: context.textSecondary),
             ),
           ),
           schedule.when(
@@ -231,7 +211,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
               if (preferences.allSilenced) {
                 return AppCard(
                   child: EmptyState(
-                    icon: Icons.notifications_off_rounded,
+                    icon: CupertinoIcons.bell_slash,
                     title: l10n.allNotificationsOff,
                     message: l10n.noScheduledAlertsBody,
                     compact: true,
@@ -241,7 +221,7 @@ class NotificationSettingsScreen extends ConsumerWidget {
               if (list.isEmpty) {
                 return AppCard(
                   child: EmptyState(
-                    icon: Icons.notifications_none_rounded,
+                    icon: CupertinoIcons.bell,
                     title: l10n.noScheduledAlerts,
                     message: l10n.noScheduledAlertsBody,
                     compact: true,
@@ -273,13 +253,12 @@ class NotificationSettingsScreen extends ConsumerWidget {
     return TimeOfDay(hour: hour, minute: 0).format(context);
   }
 
-  static String _slotLabel(AppL10n l10n, DailyReminderSlot slot) =>
-      switch (slot) {
-        DailyReminderSlot.morning => l10n.slotMorning,
-        DailyReminderSlot.noon => l10n.slotNoon,
-        DailyReminderSlot.afternoon => l10n.slotAfternoon,
-        DailyReminderSlot.evening => l10n.slotEvening,
-      };
+  static String _slotLabel(AppL10n l10n, DailyReminderSlot slot) => switch (slot) {
+    DailyReminderSlot.morning => l10n.slotMorning,
+    DailyReminderSlot.noon => l10n.slotNoon,
+    DailyReminderSlot.afternoon => l10n.slotAfternoon,
+    DailyReminderSlot.evening => l10n.slotEvening,
+  };
 }
 
 /// One of the four daily reminder slots, with the hour it lands at.
@@ -301,28 +280,22 @@ class _SlotTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final icon = switch (slot) {
-      DailyReminderSlot.morning => Icons.wb_twilight_rounded,
-      DailyReminderSlot.noon => Icons.light_mode_rounded,
-      DailyReminderSlot.afternoon => Icons.wb_cloudy_rounded,
-      DailyReminderSlot.evening => Icons.nightlight_round,
+      DailyReminderSlot.morning => CupertinoIcons.sunrise_fill,
+      DailyReminderSlot.noon => CupertinoIcons.sun_max_fill,
+      DailyReminderSlot.afternoon => CupertinoIcons.cloud_sun_fill,
+      DailyReminderSlot.evening => CupertinoIcons.moon_fill,
     };
 
     return InkWell(
       onTap: () => onChanged(!value),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.lg,
-          vertical: AppSpacing.md,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.md),
         child: Row(
           children: [
             IconBadge(icon: icon, size: 34, radius: 11),
             const SizedBox(width: AppSpacing.md),
             Expanded(
-              child: Text(
-                label,
-                style: AppTypography.title.copyWith(color: context.textPrimary),
-              ),
+              child: Text(label, style: AppTypography.title.copyWith(color: context.textPrimary)),
             ),
             Text(
               TimeOfDay(hour: hour, minute: 0).format(context),
@@ -355,7 +328,7 @@ class _PermissionCard extends StatelessWidget {
           Row(
             children: [
               IconBadge(
-                icon: Icons.notifications_off_rounded,
+                icon: CupertinoIcons.bell_slash_fill,
                 background: AppColors.warning.withValues(alpha: 0.14),
                 foreground: AppColors.warning,
               ),
@@ -363,9 +336,7 @@ class _PermissionCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   l10n.permissionRequired,
-                  style: AppTypography.title.copyWith(
-                    color: context.textPrimary,
-                  ),
+                  style: AppTypography.title.copyWith(color: context.textPrimary),
                 ),
               ),
             ],
@@ -373,10 +344,7 @@ class _PermissionCard extends StatelessWidget {
           const SizedBox(height: AppSpacing.md),
           Text(
             l10n.permissionRequiredBody,
-            style: AppTypography.body.copyWith(
-              fontSize: 13,
-              color: context.textSecondary,
-            ),
+            style: AppTypography.body.copyWith(fontSize: 13, color: context.textSecondary),
           ),
           const SizedBox(height: AppSpacing.lg),
           ElevatedButton(
@@ -413,10 +381,7 @@ class _ChannelTile extends StatelessWidget {
     return InkWell(
       onTap: () => onChanged(!value),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.lg,
-          vertical: AppSpacing.md,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.md),
         child: Row(
           children: [
             IconBadge(icon: icon, size: 34, radius: 11),
@@ -425,18 +390,11 @@ class _ChannelTile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    label,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
-                  ),
+                  Text(label, style: AppTypography.title.copyWith(color: context.textPrimary)),
                   const SizedBox(height: 2),
                   Text(
                     description,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -460,11 +418,7 @@ class _ScheduledCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
     final dates = ref.watch(dateFormatterProvider);
-    final text = presentInsight(
-      notification.insight,
-      l10n,
-      ref.watch(moneyFormatterProvider),
-    );
+    final text = presentInsight(notification.insight, l10n, ref.watch(moneyFormatterProvider));
     final color = colorForInsight(notification.insight.level);
 
     return AppCard(
@@ -483,19 +437,11 @@ class _ScheduledCard extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  text.title,
-                  style: AppTypography.title.copyWith(
-                    color: context.textPrimary,
-                  ),
-                ),
+                Text(text.title, style: AppTypography.title.copyWith(color: context.textPrimary)),
                 const SizedBox(height: 2),
                 Text(
                   text.message,
-                  style: AppTypography.body.copyWith(
-                    fontSize: 13,
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.body.copyWith(fontSize: 13, color: context.textSecondary),
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 Text(

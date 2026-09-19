@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -62,9 +63,7 @@ class _Form extends ConsumerStatefulWidget {
 }
 
 class _FormState extends ConsumerState<_Form> {
-  late final TextEditingController _name = TextEditingController(
-    text: widget.user.name,
-  );
+  late final TextEditingController _name = TextEditingController(text: widget.user.name);
   bool _saving = false;
   String? _error;
 
@@ -134,9 +133,7 @@ class _FormState extends ConsumerState<_Form> {
                 const SizedBox(height: AppSpacing.md),
                 Text(
                   l10n.memberSince(dates.monthYear(widget.user.memberSince)),
-                  style: AppTypography.caption.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textSecondary),
                 ),
               ],
             ),
@@ -148,10 +145,7 @@ class _FormState extends ConsumerState<_Form> {
           index: 1,
           child: Text(
             l10n.personalInformationIntro,
-            style: AppTypography.body.copyWith(
-              color: context.textSecondary,
-              height: 1.5,
-            ),
+            style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.5),
           ),
         ),
         const SizedBox(height: AppSpacing.xl),
@@ -164,10 +158,7 @@ class _FormState extends ConsumerState<_Form> {
               controller: _name,
               textCapitalization: TextCapitalization.words,
               textInputAction: TextInputAction.done,
-              decoration: InputDecoration(
-                hintText: l10n.fullNameHint,
-                errorText: _error,
-              ),
+              decoration: InputDecoration(hintText: l10n.fullNameHint, errorText: _error),
               // Keeps the avatar initials and the Save button in step with
               // what has actually been typed.
               onChanged: (_) => setState(() => _error = null),
@@ -189,25 +180,15 @@ class _FormState extends ConsumerState<_Form> {
               ),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.mail_outline_rounded,
-                    size: 19,
-                    color: context.textSecondary,
-                  ),
+                  Icon(CupertinoIcons.envelope, size: 19, color: context.textSecondary),
                   const SizedBox(width: AppSpacing.md),
                   Expanded(
                     child: Text(
                       widget.user.email,
-                      style: AppTypography.body.copyWith(
-                        color: context.textSecondary,
-                      ),
+                      style: AppTypography.body.copyWith(color: context.textSecondary),
                     ),
                   ),
-                  Icon(
-                    Icons.lock_outline_rounded,
-                    size: 16,
-                    color: context.textDisabled,
-                  ),
+                  Icon(CupertinoIcons.lock, size: 16, color: context.textDisabled),
                 ],
               ),
             ),
@@ -224,17 +205,12 @@ class _FormState extends ConsumerState<_Form> {
           index: 4,
           child: ElevatedButton(
             onPressed: (_saving || !_isDirty) ? null : _save,
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size.fromHeight(52),
-            ),
+            style: ElevatedButton.styleFrom(minimumSize: const Size.fromHeight(52)),
             child: _saving
                 ? const SizedBox(
                     width: 20,
                     height: 20,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2.2,
-                      color: Colors.white,
-                    ),
+                    child: CircularProgressIndicator(strokeWidth: 2.2, color: Colors.white),
                   )
                 : Text(l10n.saveChanges),
           ),
@@ -254,9 +230,7 @@ class _Avatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final initials = UserProfile.initialsFor(
-      pendingName.trim().isEmpty ? user.email : pendingName,
-    );
+    final initials = UserProfile.initialsFor(pendingName.trim().isEmpty ? user.email : pendingName);
 
     return Container(
       width: 96,

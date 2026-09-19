@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -75,8 +76,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     _payment = loan?.installmentAmount ?? 0;
     _rate = loan?.interestRate ?? 0;
     _kind = loan?.kind ?? LoanKind.loan;
-    _nextPayment =
-        loan?.nextPaymentDate ?? DateTime.now().add(const Duration(days: 30));
+    _nextPayment = loan?.nextPaymentDate ?? DateTime.now().add(const Duration(days: 30));
     _startDate = loan?.startDate;
     _totalInstallments = loan?.totalInstallments ?? 0;
     _paidInstallments = loan?.paidInstallments ?? 0;
@@ -86,9 +86,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     _principalController = TextEditingController(text: _text(_principal));
     _remainingController = TextEditingController(text: _text(_remaining));
     _paymentController = TextEditingController(text: _text(_payment));
-    _rateController = TextEditingController(
-      text: _rate > 0 ? _rate.toString() : '',
-    );
+    _rateController = TextEditingController(text: _rate > 0 ? _rate.toString() : '');
     _totalInstallmentsController = TextEditingController(
       text: _totalInstallments > 0 ? '$_totalInstallments' : '',
     );
@@ -97,8 +95,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
     );
   }
 
-  static String _text(double value) =>
-      value > 0 ? value.toStringAsFixed(0) : '';
+  static String _text(double value) => value > 0 ? value.toStringAsFixed(0) : '';
 
   @override
   void dispose() {
@@ -153,9 +150,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
       installmentAmount: _payment,
       nextPaymentDate: _nextPayment,
       interestRate: _rate,
-      icon: _kind == LoanKind.creditCard
-          ? CategoryIcon.other
-          : CategoryIcon.transport,
+      icon: _kind == LoanKind.creditCard ? CategoryIcon.other : CategoryIcon.transport,
       totalInstallments: _totalInstallments,
       paidInstallments: _paidInstallments,
       startDate: _startDate,
@@ -178,10 +173,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
         title: Text(l10n.deleteDebt),
         content: Text(l10n.deleteDebtBody(widget.loan!.name)),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text(l10n.cancel),
-          ),
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: Text(l10n.cancel)),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             style: TextButton.styleFrom(foregroundColor: AppColors.error),
@@ -217,10 +209,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
       children: [
         SheetField(
           label: '',
-          child: _KindToggle(
-            kind: _kind,
-            onChanged: (kind) => setState(() => _kind = kind),
-          ),
+          child: _KindToggle(kind: _kind, onChanged: (kind) => setState(() => _kind = kind)),
         ),
         SheetField(
           label: l10n.debtName,
@@ -270,12 +259,9 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
           child: TextField(
             controller: _rateController,
             keyboardType: const TextInputType.numberWithOptions(decimal: true),
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(RegExp(r'^\d*[.,]?\d{0,2}')),
-            ],
+            inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*[.,]?\d{0,2}'))],
             decoration: const InputDecoration(hintText: '0.0'),
-            onChanged: (value) =>
-                _rate = double.tryParse(value.replaceAll(',', '.')) ?? 0,
+            onChanged: (value) => _rate = double.tryParse(value.replaceAll(',', '.')) ?? 0,
           ),
         ),
         // A credit card revolves and has no term, so the installment plan is
@@ -296,9 +282,8 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
                       LengthLimitingTextInputFormatter(4),
                     ],
                     decoration: const InputDecoration(hintText: '12'),
-                    onChanged: (value) => setState(
-                      () => _totalInstallments = int.tryParse(value) ?? 0,
-                    ),
+                    onChanged: (value) =>
+                        setState(() => _totalInstallments = int.tryParse(value) ?? 0),
                   ),
                 ),
               ),
@@ -314,9 +299,8 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
                       LengthLimitingTextInputFormatter(4),
                     ],
                     decoration: const InputDecoration(hintText: '0'),
-                    onChanged: (value) => setState(
-                      () => _paidInstallments = int.tryParse(value) ?? 0,
-                    ),
+                    onChanged: (value) =>
+                        setState(() => _paidInstallments = int.tryParse(value) ?? 0),
                   ),
                 ),
               ),
@@ -332,19 +316,15 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
                 child: Row(
                   children: [
                     Icon(
-                      Icons.event_available_rounded,
+                      CupertinoIcons.calendar_badge_plus,
                       size: 18,
                       color: context.textSecondary,
                     ),
                     const SizedBox(width: AppSpacing.md),
                     Text(
-                      _startDate == null
-                          ? l10n.notSet
-                          : dates.long(_startDate!),
+                      _startDate == null ? l10n.notSet : dates.long(_startDate!),
                       style: AppTypography.title.copyWith(
-                        color: _startDate == null
-                            ? context.textSecondary
-                            : context.textPrimary,
+                        color: _startDate == null ? context.textSecondary : context.textPrimary,
                       ),
                     ),
                   ],
@@ -362,17 +342,11 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
               decoration: const InputDecoration(),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.calendar_today_rounded,
-                    size: 18,
-                    color: context.textSecondary,
-                  ),
+                  Icon(CupertinoIcons.calendar_badge_plus, size: 18, color: context.textSecondary),
                   const SizedBox(width: AppSpacing.md),
                   Text(
                     dates.long(_nextPayment),
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                 ],
               ),
@@ -411,11 +385,7 @@ class _KindToggle extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  icon,
-                  size: 17,
-                  color: selected ? Colors.white : context.textSecondary,
-                ),
+                Icon(icon, size: 17, color: selected ? Colors.white : context.textSecondary),
                 const SizedBox(width: AppSpacing.sm),
                 Text(
                   label,
@@ -439,11 +409,7 @@ class _KindToggle extends StatelessWidget {
       child: Row(
         children: [
           option(LoanKind.loan, l10n.kindLoan, Icons.account_balance_rounded),
-          option(
-            LoanKind.creditCard,
-            l10n.kindCreditCard,
-            Icons.credit_card_rounded,
-          ),
+          option(LoanKind.creditCard, l10n.kindCreditCard, CupertinoIcons.creditcard),
         ],
       ),
     );
@@ -478,9 +444,7 @@ class _PaymentSheetState extends ConsumerState<_PaymentSheet> {
   void initState() {
     super.initState();
     _amount = widget.loan.installmentAmount;
-    _controller = TextEditingController(
-      text: _amount > 0 ? _amount.toStringAsFixed(0) : '',
-    );
+    _controller = TextEditingController(text: _amount > 0 ? _amount.toStringAsFixed(0) : '');
   }
 
   @override
@@ -500,9 +464,7 @@ class _PaymentSheetState extends ConsumerState<_PaymentSheet> {
     final messenger = ScaffoldMessenger.of(context);
     final navigator = Navigator.of(context);
 
-    await ref
-        .read(loanControllerProvider)
-        .recordPayment(widget.loan.id, _amount);
+    await ref.read(loanControllerProvider).recordPayment(widget.loan.id, _amount);
 
     navigator.pop();
     messenger.showSnackBar(SnackBar(content: Text(l10n.paymentRecorded)));

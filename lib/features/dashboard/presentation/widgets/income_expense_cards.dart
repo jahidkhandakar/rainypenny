@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -54,7 +54,7 @@ class IncomeExpenseCards extends StatelessWidget {
             amount: income,
             change: incomeChange,
             color: AppColors.income,
-            icon: Icons.arrow_downward_rounded,
+            icon: CupertinoIcons.arrow_down,
             goodWhenRising: true,
             onTap: onIncomeTap,
           ),
@@ -66,7 +66,7 @@ class IncomeExpenseCards extends StatelessWidget {
             amount: expenses,
             change: expenseChange,
             color: context.expenseColor,
-            icon: Icons.arrow_upward_rounded,
+            icon: CupertinoIcons.arrow_up,
             goodWhenRising: false,
             onTap: onExpenseTap,
           ),
@@ -122,9 +122,7 @@ class _SummaryCard extends ConsumerWidget {
                   label,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTypography.label.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.label.copyWith(color: context.textSecondary),
                 ),
               ),
             ],

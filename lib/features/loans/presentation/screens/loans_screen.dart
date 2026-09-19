@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -56,10 +57,7 @@ class LoansScreen extends ConsumerWidget {
           children: [
             FadeSlideIn(index: 0, child: _OutstandingCard(loans: list)),
             const SizedBox(height: AppSpacing.xl),
-            if (DebtCalculator.upcomingPayments(
-              list,
-              DateTime.now(),
-            ).isNotEmpty) ...[
+            if (DebtCalculator.upcomingPayments(list, DateTime.now()).isNotEmpty) ...[
               SectionHeader(title: l10n.upcomingPayments),
               FadeSlideIn(index: 1, child: _PaymentSchedule(loans: list)),
               const SizedBox(height: AppSpacing.xl),
@@ -129,9 +127,7 @@ class _OutstandingCard extends ConsumerWidget {
         children: [
           Text(
             l10n.totalOutstanding.toUpperCase(),
-            style: AppTypography.overline.copyWith(
-              color: Colors.white.withValues(alpha: 0.7),
-            ),
+            style: AppTypography.overline.copyWith(color: Colors.white.withValues(alpha: 0.7)),
           ),
           const SizedBox(height: AppSpacing.md),
           FittedBox(
@@ -154,16 +150,12 @@ class _OutstandingCard extends ConsumerWidget {
             children: [
               Text(
                 l10n.paidOff((progress * 100).round()),
-                style: AppTypography.caption.copyWith(
-                  color: Colors.white.withValues(alpha: 0.85),
-                ),
+                style: AppTypography.caption.copyWith(color: Colors.white.withValues(alpha: 0.85)),
               ),
               const Spacer(),
               Text(
                 '${l10n.monthlyPayment} ${money.format(monthly, decimals: false)}',
-                style: AppTypography.caption.copyWith(
-                  color: Colors.white.withValues(alpha: 0.85),
-                ),
+                style: AppTypography.caption.copyWith(color: Colors.white.withValues(alpha: 0.85)),
               ),
             ],
           ),
@@ -186,10 +178,7 @@ class _PaymentSchedule extends ConsumerWidget {
     final upcoming = DebtCalculator.paymentSchedule(loans);
 
     return AppCard(
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppSpacing.lg,
-        vertical: AppSpacing.sm,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.sm),
       child: Column(
         children: [
           for (final loan in upcoming)
@@ -205,25 +194,19 @@ class _PaymentSchedule extends ConsumerWidget {
                       children: [
                         Text(
                           loan.name,
-                          style: AppTypography.title.copyWith(
-                            color: context.textPrimary,
-                          ),
+                          style: AppTypography.title.copyWith(color: context.textPrimary),
                         ),
                         const SizedBox(height: 2),
                         Text(
                           dates.long(loan.nextPaymentDate),
-                          style: AppTypography.caption.copyWith(
-                            color: context.textSecondary,
-                          ),
+                          style: AppTypography.caption.copyWith(color: context.textSecondary),
                         ),
                       ],
                     ),
                   ),
                   Text(
                     money.format(loan.installmentAmount, decimals: false),
-                    style: AppTypography.amountMedium.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.amountMedium.copyWith(color: context.textPrimary),
                   ),
                 ],
               ),
@@ -284,10 +267,7 @@ class _LoanCard extends ConsumerWidget {
     final dates = ref.watch(dateFormatterProvider);
     final now = DateTime.now();
     final days = loan.daysUntilPayment(now);
-    final status = loan.statusAt(
-      now,
-      dueSoonWindowDays: DebtRules.reminderWindowDays,
-    );
+    final status = loan.statusAt(now, dueSoonWindowDays: DebtRules.reminderWindowDays);
 
     return AppCard(
       onTap: () => context.push(AppRoutes.loanDetailPath(loan.id)),
@@ -298,7 +278,7 @@ class _LoanCard extends ConsumerWidget {
             children: [
               IconBadge(
                 icon: loan.kind == LoanKind.creditCard
-                    ? Icons.credit_card_rounded
+                    ? CupertinoIcons.creditcard
                     : iconForCategory(loan.icon),
                 background: context.accentDark.withValues(alpha: 0.10),
                 foreground: context.accentDark,
@@ -310,18 +290,14 @@ class _LoanCard extends ConsumerWidget {
                   children: [
                     Text(
                       loan.name,
-                      style: AppTypography.title.copyWith(
-                        color: context.textPrimary,
-                      ),
+                      style: AppTypography.title.copyWith(color: context.textPrimary),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       '${loan.lender} · ${loan.interestRate}% ${l10n.interestRate.toLowerCase()}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: AppTypography.caption.copyWith(
-                        color: context.textSecondary,
-                      ),
+                      style: AppTypography.caption.copyWith(color: context.textSecondary),
                     ),
                   ],
                 ),
@@ -329,17 +305,11 @@ class _LoanCard extends ConsumerWidget {
               if (status == LoanStatus.dueSoon)
                 StatusChip(
                   label: l10n.dueInDays(days),
-                  color: DebtRules.isUrgent(days)
-                      ? AppColors.warning
-                      : context.accent,
-                  icon: Icons.schedule_rounded,
+                  color: DebtRules.isUrgent(days) ? AppColors.warning : context.accent,
+                  icon: CupertinoIcons.alarm,
                 )
               else
-                StatusChip(
-                  label: status.label(l10n),
-                  color: status.color,
-                  icon: status.icon,
-                ),
+                StatusChip(label: status.label(l10n), color: status.color, icon: status.icon),
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
@@ -360,18 +330,11 @@ class _LoanCard extends ConsumerWidget {
                   value: '${loan.remainingInstallments}',
                 )
               else
-                _LoanFigure(
-                  label: l10n.nextPayment,
-                  value: dates.short(loan.nextPaymentDate),
-                ),
+                _LoanFigure(label: l10n.nextPayment, value: dates.short(loan.nextPaymentDate)),
             ],
           ),
           const SizedBox(height: AppSpacing.lg),
-          AppProgressBar(
-            value: loan.progress,
-            color: context.accentLight,
-            height: 7,
-          ),
+          AppProgressBar(value: loan.progress, color: context.accentLight, height: 7),
           const SizedBox(height: AppSpacing.sm),
           Row(
             children: [
@@ -383,9 +346,7 @@ class _LoanCard extends ConsumerWidget {
                       : l10n.paidOff(loan.percentPaid),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTypography.caption.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textSecondary),
                 ),
               ),
               TextButton.icon(
@@ -402,11 +363,7 @@ class _LoanCard extends ConsumerWidget {
 }
 
 class _LoanFigure extends StatelessWidget {
-  const _LoanFigure({
-    required this.label,
-    required this.value,
-    this.emphasised = false,
-  });
+  const _LoanFigure({required this.label, required this.value, this.emphasised = false});
 
   final String label;
   final String value;
@@ -431,13 +388,8 @@ class _LoanFigure extends StatelessWidget {
             child: Text(
               value,
               style: emphasised
-                  ? AppTypography.amountLarge.copyWith(
-                      fontSize: 19,
-                      color: context.accentDark,
-                    )
-                  : AppTypography.amountMedium.copyWith(
-                      color: context.textPrimary,
-                    ),
+                  ? AppTypography.amountLarge.copyWith(fontSize: 19, color: context.accentDark)
+                  : AppTypography.amountMedium.copyWith(color: context.textPrimary),
             ),
           ),
         ],

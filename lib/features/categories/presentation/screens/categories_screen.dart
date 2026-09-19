@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -55,9 +56,7 @@ class CategoriesScreen extends ConsumerWidget {
               FadeSlideIn(
                 child: Text(
                   l10n.categoriesIntro,
-                  style: AppTypography.body.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.body.copyWith(color: context.textSecondary),
                 ),
               ),
               const SizedBox(height: AppSpacing.xl),
@@ -137,9 +136,7 @@ class _Group extends StatelessWidget {
                     padding: const EdgeInsets.all(AppSpacing.lg),
                     child: Text(
                       l10n.noCategoriesYet,
-                      style: AppTypography.body.copyWith(
-                        color: context.textSecondary,
-                      ),
+                      style: AppTypography.body.copyWith(color: context.textSecondary),
                     ),
                   ),
               ],
@@ -163,10 +160,7 @@ class _CategoryRow extends StatelessWidget {
     return InkWell(
       onTap: () => showCategoryEditor(context, category: category),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.lg,
-          vertical: AppSpacing.md,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.md),
         child: Row(
           children: [
             IconBadge(
@@ -176,9 +170,7 @@ class _CategoryRow extends StatelessWidget {
               background: category.isIncome
                   ? context.accent.withValues(alpha: 0.10)
                   : context.tintFill,
-              foreground: category.isIncome
-                  ? context.accent
-                  : context.brandSecondary,
+              foreground: category.isIncome ? context.accent : context.brandSecondary,
             ),
             const SizedBox(width: AppSpacing.md),
             Expanded(
@@ -192,16 +184,10 @@ class _CategoryRow extends StatelessWidget {
                 padding: const EdgeInsetsDirectional.only(end: AppSpacing.sm),
                 child: Text(
                   l10n.builtIn,
-                  style: AppTypography.caption.copyWith(
-                    color: context.textDisabled,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textDisabled),
                 ),
               ),
-            Icon(
-              Icons.chevron_right_rounded,
-              size: 20,
-              color: context.textDisabled,
-            ),
+            Icon(CupertinoIcons.chevron_right, size: 20, color: context.textDisabled),
           ],
         ),
       ),

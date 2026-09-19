@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -24,14 +25,11 @@ class ForgotPasswordScreen extends ConsumerStatefulWidget {
   final String? initialEmail;
 
   @override
-  ConsumerState<ForgotPasswordScreen> createState() =>
-      _ForgotPasswordScreenState();
+  ConsumerState<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
 }
 
 class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
-  late final _emailController = TextEditingController(
-    text: widget.initialEmail ?? '',
-  );
+  late final _emailController = TextEditingController(text: widget.initialEmail ?? '');
 
   bool _showValidation = false;
   bool _sent = false;
@@ -57,9 +55,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
       setState(() => _showValidation = true);
       return;
     }
-    final ok = await ref
-        .read(authControllerProvider.notifier)
-        .sendReset(_emailController.text);
+    final ok = await ref.read(authControllerProvider.notifier).sendReset(_emailController.text);
     if (!mounted || !ok) return;
     setState(() => _sent = true);
   }
@@ -77,7 +73,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
     }
 
     return AuthScaffold(
-      icon: Icons.lock_reset_rounded,
+      icon: CupertinoIcons.lock_rotation,
       title: l10n.forgotPasswordTitle,
       subtitle: l10n.forgotPasswordSubtitle,
       onBack: context.canPop() ? context.pop : null,
@@ -99,16 +95,11 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
           AuthErrorBanner(message: authFailureMessage(l10n, form.failure!)),
         ],
         const SizedBox(height: AppSpacing.xl),
-        AuthSubmitButton(
-          label: l10n.sendResetLink,
-          isBusy: form.isSubmitting,
-          onPressed: _submit,
-        ),
+        AuthSubmitButton(label: l10n.sendResetLink, isBusy: form.isSubmitting, onPressed: _submit),
         const SizedBox(height: AppSpacing.lg),
         Center(
           child: TextButton(
-            onPressed: () =>
-                context.canPop() ? context.pop() : context.go(AppRoutes.signIn),
+            onPressed: () => context.canPop() ? context.pop() : context.go(AppRoutes.signIn),
             child: Text(l10n.backToSignIn),
           ),
         ),
@@ -128,7 +119,7 @@ class _ResetLinkSentPanel extends StatelessWidget {
     final l10n = AppL10n.of(context);
 
     return AuthScaffold(
-      icon: Icons.mark_email_read_outlined,
+      icon: CupertinoIcons.envelope_open,
       title: l10n.resetLinkSentTitle,
       subtitle: l10n.resetLinkSentBody(email),
       children: [
@@ -141,19 +132,12 @@ class _ResetLinkSentPanel extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(
-                Icons.info_outline_rounded,
-                size: 18,
-                color: context.accentOnSurface,
-              ),
+              Icon(Icons.info_outline_rounded, size: 18, color: context.accentOnSurface),
               const SizedBox(width: AppSpacing.sm),
               Expanded(
                 child: Text(
                   l10n.resetLinkSentHint,
-                  style: AppTypography.caption.copyWith(
-                    color: context.textSecondary,
-                    height: 1.5,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textSecondary, height: 1.5),
                 ),
               ),
             ],
@@ -167,10 +151,7 @@ class _ResetLinkSentPanel extends StatelessWidget {
         ),
         const SizedBox(height: AppSpacing.md),
         Center(
-          child: TextButton(
-            onPressed: onResend,
-            child: Text(l10n.tryAnotherEmail),
-          ),
+          child: TextButton(onPressed: onResend, child: Text(l10n.tryAnotherEmail)),
         ),
       ],
     );

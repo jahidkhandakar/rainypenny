@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,8 +21,7 @@ class ResetPasswordScreen extends ConsumerStatefulWidget {
   const ResetPasswordScreen({super.key});
 
   @override
-  ConsumerState<ResetPasswordScreen> createState() =>
-      _ResetPasswordScreenState();
+  ConsumerState<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
 }
 
 class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
@@ -48,8 +47,7 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
     super.dispose();
   }
 
-  bool get _passwordValid =>
-      scorePassword(_passwordController.text).isAcceptable;
+  bool get _passwordValid => scorePassword(_passwordController.text).isAcceptable;
 
   bool get _matches => _confirmController.text == _passwordController.text;
 
@@ -73,7 +71,7 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
     if (_done) return const _PasswordChangedPanel();
 
     return AuthScaffold(
-      icon: Icons.password_rounded,
+      icon: CupertinoIcons.lock,
       title: l10n.resetPasswordTitle,
       subtitle: l10n.resetPasswordSubtitle,
       showLanguageButton: false,
@@ -103,9 +101,7 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
                 obscure: _obscure,
                 autofillHints: const [AutofillHints.newPassword],
                 textInputAction: TextInputAction.done,
-                errorText: _showValidation && !_matches
-                    ? l10n.passwordsDoNotMatch
-                    : null,
+                errorText: _showValidation && !_matches ? l10n.passwordsDoNotMatch : null,
                 onSubmitted: (_) => _submit(),
                 onChanged: (_) => setState(() {}),
               ),
@@ -117,11 +113,7 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
           AuthErrorBanner(message: authFailureMessage(l10n, form.failure!)),
         ],
         const SizedBox(height: AppSpacing.xl),
-        AuthSubmitButton(
-          label: l10n.savePassword,
-          isBusy: form.isSubmitting,
-          onPressed: _submit,
-        ),
+        AuthSubmitButton(label: l10n.savePassword, isBusy: form.isSubmitting, onPressed: _submit),
         const SizedBox(height: AppSpacing.lg),
         Container(
           padding: const EdgeInsets.all(AppSpacing.md),
@@ -131,10 +123,7 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
           ),
           child: Text(
             l10n.passwordAdvice,
-            style: AppTypography.caption.copyWith(
-              color: context.textSecondary,
-              height: 1.5,
-            ),
+            style: AppTypography.caption.copyWith(color: context.textSecondary, height: 1.5),
           ),
         ),
       ],
@@ -150,7 +139,7 @@ class _PasswordChangedPanel extends ConsumerWidget {
     final l10n = AppL10n.of(context);
 
     return AuthScaffold(
-      icon: Icons.check_circle_outline_rounded,
+      icon: CupertinoIcons.check_mark_circled,
       title: l10n.passwordChangedTitle,
       subtitle: l10n.passwordChangedBody,
       showLanguageButton: false,

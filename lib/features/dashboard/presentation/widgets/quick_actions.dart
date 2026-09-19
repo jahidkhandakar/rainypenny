@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,17 +22,17 @@ class QuickActions extends StatelessWidget {
     final actions = <_QuickAction>[
       _QuickAction(
         label: l10n.income,
-        icon: Icons.add_circle_outline_rounded,
+        icon: CupertinoIcons.add_circled,
         onTap: () => context.push('${AppRoutes.addTransaction}?type=income'),
       ),
       _QuickAction(
         label: l10n.expenses,
-        icon: Icons.remove_circle_outline_rounded,
+        icon: CupertinoIcons.minus_circle,
         onTap: () => context.push('${AppRoutes.addTransaction}?type=expense'),
       ),
       _QuickAction(
         label: l10n.budget,
-        icon: Icons.donut_small_rounded,
+        icon: CupertinoIcons.chart_pie_fill,
         onTap: () => context.push(AppRoutes.budget),
       ),
       _QuickAction(
@@ -48,20 +49,13 @@ class QuickActions extends StatelessWidget {
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        for (final action in actions)
-          Expanded(child: _QuickActionButton(action: action)),
-      ],
+      children: [for (final action in actions) Expanded(child: _QuickActionButton(action: action))],
     );
   }
 }
 
 class _QuickAction {
-  const _QuickAction({
-    required this.label,
-    required this.icon,
-    required this.onTap,
-  });
+  const _QuickAction({required this.label, required this.icon, required this.onTap});
 
   final String label;
   final IconData icon;
@@ -97,10 +91,7 @@ class _QuickActionButton extends StatelessWidget {
               maxLines: 2,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
-              style: AppTypography.caption.copyWith(
-                fontSize: 11.5,
-                color: context.textSecondary,
-              ),
+              style: AppTypography.caption.copyWith(fontSize: 11.5, color: context.textSecondary),
             ),
           ],
         ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -39,9 +40,7 @@ class SavingsGoalCard extends ConsumerWidget {
     return AppCard(
       onTap: onTap,
       color: highlighted ? context.tintFill : null,
-      borderColor: highlighted
-          ? context.brandSecondary.withValues(alpha: 0.28)
-          : null,
+      borderColor: highlighted ? context.brandSecondary.withValues(alpha: 0.28) : null,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -61,16 +60,12 @@ class SavingsGoalCard extends ConsumerWidget {
                       goal.name,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: AppTypography.title.copyWith(
-                        color: context.textPrimary,
-                      ),
+                      style: AppTypography.title.copyWith(color: context.textPrimary),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       '${l10n.target} · ${dates.monthYear(goal.targetDate)}',
-                      style: AppTypography.caption.copyWith(
-                        color: context.textSecondary,
-                      ),
+                      style: AppTypography.caption.copyWith(color: context.textSecondary),
                     ),
                   ],
                 ),
@@ -79,14 +74,12 @@ class SavingsGoalCard extends ConsumerWidget {
                 StatusChip(
                   label: l10n.goalComplete,
                   color: AppColors.success,
-                  icon: Icons.check_circle_rounded,
+                  icon: CupertinoIcons.check_mark_circled_solid,
                 )
               else
                 Text(
                   '${goal.percentComplete}%',
-                  style: AppTypography.amountMedium.copyWith(
-                    color: context.brandSecondary,
-                  ),
+                  style: AppTypography.amountMedium.copyWith(color: context.brandSecondary),
                 ),
             ],
           ),
@@ -97,16 +90,12 @@ class SavingsGoalCard extends ConsumerWidget {
             children: [
               Text(
                 money.format(goal.saved, decimals: false),
-                style: AppTypography.amountLarge.copyWith(
-                  color: context.textPrimary,
-                ),
+                style: AppTypography.amountLarge.copyWith(color: context.textPrimary),
               ),
               const SizedBox(width: 6),
               Text(
                 '/ ${money.format(goal.target, decimals: false)}',
-                style: AppTypography.body.copyWith(
-                  color: context.textSecondary,
-                ),
+                style: AppTypography.body.copyWith(color: context.textSecondary),
               ),
             ],
           ),
@@ -124,13 +113,10 @@ class SavingsGoalCard extends ConsumerWidget {
                             '${money.format(goal.monthlyContribution, decimals: false)}',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTypography.caption.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textSecondary),
                 ),
               ),
-              if (onAddFunds != null)
-                TextButton(onPressed: onAddFunds, child: Text(l10n.addFunds)),
+              if (onAddFunds != null) TextButton(onPressed: onAddFunds, child: Text(l10n.addFunds)),
             ],
           ),
         ],

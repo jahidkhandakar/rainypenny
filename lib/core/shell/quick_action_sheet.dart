@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -76,25 +77,16 @@ class _QuickActionSheet extends ConsumerWidget {
       // Capped and scrollable: eight rows plus two headers is taller than a
       // small phone, and the last "Jump to" entry must stay reachable.
       child: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxHeight: MediaQuery.sizeOf(context).height * 0.9,
-        ),
+        constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.9),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.page,
-            0,
-            AppSpacing.page,
-            AppSpacing.xl,
-          ),
+          padding: const EdgeInsets.fromLTRB(AppSpacing.page, 0, AppSpacing.page, AppSpacing.xl),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
                 l10n.quickActionsTitle,
-                style: AppTypography.sectionTitle.copyWith(
-                  color: context.textPrimary,
-                ),
+                style: AppTypography.sectionTitle.copyWith(color: context.textPrimary),
               ),
               const SizedBox(height: AppSpacing.xl),
 
@@ -108,7 +100,7 @@ class _QuickActionSheet extends ConsumerWidget {
                   Expanded(
                     child: _HeroAction(
                       label: l10n.addExpense,
-                      icon: Icons.arrow_upward_rounded,
+                      icon: CupertinoIcons.arrow_up,
                       color: context.expenseColor,
                       onTap: () => choose(QuickAction.addExpense),
                     ),
@@ -117,7 +109,7 @@ class _QuickActionSheet extends ConsumerWidget {
                   Expanded(
                     child: _HeroAction(
                       label: l10n.addIncome,
-                      icon: Icons.arrow_downward_rounded,
+                      icon: CupertinoIcons.arrow_down,
                       color: context.accent,
                       onTap: () => choose(QuickAction.addIncome),
                     ),
@@ -131,7 +123,7 @@ class _QuickActionSheet extends ConsumerWidget {
                   Expanded(
                     child: _SecondaryAction(
                       label: l10n.addLoanAction,
-                      icon: Icons.account_balance_rounded,
+                      icon: CupertinoIcons.creditcard,
                       onTap: () => choose(QuickAction.addLoan),
                     ),
                   ),
@@ -139,7 +131,7 @@ class _QuickActionSheet extends ConsumerWidget {
                   Expanded(
                     child: _SecondaryAction(
                       label: l10n.addBudgetAction,
-                      icon: Icons.donut_small_rounded,
+                      icon: CupertinoIcons.chart_pie,
                       onTap: () => choose(QuickAction.addBudget),
                     ),
                   ),
@@ -147,7 +139,7 @@ class _QuickActionSheet extends ConsumerWidget {
                   Expanded(
                     child: _SecondaryAction(
                       label: l10n.addGoalAction,
-                      icon: Icons.savings_rounded,
+                      icon: CupertinoIcons.money_dollar_circle,
                       onTap: () => choose(QuickAction.addGoal),
                     ),
                   ),
@@ -163,17 +155,17 @@ class _QuickActionSheet extends ConsumerWidget {
 
               _JumpTo(
                 label: l10n.reports,
-                icon: Icons.insert_chart_outlined_rounded,
+                icon: CupertinoIcons.chart_bar,
                 onTap: () => choose(QuickAction.viewReports),
               ),
               _JumpTo(
                 label: l10n.budgets,
-                icon: Icons.pie_chart_outline_rounded,
+                icon: CupertinoIcons.chart_pie,
                 onTap: () => choose(QuickAction.viewBudgets),
               ),
               _JumpTo(
                 label: l10n.savings,
-                icon: Icons.savings_outlined,
+                icon: CupertinoIcons.money_dollar_circle,
                 onTap: () => choose(QuickAction.viewSavings),
               ),
             ],
@@ -222,10 +214,7 @@ class _HeroAction extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.lg,
-            vertical: AppSpacing.lg,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.lg),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -239,11 +228,7 @@ class _HeroAction extends StatelessWidget {
                 child: Icon(icon, size: 20, color: Colors.white),
               ),
               const SizedBox(height: AppSpacing.md),
-              Text(
-                label,
-                maxLines: 2,
-                style: AppTypography.title.copyWith(color: Colors.white),
-              ),
+              Text(label, maxLines: 2, style: AppTypography.title.copyWith(color: Colors.white)),
             ],
           ),
         ),
@@ -255,11 +240,7 @@ class _HeroAction extends StatelessWidget {
 /// A create action that is real but occasional — a tinted glyph over a neutral
 /// card, so it reads as available without competing with the two above.
 class _SecondaryAction extends StatelessWidget {
-  const _SecondaryAction({
-    required this.label,
-    required this.icon,
-    required this.onTap,
-  });
+  const _SecondaryAction({required this.label, required this.icon, required this.onTap});
 
   final String label;
   final IconData icon;
@@ -293,9 +274,7 @@ class _SecondaryAction extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.xs,
-                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.xs),
                   child: Text(
                     label,
                     maxLines: 2,
@@ -331,25 +310,15 @@ class _JumpTo extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(AppRadius.md),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.sm,
-          vertical: 11,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: 11),
         child: Row(
           children: [
             Icon(icon, size: 20, color: context.textSecondary),
             const SizedBox(width: AppSpacing.md),
             Expanded(
-              child: Text(
-                label,
-                style: AppTypography.title.copyWith(color: context.textPrimary),
-              ),
+              child: Text(label, style: AppTypography.title.copyWith(color: context.textPrimary)),
             ),
-            Icon(
-              Icons.chevron_right_rounded,
-              size: 20,
-              color: context.textDisabled,
-            ),
+            Icon(CupertinoIcons.chevron_right, size: 20, color: context.textDisabled),
           ],
         ),
       ),

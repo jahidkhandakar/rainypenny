@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -178,14 +179,13 @@ class _SpendingSection extends ConsumerWidget {
           padding: const EdgeInsets.all(AppSpacing.lg),
           child: slices.isEmpty
               ? EmptyState(
-                  icon: Icons.donut_large_rounded,
+                  icon: CupertinoIcons.chart_pie,
                   title: l10n.spendingOverview,
                   message: l10n.noTransactionsBody,
                   // An empty donut is the clearest possible moment to offer the
                   // one action that fills it.
                   actionLabel: l10n.addExpense,
-                  onAction: () =>
-                      context.push('${AppRoutes.addTransaction}?type=expense'),
+                  onAction: () => context.push('${AppRoutes.addTransaction}?type=expense'),
                   compact: true,
                 )
               : SpendingDonut(slices: slices, centerLabel: l10n.expenses),
@@ -215,10 +215,7 @@ class _InsightSection extends ConsumerWidget {
               actionLabel: l10n.viewAll,
               onAction: () => context.push(AppRoutes.notifications),
             ),
-            InsightCard(
-              insight: headline,
-              onTap: () => context.push(AppRoutes.notifications),
-            ),
+            InsightCard(insight: headline, onTap: () => context.push(AppRoutes.notifications)),
             const SizedBox(height: AppSpacing.section),
           ],
         );
@@ -245,16 +242,13 @@ class _RecentTransactionsSection extends ConsumerWidget {
           onAction: () => context.go(AppRoutes.transactions),
         ),
         AppCard(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppSpacing.sm,
-            vertical: AppSpacing.xs,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: AppSpacing.xs),
           child: transactions.when(
             data: (list) {
               final recent = list.take(5).toList();
               if (recent.isEmpty) {
                 return EmptyState(
-                  icon: Icons.receipt_long_rounded,
+                  icon: CupertinoIcons.doc_text,
                   title: l10n.noTransactionsTitle,
                   message: l10n.noTransactionsBody,
                   compact: true,
@@ -270,9 +264,7 @@ class _RecentTransactionsSection extends ConsumerWidget {
                 ],
               );
             },
-            loading: () => const Column(
-              children: [SkeletonRow(), SkeletonRow(), SkeletonRow()],
-            ),
+            loading: () => const Column(children: [SkeletonRow(), SkeletonRow(), SkeletonRow()]),
             error: (_, _) => ErrorState(
               message: l10n.somethingWentWrong,
               retryLabel: l10n.retry,
@@ -307,7 +299,7 @@ class _BudgetSection extends ConsumerWidget {
             if (preview.isEmpty) {
               return AppCard(
                 child: EmptyState(
-                  icon: Icons.donut_small_rounded,
+                  icon: CupertinoIcons.chart_pie_fill,
                   title: l10n.budget,
                   message: l10n.noTransactionsBody,
                   compact: true,
@@ -395,10 +387,8 @@ class _HealthSection extends ConsumerWidget {
           onAction: () => context.push(AppRoutes.financialHealth),
         ),
         health.when(
-          data: (value) => HealthCard(
-            health: value,
-            onTap: () => context.push(AppRoutes.financialHealth),
-          ),
+          data: (value) =>
+              HealthCard(health: value, onTap: () => context.push(AppRoutes.financialHealth)),
           loading: () => const SkeletonCard(height: 150, lines: 4),
           error: (_, _) => const SizedBox.shrink(),
         ),

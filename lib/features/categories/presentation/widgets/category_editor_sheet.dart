@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -236,8 +237,8 @@ class _DirectionToggle extends StatelessWidget {
       ),
       child: Row(
         children: [
-          option(false, l10n.expense, Icons.arrow_downward_rounded, context.brandSecondary),
-          option(true, l10n.income, Icons.arrow_upward_rounded, context.accent),
+          option(false, l10n.expense, CupertinoIcons.arrow_down, context.brandSecondary),
+          option(true, l10n.income, CupertinoIcons.arrow_up, context.accent),
         ],
       ),
     );

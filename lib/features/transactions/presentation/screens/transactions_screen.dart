@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -52,7 +53,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
           // default, so it lives behind a toggle rather than in the chip row.
           IconButton(
             tooltip: query.wholeHistory ? l10n.salaryCycle : l10n.allTime,
-            icon: Icon(query.wholeHistory ? Icons.event_repeat_rounded : Icons.history_rounded),
+            icon: Icon(query.wholeHistory ? CupertinoIcons.repeat : CupertinoIcons.clock_fill),
             onPressed: () =>
                 ref.read(transactionQueryProvider.notifier).setWholeHistory(!query.wholeHistory),
           ),

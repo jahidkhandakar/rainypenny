@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -55,8 +56,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
 
   bool get _nameValid => _nameController.text.trim().isNotEmpty;
   bool get _emailValid => isValidEmail(_emailController.text);
-  bool get _passwordValid =>
-      scorePassword(_passwordController.text).isAcceptable;
+  bool get _passwordValid => scorePassword(_passwordController.text).isAcceptable;
 
   Future<void> _submit() async {
     // TEMPORARY: see AppConfig.skipAuthWithoutBackend.
@@ -73,11 +73,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
 
     final outcome = await ref
         .read(authControllerProvider.notifier)
-        .signUp(
-          _nameController.text,
-          _emailController.text,
-          _passwordController.text,
-        );
+        .signUp(_nameController.text, _emailController.text, _passwordController.text);
     if (!mounted || outcome == null) return;
 
     // Held locally as well as on the account, so the first dashboard can greet
@@ -120,9 +116,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                 controller: _nameController,
                 textCapitalization: TextCapitalization.words,
                 autofillHints: const [AutofillHints.name],
-                errorText: _showValidation && !_nameValid
-                    ? l10n.nameRequired
-                    : null,
+                errorText: _showValidation && !_nameValid ? l10n.nameRequired : null,
                 onChanged: (_) => setState(() {}),
               ),
               const SizedBox(height: AppSpacing.lg),
@@ -132,9 +126,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 autofillHints: const [AutofillHints.newUsername],
-                errorText: _showValidation && !_emailValid
-                    ? l10n.emailInvalid
-                    : null,
+                errorText: _showValidation && !_emailValid ? l10n.emailInvalid : null,
                 onChanged: (_) => setState(() {}),
               ),
               const SizedBox(height: AppSpacing.lg),
@@ -149,8 +141,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                 onChanged: (_) => setState(() {}),
                 suffix: ObscureToggle(
                   obscured: _obscurePassword,
-                  onChanged: (value) =>
-                      setState(() => _obscurePassword = value),
+                  onChanged: (value) => setState(() => _obscurePassword = value),
                 ),
               ),
             ],
@@ -177,17 +168,12 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
           ),
         ],
         const SizedBox(height: AppSpacing.xl),
-        AuthSubmitButton(
-          label: l10n.signUp,
-          isBusy: form.isSubmitting,
-          onPressed: _submit,
-        ),
+        AuthSubmitButton(label: l10n.signUp, isBusy: form.isSubmitting, onPressed: _submit),
         const SizedBox(height: AppSpacing.lg),
         AuthFooterPrompt(
           prompt: l10n.haveAccount,
           actionLabel: l10n.signIn,
-          onAction: () =>
-              context.canPop() ? context.pop() : context.go(AppRoutes.signIn),
+          onAction: () => context.canPop() ? context.pop() : context.go(AppRoutes.signIn),
         ),
       ],
     );
@@ -200,11 +186,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
 /// several of the markets this ships to require consent to be an affirmative
 /// act, and a sentence nobody taps is not one.
 class _TermsCheckbox extends StatelessWidget {
-  const _TermsCheckbox({
-    required this.value,
-    required this.showError,
-    required this.onChanged,
-  });
+  const _TermsCheckbox({required this.value, required this.showError, required this.onChanged});
 
   final bool value;
   final bool showError;
@@ -237,10 +219,7 @@ class _TermsCheckbox extends StatelessWidget {
                 Expanded(
                   child: Text(
                     l10n.acceptTerms,
-                    style: AppTypography.body.copyWith(
-                      fontSize: 13,
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.body.copyWith(fontSize: 13, color: context.textSecondary),
                   ),
                 ),
               ],
@@ -252,9 +231,7 @@ class _TermsCheckbox extends StatelessWidget {
             padding: const EdgeInsetsDirectional.only(start: 36, top: 2),
             child: Text(
               l10n.acceptTermsRequired,
-              style: AppTypography.caption.copyWith(
-                color: context.colors.error,
-              ),
+              style: AppTypography.caption.copyWith(color: context.colors.error),
             ),
           ),
       ],
@@ -275,7 +252,7 @@ class _ConfirmEmailPanel extends ConsumerWidget {
     final form = ref.watch(authControllerProvider);
 
     return AuthScaffold(
-      icon: Icons.mark_email_unread_outlined,
+      icon: CupertinoIcons.envelope_badge,
       title: l10n.confirmEmailTitle,
       subtitle: l10n.confirmEmailBody(email),
       children: [
@@ -295,9 +272,7 @@ class _ConfirmEmailPanel extends ConsumerWidget {
                         .read(authControllerProvider.notifier)
                         .resendConfirmation(email);
                     if (!sent) return;
-                    messenger.showSnackBar(
-                      SnackBar(content: Text(l10n.confirmationResent)),
-                    );
+                    messenger.showSnackBar(SnackBar(content: Text(l10n.confirmationResent)));
                   },
             child: Text(l10n.resendConfirmation),
           ),

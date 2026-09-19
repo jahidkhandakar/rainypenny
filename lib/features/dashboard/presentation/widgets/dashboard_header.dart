@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -29,11 +30,7 @@ class DashboardHeader extends ConsumerWidget {
         .watch(insightsProvider)
         .maybeWhen(
           data: (insights) => insights
-              .where(
-                (i) =>
-                    i.level == InsightLevel.warning ||
-                    i.level == InsightLevel.critical,
-              )
+              .where((i) => i.level == InsightLevel.warning || i.level == InsightLevel.critical)
               .length,
           orElse: () => 0,
         );
@@ -71,18 +68,14 @@ class DashboardHeader extends ConsumerWidget {
                   greeting,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: AppTypography.sectionTitle.copyWith(
-                    color: context.textPrimary,
-                  ),
+                  style: AppTypography.sectionTitle.copyWith(color: context.textPrimary),
                 ),
               const SizedBox(height: 3),
               Text(
                 l10n.greetingSubtitle,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: AppTypography.caption.copyWith(
-                  color: context.textSecondary,
-                ),
+                style: AppTypography.caption.copyWith(color: context.textSecondary),
               ),
             ],
           ),
@@ -92,11 +85,7 @@ class DashboardHeader extends ConsumerWidget {
           badgeCount: alerts,
           tooltip: l10n.notifications,
           onTap: () => context.push(AppRoutes.notifications),
-          child: Icon(
-            Icons.notifications_none_rounded,
-            size: 21,
-            color: context.textPrimary,
-          ),
+          child: Icon(CupertinoIcons.bell, size: 21, color: context.textPrimary),
         ),
       ],
     );

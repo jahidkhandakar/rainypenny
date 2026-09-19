@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -39,10 +40,7 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
       context.push(AppRoutes.signUp);
       return;
     }
-    _controller.nextPage(
-      duration: AppDuration.normal,
-      curve: Curves.easeOutCubic,
-    );
+    _controller.nextPage(duration: AppDuration.normal, curve: Curves.easeOutCubic);
   }
 
   @override
@@ -67,9 +65,7 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                   const SizedBox(width: AppSpacing.sm),
                   Text(
                     l10n.appName,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                   const Spacer(),
                   // Language first, and reachable from the very first frame:
@@ -77,12 +73,8 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                   TextButton.icon(
                     onPressed: () => context.push(AppRoutes.language),
                     icon: const Icon(Icons.language_rounded, size: 18),
-                    label: Text(
-                      AppLocales.byCode(locale.languageCode).nativeName,
-                    ),
-                    style: TextButton.styleFrom(
-                      foregroundColor: context.textSecondary,
-                    ),
+                    label: Text(AppLocales.byCode(locale.languageCode).nativeName),
+                    style: TextButton.styleFrom(foregroundColor: context.textSecondary),
                   ),
                 ],
               ),
@@ -128,52 +120,42 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
 
   List<_WelcomeSlide> _slides(AppL10n l10n) => [
     _WelcomeSlide(
-      icon: Icons.account_balance_wallet_rounded,
+      icon: CupertinoIcons.creditcard_fill,
       title: l10n.welcomeTrackTitle,
       body: l10n.welcomeTrackBody,
       chips: [
-        OnboardingArtChip(
-          label: l10n.income,
-          icon: Icons.arrow_downward_rounded,
-          x: -0.72,
-          y: -0.55,
-        ),
-        OnboardingArtChip(
-          label: l10n.expenses,
-          icon: Icons.arrow_upward_rounded,
-          x: 0.74,
-          y: 0.5,
-        ),
+        OnboardingArtChip(label: l10n.income, icon: CupertinoIcons.arrow_down, x: -0.72, y: -0.55),
+        OnboardingArtChip(label: l10n.expenses, icon: CupertinoIcons.arrow_up, x: 0.74, y: 0.5),
       ],
     ),
     _WelcomeSlide(
-      icon: Icons.pie_chart_rounded,
+      icon: CupertinoIcons.chart_pie_fill,
       title: l10n.welcomeBudgetTitle,
       body: l10n.welcomeBudgetBody,
       chips: [
         OnboardingArtChip(
           label: l10n.budget,
-          icon: Icons.savings_rounded,
+          icon: CupertinoIcons.money_dollar_circle_fill,
           x: 0.7,
           y: -0.5,
         ),
       ],
     ),
     _WelcomeSlide(
-      icon: Icons.flag_rounded,
+      icon: CupertinoIcons.flag_fill,
       title: l10n.welcomeGoalsTitle,
       body: l10n.welcomeGoalsBody,
       chips: [
         OnboardingArtChip(
           label: l10n.savings,
-          icon: Icons.trending_up_rounded,
+          icon: CupertinoIcons.graph_square_fill,
           x: -0.7,
           y: 0.5,
         ),
       ],
     ),
     _WelcomeSlide(
-      icon: Icons.lock_rounded,
+      icon: CupertinoIcons.lock_fill,
       title: l10n.welcomePrivacyTitle,
       body: l10n.welcomePrivacyBody,
     ),
@@ -212,19 +194,13 @@ class _Slide extends StatelessWidget {
           Text(
             slide.title,
             textAlign: TextAlign.center,
-            style: AppTypography.heading.copyWith(
-              fontSize: 24,
-              color: context.textPrimary,
-            ),
+            style: AppTypography.heading.copyWith(fontSize: 24, color: context.textPrimary),
           ),
           const SizedBox(height: AppSpacing.md),
           Text(
             slide.body,
             textAlign: TextAlign.center,
-            style: AppTypography.body.copyWith(
-              color: context.textSecondary,
-              height: 1.6,
-            ),
+            style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.6),
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,8 +20,7 @@ class LanguagePickerScreen extends ConsumerStatefulWidget {
   const LanguagePickerScreen({super.key});
 
   @override
-  ConsumerState<LanguagePickerScreen> createState() =>
-      _LanguagePickerScreenState();
+  ConsumerState<LanguagePickerScreen> createState() => _LanguagePickerScreenState();
 }
 
 class _LanguagePickerScreenState extends ConsumerState<LanguagePickerScreen> {
@@ -73,9 +73,7 @@ class _LanguagePickerScreenState extends ConsumerState<LanguagePickerScreen> {
                   borderRadius: BorderRadius.circular(AppRadius.md),
                   borderSide: BorderSide.none,
                 ),
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.md,
-                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: AppSpacing.md),
               ),
             ),
           ),
@@ -157,11 +155,7 @@ class _Heading extends StatelessWidget {
 }
 
 class _LanguageRow extends StatelessWidget {
-  const _LanguageRow({
-    required this.option,
-    required this.selected,
-    required this.onTap,
-  });
+  const _LanguageRow({required this.option, required this.selected, required this.onTap});
 
   final AppLocale option;
   final bool selected;
@@ -206,18 +200,14 @@ class _LanguageRow extends StatelessWidget {
                     // run the other way to the surrounding layout. The isolate
                     // keeps it from dragging the row's punctuation with it.
                     '\u2068${option.nativeName}\u2069',
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                   const SizedBox(height: 1),
                   Text(
                     option.isRtl
                         ? '${option.englishName} · ${l10n.rightToLeft}'
                         : option.englishName,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -226,7 +216,7 @@ class _LanguageRow extends StatelessWidget {
               duration: AppDuration.fast,
               opacity: selected ? 1 : 0,
               child: Icon(
-                Icons.check_circle_rounded,
+                CupertinoIcons.checkmark_circle_fill,
                 size: 21,
                 color: context.accentOnSurface,
               ),

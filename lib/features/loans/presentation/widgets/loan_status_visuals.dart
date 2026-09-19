@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -18,10 +18,10 @@ extension LoanStatusVisuals on LoanStatus {
   };
 
   IconData get icon => switch (this) {
-    LoanStatus.completed => Icons.check_circle_rounded,
-    LoanStatus.overdue => Icons.error_rounded,
-    LoanStatus.dueSoon => Icons.schedule_rounded,
-    LoanStatus.active => Icons.trending_down_rounded,
+    LoanStatus.completed => CupertinoIcons.checkmark_circle_fill,
+    LoanStatus.overdue => CupertinoIcons.exclamationmark_circle_fill,
+    LoanStatus.dueSoon => CupertinoIcons.clock_fill,
+    LoanStatus.active => CupertinoIcons.graph_square_fill,
   };
 
   String label(AppL10n l10n) => switch (this) {

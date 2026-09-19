@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/app_dimens.dart';
@@ -32,19 +33,12 @@ class SectionHeader extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: AppTypography.sectionTitle.copyWith(
-                    color: context.textPrimary,
-                  ),
-                ),
+                Text(title, style: AppTypography.sectionTitle.copyWith(color: context.textPrimary)),
                 if (subtitle != null) ...[
                   const SizedBox(height: 2),
                   Text(
                     subtitle!,
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ],
@@ -58,11 +52,7 @@ class SectionHeader extends StatelessWidget {
                 children: [
                   Text(actionLabel!),
                   const SizedBox(width: 2),
-                  Icon(
-                    Icons.arrow_forward_rounded,
-                    size: 14,
-                    color: context.accentOnSurface,
-                  ),
+                  Icon(CupertinoIcons.arrow_right, size: 14, color: context.accentOnSurface),
                 ],
               ),
             ),
@@ -83,9 +73,7 @@ class OverlineLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text.toUpperCase(),
-      style: AppTypography.overline.copyWith(
-        color: color ?? context.textSecondary,
-      ),
+      style: AppTypography.overline.copyWith(color: color ?? context.textSecondary),
     );
   }
 }

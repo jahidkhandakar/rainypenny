@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -16,12 +17,7 @@ import '../../../financial/domain/entities/cycle_summary.dart';
 /// cycle, and what is left of it. It used to show a single "total balance" read
 /// from a constant, which never moved when a transaction was added.
 class SalaryCard extends ConsumerWidget {
-  const SalaryCard({
-    super.key,
-    required this.summary,
-    required this.salary,
-    this.onTap,
-  });
+  const SalaryCard({super.key, required this.summary, required this.salary, this.onTap});
 
   final CycleSummary summary;
 
@@ -85,7 +81,7 @@ class SalaryCard extends ConsumerWidget {
                         ),
                       ),
                       Icon(
-                        Icons.account_balance_wallet_rounded,
+                        CupertinoIcons.creditcard_fill,
                         size: 18,
                         color: Colors.white.withValues(alpha: 0.55),
                       ),
@@ -99,9 +95,7 @@ class SalaryCard extends ConsumerWidget {
                       alignment: AlignmentDirectional.centerStart,
                       child: Text(
                         money.format(value),
-                        style: AppTypography.display.copyWith(
-                          color: Colors.white,
-                        ),
+                        style: AppTypography.display.copyWith(color: Colors.white),
                       ),
                     ),
                   ),
@@ -112,9 +106,7 @@ class SalaryCard extends ConsumerWidget {
                   // that tells them whether they are on pace.
                   AppProgressBar(
                     value: summary.spentProgress,
-                    color: summary.isOverspent
-                        ? Colors.white
-                        : Colors.white.withValues(alpha: 0.9),
+                    color: summary.isOverspent ? Colors.white : Colors.white.withValues(alpha: 0.9),
                     trackColor: Colors.white.withValues(alpha: 0.22),
                     height: 6,
                   ),
@@ -122,9 +114,7 @@ class SalaryCard extends ConsumerWidget {
                   Text(
                     summary.isOverspent
                         ? l10n.overspentNotice
-                        : l10n.daysLeftInCycle(
-                            summary.cycle.daysRemainingAt(now),
-                          ),
+                        : l10n.daysLeftInCycle(summary.cycle.daysRemainingAt(now)),
                     style: AppTypography.caption.copyWith(
                       color: Colors.white.withValues(alpha: 0.78),
                     ),
@@ -144,22 +134,15 @@ class SalaryCard extends ConsumerWidget {
                             salary > 0 ? salary : summary.income,
                             decimals: false,
                           ),
-                          icon: Icons.south_west_rounded,
+                          icon: CupertinoIcons.arrow_down_left,
                         ),
                       ),
-                      Container(
-                        width: 1,
-                        height: 34,
-                        color: Colors.white.withValues(alpha: 0.14),
-                      ),
+                      Container(width: 1, height: 34, color: Colors.white.withValues(alpha: 0.14)),
                       Expanded(
                         child: _Figure(
                           label: l10n.spentSoFar,
-                          value: money.format(
-                            summary.expenses,
-                            decimals: false,
-                          ),
-                          icon: Icons.north_east_rounded,
+                          value: money.format(summary.expenses, decimals: false),
+                          icon: CupertinoIcons.arrow_up_right,
                           alignEnd: true,
                         ),
                       ),
@@ -173,7 +156,7 @@ class SalaryCard extends ConsumerWidget {
                     Row(
                       children: [
                         Icon(
-                          Icons.refresh_rounded,
+                          CupertinoIcons.arrow_clockwise,
                           size: 13,
                           color: Colors.white.withValues(alpha: 0.6),
                         ),
@@ -218,14 +201,10 @@ class _Figure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: alignEnd
-          ? CrossAxisAlignment.end
-          : CrossAxisAlignment.start,
+      crossAxisAlignment: alignEnd ? CrossAxisAlignment.end : CrossAxisAlignment.start,
       children: [
         Row(
-          mainAxisAlignment: alignEnd
-              ? MainAxisAlignment.end
-              : MainAxisAlignment.start,
+          mainAxisAlignment: alignEnd ? MainAxisAlignment.end : MainAxisAlignment.start,
           children: [
             Icon(icon, size: 12, color: Colors.white.withValues(alpha: 0.6)),
             const SizedBox(width: 4),
@@ -245,15 +224,10 @@ class _Figure extends StatelessWidget {
         const SizedBox(height: 3),
         FittedBox(
           fit: BoxFit.scaleDown,
-          alignment: alignEnd
-              ? AlignmentDirectional.centerEnd
-              : AlignmentDirectional.centerStart,
+          alignment: alignEnd ? AlignmentDirectional.centerEnd : AlignmentDirectional.centerStart,
           child: Text(
             value,
-            style: AppTypography.amountLarge.copyWith(
-              fontSize: 19,
-              color: Colors.white,
-            ),
+            style: AppTypography.amountLarge.copyWith(fontSize: 19, color: Colors.white),
           ),
         ),
       ],

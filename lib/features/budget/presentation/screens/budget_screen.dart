@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -54,17 +55,13 @@ class BudgetScreen extends ConsumerWidget {
               index: 0,
               child: _BudgetSummaryCard(
                 budgets: list,
-                periodLabel:
-                    '${l10n.lastThirtyDays} · ${dates.range(range.start, range.end)}',
+                periodLabel: '${l10n.lastThirtyDays} · ${dates.range(range.start, range.end)}',
               ),
             ),
             const SizedBox(height: AppSpacing.lg),
             ..._warningBanners(context, list),
             const SizedBox(height: AppSpacing.sm),
-            SectionHeader(
-              title: l10n.budgets,
-              subtitle: l10n.spendingByCategory,
-            ),
+            SectionHeader(title: l10n.budgets, subtitle: l10n.spendingByCategory),
             for (var i = 0; i < list.length; i++)
               Padding(
                 padding: const EdgeInsets.only(bottom: AppSpacing.md),
@@ -78,7 +75,7 @@ class BudgetScreen extends ConsumerWidget {
               ),
             if (list.isEmpty)
               EmptyState(
-                icon: Icons.donut_small_rounded,
+                icon: CupertinoIcons.chart_pie_fill,
                 title: l10n.noBudgetsTitle,
                 message: l10n.noBudgetsBody,
                 actionLabel: l10n.newBudget,
@@ -158,11 +155,7 @@ class _BudgetSummaryCard extends ConsumerWidget {
                 value: money.format(limit, decimals: false),
                 color: context.textPrimary,
               ),
-              _Figure(
-                label: l10n.spent,
-                value: money.format(spent, decimals: false),
-                color: color,
-              ),
+              _Figure(label: l10n.spent, value: money.format(spent, decimals: false), color: color),
               _Figure(
                 label: l10n.remaining,
                 value: money.format(remaining, decimals: false),
@@ -184,11 +177,7 @@ class _BudgetSummaryCard extends ConsumerWidget {
 }
 
 class _Figure extends StatelessWidget {
-  const _Figure({
-    required this.label,
-    required this.value,
-    required this.color,
-  });
+  const _Figure({required this.label, required this.value, required this.color});
 
   final String label;
   final String value;
@@ -212,10 +201,7 @@ class _Figure extends StatelessWidget {
             alignment: AlignmentDirectional.centerStart,
             child: Text(
               value,
-              style: AppTypography.amountLarge.copyWith(
-                fontSize: 20,
-                color: color,
-              ),
+              style: AppTypography.amountLarge.copyWith(fontSize: 20, color: color),
             ),
           ),
         ],
@@ -248,8 +234,8 @@ class _BudgetWarning extends ConsumerWidget {
         children: [
           IconBadge(
             icon: budget.isExceeded
-                ? Icons.error_rounded
-                : Icons.warning_amber_rounded,
+                ? CupertinoIcons.exclamationmark_circle_fill
+                : CupertinoIcons.exclamationmark_triangle,
             size: 36,
             background: color.withValues(alpha: 0.14),
             foreground: color,
@@ -258,10 +244,7 @@ class _BudgetWarning extends ConsumerWidget {
           Expanded(
             child: Text(
               message,
-              style: AppTypography.body.copyWith(
-                fontSize: 13,
-                color: context.textPrimary,
-              ),
+              style: AppTypography.body.copyWith(fontSize: 13, color: context.textPrimary),
             ),
           ),
         ],

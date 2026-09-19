@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -84,10 +85,7 @@ class _Body extends ConsumerWidget {
     final money = ref.watch(moneyFormatterProvider);
     final dates = ref.watch(dateFormatterProvider);
     final now = DateTime.now();
-    final status = loan.statusAt(
-      now,
-      dueSoonWindowDays: DebtRules.reminderWindowDays,
-    );
+    final status = loan.statusAt(now, dueSoonWindowDays: DebtRules.reminderWindowDays);
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(
@@ -150,10 +148,7 @@ class _Body extends ConsumerWidget {
                 ),
                 child: Column(
                   children: [
-                    _DetailRow(
-                      label: l10n.totalLoanAmount,
-                      value: money.format(loan.principal),
-                    ),
+                    _DetailRow(label: l10n.totalLoanAmount, value: money.format(loan.principal)),
                     _DetailRow(
                       label: l10n.remainingBalance,
                       value: money.format(loan.remaining),
@@ -165,15 +160,10 @@ class _Body extends ConsumerWidget {
                     ),
                     _DetailRow(
                       label: l10n.numberOfInstallments,
-                      value: loan.hasSchedule
-                          ? '${loan.totalInstallments}'
-                          : l10n.openEnded,
+                      value: loan.hasSchedule ? '${loan.totalInstallments}' : l10n.openEnded,
                     ),
                     if (loan.hasSchedule) ...[
-                      _DetailRow(
-                        label: l10n.paidInstallments,
-                        value: '${loan.paidInstallments}',
-                      ),
+                      _DetailRow(label: l10n.paidInstallments, value: '${loan.paidInstallments}'),
                       _DetailRow(
                         label: l10n.remainingInstallments,
                         value: '${loan.remainingInstallments}',
@@ -183,14 +173,8 @@ class _Body extends ConsumerWidget {
                       label: l10n.paidOff(loan.percentPaid),
                       value: '${loan.percentPaid}%',
                     ),
-                    _DetailRow(
-                      label: l10n.interestRate,
-                      value: '${loan.interestRate}%',
-                    ),
-                    _DetailRow(
-                      label: l10n.nextPayment,
-                      value: dates.long(loan.nextPaymentDate),
-                    ),
+                    _DetailRow(label: l10n.interestRate, value: '${loan.interestRate}%'),
+                    _DetailRow(label: l10n.nextPayment, value: dates.long(loan.nextPaymentDate)),
                     _DetailRow(
                       label: l10n.paymentDueDate,
                       value: l10n.dueOnDayOfMonth(loan.dueDayOfMonth),
@@ -202,10 +186,7 @@ class _Body extends ConsumerWidget {
                           : dates.long(loan.finalPaymentDate!),
                     ),
                     if (loan.startDate != null)
-                      _DetailRow(
-                        label: l10n.startDate,
-                        value: dates.long(loan.startDate!),
-                      ),
+                      _DetailRow(label: l10n.startDate, value: dates.long(loan.startDate!)),
                     _DetailRow(
                       label: l10n.loanStatus,
                       value: status.label(l10n),
@@ -234,9 +215,7 @@ class _Body extends ConsumerWidget {
               const SizedBox(width: AppSpacing.md),
               Expanded(
                 child: FilledButton.icon(
-                  onPressed: loan.isCompleted
-                      ? null
-                      : () => showPaymentSheet(context, loan),
+                  onPressed: loan.isCompleted ? null : () => showPaymentSheet(context, loan),
                   icon: const Icon(Icons.payments_outlined, size: 18),
                   label: Text(l10n.recordPayment),
                 ),
@@ -282,7 +261,7 @@ class _HeaderCard extends ConsumerWidget {
                 ),
                 child: Icon(
                   loan.kind == LoanKind.creditCard
-                      ? Icons.credit_card_rounded
+                      ? CupertinoIcons.creditcard
                       : iconForCategory(loan.icon),
                   size: 20,
                   color: Colors.white,
@@ -293,10 +272,7 @@ class _HeaderCard extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      loan.name,
-                      style: AppTypography.title.copyWith(color: Colors.white),
-                    ),
+                    Text(loan.name, style: AppTypography.title.copyWith(color: Colors.white)),
                     if (loan.lender.isNotEmpty) ...[
                       const SizedBox(height: 2),
                       Text(
@@ -314,9 +290,7 @@ class _HeaderCard extends ConsumerWidget {
           const SizedBox(height: AppSpacing.xl),
           Text(
             l10n.remainingBalance.toUpperCase(),
-            style: AppTypography.overline.copyWith(
-              color: Colors.white.withValues(alpha: 0.7),
-            ),
+            style: AppTypography.overline.copyWith(color: Colors.white.withValues(alpha: 0.7)),
           ),
           const SizedBox(height: AppSpacing.sm),
           FittedBox(
@@ -328,11 +302,7 @@ class _HeaderCard extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: AppSpacing.lg),
-          StatusChip(
-            label: status.label(l10n),
-            color: status.color,
-            icon: status.icon,
-          ),
+          StatusChip(label: status.label(l10n), color: status.color, icon: status.icon),
         ],
       ),
     );
@@ -360,12 +330,7 @@ class _ProgressRow extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: Text(
-                label,
-                style: AppTypography.label.copyWith(
-                  color: context.textSecondary,
-                ),
-              ),
+              child: Text(label, style: AppTypography.label.copyWith(color: context.textSecondary)),
             ),
             Text(
               '${(value * 100).round()}%',
@@ -376,10 +341,7 @@ class _ProgressRow extends StatelessWidget {
         const SizedBox(height: AppSpacing.sm),
         AppProgressBar(value: value, color: color, height: 8),
         const SizedBox(height: 6),
-        Text(
-          caption,
-          style: AppTypography.caption.copyWith(color: context.textSecondary),
-        ),
+        Text(caption, style: AppTypography.caption.copyWith(color: context.textSecondary)),
       ],
     );
   }
@@ -412,9 +374,7 @@ class _DetailRow extends StatelessWidget {
               Expanded(
                 child: Text(
                   label,
-                  style: AppTypography.body.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.body.copyWith(color: context.textSecondary),
                 ),
               ),
               const SizedBox(width: AppSpacing.md),
@@ -423,12 +383,8 @@ class _DetailRow extends StatelessWidget {
                   value,
                   textAlign: TextAlign.end,
                   style: emphasised
-                      ? AppTypography.amountMedium.copyWith(
-                          color: valueColor ?? context.accentDark,
-                        )
-                      : AppTypography.title.copyWith(
-                          color: valueColor ?? context.textPrimary,
-                        ),
+                      ? AppTypography.amountMedium.copyWith(color: valueColor ?? context.accentDark)
+                      : AppTypography.title.copyWith(color: valueColor ?? context.textPrimary),
                 ),
               ),
             ],

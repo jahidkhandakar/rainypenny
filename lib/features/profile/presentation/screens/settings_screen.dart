@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -54,15 +55,15 @@ class SettingsScreen extends ConsumerWidget {
                 SettingsTile(
                   icon: switch (themeMode) {
                     ThemeMode.system => Icons.brightness_auto_rounded,
-                    ThemeMode.light => Icons.light_mode_rounded,
-                    ThemeMode.dark => Icons.dark_mode_rounded,
+                    ThemeMode.light => CupertinoIcons.sun_max,
+                    ThemeMode.dark => CupertinoIcons.moon,
                   },
                   label: l10n.theme,
                   value: themeLabel,
                   onTap: () => context.push(AppRoutes.appearance),
                 ),
                 SettingsTile(
-                  icon: Icons.palette_outlined,
+                  icon: CupertinoIcons.paintbrush,
                   label: l10n.accentColor,
                   value: accentName(l10n, accent),
                   onTap: () => context.push(AppRoutes.appearance),
@@ -83,30 +84,30 @@ class SettingsScreen extends ConsumerWidget {
               title: l10n.preferences,
               children: [
                 SettingsTile(
-                  icon: Icons.language_rounded,
+                  icon: CupertinoIcons.globe,
                   label: l10n.language,
                   value: AppLocales.byLocale(locale).nativeName,
                   onTap: () => context.push(AppRoutes.language),
                 ),
                 SettingsTile(
-                  icon: Icons.payments_outlined,
+                  icon: CupertinoIcons.money_dollar,
                   label: l10n.currency,
                   value: '${currency.symbol}  ${currency.code}',
                   onTap: () => context.push(AppRoutes.currency),
                 ),
                 SettingsTile(
-                  icon: Icons.event_repeat_rounded,
+                  icon: CupertinoIcons.repeat,
                   label: l10n.payday,
                   value: l10n.paydayDayOfMonth(ref.watch(paydayProvider)),
                   onTap: () => context.push(AppRoutes.payday),
                 ),
                 SettingsTile(
-                  icon: Icons.category_outlined,
+                  icon: CupertinoIcons.app,
                   label: l10n.manageCategories,
                   onTap: () => context.push(AppRoutes.categories),
                 ),
                 SettingsTile(
-                  icon: Icons.notifications_none_rounded,
+                  icon: CupertinoIcons.bell,
                   label: l10n.notifications,
                   onTap: () => context.push(AppRoutes.notificationSettings),
                 ),
@@ -116,10 +117,7 @@ class SettingsScreen extends ConsumerWidget {
           const SizedBox(height: AppSpacing.lg),
           Text(
             l10n.languageNote,
-            style: AppTypography.caption.copyWith(
-              color: context.textSecondary,
-              height: 1.5,
-            ),
+            style: AppTypography.caption.copyWith(color: context.textSecondary, height: 1.5),
           ),
           const SizedBox(height: AppSpacing.xl),
 
@@ -129,12 +127,12 @@ class SettingsScreen extends ConsumerWidget {
               title: l10n.help,
               children: [
                 SettingsTile(
-                  icon: Icons.school_outlined,
+                  icon: CupertinoIcons.book,
                   label: l10n.beginnersGuide,
                   onTap: () => context.push(AppRoutes.tutorial),
                 ),
                 SettingsTile(
-                  icon: Icons.restart_alt_rounded,
+                  icon: CupertinoIcons.arrow_counterclockwise,
                   label: l10n.replaySetup,
                   onTap: () => _confirmReplaySetup(context, ref),
                 ),
@@ -151,9 +149,7 @@ class SettingsScreen extends ConsumerWidget {
               title: l10n.dataSource,
               children: [
                 SettingsTile(
-                  icon: AppConfig.hasBackend
-                      ? Icons.cloud_done_outlined
-                      : Icons.science_outlined,
+                  icon: AppConfig.hasBackend ? CupertinoIcons.globe : CupertinoIcons.lab_flask,
                   label: AppConfig.backendLabel,
                   value: AppConfig.hasBackend ? 'Live' : 'Offline',
                 ),
@@ -176,10 +172,7 @@ class SettingsScreen extends ConsumerWidget {
         title: Text(l10n.replaySetup),
         content: Text(l10n.replaySetupBody),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text(l10n.cancel),
-          ),
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: Text(l10n.cancel)),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             child: Text(l10n.continueLabel),

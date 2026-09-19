@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -54,22 +55,12 @@ class CategoryPickerSheet extends StatelessWidget {
 
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          AppSpacing.page,
-          0,
-          AppSpacing.page,
-          AppSpacing.xl,
-        ),
+        padding: const EdgeInsets.fromLTRB(AppSpacing.page, 0, AppSpacing.page, AppSpacing.xl),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: AppTypography.sectionTitle.copyWith(
-                color: context.textPrimary,
-              ),
-            ),
+            Text(title, style: AppTypography.sectionTitle.copyWith(color: context.textPrimary)),
             const SizedBox(height: AppSpacing.lg),
             Flexible(
               child: GridView.builder(
@@ -112,11 +103,7 @@ class CategoryPickerSheet extends StatelessWidget {
 }
 
 class _CategoryTile extends StatelessWidget {
-  const _CategoryTile({
-    required this.category,
-    required this.isSelected,
-    required this.onTap,
-  });
+  const _CategoryTile({required this.category, required this.isSelected, required this.onTap});
 
   final Category category;
   final bool isSelected;
@@ -177,11 +164,7 @@ class _AddTile extends StatelessWidget {
           DottedOutlineBadge(
             size: 50,
             radius: 17,
-            child: Icon(
-              Icons.add_rounded,
-              size: 24,
-              color: context.accentOnSurface,
-            ),
+            child: Icon(CupertinoIcons.add, size: 24, color: context.accentOnSurface),
           ),
           const SizedBox(height: AppSpacing.sm),
           Text(
@@ -204,12 +187,7 @@ class _AddTile extends StatelessWidget {
 /// A dashed-looking placeholder badge, marking an empty slot to fill rather
 /// than a thing that already exists.
 class DottedOutlineBadge extends StatelessWidget {
-  const DottedOutlineBadge({
-    super.key,
-    required this.child,
-    this.size = 50,
-    this.radius = 17,
-  });
+  const DottedOutlineBadge({super.key, required this.child, this.size = 50, this.radius = 17});
 
   final Widget child;
   final double size;
@@ -222,10 +200,7 @@ class DottedOutlineBadge extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),
-        border: Border.all(
-          color: context.accentOnSurface.withValues(alpha: 0.42),
-          width: 1.4,
-        ),
+        border: Border.all(color: context.accentOnSurface.withValues(alpha: 0.42), width: 1.4),
       ),
       child: Center(child: child),
     );

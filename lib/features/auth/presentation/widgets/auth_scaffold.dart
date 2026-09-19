@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -58,9 +59,7 @@ class AuthScaffold extends ConsumerWidget {
                   if (onBack != null)
                     IconButton(
                       onPressed: onBack,
-                      tooltip: MaterialLocalizations.of(
-                        context,
-                      ).backButtonTooltip,
+                      tooltip: MaterialLocalizations.of(context).backButtonTooltip,
                       icon: const Icon(Icons.arrow_back_rounded, size: 22),
                     )
                   else
@@ -68,18 +67,12 @@ class AuthScaffold extends ConsumerWidget {
                   const Spacer(),
                   if (showLanguageButton)
                     Padding(
-                      padding: const EdgeInsetsDirectional.only(
-                        end: AppSpacing.sm,
-                      ),
+                      padding: const EdgeInsetsDirectional.only(end: AppSpacing.sm),
                       child: TextButton.icon(
                         onPressed: () => context.push(AppRoutes.language),
                         icon: const Icon(Icons.language_rounded, size: 18),
-                        label: Text(
-                          AppLocales.byCode(locale.languageCode).nativeName,
-                        ),
-                        style: TextButton.styleFrom(
-                          foregroundColor: context.textSecondary,
-                        ),
+                        label: Text(AppLocales.byCode(locale.languageCode).nativeName),
+                        style: TextButton.styleFrom(foregroundColor: context.textSecondary),
                       ),
                     ),
                 ],
@@ -108,11 +101,7 @@ class AuthScaffold extends ConsumerWidget {
                                   color: context.tintFill,
                                   shape: BoxShape.circle,
                                 ),
-                                child: Icon(
-                                  icon,
-                                  size: 30,
-                                  color: context.accentOnSurface,
-                                ),
+                                child: Icon(icon, size: 30, color: context.accentOnSurface),
                               ),
                       ),
                       const SizedBox(height: AppSpacing.xl),
@@ -128,9 +117,7 @@ class AuthScaffold extends ConsumerWidget {
                       Text(
                         subtitle,
                         textAlign: TextAlign.center,
-                        style: AppTypography.body.copyWith(
-                          color: context.textSecondary,
-                        ),
+                        style: AppTypography.body.copyWith(color: context.textSecondary),
                       ),
                       const SizedBox(height: AppSpacing.section),
                       ...children,
@@ -187,14 +174,8 @@ class AuthField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.only(
-            bottom: AppSpacing.sm,
-            start: 2,
-          ),
-          child: Text(
-            label,
-            style: AppTypography.label.copyWith(color: context.textSecondary),
-          ),
+          padding: const EdgeInsetsDirectional.only(bottom: AppSpacing.sm, start: 2),
+          child: Text(label, style: AppTypography.label.copyWith(color: context.textSecondary)),
         ),
         TextField(
           controller: controller,
@@ -208,11 +189,7 @@ class AuthField extends StatelessWidget {
           textCapitalization: textCapitalization,
           onChanged: onChanged,
           onSubmitted: onSubmitted,
-          decoration: InputDecoration(
-            hintText: hint,
-            errorText: errorText,
-            suffixIcon: suffix,
-          ),
+          decoration: InputDecoration(hintText: hint, errorText: errorText, suffixIcon: suffix),
         ),
       ],
     );
@@ -221,11 +198,7 @@ class AuthField extends StatelessWidget {
 
 /// Toggles a password field between hidden and visible.
 class ObscureToggle extends StatelessWidget {
-  const ObscureToggle({
-    super.key,
-    required this.obscured,
-    required this.onChanged,
-  });
+  const ObscureToggle({super.key, required this.obscured, required this.onChanged});
 
   final bool obscured;
   final ValueChanged<bool> onChanged;
@@ -235,10 +208,7 @@ class ObscureToggle extends StatelessWidget {
     final l10n = AppL10n.of(context);
     return IconButton(
       tooltip: obscured ? l10n.showPassword : l10n.hidePassword,
-      icon: Icon(
-        obscured ? Icons.visibility_outlined : Icons.visibility_off_outlined,
-        size: 20,
-      ),
+      icon: Icon(obscured ? CupertinoIcons.eye : CupertinoIcons.eye_slash, size: 20),
       onPressed: () => onChanged(!obscured),
     );
   }
@@ -271,25 +241,17 @@ class AuthErrorBanner extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Icon(
-                Icons.error_outline_rounded,
-                size: 18,
-                color: AppColors.error,
-              ),
+              const Icon(Icons.error_outline_rounded, size: 18, color: AppColors.error),
               const SizedBox(width: AppSpacing.sm),
               Expanded(
                 child: Text(
                   message,
-                  style: AppTypography.body.copyWith(
-                    fontSize: 13,
-                    color: AppColors.error,
-                  ),
+                  style: AppTypography.body.copyWith(fontSize: 13, color: AppColors.error),
                 ),
               ),
             ],
           ),
-          if (action != null)
-            Align(alignment: AlignmentDirectional.centerStart, child: action),
+          if (action != null) Align(alignment: AlignmentDirectional.centerStart, child: action),
         ],
       ),
     );
@@ -317,10 +279,7 @@ class AuthSubmitButton extends StatelessWidget {
           ? const SizedBox(
               width: 20,
               height: 20,
-              child: CircularProgressIndicator(
-                strokeWidth: 2.2,
-                color: Colors.white,
-              ),
+              child: CircularProgressIndicator(strokeWidth: 2.2, color: Colors.white),
             )
           : Text(label),
     );
@@ -350,10 +309,7 @@ class AuthFooterPrompt extends StatelessWidget {
       alignment: WrapAlignment.center,
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
-        Text(
-          prompt,
-          style: AppTypography.body.copyWith(color: context.textSecondary),
-        ),
+        Text(prompt, style: AppTypography.body.copyWith(color: context.textSecondary)),
         TextButton(onPressed: onAction, child: Text(actionLabel)),
       ],
     );
