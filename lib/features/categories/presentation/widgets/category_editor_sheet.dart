@@ -19,16 +19,11 @@ import '../controllers/category_controller.dart';
 /// gap — the picker's "new category" tile — can select the result straight away
 /// rather than making the user find it in the grid afterwards. Null when the
 /// sheet was dismissed or the category was deleted.
-Future<Category?> showCategoryEditor(
-  BuildContext context, {
-  Category? category,
-  bool? isIncome,
-}) {
+Future<Category?> showCategoryEditor(BuildContext context, {Category? category, bool? isIncome}) {
   return showModalBottomSheet<Category>(
     context: context,
     isScrollControlled: true,
-    builder: (context) =>
-        _CategoryEditorSheet(category: category, isIncome: isIncome),
+    builder: (context) => _CategoryEditorSheet(category: category, isIncome: isIncome),
   );
 }
 
@@ -41,8 +36,7 @@ class _CategoryEditorSheet extends ConsumerStatefulWidget {
   final bool? isIncome;
 
   @override
-  ConsumerState<_CategoryEditorSheet> createState() =>
-      _CategoryEditorSheetState();
+  ConsumerState<_CategoryEditorSheet> createState() => _CategoryEditorSheetState();
 }
 
 class _CategoryEditorSheetState extends ConsumerState<_CategoryEditorSheet> {
@@ -84,11 +78,7 @@ class _CategoryEditorSheetState extends ConsumerState<_CategoryEditorSheet> {
         .maybeWhen(data: (list) => list, orElse: () => const <Category>[]);
 
     final saved = _isEditing
-        ? widget.category!.copyWith(
-            name: _name.trim(),
-            icon: _icon,
-            isIncome: _isIncome,
-          )
+        ? widget.category!.copyWith(name: _name.trim(), icon: _icon, isIncome: _isIncome)
         : Category(
             id: CategoryController.idFor(_name.trim(), existing),
             name: _name.trim(),
@@ -108,9 +98,7 @@ class _CategoryEditorSheetState extends ConsumerState<_CategoryEditorSheet> {
       // exactly like success and lose what the user typed.
       if (!mounted) return;
       setState(() => _busy = false);
-      messenger.showSnackBar(
-        SnackBar(content: Text(l10n.somethingWentWrong)),
-      );
+      messenger.showSnackBar(SnackBar(content: Text(l10n.somethingWentWrong)));
       return;
     }
 
@@ -129,9 +117,7 @@ class _CategoryEditorSheetState extends ConsumerState<_CategoryEditorSheet> {
     final usage = await controller.usageCount(widget.category!.id);
     if (usage > 0) {
       if (!mounted) return;
-      messenger.showSnackBar(
-        SnackBar(content: Text(l10n.categoryInUse(usage))),
-      );
+      messenger.showSnackBar(SnackBar(content: Text(l10n.categoryInUse(usage))));
       return;
     }
 
@@ -142,10 +128,7 @@ class _CategoryEditorSheetState extends ConsumerState<_CategoryEditorSheet> {
         title: Text(l10n.deleteCategory),
         content: Text(l10n.deleteCategoryBody(widget.category!.name)),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text(l10n.cancel),
-          ),
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: Text(l10n.cancel)),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             style: TextButton.styleFrom(foregroundColor: AppColors.error),
@@ -196,10 +179,7 @@ class _CategoryEditorSheetState extends ConsumerState<_CategoryEditorSheet> {
         ),
         SheetField(
           label: l10n.icon,
-          child: _IconGrid(
-            selected: _icon,
-            onSelect: (icon) => setState(() => _icon = icon),
-          ),
+          child: _IconGrid(selected: _icon, onSelect: (icon) => setState(() => _icon = icon)),
         ),
       ],
     );
@@ -233,11 +213,7 @@ class _DirectionToggle extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  icon,
-                  size: 17,
-                  color: selected ? Colors.white : context.textSecondary,
-                ),
+                Icon(icon, size: 17, color: selected ? Colors.white : context.textSecondary),
                 const SizedBox(width: AppSpacing.sm),
                 Text(
                   label,
@@ -260,12 +236,7 @@ class _DirectionToggle extends StatelessWidget {
       ),
       child: Row(
         children: [
-          option(
-            false,
-            l10n.expense,
-            Icons.arrow_downward_rounded,
-            context.brandSecondary,
-          ),
+          option(false, l10n.expense, Icons.arrow_downward_rounded, context.brandSecondary),
           option(true, l10n.income, Icons.arrow_upward_rounded, context.accent),
         ],
       ),
@@ -300,11 +271,7 @@ class _IconGrid extends StatelessWidget {
               decoration: BoxDecoration(
                 color: icon == selected ? context.accent : context.subtleFill,
                 borderRadius: BorderRadius.circular(AppRadius.md),
-                border: Border.all(
-                  color: icon == selected
-                      ? context.accent
-                      : context.borderColor,
-                ),
+                border: Border.all(color: icon == selected ? context.accent : context.borderColor),
               ),
               child: Icon(
                 iconForCategory(icon),

@@ -1918,9 +1918,6 @@ class AppL10nPa extends AppL10n {
   String get categoryTravel => 'Travel';
 
   @override
-  String get categoryOther => 'Other';
-
-  @override
   String get categorySalary => 'Salary';
 
   @override
@@ -1930,7 +1927,127 @@ class AppL10nPa extends AppL10n {
   String get categoryInvestments => 'Investments';
 
   @override
-  String get categoryRefunds => 'Refunds & Gifts';
+  String get categoryGift => 'Gift';
+
+  @override
+  String get categoryOther => 'Other';
+
+  @override
+  String get categoryGroceries => 'Groceries';
+
+  @override
+  String get categoryDining => 'Dining';
+
+  @override
+  String get categoryCoffee => 'Coffee';
+
+  @override
+  String get categoryUtilities => 'Utilities';
+
+  @override
+  String get categoryInternet => 'Internet';
+
+  @override
+  String get categoryPhone => 'Phone';
+
+  @override
+  String get categoryInsurance => 'Insurance';
+
+  @override
+  String get categorySubscriptions => 'Subscriptions';
+
+  @override
+  String get categoryPersonalCare => 'Personal care';
+
+  @override
+  String get categoryClothing => 'Clothing';
+
+  @override
+  String get categoryElectronics => 'Electronics';
+
+  @override
+  String get categoryHomeSupplies => 'Home supplies';
+
+  @override
+  String get categoryPets => 'Pets';
+
+  @override
+  String get categoryChildcare => 'Childcare';
+
+  @override
+  String get categoryFamily => 'Family';
+
+  @override
+  String get categoryFitness => 'Fitness';
+
+  @override
+  String get categorySports => 'Sports';
+
+  @override
+  String get categoryMedicine => 'Medicine';
+
+  @override
+  String get categoryMedical => 'Medical';
+
+  @override
+  String get categoryCharity => 'Charity';
+
+  @override
+  String get categoryTaxes => 'Taxes';
+
+  @override
+  String get categoryFees => 'Fees';
+
+  @override
+  String get categoryDebt => 'Debt';
+
+  @override
+  String get categorySavings => 'Savings';
+
+  @override
+  String get categoryRepairs => 'Repairs';
+
+  @override
+  String get categoryCarMaintenance => 'Car maintenance';
+
+  @override
+  String get categoryFuel => 'Fuel';
+
+  @override
+  String get categoryParking => 'Parking';
+
+  @override
+  String get categoryPublicTransport => 'Public transport';
+
+  @override
+  String get categoryRent => 'Rent';
+
+  @override
+  String get categoryMortgage => 'Mortgage';
+
+  @override
+  String get categoryBonus => 'Bonus';
+
+  @override
+  String get categoryCommission => 'Commission';
+
+  @override
+  String get categoryPension => 'Pension';
+
+  @override
+  String get categoryInterest => 'Interest';
+
+  @override
+  String get categoryDividends => 'Dividends';
+
+  @override
+  String get categoryCashback => 'Cashback';
+
+  @override
+  String get categoryRefund => 'Refund';
+
+  @override
+  String get categoryRentalIncome => 'Rental income';
 
   @override
   String get addCategory => 'New category';

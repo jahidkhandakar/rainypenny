@@ -3476,12 +3476,6 @@ abstract class AppL10n {
   /// **'Travel'**
   String get categoryTravel;
 
-  /// No description provided for @categoryOther.
-  ///
-  /// In en, this message translates to:
-  /// **'Other'**
-  String get categoryOther;
-
   /// No description provided for @categorySalary.
   ///
   /// In en, this message translates to:
@@ -3500,11 +3494,251 @@ abstract class AppL10n {
   /// **'Investments'**
   String get categoryInvestments;
 
-  /// No description provided for @categoryRefunds.
+  /// No description provided for @categoryGift.
   ///
   /// In en, this message translates to:
-  /// **'Refunds & Gifts'**
-  String get categoryRefunds;
+  /// **'Gift'**
+  String get categoryGift;
+
+  /// No description provided for @categoryOther.
+  ///
+  /// In en, this message translates to:
+  /// **'Other'**
+  String get categoryOther;
+
+  /// No description provided for @categoryGroceries.
+  ///
+  /// In en, this message translates to:
+  /// **'Groceries'**
+  String get categoryGroceries;
+
+  /// No description provided for @categoryDining.
+  ///
+  /// In en, this message translates to:
+  /// **'Dining'**
+  String get categoryDining;
+
+  /// No description provided for @categoryCoffee.
+  ///
+  /// In en, this message translates to:
+  /// **'Coffee'**
+  String get categoryCoffee;
+
+  /// No description provided for @categoryUtilities.
+  ///
+  /// In en, this message translates to:
+  /// **'Utilities'**
+  String get categoryUtilities;
+
+  /// No description provided for @categoryInternet.
+  ///
+  /// In en, this message translates to:
+  /// **'Internet'**
+  String get categoryInternet;
+
+  /// No description provided for @categoryPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get categoryPhone;
+
+  /// No description provided for @categoryInsurance.
+  ///
+  /// In en, this message translates to:
+  /// **'Insurance'**
+  String get categoryInsurance;
+
+  /// No description provided for @categorySubscriptions.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscriptions'**
+  String get categorySubscriptions;
+
+  /// No description provided for @categoryPersonalCare.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal care'**
+  String get categoryPersonalCare;
+
+  /// No description provided for @categoryClothing.
+  ///
+  /// In en, this message translates to:
+  /// **'Clothing'**
+  String get categoryClothing;
+
+  /// No description provided for @categoryElectronics.
+  ///
+  /// In en, this message translates to:
+  /// **'Electronics'**
+  String get categoryElectronics;
+
+  /// No description provided for @categoryHomeSupplies.
+  ///
+  /// In en, this message translates to:
+  /// **'Home supplies'**
+  String get categoryHomeSupplies;
+
+  /// No description provided for @categoryPets.
+  ///
+  /// In en, this message translates to:
+  /// **'Pets'**
+  String get categoryPets;
+
+  /// No description provided for @categoryChildcare.
+  ///
+  /// In en, this message translates to:
+  /// **'Childcare'**
+  String get categoryChildcare;
+
+  /// No description provided for @categoryFamily.
+  ///
+  /// In en, this message translates to:
+  /// **'Family'**
+  String get categoryFamily;
+
+  /// No description provided for @categoryFitness.
+  ///
+  /// In en, this message translates to:
+  /// **'Fitness'**
+  String get categoryFitness;
+
+  /// No description provided for @categorySports.
+  ///
+  /// In en, this message translates to:
+  /// **'Sports'**
+  String get categorySports;
+
+  /// No description provided for @categoryMedicine.
+  ///
+  /// In en, this message translates to:
+  /// **'Medicine'**
+  String get categoryMedicine;
+
+  /// No description provided for @categoryMedical.
+  ///
+  /// In en, this message translates to:
+  /// **'Medical'**
+  String get categoryMedical;
+
+  /// No description provided for @categoryCharity.
+  ///
+  /// In en, this message translates to:
+  /// **'Charity'**
+  String get categoryCharity;
+
+  /// No description provided for @categoryTaxes.
+  ///
+  /// In en, this message translates to:
+  /// **'Taxes'**
+  String get categoryTaxes;
+
+  /// No description provided for @categoryFees.
+  ///
+  /// In en, this message translates to:
+  /// **'Fees'**
+  String get categoryFees;
+
+  /// No description provided for @categoryDebt.
+  ///
+  /// In en, this message translates to:
+  /// **'Debt'**
+  String get categoryDebt;
+
+  /// No description provided for @categorySavings.
+  ///
+  /// In en, this message translates to:
+  /// **'Savings'**
+  String get categorySavings;
+
+  /// No description provided for @categoryRepairs.
+  ///
+  /// In en, this message translates to:
+  /// **'Repairs'**
+  String get categoryRepairs;
+
+  /// No description provided for @categoryCarMaintenance.
+  ///
+  /// In en, this message translates to:
+  /// **'Car maintenance'**
+  String get categoryCarMaintenance;
+
+  /// No description provided for @categoryFuel.
+  ///
+  /// In en, this message translates to:
+  /// **'Fuel'**
+  String get categoryFuel;
+
+  /// No description provided for @categoryParking.
+  ///
+  /// In en, this message translates to:
+  /// **'Parking'**
+  String get categoryParking;
+
+  /// No description provided for @categoryPublicTransport.
+  ///
+  /// In en, this message translates to:
+  /// **'Public transport'**
+  String get categoryPublicTransport;
+
+  /// No description provided for @categoryRent.
+  ///
+  /// In en, this message translates to:
+  /// **'Rent'**
+  String get categoryRent;
+
+  /// No description provided for @categoryMortgage.
+  ///
+  /// In en, this message translates to:
+  /// **'Mortgage'**
+  String get categoryMortgage;
+
+  /// No description provided for @categoryBonus.
+  ///
+  /// In en, this message translates to:
+  /// **'Bonus'**
+  String get categoryBonus;
+
+  /// No description provided for @categoryCommission.
+  ///
+  /// In en, this message translates to:
+  /// **'Commission'**
+  String get categoryCommission;
+
+  /// No description provided for @categoryPension.
+  ///
+  /// In en, this message translates to:
+  /// **'Pension'**
+  String get categoryPension;
+
+  /// No description provided for @categoryInterest.
+  ///
+  /// In en, this message translates to:
+  /// **'Interest'**
+  String get categoryInterest;
+
+  /// No description provided for @categoryDividends.
+  ///
+  /// In en, this message translates to:
+  /// **'Dividends'**
+  String get categoryDividends;
+
+  /// No description provided for @categoryCashback.
+  ///
+  /// In en, this message translates to:
+  /// **'Cashback'**
+  String get categoryCashback;
+
+  /// No description provided for @categoryRefund.
+  ///
+  /// In en, this message translates to:
+  /// **'Refund'**
+  String get categoryRefund;
+
+  /// No description provided for @categoryRentalIncome.
+  ///
+  /// In en, this message translates to:
+  /// **'Rental income'**
+  String get categoryRentalIncome;
 
   /// No description provided for @addCategory.
   ///

@@ -16,6 +16,45 @@ enum CategoryIcon {
   freelance,
   investment,
   gift,
+  groceries,
+  dining,
+  coffee,
+  utilities,
+  internet,
+  phone,
+  insurance,
+  subscriptions,
+  personalCare,
+  clothing,
+  electronics,
+  homeSupplies,
+  pets,
+  childcare,
+  family,
+  fitness,
+  sports,
+  medicine,
+  medical,
+  charity,
+  taxes,
+  fees,
+  debt,
+  savings,
+  repairs,
+  carMaintenance,
+  fuel,
+  parking,
+  publicTransport,
+  rent,
+  mortgage,
+  bonus,
+  commission,
+  pension,
+  interest,
+  dividends,
+  cashback,
+  refund,
+  rentalIncome,
   other,
 }
 
@@ -58,8 +97,7 @@ class Category {
   }
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) || (other is Category && other.id == id);
+  bool operator ==(Object other) => identical(this, other) || (other is Category && other.id == id);
 
   @override
   int get hashCode => id.hashCode;
