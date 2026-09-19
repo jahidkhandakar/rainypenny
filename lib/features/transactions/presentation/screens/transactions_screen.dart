@@ -9,9 +9,9 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
-import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/widgets/entrance.dart';
 import '../../../../core/widgets/states.dart';
 import '../../../dashboard/presentation/widgets/cycle_navigator.dart';
@@ -52,14 +52,9 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
           // default, so it lives behind a toggle rather than in the chip row.
           IconButton(
             tooltip: query.wholeHistory ? l10n.salaryCycle : l10n.allTime,
-            icon: Icon(
-              query.wholeHistory
-                  ? Icons.event_repeat_rounded
-                  : Icons.history_rounded,
-            ),
-            onPressed: () => ref
-                .read(transactionQueryProvider.notifier)
-                .setWholeHistory(!query.wholeHistory),
+            icon: Icon(query.wholeHistory ? Icons.event_repeat_rounded : Icons.history_rounded),
+            onPressed: () =>
+                ref.read(transactionQueryProvider.notifier).setWholeHistory(!query.wholeHistory),
           ),
           IconButton(
             tooltip: l10n.addTransaction,
@@ -90,25 +85,18 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
               children: [
                 TextField(
                   controller: _searchController,
-                  onChanged: (value) =>
-                      ref.read(transactionQueryProvider.notifier).search(value),
+                  onChanged: (value) => ref.read(transactionQueryProvider.notifier).search(value),
                   textInputAction: TextInputAction.search,
                   decoration: InputDecoration(
                     hintText: l10n.searchTransactions,
-                    prefixIcon: Icon(
-                      Icons.search_rounded,
-                      color: context.textSecondary,
-                      size: 21,
-                    ),
+                    prefixIcon: Icon(Icons.search_rounded, color: context.textSecondary, size: 21),
                     suffixIcon: query.search.isEmpty
                         ? null
                         : IconButton(
                             icon: const Icon(Icons.close_rounded, size: 18),
                             onPressed: () {
                               _searchController.clear();
-                              ref
-                                  .read(transactionQueryProvider.notifier)
-                                  .search('');
+                              ref.read(transactionQueryProvider.notifier).search('');
                             },
                           ),
                     contentPadding: const EdgeInsets.symmetric(
@@ -120,9 +108,15 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                 const SizedBox(height: AppSpacing.md),
                 _FilterBar(
                   selected: query.filter,
-                  onSelect: (filter) => ref
-                      .read(transactionQueryProvider.notifier)
-                      .filter(filter),
+                  onSelect: (filter) {
+                    final notifier = ref.read(transactionQueryProvider.notifier);
+                    notifier.filter(filter);
+
+                    // Reset category selection when switching transaction type tabs
+                    if (query.categoryId != null) {
+                      notifier.selectCategory(null);
+                    }
+                  },
                 ),
               ],
             ),
@@ -170,9 +164,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                 );
               },
               loading: () => ListView(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppSpacing.page,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: AppSpacing.page),
                 children: const [
                   SkeletonRow(),
                   SkeletonRow(),
@@ -214,9 +206,7 @@ class _ResultsSummary extends ConsumerWidget {
         Expanded(
           child: Text(
             l10n.transactionCount(count),
-            style: AppTypography.caption.copyWith(
-              color: context.textSecondary,
-            ),
+            style: AppTypography.caption.copyWith(color: context.textSecondary),
           ),
         ),
         if (total > 0)
@@ -240,19 +230,32 @@ class _CategoryFilterBar extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
     final categories = ref.watch(cycleCategoriesProvider);
+    final query = ref.watch(transactionQueryProvider);
     final selected = ref.watch(transactionQueryProvider).categoryId;
     final notifier = ref.read(transactionQueryProvider.notifier);
 
     return categories.maybeWhen(
       data: (list) {
-        if (list.isEmpty) return const SizedBox.shrink();
+        // Filter categories according to the selected tab
+        final filteredCategories = list.where((category) {
+          switch (query.filter) {
+            case TransactionFilter.income:
+              return category.isIncome;
+            case TransactionFilter.expense:
+              return !category.isIncome;
+            case TransactionFilter.all:
+              return true;
+          }
+        }).toList();
+
+        if (filteredCategories.isEmpty) return const SizedBox.shrink();
 
         return SizedBox(
           height: 38,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.page),
-            itemCount: list.length + 1,
+            itemCount: filteredCategories.length + 1,
             separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
             itemBuilder: (context, index) {
               if (index == 0) {
@@ -262,7 +265,7 @@ class _CategoryFilterBar extends ConsumerWidget {
                   onTap: () => notifier.selectCategory(null),
                 );
               }
-              final category = list[index - 1];
+              final category = filteredCategories[index - 1];
               return _Chip(
                 label: categoryDisplayName(category, l10n),
                 icon: iconForCategory(category.icon),
@@ -304,26 +307,17 @@ class _Chip extends StatelessWidget {
       child: AnimatedContainer(
         duration: AppDuration.fast,
         curve: Curves.easeOut,
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSpacing.md,
-          vertical: AppSpacing.sm,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: AppSpacing.sm),
         decoration: BoxDecoration(
           color: isSelected ? tint : context.subtleFill,
           borderRadius: BorderRadius.circular(AppRadius.pill),
-          border: Border.all(
-            color: isSelected ? tint : context.borderColor,
-          ),
+          border: Border.all(color: isSelected ? tint : context.borderColor),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             if (icon != null) ...[
-              Icon(
-                icon,
-                size: 15,
-                color: isSelected ? Colors.white : tint,
-              ),
+              Icon(icon, size: 15, color: isSelected ? Colors.white : tint),
               const SizedBox(width: 6),
             ],
             Text(
@@ -373,9 +367,7 @@ class _FilterBar extends StatelessWidget {
                   curve: Curves.easeOut,
                   padding: const EdgeInsets.symmetric(vertical: 9),
                   decoration: BoxDecoration(
-                    color: selected == entry.key
-                        ? context.cardColor
-                        : Colors.transparent,
+                    color: selected == entry.key ? context.cardColor : Colors.transparent,
                     borderRadius: BorderRadius.circular(AppRadius.sm),
                     boxShadow: selected == entry.key
                         ? [
@@ -391,12 +383,8 @@ class _FilterBar extends StatelessWidget {
                     entry.value,
                     textAlign: TextAlign.center,
                     style: AppTypography.label.copyWith(
-                      color: selected == entry.key
-                          ? context.accent
-                          : context.textSecondary,
-                      fontWeight: selected == entry.key
-                          ? FontWeight.w700
-                          : FontWeight.w500,
+                      color: selected == entry.key ? context.accent : context.textSecondary,
+                      fontWeight: selected == entry.key ? FontWeight.w700 : FontWeight.w500,
                     ),
                   ),
                 ),
@@ -440,17 +428,13 @@ class _DayGroup extends ConsumerWidget {
                           yesterdayLabel: l10n.yesterday,
                         )
                         .toUpperCase(),
-                    style: AppTypography.overline.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.overline.copyWith(color: context.textSecondary),
                   ),
                 ),
                 Text(
                   money.formatSigned(group.net, decimals: false),
                   style: AppTypography.caption.copyWith(
-                    color: group.net >= 0
-                        ? AppColors.income
-                        : context.textSecondary,
+                    color: group.net >= 0 ? AppColors.income : context.textSecondary,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -458,10 +442,7 @@ class _DayGroup extends ConsumerWidget {
             ),
           ),
           AppCard(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppSpacing.sm,
-              vertical: AppSpacing.xs,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: AppSpacing.xs),
             child: Column(
               children: [
                 for (final transaction in group.transactions)
