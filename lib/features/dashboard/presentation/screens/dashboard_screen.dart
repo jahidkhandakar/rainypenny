@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_period_selector.dart';
 import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
+import 'package:rainypenny/features/transactions/presentation/controllers/transaction_list_controller.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
@@ -109,8 +110,21 @@ class _DashboardBody extends ConsumerWidget {
             expenses: summary.expenses,
             incomeChange: summary.incomeChange,
             expenseChange: summary.expenseChange,
-            onIncomeTap: () => context.go(AppRoutes.transactions),
-            onExpenseTap: () => context.go(AppRoutes.transactions),
+            onRemainingTap: () {
+              ref.watch(transactionQueryProvider.notifier).filter(TransactionFilter.all);
+
+              context.go(AppRoutes.transactions);
+            },
+            onIncomeTap: () {
+              ref.watch(transactionQueryProvider.notifier).filter(TransactionFilter.income);
+
+              context.go(AppRoutes.transactions);
+            },
+            onExpenseTap: () {
+              ref.watch(transactionQueryProvider.notifier).filter(TransactionFilter.expense);
+
+              context.go(AppRoutes.transactions);
+            },
           ),
         ),
         const SizedBox(height: AppSpacing.section),
