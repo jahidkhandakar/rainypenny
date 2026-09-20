@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/theme/app_colors.dart';
@@ -52,8 +53,8 @@ List<SpendingSlice> buildSpendingSlices(
   return slices;
 }
 
-/// Donut plus legend. The centre carries the total so the chart answers
-/// "how much" and "on what" at the same time.
+/// Dynamic, interactive Donut chart with larger dimensions.
+/// Shows overall total by default and highlights individual slices on user interaction.
 class SpendingDonut extends ConsumerStatefulWidget {
   const SpendingDonut({super.key, required this.slices, required this.centerLabel});
 
@@ -67,6 +68,17 @@ class SpendingDonut extends ConsumerStatefulWidget {
 class _SpendingDonutState extends ConsumerState<SpendingDonut> {
   int? _touchedIndex;
 
+  void _onSliceSelected(int? index) {
+    if (_touchedIndex != index) {
+      if (index != null) {
+        HapticFeedback.selectionClick();
+      }
+      setState(() {
+        _touchedIndex = index;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final money = ref.watch(moneyFormatterProvider);
@@ -76,71 +88,98 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
     final highlighted = _touchedIndex == null ? null : widget.slices[_touchedIndex!];
 
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        // Scaled up donut container (170px)
         SizedBox(
-          width: 128,
-          height: 128,
+          width: 170,
+          height: 170,
           child: Stack(
             alignment: Alignment.center,
             children: [
               PieChart(
                 PieChartData(
-                  sectionsSpace: 3,
-                  centerSpaceRadius: 40,
+                  sectionsSpace: 4,
+                  centerSpaceRadius: 50,
                   startDegreeOffset: -90,
                   pieTouchData: PieTouchData(
                     touchCallback: (event, response) {
                       final index = response?.touchedSection?.touchedSectionIndex;
-                      setState(() {
-                        if (!event.isInterestedForInteractions || index == null || index < 0) {
-                          _touchedIndex = null;
-                        } else {
-                          _touchedIndex = index;
-                        }
-                      });
+                      if (!event.isInterestedForInteractions || index == null || index < 0) {
+                        _onSliceSelected(null);
+                      } else {
+                        _onSliceSelected(index);
+                      }
                     },
                   ),
                   sections: [
-                    for (var i = 0; i < widget.slices.length; i++)
-                      PieChartSectionData(
-                        value: widget.slices[i].amount,
-                        color: widget.slices[i].color,
-                        radius: _touchedIndex == i ? 24 : 19,
-                        showTitle: false,
-                      ),
+                    for (var i = 0; i < widget.slices.length; i++) ...[
+                      () {
+                        final isSelected = _touchedIndex == i;
+                        return PieChartSectionData(
+                          value: widget.slices[i].amount,
+                          color: widget.slices[i].color,
+                          radius: isSelected ? 34 : 26,
+                          showTitle: false,
+                          borderSide: isSelected
+                              ? BorderSide(color: Theme.of(context).cardColor, width: 2.5)
+                              : BorderSide.none,
+                        );
+                      }(),
+                    ],
                   ],
                 ),
                 duration: AppDuration.normal,
-                curve: Curves.easeOutCubic,
+                curve: Curves.easeOutBack,
               ),
-              // The centre carries the period total, and swaps to the slice
-              // amount while one is touched — that is where the per-category
-              // figure lives, so the legend only needs the share.
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    money.compact(highlighted?.amount ?? total),
-                    style: AppTypography.amountMedium.copyWith(
-                      fontSize: 16,
-                      color: highlighted?.color ?? context.textPrimary,
-                    ),
-                  ),
-                  const SizedBox(height: 2),
-                  SizedBox(
-                    width: 66,
-                    child: Text(
-                      highlighted?.label ?? widget.centerLabel,
-                      maxLines: 1,
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.caption.copyWith(
-                        fontSize: 10.5,
-                        color: context.textSecondary,
+              // Center Label showing total by default, or touched slice amount
+              GestureDetector(
+                onTap: () => _onSliceSelected(null),
+                behavior: HitTestBehavior.opaque,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    AnimatedSwitcher(
+                      duration: AppDuration.fast,
+                      transitionBuilder: (child, animation) {
+                        return ScaleTransition(
+                          scale: animation,
+                          child: FadeTransition(opacity: animation, child: child),
+                        );
+                      },
+                      child: Text(
+                        money.compact(highlighted?.amount ?? total),
+                        key: ValueKey(highlighted?.amount ?? total),
+                        style: AppTypography.amountMedium.copyWith(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: highlighted?.color ?? context.textPrimary,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 2),
+                    SizedBox(
+                      width: 80,
+                      child: AnimatedSwitcher(
+                        duration: AppDuration.fast,
+                        child: Text(
+                          highlighted?.label ?? widget.centerLabel,
+                          key: ValueKey(highlighted?.label ?? widget.centerLabel),
+                          maxLines: 1,
+                          textAlign: TextAlign.center,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTypography.caption.copyWith(
+                            fontSize: 11.5,
+                            fontWeight: highlighted != null ? FontWeight.w600 : FontWeight.normal,
+                            color: highlighted != null
+                                ? context.textPrimary
+                                : context.textSecondary,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -151,13 +190,18 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               for (var i = 0; i < widget.slices.length; i++)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5),
-                  child: _LegendRow(
-                    slice: widget.slices[i],
-                    percent: widget.slices[i].amount / total,
-                    dimmed: _touchedIndex != null && _touchedIndex != i,
-                  ),
+                _LegendRow(
+                  slice: widget.slices[i],
+                  percent: widget.slices[i].amount / total,
+                  isSelected: _touchedIndex == i,
+                  dimmed: _touchedIndex != null && _touchedIndex != i,
+                  onTap: () {
+                    if (_touchedIndex == i) {
+                      _onSliceSelected(null);
+                    } else {
+                      _onSliceSelected(i);
+                    }
+                  },
                 ),
             ],
           ),
@@ -168,45 +212,86 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
 }
 
 class _LegendRow extends StatelessWidget {
-  const _LegendRow({required this.slice, required this.percent, required this.dimmed});
+  const _LegendRow({
+    required this.slice,
+    required this.percent,
+    required this.isSelected,
+    required this.dimmed,
+    required this.onTap,
+  });
 
   final SpendingSlice slice;
   final double percent;
+  final bool isSelected;
   final bool dimmed;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedOpacity(
-      duration: AppDuration.fast,
-      opacity: dimmed ? 0.4 : 1,
-      child: Row(
-        children: [
-          Container(
-            width: 9,
-            height: 9,
-            decoration: BoxDecoration(color: slice.color, borderRadius: BorderRadius.circular(3)),
-          ),
-          const SizedBox(width: AppSpacing.sm),
-          Expanded(
-            child: Text(
-              slice.label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: AppTypography.caption.copyWith(
-                color: context.textPrimary,
-                fontWeight: FontWeight.w600,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 3),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(8),
+          splashColor: slice.color.withValues(alpha: 0.12),
+          highlightColor: slice.color.withValues(alpha: 0.06),
+          child: AnimatedContainer(
+            duration: AppDuration.fast,
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+            decoration: BoxDecoration(
+              color: isSelected ? slice.color.withValues(alpha: 0.1) : Colors.transparent,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: AnimatedOpacity(
+              duration: AppDuration.fast,
+              opacity: dimmed ? 0.45 : 1.0,
+              child: Row(
+                children: [
+                  AnimatedContainer(
+                    duration: AppDuration.fast,
+                    width: isSelected ? 11 : 8,
+                    height: isSelected ? 11 : 8,
+                    decoration: BoxDecoration(
+                      color: slice.color,
+                      shape: BoxShape.circle,
+                      boxShadow: isSelected
+                          ? [
+                              BoxShadow(
+                                color: slice.color.withValues(alpha: 0.4),
+                                blurRadius: 4,
+                                spreadRadius: 1,
+                              ),
+                            ]
+                          : null,
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.sm),
+                  Expanded(
+                    child: Text(
+                      slice.label,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTypography.caption.copyWith(
+                        color: context.textPrimary,
+                        fontWeight: isSelected ? FontWeight.w700 : FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: AppSpacing.sm),
+                  Text(
+                    '${(percent * 100).round()}%',
+                    style: AppTypography.caption.copyWith(
+                      color: isSelected ? slice.color : context.textSecondary,
+                      fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          const SizedBox(width: AppSpacing.sm),
-          Text(
-            '${(percent * 100).round()}%',
-            style: AppTypography.caption.copyWith(
-              color: context.textSecondary,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -233,13 +233,76 @@ Color colorForInsight(InsightLevel level) {
 /// Stable chart colour for a category, so the same category keeps the same
 /// colour across the donut, the legend and the budget bars.
 Color chartColorForCategory(BuildContext context, String categoryId, int index) {
-  final byId = <String, Color>{
-    'food': context.accentDark,
-    'housing': context.accent,
-    'transport': context.accentLight,
-    'shopping': context.brandSecondary,
-    'bills': context.chartSlateColor,
+  // Map category IDs to their corresponding domain enum
+  final icon = switch (categoryId) {
+    'housing' || 'rent' => CategoryIcon.housing,
+    'mortgage' => CategoryIcon.mortgage,
+    'food' || 'dining' => CategoryIcon.food,
+    'groceries' => CategoryIcon.groceries,
+    'coffee' => CategoryIcon.coffee,
+    'transport' || 'public_transport' => CategoryIcon.transport,
+    'fuel' => CategoryIcon.fuel,
+    'parking' => CategoryIcon.parking,
+    'car_maintenance' => CategoryIcon.carMaintenance,
+    'shopping' => CategoryIcon.shopping,
+    'clothing' => CategoryIcon.clothing,
+    'electronics' => CategoryIcon.electronics,
+    'home_supplies' => CategoryIcon.homeSupplies,
+    'bills' => CategoryIcon.bills,
+    'utilities' => CategoryIcon.utilities,
+    'internet' => CategoryIcon.internet,
+    'phone' => CategoryIcon.phone,
+    'insurance' => CategoryIcon.insurance,
+    'subscriptions' => CategoryIcon.subscriptions,
+    'taxes' => CategoryIcon.taxes,
+    'fees' => CategoryIcon.fees,
+    'debt' => CategoryIcon.debt,
+    'entertainment' => CategoryIcon.entertainment,
+    'health' || 'medicine' => CategoryIcon.health,
+    'medical' => CategoryIcon.medical,
+    'fitness' => CategoryIcon.fitness,
+    'sports' => CategoryIcon.sports,
+    'education' => CategoryIcon.education,
+    'travel' => CategoryIcon.travel,
+    'personal_care' => CategoryIcon.personalCare,
+    'pets' => CategoryIcon.pets,
+    'childcare' => CategoryIcon.childcare,
+    'family' => CategoryIcon.family,
+    'charity' => CategoryIcon.charity,
+    'repairs' => CategoryIcon.repairs,
+    'savings' => CategoryIcon.savings,
+    'salary' => CategoryIcon.salary,
+    'freelance' => CategoryIcon.freelance,
+    'bonus' => CategoryIcon.bonus,
+    'commission' => CategoryIcon.commission,
+    'investments' => CategoryIcon.investment,
+    'interest' => CategoryIcon.interest,
+    'dividends' => CategoryIcon.dividends,
+    'cashback' => CategoryIcon.cashback,
+    'rental_income' => CategoryIcon.rentalIncome,
+    'pension' => CategoryIcon.pension,
+    'refunds' => CategoryIcon.refund,
+    'gift' => CategoryIcon.gift,
+    _ => null,
   };
+
+  // If matched to a seeded category, delegate directly to categoryColor
+  if (icon != null) {
+    return categoryColor(
+      context,
+      Category(
+        id: categoryId,
+        name: '', // Name is not used by categoryColor
+        icon: icon,
+      ),
+    );
+  }
+
+  // Fallback for custom or unknown categories: use chart series theme
   final series = context.chartSeries;
-  return byId[categoryId] ?? series[index % series.length];
+  if (series.isNotEmpty) {
+    return series[index % series.length];
+  }
+
+  return AppColors.chartNeutral;
 }
