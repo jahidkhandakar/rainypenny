@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_period_selector.dart';
+import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
@@ -13,7 +15,6 @@ import '../../../../core/widgets/section_header.dart';
 import '../../../../core/widgets/states.dart';
 import '../../../budget/presentation/widgets/budget_row.dart';
 import '../../../financial/domain/entities/budget.dart';
-import '../../../financial/domain/entities/cycle_summary.dart';
 import '../../../financial/domain/entities/insight.dart';
 import '../../../financial/domain/entities/savings_goal.dart';
 import '../../../financial/domain/entities/transaction.dart';
@@ -25,12 +26,10 @@ import '../../../review/presentation/widgets/review_prompt.dart';
 import '../../../savings/presentation/widgets/savings_goal_card.dart';
 import '../../../transactions/presentation/widgets/transaction_detail_sheet.dart';
 import '../../../transactions/presentation/widgets/transaction_tile.dart';
-import '../widgets/cycle_navigator.dart';
 import '../widgets/dashboard_header.dart';
 import '../widgets/health_card.dart';
 import '../widgets/income_expense_cards.dart';
 import '../widgets/quick_actions.dart';
-import '../widgets/salary_card.dart';
 import '../widgets/spending_donut.dart';
 
 /// The home screen: the whole financial picture, ordered by what matters most.
@@ -40,7 +39,7 @@ class DashboardScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
-    final summary = ref.watch(cycleSummaryProvider);
+    final summary = ref.watch(periodSummaryProvider(ref.watch(dashboardRangeProvider)));
 
     // Wraps the screen rather than sitting inside it: the prompt counts one
     // use per session and asks on the fifth, and none of that is the
@@ -66,8 +65,12 @@ class DashboardScreen extends ConsumerWidget {
                 const SizedBox(height: AppSpacing.lg),
                 // Above the figures, because it decides which figures these
                 // are: every number below belongs to the cycle named here.
-                const CycleNavigator(),
+
+                // const CycleNavigator(),
+                // const SizedBox(height: AppSpacing.lg),
+                const DashboardPeriodSelector(),
                 const SizedBox(height: AppSpacing.lg),
+
                 summary.when(
                   data: (data) => _DashboardBody(summary: data),
                   loading: () => const _DashboardSkeleton(),
@@ -89,26 +92,15 @@ class DashboardScreen extends ConsumerWidget {
 class _DashboardBody extends ConsumerWidget {
   const _DashboardBody({required this.summary});
 
-  final CycleSummary summary;
+  final PeriodSummary summary;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
-    final salary = ref
-        .watch(cycleSalaryProvider)
-        .maybeWhen(data: (value) => value, orElse: () => 0.0);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        FadeSlideIn(
-          index: 0,
-          child: SalaryCard(
-            summary: summary,
-            salary: salary,
-            onTap: () => context.go(AppRoutes.transactions),
-          ),
-        ),
         const SizedBox(height: AppSpacing.lg),
         FadeSlideIn(
           index: 1,
@@ -158,7 +150,7 @@ class _DashboardBody extends ConsumerWidget {
 class _SpendingSection extends ConsumerWidget {
   const _SpendingSection({required this.summary});
 
-  final CycleSummary summary;
+  final PeriodSummary summary;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -171,7 +163,7 @@ class _SpendingSection extends ConsumerWidget {
       children: [
         SectionHeader(
           title: l10n.spendingOverview,
-          subtitle: dates.range(summary.cycle.start, summary.cycle.end),
+          subtitle: dates.range(summary.start, summary.end),
           actionLabel: l10n.seeAll,
           onAction: () => context.go(AppRoutes.reports),
         ),

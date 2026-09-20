@@ -59,10 +59,7 @@ class DateRange {
   /// roughly one day's worth of spending.
   DateRange get previous {
     final length = end.difference(start);
-    return DateRange(
-      start.subtract(length),
-      start.subtract(const Duration(seconds: 1)),
-    );
+    return DateRange(start.subtract(length), start.subtract(const Duration(seconds: 1)));
   }
 
   int get days => end.difference(start).inDays + 1;
@@ -70,8 +67,7 @@ class DateRange {
   // Value equality matters: this type is used as a provider family key.
   @override
   bool operator ==(Object other) =>
-      identical(this, other) ||
-      (other is DateRange && other.start == start && other.end == end);
+      identical(this, other) || (other is DateRange && other.start == start && other.end == end);
 
   @override
   int get hashCode => Object.hash(start, end);
@@ -117,6 +113,58 @@ final reportRangeProvider = NotifierProvider<ReportRangeNotifier, ReportRange>(
   ReportRangeNotifier.new,
 );
 
+/// The period tab options shown in the dashboard filter.
+enum DashboardPeriodTab { today, sevenDays, thirtyDays, custom }
+
+class DashboardTabNotifier extends Notifier<DashboardPeriodTab> {
+  @override
+  DashboardPeriodTab build() => DashboardPeriodTab.thirtyDays;
+
+  void select(DashboardPeriodTab tab) => state = tab;
+}
+
+final dashboardTabProvider = NotifierProvider<DashboardTabNotifier, DashboardPeriodTab>(
+  DashboardTabNotifier.new,
+);
+
+/// Holds custom date range chosen by user for dashboard.
+class DashboardCustomRangeNotifier extends Notifier<DateRange?> {
+  @override
+  DateRange? build() => null;
+
+  void select(DateTime start, DateTime end) {
+    final from = start.isAfter(end) ? end : start;
+    final to = start.isAfter(end) ? start : end;
+    state = DateRange(
+      DateTime(from.year, from.month, from.day),
+      DateTime(to.year, to.month, to.day, 23, 59, 59),
+    );
+  }
+
+  void clear() => state = null;
+}
+
+final dashboardCustomRangeProvider = NotifierProvider<DashboardCustomRangeNotifier, DateRange?>(
+  DashboardCustomRangeNotifier.new,
+);
+
+/// Passes selected range based on current tab selection or custom picker.
+final dashboardRangeProvider = Provider<DateRange>((ref) {
+  final tab = ref.watch(dashboardTabProvider);
+
+  switch (tab) {
+    case DashboardPeriodTab.today:
+      return DateRange.trailing(1);
+    case DashboardPeriodTab.sevenDays:
+      return DateRange.trailing(7);
+    case DashboardPeriodTab.thirtyDays:
+      return DateRange.trailing(30);
+    case DashboardPeriodTab.custom:
+      final custom = ref.watch(dashboardCustomRangeProvider);
+      return custom ?? DateRange.trailing(30);
+  }
+});
+
 // -----------------------------------------------------------------------------
 // Salary cycles
 //
@@ -144,9 +192,7 @@ class CycleOffsetNotifier extends Notifier<int> {
   void reset() => state = 0;
 }
 
-final cycleOffsetProvider = NotifierProvider<CycleOffsetNotifier, int>(
-  CycleOffsetNotifier.new,
-);
+final cycleOffsetProvider = NotifierProvider<CycleOffsetNotifier, int>(CycleOffsetNotifier.new);
 
 /// The cycle containing today, for the user's configured payday.
 final currentCycleProvider = Provider<SalaryCycle>((ref) {
@@ -178,20 +224,14 @@ final cycleSummaryProvider = FutureProvider<CycleSummary>((ref) async {
 /// monthly salary.
 final cycleSalaryProvider = FutureProvider<double>((ref) async {
   final transactions = await ref.watch(transactionsProvider.future);
-  return CycleCalculator.salaryIn(
-    transactions,
-    ref.watch(selectedCycleProvider),
-  );
+  return CycleCalculator.salaryIn(transactions, ref.watch(selectedCycleProvider));
 });
 
 /// Every cycle the ledger actually covers, newest first — the month picker's
 /// list.
 final availableCyclesProvider = FutureProvider<List<SalaryCycle>>((ref) async {
   final transactions = await ref.watch(transactionsProvider.future);
-  return CycleCalculator.cyclesCovering(
-    transactions,
-    ref.watch(paydayProvider),
-  );
+  return CycleCalculator.cyclesCovering(transactions, ref.watch(paydayProvider));
 });
 
 /// Days in the selected cycle with nothing recorded against them, up to today.
@@ -202,10 +242,6 @@ final quietDaysProvider = FutureProvider<List<DateTime>>((ref) async {
     ref.watch(selectedCycleProvider),
     DateTime.now(),
   );
-});
-
-final dashboardRangeProvider = Provider<DateRange>((ref) {
-  return ref.watch(selectedCycleRangeProvider);
 });
 
 /// The Reports window: either one of the preset trailing ranges, the salary
@@ -239,10 +275,9 @@ class CustomReportRangeNotifier extends Notifier<DateRange?> {
   void clear() => state = null;
 }
 
-final customReportRangeProvider =
-    NotifierProvider<CustomReportRangeNotifier, DateRange?>(
-      CustomReportRangeNotifier.new,
-    );
+final customReportRangeProvider = NotifierProvider<CustomReportRangeNotifier, DateRange?>(
+  CustomReportRangeNotifier.new,
+);
 
 // -----------------------------------------------------------------------------
 // Derived aggregates
@@ -255,23 +290,12 @@ final customReportRangeProvider =
 /// which meant the headline number on the home screen never moved when a
 /// transaction was added and showed the same seeded amount to every user of a
 /// real backend.
-final periodSummaryProvider = FutureProvider.family<PeriodSummary, DateRange>((
-  ref,
-  range,
-) async {
+final periodSummaryProvider = FutureProvider.family<PeriodSummary, DateRange>((ref, range) async {
   final transactions = await ref.watch(transactionsProvider.future);
 
-  final current = BalanceCalculator.inRange(
-    transactions,
-    range.start,
-    range.end,
-  );
+  final current = BalanceCalculator.inRange(transactions, range.start, range.end);
   final previousRange = range.previous;
-  final previous = BalanceCalculator.inRange(
-    transactions,
-    previousRange.start,
-    previousRange.end,
-  );
+  final previous = BalanceCalculator.inRange(transactions, previousRange.start, previousRange.end);
 
   return PeriodSummary(
     start: range.start,
@@ -283,19 +307,14 @@ final periodSummaryProvider = FutureProvider.family<PeriodSummary, DateRange>((
     balance: BalanceCalculator.balanceAt(transactions, range.end),
     previousIncome: BalanceCalculator.totalIncome(previous),
     previousExpenses: BalanceCalculator.totalExpenses(previous),
-    previousBalance: BalanceCalculator.balanceAt(
-      transactions,
-      previousRange.end,
-    ),
+    previousBalance: BalanceCalculator.balanceAt(transactions, previousRange.end),
     spendingByCategory: BalanceCalculator.spendingByCategory(current),
     previousSpendingByCategory: BalanceCalculator.spendingByCategory(previous),
   );
 });
 
 final dashboardSummaryProvider = FutureProvider<PeriodSummary>((ref) {
-  return ref.watch(
-    periodSummaryProvider(ref.watch(dashboardRangeProvider)).future,
-  );
+  return ref.watch(periodSummaryProvider(ref.watch(dashboardRangeProvider)).future);
 });
 
 /// Budgets joined against the spend for the salary cycle being viewed.
@@ -314,11 +333,7 @@ final financialHealthProvider = FutureProvider<FinancialHealth>((ref) async {
   final summary = await ref.watch(dashboardSummaryProvider.future);
   final budgets = await ref.watch(budgetsProvider.future);
   final loans = await ref.watch(loansProvider.future);
-  return HealthCalculator.evaluate(
-    summary: summary,
-    budgets: budgets,
-    loans: loans,
-  );
+  return HealthCalculator.evaluate(summary: summary, budgets: budgets, loans: loans);
 });
 
 final insightsProvider = FutureProvider<List<Insight>>((ref) async {
