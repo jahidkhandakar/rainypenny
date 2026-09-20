@@ -101,7 +101,7 @@ class _DashboardBody extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        const SizedBox(height: AppSpacing.lg),
+        const SizedBox(height: AppSpacing.sm),
         FadeSlideIn(
           index: 1,
           child: IncomeExpenseCards(

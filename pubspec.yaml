@@ -80,6 +80,7 @@ flutter:
     # Arabic, Urdu and Hindi correctly with no network, and the built-in PDF
     # base fonts cover none of those scripts.
     - assets/fonts/
+    - assets/illustrations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
