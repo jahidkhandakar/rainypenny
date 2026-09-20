@@ -23,11 +23,7 @@ import '../widgets/savings_goal_card.dart';
 class SavingsScreen extends ConsumerWidget {
   const SavingsScreen({super.key});
 
-  Future<void> _addFunds(
-    BuildContext context,
-    WidgetRef ref,
-    SavingsGoal goal,
-  ) async {
+  Future<void> _addFunds(BuildContext context, WidgetRef ref, SavingsGoal goal) async {
     final amount = await showModalBottomSheet<double>(
       context: context,
       isScrollControlled: true,
@@ -68,7 +64,7 @@ class SavingsScreen extends ConsumerWidget {
             AppSpacing.section,
           ),
           children: [
-            FadeSlideIn(index: 0, child: _SavingsSummaryCard(goals: list)),
+            FadeSlideIn(index: 0, child: SavingsSummaryCard(goals: list)),
             const SizedBox(height: AppSpacing.xl),
             SectionHeader(title: l10n.yourGoals),
             for (var i = 0; i < list.length; i++)
@@ -113,8 +109,8 @@ class SavingsScreen extends ConsumerWidget {
   }
 }
 
-class _SavingsSummaryCard extends ConsumerWidget {
-  const _SavingsSummaryCard({required this.goals});
+class SavingsSummaryCard extends ConsumerWidget {
+  const SavingsSummaryCard({super.key, required this.goals});
 
   final List<SavingsGoal> goals;
 
@@ -144,9 +140,7 @@ class _SavingsSummaryCard extends ConsumerWidget {
         children: [
           Text(
             l10n.saved.toUpperCase(),
-            style: AppTypography.overline.copyWith(
-              color: Colors.white.withValues(alpha: 0.75),
-            ),
+            style: AppTypography.overline.copyWith(color: Colors.white.withValues(alpha: 0.75)),
           ),
           const SizedBox(height: AppSpacing.md),
           Row(
@@ -166,9 +160,7 @@ class _SavingsSummaryCard extends ConsumerWidget {
               const SizedBox(width: 6),
               Text(
                 '/ ${money.format(target, decimals: false)}',
-                style: AppTypography.body.copyWith(
-                  color: Colors.white.withValues(alpha: 0.8),
-                ),
+                style: AppTypography.body.copyWith(color: Colors.white.withValues(alpha: 0.8)),
               ),
             ],
           ),
@@ -193,9 +185,7 @@ class _SavingsSummaryCard extends ConsumerWidget {
               Text(
                 '${l10n.monthlyContribution} '
                 '${money.format(monthly, decimals: false)}',
-                style: AppTypography.caption.copyWith(
-                  color: Colors.white.withValues(alpha: 0.85),
-                ),
+                style: AppTypography.caption.copyWith(color: Colors.white.withValues(alpha: 0.85)),
               ),
             ],
           ),
@@ -241,45 +231,30 @@ class _ContributeSheetState extends ConsumerState<_ContributeSheet> {
       padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.page,
-            0,
-            AppSpacing.page,
-            AppSpacing.xl,
-          ),
+          padding: const EdgeInsets.fromLTRB(AppSpacing.page, 0, AppSpacing.page, AppSpacing.xl),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 '${l10n.addFunds} · ${widget.goal.name}',
-                style: AppTypography.sectionTitle.copyWith(
-                  color: context.textPrimary,
-                ),
+                style: AppTypography.sectionTitle.copyWith(color: context.textPrimary),
               ),
               const SizedBox(height: AppSpacing.xs),
               Text(
                 '${money.format(widget.goal.remaining, decimals: false)} '
                 '${l10n.remaining.toLowerCase()}',
-                style: AppTypography.caption.copyWith(
-                  color: context.textSecondary,
-                ),
+                style: AppTypography.caption.copyWith(color: context.textSecondary),
               ),
               const SizedBox(height: AppSpacing.lg),
               TextField(
                 controller: _controller,
                 autofocus: true,
-                keyboardType: const TextInputType.numberWithOptions(
-                  decimal: true,
-                ),
-                style: AppTypography.amountLarge.copyWith(
-                  color: context.textPrimary,
-                ),
+                keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                style: AppTypography.amountLarge.copyWith(color: context.textPrimary),
                 decoration: InputDecoration(hintText: '0'),
-                onChanged: (value) => setState(
-                  () => _amount =
-                      double.tryParse(value.replaceAll(',', '.')) ?? 0,
-                ),
+                onChanged: (value) =>
+                    setState(() => _amount = double.tryParse(value.replaceAll(',', '.')) ?? 0),
               ),
               const SizedBox(height: AppSpacing.md),
               Wrap(
@@ -291,20 +266,14 @@ class _ContributeSheetState extends ConsumerState<_ContributeSheet> {
                       onPressed: () => _setAmount(preset),
                       backgroundColor: context.tintFill,
                       side: BorderSide(color: context.borderColor),
-                      labelStyle: AppTypography.label.copyWith(
-                        color: context.accent,
-                      ),
+                      labelStyle: AppTypography.label.copyWith(color: context.accent),
                     ),
                 ],
               ),
               const SizedBox(height: AppSpacing.xl),
               ElevatedButton(
-                onPressed: _amount > 0
-                    ? () => Navigator.of(context).pop(_amount)
-                    : null,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.secondary,
-                ),
+                onPressed: _amount > 0 ? () => Navigator.of(context).pop(_amount) : null,
+                style: ElevatedButton.styleFrom(backgroundColor: AppColors.secondary),
                 child: Text(l10n.addFunds),
               ),
             ],

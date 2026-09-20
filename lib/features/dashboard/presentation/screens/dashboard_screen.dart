@@ -6,6 +6,8 @@ import 'package:rainypenny/core/theme/app_typography.dart';
 import 'package:rainypenny/features/budget/presentation/widgets/budget_editor_sheet.dart';
 import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_period_selector.dart';
 import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
+import 'package:rainypenny/features/savings/presentation/screens/savings_screen.dart';
+import 'package:rainypenny/features/savings/presentation/widgets/goal_editor_sheet.dart';
 import 'package:rainypenny/features/transactions/presentation/controllers/transaction_list_controller.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -19,14 +21,11 @@ import '../../../../core/widgets/states.dart';
 import '../../../budget/presentation/widgets/budget_row.dart';
 import '../../../financial/domain/entities/budget.dart';
 import '../../../financial/domain/entities/insight.dart';
-import '../../../financial/domain/entities/savings_goal.dart';
 import '../../../financial/domain/entities/transaction.dart';
 import '../../../financial/domain/services/budget_calculator.dart';
-import '../../../financial/domain/services/savings_calculator.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
 import '../../../financial/presentation/widgets/insight_card.dart';
 import '../../../review/presentation/widgets/review_prompt.dart';
-import '../../../savings/presentation/widgets/savings_goal_card.dart';
 import '../../../transactions/presentation/widgets/transaction_detail_sheet.dart';
 import '../../../transactions/presentation/widgets/transaction_tile.dart';
 import '../widgets/dashboard_header.dart';
@@ -371,18 +370,17 @@ class _SavingsSection extends ConsumerWidget {
         ),
         goals.when(
           data: (list) {
-            final SavingsGoal? featured = SavingsCalculator.featured(list);
-            if (featured == null) {
-              return AppCard(
-                child: EmptyState(
-                  icon: Icons.savings_rounded,
-                  title: l10n.savingsGoals,
-                  message: l10n.noTransactionsBody,
-                  compact: true,
-                ),
+            if (list.isEmpty) {
+              return EmptyState(
+                icon: Icons.savings_rounded,
+                title: l10n.noGoalsTitle,
+                message: l10n.noGoalsBody,
+                actionLabel: l10n.newGoal,
+                onAction: () => showGoalEditor(context),
               );
             }
-            return SavingsGoalCard(goal: featured, highlighted: true);
+
+            return SavingsSummaryCard(goals: list);
           },
           loading: () => const SkeletonCard(height: 120),
           error: (_, _) => const SizedBox.shrink(),
