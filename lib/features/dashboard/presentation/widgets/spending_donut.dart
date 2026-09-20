@@ -12,11 +12,7 @@ import '../../../financial/domain/entities/category.dart';
 
 /// One slice of the spending breakdown.
 class SpendingSlice {
-  const SpendingSlice({
-    required this.label,
-    required this.amount,
-    required this.color,
-  });
+  const SpendingSlice({required this.label, required this.amount, required this.color});
 
   final String label;
   final double amount;
@@ -33,8 +29,7 @@ List<SpendingSlice> buildSpendingSlices(
 }) {
   if (spending.isEmpty) return const [];
 
-  final entries = spending.entries.toList()
-    ..sort((a, b) => b.value.compareTo(a.value));
+  final entries = spending.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
 
   final slices = <SpendingSlice>[];
   for (var i = 0; i < entries.length && i < maxSlices; i++) {
@@ -48,17 +43,9 @@ List<SpendingSlice> buildSpendingSlices(
   }
 
   if (entries.length > maxSlices) {
-    final rest = entries
-        .skip(maxSlices)
-        .fold(0.0, (sum, entry) => sum + entry.value);
+    final rest = entries.skip(maxSlices).fold(0.0, (sum, entry) => sum + entry.value);
     if (rest > 0) {
-      slices.add(
-        SpendingSlice(
-          label: otherLabel,
-          amount: rest,
-          color: AppColors.chartNeutral,
-        ),
-      );
+      slices.add(SpendingSlice(label: otherLabel, amount: rest, color: AppColors.chartNeutral));
     }
   }
 
@@ -68,11 +55,7 @@ List<SpendingSlice> buildSpendingSlices(
 /// Donut plus legend. The centre carries the total so the chart answers
 /// "how much" and "on what" at the same time.
 class SpendingDonut extends ConsumerStatefulWidget {
-  const SpendingDonut({
-    super.key,
-    required this.slices,
-    required this.centerLabel,
-  });
+  const SpendingDonut({super.key, required this.slices, required this.centerLabel});
 
   final List<SpendingSlice> slices;
   final String centerLabel;
@@ -90,9 +73,7 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
     final total = widget.slices.fold(0.0, (sum, s) => sum + s.amount);
     if (total <= 0) return const SizedBox.shrink();
 
-    final highlighted = _touchedIndex == null
-        ? null
-        : widget.slices[_touchedIndex!];
+    final highlighted = _touchedIndex == null ? null : widget.slices[_touchedIndex!];
 
     return Row(
       children: [
@@ -109,10 +90,13 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
                   startDegreeOffset: -90,
                   pieTouchData: PieTouchData(
                     touchCallback: (event, response) {
+                      final index = response?.touchedSection?.touchedSectionIndex;
                       setState(() {
-                        _touchedIndex = event.isInterestedForInteractions
-                            ? response?.touchedSection?.touchedSectionIndex
-                            : null;
+                        if (!event.isInterestedForInteractions || index == null || index < 0) {
+                          _touchedIndex = null;
+                        } else {
+                          _touchedIndex = index;
+                        }
                       });
                     },
                   ),
@@ -184,11 +168,7 @@ class _SpendingDonutState extends ConsumerState<SpendingDonut> {
 }
 
 class _LegendRow extends StatelessWidget {
-  const _LegendRow({
-    required this.slice,
-    required this.percent,
-    required this.dimmed,
-  });
+  const _LegendRow({required this.slice, required this.percent, required this.dimmed});
 
   final SpendingSlice slice;
   final double percent;
@@ -204,10 +184,7 @@ class _LegendRow extends StatelessWidget {
           Container(
             width: 9,
             height: 9,
-            decoration: BoxDecoration(
-              color: slice.color,
-              borderRadius: BorderRadius.circular(3),
-            ),
+            decoration: BoxDecoration(color: slice.color, borderRadius: BorderRadius.circular(3)),
           ),
           const SizedBox(width: AppSpacing.sm),
           Expanded(

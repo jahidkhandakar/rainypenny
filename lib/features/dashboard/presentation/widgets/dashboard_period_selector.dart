@@ -90,6 +90,13 @@ class DashboardPeriodSelector extends ConsumerWidget {
             children: [
               _buildTabItem(
                 context: context,
+                title: 'Cycle',
+                isSelected: selectedTab == DashboardPeriodTab.cycle,
+                onTap: () =>
+                    ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.cycle),
+              ),
+              _buildTabItem(
+                context: context,
                 title: 'Today',
                 isSelected: selectedTab == DashboardPeriodTab.today,
                 onTap: () =>
@@ -108,13 +115,6 @@ class DashboardPeriodSelector extends ConsumerWidget {
                 isSelected: selectedTab == DashboardPeriodTab.thirtyDays,
                 onTap: () =>
                     ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.thirtyDays),
-              ),
-              _buildTabItem(
-                context: context,
-                title: 'Cycle',
-                isSelected: selectedTab == DashboardPeriodTab.cycle,
-                onTap: () =>
-                    ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.cycle),
               ),
               _buildTabItem(
                 context: context,
