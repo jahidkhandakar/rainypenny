@@ -19,12 +19,7 @@ import '../../../financial/presentation/widgets/budget_status_visuals.dart';
 /// Shared between the dashboard preview ([dense] = true) and the full Budget
 /// screen, so the two can never drift apart visually.
 class BudgetRow extends ConsumerWidget {
-  const BudgetRow({
-    super.key,
-    required this.budget,
-    this.dense = false,
-    this.onTap,
-  });
+  const BudgetRow({super.key, required this.budget, this.dense = false, this.onTap});
 
   final Budget budget;
   final bool dense;
@@ -41,6 +36,7 @@ class BudgetRow extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             if (!dense) ...[
               IconBadge(
@@ -59,16 +55,12 @@ class BudgetRow extends ConsumerWidget {
                     budget.category.name,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: AppTypography.title.copyWith(
-                      color: context.textPrimary,
-                    ),
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     money.formatRatio(budget.spent, budget.limit),
-                    style: AppTypography.caption.copyWith(
-                      color: context.textSecondary,
-                    ),
+                    style: AppTypography.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -96,9 +88,7 @@ class BudgetRow extends ConsumerWidget {
                 budget.isExceeded
                     ? '${money.format(budget.remaining.abs(), decimals: false)} ${l10n.overBudget.toLowerCase()}'
                     : '${money.format(budget.remaining, decimals: false)} ${l10n.remaining.toLowerCase()}',
-                style: AppTypography.caption.copyWith(
-                  color: context.textSecondary,
-                ),
+                style: AppTypography.caption.copyWith(color: context.textSecondary),
               ),
             ],
           ),
@@ -107,9 +97,13 @@ class BudgetRow extends ConsumerWidget {
     );
 
     if (dense) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(vertical: AppSpacing.md),
-        child: content,
+      return InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(AppSpacing.sm),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: AppSpacing.md),
+          child: content,
+        ),
       );
     }
 

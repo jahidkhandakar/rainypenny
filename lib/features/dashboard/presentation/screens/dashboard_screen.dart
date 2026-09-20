@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rainypenny/core/theme/app_typography.dart';
+import 'package:rainypenny/features/budget/presentation/widgets/budget_editor_sheet.dart';
 import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_period_selector.dart';
 import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
 import 'package:rainypenny/features/transactions/presentation/controllers/transaction_list_controller.dart';
@@ -294,6 +296,7 @@ class _BudgetSection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        // Retained original SectionHeader with View All action
         SectionHeader(
           title: l10n.budgetProgress,
           actionLabel: l10n.viewAll,
@@ -304,6 +307,7 @@ class _BudgetSection extends ConsumerWidget {
             final preview = BudgetCalculator.preview(list);
             if (preview.isEmpty) {
               return AppCard(
+                onTap: () => startAddBudget(context, ref),
                 child: EmptyState(
                   icon: CupertinoIcons.chart_pie_fill,
                   title: l10n.budget,
@@ -323,8 +327,20 @@ class _BudgetSection extends ConsumerWidget {
                     BudgetRow(
                       budget: budget,
                       dense: true,
-                      onTap: () => context.push(AppRoutes.budget),
+                      onTap: () => showBudgetEditor(context, budget: budget),
                     ),
+
+                  const Divider(height: 1, thickness: 0.5),
+
+                  // Dedicated "Add Budget" button added at the bottom of the card
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: AppSpacing.md),
+                    child: TextButton.icon(
+                      onPressed: () => startAddBudget(context, ref),
+                      icon: const Icon(CupertinoIcons.add, size: 16),
+                      label: Text(l10n.newBudget, style: AppTypography.body),
+                    ),
+                  ),
                 ],
               ),
             );
