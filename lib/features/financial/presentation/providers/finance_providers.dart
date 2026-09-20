@@ -114,11 +114,11 @@ final reportRangeProvider = NotifierProvider<ReportRangeNotifier, ReportRange>(
 );
 
 /// The period tab options shown in the dashboard filter.
-enum DashboardPeriodTab { today, sevenDays, thirtyDays, custom }
+enum DashboardPeriodTab { today, sevenDays, thirtyDays, cycle, custom }
 
 class DashboardTabNotifier extends Notifier<DashboardPeriodTab> {
   @override
-  DashboardPeriodTab build() => DashboardPeriodTab.thirtyDays;
+  DashboardPeriodTab build() => DashboardPeriodTab.cycle;
 
   void select(DashboardPeriodTab tab) => state = tab;
 }
@@ -159,9 +159,12 @@ final dashboardRangeProvider = Provider<DateRange>((ref) {
       return DateRange.trailing(7);
     case DashboardPeriodTab.thirtyDays:
       return DateRange.trailing(30);
+    case DashboardPeriodTab.cycle:
+      // Maps 30D directly to the active Salary Cycle range
+      return ref.watch(selectedCycleRangeProvider);
     case DashboardPeriodTab.custom:
       final custom = ref.watch(dashboardCustomRangeProvider);
-      return custom ?? DateRange.trailing(30);
+      return custom ?? ref.watch(selectedCycleRangeProvider);
   }
 });
 

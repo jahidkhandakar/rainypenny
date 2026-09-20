@@ -111,6 +111,13 @@ class DashboardPeriodSelector extends ConsumerWidget {
               ),
               _buildTabItem(
                 context: context,
+                title: 'Cycle',
+                isSelected: selectedTab == DashboardPeriodTab.cycle,
+                onTap: () =>
+                    ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.cycle),
+              ),
+              _buildTabItem(
+                context: context,
                 title: 'Custom',
                 isSelected: isCustom,
                 onTap: () async {
