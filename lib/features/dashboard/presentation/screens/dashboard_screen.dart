@@ -74,6 +74,7 @@ class DashboardScreen extends ConsumerWidget {
                 const SizedBox(height: AppSpacing.lg),
 
                 summary.when(
+                  skipLoadingOnReload: true,
                   data: (data) => _DashboardBody(summary: data),
                   loading: () => const _DashboardSkeleton(),
                   error: (_, _) => ErrorState(
@@ -112,18 +113,15 @@ class _DashboardBody extends ConsumerWidget {
             incomeChange: summary.incomeChange,
             expenseChange: summary.expenseChange,
             onRemainingTap: () {
-              ref.watch(transactionQueryProvider.notifier).filter(TransactionFilter.all);
-
+              ref.read(transactionQueryProvider.notifier).filter(TransactionFilter.all);
               context.go(AppRoutes.transactions);
             },
             onIncomeTap: () {
-              ref.watch(transactionQueryProvider.notifier).filter(TransactionFilter.income);
-
+              ref.read(transactionQueryProvider.notifier).filter(TransactionFilter.income);
               context.go(AppRoutes.transactions);
             },
             onExpenseTap: () {
-              ref.watch(transactionQueryProvider.notifier).filter(TransactionFilter.expense);
-
+              ref.read(transactionQueryProvider.notifier).filter(TransactionFilter.expense);
               context.go(AppRoutes.transactions);
             },
           ),
@@ -251,6 +249,7 @@ class _RecentTransactionsSection extends ConsumerWidget {
         AppCard(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: AppSpacing.xs),
           child: transactions.when(
+            skipLoadingOnReload: true,
             data: (list) {
               final recent = list.take(5).toList();
               if (recent.isEmpty) {

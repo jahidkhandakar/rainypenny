@@ -131,17 +131,8 @@ class AddTransactionController extends Notifier<TransactionDraft> {
     final options = categoriesFor(type);
     if (options.isNotEmpty) return options.first;
     return type == TransactionType.income
-        ? const Category(
-            id: 'salary',
-            name: 'Salary',
-            icon: CategoryIcon.salary,
-            isIncome: true,
-          )
-        : const Category(
-            id: 'other',
-            name: 'Other',
-            icon: CategoryIcon.other,
-          );
+        ? const Category(id: 'salary', name: 'Salary', icon: CategoryIcon.salary, isIncome: true)
+        : const Category(id: 'other', name: 'Other', icon: CategoryIcon.other);
   }
 
   /// Resets the form back to a blank expense.
@@ -166,11 +157,7 @@ class AddTransactionController extends Notifier<TransactionDraft> {
     if (type == state.type) return;
     // The old category belongs to the other direction, so whatever was chosen
     // cannot carry over and the new one is a default again.
-    state = state.copyWith(
-      type: type,
-      category: _defaultFor(type),
-      categoryChosen: false,
-    );
+    state = state.copyWith(type: type, category: _defaultFor(type), categoryChosen: false);
   }
 
   void setCategory(Category category) =>
@@ -225,29 +212,21 @@ class AddTransactionController extends Notifier<TransactionDraft> {
 }
 
 final addTransactionControllerProvider =
-    NotifierProvider<AddTransactionController, TransactionDraft>(
-      AddTransactionController.new,
-    );
+    NotifierProvider<AddTransactionController, TransactionDraft>(AddTransactionController.new);
 
 /// Deletes a transaction and refreshes the derived figures. Returns the
 /// removed row so the caller can offer an undo.
-final deleteTransactionProvider = Provider<Future<void> Function(Transaction)>((
-  ref,
-) {
+final deleteTransactionProvider = Provider<Future<void> Function(Transaction)>((ref) {
   return (transaction) async {
-    await ref
-        .read(transactionRepositoryProvider)
-        .deleteTransaction(transaction.id);
+    await ref.read(transactionRepositoryProvider).deleteTransaction(transaction.id);
     ref.invalidate(transactionsProvider);
   };
 });
 
 /// Re-inserts a previously deleted transaction, backing the undo action.
-final restoreTransactionProvider = Provider<Future<void> Function(Transaction)>(
-  (ref) {
-    return (transaction) async {
-      await ref.read(transactionRepositoryProvider).addTransaction(transaction);
-      ref.invalidate(transactionsProvider);
-    };
-  },
-);
+final restoreTransactionProvider = Provider<Future<void> Function(Transaction)>((ref) {
+  return (transaction) async {
+    await ref.read(transactionRepositoryProvider).addTransaction(transaction);
+    ref.invalidate(transactionsProvider);
+  };
+});
