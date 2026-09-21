@@ -225,8 +225,12 @@ final deleteTransactionProvider = Provider<Future<void> Function(Transaction)>((
 
 /// Re-inserts a previously deleted transaction, backing the undo action.
 final restoreTransactionProvider = Provider<Future<void> Function(Transaction)>((ref) {
-  return (transaction) async {
+  return (Transaction transaction) async {
+    // 1. Insert the transaction back into the ledger repository
     await ref.read(transactionRepositoryProvider).addTransaction(transaction);
+
+    // 2. Refresh ledger providers so the home screen & list update immediately
     ref.invalidate(transactionsProvider);
+    ref.invalidate(dashboardSummaryProvider);
   };
 });
