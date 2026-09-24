@@ -120,7 +120,7 @@ enum DashboardPeriodTab { today, sevenDays, thirtyDays, cycle, custom }
 
 class DashboardTabNotifier extends Notifier<DashboardPeriodTab> {
   @override
-  DashboardPeriodTab build() => DashboardPeriodTab.cycle;
+  DashboardPeriodTab build() => DashboardPeriodTab.thirtyDays;
 
   void select(DashboardPeriodTab tab) => state = tab;
 }

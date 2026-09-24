@@ -194,6 +194,8 @@ class _RemainingCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppL10n.of(context);
+
     final money = ref.watch(moneyFormatterProvider);
     final currency = ref.watch(currencyProvider);
 
@@ -244,7 +246,7 @@ class _RemainingCard extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Remaining',
+                  l10n.remaining,
                   style: AppTypography.label.copyWith(
                     color: context.textPrimary,
                     fontWeight: FontWeight.w700,
