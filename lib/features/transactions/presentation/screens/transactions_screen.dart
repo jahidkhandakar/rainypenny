@@ -123,6 +123,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
             ),
           ),
           const _CategoryFilterBar(),
+          const SizedBox(height: 5),
           Expanded(
             child: groups.when(
               data: (list) {

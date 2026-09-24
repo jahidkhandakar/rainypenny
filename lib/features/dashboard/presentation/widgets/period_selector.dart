@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:rainypenny/core/localization/generated/app_localizations.dart';
 import 'package:rainypenny/core/settings/settings_providers.dart';
 import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
 
@@ -48,6 +49,8 @@ class PeriodSelector extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppL10n.of(context);
+
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final isDark = theme.brightness == Brightness.dark;
@@ -90,35 +93,28 @@ class PeriodSelector extends ConsumerWidget {
             children: [
               _buildTabItem(
                 context: context,
-                title: 'Cycle',
-                isSelected: selectedTab == DashboardPeriodTab.cycle,
-                onTap: () =>
-                    ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.cycle),
-              ),
-              _buildTabItem(
-                context: context,
-                title: 'Today',
+                title: l10n.today,
                 isSelected: selectedTab == DashboardPeriodTab.today,
                 onTap: () =>
                     ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.today),
               ),
               _buildTabItem(
                 context: context,
-                title: '7D',
+                title: l10n.week,
                 isSelected: selectedTab == DashboardPeriodTab.sevenDays,
                 onTap: () =>
                     ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.sevenDays),
               ),
               _buildTabItem(
                 context: context,
-                title: '30D',
+                title: l10n.month,
                 isSelected: selectedTab == DashboardPeriodTab.thirtyDays,
                 onTap: () =>
                     ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.thirtyDays),
               ),
               _buildTabItem(
                 context: context,
-                title: 'Custom',
+                title: l10n.customRange,
                 isSelected: isCustom,
                 onTap: () async {
                   ref.read(dashboardTabProvider.notifier).select(DashboardPeriodTab.custom);
