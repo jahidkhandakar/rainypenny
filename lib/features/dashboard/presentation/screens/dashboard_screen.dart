@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rainypenny/core/theme/app_typography.dart';
 import 'package:rainypenny/features/budget/presentation/widgets/budget_editor_sheet.dart';
-import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_period_selector.dart';
+import 'package:rainypenny/features/dashboard/presentation/widgets/period_selector.dart';
 import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
 import 'package:rainypenny/features/savings/presentation/screens/savings_screen.dart';
 import 'package:rainypenny/features/savings/presentation/widgets/goal_editor_sheet.dart';
@@ -70,7 +70,7 @@ class DashboardScreen extends ConsumerWidget {
 
                 // const CycleNavigator(),
                 // const SizedBox(height: AppSpacing.lg),
-                const DashboardPeriodSelector(),
+                const PeriodSelector(),
                 const SizedBox(height: AppSpacing.lg),
 
                 summary.when(

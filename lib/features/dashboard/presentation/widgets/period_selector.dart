@@ -4,8 +4,8 @@ import 'package:intl/intl.dart';
 import 'package:rainypenny/core/settings/settings_providers.dart';
 import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
 
-class DashboardPeriodSelector extends ConsumerWidget {
-  const DashboardPeriodSelector({super.key});
+class PeriodSelector extends ConsumerWidget {
+  const PeriodSelector({super.key});
 
   Future<void> _openDateRangePicker(BuildContext context, WidgetRef ref) async {
     final theme = Theme.of(context);

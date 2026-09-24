@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rainypenny/features/dashboard/presentation/widgets/period_selector.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
@@ -15,7 +16,6 @@ import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
 import '../../../../core/widgets/entrance.dart';
 import '../../../../core/widgets/states.dart';
-import '../../../dashboard/presentation/widgets/cycle_navigator.dart';
 import '../controllers/transaction_list_controller.dart';
 import '../widgets/transaction_detail_sheet.dart';
 import '../widgets/transaction_tile.dart';
@@ -73,7 +73,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
           if (!query.wholeHistory)
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: AppSpacing.page),
-              child: CycleNavigator(),
+              child: PeriodSelector(),
             ),
           Padding(
             padding: const EdgeInsets.fromLTRB(

@@ -42,10 +42,7 @@ class TransactionQuery {
   );
 
   bool get isActive =>
-      search.isNotEmpty ||
-      filter != TransactionFilter.all ||
-      categoryId != null ||
-      wholeHistory;
+      search.isNotEmpty || filter != TransactionFilter.all || categoryId != null || wholeHistory;
 }
 
 class TransactionQueryNotifier extends Notifier<TransactionQuery> {
@@ -54,8 +51,7 @@ class TransactionQueryNotifier extends Notifier<TransactionQuery> {
 
   void search(String value) => state = state.copyWith(search: value);
 
-  void filter(TransactionFilter filter) =>
-      state = state.copyWith(filter: filter);
+  void filter(TransactionFilter filter) => state = state.copyWith(filter: filter);
 
   /// Passing null, or the category already selected, clears the filter — so the
   /// same chip both applies and removes it.
@@ -67,16 +63,14 @@ class TransactionQueryNotifier extends Notifier<TransactionQuery> {
     state = state.copyWith(categoryId: categoryId);
   }
 
-  void setWholeHistory(bool value) =>
-      state = state.copyWith(wholeHistory: value);
+  void setWholeHistory(bool value) => state = state.copyWith(wholeHistory: value);
 
   void clear() => state = const TransactionQuery();
 }
 
-final transactionQueryProvider =
-    NotifierProvider<TransactionQueryNotifier, TransactionQuery>(
-      TransactionQueryNotifier.new,
-    );
+final transactionQueryProvider = NotifierProvider<TransactionQueryNotifier, TransactionQuery>(
+  TransactionQueryNotifier.new,
+);
 
 /// A day's worth of transactions, with the day's net movement.
 class TransactionGroup {
@@ -93,16 +87,15 @@ class TransactionGroup {
 /// Split out from the grouping so the totals line and the category chips can
 /// read the same filtered set rather than recomputing it with slightly
 /// different rules.
-final filteredTransactionsProvider = FutureProvider<List<Transaction>>((
-  ref,
-) async {
+final filteredTransactionsProvider = FutureProvider<List<Transaction>>((ref) async {
   final all = await ref.watch(transactionsProvider.future);
   final query = ref.watch(transactionQueryProvider);
-  final cycle = ref.watch(selectedCycleProvider);
+  // Synchronized with the dashboard's active period (cycle, today, 7D, 30D, custom)
+  final dateRange = ref.watch(dashboardRangeProvider);
   final needle = query.search.trim().toLowerCase();
 
   return all.where((t) {
-    if (!query.wholeHistory && !cycle.contains(t.date)) return false;
+    if (!query.wholeHistory && !dateRange.contains(t.date)) return false;
 
     final matchesFilter = switch (query.filter) {
       TransactionFilter.all => true,
@@ -123,9 +116,7 @@ final filteredTransactionsProvider = FutureProvider<List<Transaction>>((
 });
 
 /// The filtered ledger, grouped by day.
-final groupedTransactionsProvider = FutureProvider<List<TransactionGroup>>((
-  ref,
-) async {
+final groupedTransactionsProvider = FutureProvider<List<TransactionGroup>>((ref) async {
   final filtered = await ref.watch(filteredTransactionsProvider.future);
 
   final byDay = <DateTime, List<Transaction>>{};
@@ -134,9 +125,7 @@ final groupedTransactionsProvider = FutureProvider<List<TransactionGroup>>((
     byDay.putIfAbsent(key, () => []).add(t);
   }
 
-  return byDay.entries
-      .map((e) => TransactionGroup(date: e.key, transactions: e.value))
-      .toList()
+  return byDay.entries.map((e) => TransactionGroup(date: e.key, transactions: e.value)).toList()
     ..sort((a, b) => b.date.compareTo(a.date));
 });
 
@@ -150,12 +139,16 @@ final filteredTransactionCountProvider = Provider<int>((ref) {
 /// What the current filter adds up to — the figure the client asked to see
 /// beside a category filter, and the one a filtered list is useless without.
 final filteredTotalProvider = Provider<double>((ref) {
+  final query = ref.watch(transactionQueryProvider);
   return ref
       .watch(filteredTransactionsProvider)
       .maybeWhen(
-        data: (list) => list
-            .where((t) => !t.isIncome)
-            .fold(0.0, (sum, t) => sum + t.amount),
+        data: (list) {
+          if (query.filter == TransactionFilter.income) {
+            return list.where((t) => t.isIncome).fold(0.0, (sum, t) => sum + t.amount);
+          }
+          return list.where((t) => !t.isIncome).fold(0.0, (sum, t) => sum + t.amount);
+        },
         orElse: () => 0.0,
       );
 });
@@ -168,18 +161,15 @@ final filteredTotalProvider = Provider<double>((ref) {
 final cycleCategoriesProvider = FutureProvider<List<Category>>((ref) async {
   final all = await ref.watch(transactionsProvider.future);
   final query = ref.watch(transactionQueryProvider);
-  final cycle = ref.watch(selectedCycleProvider);
+  final dateRange = ref.watch(dashboardRangeProvider);
 
-  final inScope = all.where(
-    (t) => query.wholeHistory || cycle.contains(t.date),
-  );
+  final inScope = all.where((t) => query.wholeHistory || dateRange.contains(t.date));
 
   final totals = <Category, double>{};
   for (final t in inScope) {
     totals[t.category] = (totals[t.category] ?? 0) + t.amount;
   }
 
-  final sorted = totals.entries.toList()
-    ..sort((a, b) => b.value.compareTo(a.value));
+  final sorted = totals.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
   return sorted.map((e) => e.key).toList();
 });

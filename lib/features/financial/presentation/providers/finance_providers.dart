@@ -50,13 +50,6 @@ class DateRange {
   final DateTime start;
   final DateTime end;
 
-  /// The window of the same length immediately before this one.
-  ///
-  /// `length` already spans one second short of the full window, so subtracting
-  /// it from the start lands on the correct opening moment. An extra day used to
-  /// be taken off here as well, which made every comparison window a day longer
-  /// than the window it was being compared against and inflated each trend by
-  /// roughly one day's worth of spending.
   DateRange get previous {
     final length = end.difference(start);
     return DateRange(start.subtract(length), start.subtract(const Duration(seconds: 1)));
@@ -64,7 +57,16 @@ class DateRange {
 
   int get days => end.difference(start).inDays + 1;
 
-  // Value equality matters: this type is used as a provider family key.
+  /// Whether [date] falls within this date range.
+  bool contains(DateTime date) {
+    if (date.isBefore(start)) return false;
+    if (date.isAfter(end)) {
+      // Handles precision when end is set to 23:59:59 but date has milliseconds
+      return date.year == end.year && date.month == end.month && date.day == end.day;
+    }
+    return true;
+  }
+
   @override
   bool operator ==(Object other) =>
       identical(this, other) || (other is DateRange && other.start == start && other.end == end);
