@@ -24,13 +24,30 @@ import '../../../financial/presentation/providers/finance_providers.dart';
 import '../widgets/loan_editor_sheet.dart';
 import '../widgets/loan_status_visuals.dart';
 
-/// Debt tracking. Serious in tone — deep blue and charcoal — but never
-/// alarming: red appears only when a payment is actually overdue.
-class LoansScreen extends ConsumerWidget {
+/// Debt tracking screen: overall outstanding balance and payment schedule stay at the top,
+/// with Loans and Debts separated into tabs below.
+class LoansScreen extends ConsumerStatefulWidget {
   const LoansScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<LoansScreen> createState() => _LoansScreenState();
+}
+
+class _LoansScreenState extends ConsumerState<LoansScreen> {
+  int _selectedTab = 0; // 0 = Loans, 1 = Debts
+
+  bool _isDebt(Loan loan) {
+    final kindName = loan.kind.name.toLowerCase();
+    if (kindName.contains('debt') ||
+        kindName.contains('credit') ||
+        loan.kind == LoanKind.creditCard) {
+      return true;
+    }
+    return !loan.hasSchedule;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final l10n = AppL10n.of(context);
     final loans = ref.watch(loansProvider);
 
@@ -47,40 +64,62 @@ class LoansScreen extends ConsumerWidget {
         ],
       ),
       body: loans.when(
-        data: (list) => ListView(
-          padding: const EdgeInsets.fromLTRB(
-            AppSpacing.page,
-            AppSpacing.sm,
-            AppSpacing.page,
-            AppSpacing.section,
-          ),
-          children: [
-            FadeSlideIn(index: 0, child: _OutstandingCard(loans: list)),
-            const SizedBox(height: AppSpacing.xl),
-            if (DebtCalculator.upcomingPayments(list, DateTime.now()).isNotEmpty) ...[
-              SectionHeader(title: l10n.upcomingPayments),
-              FadeSlideIn(index: 1, child: _PaymentSchedule(loans: list)),
+        data: (list) {
+          final loansOnly = list.where((item) => !_isDebt(item)).toList();
+          final debtsOnly = list.where((item) => _isDebt(item)).toList();
+          final currentList = _selectedTab == 0 ? loansOnly : debtsOnly;
+
+          return ListView(
+            padding: const EdgeInsets.fromLTRB(
+              AppSpacing.page,
+              AppSpacing.sm,
+              AppSpacing.page,
+              AppSpacing.section,
+            ),
+            children: [
+              // Overall summary remains untouched
+              FadeSlideIn(index: 0, child: _OutstandingCard(loans: list)),
               const SizedBox(height: AppSpacing.xl),
-            ],
-            SectionHeader(title: l10n.loansAndDebts),
-            for (var i = 0; i < list.length; i++)
-              Padding(
-                padding: const EdgeInsets.only(bottom: AppSpacing.md),
-                child: FadeSlideIn(
-                  index: i + 2,
-                  child: _LoanCard(loan: list[i]),
+
+              // Upcoming payments for all accounts remain untouched
+              if (DebtCalculator.upcomingPayments(list, DateTime.now()).isNotEmpty) ...[
+                SectionHeader(title: l10n.upcomingPayments),
+                FadeSlideIn(index: 1, child: _PaymentSchedule(loans: list)),
+                const SizedBox(height: AppSpacing.xl),
+              ],
+
+              // Section header with segmented tabs
+              SectionHeader(title: l10n.loansAndDebts),
+              const SizedBox(height: AppSpacing.xs),
+              _TabSelector(
+                selected: _selectedTab,
+                onSelect: (index) => setState(() => _selectedTab = index),
+              ),
+              const SizedBox(height: AppSpacing.md),
+
+              // Filtered list based on selected tab
+              for (var i = 0; i < currentList.length; i++)
+                Padding(
+                  key: ValueKey(currentList[i].id),
+                  padding: const EdgeInsets.only(bottom: AppSpacing.md),
+                  child: FadeSlideIn(
+                    index: i + 2,
+                    child: _LoanCard(loan: currentList[i]),
+                  ),
                 ),
-              ),
-            if (list.isEmpty)
-              EmptyState(
-                icon: Icons.account_balance_rounded,
-                title: l10n.noDebtsTitle,
-                message: l10n.noDebtsBody,
-                actionLabel: l10n.newDebt,
-                onAction: () => showLoanEditor(context),
-              ),
-          ],
-        ),
+
+              if (currentList.isEmpty)
+                EmptyState(
+                  icon: Icons.account_balance_rounded,
+                  title: _selectedTab == 0 ? l10n.noLoansTitle : l10n.noDebtsTitle,
+                  message: _selectedTab == 0 ? l10n.noLoansBody : l10n.noDebtsBody,
+                  actionLabel: l10n.newDebt,
+                  onAction: () => showLoanEditor(context),
+                  compact: true,
+                ),
+            ],
+          );
+        },
         loading: () => ListView(
           padding: const EdgeInsets.all(AppSpacing.page),
           children: const [
@@ -96,6 +135,63 @@ class LoansScreen extends ConsumerWidget {
           retryLabel: l10n.retry,
           onRetry: () => ref.invalidate(loansProvider),
         ),
+      ),
+    );
+  }
+}
+
+class _TabSelector extends StatelessWidget {
+  const _TabSelector({required this.selected, required this.onSelect});
+
+  final int selected;
+  final ValueChanged<int> onSelect;
+
+  @override
+  Widget build(BuildContext context) {
+    final tabs = ['Loans', 'Debts'];
+
+    return Container(
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: context.subtleFill,
+        borderRadius: BorderRadius.circular(AppRadius.md),
+      ),
+      child: Row(
+        children: [
+          for (var i = 0; i < tabs.length; i++)
+            Expanded(
+              child: GestureDetector(
+                onTap: () => onSelect(i),
+                behavior: HitTestBehavior.opaque,
+                child: AnimatedContainer(
+                  duration: AppDuration.fast,
+                  curve: Curves.easeOut,
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  decoration: BoxDecoration(
+                    color: selected == i ? context.cardColor : Colors.transparent,
+                    borderRadius: BorderRadius.circular(AppRadius.sm),
+                    boxShadow: selected == i
+                        ? [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.05),
+                              blurRadius: 6,
+                              offset: const Offset(0, 2),
+                            ),
+                          ]
+                        : null,
+                  ),
+                  child: Text(
+                    tabs[i],
+                    textAlign: TextAlign.center,
+                    style: AppTypography.label.copyWith(
+                      color: selected == i ? context.accentDark : context.textSecondary,
+                      fontWeight: selected == i ? FontWeight.w700 : FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }

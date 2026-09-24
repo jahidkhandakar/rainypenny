@@ -1337,5 +1337,12 @@
         "type": "String"
       }
     }
-  }
+  },
+
+
+
+  "loans": "Loans",
+  "debts": "Debts",
+  "noLoansTitle": "No loans",
+  "noLoansBody": "You have no active loans."
 }

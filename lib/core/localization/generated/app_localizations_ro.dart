@@ -2097,4 +2097,16 @@ class AppL10nRo extends AppL10n {
   String rangeApplied(String start, String end) {
     return 'Showing $start – $end';
   }
+
+  @override
+  String get loans => 'Loans';
+
+  @override
+  String get debts => 'Debts';
+
+  @override
+  String get noLoansTitle => 'No loans';
+
+  @override
+  String get noLoansBody => 'You have no active loans.';
 }

@@ -550,11 +550,10 @@
   "categoryHealth": "Sağlık ve spor",
   "categoryEducation": "Eğitim",
   "categoryTravel": "Seyahat",
-  "categoryOther": "Diğer",
   "categorySalary": "Maaş",
   "categoryFreelance": "Serbest çalışma",
   "categoryInvestments": "Yatırımlar",
-  "categoryRefunds": "İadeler ve hediyeler",
+  "categoryOther": "Diğer",
   "addCategory": "Yeni kategori",
   "filterByCategory": "Kategoriye göre filtrele",
   "allCategories": "Tüm kategoriler",
@@ -563,5 +562,6 @@
   "allTime": "Tüm zamanlar",
   "customRange": "Özel",
   "selectDateRange": "Dönem seçin",
-  "rangeApplied": "{start} – {end} gösteriliyor"
+  "rangeApplied": "{start} – {end} gösteriliyor",
+  "categoryRefunds": "İadeler ve hediyeler"
 }

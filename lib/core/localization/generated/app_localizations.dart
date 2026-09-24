@@ -3793,6 +3793,30 @@ abstract class AppL10n {
   /// In en, this message translates to:
   /// **'Showing {start} – {end}'**
   String rangeApplied(String start, String end);
+
+  /// No description provided for @loans.
+  ///
+  /// In en, this message translates to:
+  /// **'Loans'**
+  String get loans;
+
+  /// No description provided for @debts.
+  ///
+  /// In en, this message translates to:
+  /// **'Debts'**
+  String get debts;
+
+  /// No description provided for @noLoansTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No loans'**
+  String get noLoansTitle;
+
+  /// No description provided for @noLoansBody.
+  ///
+  /// In en, this message translates to:
+  /// **'You have no active loans.'**
+  String get noLoansBody;
 }
 
 class _AppL10nDelegate extends LocalizationsDelegate<AppL10n> {

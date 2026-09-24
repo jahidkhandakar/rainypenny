@@ -550,11 +550,10 @@
   "categoryHealth": "صحت و تندرستی",
   "categoryEducation": "تعلیم",
   "categoryTravel": "سفر",
-  "categoryOther": "دیگر",
   "categorySalary": "تنخواہ",
   "categoryFreelance": "فری لانس",
   "categoryInvestments": "سرمایہ کاری",
-  "categoryRefunds": "واپسی اور تحائف",
+  "categoryOther": "دیگر",
   "addCategory": "نئی قسم",
   "filterByCategory": "قسم کے مطابق چھانٹیں",
   "allCategories": "تمام اقسام",
@@ -563,5 +562,6 @@
   "allTime": "تمام وقت",
   "customRange": "حسبِ ضرورت",
   "selectDateRange": "مدت منتخب کریں",
-  "rangeApplied": "{start} – {end} دکھایا جا رہا ہے"
+  "rangeApplied": "{start} – {end} دکھایا جا رہا ہے",
+  "categoryRefunds": "واپسی اور تحائف"
 }

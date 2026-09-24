@@ -550,11 +550,10 @@
   "categoryHealth": "Saúde e bem-estar",
   "categoryEducation": "Educação",
   "categoryTravel": "Viagens",
-  "categoryOther": "Outros",
   "categorySalary": "Salário",
   "categoryFreelance": "Freelance",
   "categoryInvestments": "Investimentos",
-  "categoryRefunds": "Reembolsos e presentes",
+  "categoryOther": "Outros",
   "addCategory": "Nova categoria",
   "filterByCategory": "Filtrar por categoria",
   "allCategories": "Todas as categorias",
@@ -563,5 +562,6 @@
   "allTime": "Todo o histórico",
   "customRange": "Personalizado",
   "selectDateRange": "Escolher um período",
-  "rangeApplied": "A mostrar {start} – {end}"
+  "rangeApplied": "A mostrar {start} – {end}",
+  "categoryRefunds": "Reembolsos e presentes"
 }

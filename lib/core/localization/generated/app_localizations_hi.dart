@@ -2075,4 +2075,16 @@ class AppL10nHi extends AppL10n {
   String rangeApplied(String start, String end) {
     return '$start – $end दिखाया जा रहा है';
   }
+
+  @override
+  String get loans => 'Loans';
+
+  @override
+  String get debts => 'Debts';
+
+  @override
+  String get noLoansTitle => 'No loans';
+
+  @override
+  String get noLoansBody => 'You have no active loans.';
 }

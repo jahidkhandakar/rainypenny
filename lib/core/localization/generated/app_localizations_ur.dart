@@ -2079,4 +2079,16 @@ class AppL10nUr extends AppL10n {
   String rangeApplied(String start, String end) {
     return '$start – $end دکھایا جا رہا ہے';
   }
+
+  @override
+  String get loans => 'Loans';
+
+  @override
+  String get debts => 'Debts';
+
+  @override
+  String get noLoansTitle => 'No loans';
+
+  @override
+  String get noLoansBody => 'You have no active loans.';
 }

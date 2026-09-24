@@ -550,11 +550,10 @@
   "categoryHealth": "الصحة واللياقة",
   "categoryEducation": "التعليم",
   "categoryTravel": "السفر",
-  "categoryOther": "أخرى",
   "categorySalary": "الراتب",
   "categoryFreelance": "العمل الحر",
   "categoryInvestments": "الاستثمارات",
-  "categoryRefunds": "المستردات والهدايا",
+  "categoryOther": "أخرى",
   "addCategory": "فئة جديدة",
   "filterByCategory": "تصفية حسب الفئة",
   "allCategories": "كل الفئات",
@@ -563,5 +562,6 @@
   "allTime": "كل الفترات",
   "customRange": "مخصص",
   "selectDateRange": "اختر فترة",
-  "rangeApplied": "عرض {start} – {end}"
+  "rangeApplied": "عرض {start} – {end}",
+  "categoryRefunds": "المستردات والهدايا"
 }
