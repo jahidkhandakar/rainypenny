@@ -1,3 +1,5 @@
+import 'package:rainypenny/core/localization/generated/app_localizations.dart';
+
 /// Semantic icon key for a category.
 ///
 /// The domain layer stays free of Flutter types — the presentation layer maps
@@ -101,4 +103,32 @@ class Category {
 
   @override
   int get hashCode => id.hashCode;
+}
+
+extension CategoryL10n on Category {
+  String localizedName(AppL10n l10n) {
+    if (isCustom) return name;
+
+    return switch (id) {
+      'groceries' => l10n.categoryGroceries,
+      'food' => l10n.categoryFood,
+      'transport' => l10n.categoryTransport,
+      'housing' => l10n.categoryHousing,
+      'utilities' => l10n.categoryUtilities,
+      'entertainment' => l10n.categoryEntertainment,
+      'health' => l10n.categoryHealth,
+      'shopping' => l10n.categoryShopping,
+      'personal_care' => l10n.categoryPersonalCare,
+      'education' => l10n.categoryEducation,
+      'salary' => l10n.categorySalary,
+      'investments' => l10n.categoryInvestments,
+      'bills' => l10n.categoryBills,
+      'travel' => l10n.categoryTravel,
+      'other' => l10n.categoryOther,
+      'freelance' => l10n.categoryFreelance,
+      'refunds' => l10n.categoryRefund,
+      // Fallback to the default name if ID is not recognized
+      _ => name,
+    };
+  }
 }

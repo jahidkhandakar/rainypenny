@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/features/financial/data/datasources/empty_mock_finance_data_source.dart';
+import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../features/auth/data/repositories/mock_auth_repository.dart';
@@ -44,7 +44,7 @@ final financeDataSourceProvider = Provider<FinanceDataSource>((ref) {
   // The demo ledger is regenerated when the payday changes, so its salary row
   // keeps landing on the cycle boundary rather than drifting into the previous
   // period and leaving the home screen reporting the wrong monthly salary.
-  return EmptyMockFinanceDataSource(payday: ref.watch(paydayProvider));
+  return MockFinanceDataSource(payday: ref.watch(paydayProvider));
 });
 
 final authRepositoryProvider = Provider<AuthRepository>((ref) {

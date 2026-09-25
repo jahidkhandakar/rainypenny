@@ -158,7 +158,7 @@ class _CategoryRow extends StatelessWidget {
     final l10n = AppL10n.of(context);
 
     return InkWell(
-      onTap: () => showCategoryEditor(context, category: category),
+      onTap: () => category.isCustom ? showCategoryEditor(context, category: category) : () {},
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.md),
         child: Row(
@@ -175,7 +175,7 @@ class _CategoryRow extends StatelessWidget {
             const SizedBox(width: AppSpacing.md),
             Expanded(
               child: Text(
-                category.name,
+                category.localizedName(l10n),
                 style: AppTypography.title.copyWith(color: context.textPrimary),
               ),
             ),

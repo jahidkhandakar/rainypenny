@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rainypenny/features/financial/domain/entities/category.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
@@ -139,7 +140,7 @@ class _TransactionDetailSheet extends ConsumerWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        transaction.category.name,
+                        transaction.category.localizedName(l10n),
                         style: AppTypography.caption.copyWith(color: context.textSecondary),
                       ),
                     ],
@@ -167,7 +168,7 @@ class _TransactionDetailSheet extends ConsumerWidget {
               child: Column(
                 children: [
                   _DetailRow(label: l10n.date, value: dates.long(transaction.date)),
-                  _DetailRow(label: l10n.category, value: transaction.category.name),
+                  _DetailRow(label: l10n.category, value: transaction.category.localizedName(l10n)),
                   _DetailRow(
                     label: isIncome ? l10n.income : l10n.expenses,
                     value: money.format(transaction.amount),

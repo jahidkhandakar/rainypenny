@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rainypenny/core/localization/generated/app_localizations.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
@@ -26,9 +27,12 @@ List<SpendingSlice> buildSpendingSlices(
   BuildContext context,
   Map<Category, double> spending, {
   int maxSlices = 5,
-  String otherLabel = 'Other',
+  String? otherLabel,
 }) {
   if (spending.isEmpty) return const [];
+
+  final l10n = AppL10n.of(context);
+  final resolvedOtherLabel = otherLabel ?? l10n.categoryOther;
 
   final entries = spending.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
 
@@ -36,7 +40,7 @@ List<SpendingSlice> buildSpendingSlices(
   for (var i = 0; i < entries.length && i < maxSlices; i++) {
     slices.add(
       SpendingSlice(
-        label: entries[i].key.name,
+        label: entries[i].key.localizedName(l10n),
         amount: entries[i].value,
         color: chartColorForCategory(context, entries[i].key.id, i),
       ),
@@ -46,7 +50,9 @@ List<SpendingSlice> buildSpendingSlices(
   if (entries.length > maxSlices) {
     final rest = entries.skip(maxSlices).fold(0.0, (sum, entry) => sum + entry.value);
     if (rest > 0) {
-      slices.add(SpendingSlice(label: otherLabel, amount: rest, color: AppColors.chartNeutral));
+      slices.add(
+        SpendingSlice(label: resolvedOtherLabel, amount: rest, color: AppColors.chartNeutral),
+      );
     }
   }
 

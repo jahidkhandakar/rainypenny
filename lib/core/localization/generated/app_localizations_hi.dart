@@ -2040,7 +2040,7 @@ class AppL10nHi extends AppL10n {
   String get categoryCashback => 'Cashback';
 
   @override
-  String get categoryRefund => 'Refund';
+  String get categoryRefund => 'रिफंड और उपहार';
 
   @override
   String get categoryRentalIncome => 'Rental income';
