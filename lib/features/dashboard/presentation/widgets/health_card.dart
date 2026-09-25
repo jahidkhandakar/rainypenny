@@ -14,18 +14,65 @@ import '../../../financial/domain/entities/financial_health.dart';
 import '../../../financial/presentation/widgets/health_presenter.dart';
 
 /// The 0-100 score, shown alongside the factors that produced it.
+///
+/// If [health] is null (e.g. the user has no recorded data yet), an empty state
+/// card is shown prompting the user to start adding transactions.
 class HealthCard extends ConsumerWidget {
-  const HealthCard({super.key, required this.health, this.onTap});
+  const HealthCard({super.key, this.health, this.onTap});
 
-  final FinancialHealth health;
+  final FinancialHealth? health;
 
-  /// Opens the breakdown. The card was previously the one element on the home
-  /// screen that looked interactive and did nothing.
+  /// Opens the breakdown.
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
+    final health = this.health;
+
+    // Empty state when there is no data to evaluate
+    if (health == null) {
+      final theme = Theme.of(context);
+
+      return AppCard(
+        onTap: onTap,
+        child: Row(
+          children: [
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                color: theme.colorScheme.primary.withValues(alpha: 0.12),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(Icons.speed_rounded, size: 28, color: theme.colorScheme.primary),
+            ),
+            const SizedBox(width: AppSpacing.lg),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    l10n.financialHealth,
+                    style: AppTypography.title.copyWith(color: context.textPrimary),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Add transactions to calculate your score and get insights.',
+                    style: AppTypography.body.copyWith(fontSize: 13, color: context.textSecondary),
+                  ),
+                ],
+              ),
+            ),
+            if (onTap != null) ...[
+              const SizedBox(width: AppSpacing.sm),
+              Icon(CupertinoIcons.chevron_forward, size: 20, color: context.textDisabled),
+            ],
+          ],
+        ),
+      );
+    }
+
     final locale = ref.watch(localeProvider).toLanguageTag();
     final color = healthBandColor(context, health.band);
 

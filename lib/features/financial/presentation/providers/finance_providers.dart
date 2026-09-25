@@ -334,11 +334,18 @@ final budgetsProvider = FutureProvider<List<Budget>>((ref) async {
       .getBudgets(CycleCalculator.spendByCategoryId(summary.spendingByCategory));
 });
 
-final financialHealthProvider = FutureProvider<FinancialHealth>((ref) async {
+final financialHealthProvider = FutureProvider<FinancialHealth?>((ref) async {
   final summary = await ref.watch(dashboardSummaryProvider.future);
   final budgets = await ref.watch(budgetsProvider.future);
   final loans = await ref.watch(loansProvider.future);
-  return HealthCalculator.evaluate(summary: summary, budgets: budgets, loans: loans);
+  final transactions = await ref.watch(transactionsProvider.future);
+
+  return HealthCalculator.evaluate(
+    summary: summary,
+    budgets: budgets,
+    loans: loans,
+    hasTransactions: transactions.isNotEmpty,
+  );
 });
 
 final insightsProvider = FutureProvider<List<Insight>>((ref) async {

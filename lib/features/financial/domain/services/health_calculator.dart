@@ -17,11 +17,42 @@ abstract final class HealthCalculator {
   static const _debtWeight = 0.20;
   static const _trendWeight = 0.15;
 
-  static FinancialHealth evaluate({
+  /// Checks if there is enough activity to produce a meaningful score.
+  static bool hasSufficientData({
     required PeriodSummary summary,
     required List<Budget> budgets,
     required List<Loan> loans,
+    bool hasTransactions = true,
   }) {
+    if (!hasTransactions) return false;
+
+    // If there is zero income/activity and no budgets or loans configured
+    if (summary.income == 0 &&
+        summary.savingsRate == 0 &&
+        summary.expenseChange == 0 &&
+        budgets.isEmpty &&
+        loans.isEmpty) {
+      return false;
+    }
+
+    return true;
+  }
+
+  static FinancialHealth? evaluate({
+    required PeriodSummary summary,
+    required List<Budget> budgets,
+    required List<Loan> loans,
+    bool hasTransactions = true,
+  }) {
+    if (!hasSufficientData(
+      summary: summary,
+      budgets: budgets,
+      loans: loans,
+      hasTransactions: hasTransactions,
+    )) {
+      return null;
+    }
+
     final savings = _savingsFactor(summary);
     final budget = _budgetFactor(budgets);
     final debt = _debtFactor(loans, summary.income);
@@ -51,10 +82,7 @@ abstract final class HealthCalculator {
 
   static HealthFactor _savingsFactor(PeriodSummary summary) {
     final rate = summary.savingsRate;
-    final score = ((rate / SavingsRules.strongSavingsRate) * 100).clamp(
-      0.0,
-      100.0,
-    );
+    final score = ((rate / SavingsRules.strongSavingsRate) * 100).clamp(0.0, 100.0);
     return HealthFactor(
       kind: HealthFactorKind.savingsRate,
       score: score.round(),
@@ -67,10 +95,7 @@ abstract final class HealthCalculator {
     final used = BudgetCalculator.overallProgress(budgets);
     // Spending up to 70% of the total budget is a clean 100; past that the
     // score falls away linearly, hitting zero at 100% used.
-    final score = (used <= 0.70 ? 1.0 : (1 - (used - 0.70) / 0.30)).clamp(
-      0.0,
-      1.0,
-    );
+    final score = (used <= 0.70 ? 1.0 : (1 - (used - 0.70) / 0.30)).clamp(0.0, 1.0);
     return HealthFactor(
       kind: HealthFactorKind.budgetControl,
       score: (score * 100).round(),

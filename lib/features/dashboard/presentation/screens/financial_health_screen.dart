@@ -32,7 +32,7 @@ class FinancialHealthScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: Text(l10n.financialHealth)),
       body: health.when(
-        data: (data) => _Body(health: data),
+        data: (data) => data == null ? const _EmptyHealthView() : _Body(health: data),
         loading: () => const Padding(
           padding: EdgeInsets.all(AppSpacing.page),
           child: Column(
@@ -49,6 +49,87 @@ class FinancialHealthScreen extends ConsumerWidget {
           onRetry: () => ref.invalidate(transactionsProvider),
         ),
       ),
+    );
+  }
+}
+
+class _EmptyHealthView extends StatelessWidget {
+  const _EmptyHealthView();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Center(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(AppSpacing.page),
+        child: FadeSlideIn(
+          child: AppCard(
+            padding: const EdgeInsets.all(AppSpacing.xl),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 72,
+                  height: 72,
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primary.withValues(alpha: 0.12),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(Icons.speed_rounded, size: 36, color: theme.colorScheme.primary),
+                ),
+                const SizedBox(height: AppSpacing.lg),
+                Text(
+                  'No Financial Score Yet',
+                  style: AppTypography.heading.copyWith(color: context.textPrimary),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: AppSpacing.sm),
+                Text(
+                  'We need a little financial activity before we can calculate an accurate health score.',
+                  style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.5),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: AppSpacing.xl),
+                _RequirementItem(
+                  icon: Icons.receipt_long_outlined,
+                  text: 'Add income or expense transactions',
+                ),
+                const SizedBox(height: AppSpacing.sm),
+                _RequirementItem(
+                  icon: Icons.pie_chart_outline_rounded,
+                  text: 'Set up your monthly budgets',
+                ),
+                const SizedBox(height: AppSpacing.sm),
+                _RequirementItem(
+                  icon: Icons.account_balance_outlined,
+                  text: 'Track loans or debts (optional)',
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _RequirementItem extends StatelessWidget {
+  const _RequirementItem({required this.icon, required this.text});
+
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(icon, size: 20, color: context.textSecondary),
+        const SizedBox(width: AppSpacing.md),
+        Expanded(
+          child: Text(text, style: AppTypography.caption.copyWith(color: context.textSecondary)),
+        ),
+      ],
     );
   }
 }
@@ -94,9 +175,7 @@ class _Body extends ConsumerWidget {
                       ),
                       Text(
                         l10n.ofTotal('100'),
-                        style: AppTypography.caption.copyWith(
-                          color: context.textSecondary,
-                        ),
+                        style: AppTypography.caption.copyWith(color: context.textSecondary),
                       ),
                     ],
                   ),
@@ -110,10 +189,7 @@ class _Body extends ConsumerWidget {
                 Text(
                   healthBandSummary(health.band, l10n),
                   textAlign: TextAlign.center,
-                  style: AppTypography.body.copyWith(
-                    color: context.textSecondary,
-                    height: 1.5,
-                  ),
+                  style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.5),
                 ),
               ],
             ),
@@ -130,10 +206,7 @@ class _Body extends ConsumerWidget {
               AppCard(
                 child: Text(
                   l10n.healthScoreExplainer,
-                  style: AppTypography.body.copyWith(
-                    color: context.textSecondary,
-                    height: 1.6,
-                  ),
+                  style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.6),
                 ),
               ),
             ],
@@ -146,10 +219,7 @@ class _Body extends ConsumerWidget {
             padding: const EdgeInsets.only(bottom: AppSpacing.md),
             child: FadeSlideIn(
               index: (i + 2).clamp(0, 6),
-              child: _FactorDetailCard(
-                factor: health.factors[i],
-                localeName: locale,
-              ),
+              child: _FactorDetailCard(factor: health.factors[i], localeName: locale),
             ),
           ),
       ],
@@ -177,17 +247,12 @@ class _FactorDetailCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   healthFactorLabel(factor.kind, l10n),
-                  style: AppTypography.title.copyWith(
-                    color: context.textPrimary,
-                  ),
+                  style: AppTypography.title.copyWith(color: context.textPrimary),
                 ),
               ),
               Text(
                 '${factor.score}',
-                style: AppTypography.amountLarge.copyWith(
-                  fontSize: 22,
-                  color: color,
-                ),
+                style: AppTypography.amountLarge.copyWith(fontSize: 22, color: color),
               ),
             ],
           ),
@@ -199,16 +264,12 @@ class _FactorDetailCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   healthFactorDetail(factor, l10n, localeName),
-                  style: AppTypography.caption.copyWith(
-                    color: context.textSecondary,
-                  ),
+                  style: AppTypography.caption.copyWith(color: context.textSecondary),
                 ),
               ),
               Text(
                 l10n.scoreWeightLabel((factor.weight * 100).round()),
-                style: AppTypography.caption.copyWith(
-                  color: context.textDisabled,
-                ),
+                style: AppTypography.caption.copyWith(color: context.textDisabled),
               ),
             ],
           ),
