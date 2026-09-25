@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rainypenny/features/profile/presentation/widgets/round_avatar.dart';
 
 import '../../../../core/localization/app_locales.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -270,26 +271,7 @@ class _ProfileHeader extends ConsumerWidget {
 
     return Column(
       children: [
-        Container(
-          width: 88,
-          height: 88,
-          decoration: BoxDecoration(
-            gradient: context.brandGradient,
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: context.accent.withValues(alpha: 0.24),
-                blurRadius: 18,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            user.initials,
-            style: AppTypography.heading.copyWith(fontSize: 30, color: Colors.white),
-          ),
-        ),
+        RoundAvatar(user: user),
         const SizedBox(height: AppSpacing.lg),
         Text(user.name, style: AppTypography.heading.copyWith(color: context.textPrimary)),
         const SizedBox(height: 4),

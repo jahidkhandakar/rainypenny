@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rainypenny/features/profile/presentation/widgets/round_avatar.dart';
 
 import '../../../../core/di/providers.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -71,18 +72,6 @@ class _FormState extends ConsumerState<_Form> {
 
   bool get _isDirty => _name.text.trim() != widget.user.name.trim();
 
-  void _onAvatarEditTapped() {
-    final messenger = ScaffoldMessenger.of(context);
-    messenger.hideCurrentSnackBar();
-    messenger.showSnackBar(
-      const SnackBar(
-        content: Text('Avatar customization will be available once the backend is ready.'),
-        behavior: SnackBarBehavior.floating,
-        duration: Duration(seconds: 3),
-      ),
-    );
-  }
-
   Future<void> _save() async {
     final l10n = AppL10n.of(context);
     final messenger = ScaffoldMessenger.of(context);
@@ -132,7 +121,7 @@ class _FormState extends ConsumerState<_Form> {
           child: Center(
             child: Column(
               children: [
-                _Avatar(user: widget.user, pendingName: _name.text, onEditTap: _onAvatarEditTapped),
+                RoundAvatar(user: widget.user),
                 const SizedBox(height: AppSpacing.md),
                 Text(
                   l10n.memberSince(dates.monthYear(widget.user.memberSince)),
@@ -217,86 +206,6 @@ class _FormState extends ConsumerState<_Form> {
           ),
         ),
       ],
-    );
-  }
-}
-
-/// The initials badge, previewing the name currently in the field rather than
-/// the saved one — so the change reads as immediate.
-class _Avatar extends StatelessWidget {
-  const _Avatar({required this.user, required this.pendingName, required this.onEditTap});
-
-  final UserProfile user;
-  final String pendingName;
-  final VoidCallback onEditTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final initials = UserProfile.initialsFor(pendingName.trim().isEmpty ? user.email : pendingName);
-
-    return SizedBox(
-      width: 104,
-      height: 104,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          // Main circular avatar
-          Center(
-            child: Container(
-              width: 96,
-              height: 96,
-              decoration: BoxDecoration(
-                gradient: context.brandGradient,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    color: context.accent.withValues(alpha: 0.24),
-                    blurRadius: 18,
-                    offset: const Offset(0, 8),
-                  ),
-                ],
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                initials,
-                style: AppTypography.heading.copyWith(fontSize: 32, color: Colors.white),
-              ),
-            ),
-          ),
-
-          // Pencil Edit Badge Button
-          Positioned(
-            right: 0,
-            bottom: 0,
-            child: Material(
-              color: theme.colorScheme.surface,
-              shape: const CircleBorder(),
-              elevation: 3,
-              shadowColor: Colors.black.withValues(alpha: 0.3),
-              child: InkWell(
-                onTap: onEditTap,
-                customBorder: const CircleBorder(),
-                child: Container(
-                  width: 34,
-                  height: 34,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: theme.colorScheme.surface, width: 2.5),
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: theme.colorScheme.primary,
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Icon(Icons.edit_rounded, size: 16, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }
