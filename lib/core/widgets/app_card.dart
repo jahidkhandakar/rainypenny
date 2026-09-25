@@ -144,7 +144,7 @@ class IconBadge extends StatelessWidget {
         ),
       ),
       alignment: Alignment.center,
-      child: Icon(icon, size: size * 0.48, color: effectiveForeground),
+      child: Icon(icon, size: size * 0.52, color: effectiveForeground),
     );
   }
 }

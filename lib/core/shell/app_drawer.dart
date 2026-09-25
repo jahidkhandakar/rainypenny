@@ -198,7 +198,7 @@ class _DrawerItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: 13),
             child: Row(
               children: [
-                Icon(icon, size: 21, color: iconColor),
+                Icon(icon, size: 24, color: iconColor),
                 const SizedBox(width: AppSpacing.md),
                 Text(
                   label,

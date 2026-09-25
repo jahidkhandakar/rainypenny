@@ -50,7 +50,7 @@ class TrendChip extends StatelessWidget {
         children: [
           Icon(
             rising ? CupertinoIcons.arrow_up : CupertinoIcons.arrow_down,
-            size: 12,
+            size: 13,
             color: color,
           ),
           const SizedBox(width: 3),

@@ -83,7 +83,7 @@ class _QuickActionButton extends StatelessWidget {
                 color: context.tintFill,
                 borderRadius: BorderRadius.circular(17),
               ),
-              child: Icon(action.icon, size: 23, color: context.accent),
+              child: Icon(action.icon, size: 28, color: context.accent),
             ),
             const SizedBox(height: AppSpacing.sm),
             Text(

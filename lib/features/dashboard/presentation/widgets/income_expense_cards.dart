@@ -177,7 +177,7 @@ class _SummaryIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: color.withValues(alpha: 0.08)),
       ),
-      child: Icon(icon, size: 16, color: color),
+      child: Icon(icon, size: 18, color: color),
     );
   }
 }

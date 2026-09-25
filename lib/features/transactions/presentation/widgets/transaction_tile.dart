@@ -44,7 +44,7 @@ class TransactionTile extends ConsumerWidget {
             IconBadge(
               icon: iconForCategory(transaction.category.icon),
               background: isIncome ? AppColors.income.withValues(alpha: 0.12) : context.tintFill,
-              foreground: isIncome ? AppColors.income : context.expenseColor,
+              foreground: isIncome ? AppColors.income : context.accent,
             ),
             const SizedBox(width: AppSpacing.md),
             Expanded(
