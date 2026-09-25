@@ -58,6 +58,7 @@ class _EmptyHealthView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppL10n.of(context);
     final theme = Theme.of(context);
 
     return Center(
@@ -80,30 +81,30 @@ class _EmptyHealthView extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSpacing.lg),
                 Text(
-                  'No Financial Score Yet',
+                  l10n.emptyHealthTitle,
                   style: AppTypography.heading.copyWith(color: context.textPrimary),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 Text(
-                  'We need a little financial activity before we can calculate an accurate health score.',
+                  l10n.emptyHealthDescription,
                   style: AppTypography.body.copyWith(color: context.textSecondary, height: 1.5),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: AppSpacing.xl),
                 _RequirementItem(
                   icon: Icons.receipt_long_outlined,
-                  text: 'Add income or expense transactions',
+                  text: l10n.emptyHealthAddTransactions,
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 _RequirementItem(
                   icon: Icons.pie_chart_outline_rounded,
-                  text: 'Set up your monthly budgets',
+                  text: l10n.emptyHealthSetBudgets,
                 ),
                 const SizedBox(height: AppSpacing.sm),
                 _RequirementItem(
                   icon: Icons.account_balance_outlined,
-                  text: 'Track loans or debts (optional)',
+                  text: l10n.emptyHealthTrackLoans,
                 ),
               ],
             ),

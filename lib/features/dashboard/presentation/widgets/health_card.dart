@@ -58,7 +58,7 @@ class HealthCard extends ConsumerWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Add transactions to calculate your score and get insights.',
+                    l10n.emptyHealthCardSubtitle,
                     style: AppTypography.body.copyWith(fontSize: 13, color: context.textSecondary),
                   ),
                 ],

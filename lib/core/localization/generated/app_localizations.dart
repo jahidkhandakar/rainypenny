@@ -3817,6 +3817,42 @@ abstract class AppL10n {
   /// In en, this message translates to:
   /// **'You have no active loans.'**
   String get noLoansBody;
+
+  /// Title shown when there is not enough data to compute a health score
+  ///
+  /// In en, this message translates to:
+  /// **'No Financial Score Yet'**
+  String get emptyHealthTitle;
+
+  /// Explainer message shown in the empty state on the financial health screen
+  ///
+  /// In en, this message translates to:
+  /// **'We need a little financial activity before we can calculate an accurate health score.'**
+  String get emptyHealthDescription;
+
+  /// Checklist item prompting user to add transactions
+  ///
+  /// In en, this message translates to:
+  /// **'Add income or expense transactions'**
+  String get emptyHealthAddTransactions;
+
+  /// Checklist item prompting user to set budgets
+  ///
+  /// In en, this message translates to:
+  /// **'Set up your monthly budgets'**
+  String get emptyHealthSetBudgets;
+
+  /// Checklist item prompting user to track loans
+  ///
+  /// In en, this message translates to:
+  /// **'Track loans or debts (optional)'**
+  String get emptyHealthTrackLoans;
+
+  /// Subtitle shown on the dashboard health card when no data is available
+  ///
+  /// In en, this message translates to:
+  /// **'Add transactions to calculate your score and get insights.'**
+  String get emptyHealthCardSubtitle;
 }
 
 class _AppL10nDelegate extends LocalizationsDelegate<AppL10n> {

@@ -1344,5 +1344,30 @@
   "loans": "Loans",
   "debts": "Debts",
   "noLoansTitle": "No loans",
-  "noLoansBody": "You have no active loans."
+  "noLoansBody": "You have no active loans.",
+
+  "emptyHealthTitle": "No Financial Score Yet",
+  "@emptyHealthTitle": {
+    "description": "Title shown when there is not enough data to compute a health score"
+  },
+  "emptyHealthDescription": "We need a little financial activity before we can calculate an accurate health score.",
+  "@emptyHealthDescription": {
+    "description": "Explainer message shown in the empty state on the financial health screen"
+  },
+  "emptyHealthAddTransactions": "Add income or expense transactions",
+  "@emptyHealthAddTransactions": {
+    "description": "Checklist item prompting user to add transactions"
+  },
+  "emptyHealthSetBudgets": "Set up your monthly budgets",
+  "@emptyHealthSetBudgets": {
+    "description": "Checklist item prompting user to set budgets"
+  },
+  "emptyHealthTrackLoans": "Track loans or debts (optional)",
+  "@emptyHealthTrackLoans": {
+    "description": "Checklist item prompting user to track loans"
+  },
+  "emptyHealthCardSubtitle": "Add transactions to calculate your score and get insights.",
+  "@emptyHealthCardSubtitle": {
+    "description": "Subtitle shown on the dashboard health card when no data is available"
+  }
 }

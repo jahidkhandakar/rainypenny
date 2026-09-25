@@ -2014,6 +2014,26 @@ class AppL10nZh extends AppL10n {
 
   @override
   String get noLoansBody => 'You have no active loans.';
+
+  @override
+  String get emptyHealthTitle => 'No Financial Score Yet';
+
+  @override
+  String get emptyHealthDescription =>
+      'We need a little financial activity before we can calculate an accurate health score.';
+
+  @override
+  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+
+  @override
+  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+
+  @override
+  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+
+  @override
+  String get emptyHealthCardSubtitle =>
+      'Add transactions to calculate your score and get insights.';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).
