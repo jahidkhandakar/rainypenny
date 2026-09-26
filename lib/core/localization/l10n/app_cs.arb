@@ -934,7 +934,7 @@
   "skip": "Přeskočit",
   "continueLabel": "Pokračovat",
   "@continueLabel": {
-    "description": "Primární akce pro pokračování ve vícekrokovém procesu. Název má příponu, protože „continue“ je klíčové slovo v Dart"
+    "description": "Primární akce pro pokračování ve vícekrokovém procesu. Název má příponu, protože continue je klíčové slovo v Dart"
   },
   "selected": "Vybráno",
   "passwordRequired": "Zadejte své heslo",

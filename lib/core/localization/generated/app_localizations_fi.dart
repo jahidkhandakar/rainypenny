@@ -12,7 +12,7 @@ class AppL10nFi extends AppL10n {
   String get appName => 'RainyPenny';
 
   @override
-  String get appTagline => 'Säästöä pahan päivän varalle';
+  String get appTagline => 'Säästä pahan päivän varalle';
 
   @override
   String get navHome => 'Etusivu';
@@ -36,7 +36,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String greetingAfternoon(String name) {
-    return 'Hyvää päivää, $name';
+    return 'Hyvää iltapäivää, $name';
   }
 
   @override
@@ -45,7 +45,7 @@ class AppL10nFi extends AppL10n {
   }
 
   @override
-  String get greetingSubtitle => 'Näin taloutesi voi';
+  String get greetingSubtitle => 'Tässä on taloutesi yhteenveto';
 
   @override
   String get totalBalance => 'Kokonaissaldo';
@@ -75,7 +75,7 @@ class AppL10nFi extends AppL10n {
   String get addExpense => 'Lisää meno';
 
   @override
-  String get spendingOverview => 'Kulutuksen yleiskuva';
+  String get spendingOverview => 'Menojen yleiskatsaus';
 
   @override
   String get recentTransactions => 'Viimeisimmät tapahtumat';
@@ -87,20 +87,20 @@ class AppL10nFi extends AppL10n {
   String get viewAll => 'Näytä kaikki';
 
   @override
-  String get budgetProgress => 'Budjettien tilanne';
+  String get budgetProgress => 'Budjetin edistyminen';
 
   @override
   String get savingsGoals => 'Säästötavoitteet';
 
   @override
-  String get financialInsight => 'Talousvinkki';
+  String get financialInsight => 'Taloudellinen oivallus';
 
   @override
-  String get financialHealth => 'Talouden kunto';
+  String get financialHealth => 'Taloudellinen hyvinvointi';
 
   @override
   String ofTotal(String total) {
-    return '/ $total';
+    return '$total:sta';
   }
 
   @override
@@ -126,7 +126,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get noTransactionsBody =>
-      'Kokeile toista hakua tai suodatinta nähdäksesi lisää merkintöjä.';
+      'Kokeile toista hakua tai suodatinta nähdäksesi lisää tapahtumia.';
 
   @override
   String transactionCount(int count) {
@@ -134,7 +134,7 @@ class AppL10nFi extends AppL10n {
       count,
       locale: localeName,
       other: '$count tapahtumaa',
-      one: '$count tapahtuma',
+      one: '1 tapahtuma',
       zero: 'Ei tapahtumia',
     );
     return '$_temp0';
@@ -147,7 +147,7 @@ class AppL10nFi extends AppL10n {
   String get amount => 'Summa';
 
   @override
-  String get category => 'Luokka';
+  String get category => 'Kategoria';
 
   @override
   String get date => 'Päivämäärä';
@@ -156,7 +156,7 @@ class AppL10nFi extends AppL10n {
   String get note => 'Muistiinpano';
 
   @override
-  String get noteHint => 'Muistiinpano (valinnainen)';
+  String get noteHint => 'Valinnainen muistiinpano';
 
   @override
   String get saveIncome => 'Tallenna tulo';
@@ -165,7 +165,7 @@ class AppL10nFi extends AppL10n {
   String get saveExpense => 'Tallenna meno';
 
   @override
-  String get selectCategory => 'Valitse luokka';
+  String get selectCategory => 'Valitse kategoria';
 
   @override
   String get transactionSaved => 'Tapahtuma tallennettu';
@@ -174,13 +174,13 @@ class AppL10nFi extends AppL10n {
   String get amountRequired => 'Anna nollaa suurempi summa';
 
   @override
-  String get titleRequired => 'Anna tälle tapahtumalle nimi';
+  String get titleRequired => 'Anna tapahtumalle nimi';
 
   @override
   String get descriptionLabel => 'Kuvaus';
 
   @override
-  String get descriptionHint => 'esim. ruokaostokset';
+  String get descriptionHint => 'esim. Ruokaostokset';
 
   @override
   String get budget => 'Budjetti';
@@ -189,7 +189,7 @@ class AppL10nFi extends AppL10n {
   String get budgets => 'Budjetit';
 
   @override
-  String get totalBudget => 'Budjetti yhteensä';
+  String get totalBudget => 'Budjetit yhteensä';
 
   @override
   String get spent => 'Käytetty';
@@ -203,13 +203,13 @@ class AppL10nFi extends AppL10n {
   }
 
   @override
-  String get onTrack => 'Aikataulussa';
+  String get onTrack => 'Suunnitelman mukainen';
 
   @override
-  String get approachingLimit => 'Lähellä rajaa';
+  String get approachingLimit => 'Lähestyy rajaa';
 
   @override
-  String get overBudget => 'Budjetin yli';
+  String get overBudget => 'Budjetti ylitetty';
 
   @override
   String get savings => 'Säästöt';
@@ -224,7 +224,7 @@ class AppL10nFi extends AppL10n {
   String get target => 'Tavoite';
 
   @override
-  String get monthlyContribution => 'Kuukaudessa';
+  String get monthlyContribution => 'Kuukausittain';
 
   @override
   String get addFunds => 'Lisää varoja';
@@ -238,7 +238,7 @@ class AppL10nFi extends AppL10n {
       count,
       locale: localeName,
       other: '$count kuukautta jäljellä',
-      one: '$count kuukausi jäljellä',
+      one: '1 kuukausi jäljellä',
     );
     return '$_temp0';
   }
@@ -247,10 +247,10 @@ class AppL10nFi extends AppL10n {
   String get loansAndDebts => 'Lainat ja velat';
 
   @override
-  String get totalOutstanding => 'Maksamatta yhteensä';
+  String get totalOutstanding => 'Velkaa jäljellä';
 
   @override
-  String get monthlyPayment => 'Kuukaudessa';
+  String get monthlyPayment => 'Kuukausierä';
 
   @override
   String get nextPayment => 'Seuraava maksu';
@@ -271,15 +271,15 @@ class AppL10nFi extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count päivän päästä',
-      one: '$count päivän päästä',
+      other: 'Erääntyy $count päivän kuluttua',
+      one: 'Erääntyy huomenna',
       zero: 'Erääntyy tänään',
     );
     return '$_temp0';
   }
 
   @override
-  String get overdue => 'Erääntynyt';
+  String get overdue => 'Myöhässä';
 
   @override
   String get reports => 'Raportit';
@@ -291,19 +291,19 @@ class AppL10nFi extends AppL10n {
   String get month => 'Kuukausi';
 
   @override
-  String get quarter => 'Neljännes';
+  String get quarter => 'Neljännesvuosi';
 
   @override
-  String get incomeVsExpenses => 'Tulot ja menot';
+  String get incomeVsExpenses => 'Tulot vs. menot';
 
   @override
-  String get spendingByCategory => 'Kulutus luokittain';
+  String get spendingByCategory => 'Menot kategorioittain';
 
   @override
-  String get budgetPerformance => 'Budjettien toteuma';
+  String get budgetPerformance => 'Budjettien toteutuminen';
 
   @override
-  String get insights => 'Havainnot';
+  String get insights => 'Oivallukset';
 
   @override
   String get savingsRate => 'Säästöaste';
@@ -336,10 +336,10 @@ class AppL10nFi extends AppL10n {
   String get theme => 'Teema';
 
   @override
-  String get security => 'Tietoturva';
+  String get security => 'Turvallisuus';
 
   @override
-  String get privacyAndSecurity => 'Yksityisyys ja tietoturva';
+  String get privacyAndSecurity => 'Tietosuoja ja turvallisuus';
 
   @override
   String get help => 'Ohje';
@@ -355,11 +355,11 @@ class AppL10nFi extends AppL10n {
 
   @override
   String memberSince(String date) {
-    return 'Jäsen $date alkaen';
+    return 'Jäsen alkaen $date';
   }
 
   @override
-  String get themeSystem => 'Järjestelmän mukaan';
+  String get themeSystem => 'Järjestelmän oletus';
 
   @override
   String get themeLight => 'Vaalea';
@@ -371,11 +371,11 @@ class AppL10nFi extends AppL10n {
   String get settings => 'Asetukset';
 
   @override
-  String get noNotificationsTitle => 'Olet ajan tasalla';
+  String get noNotificationsTitle => 'Kaikki on ajan tasalla';
 
   @override
   String get noNotificationsBody =>
-      'Uudet havainnot ja muistutukset ilmestyvät tähän.';
+      'Uudet oivallukset ja muistutukset näkyvät täällä.';
 
   @override
   String get cancel => 'Peruuta';
@@ -396,7 +396,7 @@ class AppL10nFi extends AppL10n {
   String get somethingWentWrong => 'Jokin meni pieleen';
 
   @override
-  String get comingSoon => 'Tulossa täysversioon';
+  String get comingSoon => 'Tulossa täydessä julkaisussa';
 
   @override
   String get edit => 'Muokkaa';
@@ -414,7 +414,7 @@ class AppL10nFi extends AppL10n {
   String get create => 'Luo';
 
   @override
-  String get nameRequired => 'Anna sille nimi';
+  String get nameRequired => 'Anna nimesi';
 
   @override
   String get amountAboveZero => 'Anna nollaa suurempi summa';
@@ -423,11 +423,11 @@ class AppL10nFi extends AppL10n {
   String get editTransaction => 'Muokkaa tapahtumaa';
 
   @override
-  String get deleteTransaction => 'Poistetaanko tämä tapahtuma?';
+  String get deleteTransaction => 'Poistetaanko tapahtuma?';
 
   @override
   String deleteTransactionBody(String title) {
-    return '$title katoaa merkinnöistäsi.';
+    return '$title poistetaan tapahtumaluettelostasi.';
   }
 
   @override
@@ -446,11 +446,11 @@ class AppL10nFi extends AppL10n {
   String get budgetLimit => 'Kuukausiraja';
 
   @override
-  String get deleteBudget => 'Poistetaanko tämä budjetti?';
+  String get deleteBudget => 'Poistetaanko budjetti?';
 
   @override
   String deleteBudgetBody(String category) {
-    return 'Luokan $category budjetti poistetaan. Tapahtumiisi ei kosketa.';
+    return 'Kategorian $category budjetti poistetaan. Tapahtumiisi tämä ei vaikuta.';
   }
 
   @override
@@ -460,14 +460,14 @@ class AppL10nFi extends AppL10n {
   String get budgetDeleted => 'Budjetti poistettu';
 
   @override
-  String get allCategoriesBudgeted => 'Kaikilla luokilla on jo budjetti';
+  String get allCategoriesBudgeted => 'Kaikilla kategorioilla on jo budjetti';
 
   @override
-  String get noBudgetsTitle => 'Ei vielä budjetteja';
+  String get noBudgetsTitle => 'Ei budjetteja vielä';
 
   @override
   String get noBudgetsBody =>
-      'Aseta jollekin luokalle kuukausiraja, niin alamme seurata sitä.';
+      'Aseta kategorialle kuukausiraja seurataksesi sen käyttöä.';
 
   @override
   String get newGoal => 'Uusi tavoite';
@@ -479,7 +479,7 @@ class AppL10nFi extends AppL10n {
   String get goalName => 'Tavoitteen nimi';
 
   @override
-  String get goalNameHint => 'esim. puskurirahasto';
+  String get goalNameHint => 'esim. Hätärahasto';
 
   @override
   String get targetAmount => 'Tavoitesumma';
@@ -488,7 +488,7 @@ class AppL10nFi extends AppL10n {
   String get alreadySaved => 'Jo säästetty';
 
   @override
-  String get deleteGoal => 'Poistetaanko tämä tavoite?';
+  String get deleteGoal => 'Poistetaanko tavoite?';
 
   @override
   String deleteGoalBody(String name) {
@@ -502,11 +502,10 @@ class AppL10nFi extends AppL10n {
   String get goalDeleted => 'Tavoite poistettu';
 
   @override
-  String get noGoalsTitle => 'Ei vielä säästötavoitteita';
+  String get noGoalsTitle => 'Ei säästötavoitteita vielä';
 
   @override
-  String get noGoalsBody =>
-      'Aseta tavoite, niin RainyPenny seuraa edistymistäsi.';
+  String get noGoalsBody => 'Aseta tavoite ja RainyPenny seuraa edistymistäsi.';
 
   @override
   String get fundsAdded => 'Varat lisätty';
@@ -521,13 +520,13 @@ class AppL10nFi extends AppL10n {
   String get debtName => 'Nimi';
 
   @override
-  String get debtNameHint => 'esim. autolaina';
+  String get debtNameHint => 'esim. Autolaina';
 
   @override
   String get lender => 'Lainanantaja';
 
   @override
-  String get lenderHint => 'esim. Nordea';
+  String get lenderHint => 'esim. Meridian Bank';
 
   @override
   String get originalAmount => 'Alkuperäinen summa';
@@ -536,10 +535,10 @@ class AppL10nFi extends AppL10n {
   String get creditLimit => 'Luottoraja';
 
   @override
-  String get remainingBalance => 'Jäljellä oleva velka';
+  String get remainingBalance => 'Jäljellä oleva saldo';
 
   @override
-  String get interestRatePercent => 'Korko (%)';
+  String get interestRatePercent => 'Korkoprosentti (%)';
 
   @override
   String get kindLoan => 'Laina';
@@ -558,7 +557,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String deleteDebtBody(String name) {
-    return '$name katoaa veloistasi.';
+    return '$name poistetaan veloistasi.';
   }
 
   @override
@@ -572,21 +571,21 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get noDebtsBody =>
-      'Lisää laina tai luottokortti pysyäksesi kärryillä takaisinmaksusta.';
+      'Lisää laina tai luottokortti seurataksesi takaisinmaksuja.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return 'Budjetti $subject on ylitetty';
+    return '$subject-budjetti ylitetty';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return 'Olet $amount yli $subject-budjettisi tällä jaksolla.';
+    return 'Olet $amount yli kategorian $subject budjetin tällä jaksolla.';
   }
 
   @override
   String insightBudgetApproachingTitle(String subject) {
-    return '$subject lähestyy rajaa';
+    return '$subject lähestyy budjettirajaansa';
   }
 
   @override
@@ -595,7 +594,7 @@ class AppL10nFi extends AppL10n {
     int percent,
     String amount,
   ) {
-    return '$subject-budjetistasi on käytetty $percent %, jäljellä $amount.';
+    return 'Kategorian $subject budjetista on käytetty $percent %, ja jäljellä on $amount.';
   }
 
   @override
@@ -603,63 +602,63 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get insightOverIncomeBody =>
-      'Tällä jaksolla käytit enemmän kuin ansaitsit. Käy suurimmat luokat läpi tasapainon palauttamiseksi.';
+      'Olet käyttänyt tällä jaksolla enemmän kuin ansainnut. Tarkista suurimmat menokategoriat saadaksesi tilanteen jälleen tasapainoon.';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return 'Kulutus luokassa $subject kasvaa';
+    return '$subject-menot ovat kasvaneet';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return 'Käytit $subject-luokkaan $percent % enemmän kuin edellisellä jaksolla.';
+    return 'Kategorian $subject menot ovat $percent % suuremmat kuin edellisellä jaksolla.';
   }
 
   @override
-  String get insightTrendDownTitle => 'Kulutus laskee';
+  String get insightTrendDownTitle => 'Menot ovat laskusuunnassa';
 
   @override
   String insightTrendDownBody(int percent) {
-    return 'Kokonaiskulutus on $percent % pienempi kuin edellisellä jaksolla.';
+    return 'Kokonaismenot ovat $percent % pienemmät kuin edellisellä jaksolla.';
   }
 
   @override
-  String get insightTrendUpTitle => 'Kulutus nousee';
+  String get insightTrendUpTitle => 'Menot ovat noususuunnassa';
 
   @override
   String insightTrendUpBody(int percent) {
-    return 'Kokonaiskulutus on $percent % suurempi kuin edellisellä jaksolla.';
+    return 'Kokonaismenot ovat $percent % suuremmat kuin edellisellä jaksolla.';
   }
 
   @override
-  String get insightSavingsStrongTitle => 'Vahva säästöjakso';
+  String get insightSavingsStrongTitle => 'Hyvät säästöt tällä jaksolla';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
-    return 'Pidit $percent % tuloistasi — selvästi yli $target %:n tavoitteen.';
+    return 'Säästit $percent % tuloistasi – selvästi yli $target % tavoitteen.';
   }
 
   @override
-  String get insightSavingsLowTitle => 'Säästöaste on tavoitteen alle';
+  String get insightSavingsLowTitle => 'Säästöaste on tavoitteen alapuolella';
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return 'Tällä jaksolla pidit $percent % tuloistasi. Tavoittele $target %.';
+    return 'Säästit tällä jaksolla $percent % tuloistasi. Tavoittele $target %:a.';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return '$subject on melkein kasassa';
+    return '$subject on lähes rahoitettu';
   }
 
   @override
   String insightGoalNearlyBody(String amount, String subject) {
-    return 'Enää $amount tavoitteeseen $subject.';
+    return 'Tarvitset enää $amount saavuttaaksesi tavoitteen $subject.';
   }
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return '$subject etenee aikataulussa';
+    return 'Tavoite $subject etenee suunnitelman mukaan';
   }
 
   @override
@@ -668,14 +667,14 @@ class AppL10nFi extends AppL10n {
       months,
       locale: localeName,
       other: '$months kuukaudessa',
-      one: '$months kuukaudessa',
+      one: '1 kuukaudessa',
     );
-    return 'Summalla $amount kuukaudessa saavutat tavoitteen $_temp0.';
+    return 'Kun säästät $amount kuukaudessa, saavutat tämän tavoitteen $_temp0.';
   }
 
   @override
   String insightDebtOverdueTitle(String subject) {
-    return 'Maksu kohteeseen $subject on myöhässä';
+    return '$subject-maksu on myöhässä';
   }
 
   @override
@@ -683,15 +682,15 @@ class AppL10nFi extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       days,
       locale: localeName,
-      other: '$days päivän',
-      one: '$days päivän',
+      other: '$days päivää',
+      one: '1 päivän',
     );
-    return 'Maksu $amount kohteeseen $subject on $_temp0 myöhässä.';
+    return 'Kategorian $subject $amount maksu on myöhässä $_temp0.';
   }
 
   @override
   String insightDebtDueTitle(String subject) {
-    return 'Maksu kohteeseen $subject lähestyy';
+    return '$subject-maksu erääntyy pian';
   }
 
   @override
@@ -699,8 +698,8 @@ class AppL10nFi extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       days,
       locale: localeName,
-      other: '$days päivän päästä',
-      one: '$days päivän päästä',
+      other: '$days päivän kuluttua',
+      one: 'huomenna',
       zero: 'tänään',
     );
     return '$amount erääntyy $_temp0.';
@@ -716,13 +715,13 @@ class AppL10nFi extends AppL10n {
   String get signInSubtitle => 'Tervetuloa takaisin. Rahasi odottavat.';
 
   @override
-  String get signUpSubtitle => 'Muutama tieto, niin pääset alkuun.';
+  String get signUpSubtitle => 'Muutama tieto ja olet valmis.';
 
   @override
   String get emailLabel => 'Sähköposti';
 
   @override
-  String get emailHint => 'sina@email.com';
+  String get emailHint => 'sinä@sähköposti.fi';
 
   @override
   String get passwordLabel => 'Salasana';
@@ -734,13 +733,14 @@ class AppL10nFi extends AppL10n {
   String get fullNameLabel => 'Koko nimi';
 
   @override
-  String get fullNameHint => 'Anna Virtanen';
+  String get fullNameHint => 'Matti Meikäläinen';
 
   @override
-  String get forgotPassword => 'Unohtuiko salasana?';
+  String get forgotPassword => 'Unohditko salasanan?';
 
   @override
-  String get resetSent => 'Tarkista sähköpostisi, lähetimme palautuslinkin';
+  String get resetSent =>
+      'Tarkista sähköpostisi salasanan palautuslinkin varalta';
 
   @override
   String get noAccountYet => 'Uusi täällä?';
@@ -759,17 +759,17 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get signOutBody =>
-      'Sinun on kirjauduttava uudelleen nähdäksesi taloutesi.';
+      'Sinun on kirjauduttava uudelleen nähdäksesi taloustietosi.';
 
   @override
   String get dataSource => 'Tietolähde';
 
   @override
-  String get insightWeeklySummaryTitle => 'Viikkosi lyhyesti';
+  String get insightWeeklySummaryTitle => 'Viikkosi katsaus';
 
   @override
   String get insightWeeklySummaryBody =>
-      'Katso, mihin rahat menivät tällä viikolla ja miten budjetit pitävät.';
+      'Katso, mihin rahasi menivät tällä viikolla ja miten budjettisi pitivät.';
 
   @override
   String get notificationSettings => 'Ilmoitukset';
@@ -781,32 +781,31 @@ class AppL10nFi extends AppL10n {
   String get budgetAlerts => 'Budjettihälytykset';
 
   @override
-  String get budgetAlertsBody =>
-      'Kun budjetti lähestyy rajaansa tai ylittää sen';
+  String get budgetAlertsBody => 'Kun budjetti lähestyy tai ylittää rajansa';
 
   @override
   String get paymentReminders => 'Maksumuistutukset';
 
   @override
-  String get paymentRemindersBody => 'Muutama päivä ennen maksun eräpäivää';
+  String get paymentRemindersBody => 'Muutama päivä ennen maksun erääntymistä';
 
   @override
-  String get savingsUpdates => 'Säästöuutiset';
+  String get savingsUpdates => 'Säästöpäivitykset';
 
   @override
-  String get savingsUpdatesBody => 'Edistyminen tavoitteitasi kohti';
+  String get savingsUpdatesBody => 'Tavoitteidesi edistyminen';
 
   @override
-  String get weeklySummaryLabel => 'Viikkokatsaus';
+  String get weeklySummaryLabel => 'Viikkoyhteenveto';
 
   @override
   String get weeklySummaryBody => 'Yhteenveto kuluneesta viikosta';
 
   @override
-  String get scheduleSection => 'Ajoitus';
+  String get scheduleSection => 'Ajankohta';
 
   @override
-  String get reminderTime => 'Muistutuksen aika';
+  String get reminderTime => 'Muistutusaika';
 
   @override
   String get quietHours => 'Hiljaiset tunnit';
@@ -817,31 +816,31 @@ class AppL10nFi extends AppL10n {
   }
 
   @override
-  String get summaryDay => 'Katsauksen päivä';
+  String get summaryDay => 'Yhteenvetopäivä';
 
   @override
-  String get permissionRequired => 'Ilmoitukset ovat pois päältä';
+  String get permissionRequired => 'Ilmoitukset ovat pois käytöstä';
 
   @override
   String get permissionRequiredBody =>
-      'Salli ilmoitukset, niin RainyPenny voi varoittaa ennen kuin budjetti tai maksu karkaa käsistä.';
+      'Salli ilmoitukset, jotta RainyPenny voi varoittaa sinua ennen kuin budjetti tai maksu karkaa käsistä.';
 
   @override
   String get allowNotifications => 'Salli ilmoitukset';
 
   @override
   String get permissionDenied =>
-      'Ilmoitukset on estetty. Voit ottaa ne käyttöön laitteen asetuksissa.';
+      'Ilmoitukset on estetty. Voit ottaa ne käyttöön laitteen asetuksista.';
 
   @override
-  String get upcomingAlerts => 'Ajastettu';
+  String get upcomingAlerts => 'Ajastetut';
 
   @override
-  String get noScheduledAlerts => 'Mitään ei ole ajastettuna juuri nyt';
+  String get noScheduledAlerts => 'Mitään ei ole ajastettu';
 
   @override
   String get noScheduledAlertsBody =>
-      'Hälytykset ilmestyvät tähän, kun budjettisi ja maksusi lähestyvät rajojaan.';
+      'Hälytykset näkyvät täällä, kun budjetit ja maksut lähestyvät rajojaan tai eräpäiviään.';
 
   @override
   String scheduledFor(String date) {
@@ -852,13 +851,13 @@ class AppL10nFi extends AppL10n {
   String get everyWeek => 'Joka viikko';
 
   @override
-  String get allNotificationsOff => 'Kaikki ilmoitukset ovat pois päältä';
+  String get allNotificationsOff => 'Kaikki ilmoitukset ovat pois käytöstä';
 
   @override
   String get needsAttention => 'Vaatii huomiota';
 
   @override
-  String get quickActionsTitle => 'Mitä haluat tehdä?';
+  String get quickActionsTitle => 'Mitä haluaisit tehdä?';
 
   @override
   String get createSection => 'Kirjaa';
@@ -877,7 +876,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get longPressHint =>
-      'Vinkki: pidä +-painiketta pohjassa kirjataksesi menon heti';
+      'Vinkki: pidä +-painiketta painettuna kirjataksesi menon heti';
 
   @override
   String get searchCurrencies => 'Hae valuuttoja';
@@ -890,7 +889,7 @@ class AppL10nFi extends AppL10n {
       'Kokeile toista koodia, symbolia tai nimeä.';
 
   @override
-  String get popularCurrencies => 'Yleiset';
+  String get popularCurrencies => 'Suositut';
 
   @override
   String get allCurrencies => 'Kaikki valuutat';
@@ -899,68 +898,68 @@ class AppL10nFi extends AppL10n {
   String get totalLoanAmount => 'Lainan kokonaismäärä';
 
   @override
-  String get installmentAmount => 'Erän suuruus';
+  String get installmentAmount => 'Maksuerän määrä';
 
   @override
-  String get numberOfInstallments => 'Erien määrä';
+  String get numberOfInstallments => 'Maksuerien määrä';
 
   @override
-  String get paidInstallments => 'Maksetut erät';
+  String get paidInstallments => 'Maksetut maksuerät';
 
   @override
-  String get remainingInstallments => 'Jäljellä olevat erät';
+  String get remainingInstallments => 'Jäljellä olevat maksuerät';
 
   @override
   String installmentsPaidOf(int paid, int total) {
-    return '$paid / $total maksettu';
+    return '$paid/$total maksettu';
   }
 
   @override
   String get finalPayment => 'Viimeinen maksu';
 
   @override
-  String get paymentDueDate => 'Eräpäivä';
+  String get paymentDueDate => 'Maksun eräpäivä';
 
   @override
   String dueOnDayOfMonth(int day) {
-    return 'Kuukauden $day. päivä';
+    return 'Joka kuukauden $day. päivä';
   }
 
   @override
   String get loanStatus => 'Tila';
 
   @override
-  String get statusActive => 'Aikataulussa';
+  String get statusActive => 'Suunnitelman mukainen';
 
   @override
   String get statusDueSoon => 'Erääntyy pian';
 
   @override
-  String get statusOverdue => 'Erääntynyt';
+  String get statusOverdue => 'Myöhässä';
 
   @override
-  String get statusCompleted => 'Maksettu loppuun';
+  String get statusCompleted => 'Maksettu pois';
 
   @override
-  String get repaymentProgress => 'Takaisinmaksun tilanne';
+  String get repaymentProgress => 'Takaisinmaksun edistyminen';
 
   @override
   String get byAmount => 'Summan mukaan';
 
   @override
-  String get byInstallments => 'Erien mukaan';
+  String get byInstallments => 'Maksuerien mukaan';
 
   @override
-  String get startDate => 'Alkamispäivä';
+  String get startDate => 'Aloituspäivä';
 
   @override
-  String get openEnded => 'Ei päättymispäivää';
+  String get openEnded => 'Toistaiseksi jatkuva';
 
   @override
-  String get loanDetails => 'Tietoja lainasta';
+  String get loanDetails => 'Lainan tiedot';
 
   @override
-  String get notSet => 'Ei asetettu';
+  String get notSet => 'Ei määritetty';
 
   @override
   String insightDebtDueTodayTitle(String subject) {
@@ -969,7 +968,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return 'Maksu $amount erääntyy tänään. Yksi napautus, ja se on ajoissa.';
+    return 'Maksusi $amount erääntyy tänään. Nopea napautus pitää maksun aikataulussa.';
   }
 
   @override
@@ -977,52 +976,51 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get remindMorningBody =>
-      'Aloita päivä selkeällä kuvalla rahoistasi. Onko eiliseltä jotain lisättävää?';
+      'Aloita päivä pitämällä taloutesi hallinnassa. Onko eiliseltä jotain lisättävää?';
 
   @override
-  String get remindNoonTitle => 'Päivän puolivälin tarkistus';
+  String get remindNoonTitle => 'Keskipäivän tarkistus';
 
   @override
   String get remindNoonBody =>
-      'Lounas, kahvi, matkalippu? Kirjaaminen vie muutaman sekunnin.';
+      'Lounas, kahvi, matka? Lisää se muutamassa sekunnissa.';
 
   @override
-  String get remindAfternoonTitle => 'Nopea täydennys';
+  String get remindAfternoonTitle => 'Nopea päivitys';
 
   @override
   String get remindAfternoonBody =>
-      'Kirjaa tähän mennessä käyttämäsi, niin päivän luvut täsmäävät.';
+      'Kirjaa tähän mennessä käyttämäsi rahat ja pidä tämän päivän luvut ajan tasalla.';
 
   @override
-  String get remindEveningTitle => 'Päätetään päivä';
+  String get remindEveningTitle => 'Päivän päätös';
 
   @override
   String get remindEveningBody =>
-      'Kaksi minuuttia nyt, niin päivän merkinnät ovat valmiit.';
+      'Käytä nyt kaksi minuuttia ja saat tämän päivän luvut valmiiksi.';
 
   @override
   String get happyWeekendTitle => 'Hyvää viikonloppua! 🎉';
 
   @override
   String get happyWeekendBody =>
-      'Nauti siitä — ja pidä silmällä viikonlopun menoja.';
+      'Nauti viikonlopusta – ja pidä samalla viikonlopun menot silmällä.';
 
   @override
   String get dailyReminders => 'Päivittäiset menomuistutukset';
 
   @override
   String get dailyRemindersBody =>
-      'Ystävällisiä tönäisyjä, jotta menot pysyvät ajan tasalla';
+      'Ystävällisiä muistutuksia pitääksesi menosi ajan tasalla';
 
   @override
   String get weekendGreeting => 'Viikonlopputervehdys';
 
   @override
-  String get weekendGreetingBody =>
-      'Ystävällinen tervehdys viikonlopun alkaessa';
+  String get weekendGreetingBody => 'Ystävällinen tervehdys viikonlopun aluksi';
 
   @override
-  String get reminderTimesSection => 'Muistutusten ajat';
+  String get reminderTimesSection => 'Muistutusajat';
 
   @override
   String get slotMorning => 'Aamu';
@@ -1040,25 +1038,25 @@ class AppL10nFi extends AppL10n {
   String get everyDay => 'Joka päivä';
 
   @override
-  String get financialReport => 'Talousraportti';
+  String get financialReport => 'Taloudellinen raportti';
 
   @override
-  String get preparedFor => 'Laadittu käyttäjälle';
+  String get preparedFor => 'Laadittu henkilölle';
 
   @override
   String get generatedOn => 'Luotu';
 
   @override
   String get reportDisclaimer =>
-      'RainyPennyn laatima omien merkintöjesi pohjalta.';
+      'RainyPenny loi tämän raportin omien tietojesi perusteella.';
 
   @override
   String pageOf(int page, int total) {
-    return 'Sivu $page / $total';
+    return 'Sivu $page/$total';
   }
 
   @override
-  String get overview => 'Yleiskuva';
+  String get overview => 'Yleiskatsaus';
 
   @override
   String get description => 'Kuvaus';
@@ -1098,8 +1096,8 @@ class AppL10nFi extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'ja $count tapahtumaa lisää',
-      one: 'ja $count tapahtuma lisää',
+      other: 'ja $count muuta tapahtumaa',
+      one: 'ja 1 muu tapahtuma',
     );
     return '$_temp0';
   }
@@ -1111,54 +1109,54 @@ class AppL10nFi extends AppL10n {
   String get sharePdf => 'Jaa raportti';
 
   @override
-  String get preparingReport => 'Raporttiasi valmistellaan…';
+  String get preparingReport => 'Raporttia valmistellaan…';
 
   @override
-  String get reportReady => 'Raportti on valmis';
+  String get reportReady => 'Raportti valmis';
 
   @override
-  String get reportFailed => 'Raportin luonti epäonnistui';
+  String get reportFailed => 'Raportin luominen epäonnistui';
 
   @override
-  String get categories => 'Luokat';
+  String get categories => 'Kategoriat';
 
   @override
   String get categoriesIntro =>
-      'Lisää omia luokkia, jotta tulot ja menot asettuvat juuri niin kuin itse ajattelet niistä.';
+      'Lisää omia kategorioita, jotta voit luokitella tulot ja menot juuri omalla tavallasi.';
 
   @override
-  String get expenseCategories => 'Menoluokat';
+  String get expenseCategories => 'Menokategoriat';
 
   @override
-  String get incomeCategories => 'Tuloluokat';
+  String get incomeCategories => 'Tulokategoriat';
 
   @override
-  String get newCategory => 'Uusi luokka';
+  String get newCategory => 'Uusi kategoria';
 
   @override
-  String get editCategory => 'Muokkaa luokkaa';
+  String get editCategory => 'Muokkaa kategoriaa';
 
   @override
   String get categoryName => 'Nimi';
 
   @override
-  String get categoryNameHint => 'esim. lemmikit';
+  String get categoryNameHint => 'esim. Lemmikkien hoito';
 
   @override
   String get icon => 'Kuvake';
 
   @override
-  String get categorySaved => 'Luokka tallennettu';
+  String get categorySaved => 'Kategoria tallennettu';
 
   @override
-  String get categoryDeleted => 'Luokka poistettu';
+  String get categoryDeleted => 'Kategoria poistettu';
 
   @override
-  String get deleteCategory => 'Poistetaanko tämä luokka?';
+  String get deleteCategory => 'Poistetaanko tämä kategoria?';
 
   @override
   String deleteCategoryBody(String name) {
-    return '$name katoaa luokistasi.';
+    return '$name poistetaan kategorioistasi.';
   }
 
   @override
@@ -1166,27 +1164,27 @@ class AppL10nFi extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count merkintää käyttää yhä tätä luokkaa',
-      one: '$count merkintä käyttää yhä tätä luokkaa',
+      other: '$count tietuetta käyttää edelleen tätä kategoriaa',
+      one: '1 tietue käyttää edelleen tätä kategoriaa',
     );
     return '$_temp0';
   }
 
   @override
-  String get noCategoriesYet => 'Täällä ei ole vielä mitään.';
+  String get noCategoriesYet => 'Ei vielä mitään.';
 
   @override
   String get builtIn => 'Sisäänrakennettu';
 
   @override
-  String get manageCategories => 'Hallitse luokkia';
+  String get manageCategories => 'Hallitse kategorioita';
 
   @override
   String get expense => 'Meno';
 
   @override
   String get languageNote =>
-      'Arabia, urdu, persia ja heprea kääntävät koko käyttöliittymän oikealta vasemmalle, mukaan lukien kaaviot ja PDF-raportit.';
+      'Arabia, urdu, persia ja heprea vaihtavat koko käyttöliittymän oikealta vasemmalle, mukaan lukien kaaviot ja PDF-raportit.';
 
   @override
   String get next => 'Seuraava';
@@ -1213,7 +1211,7 @@ class AppL10nFi extends AppL10n {
   String get confirmPasswordLabel => 'Vahvista salasana';
 
   @override
-  String get passwordsDoNotMatch => 'Salasanojen on oltava samat';
+  String get passwordsDoNotMatch => 'Salasanojen on vastattava toisiaan';
 
   @override
   String get showPassword => 'Näytä salasana';
@@ -1231,7 +1229,7 @@ class AppL10nFi extends AppL10n {
   String get alreadyHaveAccount => 'Minulla on jo tili';
 
   @override
-  String get getStarted => 'Aloitetaan';
+  String get getStarted => 'Aloita';
 
   @override
   String get acceptTerms => 'Hyväksyn käyttöehdot ja tietosuojakäytännön';
@@ -1256,18 +1254,19 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get passwordAdvice =>
-      'Pitkä lause, jonka muistat, voittaa lyhyen erikoismerkkejä täynnä olevan salasanan. Vältä sellaista, jota käytät jo muualla.';
+      'Pitkä, helposti muistettava lause on parempi kuin lyhyt salasana täynnä symboleja. Vältä salasanoja, joita käytät jo muualla.';
 
   @override
   String get authInvalidCredentials =>
-      'Tuo sähköposti ja salasana eivät vastaa mitään tiliä';
+      'Sähköpostiosoite ja salasana eivät vastaa tiliä';
 
   @override
   String get authEmailNotConfirmed =>
       'Vahvista sähköpostiosoitteesi ennen kirjautumista';
 
   @override
-  String get authEmailAlreadyRegistered => 'Tällä sähköpostilla on jo tili';
+  String get authEmailAlreadyRegistered =>
+      'Tällä sähköpostiosoitteella on jo tili';
 
   @override
   String get authWeakPassword => 'Valitse pidempi salasana';
@@ -1278,7 +1277,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get authNetworkError =>
-      'Ei yhteyttä. Tarkista verkko ja yritä uudelleen';
+      'Ei yhteyttä. Tarkista verkkoyhteytesi ja yritä uudelleen';
 
   @override
   String get authGenericError => 'Jokin meni pieleen. Yritä uudelleen';
@@ -1288,27 +1287,27 @@ class AppL10nFi extends AppL10n {
 
   @override
   String confirmEmailBody(String email) {
-    return 'Lähetimme vahvistuslinkin osoitteeseen $email. Avaa se viimeistelläksesi tilin.';
+    return 'Lähetimme vahvistuslinkin osoitteeseen $email. Avaa se viimeistelläksesi tilisi käyttöönoton.';
   }
 
   @override
-  String get resendConfirmation => 'Lähetä vahvistus uudelleen';
+  String get resendConfirmation => 'Lähetä vahvistussähköposti uudelleen';
 
   @override
-  String get confirmationResent => 'Vahvistusviesti lähetetty';
+  String get confirmationResent => 'Vahvistussähköposti lähetetty';
 
   @override
   String get forgotPasswordTitle => 'Palauta salasanasi';
 
   @override
   String get forgotPasswordSubtitle =>
-      'Anna sähköpostiosoite, jolla rekisteröidyit, niin lähetämme linkin uuden salasanan valitsemiseen.';
+      'Anna sähköpostiosoite, jolla rekisteröidyit, niin lähetämme sinulle linkin uuden salasanan valitsemiseen.';
 
   @override
-  String get sendResetLink => 'Lähetä linkki';
+  String get sendResetLink => 'Lähetä palautuslinkki';
 
   @override
-  String get resetLinkSentTitle => 'Linkki lähetetty';
+  String get resetLinkSentTitle => 'Palautuslinkki lähetetty';
 
   @override
   String resetLinkSentBody(String email) {
@@ -1317,24 +1316,24 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get resetLinkSentHint =>
-      'Linkki vanhenee tunnin kuluttua. Jos se ei saavu, tarkista roskaposti ennen kuin pyydät uutta.';
+      'Linkki vanhenee tunnin kuluttua. Jos se ei saavu, tarkista roskapostikansio ennen uuden pyytämistä.';
 
   @override
-  String get tryAnotherEmail => 'Käytä toista osoitetta';
+  String get tryAnotherEmail => 'Käytä toista sähköpostiosoitetta';
 
   @override
   String get resetPasswordTitle => 'Valitse uusi salasana';
 
   @override
   String get resetPasswordSubtitle =>
-      'Valitse jotain, jota et ole käyttänyt tällä tilillä aiemmin.';
+      'Valitse salasana, jota et ole käyttänyt tällä tilillä aiemmin.';
 
   @override
   String get passwordChangedTitle => 'Salasana päivitetty';
 
   @override
   String get passwordChangedBody =>
-      'Uusi salasanasi on tallennettu. Olet kirjautuneena ja valmiina.';
+      'Uusi salasanasi on tallennettu. Olet kirjautunut sisään ja valmis jatkamaan.';
 
   @override
   String get demoModeHint => 'Demoversio — tiliä ei tarvita';
@@ -1347,51 +1346,51 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Kirjaa, mitä tulee sisään ja mitä menee ulos. RainyPenny tekee siitä kuvan, jota oikeasti pystyy lukemaan.';
+      'Kirjaa tulot ja menot. RainyPenny muuttaa ne näkymäksi, jota on helppo ymmärtää.';
 
   @override
-  String get welcomeBudgetTitle => 'Rajoja, jotka pitävät';
+  String get welcomeBudgetTitle => 'Aseta rajat, jotka pitävät';
 
   @override
   String get welcomeBudgetBody =>
-      'Anna jokaiselle kulutuksen osalle kuukausikatto ja saat tiedon ennen kuin ylität sen — et jälkikäteen.';
+      'Anna kullekin menojen osa-alueelle kuukausittainen yläraja ja saat ilmoituksen ennen rajan ylittämistä sen sijaan, että huomaisit sen vasta jälkeenpäin.';
 
   @override
-  String get welcomeGoalsTitle => 'Säästä siihen, mikä on tärkeää';
+  String get welcomeGoalsTitle => 'Säästä siihen, millä on merkitystä';
 
   @override
   String get welcomeGoalsBody =>
-      'Anna tavoitteelle nimi, aseta summa ja katso sen täyttyvän. Puskuria on helpompi kerätä, kun sen näkee.';
+      'Nimeä tavoite, aseta tavoitesumma ja seuraa sen täyttymistä. Pahan päivän rahastoa on helpompi kasvattaa, kun näet edistymisen.';
 
   @override
-  String get welcomePrivacyTitle => 'Rahasi pysyvät sinun';
+  String get welcomePrivacyTitle => 'Rahasi pysyvät sinunasi';
 
   @override
   String get welcomePrivacyBody =>
-      'Lukusi kuuluvat vain sinulle. Mitään ei myydä eikä jaeta kenellekään.';
+      'Taloustietosi kuuluvat vain sinulle. Mitään ei myydä eikä jaeta kenenkään kanssa.';
 
   @override
   String stepOf(int step, int total) {
-    return 'Vaihe $step / $total';
+    return 'Vaihe $step/$total';
   }
 
   @override
-  String get onboardingNameTitle => 'Miksi sinua kutsutaan?';
+  String get onboardingNameTitle => 'Millä nimellä kutsumme sinua?';
 
   @override
   String get onboardingNameBody =>
-      'Käytämme sitä vain tervehtimiseen, emme missään muualla.';
+      'Käytämme sitä tervehtiessämme sinua emmekä missään muualla.';
 
   @override
   String get onboardingNameHint =>
-      'Etunimi riittää hyvin. Voit muuttaa sen myöhemmin.';
+      'Etunimi riittää. Voit vaihtaa sen myöhemmin.';
 
   @override
   String get onboardingCurrencyTitle => 'Mitä valuuttaa käytät?';
 
   @override
   String get onboardingCurrencyBody =>
-      'Kaikki summat sovelluksessa näytetään tässä valuutassa. Sen valitseminen ei muunna mitään.';
+      'Kaikki sovelluksen summat näytetään tässä valuutassa. Valinta ei muunna mitään.';
 
   @override
   String get onboardingCurrencySearch => 'Hae kaikista valuutoista';
@@ -1401,26 +1400,25 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get onboardingAppearanceBody =>
-      'Valitse ulkoasu. Kaikki muuttuu napauttaessasi, ja voit palata milloin tahansa.';
+      'Valitse ulkoasu. Kaikki muuttuu napauttaessasi, ja voit palata asetukseen milloin tahansa.';
 
   @override
-  String get onboardingNotificationsTitle => 'Pysy kärryillä';
+  String get onboardingNotificationsTitle => 'Pysy ajan tasalla';
 
   @override
   String get onboardingNotificationsBody =>
-      'Hiljainen tönäisy oikeaan aikaan on se, mikä tekee tästä tavan.';
+      'Hiljainen muistutus oikealla hetkellä auttaa tekemään tästä tavan.';
 
   @override
   String get onboardingNotifyReminders =>
-      'Ystävällinen muistutus kirjata, mitä olet käyttänyt';
+      'Ystävällinen muistutus kirjaamaan käyttämäsi rahat';
 
   @override
-  String get onboardingNotifyBudget =>
-      'Ennakkovaroitus ennen kuin budjetti loppuu';
+  String get onboardingNotifyBudget => 'Ilmoitus ennen budjetin loppumista';
 
   @override
   String get onboardingNotifySummary =>
-      'Viikoittainen katsaus siihen, mihin rahat menivät';
+      'Viikoittainen yhteenveto rahojesi käytöstä';
 
   @override
   String get onboardingNotifyEnable => 'Ota ilmoitukset käyttöön';
@@ -1430,7 +1428,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get onboardingNotifyLater =>
-      'Kaikkea tätä voit muuttaa Asetuksissa milloin tahansa.';
+      'Voit muuttaa kaikkia näitä asetuksia myöhemmin Asetuksissa.';
 
   @override
   String get onboardingReadyTitle => 'Kaikki on valmista';
@@ -1442,27 +1440,27 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get onboardingReadyBody =>
-      'Asetukset ovat kunnossa. Haluatko nopean kierroksen siitä, miten kaikki toimii?';
+      'Asetukset ovat nyt valmiit. Haluaisitko nopean kierroksen siitä, miten kaikki toimii?';
 
   @override
   String get onboardingTakeTour => 'Näytä minulle';
 
   @override
-  String get onboardingGoToApp => 'Vie minut sovellukseen';
+  String get onboardingGoToApp => 'Siirry sovellukseen';
 
   @override
   String get onboardingTourLater =>
-      'Ei nyt? Opas jää Asetuksiin, kun tarvitset sitä.';
+      'Ei nyt? Opas säilyy Asetuksissa myöhempää käyttöä varten.';
 
   @override
   String get beginnersGuide => 'Aloittelijan opas';
 
   @override
-  String get guideFinish => 'Lopeta';
+  String get guideFinish => 'Valmis';
 
   @override
   String chapterOf(int number, int total) {
-    return 'Luku $number / $total';
+    return 'Luku $number/$total';
   }
 
   @override
@@ -1471,11 +1469,11 @@ class AppL10nFi extends AppL10n {
   }
 
   @override
-  String get guideDashboardTitle => 'Aloitusnäyttösi';
+  String get guideDashboardTitle => 'Kojelautasi';
 
   @override
   String get guideDashboardBody =>
-      'Kaikki alkaa täältä. Ylimmäinen kortti näyttää, mitä sinulla on jäljellä; sen alla mitä on tullut sisään ja mennyt ulos tällä jaksolla, ja sitten kulutuksesi, budjettisi ja tavoitteesi.';
+      'Kaikki alkaa täältä. Yläreunan kortissa näet jäljellä olevan saldon; sen alla ovat tämän jakson tulot ja menot sekä menot, budjetit ja tavoitteet.';
 
   @override
   String get guideDashboardTip1 =>
@@ -1483,163 +1481,164 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get guideDashboardTip2 =>
-      'Napauta tulo- tai menokorttia siirtyäksesi suoraan siihen listaan.';
+      'Napauta tulo- tai menokorttia siirtyäksesi kyseiseen luetteloon.';
 
   @override
   String get guideDashboardTip3 =>
-      'Renkaat ja havainnot päivittyvät samalla hetkellä, kun kirjaat jotain.';
+      'Renkaat ja oivallukset päivittyvät heti, kun kirjaat jotain.';
 
   @override
   String get guideAddTitle => 'Rahan kirjaaminen';
 
   @override
   String get guideAddBody =>
-      'Rivin keskellä oleva painike on paikka, josta kaikki alkaa. Se avaa lyhyen valikon: meno, tulo, velka, budjetti tai säästötavoite.';
+      'Alapalkin keskellä oleva painike on kaiken lähtöpiste. Se avaa lyhyen valikon: meno, tulo, velka, budjetti tai säästötavoite.';
 
   @override
   String get guideAddTip1 =>
-      'Napauta keskimmäistä painiketta kirjataksesi rahaa sisään tai ulos.';
+      'Napauta keskimmäistä painiketta kirjataksesi tulon tai menon.';
 
   @override
   String get guideAddTip2 =>
-      'Pidä sitä pohjassa siirtyäksesi suoraan uuteen menoon ja ohittaaksesi valikon.';
+      'Pidä painiketta painettuna siirtyäksesi suoraan uuden menon kirjaukseen ja ohittaaksesi valikon.';
 
   @override
   String get guideAddTip3 =>
-      'Valitse aina luokka — se saa kaaviot ja budjetit toimimaan.';
+      'Valitse aina kategoria – sen avulla kaaviot ja budjetit toimivat.';
 
   @override
-  String get guideCategoriesTitle => 'Luokat';
+  String get guideCategoriesTitle => 'Kategoriat';
 
   @override
   String get guideCategoriesBody =>
-      'Luokat ovat tapa, jolla kulutus ryhmitellään. Mukana tulevat riittävät useimmille, ja voit nimetä ne uudelleen tai lisätä omia.';
+      'Kategoriat ryhmittelevät menot. Sovelluksen mukana tulevat kategoriat kattavat useimmat tarpeet, ja voit nimetä niitä uudelleen tai lisätä omia.';
 
   @override
   String get guideCategoriesTip1 =>
-      'Asetukset ja sitten Hallitse luokkia muuttaaksesi tai lisätäksesi.';
+      'Avaa Asetukset ja valitse Hallitse kategorioita muokataksesi tai lisätäksesi kategorian.';
 
   @override
   String get guideCategoriesTip2 =>
-      'Kaikki ilman luokkaa menee kohtaan ”Muut”, jotta kaaviot pysyvät rehellisinä.';
+      'Luokittelemattomat tapahtumat päätyvät Muut-kategoriaan, jotta kaaviot pysyvät totuudenmukaisina.';
 
   @override
   String get guideBudgetTitle => 'Budjetit';
 
   @override
   String get guideBudgetBody =>
-      'Budjetti on yhden luokan kuukausikatto. Palkki täyttyy kuluttaessasi ja vaihtaa väriä rajan lähestyessä, joten saat tiedon ennen kuin ylität sen.';
+      'Budjetti on yhden kategorian kuukausittainen yläraja. Palkki täyttyy kulutuksen kasvaessa ja muuttuu rajan lähestyessä, joten tiedät tilanteen ennen rajan ylittämistä.';
 
   @override
   String get guideBudgetTip1 =>
-      'Aloita kahdesta tai kolmesta luokasta, älä kaikista kerralla.';
+      'Aloita kahdesta tai kolmesta kategoriasta, älä kaikista kerralla.';
 
   @override
   String get guideBudgetTip2 =>
-      'Aseta raja hieman yli sen, mitä yleensä kulutat, ja kiristä sitä sitten vähitellen.';
+      'Aseta raja hieman tavallisen kulutuksesi yläpuolelle ja kiristä sitä sitten.';
 
   @override
   String get guideBudgetTip3 =>
-      'Jätä budjettihälytykset päälle, niin sovellus kertoo, kun budjetti alkaa loppua.';
+      'Pidä budjettihälytykset päällä, niin sovellus varoittaa budjetin ollessa vähissä.';
 
   @override
   String get guideSavingsTitle => 'Säästötavoitteet';
 
   @override
   String get guideSavingsBody =>
-      'Anna nimi sille, mihin säästät, aseta summa ja päivä, niin sovellus laskee, kuinka paljon sinun on pantava sivuun kuukausittain.';
+      'Nimeä säästökohde, aseta tavoite ja päivämäärä, niin sovellus laskee, kuinka paljon sinun pitäisi säästää kuukaudessa saavuttaaksesi sen.';
 
   @override
   String get guideSavingsTip1 =>
-      'Nimetystä tavoitteesta on helpompi pitää kiinni kuin epämääräisestä aikeesta säästää.';
+      'Nimetty tavoite on helpompi saavuttaa kuin epämääräinen aikomus säästää.';
 
   @override
   String get guideSavingsTip2 =>
-      'Useampi pieni tavoite tulee valmiiksi useammin kuin yksi suuri.';
+      'Useat pienet tavoitteet saavutetaan useammin kuin yksi suuri tavoite.';
 
   @override
   String get guideLoansTitle => 'Velat ja lainat';
 
   @override
   String get guideLoansBody =>
-      'Kirjaa, mitä olet velkaa, mitä se maksaa ja milloin seuraava maksu erääntyy. Kaikki maksamasi näkyy listana yhdessä jäljellä olevan kanssa.';
+      'Kirjaa velan määrä, kustannukset ja seuraavan maksun eräpäivä. Kaikki maksettavat velat ovat yhdessä luettelossa, josta näet myös jäljellä olevan kokonaismäärän.';
 
   @override
   String get guideLoansTip1 =>
-      'Syötä eräpäivä, niin maksumuistutukset pitävät siitä huolen puolestasi.';
+      'Lisää eräpäivä, niin maksumuistutukset muistuttavat sinua.';
 
   @override
   String get guideLoansTip2 =>
-      'Erääntynyt velka palaa punaisena aloitusnäytöllä, kunnes se on maksettu.';
+      'Myöhässä oleva velka näkyy kojelaudalla punaisena, kunnes se on maksettu.';
 
   @override
   String get guideReportsTitle => 'Raportit';
 
   @override
   String get guideReportsBody =>
-      'Syvempi kuva: tulot vastaan menot, kulutus luokittain, miten budjetit pitivät ja kuinka suuren osan tuloista säilytit.';
+      'Syvempi näkymä: tulot suhteessa menoihin, menot kategorioittain, budjettien toteutuminen ja tuloistasi säästämäsi osuus.';
 
   @override
   String get guideReportsTip1 =>
-      'Vaihda viikon, kuukauden ja neljänneksen välillä näytön yläreunassa.';
+      'Vaihda viikon, kuukauden ja neljännesvuoden välillä näytön yläreunasta.';
 
   @override
   String get guideReportsTip2 =>
-      'Vie tai jaa PDF — se tulee ulos omalla kielelläsi ja sen lukusuunnassa.';
+      'Vie tai jaa PDF-raportti – se luodaan omalla kielelläsi ja kirjoitussuunnallasi.';
 
   @override
   String get guideSettingsTitle => 'Asetukset';
 
   @override
   String get guideSettingsBody =>
-      'Kieli, valuutta, värit ja hälytykset ovat kaikki täällä, eikä mikään niistä lukitu ensimmäisestä valinnasta — muuta mitä haluat, milloin haluat.';
+      'Kieli, valuutta, värit ja hälytykset löytyvät täältä. Mikään niistä ei ole lukittu käyttöönotossa – voit muuttaa niitä milloin tahansa.';
 
   @override
   String get guideSettingsTip1 =>
-      'Neljäkymmentä kieltä, ja koko asettelu peilataan niille, joita luetaan oikealta vasemmalle.';
+      'Neljäkymmentä kieltä, ja koko asettelu peilautuu oikealta vasemmalle luettavissa kielissä.';
 
   @override
   String get guideSettingsTip2 =>
-      'Valitse, mitkä hälytykset haluat ja mihin aikaan ne saavat saapua.';
+      'Valitse haluamasi hälytykset ja ajat, jolloin ne voivat saapua.';
 
   @override
   String get guideSettingsTip3 =>
-      'Hiljaiset tunnit pidättelevät kaiken aamuun asti.';
+      'Hiljaiset tunnit siirtävät kaikki ilmoitukset aamuun.';
 
   @override
-  String get guideHabitTitle => 'Näin siitä tulee tapa';
+  String get guideHabitTitle => 'Tee siitä tapa';
 
   @override
   String get guideHabitBody =>
-      'Sovellus on vain niin hyvä kuin se, mitä siihen syötät. Minuutti päivässä voittaa tunnin kuukaudessa, ja kahden viikon jälkeen luvut alkavat kertoa jotain.';
+      'Sovellus on vain niin hyvä kuin sinne syöttämäsi tiedot. Minuutti päivässä voittaa tunnin kerran kuukaudessa, ja kahden viikon jälkeen luvut alkavat kertoa sinulle jotain.';
 
   @override
   String get guideHabitTip1 =>
-      'Kirjaa menot silloin kun ne tapahtuvat, älä viikon lopussa.';
+      'Kirjaa käyttämäsi rahat heti, älä viikon lopussa.';
 
   @override
   String get guideHabitTip2 =>
-      'Vilkaise aloitusnäyttöä kerran päivässä. Kymmenen sekuntia riittää.';
+      'Katso kojelautaa kerran päivässä. Kymmenen sekuntia riittää.';
 
   @override
   String get guideHabitTip3 =>
-      'Tämä opas jää Asetuksiin — palaa siihen milloin tahansa.';
+      'Tämä opas säilyy Asetuksissa – palaa siihen milloin tahansa.';
 
   @override
   String get appearance => 'Ulkoasu';
 
   @override
-  String get themeCaption => 'Vaalea, tumma tai puhelimen mukaan.';
+  String get themeCaption => 'Vaalea, tumma tai puhelimesi nykyinen tila.';
 
   @override
   String get accentColor => 'Korostusväri';
 
   @override
-  String get accentColorCaption => 'Värittää painikkeet, valinnat ja kaaviot.';
+  String get accentColorCaption =>
+      'Värittää painikkeet, korostukset ja kaaviot.';
 
   @override
   String get accentSemanticsNote =>
-      'Sisään tuleva ja ulos menevä raha säilyttävät omat värinsä kaikissa teemoissa, joten luku ei koskaan vaihda merkitystään siksi, että vaihdoit korostusväriä.';
+      'Tulot ja menot säilyttävät omat värinsä kaikissa teemoissa, joten luvun merkitys ei muutu teeman korostusvärin mukana.';
 
   @override
   String get accentTeal => 'Sinivihreä';
@@ -1654,16 +1653,16 @@ class AppL10nFi extends AppL10n {
   String get accentBlue => 'Sininen';
 
   @override
-  String get accentIndigo => 'Indigo';
+  String get accentIndigo => 'Indigonsininen';
 
   @override
   String get accentViolet => 'Violetti';
 
   @override
-  String get accentPink => 'Pinkki';
+  String get accentPink => 'Vaaleanpunainen';
 
   @override
-  String get accentCrimson => 'Karmiini';
+  String get accentCrimson => 'Karmiininpunainen';
 
   @override
   String get accentOrange => 'Oranssi';
@@ -1675,7 +1674,7 @@ class AppL10nFi extends AppL10n {
   String get searchLanguages => 'Hae kieliä';
 
   @override
-  String get suggestedLanguages => 'Ehdotetut';
+  String get suggestedLanguages => 'Suositellut';
 
   @override
   String get allLanguages => 'Kaikki kielet';
@@ -1685,30 +1684,30 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get noLanguagesFoundMessage =>
-      'Kokeile nimeä englanniksi tai sen kaksikirjaimista koodia.';
+      'Kokeile nimeä englanniksi tai kaksikirjaimista koodia.';
 
   @override
   String get rightToLeft => 'Oikealta vasemmalle';
 
   @override
-  String get replayGuide => 'Katso opas uudelleen';
+  String get replayGuide => 'Näytä opas uudelleen';
 
   @override
-  String get replaySetup => 'Tee käyttöönotto uudelleen';
+  String get replaySetup => 'Suorita käyttöönotto uudelleen';
 
   @override
   String get replaySetupBody =>
-      'Käy aloituskysymykset läpi vielä kerran. Mitään kirjaamaasi ei poisteta.';
+      'Käy ensimmäisen käyttökerran kysymykset uudelleen läpi. Mitään kirjaamaasi ei poisteta.';
 
   @override
   String get rateTitle => 'Pidätkö RainyPennystä?';
 
   @override
   String get rateBody =>
-      'Olet jaksanut tämän parissa jo jonkin aikaa. Arvion antaminen vie hetken ja auttaa muita löytämään sovelluksen.';
+      'Olet pitänyt tästä jo jonkin aikaa. Arvostelu vie hetken ja auttaa muita löytämään sovelluksen.';
 
   @override
-  String get rateAction => 'Arvioi sovellus';
+  String get rateAction => 'Arvostele sovellus';
 
   @override
   String get rateLater => 'Ehkä myöhemmin';
@@ -1720,77 +1719,78 @@ class AppL10nFi extends AppL10n {
   String get rateThanks => 'Kiitos';
 
   @override
-  String get monthlySalary => 'Monthly salary';
+  String get monthlySalary => 'Kuukausipalkka';
 
   @override
-  String get remainingAmount => 'Remaining';
+  String get remainingAmount => 'Jäljellä';
 
   @override
-  String get carriedForward => 'Carried forward';
+  String get carriedForward => 'Siirretty edelliseltä jaksolta';
 
   @override
-  String get carriedForwardHint => 'Left over from last cycle';
+  String get carriedForwardHint => 'Edellisestä jaksosta jäljelle jäänyt';
 
   @override
-  String get totalSpending => 'Total spending';
+  String get totalSpending => 'Menot yhteensä';
 
   @override
-  String get salaryCycle => 'Salary cycle';
+  String get salaryCycle => 'Palkkakausi';
 
   @override
-  String get payday => 'Salary day';
+  String get payday => 'Palkkapäivä';
 
   @override
   String get paydayDescription =>
-      'The day your salary arrives. Your financial month runs from this day until the day before the next one.';
+      'Päivä, jolloin palkkasi saapuu. Talouskuukautesi alkaa tästä päivästä ja päättyy seuraavaa palkkapäivää edeltävään päivään.';
 
   @override
-  String get paydayUpdated => 'Salary day updated';
+  String get paydayUpdated => 'Palkkapäivä päivitetty';
 
   @override
   String paydayDayOfMonth(int day) {
-    return 'Day $day';
+    return 'Päivä $day';
   }
 
   @override
   String get paydayShortMonthNote =>
-      'In shorter months the cycle starts on the last day instead.';
+      'Lyhyempinä kuukausina jakso alkaa sen sijaan kuukauden viimeisenä päivänä.';
 
   @override
   String daysLeftInCycle(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days to payday',
-      one: '1 day to payday',
-      zero: 'Last day of the cycle',
+      other: '$count päivää palkkapäivään',
+      one: '1 päivä palkkapäivään',
+      zero: 'Jakson viimeinen päivä',
     );
     return '$_temp0';
   }
 
   @override
-  String get nextPayday => 'Next payday';
+  String get nextPayday => 'Seuraava palkkapäivä';
 
   @override
-  String get spentSoFar => 'Spent so far';
+  String get spentSoFar => 'Käytetty tähän mennessä';
 
   @override
-  String get dailyAllowance => 'Safe to spend daily';
+  String get dailyAllowance => 'Turvallinen päivittäinen käyttövara';
 
   @override
-  String get overspentNotice => 'You have spent more than came in this cycle.';
+  String get overspentNotice =>
+      'Olet käyttänyt tällä jaksolla enemmän kuin olet saanut tuloja.';
 
   @override
-  String get backToThisMonth => 'Back to this month';
+  String get backToThisMonth => 'Takaisin tähän kuukauteen';
 
   @override
-  String get cycleRangeLabel => 'Cycle';
+  String get cycleRangeLabel => 'Jakso';
 
   @override
-  String get noSalaryRecorded => 'No salary recorded yet';
+  String get noSalaryRecorded => 'Palkkaa ei ole vielä kirjattu';
 
   @override
-  String get addSalaryAction => 'Add your salary';
+  String get addSalaryAction => 'Lisää palkkasi';
 
   @override
   String cycleOf(String start, String end) {
@@ -1798,278 +1798,278 @@ class AppL10nFi extends AppL10n {
   }
 
   @override
-  String get healthExcellent => 'Excellent';
+  String get healthExcellent => 'Erinomainen';
 
   @override
-  String get healthGood => 'Good';
+  String get healthGood => 'Hyvä';
 
   @override
-  String get healthFair => 'Fair';
+  String get healthFair => 'Kohtalainen';
 
   @override
-  String get healthNeedsWork => 'Needs work';
+  String get healthNeedsWork => 'Vaatii työtä';
 
   @override
   String get healthExcellentBody =>
-      'You are saving well and staying inside your budgets.';
+      'Säästät hyvin ja pysyt budjettiesi rajoissa.';
 
   @override
   String get healthGoodBody =>
-      'You are on track with your spending this period.';
+      'Menosi ovat tällä jaksolla suunnitelman mukaiset.';
 
   @override
   String get healthFairBody =>
-      'A few budgets are running hot. Small changes will help.';
+      'Muutama budjetti käy kuumana. Pienet muutokset auttavat.';
 
   @override
   String get healthNeedsWorkBody =>
-      'Spending is outpacing your plan. Start with your largest category.';
+      'Menot kasvavat suunnitelmaasi nopeammin. Aloita suurimmasta kategoriasta.';
 
   @override
-  String get factorSavingsRate => 'Savings rate';
+  String get factorSavingsRate => 'Säästöaste';
 
   @override
-  String get factorBudgetControl => 'Budget control';
+  String get factorBudgetControl => 'Budjetin hallinta';
 
   @override
-  String get factorDebtLoad => 'Debt load';
+  String get factorDebtLoad => 'Velkataakka';
 
   @override
-  String get factorSpendingTrend => 'Spending trend';
+  String get factorSpendingTrend => 'Menojen kehitys';
 
   @override
   String factorKept(String percent) {
-    return '$percent% kept';
+    return '$percent % pidetty';
   }
 
   @override
   String factorUsed(String percent) {
-    return '$percent% used';
+    return '$percent % käytetty';
   }
 
   @override
   String factorOfIncome(String percent) {
-    return '$percent% of income';
+    return '$percent % tuloista';
   }
 
   @override
   String factorTrendUp(String percent) {
-    return 'Up $percent%';
+    return 'Nousua $percent %';
   }
 
   @override
   String factorTrendDown(String percent) {
-    return 'Down $percent%';
+    return 'Laskua $percent %';
   }
 
   @override
-  String get howScoreWorks => 'How this score works';
+  String get howScoreWorks => 'Miten pisteet lasketaan';
 
   @override
   String get healthScoreExplainer =>
-      'Your score blends four things: how much of your income you keep, how well you stay inside your budgets, how much of your income goes to debt, and whether your spending is rising or falling.';
+      'Pisteesi yhdistää neljä asiaa: kuinka paljon tuloistasi pidät, kuinka hyvin pysyt budjeteissasi, kuinka suuri osa tuloistasi menee velkoihin ja ovatko menosi kasvussa vai laskussa.';
 
   @override
   String scoreWeightLabel(int percent) {
-    return '$percent% of the score';
+    return '$percent % pisteistä';
   }
 
   @override
-  String get viewHealthDetails => 'See the breakdown';
+  String get viewHealthDetails => 'Näytä erittely';
 
   @override
-  String get saveChanges => 'Save changes';
+  String get saveChanges => 'Tallenna muutokset';
 
   @override
-  String get profileUpdated => 'Profile updated';
+  String get profileUpdated => 'Profiili päivitetty';
 
   @override
-  String get changePhoto => 'Change photo';
+  String get changePhoto => 'Vaihda kuva';
 
   @override
-  String get removePhoto => 'Remove photo';
+  String get removePhoto => 'Poista kuva';
 
   @override
   String get personalInformationIntro =>
-      'Your name and photo appear across the app. Your email is the address you sign in with.';
+      'Nimesi ja kuvasi näkyvät eri puolilla sovellusta. Sähköpostiosoitteesi on osoite, jolla kirjaudut sisään.';
 
   @override
   String get emailNotEditable =>
-      'Contact support to change the address you sign in with.';
+      'Ota yhteyttä tukeen vaihtaaksesi kirjautumiseen käyttämääsi osoitetta.';
 
   @override
-  String get pressBackAgainToExit => 'Press back again to exit';
+  String get pressBackAgainToExit => 'Paina takaisin uudelleen poistuaksesi';
 
   @override
-  String get categoryHousing => 'Housing';
+  String get categoryHousing => 'Asuminen';
 
   @override
-  String get categoryFood => 'Food & Dining';
+  String get categoryFood => 'Ruoka ja ravintolat';
 
   @override
-  String get categoryTransport => 'Transportation';
+  String get categoryTransport => 'Liikenne';
 
   @override
-  String get categoryShopping => 'Shopping';
+  String get categoryShopping => 'Ostokset';
 
   @override
-  String get categoryBills => 'Bills & Utilities';
+  String get categoryBills => 'Laskut ja palvelut';
 
   @override
-  String get categoryEntertainment => 'Entertainment';
+  String get categoryEntertainment => 'Viihde';
 
   @override
-  String get categoryHealth => 'Health & Fitness';
+  String get categoryHealth => 'Terveys ja hyvinvointi';
 
   @override
-  String get categoryEducation => 'Education';
+  String get categoryEducation => 'Koulutus';
 
   @override
-  String get categoryTravel => 'Travel';
+  String get categoryTravel => 'Matkailu';
 
   @override
-  String get categorySalary => 'Salary';
+  String get categorySalary => 'Palkka';
 
   @override
   String get categoryFreelance => 'Freelance';
 
   @override
-  String get categoryInvestments => 'Investments';
+  String get categoryInvestments => 'Sijoitukset';
 
   @override
-  String get categoryGift => 'Gift';
+  String get categoryGift => 'Lahja';
 
   @override
-  String get categoryOther => 'Other';
+  String get categoryOther => 'Muut';
 
   @override
-  String get categoryGroceries => 'Groceries';
+  String get categoryGroceries => 'Ruokaostokset';
 
   @override
-  String get categoryDining => 'Dining';
+  String get categoryDining => 'Ravintolat';
 
   @override
-  String get categoryCoffee => 'Coffee';
+  String get categoryCoffee => 'Kahvi';
 
   @override
-  String get categoryUtilities => 'Utilities';
+  String get categoryUtilities => 'Palvelumaksut';
 
   @override
   String get categoryInternet => 'Internet';
 
   @override
-  String get categoryPhone => 'Phone';
+  String get categoryPhone => 'Puhelin';
 
   @override
-  String get categoryInsurance => 'Insurance';
+  String get categoryInsurance => 'Vakuutukset';
 
   @override
-  String get categorySubscriptions => 'Subscriptions';
+  String get categorySubscriptions => 'Tilaukset';
 
   @override
-  String get categoryPersonalCare => 'Personal care';
+  String get categoryPersonalCare => 'Henkilökohtainen hoito';
 
   @override
-  String get categoryClothing => 'Clothing';
+  String get categoryClothing => 'Vaatteet';
 
   @override
-  String get categoryElectronics => 'Electronics';
+  String get categoryElectronics => 'Elektroniikka';
 
   @override
-  String get categoryHomeSupplies => 'Home supplies';
+  String get categoryHomeSupplies => 'Kodintarvikkeet';
 
   @override
-  String get categoryPets => 'Pets';
+  String get categoryPets => 'Lemmikit';
 
   @override
-  String get categoryChildcare => 'Childcare';
+  String get categoryChildcare => 'Lastenhoito';
 
   @override
-  String get categoryFamily => 'Family';
+  String get categoryFamily => 'Perhe';
 
   @override
-  String get categoryFitness => 'Fitness';
+  String get categoryFitness => 'Kuntoilu';
 
   @override
-  String get categorySports => 'Sports';
+  String get categorySports => 'Urheilu';
 
   @override
-  String get categoryMedicine => 'Medicine';
+  String get categoryMedicine => 'Lääkkeet';
 
   @override
-  String get categoryMedical => 'Medical';
+  String get categoryMedical => 'Terveydenhoito';
 
   @override
-  String get categoryCharity => 'Charity';
+  String get categoryCharity => 'Hyväntekeväisyys';
 
   @override
-  String get categoryTaxes => 'Taxes';
+  String get categoryTaxes => 'Verot';
 
   @override
-  String get categoryFees => 'Fees';
+  String get categoryFees => 'Maksut';
 
   @override
-  String get categoryDebt => 'Debt';
+  String get categoryDebt => 'Velka';
 
   @override
-  String get categorySavings => 'Savings';
+  String get categorySavings => 'Säästöt';
 
   @override
-  String get categoryRepairs => 'Repairs';
+  String get categoryRepairs => 'Korjaukset';
 
   @override
-  String get categoryCarMaintenance => 'Car maintenance';
+  String get categoryCarMaintenance => 'Auton huolto';
 
   @override
-  String get categoryFuel => 'Fuel';
+  String get categoryFuel => 'Polttoaine';
 
   @override
-  String get categoryParking => 'Parking';
+  String get categoryParking => 'Pysäköinti';
 
   @override
-  String get categoryPublicTransport => 'Public transport';
+  String get categoryPublicTransport => 'Julkinen liikenne';
 
   @override
-  String get categoryRent => 'Rent';
+  String get categoryRent => 'Vuokra';
 
   @override
-  String get categoryMortgage => 'Mortgage';
+  String get categoryMortgage => 'Asuntolaina';
 
   @override
   String get categoryBonus => 'Bonus';
 
   @override
-  String get categoryCommission => 'Commission';
+  String get categoryCommission => 'Provisio';
 
   @override
-  String get categoryPension => 'Pension';
+  String get categoryPension => 'Eläke';
 
   @override
-  String get categoryInterest => 'Interest';
+  String get categoryInterest => 'Korkotuotot';
 
   @override
-  String get categoryDividends => 'Dividends';
+  String get categoryDividends => 'Osingot';
 
   @override
-  String get categoryCashback => 'Cashback';
+  String get categoryCashback => 'Käteispalautus';
 
   @override
-  String get categoryRefund => 'Refund';
+  String get categoryRefund => 'Hyvitys';
 
   @override
-  String get categoryRentalIncome => 'Rental income';
+  String get categoryRentalIncome => 'Vuokratulot';
 
   @override
-  String get addCategory => 'New category';
+  String get addCategory => 'Uusi kategoria';
 
   @override
-  String get filterByCategory => 'Filter by category';
+  String get filterByCategory => 'Suodata kategorian mukaan';
 
   @override
-  String get allCategories => 'All categories';
+  String get allCategories => 'Kaikki kategoriat';
 
   @override
-  String get clearFilters => 'Clear filters';
+  String get clearFilters => 'Tyhjennä suodattimet';
 
   @override
   String spentInCategory(String category, String amount) {
@@ -2077,89 +2077,90 @@ class AppL10nFi extends AppL10n {
   }
 
   @override
-  String get allTime => 'All time';
+  String get allTime => 'Kaikki ajat';
 
   @override
-  String get customRange => 'Custom';
+  String get customRange => 'Mukautettu';
 
   @override
-  String get selectDateRange => 'Choose a period';
+  String get selectDateRange => 'Valitse ajanjakso';
 
   @override
   String rangeApplied(String start, String end) {
-    return 'Showing $start – $end';
+    return 'Näytetään $start – $end';
   }
 
   @override
-  String get loans => 'Loans';
+  String get loans => 'Lainat';
 
   @override
-  String get debts => 'Debts';
+  String get debts => 'Velat';
 
   @override
-  String get noLoansTitle => 'No loans';
+  String get noLoansTitle => 'Ei lainoja';
 
   @override
-  String get noLoansBody => 'You have no active loans.';
+  String get noLoansBody => 'Sinulla ei ole aktiivisia lainoja.';
 
   @override
-  String get emptyHealthTitle => 'No Financial Score Yet';
+  String get emptyHealthTitle => 'Taloudellista pistemäärää ei vielä ole';
 
   @override
   String get emptyHealthDescription =>
-      'We need a little financial activity before we can calculate an accurate health score.';
+      'Tarvitsemme hieman taloudellista aktiivisuutta ennen kuin voimme laskea tarkan hyvinvointipisteesi.';
 
   @override
-  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+  String get emptyHealthAddTransactions => 'Lisää tulo- tai menotapahtumia';
 
   @override
-  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+  String get emptyHealthSetBudgets => 'Määritä kuukausibudjettisi';
 
   @override
-  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+  String get emptyHealthTrackLoans =>
+      'Seuraa lainoja tai velkoja (valinnainen)';
 
   @override
   String get emptyHealthCardSubtitle =>
-      'Add transactions to calculate your score and get insights.';
+      'Lisää tapahtumia laskeaksesi pisteesi ja saadaksesi oivalluksia.';
 
   @override
-  String get smartBudgetSplit => 'Smart Budget Split';
+  String get smartBudgetSplit => 'Älykäs budjettijako';
 
   @override
   String get smartBudgetSplitSubtitle =>
-      'Enter your monthly salary to calculate recommended limits';
+      'Syötä kuukausipalkkasi laskeaksesi suositellut rajat';
 
   @override
-  String get monthlyNetSalary => 'Monthly Net Salary';
+  String get monthlyNetSalary => 'Kuukausittainen nettopalkka';
 
   @override
-  String get categoryAllocations => 'Category Allocations';
+  String get categoryAllocations => 'Kategoriakohtaiset osuudet';
 
   @override
   String totalBudgeted(String amount) {
-    return 'Total: $amount';
+    return 'Yhteensä: $amount';
   }
 
   @override
-  String get applyAllBudgets => 'Apply All Budgets';
+  String get applyAllBudgets => 'Ota kaikki budjetit käyttöön';
 
   @override
-  String get applyingBudgets => 'Applying budgets...';
+  String get applyingBudgets => 'Budjetteja otetaan käyttöön...';
 
   @override
   String budgetsCreatedSuccess(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count category budgets created.',
-      one: '1 category budget created.',
+      other: '$count kategoriabudjettia luotu.',
+      one: '1 kategoriabudjetti luotu.',
     );
     return '$_temp0';
   }
 
   @override
-  String get failedToSaveBudgets => 'Failed to save budgets.';
+  String get failedToSaveBudgets => 'Budjettien tallennus epäonnistui.';
 
   @override
-  String get recommendedBudget => 'Recommended budget';
+  String get recommendedBudget => 'Suositeltu budjetti';
 }

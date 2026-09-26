@@ -931,7 +931,7 @@
 "skip": "Omitir",
 "continueLabel": "Continuar",
 "@continueLabel": {
-"description": "Acción principal que avanza en un flujo de varios pasos. Tiene este sufijo porque "continue" es una palabra reservada de Dart."
+"description": "Acción principal que avanza en un flujo de varios pasos. Tiene este sufijo porque continue es una palabra reservada de Dart."
 },
 "selected": "Seleccionado",
 "passwordRequired": "Introduce tu contraseña",

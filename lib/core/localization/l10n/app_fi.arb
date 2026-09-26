@@ -934,7 +934,7 @@
 "skip": "Ohita",
 "continueLabel": "Jatka",
 "@continueLabel": {
-"description": "Monivaiheisen toiminnon seuraavaan vaiheeseen siirtävä ensisijainen toiminto. Nimetty loppuliitteellä, koska "continue" on Dartin avainsana."
+"description": "Monivaiheisen toiminnon seuraavaan vaiheeseen siirtävä ensisijainen toiminto. Nimetty loppuliitteellä, koska continue on Dartin avainsana."
 },
 "selected": "Valittu",
 "passwordRequired": "Anna salasanasi",

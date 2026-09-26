@@ -12,19 +12,19 @@ class AppL10nFil extends AppL10n {
   String get appName => 'RainyPenny';
 
   @override
-  String get appTagline => 'Mag-ipon para sa maulan na araw';
+  String get appTagline => 'Mag-ipon para sa oras ng pangangailangan';
 
   @override
   String get navHome => 'Home';
 
   @override
-  String get navTransactions => 'Transaksyon';
+  String get navTransactions => 'Mga Transaksyon';
 
   @override
   String get navAdd => 'Magdagdag';
 
   @override
-  String get navReports => 'Ulat';
+  String get navReports => 'Mga Ulat';
 
   @override
   String get navProfile => 'Profile';
@@ -45,19 +45,20 @@ class AppL10nFil extends AppL10n {
   }
 
   @override
-  String get greetingSubtitle => 'Ito ang buod ng pera mo';
+  String get greetingSubtitle =>
+      'Narito ang iyong pangkalahatang-ideya sa pananalapi';
 
   @override
   String get totalBalance => 'Kabuuang balanse';
 
   @override
-  String get vsLastPeriod => 'kumpara sa nakaraan';
+  String get vsLastPeriod => 'kumpara noong nakaraang panahon';
 
   @override
   String get income => 'Kita';
 
   @override
-  String get expenses => 'Gastos';
+  String get expenses => 'Mga Gastusin';
 
   @override
   String get netBalance => 'Netong balanse';
@@ -72,39 +73,39 @@ class AppL10nFil extends AppL10n {
   String get addIncome => 'Magdagdag ng kita';
 
   @override
-  String get addExpense => 'Magdagdag ng gastos';
+  String get addExpense => 'Magdagdag ng gastusin';
 
   @override
-  String get spendingOverview => 'Buod ng paggastos';
+  String get spendingOverview => 'Pangkalahatang-ideya sa paggastos';
 
   @override
-  String get recentTransactions => 'Mga huling transaksyon';
+  String get recentTransactions => 'Mga kamakailang transaksyon';
 
   @override
   String get seeAll => 'Tingnan lahat';
 
   @override
-  String get viewAll => 'Ipakita lahat';
+  String get viewAll => 'Tingnan lahat';
 
   @override
-  String get budgetProgress => 'Takbo ng badyet';
+  String get budgetProgress => 'Progreso ng badyet';
 
   @override
-  String get savingsGoals => 'Layunin sa ipon';
+  String get savingsGoals => 'Mga layunin sa pag-iipon';
 
   @override
-  String get financialInsight => 'Pananaw sa pera';
+  String get financialInsight => 'Kaalamang pinansyal';
 
   @override
   String get financialHealth => 'Kalusugan ng pananalapi';
 
   @override
   String ofTotal(String total) {
-    return 'sa $total';
+    return 'ng $total';
   }
 
   @override
-  String get searchTransactions => 'Maghanap ng transaksyon';
+  String get searchTransactions => 'Maghanap ng mga transaksyon';
 
   @override
   String get filterAll => 'Lahat';
@@ -113,10 +114,10 @@ class AppL10nFil extends AppL10n {
   String get filterIncome => 'Kita';
 
   @override
-  String get filterExpenses => 'Gastos';
+  String get filterExpenses => 'Mga Gastusin';
 
   @override
-  String get today => 'Ngayon';
+  String get today => 'Ngayong araw';
 
   @override
   String get yesterday => 'Kahapon';
@@ -126,7 +127,7 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get noTransactionsBody =>
-      'Subukan ang ibang hanap o filter para makakita pa ng mga tala.';
+      'Subukan ang ibang paghahanap o filter upang makita ang higit pa sa iyong aktibidad.';
 
   @override
   String transactionCount(int count) {
@@ -134,7 +135,7 @@ class AppL10nFil extends AppL10n {
       count,
       locale: localeName,
       other: '$count na transaksyon',
-      one: '$count transaksyon',
+      one: '1 transaksyon',
       zero: 'Walang transaksyon',
     );
     return '$_temp0';
@@ -156,13 +157,13 @@ class AppL10nFil extends AppL10n {
   String get note => 'Tala';
 
   @override
-  String get noteHint => 'Tala (opsyonal)';
+  String get noteHint => 'Opsyonal na tala';
 
   @override
   String get saveIncome => 'I-save ang kita';
 
   @override
-  String get saveExpense => 'I-save ang gastos';
+  String get saveExpense => 'I-save ang gastusin';
 
   @override
   String get selectCategory => 'Pumili ng kategorya';
@@ -171,22 +172,22 @@ class AppL10nFil extends AppL10n {
   String get transactionSaved => 'Na-save ang transaksyon';
 
   @override
-  String get amountRequired => 'Maglagay ng halagang mas malaki sa zero';
+  String get amountRequired => 'Maglagay ng halagang higit sa zero';
 
   @override
   String get titleRequired => 'Bigyan ng pangalan ang transaksyong ito';
 
   @override
-  String get descriptionLabel => 'Paglalarawan';
+  String get descriptionLabel => 'Deskripsyon';
 
   @override
-  String get descriptionHint => 'hal. groseri';
+  String get descriptionHint => 'hal. Mga Groseri';
 
   @override
   String get budget => 'Badyet';
 
   @override
-  String get budgets => 'Mga badyet';
+  String get budgets => 'Mga Badyet';
 
   @override
   String get totalBudget => 'Kabuuang badyet';
@@ -199,23 +200,23 @@ class AppL10nFil extends AppL10n {
 
   @override
   String budgetUsed(int percent) {
-    return '$percent% nagamit';
+    return '$percent% ang nagamit';
   }
 
   @override
   String get onTrack => 'Nasa tamang landas';
 
   @override
-  String get approachingLimit => 'Malapit na sa limitasyon';
+  String get approachingLimit => 'Palapit na sa limitasyon';
 
   @override
   String get overBudget => 'Lampas sa badyet';
 
   @override
-  String get savings => 'Ipon';
+  String get savings => 'Mga Ipon';
 
   @override
-  String get yourGoals => 'Mga layunin mo';
+  String get yourGoals => 'Iyong mga layunin';
 
   @override
   String get saved => 'Naipon';
@@ -224,7 +225,7 @@ class AppL10nFil extends AppL10n {
   String get target => 'Target';
 
   @override
-  String get monthlyContribution => 'Kada buwan';
+  String get monthlyContribution => 'Buwanan';
 
   @override
   String get addFunds => 'Magdagdag ng pondo';
@@ -237,43 +238,43 @@ class AppL10nFil extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count buwan na lang',
-      one: '$count buwan na lang',
+      other: '$count na buwan na lang',
+      one: '1 buwan na lang',
     );
     return '$_temp0';
   }
 
   @override
-  String get loansAndDebts => 'Utang at pautang';
+  String get loansAndDebts => 'Mga pautang at utang';
 
   @override
   String get totalOutstanding => 'Kabuuang natitirang utang';
 
   @override
-  String get monthlyPayment => 'Kada buwan';
+  String get monthlyPayment => 'Buwanan';
 
   @override
   String get nextPayment => 'Susunod na bayad';
 
   @override
   String paidOff(int percent) {
-    return '$percent% nabayaran';
+    return '$percent% ang nabayaran';
   }
 
   @override
   String get interestRate => 'Interes';
 
   @override
-  String get upcomingPayments => 'Paparating na bayad';
+  String get upcomingPayments => 'Mga darating na bayarin';
 
   @override
   String dueInDays(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Due sa $count araw',
-      one: 'Due sa $count araw',
-      zero: 'Due ngayon',
+      other: 'Kailangang bayaran sa loob ng $count araw',
+      one: 'Kailangang bayaran bukas',
+      zero: 'Kailangang bayaran ngayon',
     );
     return '$_temp0';
   }
@@ -282,7 +283,7 @@ class AppL10nFil extends AppL10n {
   String get overdue => 'Lampas na sa takdang araw';
 
   @override
-  String get reports => 'Ulat';
+  String get reports => 'Mga Ulat';
 
   @override
   String get week => 'Linggo';
@@ -294,19 +295,19 @@ class AppL10nFil extends AppL10n {
   String get quarter => 'Kwarter';
 
   @override
-  String get incomeVsExpenses => 'Kita kontra gastos';
+  String get incomeVsExpenses => 'Kita laban sa mga gastusin';
 
   @override
-  String get spendingByCategory => 'Gastos ayon sa kategorya';
+  String get spendingByCategory => 'Paggastos ayon sa kategorya';
 
   @override
-  String get budgetPerformance => 'Takbo ng mga badyet';
+  String get budgetPerformance => 'Pagganap ng badyet';
 
   @override
-  String get insights => 'Mga pananaw';
+  String get insights => 'Mga Kaalaman';
 
   @override
-  String get savingsRate => 'Rate ng ipon';
+  String get savingsRate => 'Bilis ng pag-iipon';
 
   @override
   String get profile => 'Profile';
@@ -321,10 +322,10 @@ class AppL10nFil extends AppL10n {
   String get changePassword => 'Palitan ang password';
 
   @override
-  String get notifications => 'Mga abiso';
+  String get notifications => 'Mga Abiso';
 
   @override
-  String get preferences => 'Kagustuhan';
+  String get preferences => 'Mga Kagustuhan';
 
   @override
   String get language => 'Wika';
@@ -355,11 +356,11 @@ class AppL10nFil extends AppL10n {
 
   @override
   String memberSince(String date) {
-    return 'Miyembro mula $date';
+    return 'Miyembro mula noong $date';
   }
 
   @override
-  String get themeSystem => 'Sundin ang sistema';
+  String get themeSystem => 'System';
 
   @override
   String get themeLight => 'Maliwanag';
@@ -368,14 +369,14 @@ class AppL10nFil extends AppL10n {
   String get themeDark => 'Madilim';
 
   @override
-  String get settings => 'Mga setting';
+  String get settings => 'Mga Setting';
 
   @override
-  String get noNotificationsTitle => 'Wala nang bago';
+  String get noNotificationsTitle => 'Wala kang bagong abiso';
 
   @override
   String get noNotificationsBody =>
-      'Lilitaw dito ang mga bagong pananaw at paalala.';
+      'Dito lilitaw ang mga bagong kaalaman at paalala.';
 
   @override
   String get cancel => 'Kanselahin';
@@ -384,10 +385,10 @@ class AppL10nFil extends AppL10n {
   String get save => 'I-save';
 
   @override
-  String get done => 'Tapos';
+  String get done => 'Tapos na';
 
   @override
-  String get retry => 'Subukan ulit';
+  String get retry => 'Subukang muli';
 
   @override
   String get close => 'Isara';
@@ -396,34 +397,34 @@ class AppL10nFil extends AppL10n {
   String get somethingWentWrong => 'May nangyaring mali';
 
   @override
-  String get comingSoon => 'Darating sa buong bersyon';
+  String get comingSoon => 'Paparating na sa buong bersyon';
 
   @override
   String get edit => 'I-edit';
 
   @override
-  String get delete => 'Burahin';
+  String get delete => 'Tanggalin';
 
   @override
-  String get undo => 'Ibalik';
+  String get undo => 'I-undo';
 
   @override
-  String get add => 'Idagdag';
+  String get add => 'Magdagdag';
 
   @override
   String get create => 'Gumawa';
 
   @override
-  String get nameRequired => 'Bigyan ito ng pangalan';
+  String get nameRequired => 'Ilagay ang iyong pangalan';
 
   @override
-  String get amountAboveZero => 'Maglagay ng halagang mas malaki sa zero';
+  String get amountAboveZero => 'Maglagay ng halagang higit sa zero';
 
   @override
   String get editTransaction => 'I-edit ang transaksyon';
 
   @override
-  String get deleteTransaction => 'Burahin ang transaksyon?';
+  String get deleteTransaction => 'Tanggalin ang transaksyon?';
 
   @override
   String deleteTransactionBody(String title) {
@@ -431,7 +432,7 @@ class AppL10nFil extends AppL10n {
   }
 
   @override
-  String get transactionDeleted => 'Nabura ang transaksyon';
+  String get transactionDeleted => 'Natanggal ang transaksyon';
 
   @override
   String get transactionUpdated => 'Na-update ang transaksyon';
@@ -443,31 +444,31 @@ class AppL10nFil extends AppL10n {
   String get editBudget => 'I-edit ang badyet';
 
   @override
-  String get budgetLimit => 'Limitasyon kada buwan';
+  String get budgetLimit => 'Buwanang limitasyon';
 
   @override
-  String get deleteBudget => 'Burahin ang badyet?';
+  String get deleteBudget => 'Tanggalin ang badyet?';
 
   @override
   String deleteBudgetBody(String category) {
-    return 'Aalisin ang badyet na $category. Hindi maaapektuhan ang mga transaksyon mo.';
+    return 'Aalisin ang badyet para sa $category. Hindi maaapektuhan ang iyong mga transaksyon.';
   }
 
   @override
   String get budgetSaved => 'Na-save ang badyet';
 
   @override
-  String get budgetDeleted => 'Nabura ang badyet';
+  String get budgetDeleted => 'Natanggal ang badyet';
 
   @override
-  String get allCategoriesBudgeted => 'May badyet na ang bawat kategorya';
+  String get allCategoriesBudgeted => 'Mayroon nang badyet ang bawat kategorya';
 
   @override
-  String get noBudgetsTitle => 'Wala pang badyet';
+  String get noBudgetsTitle => 'Wala pang mga badyet';
 
   @override
   String get noBudgetsBody =>
-      'Maglagay ng buwanang limitasyon sa isang kategorya para masimulan itong subaybayan.';
+      'Magtakda ng buwanang limitasyon sa isang kategorya upang simulan itong subaybayan.';
 
   @override
   String get newGoal => 'Bagong layunin';
@@ -479,7 +480,7 @@ class AppL10nFil extends AppL10n {
   String get goalName => 'Pangalan ng layunin';
 
   @override
-  String get goalNameHint => 'hal. pang-emerhensiya';
+  String get goalNameHint => 'hal. Emergency fund';
 
   @override
   String get targetAmount => 'Target na halaga';
@@ -488,7 +489,7 @@ class AppL10nFil extends AppL10n {
   String get alreadySaved => 'Naipon na';
 
   @override
-  String get deleteGoal => 'Burahin ang layunin?';
+  String get deleteGoal => 'Tanggalin ang layunin?';
 
   @override
   String deleteGoalBody(String name) {
@@ -499,50 +500,50 @@ class AppL10nFil extends AppL10n {
   String get goalSaved => 'Na-save ang layunin';
 
   @override
-  String get goalDeleted => 'Nabura ang layunin';
+  String get goalDeleted => 'Natanggal ang layunin';
 
   @override
-  String get noGoalsTitle => 'Wala pang layunin sa ipon';
+  String get noGoalsTitle => 'Wala pang mga layunin sa pag-iipon';
 
   @override
   String get noGoalsBody =>
-      'Maglagay ng target at susubaybayan ng RainyPenny ang progreso mo.';
+      'Magtakda ng target at susubaybayan ng RainyPenny ang iyong progreso.';
 
   @override
   String get fundsAdded => 'Naidagdag ang pondo';
 
   @override
-  String get newDebt => 'Bagong utang o card';
+  String get newDebt => 'Bagong pautang o card';
 
   @override
-  String get editDebt => 'I-edit ang utang';
+  String get editDebt => 'I-edit ang pautang';
 
   @override
   String get debtName => 'Pangalan';
 
   @override
-  String get debtNameHint => 'hal. car loan';
+  String get debtNameHint => 'hal. Pautang sa kotse';
 
   @override
-  String get lender => 'Pinagkakautangan';
+  String get lender => 'Nagpautang';
 
   @override
-  String get lenderHint => 'hal. BDO';
+  String get lenderHint => 'hal. Meridian Bank';
 
   @override
   String get originalAmount => 'Orihinal na halaga';
 
   @override
-  String get creditLimit => 'Limitasyon ng credit';
+  String get creditLimit => 'Limitasyon sa credit';
 
   @override
   String get remainingBalance => 'Natitirang balanse';
 
   @override
-  String get interestRatePercent => 'Interes (%)';
+  String get interestRatePercent => 'Rate ng interes (%)';
 
   @override
-  String get kindLoan => 'Utang';
+  String get kindLoan => 'Pautang';
 
   @override
   String get kindCreditCard => 'Credit card';
@@ -554,34 +555,34 @@ class AppL10nFil extends AppL10n {
   String get paymentRecorded => 'Naitala ang bayad';
 
   @override
-  String get deleteDebt => 'Burahin ang utang na ito?';
+  String get deleteDebt => 'Tanggalin ang utang na ito?';
 
   @override
   String deleteDebtBody(String name) {
-    return 'Aalisin ang $name sa listahan ng mga utang mo.';
+    return 'Aalisin ang $name sa iyong mga utang.';
   }
 
   @override
   String get debtSaved => 'Na-save';
 
   @override
-  String get debtDeleted => 'Nabura';
+  String get debtDeleted => 'Natanggal';
 
   @override
   String get noDebtsTitle => 'Walang sinusubaybayang utang';
 
   @override
   String get noDebtsBody =>
-      'Magdagdag ng utang o credit card para mabantayan ang mga hulog.';
+      'Magdagdag ng pautang o credit card upang mabantayan ang mga pagbabayad.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return 'Lampas na ang badyet sa $subject';
+    return 'Lumampas ang badyet sa $subject';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return 'Lampas ka ng $amount sa badyet mo para sa $subject ngayong panahon.';
+    return 'Lumampas ka ng $amount sa iyong badyet para sa $subject sa panahong ito.';
   }
 
   @override
@@ -595,24 +596,24 @@ class AppL10nFil extends AppL10n {
     int percent,
     String amount,
   ) {
-    return '$percent% na ang nagamit sa badyet mo para sa $subject, $amount na lang ang natitira.';
+    return 'Nagamit na ang $percent% ng iyong badyet sa $subject, at may $amount na natitira.';
   }
 
   @override
-  String get insightOverIncomeTitle => 'Mas mataas ang gastos kaysa kita';
+  String get insightOverIncomeTitle => 'Mas mataas ang gastusin kaysa sa kita';
 
   @override
   String get insightOverIncomeBody =>
-      'Mas malaki ang nagastos mo kaysa kinita mo ngayong panahon. Tingnan ang pinakamalalaking kategorya para makabalik sa ayos.';
+      'Mas marami kang nagastos kaysa sa kinita sa panahong ito. Suriin ang iyong pinakamalalaking kategorya upang maibalik sa ayos ang gastusin.';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return 'Tumaas ang gastos sa $subject';
+    return 'Tumaas ang paggastos sa $subject';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return 'Ang gastos mo sa $subject ay $percent% na mas mataas kaysa nakaraang panahon.';
+    return 'Ang iyong paggastos sa $subject ay mas mataas ng $percent% kumpara sa nakaraang panahon.';
   }
 
   @override
@@ -620,7 +621,7 @@ class AppL10nFil extends AppL10n {
 
   @override
   String insightTrendDownBody(int percent) {
-    return 'Ang kabuuang gastos ay $percent% na mas mababa kaysa nakaraang panahon.';
+    return 'Ang pangkalahatang paggastos ay mas mababa ng $percent% kumpara sa nakaraang panahon.';
   }
 
   @override
@@ -628,38 +629,38 @@ class AppL10nFil extends AppL10n {
 
   @override
   String insightTrendUpBody(int percent) {
-    return 'Ang kabuuang gastos ay $percent% na mas mataas kaysa nakaraang panahon.';
+    return 'Ang pangkalahatang paggastos ay mas mataas ng $percent% kumpara sa nakaraang panahon.';
   }
 
   @override
-  String get insightSavingsStrongTitle => 'Malakas ang ipon ngayong panahon';
+  String get insightSavingsStrongTitle => 'Maganda ang naipon sa panahong ito';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
-    return 'Naitabi mo ang $percent% ng kita mo — mataas nang mataas sa target na $target%.';
+    return 'Naitabi mo ang $percent% ng iyong kita — mas mataas kaysa sa target na $target%.';
   }
 
   @override
-  String get insightSavingsLowTitle => 'Mas mababa sa target ang rate ng ipon';
+  String get insightSavingsLowTitle => 'Mababa ang ipon kaysa sa target';
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return 'Naitabi mo ang $percent% ng kita mo ngayong panahon. Tumutok sa $target%.';
+    return 'Naitabi mo ang $percent% ng iyong kita sa panahong ito. Sikaping abutin ang $target%.';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return 'Malapit nang mabuo ang $subject';
+    return 'Halos mapondohan na ang $subject';
   }
 
   @override
   String insightGoalNearlyBody(String amount, String subject) {
-    return '$amount na lang ang kulang para sa $subject.';
+    return '$amount na lang ang kulang upang maabot ang $subject.';
   }
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return 'Nasa tamang landas ang $subject';
+    return 'Nasa tamang landas para sa $subject';
   }
 
   @override
@@ -667,10 +668,10 @@ class AppL10nFil extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       months,
       locale: localeName,
-      other: '$months buwan',
-      one: '$months buwan',
+      other: '$months na buwan',
+      one: '1 buwan',
     );
-    return 'Sa $amount kada buwan, maaabot mo ang layuning ito sa loob ng $_temp0.';
+    return 'Sa halagang $amount bawat buwan, maaabot mo ang layuning ito sa loob ng $_temp0.';
   }
 
   @override
@@ -683,15 +684,15 @@ class AppL10nFil extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       days,
       locale: localeName,
-      other: '$days araw',
-      one: '$days araw',
+      other: '$days na araw',
+      one: '1 araw',
     );
-    return 'Ang $amount na bayad para sa $subject ay $_temp0 nang huli.';
+    return 'Ang bayad para sa $subject na nagkakahalagang $amount ay huli na nang $_temp0.';
   }
 
   @override
   String insightDebtDueTitle(String subject) {
-    return 'Papalapit na ang bayad sa $subject';
+    return 'Paparating na ang bayad sa $subject';
   }
 
   @override
@@ -700,10 +701,10 @@ class AppL10nFil extends AppL10n {
       days,
       locale: localeName,
       other: 'sa loob ng $days araw',
-      one: 'sa loob ng $days araw',
-      zero: 'ngayon',
+      one: 'bukas',
+      zero: 'ngayong araw',
     );
-    return 'Due ang $amount $_temp0.';
+    return 'Ang $amount ay dapat bayaran $_temp0.';
   }
 
   @override
@@ -714,10 +715,10 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get signInSubtitle =>
-      'Maligayang pagbabalik. Naghihintay ang pera mo.';
+      'Maligayang pagbabalik. Handa na ang iyong impormasyon sa pananalapi.';
 
   @override
-  String get signUpSubtitle => 'Ilang detalye lang at handa ka na.';
+  String get signUpSubtitle => 'Ilang detalye na lang at handa ka na.';
 
   @override
   String get emailLabel => 'Email';
@@ -735,22 +736,22 @@ class AppL10nFil extends AppL10n {
   String get fullNameLabel => 'Buong pangalan';
 
   @override
-  String get fullNameHint => 'Juan dela Cruz';
+  String get fullNameHint => 'Juan Dela Cruz';
 
   @override
   String get forgotPassword => 'Nakalimutan ang password?';
 
   @override
-  String get resetSent => 'Tingnan ang inbox mo para sa reset link';
+  String get resetSent => 'Tingnan ang iyong inbox para sa link ng pag-reset';
 
   @override
-  String get noAccountYet => 'Bago ka rito?';
+  String get noAccountYet => 'Bago ka ba rito?';
 
   @override
-  String get haveAccount => 'May account ka na?';
+  String get haveAccount => 'Mayroon ka na bang account?';
 
   @override
-  String get emailInvalid => 'Maglagay ng tamang email address';
+  String get emailInvalid => 'Maglagay ng wastong email address';
 
   @override
   String get passwordTooShort => 'Gumamit ng hindi bababa sa 8 karakter';
@@ -760,48 +761,49 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get signOutBody =>
-      'Kailangan mong mag-sign in ulit para makita ang pera mo.';
+      'Kakailanganin mong mag-sign in muli upang makita ang iyong pananalapi.';
 
   @override
-  String get dataSource => 'Pinagmulan ng data';
+  String get dataSource => 'Pinagmulan ng datos';
 
   @override
-  String get insightWeeklySummaryTitle => 'Balik-tanaw sa linggo mo';
+  String get insightWeeklySummaryTitle => 'Ang iyong linggo sa pagsusuri';
 
   @override
   String get insightWeeklySummaryBody =>
-      'Tingnan kung saan napunta ang pera mo ngayong linggo at kumusta ang mga badyet mo.';
+      'Tingnan kung saan napunta ang iyong pera ngayong linggo at kung kumusta ang iyong mga badyet.';
 
   @override
-  String get notificationSettings => 'Mga abiso';
+  String get notificationSettings => 'Mga Abiso';
 
   @override
-  String get alertsSection => 'Mga alerto';
+  String get alertsSection => 'Mga Alerto';
 
   @override
-  String get budgetAlerts => 'Alerto sa badyet';
+  String get budgetAlerts => 'Mga alerto sa badyet';
 
   @override
   String get budgetAlertsBody =>
-      'Kapag malapit na o lampas na ang badyet sa limitasyon';
+      'Kapag ang badyet ay malapit na o lumampas na sa limitasyon nito';
 
   @override
-  String get paymentReminders => 'Paalala sa bayad';
+  String get paymentReminders => 'Mga paalala sa pagbabayad';
 
   @override
-  String get paymentRemindersBody => 'Ilang araw bago ang takdang bayad';
+  String get paymentRemindersBody =>
+      'Ilang araw bago ang takdang petsa ng bayarin';
 
   @override
-  String get savingsUpdates => 'Balita sa ipon';
+  String get savingsUpdates => 'Mga update sa ipon';
 
   @override
-  String get savingsUpdatesBody => 'Progreso patungo sa mga layunin mo';
+  String get savingsUpdatesBody => 'Progreso patungo sa iyong mga layunin';
 
   @override
   String get weeklySummaryLabel => 'Lingguhang buod';
 
   @override
-  String get weeklySummaryBody => 'Buod ng linggong lumipas';
+  String get weeklySummaryBody => 'Mabilisang buod ng nakaraang linggo';
 
   @override
   String get scheduleSection => 'Oras';
@@ -810,7 +812,7 @@ class AppL10nFil extends AppL10n {
   String get reminderTime => 'Oras ng paalala';
 
   @override
-  String get quietHours => 'Tahimik na oras';
+  String get quietHours => 'Mga oras ng katahimikan';
 
   @override
   String quietHoursValue(String start, String end) {
@@ -825,32 +827,32 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Payagan ang mga abiso para mabalaan ka ng RainyPenny bago tuluyang lumampas ang badyet o bayad.';
+      'Pahintulutan ang mga abiso upang mabalaan ka ng RainyPenny bago lumampas ang isang badyet o bayarin.';
 
   @override
-  String get allowNotifications => 'Payagan ang mga abiso';
+  String get allowNotifications => 'Pahintulutan ang mga abiso';
 
   @override
   String get permissionDenied =>
-      'Naka-block ang mga abiso. Maaari mo itong i-on sa settings ng device mo.';
+      'Naka-block ang mga abiso. Maaari mo itong i-on sa mga setting ng iyong device.';
 
   @override
-  String get upcomingAlerts => 'Nakatakda';
+  String get upcomingAlerts => 'Naka-iskedyul';
 
   @override
-  String get noScheduledAlerts => 'Wala pang nakatakda ngayon';
+  String get noScheduledAlerts => 'Walang naka-iskedyul ngayon';
 
   @override
   String get noScheduledAlertsBody =>
-      'Lilitaw dito ang mga alerto kapag papalapit na sa hangganan ang mga badyet at bayad mo.';
+      'Lilitaw ang mga alerto rito habang lumalapit ang iyong mga badyet at bayarin sa kanilang mga limitasyon.';
 
   @override
   String scheduledFor(String date) {
-    return 'Nakatakda sa $date';
+    return 'Naka-iskedyul para sa $date';
   }
 
   @override
-  String get everyWeek => 'Kada linggo';
+  String get everyWeek => 'Bawat linggo';
 
   @override
   String get allNotificationsOff => 'Naka-off ang lahat ng abiso';
@@ -859,7 +861,7 @@ class AppL10nFil extends AppL10n {
   String get needsAttention => 'Kailangan ng pansin';
 
   @override
-  String get quickActionsTitle => 'Ano ang gusto mong gawin?';
+  String get quickActionsTitle => 'Ano ang nais mong gawin?';
 
   @override
   String get createSection => 'Itala';
@@ -868,7 +870,7 @@ class AppL10nFil extends AppL10n {
   String get jumpToSection => 'Pumunta sa';
 
   @override
-  String get addLoanAction => 'Magdagdag ng utang';
+  String get addLoanAction => 'Magdagdag ng pautang';
 
   @override
   String get addBudgetAction => 'Magdagdag ng badyet';
@@ -878,49 +880,49 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get longPressHint =>
-      'Tip: pindutin nang matagal ang + para agad makapagtala ng gastos';
+      'Tip: Pindutin nang matagal ang + para magtala agad ng gastusin';
 
   @override
-  String get searchCurrencies => 'Maghanap ng pera';
+  String get searchCurrencies => 'Maghanap ng mga pera';
 
   @override
   String get noCurrenciesFound => 'Walang nahanap na pera';
 
   @override
   String get noCurrenciesFoundMessage =>
-      'Subukan ang ibang code, simbolo o pangalan.';
+      'Subukan ang ibang code, simbolo, o pangalan.';
 
   @override
-  String get popularCurrencies => 'Madalas gamitin';
+  String get popularCurrencies => 'Sikat';
 
   @override
   String get allCurrencies => 'Lahat ng pera';
 
   @override
-  String get totalLoanAmount => 'Kabuuang halaga ng utang';
+  String get totalLoanAmount => 'Kabuuang halaga ng pautang';
 
   @override
-  String get installmentAmount => 'Halaga kada hulog';
+  String get installmentAmount => 'Halaga ng hulog';
 
   @override
   String get numberOfInstallments => 'Bilang ng hulog';
 
   @override
-  String get paidInstallments => 'Nabayarang hulog';
+  String get paidInstallments => 'Mga bayad nang hulog';
 
   @override
-  String get remainingInstallments => 'Natitirang hulog';
+  String get remainingInstallments => 'Mga natitirang hulog';
 
   @override
   String installmentsPaidOf(int paid, int total) {
-    return '$paid sa $total ang nabayaran';
+    return '$paid sa $total ang bayad na';
   }
 
   @override
-  String get finalPayment => 'Huling hulog';
+  String get finalPayment => 'Huling bayad';
 
   @override
-  String get paymentDueDate => 'Takdang araw ng bayad';
+  String get paymentDueDate => 'Petsa ng takdang bayad';
 
   @override
   String dueOnDayOfMonth(int day) {
@@ -931,10 +933,10 @@ class AppL10nFil extends AppL10n {
   String get loanStatus => 'Katayuan';
 
   @override
-  String get statusActive => 'Nasa tamang landas';
+  String get statusActive => 'Aktibo';
 
   @override
-  String get statusDueSoon => 'Malapit nang mag-due';
+  String get statusDueSoon => 'Malapit nang bayaran';
 
   @override
   String get statusOverdue => 'Lampas na sa takdang araw';
@@ -955,22 +957,22 @@ class AppL10nFil extends AppL10n {
   String get startDate => 'Petsa ng simula';
 
   @override
-  String get openEnded => 'Walang takdang wakas';
+  String get openEnded => 'Walang takdang katapusan';
 
   @override
-  String get loanDetails => 'Detalye ng utang';
+  String get loanDetails => 'Mga detalye ng pautang';
 
   @override
-  String get notSet => 'Wala pang nakatakda';
+  String get notSet => 'Hindi nakatakda';
 
   @override
   String insightDebtDueTodayTitle(String subject) {
-    return 'Due ngayon ang $subject';
+    return 'Kailangang bayaran ang $subject ngayon';
   }
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return 'Due ngayon ang bayad mong $amount. Isang pindot lang at on time ka pa rin.';
+    return 'Ang iyong bayad na $amount ay dapat bayaran ngayon. Pindutin para magbayad sa tamang oras.';
   }
 
   @override
@@ -978,52 +980,52 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get remindMorningBody =>
-      'Simulan ang araw nang kontrolado ang pera. May idadagdag pa ba mula kahapon?';
+      'Simulan ang araw nang kontrolado ang iyong pera. May idaragdag ka ba mula kahapon?';
 
   @override
-  String get remindNoonTitle => 'Tsek sa tanghali';
+  String get remindNoonTitle => 'Pangtanghaling pagsusuri';
 
   @override
   String get remindNoonBody =>
-      'Tanghalian, kape, pamasahe? Ilang segundo lang ang pagtatala.';
+      'Tanghalian, kape, o pamasahe? Itala ito sa loob ng ilang segundo.';
 
   @override
-  String get remindAfternoonTitle => 'Mabilis na habol';
+  String get remindAfternoonTitle => 'Mabilisang pag-update';
 
   @override
   String get remindAfternoonBody =>
-      'Itala ang nagastos mo hanggang ngayon para tumpak ang bilang ngayong araw.';
+      'Itala ang nagastos mo sa ngayon upang mapanatiling tumpak ang araw na ito.';
 
   @override
   String get remindEveningTitle => 'Pagtatapos ng araw';
 
   @override
   String get remindEveningBody =>
-      'Dalawang minuto ngayon at kumpleto na ang bilang para sa araw na ito.';
+      'Dalawang minuto lang ngayon at kumpleto na ang mga tala ngayong araw.';
 
   @override
-  String get happyWeekendTitle => 'Masayang weekend! 🎉';
+  String get happyWeekendTitle => 'Maligayang katapusan ng linggo! 🎉';
 
   @override
   String get happyWeekendBody =>
-      'Mag-enjoy ka — at bantayan lang nang kaunti ang gastos sa weekend.';
+      'Masiyahan ka — at bantayan ang mga gastusin sa katapusan ng linggo.';
 
   @override
-  String get dailyReminders => 'Araw-araw na paalala sa gastos';
+  String get dailyReminders => 'Araw-araw na paalala sa gastusin';
 
   @override
   String get dailyRemindersBody =>
-      'Banayad na paalala para laging updated ang gastos mo';
+      'Magiliw na mga paalala upang panatilihing napapanahon ang iyong mga gastusin';
 
   @override
-  String get weekendGreeting => 'Bati sa weekend';
+  String get weekendGreeting => 'Pagbati sa Katapusan ng Linggo';
 
   @override
   String get weekendGreetingBody =>
-      'Isang magiliw na bati sa simula ng weekend mo';
+      'Magiliw na pagbati sa simula ng iyong katapusan ng linggo';
 
   @override
-  String get reminderTimesSection => 'Oras ng mga paalala';
+  String get reminderTimesSection => 'Mga oras ng paalala';
 
   @override
   String get slotMorning => 'Umaga';
@@ -1041,34 +1043,34 @@ class AppL10nFil extends AppL10n {
   String get everyDay => 'Araw-araw';
 
   @override
-  String get financialReport => 'Ulat sa pananalapi';
+  String get financialReport => 'Ulat sa Pananalapi';
 
   @override
   String get preparedFor => 'Inihanda para kay';
 
   @override
-  String get generatedOn => 'Ginawa noong';
+  String get generatedOn => 'Nilikha noong';
 
   @override
   String get reportDisclaimer =>
-      'Ginawa ng RainyPenny mula sa sarili mong mga tala.';
+      'Nilikha ng RainyPenny mula sa iyong sariling mga talaan.';
 
   @override
   String pageOf(int page, int total) {
-    return 'Pahina $page sa $total';
+    return 'Pahina $page ng $total';
   }
 
   @override
-  String get overview => 'Buod';
+  String get overview => 'Pangkalahatang-ideya';
 
   @override
-  String get description => 'Paglalarawan';
+  String get description => 'Deskripsyon';
 
   @override
   String get totalIncome => 'Kabuuang kita';
 
   @override
-  String get totalExpenses => 'Kabuuang gastos';
+  String get totalExpenses => 'Kabuuang gastusin';
 
   @override
   String get totalSaved => 'Kabuuang naipon';
@@ -1089,10 +1091,10 @@ class AppL10nFil extends AppL10n {
   String get progress => 'Progreso';
 
   @override
-  String get paidOffShort => 'Bayad';
+  String get paidOffShort => 'Bayad na';
 
   @override
-  String get transactions => 'Mga transaksyon';
+  String get transactions => 'Mga Transaksyon';
 
   @override
   String andMoreTransactions(int count) {
@@ -1100,19 +1102,19 @@ class AppL10nFil extends AppL10n {
       count,
       locale: localeName,
       other: 'at $count pang transaksyon',
-      one: 'at $count pang transaksyon',
+      one: 'at 1 pang transaksyon',
     );
     return '$_temp0';
   }
 
   @override
-  String get exportPdf => 'I-export bilang PDF';
+  String get exportPdf => 'I-export ang PDF';
 
   @override
   String get sharePdf => 'Ibahagi ang ulat';
 
   @override
-  String get preparingReport => 'Inihahanda ang ulat mo…';
+  String get preparingReport => 'Inihahanda ang iyong ulat…';
 
   @override
   String get reportReady => 'Handa na ang ulat';
@@ -1121,17 +1123,17 @@ class AppL10nFil extends AppL10n {
   String get reportFailed => 'Hindi nagawa ang ulat';
 
   @override
-  String get categories => 'Mga kategorya';
+  String get categories => 'Mga Kategorya';
 
   @override
   String get categoriesIntro =>
-      'Magdagdag ng sarili mong kategorya para maisaayos ang kita at gastos ayon mismo sa iniisip mo.';
+      'Magdagdag ng sarili mong mga kategorya upang maiuri ang kita at mga gastusin sa paraang nais mo.';
 
   @override
-  String get expenseCategories => 'Kategorya ng gastos';
+  String get expenseCategories => 'Mga kategorya ng gastusin';
 
   @override
-  String get incomeCategories => 'Kategorya ng kita';
+  String get incomeCategories => 'Mga kategorya ng kita';
 
   @override
   String get newCategory => 'Bagong kategorya';
@@ -1143,7 +1145,7 @@ class AppL10nFil extends AppL10n {
   String get categoryName => 'Pangalan';
 
   @override
-  String get categoryNameHint => 'hal. alagang hayop';
+  String get categoryNameHint => 'hal. Pag-aalaga ng alagang hayop';
 
   @override
   String get icon => 'Icon';
@@ -1152,14 +1154,14 @@ class AppL10nFil extends AppL10n {
   String get categorySaved => 'Na-save ang kategorya';
 
   @override
-  String get categoryDeleted => 'Nabura ang kategorya';
+  String get categoryDeleted => 'Natanggal ang kategorya';
 
   @override
-  String get deleteCategory => 'Burahin ang kategoryang ito?';
+  String get deleteCategory => 'Tanggalin ang kategoryang ito?';
 
   @override
   String deleteCategoryBody(String name) {
-    return 'Aalisin ang $name sa mga kategorya mo.';
+    return 'Aalisin ang $name sa iyong mga kategorya.';
   }
 
   @override
@@ -1167,8 +1169,8 @@ class AppL10nFil extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count tala ang gumagamit pa rin ng kategoryang ito',
-      one: '$count tala ang gumagamit pa rin ng kategoryang ito',
+      other: '$count na tala ang gumagamit pa rin ng kategoryang ito',
+      one: '1 tala ang gumagamit pa rin ng kategoryang ito',
     );
     return '$_temp0';
   }
@@ -1177,17 +1179,17 @@ class AppL10nFil extends AppL10n {
   String get noCategoriesYet => 'Wala pa rito.';
 
   @override
-  String get builtIn => 'Nakapaloob na';
+  String get builtIn => 'Built-in';
 
   @override
   String get manageCategories => 'Pamahalaan ang mga kategorya';
 
   @override
-  String get expense => 'Gastos';
+  String get expense => 'Gastusin';
 
   @override
   String get languageNote =>
-      'Ang Arabic, Urdu, Persian at Hebrew ay nagpapalit ng buong interface sa kanan-pakaliwa, pati na ang mga chart at ulat na PDF.';
+      'Binabago ng Arabic, Urdu, Persian, at Hebrew ang buong interface sa kanan-pakaliwa, kabilang ang mga chart at ulat sa PDF.';
 
   @override
   String get next => 'Susunod';
@@ -1205,7 +1207,7 @@ class AppL10nFil extends AppL10n {
   String get selected => 'Napili';
 
   @override
-  String get passwordRequired => 'Ilagay ang password mo';
+  String get passwordRequired => 'Ilagay ang iyong password';
 
   @override
   String get newPasswordLabel => 'Bagong password';
@@ -1226,23 +1228,23 @@ class AppL10nFil extends AppL10n {
   String get savePassword => 'I-save ang password';
 
   @override
-  String get backToSignIn => 'Balik sa sign in';
+  String get backToSignIn => 'Bumalik sa pag-sign in';
 
   @override
-  String get alreadyHaveAccount => 'May account na ako';
+  String get alreadyHaveAccount => 'Mayroon na akong account';
 
   @override
   String get getStarted => 'Magsimula';
 
   @override
   String get acceptTerms =>
-      'Sang-ayon ako sa Mga Tuntunin ng Serbisyo at Patakaran sa Privacy';
+      'Sumasang-ayon ako sa Mga Tuntunin ng Serbisyo at Patakaran sa Privacy';
 
   @override
-  String get acceptTermsRequired => 'Sumang-ayon muna para makapagpatuloy';
+  String get acceptTermsRequired => 'Mangyaring tanggapin upang magpatuloy';
 
   @override
-  String get passwordStrengthTooShort => 'Masyadong maikli';
+  String get passwordStrengthTooShort => 'Napakamaikli';
 
   @override
   String get passwordStrengthWeak => 'Mahina';
@@ -1251,76 +1253,76 @@ class AppL10nFil extends AppL10n {
   String get passwordStrengthFair => 'Katamtaman';
 
   @override
-  String get passwordStrengthGood => 'Maganda';
+  String get passwordStrengthGood => 'Mabuti';
 
   @override
   String get passwordStrengthStrong => 'Malakas';
 
   @override
   String get passwordAdvice =>
-      'Mas mainam ang mahabang pariralang matatandaan mo kaysa maikling password na puno ng simbolo. Iwasan ang kahit anong ginagamit mo na sa ibang lugar.';
+      'Ang mahabang parirala na maaalala mo ay mas mainam kaysa sa maikling puno ng mga simbolo. Iwasan ang anumang ginagamit mo na sa iba.';
 
   @override
   String get authInvalidCredentials =>
-      'Walang account na tumutugma sa email at password na iyan';
+      'Hindi tugma ang email at password sa anumang account';
 
   @override
   String get authEmailNotConfirmed =>
-      'Kumpirmahin muna ang email address mo bago mag-sign in';
+      'Kumpirmahin ang iyong email address bago mag-sign in';
 
   @override
   String get authEmailAlreadyRegistered =>
-      'May account nang gumagamit ng email na ito';
+      'May umiiral nang account gamit ang email na ito';
 
   @override
   String get authWeakPassword => 'Pumili ng mas mahabang password';
 
   @override
   String get authRateLimited =>
-      'Masyadong maraming pagsubok. Subukan ulit makalipas ang ilang minuto';
+      'Masyadong maraming pagtatangka. Subukang muli sa loob ng ilang minuto';
 
   @override
   String get authNetworkError =>
-      'Walang koneksyon. Tingnan ang network mo at subukan ulit';
+      'Walang koneksyon. Suriin ang iyong network at subukang muli';
 
   @override
-  String get authGenericError => 'May nangyaring mali. Pakisubukan ulit';
+  String get authGenericError => 'May nangyaring mali. Mangyaring subukan muli';
 
   @override
-  String get confirmEmailTitle => 'Tingnan ang email mo';
+  String get confirmEmailTitle => 'Suriin ang iyong email';
 
   @override
   String confirmEmailBody(String email) {
-    return 'Nagpadala kami ng confirmation link sa $email. Buksan ito para matapos ang pag-set up ng account mo.';
+    return 'Nagpadala kami ng link ng kumpirmasyon sa $email. Buksan ito upang tapusin ang pag-set up ng iyong account.';
   }
 
   @override
-  String get resendConfirmation => 'Ipadala ulit ang confirmation email';
+  String get resendConfirmation => 'Ipadala muli ang email ng kumpirmasyon';
 
   @override
-  String get confirmationResent => 'Naipadala ang confirmation email';
+  String get confirmationResent => 'Naipadala na ang email ng kumpirmasyon';
 
   @override
-  String get forgotPasswordTitle => 'I-reset ang password';
+  String get forgotPasswordTitle => 'I-reset ang iyong password';
 
   @override
   String get forgotPasswordSubtitle =>
-      'Ilagay ang email na ginamit mo sa pag-sign up at padadalhan ka namin ng link para pumili ng bagong password.';
+      'Ilagay ang email na ginamit mo sa pag-sign up at magpapadala kami ng link upang makapili ka ng bagong password.';
 
   @override
-  String get sendResetLink => 'Ipadala ang reset link';
+  String get sendResetLink => 'Ipadala ang link ng pag-reset';
 
   @override
-  String get resetLinkSentTitle => 'Naipadala ang link';
+  String get resetLinkSentTitle => 'Naipadala na ang link ng pag-reset';
 
   @override
   String resetLinkSentBody(String email) {
-    return 'Kung may account ang $email, papunta na ang reset link.';
+    return 'Kung may account ang $email, papunta na ang link ng pag-reset.';
   }
 
   @override
   String get resetLinkSentHint =>
-      'Mag-e-expire ang link sa loob ng isang oras. Kung hindi ito dumating, tingnan ang spam folder bago humingi ng bago.';
+      'Mag-e-expire ang link sa loob ng isang oras. Kung hindi ito dumating, suriin ang iyong spam folder bago humingi muli.';
 
   @override
   String get tryAnotherEmail => 'Gumamit ng ibang email';
@@ -1330,109 +1332,109 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get resetPasswordSubtitle =>
-      'Pumili ng hindi mo pa nagamit sa account na ito.';
+      'Pumili ng hindi mo pa nagamit sa account na ito dati.';
 
   @override
   String get passwordChangedTitle => 'Na-update ang password';
 
   @override
   String get passwordChangedBody =>
-      'Na-save ang bagong password mo. Naka-sign in ka na at handa nang magpatuloy.';
+      'Na-save ang iyong bagong password. Naka-sign in ka na at handa nang magpatuloy.';
 
   @override
-  String get demoModeHint => 'Demo build — hindi kailangan ng account';
+  String get demoModeHint => 'Bersyon ng demo — walang kinakailangang account';
 
   @override
   String get demoModeFill => 'Punan';
 
   @override
-  String get welcomeTrackTitle => 'Tingnan kung saan napupunta ang pera mo';
+  String get welcomeTrackTitle => 'Tingnan kung saan napupunta ang iyong pera';
 
   @override
   String get welcomeTrackBody =>
-      'Itala kung ano ang pumapasok at ano ang lumalabas. Ginagawa itong larawan ng RainyPenny na kayang-kaya mong basahin.';
+      'Itala ang pumapasok at lumalabas. Ginagawa itong malinaw na larawan ng RainyPenny na madali mong maiintindihan.';
 
   @override
-  String get welcomeBudgetTitle => 'Mga hangganang kayang panindigan';
+  String get welcomeBudgetTitle => 'Magtakda ng mga limitasyong maaasahan';
 
   @override
   String get welcomeBudgetBody =>
-      'Bigyan ng buwanang hangganan ang bawat bahagi ng gastos mo, at malaman bago ka lumampas — hindi pagkatapos.';
+      'Bigyan ng buwanang limitasyon ang bawat bahagi ng iyong paggastos, at maabisuhan bago ito lumampas sa halip na pagkatapos.';
 
   @override
-  String get welcomeGoalsTitle => 'Mag-ipon para sa mahalaga';
+  String get welcomeGoalsTitle => 'Mag-ipon para sa mahahalagang bagay';
 
   @override
   String get welcomeGoalsBody =>
-      'Pangalanan ang layunin, magtakda ng halaga, at panoorin itong mapuno. Mas madaling itayo ang pang-emerhensiyang pondo kapag nakikita mo ito.';
+      'Pangalanan ang layunin, magtakda ng target, at panoorin itong mapuno. Mas madaling buuin ang emergency fund kapag nakikita mo ito.';
 
   @override
-  String get welcomePrivacyTitle => 'Sa iyo pa rin ang pera mo';
+  String get welcomePrivacyTitle => 'Ang iyong pera ay mananatiling sa iyo';
 
   @override
   String get welcomePrivacyBody =>
-      'Sa iyo lang ang mga numero mo. Walang ibinebenta at walang ibinabahagi kaninuman.';
+      'Ang iyong mga numero ay para lamang sa iyo. Walang ibinebenta, at walang ibinabahagi sa kahit kanino.';
 
   @override
   String stepOf(int step, int total) {
-    return 'Hakbang $step sa $total';
+    return 'Hakbang $step ng $total';
   }
 
   @override
-  String get onboardingNameTitle => 'Ano ang itatawag namin sa iyo?';
+  String get onboardingNameTitle => 'Ano ang dapat naming itawag sa iyo?';
 
   @override
   String get onboardingNameBody =>
-      'Gagamitin lang namin ito sa pagbati, at wala nang iba.';
+      'Gagamitin lamang namin ito upang batiin ka, at wala nang iba pa.';
 
   @override
   String get onboardingNameHint =>
-      'Sapat na ang unang pangalan. Mababago mo rin ito mamaya.';
+      'Sapat na ang unang pangalan. Maaari mo itong baguhin mamaya.';
 
   @override
-  String get onboardingCurrencyTitle => 'Anong pera ang ginagamit mo?';
+  String get onboardingCurrencyTitle => 'Anong pera ang iyong ginagamit?';
 
   @override
   String get onboardingCurrencyBody =>
-      'Lahat ng halaga sa app ay ipapakita sa perang ito. Walang kino-convert kapag pumili ka.';
+      'Ang bawat halaga sa app ay ipapakita sa perang ito. Hindi nagko-convert ng anuman ang pagpili rito.';
 
   @override
-  String get onboardingCurrencySearch => 'Hanapin sa lahat ng pera';
+  String get onboardingCurrencySearch => 'Maghanap sa lahat ng pera';
 
   @override
-  String get onboardingAppearanceTitle => 'Gawin itong sa iyo';
+  String get onboardingAppearanceTitle => 'Gawing sarili mong istilo';
 
   @override
   String get onboardingAppearanceBody =>
-      'Pumili ng hitsura. Nagbabago ang lahat habang pinipindot mo, at makakabalik ka rito anumang oras.';
+      'Pumili ng hitsura. Nagbabago ang lahat habang pumipindot ka, at maaari kang bumalik dito anumang oras.';
 
   @override
-  String get onboardingNotificationsTitle => 'Manatiling nakasubaybay';
+  String get onboardingNotificationsTitle => 'Manatiling updated';
 
   @override
   String get onboardingNotificationsBody =>
-      'Ang tahimik na paalala sa tamang sandali ang gumagawa nitong ugali.';
+      'Ang tahimik na paalala sa tamang sandali ang nagpapaging ugali nito.';
 
   @override
   String get onboardingNotifyReminders =>
-      'Banayad na paalala para maitala ang nagastos mo';
+      'Magiliw na paalala upang itala ang iyong nagastos';
 
   @override
-  String get onboardingNotifyBudget => 'Abiso bago maubos ang badyet';
+  String get onboardingNotifyBudget => 'Paunang abiso bago maubos ang badyet';
 
   @override
   String get onboardingNotifySummary =>
-      'Lingguhang buod kung saan napunta ang pera mo';
+      'Lingguhang buod kung saan napunta ang iyong pera';
 
   @override
   String get onboardingNotifyEnable => 'I-on ang mga abiso';
 
   @override
-  String get onboardingNotifyDone => 'Na-save ang setting ng mga abiso';
+  String get onboardingNotifyDone => 'Na-save ang mga setting ng abiso';
 
   @override
   String get onboardingNotifyLater =>
-      'Mababago mo lahat ito sa Settings, kahit kailan mo gusto.';
+      'Maaari mong baguhin ang lahat ng ito sa Mga Setting anumang oras.';
 
   @override
   String get onboardingReadyTitle => 'Handa ka na';
@@ -1444,27 +1446,27 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get onboardingReadyBody =>
-      'Tapos na ang pag-set up. Gusto mo ba ng mabilisang libot sa kung paano ito gumagana?';
+      'Tapos na ang pag-set up. Nais mo ba ng mabilisang tour kung paano gumagana ang lahat?';
 
   @override
-  String get onboardingTakeTour => 'Ipakita mo sa akin';
+  String get onboardingTakeTour => 'Ilibot ako';
 
   @override
-  String get onboardingGoToApp => 'Dalhin mo ako sa app';
+  String get onboardingGoToApp => 'Pumunta sa app';
 
   @override
   String get onboardingTourLater =>
-      'Hindi muna ngayon? Nasa Settings pa rin ang gabay kahit kailan mo kailanganin.';
+      'Hindi muna ngayon? Mananatili ang gabay sa Mga Setting para sa tuwing kailangan mo ito.';
 
   @override
-  String get beginnersGuide => 'Gabay para sa nagsisimula';
+  String get beginnersGuide => 'Gabay para sa mga nagsisimula';
 
   @override
   String get guideFinish => 'Tapusin';
 
   @override
   String chapterOf(int number, int total) {
-    return 'Kabanata $number sa $total';
+    return 'Kabanata $number ng $total';
   }
 
   @override
@@ -1473,177 +1475,177 @@ class AppL10nFil extends AppL10n {
   }
 
   @override
-  String get guideDashboardTitle => 'Ang home mo';
+  String get guideDashboardTitle => 'Iyong dashboard';
 
   @override
   String get guideDashboardBody =>
-      'Dito nagsisimula ang lahat. Ang card sa itaas ay kung magkano pa ang natitira sa iyo; sa ilalim nito ang pumasok at lumabas ngayong panahon, tapos ang gastos, badyet at mga layunin mo.';
+      'Dito nagbubukas ang lahat. Ang card sa itaas ang nagpapakita ng natitira sa iyo; sa ilalim nito naroroon ang pumasok at lumabas sa panahong ito, kasunod ang iyong mga gastusin, badyet, at layunin.';
 
   @override
   String get guideDashboardTip1 =>
-      'Hilahin pababa ang screen para ma-refresh lahat nang sabay-sabay.';
+      'Hilain pababa ang screen upang i-refresh ang lahat nang sabay-sabay.';
 
   @override
   String get guideDashboardTip2 =>
-      'Pindutin ang card ng kita o gastos para dumiretso sa listahang iyon.';
+      'Pindutin ang card ng kita o mga gastusin upang pumunta sa listahang iyon.';
 
   @override
   String get guideDashboardTip3 =>
-      'Nag-a-update agad ang mga singsing at pananaw sa sandaling may itala ka.';
+      'Agad na nag-a-update ang mga ring at kaalaman sa sandaling magtala ka ng anuman.';
 
   @override
   String get guideAddTitle => 'Pagtatala ng pera';
 
   @override
   String get guideAddBody =>
-      'Ang button sa gitna ng bar ang simula ng lahat. Nagbubukas ito ng maikling menu: gastos, kita, utang, badyet o layunin sa ipon.';
+      'Ang button sa gitna ng bar ang simula ng lahat. Nagbubukas ito ng maikling menu: perang lumabas, perang pumasok, utang, badyet, o layunin sa pag-iipon.';
 
   @override
   String get guideAddTip1 =>
-      'Pindutin ang gitnang button para magtala ng papasok o palabas na pera.';
+      'Pindutin ang gitnang button upang magtala ng perang pumasok o lumabas.';
 
   @override
   String get guideAddTip2 =>
-      'Pindutin nang matagal para dumiretso sa bagong gastos at laktawan ang menu.';
+      'Pindutin ito nang matagal upang dumiretso sa bagong gastusin at laktawan ang menu.';
 
   @override
   String get guideAddTip3 =>
-      'Palaging pumili ng kategorya — iyon ang nagpapagana sa mga chart at badyet.';
+      'Laging pumili ng kategorya — iyon ang nagpapagana sa mga chart at badyet.';
 
   @override
-  String get guideCategoriesTitle => 'Mga kategorya';
+  String get guideCategoriesTitle => 'Mga Kategorya';
 
   @override
   String get guideCategoriesBody =>
-      'Ang mga kategorya ang nagsasama-sama ng gastos. Sapat na sa karamihan ang kasama na sa app, at puwede mong palitan ang pangalan o magdagdag ng sarili mo.';
+      'Ang mga kategorya ang paraan ng pagpapangkat ng mga gastusin. Sinasaklaw ng mga kasama sa app ang karamihan sa mga tao, at maaari mo itong palitan ng pangalan o magdagdag ng sarili mo.';
 
   @override
   String get guideCategoriesTip1 =>
-      'Settings, tapos Pamahalaan ang mga kategorya, para magbago o magdagdag.';
+      'Pumunta sa Mga Setting, pagkatapos ay Pamahalaan ang mga kategorya, upang baguhin o magdagdag.';
 
   @override
   String get guideCategoriesTip2 =>
-      'Napupunta sa «Iba pa» ang walang kategorya, kaya nananatiling tapat ang mga chart.';
+      'Anumang naiwang walang kategorya ay napupunta sa Iba pa, upang manatiling tumpak ang mga chart.';
 
   @override
-  String get guideBudgetTitle => 'Mga badyet';
+  String get guideBudgetTitle => 'Mga Badyet';
 
   @override
   String get guideBudgetBody =>
-      'Ang badyet ay buwanang hangganan para sa isang kategorya. Napupuno ang bar habang gumagastos ka at nagbabago ang kulay kapag papalapit na, kaya malalaman mo bago ka lumampas.';
+      'Ang badyet ay buwanang limitasyon para sa isang kategorya. Napupuno ang bar habang gumagastos ka at nagbabago ng kulay kapag papalapit na, upang malaman mo bago ka lumampas.';
 
   @override
   String get guideBudgetTip1 =>
-      'Magsimula sa dalawa o tatlong kategorya, hindi sa lahat nang sabay.';
+      'Magsimula sa dalawa o tatlong kategorya, hindi sa lahat nang sabay-sabay.';
 
   @override
   String get guideBudgetTip2 =>
-      'Ilagay ang limitasyon nang bahagyang mas mataas sa dati mong gastos, tapos higpitan.';
+      'Itakda ang limitasyon nang bahagyang mas mataas sa karaniwan mong ginagastos, pagkatapos ay higpitan ito.';
 
   @override
   String get guideBudgetTip3 =>
-      'Iwanang naka-on ang mga alerto at babalaan ka ng app kapag paubos na ang badyet.';
+      'Iwanang naka-on ang mga alerto sa badyet at babalaan ka ng app habang papaubos na ito.';
 
   @override
-  String get guideSavingsTitle => 'Mga layunin sa ipon';
+  String get guideSavingsTitle => 'Mga layunin sa pag-iipon';
 
   @override
   String get guideSavingsBody =>
-      'Pangalanan kung para saan ka nag-iipon, magtakda ng halaga at petsa, at kakalkulahin ng app kung magkano ang kailangan mong itabi kada buwan.';
+      'Pangalanan ang iyong iniipon, magtakda ng target at petsa, at kukuwentahin ng app kung magkano ang kailangan mong itabi bawat buwan upang makarating doon.';
 
   @override
   String get guideSavingsTip1 =>
-      'Mas madaling panatilihin ang layuning may pangalan kaysa malabong balak na mag-ipon.';
+      'Mas madaling panatilihin ang may pangalang layunin kaysa sa malabong intensyong mag-ipon.';
 
   @override
   String get guideSavingsTip2 =>
-      'Mas madalas natatapos ang ilang maliliit na layunin kaysa iisang malaki.';
+      'Mas madalas na natatapos ang ilang maliliit na layunin kaysa sa isang napakalaki.';
 
   @override
-  String get guideLoansTitle => 'Utang at pautang';
+  String get guideLoansTitle => 'Mga utang at pautang';
 
   @override
   String get guideLoansBody =>
-      'Itala kung magkano ang utang mo, magkano ang halaga nito, at kailan ang susunod na hulog. Nasa isang listahan ang lahat ng binabayaran mo kasama ang natitira.';
+      'Itala ang iyong utang, kung magkano ang gastos, at kung kailan ang susunod na bayad. Lahat ng binabayaran mo ay nasa iisang listahan kasama ang kabuuang natitira.';
 
   @override
   String get guideLoansTip1 =>
-      'Ilagay ang takdang araw at ang mga paalala na ang bahalang humabol para sa iyo.';
+      'Idagdag ang takdang petsa at ang mga paalala sa pagbabayad ang magpapaalala para sa iyo.';
 
   @override
   String get guideLoansTip2 =>
-      'Pula sa home ang utang na lampas na sa takdang araw hangga\'t hindi nababayaran.';
+      'Ang utang na lampas na sa takdang petsa ay ipinapakita sa kulay pula sa dashboard hanggang sa ito ay mabayaran.';
 
   @override
-  String get guideReportsTitle => 'Mga ulat';
+  String get guideReportsTitle => 'Mga Ulat';
 
   @override
   String get guideReportsBody =>
-      'Ang mas malalim na tingin: kita kontra gastos, gastos ayon sa kategorya, kumusta ang mga badyet mo, at kung anong bahagi ng kita ang naitabi mo.';
+      'Ang mas malalim na pagsusuri: kita laban sa mga gastusin, paggastos ayon sa kategorya, kung paano napanatili ang iyong mga badyet, at kung anong bahagi ng iyong kita ang naitabi mo.';
 
   @override
   String get guideReportsTip1 =>
-      'Magpalit ng linggo, buwan at kwarter sa itaas ng screen.';
+      'Lumipat sa pagitan ng linggo, buwan, at kwarter sa itaas ng screen.';
 
   @override
   String get guideReportsTip2 =>
-      'I-export o ibahagi bilang PDF — lalabas ito sa sarili mong wika at direksyon.';
+      'I-export o ibahagi ang PDF — lalabas ito sa sarili mong wika at direksyon.';
 
   @override
-  String get guideSettingsTitle => 'Mga setting';
+  String get guideSettingsTitle => 'Mga Setting';
 
   @override
   String get guideSettingsBody =>
-      'Nandito lahat ang wika, pera, kulay at alerto, at wala sa mga ito ang na-lock ng unang pag-set up — palitan mo kahit kailan.';
+      'Ang wika, pera, mga kulay, at mga alerto ay naririto lahat, at walang nakakandado mula sa pag-set up — baguhin ang alinman sa mga ito anumang oras mo naisin.';
 
   @override
   String get guideSettingsTip1 =>
-      'Apatnapung wika, at nagsasalamin ang buong layout para sa mga wikang kanan-pakaliwa.';
+      'Apatnapung wika, at ang buong layout ay sumasalamin para sa mga wikang kanan-pakaliwa.';
 
   @override
   String get guideSettingsTip2 =>
-      'Piliin kung anong alerto ang gusto mo at anong oras puwedeng dumating.';
+      'Pumili kung aling mga alerto ang nais mo at ang mga oras na maaari itong dumating.';
 
   @override
   String get guideSettingsTip3 =>
-      'Pinipigil ng tahimik na oras ang lahat hanggang umaga.';
+      'Pinipigilan ng mga oras ng katahimikan ang lahat hanggang sa umaga.';
 
   @override
-  String get guideHabitTitle => 'Panatilihin itong ugali';
+  String get guideHabitTitle => 'Gawing nakagawian';
 
   @override
   String get guideHabitBody =>
-      'Kasing-ganda lang ng inilalagay mo ang app na ito. Mas mainam ang isang minuto kada araw kaysa isang oras kada buwan, at pagkalipas ng dalawang linggo may sinasabi na sa iyo ang mga numero.';
+      'Magiging kasing-galing lamang ang app ng iyong inilalagay dito. Ang isang minuto bawat araw ay mas mabuti kaysa sa isang oras minsan sa isang buwan, at pagkatapos ng dalawang linggo ay magsisimulang may sabihin sa iyo ang mga numero.';
 
   @override
   String get guideHabitTip1 =>
-      'Itala ang gastos habang nangyayari, hindi sa katapusan ng linggo.';
+      'Itala ang iyong nagastos sa oras na mangyari ito, hindi sa katapusan ng linggo.';
 
   @override
   String get guideHabitTip2 =>
-      'Sulyapan ang home minsan sa isang araw. Sapat na ang sampung segundo.';
+      'Sumulyap sa dashboard nang isang beses bawat araw. Sapat na ang sampung segundo.';
 
   @override
   String get guideHabitTip3 =>
-      'Nananatili sa Settings ang gabay na ito — bumalik ka kahit kailan.';
+      'Nananatili ang gabay na ito sa Mga Setting — bumalik dito anumang oras mo naisin.';
 
   @override
   String get appearance => 'Hitsura';
 
   @override
   String get themeCaption =>
-      'Maliwanag, madilim, o kung ano ang ginagawa ng telepono mo.';
+      'Maliwanag, madilim, o anuman ang ginagawa ng iyong telepono.';
 
   @override
-  String get accentColor => 'Accent na kulay';
+  String get accentColor => 'Kulay ng accent';
 
   @override
   String get accentColorCaption =>
-      'Kinukulayan ang mga button, highlight at chart.';
+      'Nagbibigay-kulay sa mga button, highlight, at chart.';
 
   @override
   String get accentSemanticsNote =>
-      'Pinapanatili ng papasok at palabas na pera ang sarili nilang kulay sa bawat tema, kaya hindi nagbabago ang kahulugan ng isang numero dahil lang pinalitan mo ang accent.';
+      'Pinapanatili ng perang pumasok at perang lumabas ang sarili nilang mga kulay sa bawat tema, upang hindi magbago ang kahulugan ng numero dahil binago mo ang accent.';
 
   @override
   String get accentTeal => 'Teal';
@@ -1652,7 +1654,7 @@ class AppL10nFil extends AppL10n {
   String get accentGreen => 'Berde';
 
   @override
-  String get accentSky => 'Asul-langit';
+  String get accentSky => 'Sky';
 
   @override
   String get accentBlue => 'Asul';
@@ -1667,19 +1669,19 @@ class AppL10nFil extends AppL10n {
   String get accentPink => 'Rosas';
 
   @override
-  String get accentCrimson => 'Pulang-pula';
+  String get accentCrimson => 'Crimson';
 
   @override
   String get accentOrange => 'Kahel';
 
   @override
-  String get accentSlate => 'Abuhing bato';
+  String get accentSlate => 'Slate';
 
   @override
-  String get searchLanguages => 'Maghanap ng wika';
+  String get searchLanguages => 'Maghanap ng mga wika';
 
   @override
-  String get suggestedLanguages => 'Iminumungkahi';
+  String get suggestedLanguages => 'Iminungkahi';
 
   @override
   String get allLanguages => 'Lahat ng wika';
@@ -1695,106 +1697,107 @@ class AppL10nFil extends AppL10n {
   String get rightToLeft => 'Kanan pakaliwa';
 
   @override
-  String get replayGuide => 'Ulitin ang gabay';
+  String get replayGuide => 'Panoorin muli ang gabay';
 
   @override
-  String get replaySetup => 'Ulitin ang pag-set up';
+  String get replaySetup => 'Patakbuhin muli ang pag-set up';
 
   @override
   String get replaySetupBody =>
-      'Dumaan ulit sa mga unang tanong. Walang mabubura sa mga naitala mo.';
+      'Sagutin muli ang mga unang tanong sa pag-set up. Walang matatanggal sa mga naitala mo na.';
 
   @override
   String get rateTitle => 'Nagugustuhan mo ba ang RainyPenny?';
 
   @override
   String get rateBody =>
-      'Matagal-tagal ka na ring gumagamit nito. Sandali lang ang pag-rate at nakakatulong ito sa iba na matuklasan ang app.';
+      'Matagal-tagal mo na itong ginagamit. Sandali lang magbigay ng rating at nakatutulong ito sa iba na mahanap ang app.';
 
   @override
   String get rateAction => 'I-rate ang app';
 
   @override
-  String get rateLater => 'Sa susunod na lang';
+  String get rateLater => 'Maaaring mamaya na lang';
 
   @override
-  String get rateNever => 'Salamat na lang';
+  String get rateNever => 'Hindi, salamat';
 
   @override
-  String get rateThanks => 'Salamat';
+  String get rateThanks => 'Maraming salamat';
 
   @override
-  String get monthlySalary => 'Monthly salary';
+  String get monthlySalary => 'Buwanang sahod';
 
   @override
-  String get remainingAmount => 'Remaining';
+  String get remainingAmount => 'Natitira';
 
   @override
-  String get carriedForward => 'Carried forward';
+  String get carriedForward => 'Dinala mula sa nakaraan';
 
   @override
-  String get carriedForwardHint => 'Left over from last cycle';
+  String get carriedForwardHint => 'Natira mula sa nakaraang cycle';
 
   @override
-  String get totalSpending => 'Total spending';
+  String get totalSpending => 'Kabuuang nagastos';
 
   @override
-  String get salaryCycle => 'Salary cycle';
+  String get salaryCycle => 'Cycle ng sahod';
 
   @override
-  String get payday => 'Salary day';
+  String get payday => 'Araw ng sahod';
 
   @override
   String get paydayDescription =>
-      'The day your salary arrives. Your financial month runs from this day until the day before the next one.';
+      'Ang araw ng pagdating ng iyong sahod. Tumatakbo ang iyong buwan sa pananalapi mula sa araw na ito hanggang sa araw bago ang susunod.';
 
   @override
-  String get paydayUpdated => 'Salary day updated';
+  String get paydayUpdated => 'Na-update ang araw ng sahod';
 
   @override
   String paydayDayOfMonth(int day) {
-    return 'Day $day';
+    return 'Ika-$day na araw';
   }
 
   @override
   String get paydayShortMonthNote =>
-      'In shorter months the cycle starts on the last day instead.';
+      'Sa mas maiikling buwan, magsisimula ang cycle sa huling araw sa halip.';
 
   @override
   String daysLeftInCycle(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days to payday',
-      one: '1 day to payday',
-      zero: 'Last day of the cycle',
+      other: '$count araw bago ang sahod',
+      one: '1 araw bago ang sahod',
+      zero: 'Huling araw ng cycle',
     );
     return '$_temp0';
   }
 
   @override
-  String get nextPayday => 'Next payday';
+  String get nextPayday => 'Susunod na araw ng sahod';
 
   @override
-  String get spentSoFar => 'Spent so far';
+  String get spentSoFar => 'Nagastos sa ngayon';
 
   @override
-  String get dailyAllowance => 'Safe to spend daily';
+  String get dailyAllowance => 'Ligtas na gastusin araw-araw';
 
   @override
-  String get overspentNotice => 'You have spent more than came in this cycle.';
+  String get overspentNotice =>
+      'Mas marami kang nagastos kaysa sa pumasok sa cycle na ito.';
 
   @override
-  String get backToThisMonth => 'Back to this month';
+  String get backToThisMonth => 'Bumalik sa buwang ito';
 
   @override
   String get cycleRangeLabel => 'Cycle';
 
   @override
-  String get noSalaryRecorded => 'No salary recorded yet';
+  String get noSalaryRecorded => 'Wala pang naitalang sahod';
 
   @override
-  String get addSalaryAction => 'Add your salary';
+  String get addSalaryAction => 'Idagdag ang iyong sahod';
 
   @override
   String cycleOf(String start, String end) {
@@ -1802,239 +1805,239 @@ class AppL10nFil extends AppL10n {
   }
 
   @override
-  String get healthExcellent => 'Excellent';
+  String get healthExcellent => 'Napakahusay';
 
   @override
-  String get healthGood => 'Good';
+  String get healthGood => 'Mabuti';
 
   @override
-  String get healthFair => 'Fair';
+  String get healthFair => 'Katamtaman';
 
   @override
-  String get healthNeedsWork => 'Needs work';
+  String get healthNeedsWork => 'Kailangan ng pagsasaayos';
 
   @override
   String get healthExcellentBody =>
-      'You are saving well and staying inside your budgets.';
+      'Mahusay ang iyong pag-iipon at nananatili ka sa loob ng iyong mga badyet.';
 
   @override
   String get healthGoodBody =>
-      'You are on track with your spending this period.';
+      'Nasa tamang landas ka sa iyong paggastos sa panahong ito.';
 
   @override
   String get healthFairBody =>
-      'A few budgets are running hot. Small changes will help.';
+      'Medyo mataas ang ilang badyet. Makatutulong ang maliliit na pagbabago.';
 
   @override
   String get healthNeedsWorkBody =>
-      'Spending is outpacing your plan. Start with your largest category.';
+      'Mas mabilis ang paggastos kaysa sa iyong plano. Magsimula sa iyong pinakamalaking kategorya.';
 
   @override
-  String get factorSavingsRate => 'Savings rate';
+  String get factorSavingsRate => 'Bilis ng pag-iipon';
 
   @override
-  String get factorBudgetControl => 'Budget control';
+  String get factorBudgetControl => 'Pagkontrol sa badyet';
 
   @override
-  String get factorDebtLoad => 'Debt load';
+  String get factorDebtLoad => 'Pasanin sa utang';
 
   @override
-  String get factorSpendingTrend => 'Spending trend';
+  String get factorSpendingTrend => 'Takbo ng paggastos';
 
   @override
   String factorKept(String percent) {
-    return '$percent% kept';
+    return '$percent% ang naitabi';
   }
 
   @override
   String factorUsed(String percent) {
-    return '$percent% used';
+    return '$percent% ang nagamit';
   }
 
   @override
   String factorOfIncome(String percent) {
-    return '$percent% of income';
+    return '$percent% ng kita';
   }
 
   @override
   String factorTrendUp(String percent) {
-    return 'Up $percent%';
+    return 'Tumaas ng $percent%';
   }
 
   @override
   String factorTrendDown(String percent) {
-    return 'Down $percent%';
+    return 'Bumaba ng $percent%';
   }
 
   @override
-  String get howScoreWorks => 'How this score works';
+  String get howScoreWorks => 'Paano gumagana ang score na ito';
 
   @override
   String get healthScoreExplainer =>
-      'Your score blends four things: how much of your income you keep, how well you stay inside your budgets, how much of your income goes to debt, and whether your spending is rising or falling.';
+      'Pinagsasama ng iyong score ang apat na bagay: kung magkano sa iyong kita ang naitatabi mo, kung gaano mo kahusay nasusunod ang iyong mga badyet, gaano kalaki ng iyong kita ang napupunta sa utang, at kung tumataas o bumababa ang iyong paggastos.';
 
   @override
   String scoreWeightLabel(int percent) {
-    return '$percent% of the score';
+    return '$percent% ng score';
   }
 
   @override
-  String get viewHealthDetails => 'See the breakdown';
+  String get viewHealthDetails => 'Tingnan ang breakdown';
 
   @override
-  String get saveChanges => 'Save changes';
+  String get saveChanges => 'I-save ang mga pagbabago';
 
   @override
-  String get profileUpdated => 'Profile updated';
+  String get profileUpdated => 'Na-update ang profile';
 
   @override
-  String get changePhoto => 'Change photo';
+  String get changePhoto => 'Palitan ang litrato';
 
   @override
-  String get removePhoto => 'Remove photo';
+  String get removePhoto => 'Alisin ang litrato';
 
   @override
   String get personalInformationIntro =>
-      'Your name and photo appear across the app. Your email is the address you sign in with.';
+      'Lilitaw ang iyong pangalan at litrato sa buong app. Ang iyong email ang address na ginagamit mo sa pag-sign in.';
 
   @override
   String get emailNotEditable =>
-      'Contact support to change the address you sign in with.';
+      'Makipag-ugnayan sa suporta upang palitan ang address na ginagamit mo sa pag-sign in.';
 
   @override
-  String get pressBackAgainToExit => 'Press back again to exit';
+  String get pressBackAgainToExit => 'Pindutin muli ang back upang lumabas';
 
   @override
-  String get categoryHousing => 'Housing';
+  String get categoryHousing => 'Pabahay';
 
   @override
-  String get categoryFood => 'Food & Dining';
+  String get categoryFood => 'Pagkain at Kainan';
 
   @override
-  String get categoryTransport => 'Transportation';
+  String get categoryTransport => 'Transportasyon';
 
   @override
-  String get categoryShopping => 'Shopping';
+  String get categoryShopping => 'Pamimili';
 
   @override
-  String get categoryBills => 'Bills & Utilities';
+  String get categoryBills => 'Mga Bayarin at Kagamitan';
 
   @override
-  String get categoryEntertainment => 'Entertainment';
+  String get categoryEntertainment => 'Libangan';
 
   @override
-  String get categoryHealth => 'Health & Fitness';
+  String get categoryHealth => 'Kalusugan at Fitness';
 
   @override
-  String get categoryEducation => 'Education';
+  String get categoryEducation => 'Edukasyon';
 
   @override
-  String get categoryTravel => 'Travel';
+  String get categoryTravel => 'Paglalakbay';
 
   @override
-  String get categorySalary => 'Salary';
+  String get categorySalary => 'Sahod';
 
   @override
   String get categoryFreelance => 'Freelance';
 
   @override
-  String get categoryInvestments => 'Investments';
+  String get categoryInvestments => 'Mga Pamumuhunan';
 
   @override
-  String get categoryGift => 'Gift';
+  String get categoryGift => 'Regalo';
 
   @override
-  String get categoryOther => 'Other';
+  String get categoryOther => 'Iba pa';
 
   @override
-  String get categoryGroceries => 'Groceries';
+  String get categoryGroceries => 'Mga Groseri';
 
   @override
-  String get categoryDining => 'Dining';
+  String get categoryDining => 'Kainan sa labas';
 
   @override
-  String get categoryCoffee => 'Coffee';
+  String get categoryCoffee => 'Kape';
 
   @override
-  String get categoryUtilities => 'Utilities';
+  String get categoryUtilities => 'Mga Utility';
 
   @override
   String get categoryInternet => 'Internet';
 
   @override
-  String get categoryPhone => 'Phone';
+  String get categoryPhone => 'Telepono';
 
   @override
-  String get categoryInsurance => 'Insurance';
+  String get categoryInsurance => 'Seguro';
 
   @override
-  String get categorySubscriptions => 'Subscriptions';
+  String get categorySubscriptions => 'Mga Subskripsyon';
 
   @override
-  String get categoryPersonalCare => 'Personal care';
+  String get categoryPersonalCare => 'Personal na pangangalaga';
 
   @override
-  String get categoryClothing => 'Clothing';
+  String get categoryClothing => 'Damit';
 
   @override
-  String get categoryElectronics => 'Electronics';
+  String get categoryElectronics => 'Elektronika';
 
   @override
-  String get categoryHomeSupplies => 'Home supplies';
+  String get categoryHomeSupplies => 'Mga gamit sa bahay';
 
   @override
-  String get categoryPets => 'Pets';
+  String get categoryPets => 'Mga Alagang Hayop';
 
   @override
-  String get categoryChildcare => 'Childcare';
+  String get categoryChildcare => 'Pag-aalaga ng bata';
 
   @override
-  String get categoryFamily => 'Family';
+  String get categoryFamily => 'Pamilya';
 
   @override
   String get categoryFitness => 'Fitness';
 
   @override
-  String get categorySports => 'Sports';
+  String get categorySports => 'Palakasan';
 
   @override
-  String get categoryMedicine => 'Medicine';
+  String get categoryMedicine => 'Gamot';
 
   @override
-  String get categoryMedical => 'Medical';
+  String get categoryMedical => 'Medikal';
 
   @override
-  String get categoryCharity => 'Charity';
+  String get categoryCharity => 'Kawanggawa';
 
   @override
-  String get categoryTaxes => 'Taxes';
+  String get categoryTaxes => 'Mga Buwis';
 
   @override
-  String get categoryFees => 'Fees';
+  String get categoryFees => 'Mga Bayarin';
 
   @override
-  String get categoryDebt => 'Debt';
+  String get categoryDebt => 'Utang';
 
   @override
-  String get categorySavings => 'Savings';
+  String get categorySavings => 'Ipon';
 
   @override
-  String get categoryRepairs => 'Repairs';
+  String get categoryRepairs => 'Mga Pagkukumpuni';
 
   @override
-  String get categoryCarMaintenance => 'Car maintenance';
+  String get categoryCarMaintenance => 'Pagpapanatili ng sasakyan';
 
   @override
-  String get categoryFuel => 'Fuel';
+  String get categoryFuel => 'Gasolina';
 
   @override
-  String get categoryParking => 'Parking';
+  String get categoryParking => 'Paradahan';
 
   @override
-  String get categoryPublicTransport => 'Public transport';
+  String get categoryPublicTransport => 'Pampublikong transportasyon';
 
   @override
-  String get categoryRent => 'Rent';
+  String get categoryRent => 'Upa';
 
   @override
   String get categoryMortgage => 'Mortgage';
@@ -2043,16 +2046,16 @@ class AppL10nFil extends AppL10n {
   String get categoryBonus => 'Bonus';
 
   @override
-  String get categoryCommission => 'Commission';
+  String get categoryCommission => 'Komisyon';
 
   @override
-  String get categoryPension => 'Pension';
+  String get categoryPension => 'Pensiyon';
 
   @override
-  String get categoryInterest => 'Interest';
+  String get categoryInterest => 'Interes';
 
   @override
-  String get categoryDividends => 'Dividends';
+  String get categoryDividends => 'Mga Dibidendo';
 
   @override
   String get categoryCashback => 'Cashback';
@@ -2061,19 +2064,19 @@ class AppL10nFil extends AppL10n {
   String get categoryRefund => 'Refund';
 
   @override
-  String get categoryRentalIncome => 'Rental income';
+  String get categoryRentalIncome => 'Kita sa paupahan';
 
   @override
-  String get addCategory => 'New category';
+  String get addCategory => 'Bagong kategorya';
 
   @override
-  String get filterByCategory => 'Filter by category';
+  String get filterByCategory => 'I-filter ayon sa kategorya';
 
   @override
-  String get allCategories => 'All categories';
+  String get allCategories => 'Lahat ng kategorya';
 
   @override
-  String get clearFilters => 'Clear filters';
+  String get clearFilters => 'Alisin ang mga filter';
 
   @override
   String spentInCategory(String category, String amount) {
@@ -2081,89 +2084,91 @@ class AppL10nFil extends AppL10n {
   }
 
   @override
-  String get allTime => 'All time';
+  String get allTime => 'Lahat ng panahon';
 
   @override
-  String get customRange => 'Custom';
+  String get customRange => 'Pasadyang panahon';
 
   @override
-  String get selectDateRange => 'Choose a period';
+  String get selectDateRange => 'Pumili ng panahon';
 
   @override
   String rangeApplied(String start, String end) {
-    return 'Showing $start – $end';
+    return 'Ipinapakita ang $start – $end';
   }
 
   @override
-  String get loans => 'Loans';
+  String get loans => 'Mga Pautang';
 
   @override
-  String get debts => 'Debts';
+  String get debts => 'Mga Utang';
 
   @override
-  String get noLoansTitle => 'No loans';
+  String get noLoansTitle => 'Walang mga pautang';
 
   @override
-  String get noLoansBody => 'You have no active loans.';
+  String get noLoansBody => 'Wala kang aktibong pautang.';
 
   @override
-  String get emptyHealthTitle => 'No Financial Score Yet';
+  String get emptyHealthTitle => 'Wala Pang Score sa Pananalapi';
 
   @override
   String get emptyHealthDescription =>
-      'We need a little financial activity before we can calculate an accurate health score.';
+      'Kailangan namin ng kaunting aktibidad sa pananalapi bago kami makapagkuwenta ng tumpak na score sa kalusugan ng pananalapi.';
 
   @override
-  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+  String get emptyHealthAddTransactions =>
+      'Magdagdag ng mga transaksyon sa kita o gastusin';
 
   @override
-  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+  String get emptyHealthSetBudgets => 'I-set up ang iyong buwanang mga badyet';
 
   @override
-  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+  String get emptyHealthTrackLoans =>
+      'Subaybayan ang mga pautang o utang (opsyonal)';
 
   @override
   String get emptyHealthCardSubtitle =>
-      'Add transactions to calculate your score and get insights.';
+      'Magdagdag ng mga transaksyon upang makuwenta ang iyong score at makakuha ng mga kaalaman.';
 
   @override
-  String get smartBudgetSplit => 'Smart Budget Split';
+  String get smartBudgetSplit => 'Smart na Paghati ng Badyet';
 
   @override
   String get smartBudgetSplitSubtitle =>
-      'Enter your monthly salary to calculate recommended limits';
+      'Ilagay ang iyong buwanang sahod upang makuwenta ang mga inirerekomendang limitasyon';
 
   @override
-  String get monthlyNetSalary => 'Monthly Net Salary';
+  String get monthlyNetSalary => 'Buwanang Netong Sahod';
 
   @override
-  String get categoryAllocations => 'Category Allocations';
+  String get categoryAllocations => 'Mga Alokasyon ng Kategorya';
 
   @override
   String totalBudgeted(String amount) {
-    return 'Total: $amount';
+    return 'Kabuuan: $amount';
   }
 
   @override
-  String get applyAllBudgets => 'Apply All Budgets';
+  String get applyAllBudgets => 'Ilapat ang Lahat ng Badyet';
 
   @override
-  String get applyingBudgets => 'Applying budgets...';
+  String get applyingBudgets => 'Inilalapat ang mga badyet...';
 
   @override
   String budgetsCreatedSuccess(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count category budgets created.',
-      one: '1 category budget created.',
+      other: '$count na badyet ng kategorya ang nagawa.',
+      one: '1 badyet ng kategorya ang nagawa.',
     );
     return '$_temp0';
   }
 
   @override
-  String get failedToSaveBudgets => 'Failed to save budgets.';
+  String get failedToSaveBudgets => 'Bigo sa pag-save ng mga badyet.';
 
   @override
-  String get recommendedBudget => 'Recommended budget';
+  String get recommendedBudget => 'Inirerekomendang badyet';
 }

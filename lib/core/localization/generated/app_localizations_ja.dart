@@ -12,13 +12,13 @@ class AppL10nJa extends AppL10n {
   String get appName => 'RainyPenny';
 
   @override
-  String get appTagline => 'もしもの日のために貯める';
+  String get appTagline => '雨の日に備えて貯金しましょう';
 
   @override
   String get navHome => 'ホーム';
 
   @override
-  String get navTransactions => '入出金';
+  String get navTransactions => '取引';
 
   @override
   String get navAdd => '追加';
@@ -27,7 +27,7 @@ class AppL10nJa extends AppL10n {
   String get navReports => 'レポート';
 
   @override
-  String get navProfile => 'マイページ';
+  String get navProfile => 'プロフィール';
 
   @override
   String greetingMorning(String name) {
@@ -45,13 +45,13 @@ class AppL10nJa extends AppL10n {
   }
 
   @override
-  String get greetingSubtitle => 'お金の全体像です';
+  String get greetingSubtitle => 'あなたの財務状況はこちらです';
 
   @override
-  String get totalBalance => '残高合計';
+  String get totalBalance => '合計残高';
 
   @override
-  String get vsLastPeriod => '前期比';
+  String get vsLastPeriod => '前の期間との比較';
 
   @override
   String get income => '収入';
@@ -60,25 +60,25 @@ class AppL10nJa extends AppL10n {
   String get expenses => '支出';
 
   @override
-  String get netBalance => '収支';
+  String get netBalance => '純残高';
 
   @override
-  String get lastThirtyDays => '過去30日';
+  String get lastThirtyDays => '過去30日間';
 
   @override
-  String get quickActions => 'クイック操作';
+  String get quickActions => 'クイックアクション';
 
   @override
-  String get addIncome => '収入を記録';
+  String get addIncome => '収入を追加';
 
   @override
-  String get addExpense => '支出を記録';
+  String get addExpense => '支出を追加';
 
   @override
-  String get spendingOverview => '支出の内訳';
+  String get spendingOverview => '支出の概要';
 
   @override
-  String get recentTransactions => '最近の記録';
+  String get recentTransactions => '最近の取引';
 
   @override
   String get seeAll => 'すべて見る';
@@ -90,21 +90,21 @@ class AppL10nJa extends AppL10n {
   String get budgetProgress => '予算の進捗';
 
   @override
-  String get savingsGoals => '貯蓄目標';
+  String get savingsGoals => '貯金目標';
 
   @override
-  String get financialInsight => '気づき';
+  String get financialInsight => '財務インサイト';
 
   @override
-  String get financialHealth => '家計の健全度';
+  String get financialHealth => '財務健全性';
 
   @override
   String ofTotal(String total) {
-    return '$total 中';
+    return '$total中';
   }
 
   @override
-  String get searchTransactions => '記録を検索';
+  String get searchTransactions => '取引を検索';
 
   @override
   String get filterAll => 'すべて';
@@ -122,30 +122,31 @@ class AppL10nJa extends AppL10n {
   String get yesterday => '昨日';
 
   @override
-  String get noTransactionsTitle => '記録が見つかりません';
+  String get noTransactionsTitle => '取引が見つかりません';
 
   @override
-  String get noTransactionsBody => '検索語や絞り込みを変えると、ほかの記録も見つかります。';
+  String get noTransactionsBody => '別の検索語やフィルターを試して、さらにアクティビティを確認してください。';
 
   @override
   String transactionCount(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count件の記録',
-      zero: '記録なし',
+      other: '$count件の取引',
+      one: '1件の取引',
+      zero: '取引なし',
     );
     return '$_temp0';
   }
 
   @override
-  String get addTransaction => '記録を追加';
+  String get addTransaction => '取引を追加';
 
   @override
   String get amount => '金額';
 
   @override
-  String get category => 'カテゴリ';
+  String get category => 'カテゴリー';
 
   @override
   String get date => '日付';
@@ -154,7 +155,7 @@ class AppL10nJa extends AppL10n {
   String get note => 'メモ';
 
   @override
-  String get noteHint => 'メモ（任意）';
+  String get noteHint => '任意のメモ';
 
   @override
   String get saveIncome => '収入を保存';
@@ -163,19 +164,19 @@ class AppL10nJa extends AppL10n {
   String get saveExpense => '支出を保存';
 
   @override
-  String get selectCategory => 'カテゴリを選択';
+  String get selectCategory => 'カテゴリーを選択';
 
   @override
-  String get transactionSaved => '保存しました';
+  String get transactionSaved => '取引を保存しました';
 
   @override
   String get amountRequired => '0より大きい金額を入力してください';
 
   @override
-  String get titleRequired => 'この記録に名前を付けてください';
+  String get titleRequired => 'この取引に名前を付けてください';
 
   @override
-  String get descriptionLabel => '内容';
+  String get descriptionLabel => '説明';
 
   @override
   String get descriptionHint => '例：食料品';
@@ -187,36 +188,36 @@ class AppL10nJa extends AppL10n {
   String get budgets => '予算';
 
   @override
-  String get totalBudget => '予算合計';
+  String get totalBudget => '合計予算';
 
   @override
-  String get spent => '使用済み';
+  String get spent => '使用額';
 
   @override
   String get remaining => '残り';
 
   @override
   String budgetUsed(int percent) {
-    return '$percent% 使用';
+    return '$percent%使用済み';
   }
 
   @override
   String get onTrack => '順調';
 
   @override
-  String get approachingLimit => '上限が近い';
+  String get approachingLimit => '上限に近づいています';
 
   @override
   String get overBudget => '予算超過';
 
   @override
-  String get savings => '貯蓄';
+  String get savings => '貯金';
 
   @override
   String get yourGoals => 'あなたの目標';
 
   @override
-  String get saved => '貯めた額';
+  String get saved => '貯金済み';
 
   @override
   String get target => '目標';
@@ -225,7 +226,7 @@ class AppL10nJa extends AppL10n {
   String get monthlyContribution => '毎月';
 
   @override
-  String get addFunds => '入金する';
+  String get addFunds => '資金を追加';
 
   @override
   String get goalComplete => '目標達成';
@@ -236,15 +237,16 @@ class AppL10nJa extends AppL10n {
       count,
       locale: localeName,
       other: 'あと$countか月',
+      one: 'あと1か月',
     );
     return '$_temp0';
   }
 
   @override
-  String get loansAndDebts => 'ローンと負債';
+  String get loansAndDebts => 'ローンと借金';
 
   @override
-  String get totalOutstanding => '残高合計';
+  String get totalOutstanding => '未払い残高合計';
 
   @override
   String get monthlyPayment => '毎月';
@@ -254,29 +256,29 @@ class AppL10nJa extends AppL10n {
 
   @override
   String paidOff(int percent) {
-    return '$percent% 返済済み';
+    return '$percent%返済済み';
   }
 
   @override
-  String get interestRate => '金利';
+  String get interestRate => '利息';
 
   @override
-  String get upcomingPayments => '支払い予定';
+  String get upcomingPayments => '今後の支払い';
 
   @override
   String dueInDays(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'あと$count日で期日',
-      one: '明日が期日',
-      zero: '今日が期日',
+      other: '$count日後が期限',
+      one: '明日が期限',
+      zero: '今日が期限',
     );
     return '$_temp0';
   }
 
   @override
-  String get overdue => '延滞';
+  String get overdue => '期限超過';
 
   @override
   String get reports => 'レポート';
@@ -291,22 +293,22 @@ class AppL10nJa extends AppL10n {
   String get quarter => '四半期';
 
   @override
-  String get incomeVsExpenses => '収入と支出';
+  String get incomeVsExpenses => '収入と支出の比較';
 
   @override
-  String get spendingByCategory => 'カテゴリ別支出';
+  String get spendingByCategory => 'カテゴリー別支出';
 
   @override
-  String get budgetPerformance => '予算の達成状況';
+  String get budgetPerformance => '予算の状況';
 
   @override
-  String get insights => '気づき';
+  String get insights => 'インサイト';
 
   @override
-  String get savingsRate => '貯蓄率';
+  String get savingsRate => '貯金率';
 
   @override
-  String get profile => 'マイページ';
+  String get profile => 'プロフィール';
 
   @override
   String get account => 'アカウント';
@@ -315,13 +317,13 @@ class AppL10nJa extends AppL10n {
   String get personalInformation => '個人情報';
 
   @override
-  String get changePassword => 'パスワードの変更';
+  String get changePassword => 'パスワードを変更';
 
   @override
   String get notifications => '通知';
 
   @override
-  String get preferences => '環境設定';
+  String get preferences => '設定';
 
   @override
   String get language => '言語';
@@ -352,11 +354,11 @@ class AppL10nJa extends AppL10n {
 
   @override
   String memberSince(String date) {
-    return '$date から利用';
+    return '$dateから利用';
   }
 
   @override
-  String get themeSystem => 'システムに合わせる';
+  String get themeSystem => 'システム設定';
 
   @override
   String get themeLight => 'ライト';
@@ -368,10 +370,10 @@ class AppL10nJa extends AppL10n {
   String get settings => '設定';
 
   @override
-  String get noNotificationsTitle => '確認済みです';
+  String get noNotificationsTitle => 'すべて確認済みです';
 
   @override
-  String get noNotificationsBody => '新しい気づきやリマインダーはここに表示されます。';
+  String get noNotificationsBody => '新しいインサイトやリマインダーがここに表示されます。';
 
   @override
   String get cancel => 'キャンセル';
@@ -392,7 +394,7 @@ class AppL10nJa extends AppL10n {
   String get somethingWentWrong => '問題が発生しました';
 
   @override
-  String get comingSoon => '正式版で対応予定です';
+  String get comingSoon => '完全版で近日公開';
 
   @override
   String get edit => '編集';
@@ -401,7 +403,7 @@ class AppL10nJa extends AppL10n {
   String get delete => '削除';
 
   @override
-  String get undo => '取り消す';
+  String get undo => '元に戻す';
 
   @override
   String get add => '追加';
@@ -416,37 +418,37 @@ class AppL10nJa extends AppL10n {
   String get amountAboveZero => '0より大きい金額を入力してください';
 
   @override
-  String get editTransaction => '記録を編集';
+  String get editTransaction => '取引を編集';
 
   @override
-  String get deleteTransaction => 'この記録を削除しますか？';
+  String get deleteTransaction => '取引を削除しますか？';
 
   @override
   String deleteTransactionBody(String title) {
-    return '$title が家計簿から削除されます。';
+    return '$titleは台帳から削除されます。';
   }
 
   @override
-  String get transactionDeleted => '削除しました';
+  String get transactionDeleted => '取引を削除しました';
 
   @override
-  String get transactionUpdated => '更新しました';
+  String get transactionUpdated => '取引を更新しました';
 
   @override
-  String get newBudget => '予算を作成';
+  String get newBudget => '新しい予算';
 
   @override
   String get editBudget => '予算を編集';
 
   @override
-  String get budgetLimit => '月間の上限';
+  String get budgetLimit => '月間上限';
 
   @override
-  String get deleteBudget => 'この予算を削除しますか？';
+  String get deleteBudget => '予算を削除しますか？';
 
   @override
   String deleteBudgetBody(String category) {
-    return '$category の予算が削除されます。記録には影響しません。';
+    return '$categoryの予算が削除されます。取引には影響しません。';
   }
 
   @override
@@ -456,16 +458,16 @@ class AppL10nJa extends AppL10n {
   String get budgetDeleted => '予算を削除しました';
 
   @override
-  String get allCategoriesBudgeted => 'すべてのカテゴリに予算があります';
+  String get allCategoriesBudgeted => 'すべてのカテゴリーにすでに予算があります';
 
   @override
-  String get noBudgetsTitle => '予算がありません';
+  String get noBudgetsTitle => 'まだ予算がありません';
 
   @override
-  String get noBudgetsBody => 'カテゴリに月間の上限を決めると、そこから記録が始まります。';
+  String get noBudgetsBody => 'カテゴリーに月間上限を設定して、管理を始めましょう。';
 
   @override
-  String get newGoal => '目標を作成';
+  String get newGoal => '新しい目標';
 
   @override
   String get editGoal => '目標を編集';
@@ -480,14 +482,14 @@ class AppL10nJa extends AppL10n {
   String get targetAmount => '目標金額';
 
   @override
-  String get alreadySaved => '貯蓄済み';
+  String get alreadySaved => '貯金済み';
 
   @override
-  String get deleteGoal => 'この目標を削除しますか？';
+  String get deleteGoal => '目標を削除しますか？';
 
   @override
   String deleteGoalBody(String name) {
-    return '$name とその進捗が削除されます。';
+    return '$nameとその進捗が削除されます。';
   }
 
   @override
@@ -497,40 +499,40 @@ class AppL10nJa extends AppL10n {
   String get goalDeleted => '目標を削除しました';
 
   @override
-  String get noGoalsTitle => '貯蓄目標がありません';
+  String get noGoalsTitle => 'まだ貯金目標がありません';
 
   @override
-  String get noGoalsBody => '目標を決めれば、RainyPenny が進み具合を追いかけます。';
+  String get noGoalsBody => '目標を設定すると、RainyPennyが進捗を追跡します。';
 
   @override
-  String get fundsAdded => '入金しました';
+  String get fundsAdded => '資金を追加しました';
 
   @override
-  String get newDebt => 'ローンやカードを追加';
+  String get newDebt => '新しいローンまたはカード';
 
   @override
   String get editDebt => 'ローンを編集';
 
   @override
-  String get debtName => '名称';
+  String get debtName => '名前';
 
   @override
   String get debtNameHint => '例：自動車ローン';
 
   @override
-  String get lender => '借入先';
+  String get lender => '貸し手';
 
   @override
-  String get lenderHint => '例：みずほ銀行';
+  String get lenderHint => '例：Meridian Bank';
 
   @override
-  String get originalAmount => '当初金額';
+  String get originalAmount => '借入元金';
 
   @override
   String get creditLimit => '利用限度額';
 
   @override
-  String get remainingBalance => '残高';
+  String get remainingBalance => '残りの残高';
 
   @override
   String get interestRatePercent => '金利（%）';
@@ -548,11 +550,11 @@ class AppL10nJa extends AppL10n {
   String get paymentRecorded => '支払いを記録しました';
 
   @override
-  String get deleteDebt => 'この負債を削除しますか？';
+  String get deleteDebt => 'この借金を削除しますか？';
 
   @override
   String deleteDebtBody(String name) {
-    return '$name が負債一覧から削除されます。';
+    return '$nameが借金一覧から削除されます。';
   }
 
   @override
@@ -562,24 +564,24 @@ class AppL10nJa extends AppL10n {
   String get debtDeleted => '削除しました';
 
   @override
-  String get noDebtsTitle => '登録された負債はありません';
+  String get noDebtsTitle => '追跡中の借金はありません';
 
   @override
-  String get noDebtsBody => 'ローンやクレジットカードを追加すると、返済を把握できます。';
+  String get noDebtsBody => '返済を管理するため、ローンまたはクレジットカードを追加してください。';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return '$subject の予算を超えました';
+    return '$subjectの予算を超過しました';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return '今期の $subject 予算を $amount 超えています。';
+    return 'この期間の$subject予算を$amount超過しています。';
   }
 
   @override
   String insightBudgetApproachingTitle(String subject) {
-    return '$subject が上限に近づいています';
+    return '$subjectが上限に近づいています';
   }
 
   @override
@@ -588,7 +590,7 @@ class AppL10nJa extends AppL10n {
     int percent,
     String amount,
   ) {
-    return '$subject の予算は $percent% 使用済みで、残りは $amount です。';
+    return '$subject予算を$percent%使用しており、$amount残っています。';
   }
 
   @override
@@ -596,63 +598,63 @@ class AppL10nJa extends AppL10n {
 
   @override
   String get insightOverIncomeBody =>
-      '今期は稼いだ以上に使っています。金額の大きいカテゴリを見直して立て直しましょう。';
+      'この期間は収入以上に支出しました。最も大きなカテゴリーを確認して、バランスを取り戻しましょう。';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return '$subject の支出が増えています';
+    return '$subjectの支出が増えています';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return '$subject の支出は前期より $percent% 多くなっています。';
+    return '$subjectの支出は前の期間より$percent%増えています。';
   }
 
   @override
-  String get insightTrendDownTitle => '支出が減ってきています';
+  String get insightTrendDownTitle => '支出が減少傾向です';
 
   @override
   String insightTrendDownBody(int percent) {
-    return '全体の支出は前期より $percent% 少なくなっています。';
+    return '全体の支出は前の期間より$percent%減っています。';
   }
 
   @override
-  String get insightTrendUpTitle => '支出が増えてきています';
+  String get insightTrendUpTitle => '支出が増加傾向です';
 
   @override
   String insightTrendUpBody(int percent) {
-    return '全体の支出は前期より $percent% 多くなっています。';
+    return '全体の支出は前の期間より$percent%増えています。';
   }
 
   @override
-  String get insightSavingsStrongTitle => '今期はよく貯まりました';
+  String get insightSavingsStrongTitle => 'この期間の貯金は順調です';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
-    return '収入の $percent% を残しました — 目標の $target% を大きく上回っています。';
+    return '収入の$percent%を残しており、目標の$target%を大きく上回っています。';
   }
 
   @override
-  String get insightSavingsLowTitle => '貯蓄率が目標を下回っています';
+  String get insightSavingsLowTitle => '貯金率が目標を下回っています';
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return '今期は収入の $percent% を残しました。目標は $target% です。';
+    return 'この期間は収入の$percent%を残しました。$target%を目標にしましょう。';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return '$subject はもうすぐ達成です';
+    return '$subjectはもうすぐ達成です';
   }
 
   @override
   String insightGoalNearlyBody(String amount, String subject) {
-    return '$subject まであと $amount です。';
+    return '$subjectの達成まであと$amountです。';
   }
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return '$subject は順調です';
+    return '$subjectは順調です';
   }
 
   @override
@@ -661,13 +663,14 @@ class AppL10nJa extends AppL10n {
       months,
       locale: localeName,
       other: '$monthsか月',
+      one: '1か月',
     );
-    return '毎月 $amount なら、$_temp0でこの目標に届きます。';
+    return '毎月$amount貯めると、$_temp0でこの目標を達成できます。';
   }
 
   @override
   String insightDebtOverdueTitle(String subject) {
-    return '$subject の支払いが延滞しています';
+    return '$subjectの支払いが期限超過です';
   }
 
   @override
@@ -676,13 +679,14 @@ class AppL10nJa extends AppL10n {
       days,
       locale: localeName,
       other: '$days日',
+      one: '1日',
     );
-    return '$subject の $amount の支払いが $_temp0延滞しています。';
+    return '$subjectの$amountの支払いは$_temp0遅れています。';
   }
 
   @override
   String insightDebtDueTitle(String subject) {
-    return '$subject の支払いが近づいています';
+    return '$subjectの支払いが近づいています';
   }
 
   @override
@@ -694,20 +698,20 @@ class AppL10nJa extends AppL10n {
       one: '明日',
       zero: '今日',
     );
-    return '$amount の支払期日は$_temp0です。';
+    return '$amountの支払い期限は$_temp0です。';
   }
 
   @override
-  String get signIn => 'ログイン';
+  String get signIn => 'サインイン';
 
   @override
   String get signUp => 'アカウントを作成';
 
   @override
-  String get signInSubtitle => 'おかえりなさい。お金が待っています。';
+  String get signInSubtitle => 'おかえりなさい。あなたのお金が待っています。';
 
   @override
-  String get signUpSubtitle => 'いくつか入力すれば準備完了です。';
+  String get signUpSubtitle => 'いくつかの情報を入力すれば準備完了です。';
 
   @override
   String get emailLabel => 'メールアドレス';
@@ -722,19 +726,19 @@ class AppL10nJa extends AppL10n {
   String get passwordHint => '8文字以上';
 
   @override
-  String get fullNameLabel => 'お名前';
+  String get fullNameLabel => '氏名';
 
   @override
-  String get fullNameHint => '山田 太郎';
+  String get fullNameHint => 'Alex Morgan';
 
   @override
   String get forgotPassword => 'パスワードをお忘れですか？';
 
   @override
-  String get resetSent => '再設定リンクを送りました。メールをご確認ください';
+  String get resetSent => 'リセットリンクを受信トレイで確認してください';
 
   @override
-  String get noAccountYet => 'はじめてですか？';
+  String get noAccountYet => '初めてですか？';
 
   @override
   String get haveAccount => 'すでにアカウントをお持ちですか？';
@@ -743,61 +747,61 @@ class AppL10nJa extends AppL10n {
   String get emailInvalid => '有効なメールアドレスを入力してください';
 
   @override
-  String get passwordTooShort => '8文字以上にしてください';
+  String get passwordTooShort => '8文字以上を使用してください';
 
   @override
-  String get signOutConfirm => 'ログアウトしますか？';
+  String get signOutConfirm => 'サインアウトしますか？';
 
   @override
-  String get signOutBody => '次に家計を見るときは、もう一度ログインが必要です。';
+  String get signOutBody => '財務情報を見るには、もう一度サインインする必要があります。';
 
   @override
   String get dataSource => 'データソース';
 
   @override
-  String get insightWeeklySummaryTitle => '今週のふり返り';
+  String get insightWeeklySummaryTitle => '今週を振り返る';
 
   @override
-  String get insightWeeklySummaryBody => '今週お金がどこへ行ったか、予算はどうだったかを確認しましょう。';
+  String get insightWeeklySummaryBody => '今週お金をどこに使ったか、予算をどの程度守れているかを確認できます。';
 
   @override
   String get notificationSettings => '通知';
 
   @override
-  String get alertsSection => 'お知らせ';
+  String get alertsSection => 'アラート';
 
   @override
-  String get budgetAlerts => '予算のお知らせ';
+  String get budgetAlerts => '予算アラート';
 
   @override
-  String get budgetAlertsBody => '予算が上限に近づいた、または超えたとき';
+  String get budgetAlertsBody => '予算が上限に近づいたとき、または上限を超えたとき';
 
   @override
   String get paymentReminders => '支払いリマインダー';
 
   @override
-  String get paymentRemindersBody => '支払期日の数日前';
+  String get paymentRemindersBody => '支払い期限の数日前';
 
   @override
-  String get savingsUpdates => '貯蓄の進捗';
+  String get savingsUpdates => '貯金の更新';
 
   @override
-  String get savingsUpdatesBody => '目標に向けた進み具合';
+  String get savingsUpdatesBody => '目標に向けた進捗';
 
   @override
-  String get weeklySummaryLabel => '週次サマリー';
+  String get weeklySummaryLabel => '週間サマリー';
 
   @override
-  String get weeklySummaryBody => '過ぎた一週間のまとめ';
+  String get weeklySummaryBody => '直近1週間のまとめ';
 
   @override
   String get scheduleSection => 'タイミング';
 
   @override
-  String get reminderTime => '通知の時刻';
+  String get reminderTime => 'リマインダー時刻';
 
   @override
-  String get quietHours => '通知しない時間帯';
+  String get quietHours => 'おやすみ時間';
 
   @override
   String quietHoursValue(String start, String end) {
@@ -805,14 +809,14 @@ class AppL10nJa extends AppL10n {
   }
 
   @override
-  String get summaryDay => 'サマリーの曜日';
+  String get summaryDay => 'サマリーの日';
 
   @override
   String get permissionRequired => '通知がオフになっています';
 
   @override
   String get permissionRequiredBody =>
-      '通知を許可すると、予算や支払いが手に負えなくなる前に RainyPenny が知らせます。';
+      '通知を許可すると、予算や支払いが手遅れになる前にRainyPennyがお知らせします。';
 
   @override
   String get allowNotifications => '通知を許可';
@@ -821,17 +825,17 @@ class AppL10nJa extends AppL10n {
   String get permissionDenied => '通知がブロックされています。端末の設定からオンにできます。';
 
   @override
-  String get upcomingAlerts => '予定';
+  String get upcomingAlerts => 'スケジュール済み';
 
   @override
-  String get noScheduledAlerts => '予定されているお知らせはありません';
+  String get noScheduledAlerts => '現在スケジュールされているものはありません';
 
   @override
-  String get noScheduledAlertsBody => '予算や支払いが期限に近づくと、ここにお知らせが並びます。';
+  String get noScheduledAlertsBody => '予算や支払いが上限や期限に近づくと、ここにアラートが表示されます。';
 
   @override
   String scheduledFor(String date) {
-    return '$date に予定';
+    return '$dateにスケジュール済み';
   }
 
   @override
@@ -841,16 +845,16 @@ class AppL10nJa extends AppL10n {
   String get allNotificationsOff => 'すべての通知がオフです';
 
   @override
-  String get needsAttention => '要注意';
+  String get needsAttention => '要確認';
 
   @override
   String get quickActionsTitle => '何をしますか？';
 
   @override
-  String get createSection => '記録する';
+  String get createSection => '記録';
 
   @override
-  String get jumpToSection => '移動する';
+  String get jumpToSection => '移動';
 
   @override
   String get addLoanAction => 'ローンを追加';
@@ -862,7 +866,7 @@ class AppL10nJa extends AppL10n {
   String get addGoalAction => '目標を追加';
 
   @override
-  String get longPressHint => 'ヒント：+ を長押しするとすぐ支出を記録できます';
+  String get longPressHint => 'ヒント：+を長押しすると、すぐに支出を記録できます';
 
   @override
   String get searchCurrencies => '通貨を検索';
@@ -871,56 +875,56 @@ class AppL10nJa extends AppL10n {
   String get noCurrenciesFound => '通貨が見つかりません';
 
   @override
-  String get noCurrenciesFoundMessage => '別のコード、記号、名称で試してください。';
+  String get noCurrenciesFoundMessage => '別のコード、記号、名前を試してください。';
 
   @override
-  String get popularCurrencies => 'よく使う通貨';
+  String get popularCurrencies => '人気';
 
   @override
   String get allCurrencies => 'すべての通貨';
 
   @override
-  String get totalLoanAmount => '借入総額';
+  String get totalLoanAmount => 'ローン総額';
 
   @override
-  String get installmentAmount => '1回の返済額';
+  String get installmentAmount => '分割払い金額';
 
   @override
-  String get numberOfInstallments => '返済回数';
+  String get numberOfInstallments => '分割回数';
 
   @override
-  String get paidInstallments => '返済済み回数';
+  String get paidInstallments => '支払い済み分割';
 
   @override
-  String get remainingInstallments => '残り回数';
+  String get remainingInstallments => '残りの分割';
 
   @override
   String installmentsPaidOf(int paid, int total) {
-    return '$total 回中 $paid 回返済済み';
+    return '$paid/$total回支払い済み';
   }
 
   @override
-  String get finalPayment => '最終回';
+  String get finalPayment => '最終支払い';
 
   @override
   String get paymentDueDate => '支払期日';
 
   @override
   String dueOnDayOfMonth(int day) {
-    return '毎月 $day 日';
+    return '毎月$day日';
   }
 
   @override
-  String get loanStatus => '状況';
+  String get loanStatus => 'ステータス';
 
   @override
   String get statusActive => '順調';
 
   @override
-  String get statusDueSoon => 'まもなく期日';
+  String get statusDueSoon => 'まもなく期限';
 
   @override
-  String get statusOverdue => '延滞';
+  String get statusOverdue => '期限超過';
 
   @override
   String get statusCompleted => '完済';
@@ -929,10 +933,10 @@ class AppL10nJa extends AppL10n {
   String get repaymentProgress => '返済の進捗';
 
   @override
-  String get byAmount => '金額で';
+  String get byAmount => '金額別';
 
   @override
-  String get byInstallments => '回数で';
+  String get byInstallments => '分割回数別';
 
   @override
   String get startDate => '開始日';
@@ -941,65 +945,65 @@ class AppL10nJa extends AppL10n {
   String get openEnded => '期限なし';
 
   @override
-  String get loanDetails => 'ローンの詳細';
+  String get loanDetails => 'ローン詳細';
 
   @override
   String get notSet => '未設定';
 
   @override
   String insightDebtDueTodayTitle(String subject) {
-    return '$subject は今日が期日です';
+    return '$subjectの支払期限は今日です';
   }
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return '$amount の支払いが今日期日です。ひと操作で間に合います。';
+    return '$amountの支払い期限は今日です。すぐにタップして、期限どおりに支払いましょう。';
   }
 
   @override
   String get remindMorningTitle => 'おはようございます ☀️';
 
   @override
-  String get remindMorningBody => 'お金を把握して一日を始めましょう。昨日の分で足すものはありますか？';
+  String get remindMorningBody => 'お金を把握しながら一日を始めましょう。昨日の分で追加するものはありますか？';
 
   @override
-  String get remindNoonTitle => 'お昼の確認';
+  String get remindNoonTitle => 'お昼のチェックイン';
 
   @override
-  String get remindNoonBody => 'ランチ、コーヒー、交通費？数秒で記録できます。';
+  String get remindNoonBody => 'ランチ、コーヒー、交通費はありませんか？数秒で追加できます。';
 
   @override
-  String get remindAfternoonTitle => 'ちょっと追記';
+  String get remindAfternoonTitle => '簡単な更新';
 
   @override
-  String get remindAfternoonBody => 'ここまでの支出を記録して、今日の数字を正確に保ちましょう。';
+  String get remindAfternoonBody => 'ここまでに使った金額を記録して、今日の記録を正確に保ちましょう。';
 
   @override
-  String get remindEveningTitle => '今日の締めくくり';
+  String get remindEveningTitle => '一日の締めくくり';
 
   @override
-  String get remindEveningBody => 'いま2分あれば、今日の記録がそろいます。';
+  String get remindEveningBody => '今2分使えば、今日の数字を完成させられます。';
 
   @override
-  String get happyWeekendTitle => 'よい週末を！🎉';
+  String get happyWeekendTitle => 'よい週末を！ 🎉';
 
   @override
-  String get happyWeekendBody => 'ゆっくり過ごしてください — 週末の出費にはご用心。';
+  String get happyWeekendBody => '楽しんでください — そして週末の支出にも目を配りましょう。';
 
   @override
-  String get dailyReminders => '毎日の記録リマインダー';
+  String get dailyReminders => '毎日の支出リマインダー';
 
   @override
-  String get dailyRemindersBody => '支出を記録し忘れないよう、そっとお知らせします';
+  String get dailyRemindersBody => '支出を最新の状態に保つためのやさしいリマインダー';
 
   @override
-  String get weekendGreeting => '週末のあいさつ';
+  String get weekendGreeting => 'よい週末を';
 
   @override
-  String get weekendGreetingBody => '週末のはじまりに、ひとこと';
+  String get weekendGreetingBody => '週末の始まりに届く、親しみやすいあいさつ';
 
   @override
-  String get reminderTimesSection => '通知の時間帯';
+  String get reminderTimesSection => 'リマインダー時刻';
 
   @override
   String get slotMorning => '朝';
@@ -1017,36 +1021,36 @@ class AppL10nJa extends AppL10n {
   String get everyDay => '毎日';
 
   @override
-  String get financialReport => '家計レポート';
+  String get financialReport => '財務レポート';
 
   @override
-  String get preparedFor => '作成対象';
+  String get preparedFor => '対象者';
 
   @override
   String get generatedOn => '作成日';
 
   @override
-  String get reportDisclaimer => 'あなた自身の記録から RainyPenny が作成しました。';
+  String get reportDisclaimer => 'RainyPennyがあなた自身の記録から作成しました。';
 
   @override
   String pageOf(int page, int total) {
-    return '$total ページ中 $page ページ';
+    return '$totalページ中$pageページ';
   }
 
   @override
   String get overview => '概要';
 
   @override
-  String get description => '内容';
+  String get description => '説明';
 
   @override
-  String get totalIncome => '収入合計';
+  String get totalIncome => '総収入';
 
   @override
-  String get totalExpenses => '支出合計';
+  String get totalExpenses => '総支出';
 
   @override
-  String get totalSaved => '貯蓄合計';
+  String get totalSaved => '総貯金額';
 
   @override
   String get shareOfTotal => '割合';
@@ -1067,72 +1071,73 @@ class AppL10nJa extends AppL10n {
   String get paidOffShort => '返済済み';
 
   @override
-  String get transactions => '記録';
+  String get transactions => '取引';
 
   @override
   String andMoreTransactions(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'ほか $count 件の記録',
+      other: 'さらに$count件の取引',
+      one: 'さらに1件の取引',
     );
     return '$_temp0';
   }
 
   @override
-  String get exportPdf => 'PDF を書き出す';
+  String get exportPdf => 'PDFをエクスポート';
 
   @override
   String get sharePdf => 'レポートを共有';
 
   @override
-  String get preparingReport => 'レポートを作成しています…';
+  String get preparingReport => 'レポートを準備しています…';
 
   @override
-  String get reportReady => 'レポートができました';
+  String get reportReady => 'レポートの準備ができました';
 
   @override
   String get reportFailed => 'レポートを作成できませんでした';
 
   @override
-  String get categories => 'カテゴリ';
+  String get categories => 'カテゴリー';
 
   @override
-  String get categoriesIntro => '自分のカテゴリを追加して、ふだんの感覚どおりに収入と支出を仕分けましょう。';
+  String get categoriesIntro => '自分の考え方に合わせて、収入と支出を整理できるカテゴリーを追加しましょう。';
 
   @override
-  String get expenseCategories => '支出カテゴリ';
+  String get expenseCategories => '支出カテゴリー';
 
   @override
-  String get incomeCategories => '収入カテゴリ';
+  String get incomeCategories => '収入カテゴリー';
 
   @override
-  String get newCategory => 'カテゴリを作成';
+  String get newCategory => '新しいカテゴリー';
 
   @override
-  String get editCategory => 'カテゴリを編集';
+  String get editCategory => 'カテゴリーを編集';
 
   @override
-  String get categoryName => '名称';
+  String get categoryName => '名前';
 
   @override
-  String get categoryNameHint => '例：ペット';
+  String get categoryNameHint => '例：ペットの世話';
 
   @override
   String get icon => 'アイコン';
 
   @override
-  String get categorySaved => 'カテゴリを保存しました';
+  String get categorySaved => 'カテゴリーを保存しました';
 
   @override
-  String get categoryDeleted => 'カテゴリを削除しました';
+  String get categoryDeleted => 'カテゴリーを削除しました';
 
   @override
-  String get deleteCategory => 'このカテゴリを削除しますか？';
+  String get deleteCategory => 'このカテゴリーを削除しますか？';
 
   @override
   String deleteCategoryBody(String name) {
-    return '$name がカテゴリ一覧から削除されます。';
+    return '$nameがカテゴリーから削除されます。';
   }
 
   @override
@@ -1140,7 +1145,8 @@ class AppL10nJa extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count 件の記録がまだこのカテゴリを使っています',
+      other: '$count件の記録がこのカテゴリーを使用しています',
+      one: '1件の記録がこのカテゴリーを使用しています',
     );
     return '$_temp0';
   }
@@ -1152,14 +1158,14 @@ class AppL10nJa extends AppL10n {
   String get builtIn => '標準';
 
   @override
-  String get manageCategories => 'カテゴリの管理';
+  String get manageCategories => 'カテゴリーを管理';
 
   @override
   String get expense => '支出';
 
   @override
   String get languageNote =>
-      'アラビア語・ウルドゥー語・ペルシア語・ヘブライ語では、グラフや PDF レポートを含め、画面全体が右から左になります。';
+      'アラビア語、ウルドゥー語、ペルシャ語、ヘブライ語では、チャートやPDFレポートを含むインターフェース全体が右から左に切り替わります。';
 
   @override
   String get next => '次へ';
@@ -1171,10 +1177,10 @@ class AppL10nJa extends AppL10n {
   String get skip => 'スキップ';
 
   @override
-  String get continueLabel => '続ける';
+  String get continueLabel => '続行';
 
   @override
-  String get selected => '選択中';
+  String get selected => '選択済み';
 
   @override
   String get passwordRequired => 'パスワードを入力してください';
@@ -1183,34 +1189,34 @@ class AppL10nJa extends AppL10n {
   String get newPasswordLabel => '新しいパスワード';
 
   @override
-  String get confirmPasswordLabel => 'パスワードの確認';
+  String get confirmPasswordLabel => 'パスワードを確認';
 
   @override
-  String get passwordsDoNotMatch => '2つのパスワードが一致しません';
+  String get passwordsDoNotMatch => '2つのパスワードが一致している必要があります';
 
   @override
   String get showPassword => 'パスワードを表示';
 
   @override
-  String get hidePassword => 'パスワードを隠す';
+  String get hidePassword => 'パスワードを非表示';
 
   @override
   String get savePassword => 'パスワードを保存';
 
   @override
-  String get backToSignIn => 'ログインに戻る';
+  String get backToSignIn => 'サインインに戻る';
 
   @override
-  String get alreadyHaveAccount => 'アカウントを持っています';
+  String get alreadyHaveAccount => 'すでにアカウントを持っています';
 
   @override
-  String get getStarted => 'はじめる';
+  String get getStarted => '始める';
 
   @override
   String get acceptTerms => '利用規約とプライバシーポリシーに同意します';
 
   @override
-  String get acceptTermsRequired => '続けるには同意が必要です';
+  String get acceptTermsRequired => '続行するには同意してください';
 
   @override
   String get passwordStrengthTooShort => '短すぎます';
@@ -1219,165 +1225,170 @@ class AppL10nJa extends AppL10n {
   String get passwordStrengthWeak => '弱い';
 
   @override
-  String get passwordStrengthFair => 'まずまず';
+  String get passwordStrengthFair => '普通';
 
   @override
-  String get passwordStrengthGood => '良好';
+  String get passwordStrengthGood => '良い';
 
   @override
   String get passwordStrengthStrong => '強い';
 
   @override
   String get passwordAdvice =>
-      '記号だらけの短いパスワードより、覚えていられる長い文のほうが安全です。ほかで使っているものは避けてください。';
+      '覚えやすい長いフレーズは、記号だらけの短いパスワードより安全です。他の場所ですでに使っているものは避けてください。';
 
   @override
   String get authInvalidCredentials => 'このメールアドレスとパスワードに一致するアカウントはありません';
 
   @override
-  String get authEmailNotConfirmed => 'ログインの前にメールアドレスを確認してください';
+  String get authEmailNotConfirmed => 'サインインする前にメールアドレスを確認してください';
 
   @override
-  String get authEmailAlreadyRegistered => 'このメールアドレスのアカウントはすでにあります';
+  String get authEmailAlreadyRegistered => 'このメールアドレスのアカウントはすでに存在します';
 
   @override
-  String get authWeakPassword => 'もっと長いパスワードにしてください';
+  String get authWeakPassword => 'より長いパスワードを選んでください';
 
   @override
   String get authRateLimited => '試行回数が多すぎます。数分後にもう一度お試しください';
 
   @override
-  String get authNetworkError => '接続がありません。ネットワークを確認して再試行してください';
+  String get authNetworkError => '接続できません。ネットワークを確認してもう一度お試しください';
 
   @override
   String get authGenericError => '問題が発生しました。もう一度お試しください';
 
   @override
-  String get confirmEmailTitle => 'メールをご確認ください';
+  String get confirmEmailTitle => 'メールを確認してください';
 
   @override
   String confirmEmailBody(String email) {
-    return '$email に確認リンクを送りました。開いてアカウント登録を完了してください。';
+    return '$emailに確認リンクを送信しました。リンクを開いてアカウントの設定を完了してください。';
   }
 
   @override
-  String get resendConfirmation => '確認メールを再送';
+  String get resendConfirmation => '確認メールを再送信';
 
   @override
-  String get confirmationResent => '確認メールを送りました';
+  String get confirmationResent => '確認メールを送信しました';
 
   @override
-  String get forgotPasswordTitle => 'パスワードの再設定';
+  String get forgotPasswordTitle => 'パスワードをリセット';
 
   @override
   String get forgotPasswordSubtitle =>
-      '登録に使ったメールアドレスを入力してください。新しいパスワードを決めるリンクをお送りします。';
+      '登録時に使用したメールアドレスを入力すると、新しいパスワードを設定するためのリンクを送信します。';
 
   @override
-  String get sendResetLink => 'リンクを送る';
+  String get sendResetLink => 'リセットリンクを送信';
 
   @override
-  String get resetLinkSentTitle => 'リンクを送りました';
+  String get resetLinkSentTitle => 'リセットリンクを送信しました';
 
   @override
   String resetLinkSentBody(String email) {
-    return '$email のアカウントがあれば、再設定リンクが届きます。';
+    return '$emailのアカウントが存在する場合、リセットリンクを送信しています。';
   }
 
   @override
   String get resetLinkSentHint =>
-      'リンクは1時間で期限切れになります。届かない場合は、再送を頼む前に迷惑メールをご確認ください。';
+      'リンクは1時間で期限切れになります。届かない場合は、再送信を依頼する前に迷惑メールフォルダーを確認してください。';
 
   @override
-  String get tryAnotherEmail => '別のメールアドレスを使う';
+  String get tryAnotherEmail => '別のメールアドレスを使用';
 
   @override
-  String get resetPasswordTitle => '新しいパスワードを決める';
+  String get resetPasswordTitle => '新しいパスワードを設定';
 
   @override
-  String get resetPasswordSubtitle => 'このアカウントでこれまで使っていないものにしてください。';
+  String get resetPasswordSubtitle => 'このアカウントで以前使用したことのないパスワードを選んでください。';
 
   @override
   String get passwordChangedTitle => 'パスワードを更新しました';
 
   @override
-  String get passwordChangedBody => '新しいパスワードを保存しました。ログイン済みなので、そのまま使えます。';
+  String get passwordChangedBody => '新しいパスワードが保存されました。サインイン済みなので、すぐに利用できます。';
 
   @override
-  String get demoModeHint => 'デモ版 — アカウントは不要です';
+  String get demoModeHint => 'デモ版 — アカウント不要';
 
   @override
   String get demoModeFill => '入力する';
 
   @override
-  String get welcomeTrackTitle => 'お金の行き先が見えます';
+  String get welcomeTrackTitle => 'お金の行き先を確認しましょう';
 
   @override
   String get welcomeTrackBody =>
-      '入ってきたものと出ていったものを記録するだけ。RainyPenny がそれを、ちゃんと読める一枚の絵に変えます。';
+      '入ってくるお金と出ていくお金を記録しましょう。RainyPennyが、実際に理解できる形に変えてくれます。';
 
   @override
-  String get welcomeBudgetTitle => '守れる上限を決める';
+  String get welcomeBudgetTitle => '守れる上限を設定しましょう';
 
   @override
-  String get welcomeBudgetBody => '支出の項目ごとに月の上限を決めれば、超えたあとではなく、超える前に気づけます。';
+  String get welcomeBudgetBody =>
+      '支出の各部分に月間上限を設定し、超えてしまった後ではなく、超える前に知らせてもらいましょう。';
 
   @override
-  String get welcomeGoalsTitle => '大切なことのために貯める';
+  String get welcomeGoalsTitle => '大切なもののために貯めましょう';
 
   @override
   String get welcomeGoalsBody =>
-      '目標に名前を付け、金額を決め、貯まっていくのを眺める。もしもの備えは、目に見えるほうが続きます。';
+      '目標に名前を付け、金額を設定して、達成までの進み具合を見守りましょう。雨の日のための資金も、進捗が見えると貯めやすくなります。';
 
   @override
-  String get welcomePrivacyTitle => 'あなたのお金は、あなたのもの';
+  String get welcomePrivacyTitle => 'あなたのお金はあなたのもの';
 
   @override
-  String get welcomePrivacyBody => '数字はあなただけのものです。売ることも、誰かと共有することもありません。';
+  String get welcomePrivacyBody =>
+      'あなたの数字はあなた自身のものです。販売されることも、誰かと共有されることもありません。';
 
   @override
   String stepOf(int step, int total) {
-    return 'ステップ $step / $total';
+    return 'ステップ$step/$total';
   }
 
   @override
-  String get onboardingNameTitle => '何とお呼びしましょう？';
+  String get onboardingNameTitle => '何とお呼びすればよいですか？';
 
   @override
-  String get onboardingNameBody => 'あいさつに使うだけで、ほかでは使いません。';
+  String get onboardingNameBody => 'ごあいさつに使用するだけで、それ以外には使用しません。';
 
   @override
-  String get onboardingNameHint => '下の名前だけで十分です。あとから変えられます。';
+  String get onboardingNameHint => '名前だけで十分です。後から変更できます。';
 
   @override
-  String get onboardingCurrencyTitle => 'どの通貨をお使いですか？';
+  String get onboardingCurrencyTitle => 'どの通貨を使いますか？';
 
   @override
-  String get onboardingCurrencyBody => 'アプリ内の金額はすべてこの通貨で表示されます。選んでも為替換算はしません。';
+  String get onboardingCurrencyBody =>
+      'アプリ内のすべての金額がこの通貨で表示されます。選択しても金額が換算されることはありません。';
 
   @override
   String get onboardingCurrencySearch => 'すべての通貨を検索';
 
   @override
-  String get onboardingAppearanceTitle => '好みに合わせる';
+  String get onboardingAppearanceTitle => '自分らしく設定';
 
   @override
-  String get onboardingAppearanceBody => '見た目を選んでください。触れるたびに変わり、いつでも戻ってこられます。';
+  String get onboardingAppearanceBody =>
+      '見た目を選んでください。タップするとすべてが変わり、いつでも戻って変更できます。';
 
   @override
-  String get onboardingNotificationsTitle => '把握しつづける';
+  String get onboardingNotificationsTitle => 'しっかり管理しましょう';
 
   @override
-  String get onboardingNotificationsBody => 'ちょうどいいときの静かなひと声が、これを習慣に変えます。';
+  String get onboardingNotificationsBody =>
+      'ちょうどよいタイミングのさりげない通知が、これを習慣に変えてくれます。';
 
   @override
-  String get onboardingNotifyReminders => '使った分を記録するための、やさしいリマインダー';
+  String get onboardingNotifyReminders => '使った金額を記録するためのやさしいリマインダー';
 
   @override
   String get onboardingNotifyBudget => '予算を使い切る前のお知らせ';
 
   @override
-  String get onboardingNotifySummary => 'お金の行き先を毎週まとめてお届け';
+  String get onboardingNotifySummary => 'お金をどこに使ったかの週間サマリー';
 
   @override
   String get onboardingNotifyEnable => '通知をオンにする';
@@ -1386,191 +1397,191 @@ class AppL10nJa extends AppL10n {
   String get onboardingNotifyDone => '通知設定を保存しました';
 
   @override
-  String get onboardingNotifyLater => 'これらはすべて、設定からいつでも変更できます。';
+  String get onboardingNotifyLater => 'これらはすべて、いつでも設定から変更できます。';
 
   @override
-  String get onboardingReadyTitle => '準備ができました';
+  String get onboardingReadyTitle => '準備完了です';
 
   @override
   String onboardingReadyTitleNamed(String name) {
-    return '準備ができました、$nameさん';
+    return '準備完了です、$nameさん';
   }
 
   @override
-  String get onboardingReadyBody => '初期設定は完了です。使い方をざっと見てみますか？';
+  String get onboardingReadyBody => 'これで設定は完了です。すべての使い方を簡単に案内しましょうか？';
 
   @override
-  String get onboardingTakeTour => '案内してほしい';
+  String get onboardingTakeTour => '案内して';
 
   @override
   String get onboardingGoToApp => 'アプリへ進む';
 
   @override
-  String get onboardingTourLater => 'いまはやめておく？ガイドは設定にいつでも置いてあります。';
+  String get onboardingTourLater => '今はしない？ガイドは設定に残るので、いつでも利用できます。';
 
   @override
-  String get beginnersGuide => 'はじめてのガイド';
+  String get beginnersGuide => '初心者ガイド';
 
   @override
-  String get guideFinish => '終了';
+  String get guideFinish => '完了';
 
   @override
   String chapterOf(int number, int total) {
-    return '第 $number 章 / 全 $total 章';
+    return '第$number章 / 全$total章';
   }
 
   @override
   String guideOpenScreen(String screen) {
-    return '$screenを開く';
+    return '「$screen」を開く';
   }
 
   @override
-  String get guideDashboardTitle => 'ホーム画面';
+  String get guideDashboardTitle => 'ダッシュボード';
 
   @override
   String get guideDashboardBody =>
-      'すべてはここから。いちばん上のカードが手元に残っている額で、その下が今期の収入と支出、さらに支出の内訳、予算、目標と続きます。';
+      'すべてはここから始まります。上部のカードには残りの金額が表示され、その下にこの期間の収入と支出、続いて支出、予算、目標が表示されます。';
 
   @override
-  String get guideDashboardTip1 => '画面を下に引くと、まとめて更新できます。';
+  String get guideDashboardTip1 => '画面を下に引っ張って、すべてを一度に更新できます。';
 
   @override
-  String get guideDashboardTip2 => '収入や支出のカードを押すと、その一覧に直行できます。';
+  String get guideDashboardTip2 => '収入または支出のカードをタップすると、その一覧に移動できます。';
 
   @override
-  String get guideDashboardTip3 => '何か記録すると、リングや気づきはその場で更新されます。';
+  String get guideDashboardTip3 => '何かを記録すると、リングとインサイトがすぐに更新されます。';
 
   @override
   String get guideAddTitle => 'お金を記録する';
 
   @override
   String get guideAddBody =>
-      'バーの真ん中のボタンがすべての起点です。短いメニューが開き、支出・収入・負債・予算・貯蓄目標を選べます。';
+      'バー中央のボタンからすべてが始まります。タップすると、支出、収入、借金、予算、貯金目標の短いメニューが開きます。';
 
   @override
-  String get guideAddTip1 => '真ん中のボタンを押して、収入か支出を記録します。';
+  String get guideAddTip1 => '中央のボタンをタップして、収入または支出を記録します。';
 
   @override
-  String get guideAddTip2 => '長押しするとメニューを飛ばして、すぐ支出の入力に進めます。';
+  String get guideAddTip2 => '長押しすると、新しい支出の入力画面に直接移動し、メニューをスキップできます。';
 
   @override
-  String get guideAddTip3 => 'カテゴリは必ず選んでください — グラフも予算もそこから動きます。';
+  String get guideAddTip3 => '必ずカテゴリーを選んでください。チャートと予算が機能するために必要です。';
 
   @override
-  String get guideCategoriesTitle => 'カテゴリ';
+  String get guideCategoriesTitle => 'カテゴリー';
 
   @override
   String get guideCategoriesBody =>
-      'カテゴリは支出のまとめ方です。最初から入っているもので大半の人には足りますが、名前を変えたり自分で追加したりもできます。';
+      'カテゴリーは支出をグループ化する方法です。アプリに用意されているカテゴリーでほとんどの人に対応できますが、名前を変更したり、自分で追加したりできます。';
 
   @override
-  String get guideCategoriesTip1 => '設定から「カテゴリの管理」で、変更も追加もできます。';
+  String get guideCategoriesTip1 => '設定から「カテゴリーを管理」を開いて、変更または追加できます。';
 
   @override
-  String get guideCategoriesTip2 => 'カテゴリのないものは「その他」に入るので、グラフはごまかしません。';
+  String get guideCategoriesTip2 => 'カテゴリー未設定のものは「その他」に入るため、チャートを正確に保てます。';
 
   @override
   String get guideBudgetTitle => '予算';
 
   @override
   String get guideBudgetBody =>
-      '予算はカテゴリごとの月の上限です。使うほどバーが伸び、上限が近づくと色が変わるので、超える前に気づけます。';
+      '予算は1つのカテゴリーに設定する月間上限です。支出が増えるとバーが伸び、上限に近づくと表示が変わるので、超えてしまう前に気づけます。';
 
   @override
-  String get guideBudgetTip1 => '全部いっぺんにではなく、2つか3つのカテゴリから始めましょう。';
+  String get guideBudgetTip1 => '最初からすべてではなく、2〜3カテゴリーから始めましょう。';
 
   @override
-  String get guideBudgetTip2 => '上限はふだんの支出より少し高めにして、あとから締めていきます。';
+  String get guideBudgetTip2 => '普段の支出より少し高めに上限を設定してから、徐々に引き締めましょう。';
 
   @override
-  String get guideBudgetTip3 => '予算のお知らせはオンのままに。残りが少なくなると教えてくれます。';
+  String get guideBudgetTip3 => '予算アラートをオンにしておけば、残りが少なくなったときにアプリがお知らせします。';
 
   @override
-  String get guideSavingsTitle => '貯蓄目標';
+  String get guideSavingsTitle => '貯金目標';
 
   @override
   String get guideSavingsBody =>
-      '何のために貯めるのかに名前を付け、金額と期日を決めれば、毎月いくら取り分ければ届くかをアプリが計算します。';
+      '何のために貯めるのかを名前で設定し、目標金額と日付を決めると、達成するために毎月いくら貯める必要があるかをアプリが計算します。';
 
   @override
-  String get guideSavingsTip1 => '名前のある目標は、漠然と「貯めたい」より続きます。';
+  String get guideSavingsTip1 => '名前のある目標は、漠然と貯めようと思うより続けやすくなります。';
 
   @override
-  String get guideSavingsTip2 => '大きな目標ひとつより、小さな目標をいくつかのほうが達成しやすいものです。';
+  String get guideSavingsTip2 => '大きな目標を1つ設定するより、小さな目標を複数設定したほうが達成しやすいものです。';
 
   @override
-  String get guideLoansTitle => '負債とローン';
+  String get guideLoansTitle => '借金とローン';
 
   @override
   String get guideLoansBody =>
-      'いくら借りていて、いくらかかり、次の支払いがいつかを記録します。返済中のものはすべて、残額とともに一覧に並びます。';
+      '借りている金額、かかる費用、次回の支払期限を記録しましょう。返済中のものは、残りの合計額とともに1つの一覧に表示されます。';
 
   @override
-  String get guideLoansTip1 => '期日を入れておけば、支払いリマインダーが追いかけてくれます。';
+  String get guideLoansTip1 => '支払期限を追加すれば、支払いリマインダーが知らせてくれます。';
 
   @override
-  String get guideLoansTip2 => '延滞した負債は、支払うまでホーム画面に赤で表示されます。';
+  String get guideLoansTip2 => '期限超過の借金は、支払われるまでダッシュボードに赤色で表示されます。';
 
   @override
   String get guideReportsTitle => 'レポート';
 
   @override
   String get guideReportsBody =>
-      'もう一段深い眺め。収入と支出の対比、カテゴリ別の支出、予算がどれだけ守れたか、そして収入のうちどれだけ手元に残ったか。';
+      'より詳しい表示です。収入と支出、カテゴリー別支出、予算をどの程度守れたか、収入のうちどれだけ残したかを確認できます。';
 
   @override
-  String get guideReportsTip1 => '画面上部で、週・月・四半期を切り替えられます。';
+  String get guideReportsTip1 => '画面上部で週、月、四半期を切り替えられます。';
 
   @override
-  String get guideReportsTip2 => 'PDF に書き出したり共有したり — あなたの言語と読む向きで出力されます。';
+  String get guideReportsTip2 => 'PDFをエクスポートまたは共有できます。あなたの言語と表示方向で作成されます。';
 
   @override
   String get guideSettingsTitle => '設定';
 
   @override
   String get guideSettingsBody =>
-      '言語、通貨、色、お知らせはすべてここにあります。初期設定で固定されるものは何もありません — いつでも変えられます。';
+      '言語、通貨、色、アラートはすべてここにあります。セットアップ時に固定されるものはないので、いつでも変更できます。';
 
   @override
-  String get guideSettingsTip1 => '40の言語に対応し、右から左に読む言語では画面全体が反転します。';
+  String get guideSettingsTip1 => '40言語に対応し、右から左に読む言語ではレイアウト全体が反転します。';
 
   @override
-  String get guideSettingsTip2 => 'どのお知らせを受け取るか、届いてよい時間帯かを選べます。';
+  String get guideSettingsTip2 => '受け取りたいアラートと、通知を受け取れる時間帯を選択できます。';
 
   @override
-  String get guideSettingsTip3 => '通知しない時間帯を設定すると、朝まで届きません。';
+  String get guideSettingsTip3 => 'おやすみ時間中はすべての通知が朝まで保留されます。';
 
   @override
-  String get guideHabitTitle => '続けるために';
+  String get guideHabitTitle => '習慣にしましょう';
 
   @override
   String get guideHabitBody =>
-      'アプリは、入れたものの分だけ役に立ちます。月に1時間より1日1分。2週間続ければ、数字が何かを語り始めます。';
+      'アプリは入力した内容だけの価値があります。月に一度1時間使うより、毎日1分使うほうが効果的です。2週間もすれば、数字が何かを教えてくれるようになります。';
 
   @override
-  String get guideHabitTip1 => '週末にまとめてではなく、使ったその場で記録しましょう。';
+  String get guideHabitTip1 => '週末にまとめてではなく、支出したときに記録しましょう。';
 
   @override
-  String get guideHabitTip2 => '1日1回ホーム画面を見るだけ。10秒で十分です。';
+  String get guideHabitTip2 => '1日1回ダッシュボードを確認しましょう。10秒で十分です。';
 
   @override
-  String get guideHabitTip3 => 'このガイドは設定に残ります — いつでも戻ってきてください。';
+  String get guideHabitTip3 => 'このガイドは設定に残ります。必要なときにいつでも戻ってきてください。';
 
   @override
   String get appearance => '外観';
 
   @override
-  String get themeCaption => 'ライト、ダーク、または端末に合わせて。';
+  String get themeCaption => 'ライト、ダーク、またはスマートフォンの設定に合わせます。';
 
   @override
   String get accentColor => 'アクセントカラー';
 
   @override
-  String get accentColorCaption => 'ボタン、強調表示、グラフの色になります。';
+  String get accentColorCaption => 'ボタン、ハイライト、チャートの色を変更します。';
 
   @override
   String get accentSemanticsNote =>
-      '収入と支出はどのテーマでも自分の色を保つので、アクセントを変えても数字の意味は変わりません。';
+      'どのテーマでも収入と支出にはそれぞれ固有の色が使われるため、アクセントを変更しても数字の意味は変わりません。';
 
   @override
   String get accentTeal => 'ティール';
@@ -1579,7 +1590,7 @@ class AppL10nJa extends AppL10n {
   String get accentGreen => 'グリーン';
 
   @override
-  String get accentSky => 'スカイブルー';
+  String get accentSky => 'スカイ';
 
   @override
   String get accentBlue => 'ブルー';
@@ -1615,7 +1626,7 @@ class AppL10nJa extends AppL10n {
   String get noLanguagesFound => '言語が見つかりません';
 
   @override
-  String get noLanguagesFoundMessage => '英語の名称か、2文字のコードで試してください。';
+  String get noLanguagesFoundMessage => '英語の言語名、または2文字のコードを試してください。';
 
   @override
   String get rightToLeft => '右から左';
@@ -1624,101 +1635,99 @@ class AppL10nJa extends AppL10n {
   String get replayGuide => 'ガイドをもう一度見る';
 
   @override
-  String get replaySetup => '初期設定をやり直す';
+  String get replaySetup => 'セットアップをもう一度実行';
 
   @override
-  String get replaySetupBody => '最初の質問にもう一度答えます。記録した内容が消えることはありません。';
+  String get replaySetupBody => '初回設定の質問をもう一度進めます。記録済みのデータは削除されません。';
 
   @override
-  String get rateTitle => 'RainyPennyはいかがですか？';
+  String get rateTitle => 'RainyPennyを気に入っていますか？';
 
   @override
-  String get rateBody => 'しばらく使っていただいていますね。評価は少しの手間で、ほかの方がアプリを見つける助けになります。';
+  String get rateBody => 'しばらく継続して使っていただいています。評価はすぐに終わり、他の人がアプリを見つける助けになります。';
 
   @override
-  String get rateAction => 'アプリを評価する';
+  String get rateAction => 'アプリを評価';
 
   @override
-  String get rateLater => 'あとで';
+  String get rateLater => 'また後で';
 
   @override
-  String get rateNever => '結構です';
+  String get rateNever => 'いいえ、結構です';
 
   @override
   String get rateThanks => 'ありがとうございます';
 
   @override
-  String get monthlySalary => 'Monthly salary';
+  String get monthlySalary => '月給';
 
   @override
-  String get remainingAmount => 'Remaining';
+  String get remainingAmount => '残り';
 
   @override
-  String get carriedForward => 'Carried forward';
+  String get carriedForward => '繰り越し';
 
   @override
-  String get carriedForwardHint => 'Left over from last cycle';
+  String get carriedForwardHint => '前のサイクルからの残り';
 
   @override
-  String get totalSpending => 'Total spending';
+  String get totalSpending => '総支出';
 
   @override
-  String get salaryCycle => 'Salary cycle';
+  String get salaryCycle => '給与サイクル';
 
   @override
-  String get payday => 'Salary day';
+  String get payday => '給料日';
 
   @override
-  String get paydayDescription =>
-      'The day your salary arrives. Your financial month runs from this day until the day before the next one.';
+  String get paydayDescription => '給料が入る日です。財務上の1か月はこの日から、次の給料日の前日までとなります。';
 
   @override
-  String get paydayUpdated => 'Salary day updated';
+  String get paydayUpdated => '給料日を更新しました';
 
   @override
   String paydayDayOfMonth(int day) {
-    return 'Day $day';
+    return '$day日';
   }
 
   @override
-  String get paydayShortMonthNote =>
-      'In shorter months the cycle starts on the last day instead.';
+  String get paydayShortMonthNote => '日数の少ない月では、代わりに月末日からサイクルが始まります。';
 
   @override
   String daysLeftInCycle(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count days to payday',
-      one: '1 day to payday',
-      zero: 'Last day of the cycle',
+      other: '給料日まであと$count日',
+      one: '給料日まであと1日',
+      zero: 'サイクル最終日',
     );
     return '$_temp0';
   }
 
   @override
-  String get nextPayday => 'Next payday';
+  String get nextPayday => '次の給料日';
 
   @override
-  String get spentSoFar => 'Spent so far';
+  String get spentSoFar => '現在までの支出';
 
   @override
-  String get dailyAllowance => 'Safe to spend daily';
+  String get dailyAllowance => '1日に安全に使える金額';
 
   @override
-  String get overspentNotice => 'You have spent more than came in this cycle.';
+  String get overspentNotice => 'このサイクルでは、入ってきた金額以上に支出しています。';
 
   @override
-  String get backToThisMonth => 'Back to this month';
+  String get backToThisMonth => '今月に戻る';
 
   @override
-  String get cycleRangeLabel => 'Cycle';
+  String get cycleRangeLabel => 'サイクル';
 
   @override
-  String get noSalaryRecorded => 'No salary recorded yet';
+  String get noSalaryRecorded => 'まだ給与が記録されていません';
 
   @override
-  String get addSalaryAction => 'Add your salary';
+  String get addSalaryAction => '給与を追加';
 
   @override
   String cycleOf(String start, String end) {
@@ -1726,278 +1735,273 @@ class AppL10nJa extends AppL10n {
   }
 
   @override
-  String get healthExcellent => 'Excellent';
+  String get healthExcellent => '非常に良好';
 
   @override
-  String get healthGood => 'Good';
+  String get healthGood => '良好';
 
   @override
-  String get healthFair => 'Fair';
+  String get healthFair => '普通';
 
   @override
-  String get healthNeedsWork => 'Needs work';
+  String get healthNeedsWork => '改善が必要';
 
   @override
-  String get healthExcellentBody =>
-      'You are saving well and staying inside your budgets.';
+  String get healthExcellentBody => 'しっかり貯金できており、予算内に収まっています。';
 
   @override
-  String get healthGoodBody =>
-      'You are on track with your spending this period.';
+  String get healthGoodBody => 'この期間の支出は順調です。';
 
   @override
-  String get healthFairBody =>
-      'A few budgets are running hot. Small changes will help.';
+  String get healthFairBody => 'いくつかの予算で支出が速いペースで進んでいます。小さな変更が役立ちます。';
 
   @override
-  String get healthNeedsWorkBody =>
-      'Spending is outpacing your plan. Start with your largest category.';
+  String get healthNeedsWorkBody => '支出が計画を上回っています。まずは最も大きなカテゴリーから見直しましょう。';
 
   @override
-  String get factorSavingsRate => 'Savings rate';
+  String get factorSavingsRate => '貯金率';
 
   @override
-  String get factorBudgetControl => 'Budget control';
+  String get factorBudgetControl => '予算管理';
 
   @override
-  String get factorDebtLoad => 'Debt load';
+  String get factorDebtLoad => '借金の負担';
 
   @override
-  String get factorSpendingTrend => 'Spending trend';
+  String get factorSpendingTrend => '支出傾向';
 
   @override
   String factorKept(String percent) {
-    return '$percent% kept';
+    return '$percent%を残しました';
   }
 
   @override
   String factorUsed(String percent) {
-    return '$percent% used';
+    return '$percent%使用済み';
   }
 
   @override
   String factorOfIncome(String percent) {
-    return '$percent% of income';
+    return '収入の$percent%';
   }
 
   @override
   String factorTrendUp(String percent) {
-    return 'Up $percent%';
+    return '$percent%増加';
   }
 
   @override
   String factorTrendDown(String percent) {
-    return 'Down $percent%';
+    return '$percent%減少';
   }
 
   @override
-  String get howScoreWorks => 'How this score works';
+  String get howScoreWorks => 'このスコアの仕組み';
 
   @override
   String get healthScoreExplainer =>
-      'Your score blends four things: how much of your income you keep, how well you stay inside your budgets, how much of your income goes to debt, and whether your spending is rising or falling.';
+      'スコアは4つの要素を組み合わせています。収入のうちどれだけ残しているか、予算内にどの程度収められているか、収入のうちどれだけが借金に回っているか、そして支出が増えているか減っているかです。';
 
   @override
   String scoreWeightLabel(int percent) {
-    return '$percent% of the score';
+    return 'スコアの$percent%';
   }
 
   @override
-  String get viewHealthDetails => 'See the breakdown';
+  String get viewHealthDetails => '内訳を見る';
 
   @override
-  String get saveChanges => 'Save changes';
+  String get saveChanges => '変更を保存';
 
   @override
-  String get profileUpdated => 'Profile updated';
+  String get profileUpdated => 'プロフィールを更新しました';
 
   @override
-  String get changePhoto => 'Change photo';
+  String get changePhoto => '写真を変更';
 
   @override
-  String get removePhoto => 'Remove photo';
+  String get removePhoto => '写真を削除';
 
   @override
   String get personalInformationIntro =>
-      'Your name and photo appear across the app. Your email is the address you sign in with.';
+      '名前と写真はアプリ全体に表示されます。メールアドレスはサインインに使用するアドレスです。';
 
   @override
-  String get emailNotEditable =>
-      'Contact support to change the address you sign in with.';
+  String get emailNotEditable => 'サインインに使用するメールアドレスを変更するには、サポートにお問い合わせください。';
 
   @override
-  String get pressBackAgainToExit => 'Press back again to exit';
+  String get pressBackAgainToExit => 'もう一度戻るを押すと終了します';
 
   @override
-  String get categoryHousing => 'Housing';
+  String get categoryHousing => '住居';
 
   @override
-  String get categoryFood => 'Food & Dining';
+  String get categoryFood => '食事・外食';
 
   @override
-  String get categoryTransport => 'Transportation';
+  String get categoryTransport => '交通';
 
   @override
-  String get categoryShopping => 'Shopping';
+  String get categoryShopping => '買い物';
 
   @override
-  String get categoryBills => 'Bills & Utilities';
+  String get categoryBills => '請求・光熱費';
 
   @override
-  String get categoryEntertainment => 'Entertainment';
+  String get categoryEntertainment => 'エンターテインメント';
 
   @override
-  String get categoryHealth => 'Health & Fitness';
+  String get categoryHealth => '健康・フィットネス';
 
   @override
-  String get categoryEducation => 'Education';
+  String get categoryEducation => '教育';
 
   @override
-  String get categoryTravel => 'Travel';
+  String get categoryTravel => '旅行';
 
   @override
-  String get categorySalary => 'Salary';
+  String get categorySalary => '給与';
 
   @override
-  String get categoryFreelance => 'Freelance';
+  String get categoryFreelance => 'フリーランス';
 
   @override
-  String get categoryInvestments => 'Investments';
+  String get categoryInvestments => '投資';
 
   @override
-  String get categoryGift => 'Gift';
+  String get categoryGift => 'ギフト';
 
   @override
-  String get categoryOther => 'Other';
+  String get categoryOther => 'その他';
 
   @override
-  String get categoryGroceries => 'Groceries';
+  String get categoryGroceries => '食料品';
 
   @override
-  String get categoryDining => 'Dining';
+  String get categoryDining => '外食';
 
   @override
-  String get categoryCoffee => 'Coffee';
+  String get categoryCoffee => 'コーヒー';
 
   @override
-  String get categoryUtilities => 'Utilities';
+  String get categoryUtilities => '光熱費';
 
   @override
-  String get categoryInternet => 'Internet';
+  String get categoryInternet => 'インターネット';
 
   @override
-  String get categoryPhone => 'Phone';
+  String get categoryPhone => '電話';
 
   @override
-  String get categoryInsurance => 'Insurance';
+  String get categoryInsurance => '保険';
 
   @override
-  String get categorySubscriptions => 'Subscriptions';
+  String get categorySubscriptions => 'サブスクリプション';
 
   @override
-  String get categoryPersonalCare => 'Personal care';
+  String get categoryPersonalCare => '身だしなみ';
 
   @override
-  String get categoryClothing => 'Clothing';
+  String get categoryClothing => '衣類';
 
   @override
-  String get categoryElectronics => 'Electronics';
+  String get categoryElectronics => '電子機器';
 
   @override
-  String get categoryHomeSupplies => 'Home supplies';
+  String get categoryHomeSupplies => '家庭用品';
 
   @override
-  String get categoryPets => 'Pets';
+  String get categoryPets => 'ペット';
 
   @override
-  String get categoryChildcare => 'Childcare';
+  String get categoryChildcare => '育児';
 
   @override
-  String get categoryFamily => 'Family';
+  String get categoryFamily => '家族';
 
   @override
-  String get categoryFitness => 'Fitness';
+  String get categoryFitness => 'フィットネス';
 
   @override
-  String get categorySports => 'Sports';
+  String get categorySports => 'スポーツ';
 
   @override
-  String get categoryMedicine => 'Medicine';
+  String get categoryMedicine => '医薬品';
 
   @override
-  String get categoryMedical => 'Medical';
+  String get categoryMedical => '医療';
 
   @override
-  String get categoryCharity => 'Charity';
+  String get categoryCharity => '寄付';
 
   @override
-  String get categoryTaxes => 'Taxes';
+  String get categoryTaxes => '税金';
 
   @override
-  String get categoryFees => 'Fees';
+  String get categoryFees => '手数料';
 
   @override
-  String get categoryDebt => 'Debt';
+  String get categoryDebt => '借金';
 
   @override
-  String get categorySavings => 'Savings';
+  String get categorySavings => '貯金';
 
   @override
-  String get categoryRepairs => 'Repairs';
+  String get categoryRepairs => '修理';
 
   @override
-  String get categoryCarMaintenance => 'Car maintenance';
+  String get categoryCarMaintenance => '車のメンテナンス';
 
   @override
-  String get categoryFuel => 'Fuel';
+  String get categoryFuel => '燃料';
 
   @override
-  String get categoryParking => 'Parking';
+  String get categoryParking => '駐車場';
 
   @override
-  String get categoryPublicTransport => 'Public transport';
+  String get categoryPublicTransport => '公共交通機関';
 
   @override
-  String get categoryRent => 'Rent';
+  String get categoryRent => '家賃';
 
   @override
-  String get categoryMortgage => 'Mortgage';
+  String get categoryMortgage => '住宅ローン';
 
   @override
-  String get categoryBonus => 'Bonus';
+  String get categoryBonus => 'ボーナス';
 
   @override
-  String get categoryCommission => 'Commission';
+  String get categoryCommission => 'コミッション';
 
   @override
-  String get categoryPension => 'Pension';
+  String get categoryPension => '年金';
 
   @override
-  String get categoryInterest => 'Interest';
+  String get categoryInterest => '利息';
 
   @override
-  String get categoryDividends => 'Dividends';
+  String get categoryDividends => '配当';
 
   @override
-  String get categoryCashback => 'Cashback';
+  String get categoryCashback => 'キャッシュバック';
 
   @override
-  String get categoryRefund => 'Refund';
+  String get categoryRefund => '返金';
 
   @override
-  String get categoryRentalIncome => 'Rental income';
+  String get categoryRentalIncome => '賃貸収入';
 
   @override
-  String get addCategory => 'New category';
+  String get addCategory => '新しいカテゴリー';
 
   @override
-  String get filterByCategory => 'Filter by category';
+  String get filterByCategory => 'カテゴリーで絞り込む';
 
   @override
-  String get allCategories => 'All categories';
+  String get allCategories => 'すべてのカテゴリー';
 
   @override
-  String get clearFilters => 'Clear filters';
+  String get clearFilters => 'フィルターをクリア';
 
   @override
   String spentInCategory(String category, String amount) {
@@ -2005,89 +2009,86 @@ class AppL10nJa extends AppL10n {
   }
 
   @override
-  String get allTime => 'All time';
+  String get allTime => '全期間';
 
   @override
-  String get customRange => 'Custom';
+  String get customRange => 'カスタム';
 
   @override
-  String get selectDateRange => 'Choose a period';
+  String get selectDateRange => '期間を選択';
 
   @override
   String rangeApplied(String start, String end) {
-    return 'Showing $start – $end';
+    return '表示中：$start – $end';
   }
 
   @override
-  String get loans => 'Loans';
+  String get loans => 'ローン';
 
   @override
-  String get debts => 'Debts';
+  String get debts => '借金';
 
   @override
-  String get noLoansTitle => 'No loans';
+  String get noLoansTitle => 'ローンはありません';
 
   @override
-  String get noLoansBody => 'You have no active loans.';
+  String get noLoansBody => '現在有効なローンはありません。';
 
   @override
-  String get emptyHealthTitle => 'No Financial Score Yet';
+  String get emptyHealthTitle => '財務スコアはまだありません';
 
   @override
-  String get emptyHealthDescription =>
-      'We need a little financial activity before we can calculate an accurate health score.';
+  String get emptyHealthDescription => '正確な健全性スコアを計算するには、もう少し財務アクティビティが必要です。';
 
   @override
-  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+  String get emptyHealthAddTransactions => '収入または支出の取引を追加';
 
   @override
-  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+  String get emptyHealthSetBudgets => '月間予算を設定';
 
   @override
-  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+  String get emptyHealthTrackLoans => 'ローンや借金を記録（任意）';
 
   @override
-  String get emptyHealthCardSubtitle =>
-      'Add transactions to calculate your score and get insights.';
+  String get emptyHealthCardSubtitle => '取引を追加してスコアを計算し、インサイトを確認しましょう。';
 
   @override
-  String get smartBudgetSplit => 'Smart Budget Split';
+  String get smartBudgetSplit => 'スマート予算分割';
 
   @override
-  String get smartBudgetSplitSubtitle =>
-      'Enter your monthly salary to calculate recommended limits';
+  String get smartBudgetSplitSubtitle => '推奨上限を計算するため、月給を入力してください';
 
   @override
-  String get monthlyNetSalary => 'Monthly Net Salary';
+  String get monthlyNetSalary => '月間手取り給与';
 
   @override
-  String get categoryAllocations => 'Category Allocations';
+  String get categoryAllocations => 'カテゴリー別配分';
 
   @override
   String totalBudgeted(String amount) {
-    return 'Total: $amount';
+    return '合計：$amount';
   }
 
   @override
-  String get applyAllBudgets => 'Apply All Budgets';
+  String get applyAllBudgets => 'すべての予算を適用';
 
   @override
-  String get applyingBudgets => 'Applying budgets...';
+  String get applyingBudgets => '予算を適用しています...';
 
   @override
   String budgetsCreatedSuccess(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count category budgets created.',
-      one: '1 category budget created.',
+      other: '$countカテゴリーの予算を作成しました。',
+      one: '1カテゴリーの予算を作成しました。',
     );
     return '$_temp0';
   }
 
   @override
-  String get failedToSaveBudgets => 'Failed to save budgets.';
+  String get failedToSaveBudgets => '予算の保存に失敗しました。';
 
   @override
-  String get recommendedBudget => 'Recommended budget';
+  String get recommendedBudget => 'おすすめの予算';
 }

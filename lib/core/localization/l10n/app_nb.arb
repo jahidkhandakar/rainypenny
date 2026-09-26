@@ -934,7 +934,7 @@
 "skip": "Hopp over",
 "continueLabel": "Fortsett",
 "@continueLabel": {
-"description": "Primærhandling som går videre i en flerstegsprosess. Har et suffiks fordi "continue" er et Dart-nøkkelord."
+"description": "Primærhandling som går videre i en flerstegsprosess. Har et suffiks fordi continue er et Dart-nøkkelord."
 },
 "selected": "Valgt",
 "passwordRequired": "Skriv inn passordet ditt",
