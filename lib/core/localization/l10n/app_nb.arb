@@ -1,1419 +1,626 @@
 {
-"@@locale": "nb",
-"appName": "RainyPenny",
-"appTagline": "Spar til en regnværsdag",
-"navHome": "Hjem",
-"navTransactions": "Transaksjoner",
-"navAdd": "Legg til",
-"navReports": "Rapporter",
-"navProfile": "Profil",
-"greetingMorning": "God morgen, {name}",
-"@greetingMorning": {
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"greetingAfternoon": "God ettermiddag, {name}",
-"@greetingAfternoon": {
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"greetingEvening": "God kveld, {name}",
-"@greetingEvening": {
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"greetingSubtitle": "Her er din økonomiske oversikt",
-"totalBalance": "Total saldo",
-"vsLastPeriod": "vs. forrige periode",
-"income": "Inntekter",
-"expenses": "Utgifter",
-"netBalance": "Netto saldo",
-"lastThirtyDays": "Siste 30 dager",
-"quickActions": "Hurtighandlinger",
-"addIncome": "Legg til inntekt",
-"addExpense": "Legg til utgift",
-"spendingOverview": "Forbruksoversikt",
-"recentTransactions": "Siste transaksjoner",
-"seeAll": "Se alle",
-"viewAll": "Vis alle",
-"budgetProgress": "Budsjettfremdrift",
-"savingsGoals": "Sparemål",
-"financialInsight": "Økonomisk innsikt",
-"financialHealth": "Økonomisk helse",
-"ofTotal": "av {total}",
-"@ofTotal": {
-"placeholders": {
-"total": {
-"type": "String"
-}
-}
-},
-"searchTransactions": "Søk i transaksjoner",
-"filterAll": "Alle",
-"filterIncome": "Inntekter",
-"filterExpenses": "Utgifter",
-"today": "I dag",
-"yesterday": "I går",
-"noTransactionsTitle": "Ingen transaksjoner funnet",
-"noTransactionsBody": "Prøv et annet søk eller filter for å se mer av aktiviteten din.",
-"transactionCount": "{count, plural, =0{Ingen transaksjoner} =1{1 transaksjon} other{{count} transaksjoner}}",
-"@transactionCount": {
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"addTransaction": "Legg til transaksjon",
-"amount": "Beløp",
-"category": "Kategori",
-"date": "Dato",
-"note": "Notat",
-"noteHint": "Valgfritt notat",
-"saveIncome": "Lagre inntekt",
-"saveExpense": "Lagre utgift",
-"selectCategory": "Velg kategori",
-"transactionSaved": "Transaksjon lagret",
-"amountRequired": "Skriv inn et beløp større enn null",
-"titleRequired": "Gi transaksjonen et navn",
-"descriptionLabel": "Beskrivelse",
-"descriptionHint": "f.eks. Dagligvarer",
-"budget": "Budsjett",
-"budgets": "Budsjetter",
-"totalBudget": "Totalt budsjett",
-"spent": "Brukt",
-"remaining": "Gjenstår",
-"budgetUsed": "{percent}% brukt",
-"@budgetUsed": {
-"placeholders": {
-"percent": {
-"type": "int"
-}
-}
-},
-"onTrack": "På rett spor",
-"approachingLimit": "Nærmer seg grensen",
-"overBudget": "Over budsjett",
-"savings": "Sparing",
-"yourGoals": "Dine mål",
-"saved": "Sparte",
-"target": "Mål",
-"monthlyContribution": "Månedlig",
-"addFunds": "Legg til penger",
-"goalComplete": "Mål nådd",
-"monthsToGo": "{count, plural, =1{1 måned igjen} other{{count} måneder igjen}}",
-"@monthsToGo": {
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"loansAndDebts": "Lån og gjeld",
-"totalOutstanding": "Total utestående",
-"monthlyPayment": "Månedlig",
-"nextPayment": "Neste betaling",
-"paidOff": "{percent}% nedbetalt",
-"@paidOff": {
-"placeholders": {
-"percent": {
-"type": "int"
-}
-}
-},
-"interestRate": "Rente",
-"upcomingPayments": "Kommende betalinger",
-"dueInDays": "{count, plural, =0{Forfaller i dag} =1{Forfaller i morgen} other{Forfaller om {count} dager}}",
-"@dueInDays": {
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"overdue": "Forfalt",
-"reports": "Rapporter",
-"week": "Uke",
-"month": "Måned",
-"quarter": "Kvartal",
-"incomeVsExpenses": "Inntekter vs. utgifter",
-"spendingByCategory": "Forbruk etter kategori",
-"budgetPerformance": "Budsjettresultater",
-"insights": "Innsikt",
-"savingsRate": "Sparerate",
-"profile": "Profil",
-"account": "Konto",
-"personalInformation": "Personopplysninger",
-"changePassword": "Endre passord",
-"notifications": "Varsler",
-"preferences": "Innstillinger",
-"language": "Språk",
-"currency": "Valuta",
-"theme": "Tema",
-"security": "Sikkerhet",
-"privacyAndSecurity": "Personvern og sikkerhet",
-"help": "Hjelp",
-"helpAndSupport": "Hjelp og støtte",
-"termsAndConditions": "Vilkår og betingelser",
-"logOut": "Logg ut",
-"memberSince": "Medlem siden {date}",
-"@memberSince": {
-"placeholders": {
-"date": {
-"type": "String"
-}
-}
-},
-"themeSystem": "System",
-"themeLight": "Lys",
-"themeDark": "Mørk",
-"settings": "Innstillinger",
-"noNotificationsTitle": "Du er helt oppdatert",
-"noNotificationsBody": "Nye innsikter og påminnelser vises her.",
-"cancel": "Avbryt",
-"save": "Lagre",
-"done": "Ferdig",
-"retry": "Prøv igjen",
-"close": "Lukk",
-"somethingWentWrong": "Noe gikk galt",
-"comingSoon": "Kommer snart i fullversjonen",
-"edit": "Rediger",
-"delete": "Slett",
-"undo": "Angre",
-"add": "Legg til",
-"create": "Opprett",
-"nameRequired": "Gi dette et navn",
-"amountAboveZero": "Skriv inn et beløp større enn null",
-"editTransaction": "Rediger transaksjon",
-"deleteTransaction": "Slette transaksjonen?",
-"deleteTransactionBody": "{title} fjernes fra regnskapet ditt.",
-"@deleteTransactionBody": {
-"placeholders": {
-"title": {
-"type": "String"
-}
-}
-},
-"transactionDeleted": "Transaksjon slettet",
-"transactionUpdated": "Transaksjon oppdatert",
-"newBudget": "Nytt budsjett",
-"editBudget": "Rediger budsjett",
-"budgetLimit": "Månedlig grense",
-"deleteBudget": "Slette budsjettet?",
-"deleteBudgetBody": "Budsjettet for {category} fjernes. Transaksjonene dine påvirkes ikke.",
-"@deleteBudgetBody": {
-"placeholders": {
-"category": {
-"type": "String"
-}
-}
-},
-"budgetSaved": "Budsjett lagret",
-"budgetDeleted": "Budsjett slettet",
-"allCategoriesBudgeted": "Alle kategorier har allerede et budsjett",
-"noBudgetsTitle": "Ingen budsjetter ennå",
-"noBudgetsBody": "Sett en månedlig grense for en kategori for å begynne å følge med.",
-"newGoal": "Nytt mål",
-"editGoal": "Rediger mål",
-"goalName": "Målnavn",
-"goalNameHint": "f.eks. Bufferkonto",
-"targetAmount": "Målbeløp",
-"alreadySaved": "Allerede spart",
-"deleteGoal": "Slette målet?",
-"deleteGoalBody": "{name} og fremdriften fjernes.",
-"@deleteGoalBody": {
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"goalSaved": "Mål lagret",
-"goalDeleted": "Mål slettet",
-"noGoalsTitle": "Ingen sparemål ennå",
-"noGoalsBody": "Sett et mål, så følger RainyPenny fremdriften din.",
-"fundsAdded": "Penger lagt til",
-"newDebt": "Nytt lån eller kort",
-"editDebt": "Rediger lån",
-"debtName": "Navn",
-"debtNameHint": "f.eks. Billån",
-"lender": "Långiver",
-"lenderHint": "f.eks. Meridian Bank",
-"originalAmount": "Opprinnelig beløp",
-"creditLimit": "Kredittgrense",
-"remainingBalance": "Gjenstående saldo",
-"interestRatePercent": "Rente (%)",
-"kindLoan": "Lån",
-"kindCreditCard": "Kredittkort",
-"recordPayment": "Registrer betaling",
-"paymentRecorded": "Betaling registrert",
-"deleteDebt": "Slette denne gjelden?",
-"deleteDebtBody": "{name} fjernes fra gjeldsoversikten din.",
-"@deleteDebtBody": {
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"debtSaved": "Lagret",
-"debtDeleted": "Slettet",
-"noDebtsTitle": "Ingen gjeld registrert",
-"noDebtsBody": "Legg til et lån eller kredittkort for å holde oversikt over nedbetalingene.",
-"insightBudgetExceededTitle": "{subject}-budsjettet er overskredet",
-"@insightBudgetExceededTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightBudgetExceededBody": "Du har brukt {amount} mer enn {subject}-budsjettet ditt for denne perioden.",
-"@insightBudgetExceededBody": {
-"placeholders": {
-"amount": {
-"type": "String"
-},
-"subject": {
-"type": "String"
-}
-}
-},
-"insightBudgetApproachingTitle": "{subject} nærmer seg grensen",
-"@insightBudgetApproachingTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightBudgetApproachingBody": "{subject}-budsjettet ditt er brukt {percent}%, og {amount} gjenstår.",
-"@insightBudgetApproachingBody": {
-"placeholders": {
-"subject": {
-"type": "String"
-},
-"percent": {
-"type": "int"
-},
-"amount": {
-"type": "String"
-}
-}
-},
-"insightOverIncomeTitle": "Forbruket er høyere enn inntekten",
-"insightOverIncomeBody": "Du brukte mer enn du tjente i denne perioden. Se på de største kategoriene dine for å få balansen tilbake.",
-"insightCategoryUpTitle": "Forbruket på {subject} har økt",
-"@insightCategoryUpTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightCategoryUpBody": "Forbruket ditt på {subject} er {percent}% høyere enn i forrige periode.",
-"@insightCategoryUpBody": {
-"placeholders": {
-"subject": {
-"type": "String"
-},
-"percent": {
-"type": "int"
-}
-}
-},
-"insightTrendDownTitle": "Forbruket går ned",
-"insightTrendDownBody": "Det totale forbruket er {percent}% lavere enn i forrige periode.",
-"@insightTrendDownBody": {
-"placeholders": {
-"percent": {
-"type": "int"
-}
-}
-},
-"insightTrendUpTitle": "Forbruket går opp",
-"insightTrendUpBody": "Det totale forbruket er {percent}% høyere enn i forrige periode.",
-"@insightTrendUpBody": {
-"placeholders": {
-"percent": {
-"type": "int"
-}
-}
-},
-"insightSavingsStrongTitle": "God sparing denne perioden",
-"insightSavingsStrongBody": "Du beholdt {percent}% av inntekten din — godt over målet på {target}%.",
-"@insightSavingsStrongBody": {
-"placeholders": {
-"percent": {
-"type": "int"
-},
-"target": {
-"type": "int"
-}
-}
-},
-"insightSavingsLowTitle": "Spareraten er under målet",
-"insightSavingsLowBody": "Du beholdt {percent}% av inntekten din denne perioden. Sikt mot {target}%.",
-"@insightSavingsLowBody": {
-"placeholders": {
-"percent": {
-"type": "int"
-},
-"target": {
-"type": "int"
-}
-}
-},
-"insightGoalNearlyTitle": "{subject} er nesten fullfinansiert",
-"@insightGoalNearlyTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightGoalNearlyBody": "Bare {amount} gjenstår for å nå {subject}.",
-"@insightGoalNearlyBody": {
-"placeholders": {
-"amount": {
-"type": "String"
-},
-"subject": {
-"type": "String"
-}
-}
-},
-"insightGoalOnTrackTitle": "På rett spor mot {subject}",
-"@insightGoalOnTrackTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightGoalOnTrackBody": "Med {amount} i måneden når du dette målet om {months, plural, =1{1 måned} other{{months} måneder}}.",
-"@insightGoalOnTrackBody": {
-"placeholders": {
-"amount": {
-"type": "String"
-},
-"months": {
-"type": "int"
-}
-}
-},
-"insightDebtOverdueTitle": "{subject}-betalingen er forfalt",
-"@insightDebtOverdueTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightDebtOverdueBody": "Betalingen på {amount} for {subject} er {days, plural, =1{1 dag} other{{days} dager}} forsinket.",
-"@insightDebtOverdueBody": {
-"placeholders": {
-"subject": {
-"type": "String"
-},
-"amount": {
-"type": "String"
-},
-"days": {
-"type": "int"
-}
-}
-},
-"insightDebtDueTitle": "{subject}-betalingen nærmer seg",
-"@insightDebtDueTitle": {
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightDebtDueBody": "{amount} forfaller {days, plural, =0{i dag} =1{i morgen} other{om {days} dager}}.",
-"@insightDebtDueBody": {
-"placeholders": {
-"amount": {
-"type": "String"
-},
-"days": {
-"type": "int"
-}
-}
-},
-"signIn": "Logg inn",
-"signUp": "Opprett konto",
-"signInSubtitle": "Velkommen tilbake. Pengene dine venter.",
-"signUpSubtitle": "Noen få opplysninger, så er du klar.",
-"emailLabel": "E-post",
-"emailHint": "[du@epost.no](mailto:du@epost.no)",
-"passwordLabel": "Passord",
-"passwordHint": "Minst 8 tegn",
-"fullNameLabel": "Fullt navn",
-"fullNameHint": "Alex Morgan",
-"forgotPassword": "Glemt passord?",
-"resetSent": "Sjekk innboksen for en lenke for å tilbakestille passordet",
-"noAccountYet": "Ny her?",
-"haveAccount": "Har du allerede en konto?",
-"emailInvalid": "Skriv inn en gyldig e-postadresse",
-"passwordTooShort": "Bruk minst 8 tegn",
-"signOutConfirm": "Logge ut?",
-"signOutBody": "Du må logge inn igjen for å se økonomien din.",
-"dataSource": "Datakilde",
-"insightWeeklySummaryTitle": "Uken din i gjennomgang",
-"insightWeeklySummaryBody": "Se hvor pengene dine gikk denne uken, og hvordan budsjettene dine holder seg.",
-"notificationSettings": "Varsler",
-"alertsSection": "Varsler",
-"budgetAlerts": "Budsjettvarsler",
-"budgetAlertsBody": "Når et budsjett nærmer seg eller overskrider grensen",
-"paymentReminders": "Betalingspåminnelser",
-"paymentRemindersBody": "Noen dager før en betaling forfaller",
-"savingsUpdates": "Spareoppdateringer",
-"savingsUpdatesBody": "Fremgang mot målene dine",
-"weeklySummaryLabel": "Ukentlig sammendrag",
-"weeklySummaryBody": "Et sammendrag av uken som gikk",
-"scheduleSection": "Tidspunkt",
-"reminderTime": "Påminnelsestidspunkt",
-"quietHours": "Stilleperioder",
-"quietHoursValue": "{start} – {end}",
-"@quietHoursValue": {
-"placeholders": {
-"start": {
-"type": "String"
-},
-"end": {
-"type": "String"
-}
-}
-},
-"summaryDay": "Sammendragsdag",
-"permissionRequired": "Varsler er slått av",
-"permissionRequiredBody": "Tillat varsler slik at RainyPenny kan varsle deg før et budsjett eller en betaling løper fra deg.",
-"allowNotifications": "Tillat varsler",
-"permissionDenied": "Varsler er blokkert. Du kan slå dem på i enhetsinnstillingene.",
-"upcomingAlerts": "Planlagt",
-"noScheduledAlerts": "Ingenting er planlagt akkurat nå",
-"noScheduledAlertsBody": "Varsler vises her når budsjettene eller betalingene dine nærmer seg grensene sine.",
-"scheduledFor": "Planlagt {date}",
-"@scheduledFor": {
-"placeholders": {
-"date": {
-"type": "String"
-}
-}
-},
-"everyWeek": "Hver uke",
-"allNotificationsOff": "Alle varsler er slått av",
-"needsAttention": "Krever oppmerksomhet",
-"quickActionsTitle": "Hva vil du gjøre?",
-"createSection": "Registrer",
-"jumpToSection": "Gå til",
-"addLoanAction": "Legg til lån",
-"addBudgetAction": "Legg til budsjett",
-"addGoalAction": "Legg til mål",
-"longPressHint": "Tips: Hold inne + for å registrere en utgift med en gang",
-"searchCurrencies": "Søk etter valutaer",
-"@searchCurrencies": {
-"description": "Valutavelger: searchCurrencies"
-},
-"noCurrenciesFound": "Ingen valutaer funnet",
-"@noCurrenciesFound": {
-"description": "Valutavelger: noCurrenciesFound"
-},
-"noCurrenciesFoundMessage": "Prøv en annen kode, et annet symbol eller navn.",
-"@noCurrenciesFoundMessage": {
-"description": "Valutavelger: noCurrenciesFoundMessage"
-},
-"popularCurrencies": "Populære",
-"@popularCurrencies": {
-"description": "Valutavelger: popularCurrencies"
-},
-"allCurrencies": "Alle valutaer",
-"@allCurrencies": {
-"description": "Valutavelger: allCurrencies"
-},
-"totalLoanAmount": "Totalt lånebeløp",
-"@totalLoanAmount": {
-"description": "Lånedetaljer: det opprinnelige lånebeløpet"
-},
-"installmentAmount": "Avdragsbeløp",
-"@installmentAmount": {
-"description": "Lånedetaljer: beløpet som forfaller hver periode"
-},
-"numberOfInstallments": "Antall avdrag",
-"@numberOfInstallments": {
-"description": "Låneeditor: lengden på nedbetalingsplanen"
-},
-"paidInstallments": "Betalte avdrag",
-"@paidInstallments": {
-"description": "Lånedetaljer: avdrag som allerede er betalt"
-},
-"remainingInstallments": "Gjenstående avdrag",
-"@remainingInstallments": {
-"description": "Lånedetaljer: avdrag som gjenstår å betale"
-},
-"installmentsPaidOf": "{paid} av {total} betalt",
-"@installmentsPaidOf": {
-"description": "Lånedetaljer: avdragsteller",
-"placeholders": {
-"paid": {
-"type": "int"
-},
-"total": {
-"type": "int"
-}
-}
-},
-"finalPayment": "Siste betaling",
-"@finalPayment": {
-"description": "Lånedetaljer: datoen for siste avdrag"
-},
-"paymentDueDate": "Forfallsdato",
-"@paymentDueDate": {
-"description": "Lånedetaljer: dagen i måneden betalingen forfaller"
-},
-"dueOnDayOfMonth": "Dag {day} hver måned",
-"@dueOnDayOfMonth": {
-"description": "Lånedetaljer: gjentakende forfallsdag",
-"placeholders": {
-"day": {
-"type": "int"
-}
-}
-},
-"loanStatus": "Status",
-"@loanStatus": {
-"description": "Lånedetaljer: gjeldens nåværende status"
-},
-"statusActive": "På rett spor",
-"@statusActive": {
-"description": "Lånestatus: nedbetales som normalt"
-},
-"statusDueSoon": "Forfaller snart",
-"@statusDueSoon": {
-"description": "Lånestatus: innenfor påminnelsesperioden"
-},
-"statusOverdue": "Forfalt",
-"@statusOverdue": {
-"description": "Lånestatus: forfallsdatoen har passert"
-},
-"statusCompleted": "Nedbetalt",
-"@statusCompleted": {
-"description": "Lånestatus: fullt nedbetalt"
-},
-"repaymentProgress": "Nedbetalingsfremdrift",
-"@repaymentProgress": {
-"description": "Lånedetaljer: seksjonsoverskrift for fremdriftslinjene"
-},
-"byAmount": "Etter beløp",
-"@byAmount": {
-"description": "Lånedetaljer: fremdrift målt i penger"
-},
-"byInstallments": "Etter avdrag",
-"@byInstallments": {
-"description": "Lånedetaljer: fremdrift målt i betalinger"
-},
-"startDate": "Startdato",
-"@startDate": {
-"description": "Låneeditor: når nedbetalingen startet"
-},
-"openEnded": "Uten fast sluttdato",
-"@openEnded": {
-"description": "Lånedetaljer: en løpende saldo uten fast løpetid"
-},
-"loanDetails": "Lånedetaljer",
-"@loanDetails": {
-"description": "Tittel på lånedetaljskjermen"
-},
-"notSet": "Ikke angitt",
-"@notSet": {
-"description": "Vises når en valgfri verdi ikke er angitt"
-},
-"insightDebtDueTodayTitle": "{subject} forfaller i dag",
-"@insightDebtDueTodayTitle": {
-"description": "Varsel: et avdrag forfaller i dag",
-"placeholders": {
-"subject": {
-"type": "String"
-}
-}
-},
-"insightDebtDueTodayBody": "Betalingen på {amount} forfaller i dag. Et raskt trykk holder den i rute.",
-"@insightDebtDueTodayBody": {
-"description": "Varseltekst: avdrag forfaller i dag",
-"placeholders": {
-"amount": {
-"type": "String"
-}
-}
-},
-"remindMorningTitle": "God morgen ☀️",
-"@remindMorningTitle": {
-"description": "Tittel på morgenpåminnelse for utgifter"
-},
-"remindMorningBody": "Start dagen med oversikt over pengene dine. Noe du vil legge til fra i går?",
-"@remindMorningBody": {
-"description": "Tekst for morgenpåminnelse om utgifter"
-},
-"remindNoonTitle": "Sjekk inn midt på dagen",
-"@remindNoonTitle": {
-"description": "Tittel på påminnelse om utgifter midt på dagen"
-},
-"remindNoonBody": "Lunsj, kaffe, en billett? Legg det til på noen sekunder.",
-"@remindNoonBody": {
-"description": "Tekst for påminnelse om utgifter midt på dagen"
-},
-"remindAfternoonTitle": "Rask oppdatering",
-"@remindAfternoonTitle": {
-"description": "Tittel på ettermiddagspåminnelse"
-},
-"remindAfternoonBody": "Registrer det du har brukt så langt, og hold dagens oversikt oppdatert.",
-"@remindAfternoonBody": {
-"description": "Tekst for ettermiddagspåminnelse"
-},
-"remindEveningTitle": "Avslutt dagen",
-"@remindEveningTitle": {
-"description": "Tittel på kveldspåminnelse"
-},
-"remindEveningBody": "To minutter nå, så er dagens tall komplette.",
-"@remindEveningBody": {
-"description": "Tekst for kveldspåminnelse"
-},
-"happyWeekendTitle": "God helg! 🎉",
-"@happyWeekendTitle": {
-"description": "Tittel på helgehilsen"
-},
-"happyWeekendBody": "Kos deg — og hold øye med helgeforbruket.",
-"@happyWeekendBody": {
-"description": "Tekst for helgehilsen"
-},
-"dailyReminders": "Daglige utgiftspåminnelser",
-"@dailyReminders": {
-"description": "Varselinnstilling: daglige påminnelser"
-},
-"dailyRemindersBody": "Vennlige påminnelser som hjelper deg å holde utgiftene oppdatert",
-"@dailyRemindersBody": {
-"description": "Beskrivelse av varselinnstilling"
-},
-"weekendGreeting": "Helgehilsen",
-"@weekendGreeting": {
-"description": "Varselinnstilling: helgehilsen"
-},
-"weekendGreetingBody": "En hyggelig hilsen i starten av helgen",
-"@weekendGreetingBody": {
-"description": "Beskrivelse av varselinnstilling"
-},
-"reminderTimesSection": "Påminnelsestidspunkter",
-"@reminderTimesSection": {
-"description": "Seksjonsoverskrift for de fire daglige tidspunktene"
-},
-"slotMorning": "Morgen",
-"@slotMorning": {
-"description": "Daglig påminnelsestidspunkt"
-},
-"slotNoon": "Midt på dagen",
-"@slotNoon": {
-"description": "Daglig påminnelsestidspunkt"
-},
-"slotAfternoon": "Ettermiddag",
-"@slotAfternoon": {
-"description": "Daglig påminnelsestidspunkt"
-},
-"slotEvening": "Kveld",
-"@slotEvening": {
-"description": "Daglig påminnelsestidspunkt"
-},
-"everyDay": "Hver dag",
-"@everyDay": {
-"description": "Hvor ofte et gjentakende varsel sendes"
-},
-"financialReport": "Økonomisk rapport",
-"@financialReport": {
-"description": "Tittel på eksportert PDF"
-},
-"preparedFor": "Utarbeidet for",
-"@preparedFor": {
-"description": "PDF-forside: hvem rapporten gjelder"
-},
-"generatedOn": "Generert",
-"@generatedOn": {
-"description": "PDF-forside: datoen rapporten ble generert"
-},
-"reportDisclaimer": "Generert av RainyPenny fra dine egne registreringer.",
-"@reportDisclaimer": {
-"description": "Merknad i PDF-bunnteksten"
-},
-"pageOf": "Side {page} av {total}",
-"@pageOf": {
-"description": "Sidetall i PDF-bunnteksten",
-"placeholders": {
-"page": {
-"type": "int"
-},
-"total": {
-"type": "int"
-}
-}
-},
-"overview": "Oversikt",
-"@overview": {
-"description": "PDF-seksjon: hovedtallene"
-},
-"description": "Beskrivelse",
-"@description": {
-"description": "Kolonneoverskrift i tabell"
-},
-"totalIncome": "Totale inntekter",
-"@totalIncome": {
-"description": "Rad i sammendragstabell"
-},
-"totalExpenses": "Totale utgifter",
-"@totalExpenses": {
-"description": "Rad i sammendragstabell"
-},
-"totalSaved": "Totalt spart",
-"@totalSaved": {
-"description": "Rad i sammendragstabell"
-},
-"shareOfTotal": "Andel",
-"@shareOfTotal": {
-"description": "Tabellkolonne: denne kategoriens andel av det totale forbruket"
-},
-"used": "Brukt",
-"@used": {
-"description": "Tabellkolonne: prosentandel av budsjettet som er brukt"
-},
-"goal": "Mål",
-"@goal": {
-"description": "Kolonneoverskrift for sparemål"
-},
-"targetDate": "Måldato",
-"@targetDate": {
-"description": "Kolonneoverskrift i tabell"
-},
-"progress": "Fremdrift",
-"@progress": {
-"description": "Kolonneoverskrift i tabell"
-},
-"paidOffShort": "Betalt",
-"@paidOffShort": {
-"description": "Tabellkolonne: prosentandel av gjelden som er nedbetalt"
-},
-"transactions": "Transaksjoner",
-"@transactions": {
-"description": "PDF-seksjon med individuelle poster"
-},
-"andMoreTransactions": "{count, plural, =1{og 1 transaksjon til} other{og {count} transaksjoner til}}",
-"@andMoreTransactions": {
-"description": "PDF-merknad når transaksjonstabellen er forkortet",
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"exportPdf": "Eksporter PDF",
-"@exportPdf": {
-"description": "Knapp som oppretter rapporten"
-},
-"sharePdf": "Del rapport",
-"@sharePdf": {
-"description": "Knapp som åpner delingsmenyen"
-},
-"preparingReport": "Forbereder rapporten …",
-"@preparingReport": {
-"description": "Fremdriftsmelding mens PDF-en opprettes"
-},
-"reportReady": "Rapporten er klar",
-"@reportReady": {
-"description": "Bekreftelse når PDF-en er opprettet"
-},
-"reportFailed": "Kunne ikke opprette rapporten",
-"@reportFailed": {
-"description": "Feilmelding når eksporten mislykkes"
-},
-"categories": "Kategorier",
-"@categories": {
-"description": "Tittel på skjermen for kategorihåndtering"
-},
-"categoriesIntro": "Legg til egne kategorier for å sortere inntekter og utgifter akkurat slik du tenker på dem.",
-"@categoriesIntro": {
-"description": "Forklarer hva skjermen brukes til"
-},
-"expenseCategories": "Utgiftskategorier",
-"@expenseCategories": {
-"description": "Seksjonsoverskrift"
-},
-"incomeCategories": "Inntektskategorier",
-"@incomeCategories": {
-"description": "Seksjonsoverskrift"
-},
-"newCategory": "Ny kategori",
-"@newCategory": {
-"description": "Tittel på opprettelsesskjema"
-},
-"editCategory": "Rediger kategori",
-"@editCategory": {
-"description": "Tittel på redigeringsskjema"
-},
-"categoryName": "Navn",
-"@categoryName": {
-"description": "Feltetikett for kategori"
-},
-"categoryNameHint": "f.eks. Kjæledyr",
-"@categoryNameHint": {
-"description": "Plassholder for kategorinavn"
-},
-"icon": "Ikon",
-"@icon": {
-"description": "Feltetikett for kategori"
-},
-"categorySaved": "Kategori lagret",
-"@categorySaved": {
-"description": "Bekreftelse"
-},
-"categoryDeleted": "Kategori slettet",
-"@categoryDeleted": {
-"description": "Bekreftelse"
-},
-"deleteCategory": "Slette denne kategorien?",
-"@deleteCategory": {
-"description": "Tittel på slettingsbekreftelse"
-},
-"deleteCategoryBody": "{name} fjernes fra kategoriene dine.",
-"@deleteCategoryBody": {
-"description": "Tekst for slettingsbekreftelse",
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"categoryInUse": "{count, plural, =1{1 post bruker fortsatt denne kategorien} other{{count} poster bruker fortsatt denne kategorien}}",
-"@categoryInUse": {
-"description": "Forklarer hvorfor en kategori ikke kan slettes",
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"noCategoriesYet": "Ingenting her ennå.",
-"@noCategoriesYet": {
-"description": "Tom gruppe i kategorilisten"
-},
-"builtIn": "Innebygd",
-"@builtIn": {
-"description": "Markerer en felles, skrivebeskyttet kategori"
-},
-"manageCategories": "Administrer kategorier",
-"@manageCategories": {
-"description": "Innstillingsrad som åpner kategoriskjermen"
-},
-"expense": "Utgift",
-"@expense": {
-"description": "Entallsbetegnelse for en utgående transaksjon"
-},
-"languageNote": "Arabisk, urdu, persisk og hebraisk bytter hele grensesnittet til høyre-til-venstre, inkludert diagrammer og PDF-rapporter.",
-"@languageNote": {
-"description": "Merknad under språkvelgeren som forklarer støtte for høyre-til-venstre"
-},
-"next": "Neste",
-"back": "Tilbake",
-"skip": "Hopp over",
-"continueLabel": "Fortsett",
-"@continueLabel": {
-"description": "Primærhandling som går videre i en flerstegsprosess. Har et suffiks fordi continue er et Dart-nøkkelord."
-},
-"selected": "Valgt",
-"passwordRequired": "Skriv inn passordet ditt",
-"newPasswordLabel": "Nytt passord",
-"confirmPasswordLabel": "Bekreft passord",
-"passwordsDoNotMatch": "Passordene må være like",
-"showPassword": "Vis passord",
-"hidePassword": "Skjul passord",
-"savePassword": "Lagre passord",
-"backToSignIn": "Tilbake til innlogging",
-"alreadyHaveAccount": "Jeg har allerede en konto",
-"getStarted": "Kom i gang",
-"acceptTerms": "Jeg godtar tjenestevilkårene og personvernerklæringen",
-"acceptTermsRequired": "Godta for å fortsette",
-"passwordStrengthTooShort": "For kort",
-"passwordStrengthWeak": "Svakt",
-"passwordStrengthFair": "Middels",
-"passwordStrengthGood": "Godt",
-"passwordStrengthStrong": "Sterkt",
-"passwordAdvice": "En lang frase du husker er bedre enn en kort med mange symboler. Unngå noe du allerede bruker et annet sted.",
-"authInvalidCredentials": "E-posten og passordet samsvarer ikke med en konto",
-"authEmailNotConfirmed": "Bekreft e-postadressen din før du logger inn",
-"authEmailAlreadyRegistered": "Det finnes allerede en konto med denne e-postadressen",
-"authWeakPassword": "Velg et lengre passord",
-"authRateLimited": "For mange forsøk. Prøv igjen om noen minutter",
-"authNetworkError": "Ingen forbindelse. Sjekk nettverket og prøv igjen",
-"authGenericError": "Noe gikk galt. Prøv igjen",
-"confirmEmailTitle": "Sjekk e-posten din",
-"confirmEmailBody": "Vi sendte en bekreftelseslenke til {email}. Åpne den for å fullføre oppsettet av kontoen din.",
-"@confirmEmailBody": {
-"placeholders": {
-"email": {
-"type": "String"
-}
-}
-},
-"resendConfirmation": "Send bekreftelses-e-post på nytt",
-"confirmationResent": "Bekreftelses-e-post sendt",
-"forgotPasswordTitle": "Tilbakestill passordet ditt",
-"forgotPasswordSubtitle": "Skriv inn e-postadressen du registrerte deg med, så sender vi deg en lenke for å velge et nytt passord.",
-"sendResetLink": "Send lenke for tilbakestilling",
-"resetLinkSentTitle": "Lenke for tilbakestilling sendt",
-"resetLinkSentBody": "Hvis {email} har en konto, er en lenke for tilbakestilling på vei.",
-"@resetLinkSentBody": {
-"description": "Bevisst betinget: å bekrefte om en adresse er registrert, ville gjort det mulig å kartlegge appens brukere.",
-"placeholders": {
-"email": {
-"type": "String"
-}
-}
-},
-"resetLinkSentHint": "Lenken utløper om en time. Hvis den ikke kommer, sjekk søppelposten før du ber om en ny.",
-"tryAnotherEmail": "Bruk en annen e-post",
-"resetPasswordTitle": "Velg et nytt passord",
-"resetPasswordSubtitle": "Velg noe du ikke har brukt på denne kontoen før.",
-"passwordChangedTitle": "Passord oppdatert",
-"passwordChangedBody": "Det nye passordet ditt er lagret. Du er logget inn og klar til å fortsette.",
-"demoModeHint": "Demoversjon — ingen konto nødvendig",
-"demoModeFill": "Fyll inn",
-"welcomeTrackTitle": "Se hvor pengene dine går",
-"welcomeTrackBody": "Registrer det som kommer inn og det som går ut. RainyPenny gjør det om til en oversikt du faktisk kan lese.",
-"welcomeBudgetTitle": "Sett grenser som holder",
-"welcomeBudgetBody": "Gi hver del av forbruket ditt en månedlig grense, og få beskjed før du går over den, ikke etterpå.",
-"welcomeGoalsTitle": "Spar til det som betyr noe",
-"welcomeGoalsBody": "Gi målet et navn, sett et målbeløp og se det fylles opp. Det er enklere å bygge en buffer når du kan se fremgangen.",
-"welcomePrivacyTitle": "Pengene dine forblir dine",
-"welcomePrivacyBody": "Tallene dine tilhører bare deg. Ingenting selges, og ingenting deles med andre.",
-"stepOf": "Trinn {step} av {total}",
-"@stepOf": {
-"placeholders": {
-"step": {
-"type": "int"
-},
-"total": {
-"type": "int"
-}
-}
-},
-"onboardingNameTitle": "Hva skal vi kalle deg?",
-"onboardingNameBody": "Vi bruker det til å hilse på deg, og ingen andre steder.",
-"onboardingNameHint": "Et fornavn er nok. Du kan endre det senere.",
-"onboardingCurrencyTitle": "Hvilken valuta bruker du?",
-"onboardingCurrencyBody": "Alle beløp i appen vises i denne valutaen. Valget konverterer ikke noe.",
-"onboardingCurrencySearch": "Søk i alle valutaer",
-"onboardingAppearanceTitle": "Gjør den til din",
-"onboardingAppearanceBody": "Velg et utseende. Alt endres mens du trykker, og du kan komme tilbake til det når som helst.",
-"onboardingNotificationsTitle": "Hold oversikten",
-"onboardingNotificationsBody": "En rolig påminnelse på riktig tidspunkt er det som gjør dette til en vane.",
-"onboardingNotifyReminders": "En vennlig påminnelse om å registrere det du har brukt",
-"onboardingNotifyBudget": "Et varsel før et budsjett går tomt",
-"onboardingNotifySummary": "Et ukentlig sammendrag av hvor pengene dine gikk",
-"onboardingNotifyEnable": "Slå på varsler",
-"onboardingNotifyDone": "Varselinnstillinger lagret",
-"onboardingNotifyLater": "Du kan endre alt dette i Innstillinger når du vil.",
-"onboardingReadyTitle": "Du er klar",
-"onboardingReadyTitleNamed": "Du er klar, {name}",
-"@onboardingReadyTitleNamed": {
-"placeholders": {
-"name": {
-"type": "String"
-}
-}
-},
-"onboardingReadyBody": "Da er oppsettet ferdig. Vil du ha en rask omvisning i hvordan alt fungerer?",
-"onboardingTakeTour": "Vis meg rundt",
-"onboardingGoToApp": "Ta meg til appen",
-"onboardingTourLater": "Ikke nå? Veiledningen blir liggende i Innstillinger når du trenger den.",
-"beginnersGuide": "Kom i gang-guide",
-"guideFinish": "Ferdig",
-"chapterOf": "Kapittel {number} av {total}",
-"@chapterOf": {
-"placeholders": {
-"number": {
-"type": "int"
-},
-"total": {
-"type": "int"
-}
-}
-},
-"guideOpenScreen": "Åpne {screen}",
-"@guideOpenScreen": {
-"placeholders": {
-"screen": {
-"type": "String"
-}
-}
-},
-"guideDashboardTitle": "Dashbordet ditt",
-"guideDashboardBody": "Alt starter her. Kortet øverst viser det du har igjen; under ser du det som kom inn og gikk ut i denne perioden, etterfulgt av forbruk, budsjetter og mål.",
-"guideDashboardTip1": "Trekk skjermen ned for å oppdatere alt samtidig.",
-"guideDashboardTip2": "Trykk på inntekts- eller utgiftskortet for å gå direkte til listen.",
-"guideDashboardTip3": "Ringene og innsikten oppdateres med en gang du registrerer noe.",
-"guideAddTitle": "Registrere penger",
-"guideAddBody": "Knappen midt på navigasjonslinjen er stedet der alt begynner. Den åpner en kort meny: penger ut, penger inn, gjeld, budsjett eller sparemål.",
-"guideAddTip1": "Trykk på midtknappen for å registrere penger inn eller ut.",
-"guideAddTip2": "Hold den inne for å gå rett til en ny utgift og hoppe over menyen.",
-"guideAddTip3": "Velg alltid en kategori — det er det som får diagrammene og budsjettene til å fungere.",
-"guideCategoriesTitle": "Kategorier",
-"guideCategoriesBody": "Kategorier er hvordan forbruket grupperes. De som følger med appen dekker de fleste, og du kan gi dem nye navn eller legge til egne.",
-"guideCategoriesTip1": "Gå til Innstillinger, deretter Administrer kategorier, for å endre eller legge til en.",
-"guideCategoriesTip2": "Alt som ikke kategoriseres havner i Annet, slik at diagrammene forblir korrekte.",
-"guideBudgetTitle": "Budsjetter",
-"guideBudgetBody": "Et budsjett er en månedlig grense for én kategori. Linjen fylles etter hvert som du bruker penger og endrer seg når du nærmer deg grensen, slik at du får vite det før du går over.",
-"guideBudgetTip1": "Start med to eller tre kategorier, ikke alle samtidig.",
-"guideBudgetTip2": "Sett grensen litt over det du vanligvis bruker, og stram den deretter inn.",
-"guideBudgetTip3": "La budsjettvarsler være på, så varsler appen deg når et budsjett begynner å bli brukt opp.",
-"guideSavingsTitle": "Sparemål",
-"guideSavingsBody": "Gi navn til det du sparer til, sett et mål og en dato, så regner appen ut hvor mye du må sette av hver måned for å nå det.",
-"guideSavingsTip1": "Et navngitt mål er enklere å holde fast ved enn en vag intensjon om å spare.",
-"guideSavingsTip2": "Flere små mål blir oftere fullført enn ett stort.",
-"guideLoansTitle": "Gjeld og lån",
-"guideLoansBody": "Registrer hva du skylder, hva det koster og når neste betaling forfaller. Alt du betaler ned ligger i én liste med totalbeløpet som gjenstår.",
-"guideLoansTip1": "Legg til forfallsdatoen, så følger betalingspåminnelsene opp for deg.",
-"guideLoansTip2": "En gjeld som er markert som forfalt vises i rødt på dashbordet til den er betalt.",
-"guideReportsTitle": "Rapporter",
-"guideReportsBody": "Det mer detaljerte bildet: inntekter mot utgifter, forbruk etter kategori, hvordan budsjettene holdt seg, og hvor stor andel av inntekten du beholdt.",
-"guideReportsTip1": "Bytt mellom uke, måned og kvartal øverst på skjermen.",
-"guideReportsTip2": "Eksporter eller del en PDF — den kommer på ditt eget språk og i riktig tekstretning.",
-"guideSettingsTitle": "Innstillinger",
-"guideSettingsBody": "Språk, valuta, farger og varsler finner du her, og ingen av dem er låst etter oppsettet — endre dem når du vil.",
-"guideSettingsTip1": "Førti språk, og hele oppsettet speiles for høyre-til-venstre-språk.",
-"guideSettingsTip2": "Velg hvilke varsler du ønsker, og hvilke tidspunkter de kan komme.",
-"guideSettingsTip3": "Stilleperioder holder alt tilbake til morgenen.",
-"guideHabitTitle": "Gjør det til en vane",
-"guideHabitBody": "Appen er bare så god som det du legger inn. Ett minutt om dagen slår én time én gang i måneden, og etter et par uker begynner tallene å fortelle deg noe.",
-"guideHabitTip1": "Registrer det du bruker penger på mens det skjer, ikke på slutten av uken.",
-"guideHabitTip2": "Ta en titt på dashbordet én gang om dagen. Ti sekunder er nok.",
-"guideHabitTip3": "Denne veiledningen blir liggende i Innstillinger — kom tilbake når du vil.",
-"appearance": "Utseende",
-"themeCaption": "Lyst, mørkt eller det telefonen din bruker.",
-"accentColor": "Aksentfarge",
-"accentColorCaption": "Farger knappene, fremhevingene og diagrammene.",
-"accentSemanticsNote": "Penger inn og penger ut beholder sine egne farger i alle temaer, slik at et tall aldri endrer betydning fordi du endret aksentfargen.",
-"accentTeal": "Blågrønn",
-"accentGreen": "Grønn",
-"accentSky": "Himmelblå",
-"accentBlue": "Blå",
-"accentIndigo": "Indigo",
-"accentViolet": "Fiolett",
-"accentPink": "Rosa",
-"accentCrimson": "Karmosinrød",
-"accentOrange": "Oransje",
-"accentSlate": "Skifer",
-"searchLanguages": "Søk etter språk",
-"suggestedLanguages": "Foreslåtte",
-"allLanguages": "Alle språk",
-"noLanguagesFound": "Ingen språk funnet",
-"noLanguagesFoundMessage": "Prøv navnet på engelsk eller språkkoden på to bokstaver.",
-"rightToLeft": "Høyre til venstre",
-"replayGuide": "Spill av veiledningen på nytt",
-"replaySetup": "Kjør oppsettet på nytt",
-"replaySetupBody": "Gå gjennom spørsmålene fra første gangs oppsett igjen. Ingenting du har registrert blir slettet.",
-"rateTitle": "Liker du RainyPenny?",
-"rateBody": "Du har holdt på en stund nå. En vurdering tar et øyeblikk og hjelper andre med å finne appen.",
-"rateAction": "Vurder appen",
-"rateLater": "Kanskje senere",
-"rateNever": "Nei takk",
-"rateThanks": "Takk",
-
-"monthlySalary": "Månedslønn",
-"remainingAmount": "Gjenstår",
-"carriedForward": "Overført",
-"carriedForwardHint": "Til overs fra forrige periode",
-"totalSpending": "Totalt forbruk",
-"salaryCycle": "Lønnssyklus",
-"payday": "Lønningsdag",
-"paydayDescription": "Dagen lønnen din kommer inn. Din økonomiske måned går fra denne dagen til dagen før neste lønningsdag.",
-"paydayUpdated": "Lønningsdag oppdatert",
-"paydayDayOfMonth": "Dag {day}",
-"@paydayDayOfMonth": {
-"placeholders": {
-"day": {
-"type": "int"
-}
-}
-},
-"paydayShortMonthNote": "I kortere måneder starter syklusen på den siste dagen i måneden i stedet.",
-"daysLeftInCycle": "{count, plural, =0{Siste dag i syklusen} =1{1 dag til lønningsdag} other{{count} dager til lønningsdag}}",
-"@daysLeftInCycle": {
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"nextPayday": "Neste lønningsdag",
-"spentSoFar": "Brukt så langt",
-"dailyAllowance": "Trygt å bruke per dag",
-"overspentNotice": "Du har brukt mer enn det som kom inn i denne syklusen.",
-"backToThisMonth": "Tilbake til denne måneden",
-"cycleRangeLabel": "Syklus",
-"noSalaryRecorded": "Ingen lønn registrert ennå",
-"addSalaryAction": "Legg til lønnen din",
-"cycleOf": "{start} – {end}",
-"@cycleOf": {
-"placeholders": {
-"start": {
-"type": "String"
-},
-"end": {
-"type": "String"
-}
-}
-},
-
-"healthExcellent": "Utmerket",
-"healthGood": "God",
-"healthFair": "Middels",
-"healthNeedsWork": "Bør forbedres",
-"healthExcellentBody": "Du sparer godt og holder deg innenfor budsjettene dine.",
-"healthGoodBody": "Du er på rett spor med forbruket ditt denne perioden.",
-"healthFairBody": "Noen budsjetter begynner å bli presset. Små endringer vil hjelpe.",
-"healthNeedsWorkBody": "Forbruket er høyere enn planen din. Start med den største kategorien.",
-"factorSavingsRate": "Sparerate",
-"factorBudgetControl": "Budsjettkontroll",
-"factorDebtLoad": "Gjeldsbelastning",
-"factorSpendingTrend": "Forbrukstrend",
-"factorKept": "{percent}% beholdt",
-"@factorKept": {
-"placeholders": {
-"percent": {
-"type": "String"
-}
-}
-},
-"factorUsed": "{percent}% brukt",
-"@factorUsed": {
-"placeholders": {
-"percent": {
-"type": "String"
-}
-}
-},
-"factorOfIncome": "{percent}% av inntekten",
-"@factorOfIncome": {
-"placeholders": {
-"percent": {
-"type": "String"
-}
-}
-},
-"factorTrendUp": "Opp {percent}%",
-"@factorTrendUp": {
-"placeholders": {
-"percent": {
-"type": "String"
-}
-}
-},
-"factorTrendDown": "Ned {percent}%",
-"@factorTrendDown": {
-"placeholders": {
-"percent": {
-"type": "String"
-}
-}
-},
-"howScoreWorks": "Slik fungerer poengsummen",
-"healthScoreExplainer": "Poengsummen din kombinerer fire ting: hvor mye av inntekten du beholder, hvor godt du holder deg innenfor budsjettene, hvor mye av inntekten som går til gjeld, og om forbruket ditt øker eller synker.",
-"scoreWeightLabel": "{percent}% av poengsummen",
-"@scoreWeightLabel": {
-"placeholders": {
-"percent": {
-"type": "int"
-}
-}
-},
-"viewHealthDetails": "Se oversikten",
-
-"saveChanges": "Lagre endringer",
-"profileUpdated": "Profil oppdatert",
-"changePhoto": "Bytt bilde",
-"removePhoto": "Fjern bilde",
-"personalInformationIntro": "Navnet og bildet ditt vises i hele appen. E-postadressen er adressen du logger inn med.",
-"nameRequired": "Skriv inn navnet ditt",
-"emailNotEditable": "Kontakt kundestøtte for å endre adressen du logger inn med.",
-
-"pressBackAgainToExit": "Trykk tilbake igjen for å avslutte",
-
-"categoryHousing": "Bolig",
-"categoryFood": "Mat og restaurant",
-"categoryTransport": "Transport",
-"categoryShopping": "Shopping",
-"categoryBills": "Regninger og tjenester",
-"categoryEntertainment": "Underholdning",
-"categoryHealth": "Helse og trening",
-"categoryEducation": "Utdanning",
-"categoryTravel": "Reise",
-"categorySalary": "Lønn",
-"categoryFreelance": "Frilans",
-"categoryInvestments": "Investeringer",
-"categoryGift": "Gave",
-"categoryOther": "Annet",
-"categoryGroceries": "Dagligvarer",
-"categoryDining": "Restaurant",
-"categoryCoffee": "Kaffe",
-"categoryUtilities": "Tjenester",
-"categoryInternet": "Internett",
-"categoryPhone": "Telefon",
-"categoryInsurance": "Forsikring",
-"categorySubscriptions": "Abonnementer",
-"categoryPersonalCare": "Personlig pleie",
-"categoryClothing": "Klær",
-"categoryElectronics": "Elektronikk",
-"categoryHomeSupplies": "Husholdningsartikler",
-"categoryPets": "Kjæledyr",
-"categoryChildcare": "Barnepass",
-"categoryFamily": "Familie",
-"categoryFitness": "Trening",
-"categorySports": "Sport",
-"categoryMedicine": "Medisiner",
-"categoryMedical": "Medisinsk",
-"categoryCharity": "Veldedighet",
-"categoryTaxes": "Skatter",
-"categoryFees": "Gebyrer",
-"categoryDebt": "Gjeld",
-"categorySavings": "Sparing",
-"categoryRepairs": "Reparasjoner",
-"categoryCarMaintenance": "Bilvedlikehold",
-"categoryFuel": "Drivstoff",
-"categoryParking": "Parkering",
-"categoryPublicTransport": "Kollektivtransport",
-"categoryRent": "Husleie",
-"categoryMortgage": "Boliglån",
-"categoryBonus": "Bonus",
-"categoryCommission": "Provisjon",
-"categoryPension": "Pensjon",
-"categoryInterest": "Renter",
-"categoryDividends": "Utbytte",
-"categoryCashback": "Cashback",
-"categoryRefund": "Refusjon",
-"categoryRentalIncome": "Leieinntekter",
-
-"addCategory": "Ny kategori",
-"filterByCategory": "Filtrer etter kategori",
-"allCategories": "Alle kategorier",
-"clearFilters": "Fjern filtre",
-"spentInCategory": "{category}  ·  {amount}",
-"@spentInCategory": {
-"placeholders": {
-"category": {
-"type": "String"
-},
-"amount": {
-"type": "String"
-}
-}
-},
-"allTime": "Alle tider",
-"customRange": "Tilpasset",
-"selectDateRange": "Velg en periode",
-"rangeApplied": "Viser {start} – {end}",
-"@rangeApplied": {
-"placeholders": {
-"start": {
-"type": "String"
-},
-"end": {
-"type": "String"
-}
-}
-},
-
-"loans": "Lån",
-"debts": "Gjeld",
-"noLoansTitle": "Ingen lån",
-"noLoansBody": "Du har ingen aktive lån.",
-
-"emptyHealthTitle": "Ingen økonomisk poengsum ennå",
-"@emptyHealthTitle": {
-"description": "Tittel som vises når det ikke finnes nok data til å beregne en helsescore"
-},
-"emptyHealthDescription": "Vi trenger litt økonomisk aktivitet før vi kan beregne en nøyaktig økonomisk poengsum.",
-"@emptyHealthDescription": {
-"description": "Forklarende melding i tom tilstand på skjermen for økonomisk helse"
-},
-"emptyHealthAddTransactions": "Legg til inntekts- eller utgiftstransaksjoner",
-"@emptyHealthAddTransactions": {
-"description": "Sjekkpunkt som ber brukeren legge til transaksjoner"
-},
-"emptyHealthSetBudgets": "Sett opp månedlige budsjetter",
-"@emptyHealthSetBudgets": {
-"description": "Sjekkpunkt som ber brukeren sette opp budsjetter"
-},
-"emptyHealthTrackLoans": "Følg med på lån eller gjeld (valgfritt)",
-"@emptyHealthTrackLoans": {
-"description": "Sjekkpunkt som ber brukeren registrere lån"
-},
-"emptyHealthCardSubtitle": "Legg til transaksjoner for å beregne poengsummen din og få innsikt.",
-"@emptyHealthCardSubtitle": {
-"description": "Undertekst på økonomisk helse-kortet på dashbordet når ingen data er tilgjengelig"
-},
-
-"smartBudgetSplit": "Smart budsjettfordeling",
-"@smartBudgetSplit": {
-"description": "Tittel for smart budsjettfordeling av lønn"
-},
-"smartBudgetSplitSubtitle": "Skriv inn månedslønnen din for å beregne anbefalte grenser",
-"@smartBudgetSplitSubtitle": {
-"description": "Undertekst som forklarer hvordan budsjettfordelingen etter lønn fungerer"
-},
-"monthlyNetSalary": "Månedlig nettolønn",
-"@monthlyNetSalary": {
-"description": "Etikett for feltet for månedlig nettolønn"
-},
-"categoryAllocations": "Kategori­fordelinger",
-"@categoryAllocations": {
-"description": "Overskrift for listen over anbefalte kategorifordelinger"
-},
-"totalBudgeted": "Totalt: {amount}",
-"@totalBudgeted": {
-"description": "Totalt budsjettert beløp på tvers av kategorier",
-"placeholders": {
-"amount": {
-"type": "String"
-}
-}
-},
-"applyAllBudgets": "Bruk alle budsjetter",
-"@applyAllBudgets": {
-"description": "Knappetekst for å bruke alle anbefalte kategorigrenser"
-},
-"applyingBudgets": "Bruker budsjetter...",
-"@applyingBudgets": {
-"description": "Lastetekst mens budsjettene brukes"
-},
-"budgetsCreatedSuccess": "{count, plural, =1{1 kategoribudsjett opprettet.} other{{count} kategoribudsjetter opprettet.}}",
-"@budgetsCreatedSuccess": {
-"description": "Suksessmelding når budsjetter opprettes",
-"placeholders": {
-"count": {
-"type": "int"
-}
-}
-},
-"failedToSaveBudgets": "Kunne ikke lagre budsjettene.",
-"@failedToSaveBudgets": {
-"description": "Feilmelding når lagring av budsjetter mislykkes"
-},
-"recommendedBudget": "Anbefalt budsjett"
+  "@@locale": "nb",
+  "appName": "RainyPenny",
+  "appTagline": "Spar til en regnværsdag",
+  "navHome": "Hjem",
+  "navTransactions": "Transaksjoner",
+  "navAdd": "Legg til",
+  "navReports": "Rapporter",
+  "navProfile": "Profil",
+  "greetingMorning": "God morgen, {name}",
+  "greetingAfternoon": "God ettermiddag, {name}",
+  "greetingEvening": "God kveld, {name}",
+  "greetingSubtitle": "Slik ser økonomien din ut",
+  "totalBalance": "Total saldo",
+  "vsLastPeriod": "mot forrige periode",
+  "income": "Inntekter",
+  "expenses": "Utgifter",
+  "netBalance": "Nettosaldo",
+  "lastThirtyDays": "Siste 30 dager",
+  "quickActions": "Hurtighandlinger",
+  "addIncome": "Legg til inntekt",
+  "addExpense": "Legg til utgift",
+  "spendingOverview": "Forbruksoversikt",
+  "recentTransactions": "Siste transaksjoner",
+  "seeAll": "Se alle",
+  "viewAll": "Vis alle",
+  "budgetProgress": "Budsjettstatus",
+  "savingsGoals": "Sparemål",
+  "financialInsight": "Økonomisk innsikt",
+  "financialHealth": "Økonomisk helse",
+  "ofTotal": "av {total}",
+  "searchTransactions": "Søk i transaksjoner",
+  "filterAll": "Alle",
+  "filterIncome": "Inntekter",
+  "filterExpenses": "Utgifter",
+  "today": "I dag",
+  "yesterday": "I går",
+  "noTransactionsTitle": "Fant ingen transaksjoner",
+  "noTransactionsBody": "Prøv et annet søk eller filter for å se flere oppføringer.",
+  "transactionCount": "{count, plural, =0{Ingen transaksjoner} one{{count} transaksjon} other{{count} transaksjoner}}",
+  "addTransaction": "Legg til transaksjon",
+  "amount": "Beløp",
+  "category": "Kategori",
+  "date": "Dato",
+  "note": "Notat",
+  "noteHint": "Notat (valgfritt)",
+  "saveIncome": "Lagre inntekt",
+  "saveExpense": "Lagre utgift",
+  "selectCategory": "Velg kategori",
+  "transactionSaved": "Transaksjonen er lagret",
+  "amountRequired": "Skriv inn et beløp større enn null",
+  "titleRequired": "Gi denne transaksjonen et navn",
+  "descriptionLabel": "Beskrivelse",
+  "descriptionHint": "f.eks. dagligvarer",
+  "budget": "Budsjett",
+  "budgets": "Budsjetter",
+  "totalBudget": "Totalt budsjett",
+  "spent": "Brukt",
+  "remaining": "Igjen",
+  "budgetUsed": "{percent}% brukt",
+  "onTrack": "Etter planen",
+  "approachingLimit": "Nær grensen",
+  "overBudget": "Over budsjett",
+  "savings": "Sparing",
+  "yourGoals": "Målene dine",
+  "saved": "Spart",
+  "target": "Mål",
+  "monthlyContribution": "Per måned",
+  "addFunds": "Sett inn penger",
+  "goalComplete": "Målet er nådd",
+  "monthsToGo": "{count, plural, one{{count} måned igjen} other{{count} måneder igjen}}",
+  "loansAndDebts": "Lån og gjeld",
+  "totalOutstanding": "Totalt utestående",
+  "monthlyPayment": "Per måned",
+  "nextPayment": "Neste betaling",
+  "paidOff": "{percent}% nedbetalt",
+  "interestRate": "Rente",
+  "upcomingPayments": "Kommende betalinger",
+  "dueInDays": "{count, plural, =0{Forfaller i dag} one{Om {count} dag} other{Om {count} dager}}",
+  "overdue": "Forfalt",
+  "reports": "Rapporter",
+  "week": "Uke",
+  "month": "Måned",
+  "quarter": "Kvartal",
+  "incomeVsExpenses": "Inntekter mot utgifter",
+  "spendingByCategory": "Forbruk etter kategori",
+  "budgetPerformance": "Budsjettresultat",
+  "insights": "Innsikter",
+  "savingsRate": "Sparerate",
+  "profile": "Profil",
+  "account": "Konto",
+  "personalInformation": "Personopplysninger",
+  "changePassword": "Endre passord",
+  "notifications": "Varsler",
+  "preferences": "Innstillinger",
+  "language": "Språk",
+  "currency": "Valuta",
+  "theme": "Tema",
+  "security": "Sikkerhet",
+  "privacyAndSecurity": "Personvern og sikkerhet",
+  "help": "Hjelp",
+  "helpAndSupport": "Hjelp og støtte",
+  "termsAndConditions": "Vilkår og betingelser",
+  "logOut": "Logg ut",
+  "memberSince": "Medlem siden {date}",
+  "themeSystem": "Følg systemet",
+  "themeLight": "Lyst",
+  "themeDark": "Mørkt",
+  "settings": "Innstillinger",
+  "noNotificationsTitle": "Du er helt oppdatert",
+  "noNotificationsBody": "Nye innsikter og påminnelser dukker opp her.",
+  "cancel": "Avbryt",
+  "save": "Lagre",
+  "done": "Ferdig",
+  "retry": "Prøv igjen",
+  "close": "Lukk",
+  "somethingWentWrong": "Noe gikk galt",
+  "comingSoon": "Kommer i fullversjonen",
+  "edit": "Rediger",
+  "delete": "Slett",
+  "undo": "Angre",
+  "add": "Legg til",
+  "create": "Opprett",
+  "nameRequired": "Gi det et navn",
+  "amountAboveZero": "Skriv inn et beløp større enn null",
+  "editTransaction": "Rediger transaksjon",
+  "deleteTransaction": "Slette denne transaksjonen?",
+  "deleteTransactionBody": "{title} forsvinner fra oversikten din.",
+  "transactionDeleted": "Transaksjonen er slettet",
+  "transactionUpdated": "Transaksjonen er oppdatert",
+  "newBudget": "Nytt budsjett",
+  "editBudget": "Rediger budsjett",
+  "budgetLimit": "Månedlig grense",
+  "deleteBudget": "Slette dette budsjettet?",
+  "deleteBudgetBody": "Budsjettet for {category} blir fjernet. Transaksjonene dine røres ikke.",
+  "budgetSaved": "Budsjettet er lagret",
+  "budgetDeleted": "Budsjettet er slettet",
+  "allCategoriesBudgeted": "Alle kategorier har allerede et budsjett",
+  "noBudgetsTitle": "Ingen budsjetter ennå",
+  "noBudgetsBody": "Sett en månedlig grense på en kategori, så begynner vi å følge den.",
+  "newGoal": "Nytt mål",
+  "editGoal": "Rediger mål",
+  "goalName": "Navn på målet",
+  "goalNameHint": "f.eks. buffer",
+  "targetAmount": "Målbeløp",
+  "alreadySaved": "Allerede spart",
+  "deleteGoal": "Slette dette målet?",
+  "deleteGoalBody": "{name} og fremgangen mot det blir fjernet.",
+  "goalSaved": "Målet er lagret",
+  "goalDeleted": "Målet er slettet",
+  "noGoalsTitle": "Ingen sparemål ennå",
+  "noGoalsBody": "Sett et mål, så følger RainyPenny fremgangen din.",
+  "fundsAdded": "Pengene er satt inn",
+  "newDebt": "Nytt lån eller kort",
+  "editDebt": "Rediger lån",
+  "debtName": "Navn",
+  "debtNameHint": "f.eks. billån",
+  "lender": "Långiver",
+  "lenderHint": "f.eks. DNB",
+  "originalAmount": "Opprinnelig beløp",
+  "creditLimit": "Kredittgrense",
+  "remainingBalance": "Restgjeld",
+  "interestRatePercent": "Rente (%)",
+  "kindLoan": "Lån",
+  "kindCreditCard": "Kredittkort",
+  "recordPayment": "Registrer betaling",
+  "paymentRecorded": "Betalingen er registrert",
+  "deleteDebt": "Slette denne gjelden?",
+  "deleteDebtBody": "{name} forsvinner fra gjelden din.",
+  "debtSaved": "Lagret",
+  "debtDeleted": "Slettet",
+  "noDebtsTitle": "Ingen gjeld følges",
+  "noDebtsBody": "Legg til et lån eller kredittkort for å holde oversikt over nedbetalingen.",
+  "insightBudgetExceededTitle": "Budsjettet for {subject} er overskredet",
+  "insightBudgetExceededBody": "Du ligger {amount} over {subject}-budsjettet ditt denne perioden.",
+  "insightBudgetApproachingTitle": "{subject} nærmer seg grensen",
+  "insightBudgetApproachingBody": "{subject}-budsjettet ditt er brukt {percent}%, {amount} står igjen.",
+  "insightOverIncomeTitle": "Utgiftene overstiger inntektene",
+  "insightOverIncomeBody": "Denne perioden brukte du mer enn du tjente. Gå gjennom de største kategoriene for å få balanse igjen.",
+  "insightCategoryUpTitle": "Forbruket på {subject} øker",
+  "insightCategoryUpBody": "Du brukte {percent}% mer på {subject} enn forrige periode.",
+  "insightTrendDownTitle": "Forbruket faller",
+  "insightTrendDownBody": "Totalforbruket er {percent}% lavere enn forrige periode.",
+  "insightTrendUpTitle": "Forbruket stiger",
+  "insightTrendUpBody": "Totalforbruket er {percent}% høyere enn forrige periode.",
+  "insightSavingsStrongTitle": "Sterk sparing denne perioden",
+  "insightSavingsStrongBody": "Du beholdt {percent}% av inntekten — godt over målet på {target}%.",
+  "insightSavingsLowTitle": "Spareraten ligger under målet",
+  "insightSavingsLowBody": "Denne perioden beholdt du {percent}% av inntekten. Sikt mot {target}%.",
+  "insightGoalNearlyTitle": "{subject} er nesten i havn",
+  "insightGoalNearlyBody": "Bare {amount} igjen til {subject}.",
+  "insightGoalOnTrackTitle": "{subject} går etter planen",
+  "insightGoalOnTrackBody": "Med {amount} i måneden når du målet om {months, plural, one{{months} måned} other{{months} måneder}}.",
+  "insightDebtOverdueTitle": "Betalingen på {subject} er forsinket",
+  "insightDebtOverdueBody": "Betalingen på {amount} for {subject} er {days, plural, one{{days} dag} other{{days} dager}} forsinket.",
+  "insightDebtDueTitle": "Betalingen på {subject} nærmer seg",
+  "insightDebtDueBody": "{amount} forfaller {days, plural, =0{i dag} one{om {days} dag} other{om {days} dager}}.",
+  "signIn": "Logg inn",
+  "signUp": "Opprett konto",
+  "signInSubtitle": "Velkommen tilbake. Pengene dine venter.",
+  "signUpSubtitle": "Noen få opplysninger, så er du i gang.",
+  "emailLabel": "E-post",
+  "emailHint": "du@email.com",
+  "passwordLabel": "Passord",
+  "passwordHint": "Minst 8 tegn",
+  "fullNameLabel": "Fullt navn",
+  "fullNameHint": "Anne Johansen",
+  "forgotPassword": "Glemt passord?",
+  "resetSent": "Sjekk innboksen for tilbakestillingslenken",
+  "noAccountYet": "Ny her?",
+  "haveAccount": "Har du allerede en konto?",
+  "emailInvalid": "Skriv inn en gyldig e-postadresse",
+  "passwordTooShort": "Bruk minst 8 tegn",
+  "signOutConfirm": "Logge ut?",
+  "signOutBody": "Du må logge inn igjen for å se økonomien din.",
+  "dataSource": "Datakilde",
+  "insightWeeklySummaryTitle": "Uken din kort fortalt",
+  "insightWeeklySummaryBody": "Se hvor pengene tok veien denne uken, og hvordan budsjettene holder.",
+  "notificationSettings": "Varsler",
+  "alertsSection": "Varslinger",
+  "budgetAlerts": "Budsjettvarsler",
+  "budgetAlertsBody": "Når et budsjett nærmer seg eller passerer grensen sin",
+  "paymentReminders": "Betalingspåminnelser",
+  "paymentRemindersBody": "Noen dager før en betaling forfaller",
+  "savingsUpdates": "Sparenytt",
+  "savingsUpdatesBody": "Fremgang mot målene dine",
+  "weeklySummaryLabel": "Ukesoppsummering",
+  "weeklySummaryBody": "En oppsummering av uken som gikk",
+  "scheduleSection": "Tidspunkt",
+  "reminderTime": "Tidspunkt for påminnelse",
+  "quietHours": "Stille timer",
+  "quietHoursValue": "{start} – {end}",
+  "summaryDay": "Dag for oppsummering",
+  "permissionRequired": "Varsler er slått av",
+  "permissionRequiredBody": "Tillat varsler, så kan RainyPenny si fra før et budsjett eller en betaling løper løpsk.",
+  "allowNotifications": "Tillat varsler",
+  "permissionDenied": "Varsler er blokkert. Du kan slå dem på i innstillingene på enheten.",
+  "upcomingAlerts": "Planlagt",
+  "noScheduledAlerts": "Ingenting er planlagt akkurat nå",
+  "noScheduledAlertsBody": "Varsler dukker opp her når budsjettene og betalingene dine nærmer seg grensene sine.",
+  "scheduledFor": "Planlagt til {date}",
+  "everyWeek": "Hver uke",
+  "allNotificationsOff": "Alle varsler er slått av",
+  "needsAttention": "Trenger oppmerksomhet",
+  "quickActionsTitle": "Hva vil du gjøre?",
+  "createSection": "Registrer",
+  "jumpToSection": "Gå til",
+  "addLoanAction": "Legg til lån",
+  "addBudgetAction": "Legg til budsjett",
+  "addGoalAction": "Legg til mål",
+  "longPressHint": "Tips: hold inne + for å registrere en utgift med én gang",
+  "searchCurrencies": "Søk etter valutaer",
+  "noCurrenciesFound": "Fant ingen valutaer",
+  "noCurrenciesFoundMessage": "Prøv en annen kode, et annet symbol eller navn.",
+  "popularCurrencies": "Vanlige",
+  "allCurrencies": "Alle valutaer",
+  "totalLoanAmount": "Totalt lånebeløp",
+  "installmentAmount": "Beløp per avdrag",
+  "numberOfInstallments": "Antall avdrag",
+  "paidInstallments": "Betalte avdrag",
+  "remainingInstallments": "Gjenstående avdrag",
+  "installmentsPaidOf": "{paid} av {total} betalt",
+  "finalPayment": "Siste betaling",
+  "paymentDueDate": "Forfallsdato",
+  "dueOnDayOfMonth": "Den {day}. hver måned",
+  "loanStatus": "Status",
+  "statusActive": "Etter planen",
+  "statusDueSoon": "Forfaller snart",
+  "statusOverdue": "Forfalt",
+  "statusCompleted": "Nedbetalt",
+  "repaymentProgress": "Nedbetalingsstatus",
+  "byAmount": "Etter beløp",
+  "byInstallments": "Etter avdrag",
+  "startDate": "Startdato",
+  "openEnded": "Uten sluttdato",
+  "loanDetails": "Om lånet",
+  "notSet": "Ikke angitt",
+  "insightDebtDueTodayTitle": "{subject} forfaller i dag",
+  "insightDebtDueTodayBody": "Betalingen på {amount} forfaller i dag. Ett trykk, og den er i tide.",
+  "remindMorningTitle": "God morgen ☀️",
+  "remindMorningBody": "Start dagen med oversikt over pengene. Er det noe fra i går som skal med?",
+  "remindNoonTitle": "En sjekk midt på dagen",
+  "remindNoonBody": "Lunsj, kaffe, en billett? Det tar noen sekunder å få det inn.",
+  "remindAfternoonTitle": "En rask oppdatering",
+  "remindAfternoonBody": "Registrer det du har brukt så langt, så stemmer dagens tall.",
+  "remindEveningTitle": "La oss runde av dagen",
+  "remindEveningBody": "To minutter nå, så er dagens oversikt komplett.",
+  "happyWeekendTitle": "God helg! 🎉",
+  "happyWeekendBody": "Kos deg — og hold et øye med helgeforbruket.",
+  "dailyReminders": "Daglige utgiftspåminnelser",
+  "dailyRemindersBody": "Vennlige dytt så utgiftene holdes oppdatert",
+  "weekendGreeting": "Helgehilsen",
+  "weekendGreetingBody": "En vennlig hilsen når helgen starter",
+  "reminderTimesSection": "Tidspunkter for påminnelser",
+  "slotMorning": "Morgen",
+  "slotNoon": "Midt på dagen",
+  "slotAfternoon": "Ettermiddag",
+  "slotEvening": "Kveld",
+  "everyDay": "Hver dag",
+  "financialReport": "Økonomisk rapport",
+  "preparedFor": "Utarbeidet for",
+  "generatedOn": "Laget",
+  "reportDisclaimer": "Laget av RainyPenny ut fra dine egne registreringer.",
+  "pageOf": "Side {page} av {total}",
+  "overview": "Oversikt",
+  "description": "Beskrivelse",
+  "totalIncome": "Totale inntekter",
+  "totalExpenses": "Totale utgifter",
+  "totalSaved": "Totalt spart",
+  "shareOfTotal": "Andel",
+  "used": "Brukt",
+  "goal": "Mål",
+  "targetDate": "Måldato",
+  "progress": "Fremgang",
+  "paidOffShort": "Betalt",
+  "transactions": "Transaksjoner",
+  "andMoreTransactions": "{count, plural, one{og {count} transaksjon til} other{og {count} transaksjoner til}}",
+  "exportPdf": "Eksporter PDF",
+  "sharePdf": "Del rapporten",
+  "preparingReport": "Rapporten din klargjøres…",
+  "reportReady": "Rapporten er klar",
+  "reportFailed": "Klarte ikke å lage rapporten",
+  "categories": "Kategorier",
+  "categoriesIntro": "Legg til dine egne kategorier, så havner inntekter og utgifter akkurat slik du selv tenker om dem.",
+  "expenseCategories": "Utgiftskategorier",
+  "incomeCategories": "Inntektskategorier",
+  "newCategory": "Ny kategori",
+  "editCategory": "Rediger kategori",
+  "categoryName": "Navn",
+  "categoryNameHint": "f.eks. kjæledyr",
+  "icon": "Ikon",
+  "categorySaved": "Kategorien er lagret",
+  "categoryDeleted": "Kategorien er slettet",
+  "deleteCategory": "Slette denne kategorien?",
+  "deleteCategoryBody": "{name} forsvinner fra kategoriene dine.",
+  "categoryInUse": "{count, plural, one{{count} oppføring bruker fortsatt denne kategorien} other{{count} oppføringer bruker fortsatt denne kategorien}}",
+  "noCategoriesYet": "Ingenting her ennå.",
+  "builtIn": "Innebygd",
+  "manageCategories": "Administrer kategorier",
+  "expense": "Utgift",
+  "languageNote": "Arabisk, urdu, persisk og hebraisk snur hele grensesnittet fra høyre mot venstre, inkludert diagrammer og PDF-rapporter.",
+  "next": "Neste",
+  "back": "Tilbake",
+  "skip": "Hopp over",
+  "continueLabel": "Fortsett",
+  "selected": "Valgt",
+  "passwordRequired": "Skriv inn passordet ditt",
+  "newPasswordLabel": "Nytt passord",
+  "confirmPasswordLabel": "Bekreft passordet",
+  "passwordsDoNotMatch": "Begge passordene må være like",
+  "showPassword": "Vis passordet",
+  "hidePassword": "Skjul passordet",
+  "savePassword": "Lagre passordet",
+  "backToSignIn": "Tilbake til innlogging",
+  "alreadyHaveAccount": "Jeg har allerede en konto",
+  "getStarted": "Kom i gang",
+  "acceptTerms": "Jeg godtar vilkårene for bruk og personvernerklæringen",
+  "acceptTermsRequired": "Godta for å fortsette",
+  "passwordStrengthTooShort": "For kort",
+  "passwordStrengthWeak": "Svakt",
+  "passwordStrengthFair": "Middels",
+  "passwordStrengthGood": "Bra",
+  "passwordStrengthStrong": "Sterkt",
+  "passwordAdvice": "En lang frase du husker, slår et kort passord fullt av tegn. Unngå noe du allerede bruker et annet sted.",
+  "authInvalidCredentials": "Den e-postadressen og det passordet passer ikke til noen konto",
+  "authEmailNotConfirmed": "Bekreft e-postadressen din før du logger inn",
+  "authEmailAlreadyRegistered": "Det finnes allerede en konto med denne e-postadressen",
+  "authWeakPassword": "Velg et lengre passord",
+  "authRateLimited": "For mange forsøk. Prøv igjen om noen minutter",
+  "authNetworkError": "Ingen forbindelse. Sjekk nettverket og prøv igjen",
+  "authGenericError": "Noe gikk galt. Prøv igjen",
+  "confirmEmailTitle": "Sjekk e-posten din",
+  "confirmEmailBody": "Vi sendte en bekreftelseslenke til {email}. Åpne den for å gjøre kontoen ferdig.",
+  "resendConfirmation": "Send bekreftelsen på nytt",
+  "confirmationResent": "Bekreftelsesmeldingen er sendt",
+  "forgotPasswordTitle": "Tilbakestill passordet",
+  "forgotPasswordSubtitle": "Skriv inn e-postadressen du registrerte deg med, så sender vi en lenke for å velge nytt passord.",
+  "sendResetLink": "Send lenken",
+  "resetLinkSentTitle": "Lenken er sendt",
+  "resetLinkSentBody": "Hvis {email} har en konto, er lenken på vei.",
+  "resetLinkSentHint": "Lenken utløper om en time. Kommer den ikke frem, sjekk søppelposten før du ber om en ny.",
+  "tryAnotherEmail": "Bruk en annen e-postadresse",
+  "resetPasswordTitle": "Velg et nytt passord",
+  "resetPasswordSubtitle": "Velg noe du ikke har brukt på denne kontoen før.",
+  "passwordChangedTitle": "Passordet er oppdatert",
+  "passwordChangedBody": "Det nye passordet ditt er lagret. Du er logget inn og klar.",
+  "demoModeHint": "Demoversjon — ingen konto nødvendig",
+  "demoModeFill": "Fyll ut",
+  "welcomeTrackTitle": "Se hvor pengene tar veien",
+  "welcomeTrackBody": "Noter hva som kommer inn og hva som går ut. RainyPenny gjør det om til et bilde du faktisk kan lese.",
+  "welcomeBudgetTitle": "Grenser som holder",
+  "welcomeBudgetBody": "Gi hver del av forbruket et månedlig tak, og få vite det før du passerer det — ikke etterpå.",
+  "welcomeGoalsTitle": "Spar til det som betyr noe",
+  "welcomeGoalsBody": "Gi målet et navn, sett et beløp, og se det fylles opp. En buffer er lettere å bygge når du ser den.",
+  "welcomePrivacyTitle": "Pengene dine forblir dine",
+  "welcomePrivacyBody": "Tallene dine tilhører bare deg. Ingenting selges, og ingenting deles med noen.",
+  "stepOf": "Trinn {step} av {total}",
+  "onboardingNameTitle": "Hva skal vi kalle deg?",
+  "onboardingNameBody": "Vi bruker det bare til å si hei, ingen andre steder.",
+  "onboardingNameHint": "Fornavnet holder lenge. Du kan endre det senere.",
+  "onboardingCurrencyTitle": "Hvilken valuta bruker du?",
+  "onboardingCurrencyBody": "Alle beløp i appen vises i denne valutaen. Å velge den regner ikke om noe.",
+  "onboardingCurrencySearch": "Søk gjennom alle valutaer",
+  "onboardingAppearanceTitle": "Gjør den til din",
+  "onboardingAppearanceBody": "Velg et utseende. Alt endrer seg mens du trykker, og du kan komme tilbake når som helst.",
+  "onboardingNotificationsTitle": "Hold deg oppdatert",
+  "onboardingNotificationsBody": "Et stille dytt til rett tid er det som gjør dette til en vane.",
+  "onboardingNotifyReminders": "En vennlig påminnelse om å notere hva du har brukt",
+  "onboardingNotifyBudget": "Et varsel før et budsjett tar slutt",
+  "onboardingNotifySummary": "En ukentlig oppsummering av hvor pengene tok veien",
+  "onboardingNotifyEnable": "Slå på varsler",
+  "onboardingNotifyDone": "Varselinnstillingene er lagret",
+  "onboardingNotifyLater": "Alt dette kan du endre i Innstillinger når du vil.",
+  "onboardingReadyTitle": "Alt er klart",
+  "onboardingReadyTitleNamed": "Alt er klart, {name}",
+  "onboardingReadyBody": "Innstillingene er på plass. Vil du ha en rask omvisning i hvordan alt fungerer?",
+  "onboardingTakeTour": "Vis meg",
+  "onboardingGoToApp": "Ta meg til appen",
+  "onboardingTourLater": "Ikke nå? Guiden blir liggende i Innstillinger, når du trenger den.",
+  "beginnersGuide": "Nybegynnerguide",
+  "guideFinish": "Fullfør",
+  "chapterOf": "Kapittel {number} av {total}",
+  "guideOpenScreen": "Åpne {screen}",
+  "guideDashboardTitle": "Startskjermen din",
+  "guideDashboardBody": "Alt begynner her. Kortet øverst viser hva du har igjen; under det hva som har kommet inn og gått ut denne perioden, og deretter forbruket, budsjettene og målene dine.",
+  "guideDashboardTip1": "Dra skjermen nedover for å oppdatere alt på én gang.",
+  "guideDashboardTip2": "Trykk på inntekts- eller utgiftskortet for å gå rett til den listen.",
+  "guideDashboardTip3": "Ringene og innsiktene oppdateres i samme øyeblikk som du registrerer noe.",
+  "guideAddTitle": "Å registrere penger",
+  "guideAddBody": "Knappen midt i raden er der alt begynner. Den åpner en kort meny: utgift, inntekt, gjeld, budsjett eller sparemål.",
+  "guideAddTip1": "Trykk på midtknappen for å registrere penger inn eller ut.",
+  "guideAddTip2": "Hold den inne for å gå rett til en ny utgift og hoppe over menyen.",
+  "guideAddTip3": "Velg alltid en kategori — det er den som får diagrammer og budsjetter til å virke.",
+  "guideCategoriesTitle": "Kategorier",
+  "guideCategoriesBody": "Kategorier er måten forbruket grupperes på. De som følger med, holder for de fleste, og du kan gi dem nye navn eller legge til dine egne.",
+  "guideCategoriesTip1": "Innstillinger og så Administrer kategorier for å endre eller legge til.",
+  "guideCategoriesTip2": "Alt uten kategori havner under «Annet», slik at diagrammene forblir ærlige.",
+  "guideBudgetTitle": "Budsjetter",
+  "guideBudgetBody": "Et budsjett er et månedlig tak for én kategori. Stolpen fylles mens du bruker penger og skifter farge når det nærmer seg, så du får vite det før du er over.",
+  "guideBudgetTip1": "Start med to eller tre kategorier, ikke alle på én gang.",
+  "guideBudgetTip2": "Sett grensen litt over det du vanligvis bruker, og stram den inn etter hvert.",
+  "guideBudgetTip3": "La budsjettvarslene stå på, så sier appen fra når et budsjett begynner å ta slutt.",
+  "guideSavingsTitle": "Sparemål",
+  "guideSavingsBody": "Gi det du sparer til et navn, sett et beløp og en dato, så regner appen ut hvor mye du må legge til side hver måned.",
+  "guideSavingsTip1": "Et mål med navn er lettere å holde fast ved enn en vag intensjon om å spare.",
+  "guideSavingsTip2": "Flere små mål blir oftere fullført enn ett stort.",
+  "guideLoansTitle": "Gjeld og lån",
+  "guideLoansBody": "Noter hva du skylder, hva det koster, og når neste betaling forfaller. Alt du betaler ned ligger i en liste sammen med det som står igjen.",
+  "guideLoansTip1": "Legg inn forfallsdatoen, så holder betalingspåminnelsene styr på den for deg.",
+  "guideLoansTip2": "En forfalt gjeld lyser rødt på startskjermen til den er betalt.",
+  "guideReportsTitle": "Rapporter",
+  "guideReportsBody": "Det dypere bildet: inntekter mot utgifter, forbruk etter kategori, hvordan budsjettene holdt, og hvor stor del av inntekten du beholdt.",
+  "guideReportsTip1": "Bytt mellom uke, måned og kvartal øverst på skjermen.",
+  "guideReportsTip2": "Eksporter eller del en PDF — den kommer ut på ditt språk og i dets leseretning.",
+  "guideSettingsTitle": "Innstillinger",
+  "guideSettingsBody": "Språk, valuta, farger og varsler ligger alle her, og ingenting av det låses av det første valget — endre det du vil, når du vil.",
+  "guideSettingsTip1": "Førti språk, og hele oppsettet speilvendes for dem som leses fra høyre mot venstre.",
+  "guideSettingsTip2": "Velg hvilke varsler du vil ha, og hvilke timer de får komme i.",
+  "guideSettingsTip3": "Stille timer holder alt tilbake til morgenen.",
+  "guideHabitTitle": "Få det til å sitte",
+  "guideHabitBody": "Appen er bare så god som det du legger inn i den. Ett minutt om dagen slår en time i måneden, og etter to uker begynner tallene å si noe.",
+  "guideHabitTip1": "Registrer utgifter når de skjer, ikke på slutten av uken.",
+  "guideHabitTip2": "Kast et blikk på startskjermen én gang om dagen. Ti sekunder holder.",
+  "guideHabitTip3": "Denne guiden blir liggende i Innstillinger — kom tilbake når som helst.",
+  "appearance": "Utseende",
+  "themeCaption": "Lyst, mørkt, eller det telefonen gjør.",
+  "accentColor": "Aksentfarge",
+  "accentColorCaption": "Farger knapper, valg og diagrammer.",
+  "accentSemanticsNote": "Penger inn og penger ut beholder sine egne farger i alle temaer, så et tall bytter aldri betydning fordi du har byttet aksentfarge.",
+  "accentTeal": "Turkis",
+  "accentGreen": "Grønn",
+  "accentSky": "Himmelblå",
+  "accentBlue": "Blå",
+  "accentIndigo": "Indigo",
+  "accentViolet": "Fiolett",
+  "accentPink": "Rosa",
+  "accentCrimson": "Karmosin",
+  "accentOrange": "Oransje",
+  "accentSlate": "Skifergrå",
+  "searchLanguages": "Søk etter språk",
+  "suggestedLanguages": "Foreslåtte",
+  "allLanguages": "Alle språk",
+  "noLanguagesFound": "Fant ingen språk",
+  "noLanguagesFoundMessage": "Prøv navnet på engelsk eller den tobokstavskoden.",
+  "rightToLeft": "Høyre mot venstre",
+  "replayGuide": "Se guiden på nytt",
+  "replaySetup": "Kjør oppsettet på nytt",
+  "replaySetupBody": "Gå gjennom de første spørsmålene en gang til. Ingenting av det du har registrert blir slettet.",
+  "rateTitle": "Liker du RainyPenny?",
+  "rateBody": "Du har holdt på en stund nå. En vurdering tar et øyeblikk og hjelper andre med å finne appen.",
+  "rateAction": "Vurder appen",
+  "rateLater": "Kanskje senere",
+  "rateNever": "Nei takk",
+  "rateThanks": "Takk",
+  "monthlySalary": "Månedslønn",
+  "remainingAmount": "Gjenstår",
+  "carriedForward": "Overført",
+  "carriedForwardHint": "Til overs fra forrige periode",
+  "totalSpending": "Totalt forbruk",
+  "salaryCycle": "Lønnssyklus",
+  "payday": "Lønningsdag",
+  "paydayDescription": "Dagen lønnen din kommer inn. Din økonomiske måned går fra denne dagen til dagen før neste lønningsdag.",
+  "paydayUpdated": "Lønningsdag oppdatert",
+  "paydayDayOfMonth": "Dag {day}",
+  "paydayShortMonthNote": "I kortere måneder starter syklusen på den siste dagen i måneden i stedet.",
+  "daysLeftInCycle": "{count, plural, =0{Siste dag i syklusen} =1{1 dag til lønningsdag} other{{count} dager til lønningsdag}}",
+  "nextPayday": "Neste lønningsdag",
+  "spentSoFar": "Brukt så langt",
+  "dailyAllowance": "Trygt å bruke per dag",
+  "overspentNotice": "Du har brukt mer enn det som kom inn i denne syklusen.",
+  "backToThisMonth": "Tilbake til denne måneden",
+  "cycleRangeLabel": "Syklus",
+  "noSalaryRecorded": "Ingen lønn registrert ennå",
+  "addSalaryAction": "Legg til lønnen din",
+  "cycleOf": "{start} – {end}",
+  "healthExcellent": "Utmerket",
+  "healthGood": "God",
+  "healthFair": "Middels",
+  "healthNeedsWork": "Bør forbedres",
+  "healthExcellentBody": "Du sparer godt og holder deg innenfor budsjettene dine.",
+  "healthGoodBody": "Du er på rett spor med forbruket ditt denne perioden.",
+  "healthFairBody": "Noen budsjetter begynner å bli presset. Små endringer vil hjelpe.",
+  "healthNeedsWorkBody": "Forbruket er høyere enn planen din. Start med den største kategorien.",
+  "factorSavingsRate": "Sparerate",
+  "factorBudgetControl": "Budsjettkontroll",
+  "factorDebtLoad": "Gjeldsbelastning",
+  "factorSpendingTrend": "Forbrukstrend",
+  "factorKept": "{percent}% beholdt",
+  "factorUsed": "{percent}% brukt",
+  "factorOfIncome": "{percent}% av inntekten",
+  "factorTrendUp": "Opp {percent}%",
+  "factorTrendDown": "Ned {percent}%",
+  "howScoreWorks": "Slik fungerer poengsummen",
+  "healthScoreExplainer": "Poengsummen din kombinerer fire ting: hvor mye av inntekten du beholder, hvor godt du holder deg innenfor budsjettene, hvor mye av inntekten som går til gjeld, og om forbruket ditt øker eller synker.",
+  "scoreWeightLabel": "{percent}% av poengsummen",
+  "viewHealthDetails": "Se oversikten",
+  "saveChanges": "Lagre endringer",
+  "profileUpdated": "Profil oppdatert",
+  "changePhoto": "Bytt bilde",
+  "removePhoto": "Fjern bilde",
+  "personalInformationIntro": "Navnet og bildet ditt vises i hele appen. E-postadressen er adressen du logger inn med.",
+  "emailNotEditable": "Kontakt kundestøtte for å endre adressen du logger inn med.",
+  "pressBackAgainToExit": "Trykk tilbake igjen for å avslutte",
+  "categoryHousing": "Bolig",
+  "categoryFood": "Mat og restaurant",
+  "categoryTransport": "Transport",
+  "categoryShopping": "Shopping",
+  "categoryBills": "Regninger og tjenester",
+  "categoryEntertainment": "Underholdning",
+  "categoryHealth": "Helse og trening",
+  "categoryEducation": "Utdanning",
+  "categoryTravel": "Reise",
+  "categorySalary": "Lønn",
+  "categoryFreelance": "Frilans",
+  "categoryInvestments": "Investeringer",
+  "categoryGift": "Gave",
+  "categoryOther": "Annet",
+  "categoryGroceries": "Dagligvarer",
+  "categoryDining": "Restaurant",
+  "categoryCoffee": "Kaffe",
+  "categoryUtilities": "Tjenester",
+  "categoryInternet": "Internett",
+  "categoryPhone": "Telefon",
+  "categoryInsurance": "Forsikring",
+  "categorySubscriptions": "Abonnementer",
+  "categoryPersonalCare": "Personlig pleie",
+  "categoryClothing": "Klær",
+  "categoryElectronics": "Elektronikk",
+  "categoryHomeSupplies": "Husholdningsartikler",
+  "categoryPets": "Kjæledyr",
+  "categoryChildcare": "Barnepass",
+  "categoryFamily": "Familie",
+  "categoryFitness": "Trening",
+  "categorySports": "Sport",
+  "categoryMedicine": "Medisiner",
+  "categoryMedical": "Medisinsk",
+  "categoryCharity": "Veldedighet",
+  "categoryTaxes": "Skatter",
+  "categoryFees": "Gebyrer",
+  "categoryDebt": "Gjeld",
+  "categorySavings": "Sparing",
+  "categoryRepairs": "Reparasjoner",
+  "categoryCarMaintenance": "Bilvedlikehold",
+  "categoryFuel": "Drivstoff",
+  "categoryParking": "Parkering",
+  "categoryPublicTransport": "Kollektivtransport",
+  "categoryRent": "Husleie",
+  "categoryMortgage": "Boliglån",
+  "categoryBonus": "Bonus",
+  "categoryCommission": "Provisjon",
+  "categoryPension": "Pensjon",
+  "categoryInterest": "Renter",
+  "categoryDividends": "Utbytte",
+  "categoryCashback": "Cashback",
+  "categoryRefund": "Refusjon",
+  "categoryRentalIncome": "Leieinntekter",
+  "addCategory": "Ny kategori",
+  "filterByCategory": "Filtrer etter kategori",
+  "allCategories": "Alle kategorier",
+  "clearFilters": "Fjern filtre",
+  "spentInCategory": "{category}  ·  {amount}",
+  "allTime": "Alle tider",
+  "customRange": "Tilpasset",
+  "selectDateRange": "Velg en periode",
+  "rangeApplied": "Viser {start} – {end}",
+  "loans": "Lån",
+  "debts": "Gjeld",
+  "noLoansTitle": "Ingen lån",
+  "noLoansBody": "Du har ingen aktive lån.",
+  "emptyHealthTitle": "Ingen økonomisk poengsum ennå",
+  "emptyHealthDescription": "Vi trenger litt økonomisk aktivitet før vi kan beregne en nøyaktig økonomisk poengsum.",
+  "emptyHealthAddTransactions": "Legg til inntekts- eller utgiftstransaksjoner",
+  "emptyHealthSetBudgets": "Sett opp månedlige budsjetter",
+  "emptyHealthTrackLoans": "Følg med på lån eller gjeld (valgfritt)",
+  "emptyHealthCardSubtitle": "Legg til transaksjoner for å beregne poengsummen din og få innsikt.",
+  "smartBudgetSplit": "Smart budsjettfordeling",
+  "smartBudgetSplitSubtitle": "Skriv inn månedslønnen din for å beregne anbefalte grenser",
+  "monthlyNetSalary": "Månedlig nettolønn",
+  "categoryAllocations": "Kategori­fordelinger",
+  "totalBudgeted": "Totalt: {amount}",
+  "applyAllBudgets": "Bruk alle budsjetter",
+  "applyingBudgets": "Bruker budsjetter...",
+  "budgetsCreatedSuccess": "{count, plural, =1{1 kategoribudsjett opprettet.} other{{count} kategoribudsjetter opprettet.}}",
+  "failedToSaveBudgets": "Kunne ikke lagre budsjettene.",
+  "recommendedBudget": "Anbefalt budsjett"
 }

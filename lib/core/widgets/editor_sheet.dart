@@ -43,9 +43,7 @@ class EditorSheet extends StatelessWidget {
       padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
       child: SafeArea(
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxHeight: MediaQuery.sizeOf(context).height * 0.86,
-          ),
+          constraints: BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.86),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -61,17 +59,13 @@ class EditorSheet extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: AppTypography.sectionTitle.copyWith(
-                        color: context.textPrimary,
-                      ),
+                      style: AppTypography.sectionTitle.copyWith(color: context.textPrimary),
                     ),
                     if (subtitle != null) ...[
                       const SizedBox(height: 2),
                       Text(
                         subtitle!,
-                        style: AppTypography.caption.copyWith(
-                          color: context.textSecondary,
-                        ),
+                        style: AppTypography.caption.copyWith(color: context.textSecondary),
                       ),
                     ],
                   ],
@@ -80,9 +74,7 @@ class EditorSheet extends StatelessWidget {
               Flexible(
                 child: ListView(
                   shrinkWrap: true,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppSpacing.page,
-                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.page),
                   children: children,
                 ),
               ),
@@ -102,9 +94,7 @@ class EditorSheet extends StatelessWidget {
                           style: OutlinedButton.styleFrom(
                             foregroundColor: AppColors.error,
                             minimumSize: const Size.fromHeight(54),
-                            side: BorderSide(
-                              color: AppColors.error.withValues(alpha: 0.4),
-                            ),
+                            side: BorderSide(color: AppColors.error.withValues(alpha: 0.4)),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(AppRadius.md),
                             ),
@@ -118,9 +108,7 @@ class EditorSheet extends StatelessWidget {
                       flex: 2,
                       child: ElevatedButton(
                         onPressed: isBusy ? null : onSubmit,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: accent ?? context.accent,
-                        ),
+                        style: ElevatedButton.styleFrom(backgroundColor: accent ?? context.accent),
                         child: isBusy
                             ? const SizedBox(
                                 width: 20,
@@ -159,14 +147,8 @@ class SheetField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.only(
-              bottom: AppSpacing.sm,
-              start: 2,
-            ),
-            child: Text(
-              label,
-              style: AppTypography.label.copyWith(color: context.textSecondary),
-            ),
+            padding: const EdgeInsetsDirectional.only(bottom: AppSpacing.sm, start: 2),
+            child: Text(label, style: AppTypography.label.copyWith(color: context.textSecondary)),
           ),
           child,
         ],
@@ -198,28 +180,20 @@ class AmountField extends StatelessWidget {
       controller: controller,
       autofocus: autofocus,
       keyboardType: const TextInputType.numberWithOptions(decimal: true),
-      inputFormatters: [
-        FilteringTextInputFormatter.allow(RegExp(r'^\d*[.,]?\d{0,2}')),
-      ],
+      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*[.,]?\d{0,2}'))],
       style: AppTypography.amountLarge.copyWith(color: context.textPrimary),
       decoration: InputDecoration(
         hintText: hint,
         prefixIcon: Padding(
-          padding: const EdgeInsetsDirectional.only(
-            start: AppSpacing.lg,
-            end: AppSpacing.sm,
-          ),
+          padding: const EdgeInsetsDirectional.only(start: AppSpacing.lg, end: AppSpacing.sm),
           child: Text(
             symbol,
-            style: AppTypography.amountLarge.copyWith(
-              color: context.textSecondary,
-            ),
+            style: AppTypography.amountLarge.copyWith(color: context.textSecondary),
           ),
         ),
         prefixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
       ),
-      onChanged: (value) =>
-          onChanged(double.tryParse(value.replaceAll(',', '.')) ?? 0),
+      onChanged: (value) => onChanged(double.tryParse(value.replaceAll(',', '.')) ?? 0),
     );
   }
 }

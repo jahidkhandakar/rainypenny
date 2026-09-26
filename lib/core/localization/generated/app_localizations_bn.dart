@@ -12,7 +12,7 @@ class AppL10nBn extends AppL10n {
   String get appName => 'RainyPenny';
 
   @override
-  String get appTagline => 'দুর্দিনের জন্য সঞ্চয় করুন';
+  String get appTagline => 'দুর্দিনের জন্য জমান';
 
   @override
   String get navHome => 'হোম';
@@ -21,10 +21,10 @@ class AppL10nBn extends AppL10n {
   String get navTransactions => 'লেনদেন';
 
   @override
-  String get navAdd => 'যোগ করুন';
+  String get navAdd => 'যোগ';
 
   @override
-  String get navReports => 'প্রতিবেদন';
+  String get navReports => 'রিপোর্ট';
 
   @override
   String get navProfile => 'প্রোফাইল';
@@ -45,13 +45,13 @@ class AppL10nBn extends AppL10n {
   }
 
   @override
-  String get greetingSubtitle => 'এখানে আপনার আর্থিক সামগ্রিক চিত্র রয়েছে';
+  String get greetingSubtitle => 'এই যে আপনার আর্থিক চিত্র';
 
   @override
   String get totalBalance => 'মোট ব্যালেন্স';
 
   @override
-  String get vsLastPeriod => 'পূর্ববর্তী মেয়াদের তুলনায়';
+  String get vsLastPeriod => 'গত সময়ের তুলনায়';
 
   @override
   String get income => 'আয়';
@@ -66,7 +66,7 @@ class AppL10nBn extends AppL10n {
   String get lastThirtyDays => 'গত ৩০ দিন';
 
   @override
-  String get quickActions => 'দ্রুত পদক্ষেপ';
+  String get quickActions => 'দ্রুত কাজ';
 
   @override
   String get addIncome => 'আয় যোগ করুন';
@@ -75,7 +75,7 @@ class AppL10nBn extends AppL10n {
   String get addExpense => 'ব্যয় যোগ করুন';
 
   @override
-  String get spendingOverview => 'ব্যয়ের বিবরণ';
+  String get spendingOverview => 'খরচের সারসংক্ষেপ';
 
   @override
   String get recentTransactions => 'সাম্প্রতিক লেনদেন';
@@ -84,7 +84,7 @@ class AppL10nBn extends AppL10n {
   String get seeAll => 'সব দেখুন';
 
   @override
-  String get viewAll => 'সব দেখুন';
+  String get viewAll => 'সবগুলো দেখুন';
 
   @override
   String get budgetProgress => 'বাজেটের অগ্রগতি';
@@ -93,10 +93,10 @@ class AppL10nBn extends AppL10n {
   String get savingsGoals => 'সঞ্চয়ের লক্ষ্য';
 
   @override
-  String get financialInsight => 'আর্থিক অন্তর্দৃষ্টি';
+  String get financialInsight => 'আর্থিক পর্যবেক্ষণ';
 
   @override
-  String get financialHealth => 'আর্থিক সক্ষমতা';
+  String get financialHealth => 'আর্থিক স্বাস্থ্য';
 
   @override
   String ofTotal(String total) {
@@ -104,7 +104,7 @@ class AppL10nBn extends AppL10n {
   }
 
   @override
-  String get searchTransactions => 'লেনদেন অনুসন্ধান করুন';
+  String get searchTransactions => 'লেনদেন খুঁজুন';
 
   @override
   String get filterAll => 'সব';
@@ -126,7 +126,7 @@ class AppL10nBn extends AppL10n {
 
   @override
   String get noTransactionsBody =>
-      'আরও কার্যকলাপ দেখতে ভিন্ন অনুসন্ধান বা ফিল্টার ব্যবহার করে দেখুন।';
+      'অন্য কিছু খুঁজে দেখুন বা ফিল্টার বদলে আরও রেকর্ড দেখুন।';
 
   @override
   String transactionCount(int count) {
@@ -134,7 +134,7 @@ class AppL10nBn extends AppL10n {
       count,
       locale: localeName,
       other: '$countটি লেনদেন',
-      one: '১টি লেনদেন',
+      one: '$countটি লেনদেন',
       zero: 'কোনো লেনদেন নেই',
     );
     return '$_temp0';
@@ -147,7 +147,7 @@ class AppL10nBn extends AppL10n {
   String get amount => 'পরিমাণ';
 
   @override
-  String get category => 'বিভাগ';
+  String get category => 'শ্রেণি';
 
   @override
   String get date => 'তারিখ';
@@ -156,22 +156,22 @@ class AppL10nBn extends AppL10n {
   String get note => 'নোট';
 
   @override
-  String get noteHint => 'ঐচ্ছিক নোট';
+  String get noteHint => 'নোট (ঐচ্ছিক)';
 
   @override
-  String get saveIncome => 'আয় সংরক্ষণ করুন';
+  String get saveIncome => 'আয় সংরক্ষণ';
 
   @override
-  String get saveExpense => 'ব্যয় সংরক্ষণ করুন';
+  String get saveExpense => 'ব্যয় সংরক্ষণ';
 
   @override
-  String get selectCategory => 'বিভাগ নির্বাচন করুন';
+  String get selectCategory => 'শ্রেণি বাছুন';
 
   @override
-  String get transactionSaved => 'লেনদেন সংরক্ষিত হয়েছে';
+  String get transactionSaved => 'লেনদেন সংরক্ষিত';
 
   @override
-  String get amountRequired => 'শূন্যের চেয়ে বেশি পরিমাণ লিখুন';
+  String get amountRequired => 'শূন্যের চেয়ে বড় পরিমাণ লিখুন';
 
   @override
   String get titleRequired => 'এই লেনদেনের একটি নাম দিন';
@@ -180,22 +180,22 @@ class AppL10nBn extends AppL10n {
   String get descriptionLabel => 'বিবরণ';
 
   @override
-  String get descriptionHint => 'যেমন: মুদি বাজার';
+  String get descriptionHint => 'যেমন: বাজার';
 
   @override
   String get budget => 'বাজেট';
 
   @override
-  String get budgets => 'বাজেটসমূহ';
+  String get budgets => 'বাজেট';
 
   @override
   String get totalBudget => 'মোট বাজেট';
 
   @override
-  String get spent => 'ব্যয়িত';
+  String get spent => 'খরচ হয়েছে';
 
   @override
-  String get remaining => 'অবশিষ্ট';
+  String get remaining => 'বাকি';
 
   @override
   String budgetUsed(int percent) {
@@ -203,42 +203,42 @@ class AppL10nBn extends AppL10n {
   }
 
   @override
-  String get onTrack => 'সঠিক পথে আছে';
+  String get onTrack => 'ঠিক পথে';
 
   @override
-  String get approachingLimit => 'সীমার কাছাকাছি';
+  String get approachingLimit => 'সীমার কাছে';
 
   @override
-  String get overBudget => 'বাজেটের অতিরিক্ত';
+  String get overBudget => 'বাজেট ছাড়িয়েছে';
 
   @override
   String get savings => 'সঞ্চয়';
 
   @override
-  String get yourGoals => 'আপনার লক্ষ্যসমূহ';
+  String get yourGoals => 'আপনার লক্ষ্য';
 
   @override
-  String get saved => 'সঞ্চিত';
+  String get saved => 'জমা হয়েছে';
 
   @override
-  String get target => 'লক্ষ্যমাত্রা';
+  String get target => 'লক্ষ্য';
 
   @override
   String get monthlyContribution => 'মাসিক';
 
   @override
-  String get addFunds => 'অর্থ যোগ করুন';
+  String get addFunds => 'টাকা যোগ করুন';
 
   @override
-  String get goalComplete => 'লক্ষ্য পূরণ হয়েছে';
+  String get goalComplete => 'লক্ষ্য পূর্ণ';
 
   @override
   String monthsToGo(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count মাস বাকি',
-      one: '১ মাস বাকি',
+      other: 'আর $count মাস বাকি',
+      one: 'আর $count মাস বাকি',
     );
     return '$_temp0';
   }
@@ -257,7 +257,7 @@ class AppL10nBn extends AppL10n {
 
   @override
   String paidOff(int percent) {
-    return '$percent% পরিশোধিত';
+    return '$percent% শোধ হয়েছে';
   }
 
   @override
@@ -271,18 +271,18 @@ class AppL10nBn extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count দিনের মধ্যে প্রদেয়',
-      one: 'আগামীকাল প্রদেয়',
-      zero: 'আজ প্রদেয়',
+      other: 'আর $count দিন পর',
+      one: 'আর $count দিন পর',
+      zero: 'আজ দিতে হবে',
     );
     return '$_temp0';
   }
 
   @override
-  String get overdue => 'মেয়াদোত্তীর্ণ';
+  String get overdue => 'মেয়াদ পার';
 
   @override
-  String get reports => 'প্রতিবেদন';
+  String get reports => 'রিপোর্ট';
 
   @override
   String get week => 'সপ্তাহ';
@@ -297,13 +297,13 @@ class AppL10nBn extends AppL10n {
   String get incomeVsExpenses => 'আয় বনাম ব্যয়';
 
   @override
-  String get spendingByCategory => 'বিভাগ অনুযায়ী ব্যয়';
+  String get spendingByCategory => 'শ্রেণি অনুযায়ী খরচ';
 
   @override
-  String get budgetPerformance => 'বাজেটের কার্যকারিতা';
+  String get budgetPerformance => 'বাজেটের ফল';
 
   @override
-  String get insights => 'অন্তর্দৃষ্টি';
+  String get insights => 'পর্যবেক্ষণ';
 
   @override
   String get savingsRate => 'সঞ্চয়ের হার';
@@ -318,13 +318,13 @@ class AppL10nBn extends AppL10n {
   String get personalInformation => 'ব্যক্তিগত তথ্য';
 
   @override
-  String get changePassword => 'পাসওয়ার্ড পরিবর্তন করুন';
+  String get changePassword => 'পাসওয়ার্ড বদলান';
 
   @override
   String get notifications => 'বিজ্ঞপ্তি';
 
   @override
-  String get preferences => 'পছন্দসমূহ';
+  String get preferences => 'পছন্দ';
 
   @override
   String get language => 'ভাষা';
@@ -345,136 +345,134 @@ class AppL10nBn extends AppL10n {
   String get help => 'সহায়তা';
 
   @override
-  String get helpAndSupport => 'সহায়তা ও সমর্থন';
+  String get helpAndSupport => 'সহায়তা ও সাপোর্ট';
 
   @override
-  String get termsAndConditions => 'শর্তাবলী';
+  String get termsAndConditions => 'শর্তাবলি';
 
   @override
   String get logOut => 'লগ আউট';
 
   @override
   String memberSince(String date) {
-    return '$date থেকে যুক্ত আছেন';
+    return '$date থেকে সদস্য';
   }
 
   @override
-  String get themeSystem => 'সিস্টেম';
+  String get themeSystem => 'সিস্টেম অনুযায়ী';
 
   @override
-  String get themeLight => 'লাইট';
+  String get themeLight => 'উজ্জ্বল';
 
   @override
-  String get themeDark => 'ডার্ক';
+  String get themeDark => 'গাঢ়';
 
   @override
   String get settings => 'সেটিংস';
 
   @override
-  String get noNotificationsTitle => 'নতুন কোনো বিজ্ঞপ্তি নেই';
+  String get noNotificationsTitle => 'সব দেখা হয়ে গেছে';
 
   @override
-  String get noNotificationsBody =>
-      'নতুন অন্তর্দৃষ্টি এবং অনুস্মারক এখানে প্রদর্শিত হবে।';
+  String get noNotificationsBody => 'নতুন পর্যবেক্ষণ ও অনুস্মারক এখানে আসবে।';
 
   @override
   String get cancel => 'বাতিল';
 
   @override
-  String get save => 'সংরক্ষণ করুন';
+  String get save => 'সংরক্ষণ';
 
   @override
   String get done => 'সম্পন্ন';
 
   @override
-  String get retry => 'পুনরায় চেষ্টা করুন';
+  String get retry => 'আবার চেষ্টা';
 
   @override
-  String get close => 'বন্ধ করুন';
+  String get close => 'বন্ধ';
 
   @override
-  String get somethingWentWrong => 'কিছু ভুল হয়েছে';
+  String get somethingWentWrong => 'কিছু একটা ভুল হয়েছে';
 
   @override
-  String get comingSoon => 'শীঘ্রই আসছে';
+  String get comingSoon => 'পূর্ণ সংস্করণে আসছে';
 
   @override
   String get edit => 'সম্পাদনা';
 
   @override
-  String get delete => 'মুছে ফেলুন';
+  String get delete => 'মুছুন';
 
   @override
-  String get undo => 'পূর্বাবস্থায় ফেরান';
+  String get undo => 'ফেরান';
 
   @override
-  String get add => 'যোগ করুন';
+  String get add => 'যোগ';
 
   @override
-  String get create => 'তৈরি করুন';
+  String get create => 'তৈরি';
 
   @override
-  String get nameRequired => 'আপনার নাম লিখুন';
+  String get nameRequired => 'একটি নাম দিন';
 
   @override
-  String get amountAboveZero => 'শূন্যের চেয়ে বেশি পরিমাণ লিখুন';
+  String get amountAboveZero => 'শূন্যের চেয়ে বড় পরিমাণ লিখুন';
 
   @override
-  String get editTransaction => 'লেনদেন সম্পাদনা করুন';
+  String get editTransaction => 'লেনদেন সম্পাদনা';
 
   @override
-  String get deleteTransaction => 'লেনদেন মুছে ফেলবেন?';
+  String get deleteTransaction => 'লেনদেন মুছবেন?';
 
   @override
   String deleteTransactionBody(String title) {
-    return '$title আপনার খাতা থেকে মুছে ফেলা হবে।';
+    return '$title আপনার হিসাব থেকে সরে যাবে।';
   }
 
   @override
-  String get transactionDeleted => 'লেনদেন মুছে ফেলা হয়েছে';
+  String get transactionDeleted => 'লেনদেন মোছা হয়েছে';
 
   @override
-  String get transactionUpdated => 'লেনদেন আপডেট করা হয়েছে';
+  String get transactionUpdated => 'লেনদেন হালনাগাদ হয়েছে';
 
   @override
   String get newBudget => 'নতুন বাজেট';
 
   @override
-  String get editBudget => 'বাজেট সম্পাদনা করুন';
+  String get editBudget => 'বাজেট সম্পাদনা';
 
   @override
   String get budgetLimit => 'মাসিক সীমা';
 
   @override
-  String get deleteBudget => 'বাজেট মুছে ফেলবেন?';
+  String get deleteBudget => 'বাজেট মুছবেন?';
 
   @override
   String deleteBudgetBody(String category) {
-    return '$category বাজেট মুছে ফেলা হবে। আপনার লেনদেনসমূহ অপরিবর্তিত থাকবে।';
+    return '$category বাজেটটি সরে যাবে। আপনার লেনদেনে কোনো প্রভাব পড়বে না।';
   }
 
   @override
-  String get budgetSaved => 'বাজেট সংরক্ষিত হয়েছে';
+  String get budgetSaved => 'বাজেট সংরক্ষিত';
 
   @override
-  String get budgetDeleted => 'বাজেট মুছে ফেলা হয়েছে';
+  String get budgetDeleted => 'বাজেট মোছা হয়েছে';
 
   @override
-  String get allCategoriesBudgeted =>
-      'প্রতিটি বিভাগের জন্য ইতিমধ্যে বাজেট নির্ধারিত আছে';
+  String get allCategoriesBudgeted => 'প্রতিটি শ্রেণিতেই ইতিমধ্যে বাজেট আছে';
 
   @override
   String get noBudgetsTitle => 'এখনো কোনো বাজেট নেই';
 
   @override
   String get noBudgetsBody =>
-      'ট্র্যাকিং শুরু করতে যেকোনো বিভাগে একটি মাসিক সীমা নির্ধারণ করুন।';
+      'কোনো শ্রেণিতে মাসিক সীমা দিন, তাহলেই হিসাব রাখা শুরু হবে।';
 
   @override
   String get newGoal => 'নতুন লক্ষ্য';
 
   @override
-  String get editGoal => 'লক্ষ্য সম্পাদনা করুন';
+  String get editGoal => 'লক্ষ্য সম্পাদনা';
 
   @override
   String get goalName => 'লক্ষ্যের নাম';
@@ -483,52 +481,52 @@ class AppL10nBn extends AppL10n {
   String get goalNameHint => 'যেমন: জরুরি তহবিল';
 
   @override
-  String get targetAmount => 'লক্ষ্যমাত্রা পরিমাণ';
+  String get targetAmount => 'লক্ষ্যমাত্রা';
 
   @override
-  String get alreadySaved => 'ইতিমধ্যে সঞ্চিত';
+  String get alreadySaved => 'ইতিমধ্যে জমা';
 
   @override
-  String get deleteGoal => 'লক্ষ্য মুছে ফেলবেন?';
+  String get deleteGoal => 'লক্ষ্য মুছবেন?';
 
   @override
   String deleteGoalBody(String name) {
-    return '$name এবং এর অগ্রগতি মুছে ফেলা হবে।';
+    return '$name এবং তার অগ্রগতি সরে যাবে।';
   }
 
   @override
-  String get goalSaved => 'লক্ষ্য সংরক্ষিত হয়েছে';
+  String get goalSaved => 'লক্ষ্য সংরক্ষিত';
 
   @override
-  String get goalDeleted => 'লক্ষ্য মুছে ফেলা হয়েছে';
+  String get goalDeleted => 'লক্ষ্য মোছা হয়েছে';
 
   @override
   String get noGoalsTitle => 'এখনো কোনো সঞ্চয়ের লক্ষ্য নেই';
 
   @override
   String get noGoalsBody =>
-      'একটি লক্ষ্যমাত্রা নির্ধারণ করুন এবং RainyPenny আপনার অগ্রগতি পর্যবেক্ষণ করবে।';
+      'একটি লক্ষ্য ঠিক করুন, RainyPenny আপনার অগ্রগতির হিসাব রাখবে।';
 
   @override
-  String get fundsAdded => 'অর্থ যোগ করা হয়েছে';
+  String get fundsAdded => 'টাকা যোগ হয়েছে';
 
   @override
-  String get newDebt => 'নতুন ঋণ বা ক্রেডিট কার্ড';
+  String get newDebt => 'নতুন ঋণ বা কার্ড';
 
   @override
-  String get editDebt => 'ঋণ সম্পাদনা করুন';
+  String get editDebt => 'ঋণ সম্পাদনা';
 
   @override
   String get debtName => 'নাম';
 
   @override
-  String get debtNameHint => 'যেমন: গাড়ি ঋণ';
+  String get debtNameHint => 'যেমন: গাড়ির ঋণ';
 
   @override
   String get lender => 'ঋণদাতা';
 
   @override
-  String get lenderHint => 'যেমন: ব্যাংক';
+  String get lenderHint => 'যেমন: সোনালী ব্যাংক';
 
   @override
   String get originalAmount => 'মূল পরিমাণ';
@@ -537,7 +535,7 @@ class AppL10nBn extends AppL10n {
   String get creditLimit => 'ক্রেডিট সীমা';
 
   @override
-  String get remainingBalance => 'অবশিষ্ট ব্যালেন্স';
+  String get remainingBalance => 'বাকি ব্যালেন্স';
 
   @override
   String get interestRatePercent => 'সুদের হার (%)';
@@ -549,45 +547,45 @@ class AppL10nBn extends AppL10n {
   String get kindCreditCard => 'ক্রেডিট কার্ড';
 
   @override
-  String get recordPayment => 'পরিশোধ রেকর্ড করুন';
+  String get recordPayment => 'কিস্তি নথিভুক্ত করুন';
 
   @override
-  String get paymentRecorded => 'পরিশোধ রেকর্ড করা হয়েছে';
+  String get paymentRecorded => 'কিস্তি নথিভুক্ত হয়েছে';
 
   @override
-  String get deleteDebt => 'এই ঋণটি মুছে ফেলবেন?';
+  String get deleteDebt => 'এই দেনা মুছবেন?';
 
   @override
   String deleteDebtBody(String name) {
-    return '$name আপনার ঋণের তালিকা থেকে মুছে ফেলা হবে।';
+    return '$name আপনার দেনার তালিকা থেকে সরে যাবে।';
   }
 
   @override
-  String get debtSaved => 'সংরক্ষিত হয়েছে';
+  String get debtSaved => 'সংরক্ষিত';
 
   @override
-  String get debtDeleted => 'মুছে ফেলা হয়েছে';
+  String get debtDeleted => 'মোছা হয়েছে';
 
   @override
-  String get noDebtsTitle => 'কোনো ঋণ ট্র্যাক করা হচ্ছে না';
+  String get noDebtsTitle => 'কোনো দেনা নেই';
 
   @override
   String get noDebtsBody =>
-      'পরিশোধের ওপর নজর রাখতে একটি ঋণ বা ক্রেডিট কার্ড যোগ করুন।';
+      'ঋণ বা ক্রেডিট কার্ড যোগ করে কিস্তির দিকে নজর রাখুন।';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return '$subject বাজেট অতিক্রম করেছে';
+    return '$subject বাজেট ছাড়িয়ে গেছে';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return 'এই মেয়াদে আপনার $subject বাজেট $amount অতিক্রম করেছে।';
+    return 'এই সময়ে আপনি $subject বাজেটের চেয়ে $amount বেশি খরচ করেছেন।';
   }
 
   @override
   String insightBudgetApproachingTitle(String subject) {
-    return '$subject সীমার কাছাকাছি পৌঁছেছে';
+    return '$subject সীমার কাছাকাছি';
   }
 
   @override
@@ -596,71 +594,71 @@ class AppL10nBn extends AppL10n {
     int percent,
     String amount,
   ) {
-    return 'আপনার $subject বাজেটের $percent% ব্যবহৃত হয়েছে, $amount অবশিষ্ট আছে।';
+    return 'আপনার $subject বাজেটের $percent% ব্যবহৃত, বাকি $amount।';
   }
 
   @override
-  String get insightOverIncomeTitle => 'ব্যয় আয়ের চেয়ে বেশি';
+  String get insightOverIncomeTitle => 'খরচ আয়ের চেয়ে বেশি';
 
   @override
   String get insightOverIncomeBody =>
-      'এই মেয়াদে আপনি আয়ের চেয়ে বেশি ব্যয় করেছেন। পরিস্থিতি নিয়ন্ত্রণে আনতে বড় ব্যয়ের বিভাগগুলো পর্যালোচনা করুন।';
+      'এই সময়ে আপনি আয়ের চেয়ে বেশি খরচ করেছেন। সবচেয়ে বড় শ্রেণিগুলো দেখে হিসাব সামলে নিন।';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return '$subject ব্যয় বৃদ্ধি পেয়েছে';
+    return '$subject খরচ বেড়েছে';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return 'আপনার $subject ব্যয় পূর্ববর্তী মেয়াদের তুলনায় $percent% বেশি।';
+    return 'আপনার $subject খরচ আগের সময়ের চেয়ে $percent% বেশি।';
   }
 
   @override
-  String get insightTrendDownTitle => 'ব্যয় হ্রাসের দিকে';
+  String get insightTrendDownTitle => 'খরচ কমছে';
 
   @override
   String insightTrendDownBody(int percent) {
-    return 'সামগ্রিক ব্যয় পূর্ববর্তী মেয়াদের তুলনায় $percent% কম।';
+    return 'সব মিলিয়ে খরচ আগের সময়ের চেয়ে $percent% কম।';
   }
 
   @override
-  String get insightTrendUpTitle => 'ব্যয় বৃদ্ধির দিকে';
+  String get insightTrendUpTitle => 'খরচ বাড়ছে';
 
   @override
   String insightTrendUpBody(int percent) {
-    return 'সামগ্রিক ব্যয় পূর্ববর্তী মেয়াদের তুলনায় $percent% বেশি।';
+    return 'সব মিলিয়ে খরচ আগের সময়ের চেয়ে $percent% বেশি।';
   }
 
   @override
-  String get insightSavingsStrongTitle => 'এই মেয়াদে ভালো সঞ্চয় হয়েছে';
+  String get insightSavingsStrongTitle => 'এই সময়ে সঞ্চয় ভালো হয়েছে';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
-    return 'আপনি আপনার আয়ের $percent% সঞ্চয় করেছেন — যা $target% লক্ষ্যমাত্রার চেয়ে অনেক বেশি।';
+    return 'আপনি আয়ের $percent% রেখে দিয়েছেন — $target% লক্ষ্যের অনেক ওপরে।';
   }
 
   @override
-  String get insightSavingsLowTitle => 'সঞ্চয়ের হার লক্ষ্যমাত্রার চেয়ে কম';
+  String get insightSavingsLowTitle => 'সঞ্চয়ের হার লক্ষ্যের নিচে';
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return 'এই মেয়াদে আপনি আয়ের $percent% সঞ্চয় করেছেন। $target% সঞ্চয় করার চেষ্টা করুন।';
+    return 'এই সময়ে আপনি আয়ের $percent% রেখেছেন। লক্ষ্য $target%।';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return '$subject লক্ষ্য প্রায় পূরণ হয়েছে';
+    return '$subject প্রায় পূর্ণ';
   }
 
   @override
   String insightGoalNearlyBody(String amount, String subject) {
-    return '$subject লক্ষ্যে পৌঁছাতে মাত্র $amount বাকি।';
+    return '$subject-এ পৌঁছাতে আর মাত্র $amount বাকি।';
   }
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return '$subject সঠিক পথে রয়েছে';
+    return '$subject ঠিক পথে';
   }
 
   @override
@@ -669,14 +667,14 @@ class AppL10nBn extends AppL10n {
       months,
       locale: localeName,
       other: '$months মাসে',
-      one: '১ মাসে',
+      one: '$months মাসে',
     );
-    return 'প্রতি মাসে $amount সঞ্চয় করলে আপনি $_temp0 এই লক্ষ্যে পৌঁছাতে পারবেন।';
+    return 'মাসে $amount করে রাখলে $_temp0 এই লক্ষ্যে পৌঁছে যাবেন।';
   }
 
   @override
   String insightDebtOverdueTitle(String subject) {
-    return '$subject কিস্তির মেয়াদ উত্তীর্ণ';
+    return '$subject কিস্তির মেয়াদ পেরিয়েছে';
   }
 
   @override
@@ -685,14 +683,14 @@ class AppL10nBn extends AppL10n {
       days,
       locale: localeName,
       other: '$days দিন',
-      one: '১ দিন',
+      one: '$days দিন',
     );
-    return '$subject-এর $amount টাকার কিস্তি পরিশোধের মেয়াদ $_temp0 পেরিয়ে গেছে।';
+    return '$subject-এর $amount কিস্তি $_temp0 ধরে বকেয়া।';
   }
 
   @override
   String insightDebtDueTitle(String subject) {
-    return '$subject কিস্তি আসন্ন';
+    return '$subject কিস্তি আসছে';
   }
 
   @override
@@ -700,24 +698,24 @@ class AppL10nBn extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       days,
       locale: localeName,
-      other: '$days দিনের মধ্যে',
-      one: 'আগামীকাল',
+      other: 'আর $days দিন পর',
+      one: 'আর $days দিন পর',
       zero: 'আজ',
     );
-    return '$amount টাকা $_temp0 প্রদেয়।';
+    return '$amount দিতে হবে $_temp0।';
   }
 
   @override
   String get signIn => 'সাইন ইন';
 
   @override
-  String get signUp => 'অ্যাকাউন্ট তৈরি করুন';
+  String get signUp => 'অ্যাকাউন্ট খুলুন';
 
   @override
-  String get signInSubtitle => 'স্বাগতম। আপনার আর্থিক বিবরণ প্রস্তুত রয়েছে।';
+  String get signInSubtitle => 'ফিরে আসায় স্বাগতম। আপনার টাকা অপেক্ষা করছে।';
 
   @override
-  String get signUpSubtitle => 'কিছু সাধারণ তথ্য দিন এবং শুরু করুন।';
+  String get signUpSubtitle => 'কয়েকটি তথ্য দিলেই হয়ে যাবে।';
 
   @override
   String get emailLabel => 'ইমেইল';
@@ -729,69 +727,68 @@ class AppL10nBn extends AppL10n {
   String get passwordLabel => 'পাসওয়ার্ড';
 
   @override
-  String get passwordHint => 'কমপক্ষে ৮টি অক্ষর';
+  String get passwordHint => 'অন্তত ৮টি অক্ষর';
 
   @override
   String get fullNameLabel => 'পুরো নাম';
 
   @override
-  String get fullNameHint => 'রহিম আহমেদ';
+  String get fullNameHint => 'রফিক আহমেদ';
 
   @override
   String get forgotPassword => 'পাসওয়ার্ড ভুলে গেছেন?';
 
   @override
-  String get resetSent => 'রিসেট লিঙ্কের জন্য আপনার ইনবক্স চেক করুন';
+  String get resetSent => 'রিসেট লিংকের জন্য ইনবক্স দেখুন';
 
   @override
   String get noAccountYet => 'নতুন এসেছেন?';
 
   @override
-  String get haveAccount => 'ইতিমধ্যে অ্যাকাউন্ট আছে?';
+  String get haveAccount => 'আগে থেকেই অ্যাকাউন্ট আছে?';
 
   @override
-  String get emailInvalid => 'একটি বৈধ ইমেইল ঠিকানা লিখুন';
+  String get emailInvalid => 'সঠিক ইমেইল ঠিকানা লিখুন';
 
   @override
-  String get passwordTooShort => 'কমপক্ষে ৮টি অক্ষর ব্যবহার করুন';
+  String get passwordTooShort => 'অন্তত ৮টি অক্ষর দিন';
 
   @override
   String get signOutConfirm => 'সাইন আউট করবেন?';
 
   @override
-  String get signOutBody =>
-      'আপনার আর্থিক বিবরণ দেখতে আপনাকে পুনরায় সাইন ইন করতে হবে।';
+  String get signOutBody => 'আবার হিসাব দেখতে হলে আপনাকে ফের সাইন ইন করতে হবে।';
 
   @override
-  String get dataSource => 'উপাত্তের উৎস';
+  String get dataSource => 'ডেটার উৎস';
 
   @override
-  String get insightWeeklySummaryTitle => 'আপনার সপ্তাহের সারসংক্ষেপ';
+  String get insightWeeklySummaryTitle => 'আপনার সপ্তাহের হিসাব';
 
   @override
   String get insightWeeklySummaryBody =>
-      'এই সপ্তাহে আপনার অর্থ কোথায় ব্যয় হয়েছে এবং বাজেট কেমন রয়েছে তা দেখুন।';
+      'এই সপ্তাহে টাকা কোথায় গেল আর বাজেট কেমন চলল, দেখে নিন।';
 
   @override
   String get notificationSettings => 'বিজ্ঞপ্তি';
 
   @override
-  String get alertsSection => 'সতর্কবার্তা';
+  String get alertsSection => 'সতর্কতা';
 
   @override
   String get budgetAlerts => 'বাজেট সতর্কতা';
 
   @override
-  String get budgetAlertsBody => 'যখন বাজেট সীমার কাছাকাছি বা অতিক্রম করে';
+  String get budgetAlertsBody => 'বাজেট সীমার কাছে গেলে বা ছাড়িয়ে গেলে';
 
   @override
-  String get paymentReminders => 'কিস্তি অনুস্মারক';
+  String get paymentReminders => 'কিস্তির অনুস্মারক';
 
   @override
-  String get paymentRemindersBody => 'কিস্তির নির্দিষ্ট দিনের কয়েক দিন আগে';
+  String get paymentRemindersBody => 'কিস্তির তারিখের কয়েক দিন আগে';
 
   @override
-  String get savingsUpdates => 'সঞ্চয় আপডেট';
+  String get savingsUpdates => 'সঞ্চয়ের খবর';
 
   @override
   String get savingsUpdatesBody => 'আপনার লক্ষ্যের দিকে অগ্রগতি';
@@ -800,10 +797,10 @@ class AppL10nBn extends AppL10n {
   String get weeklySummaryLabel => 'সাপ্তাহিক সারসংক্ষেপ';
 
   @override
-  String get weeklySummaryBody => 'গত সপ্তাহের একটি সংক্ষিপ্ত রূপরেখা';
+  String get weeklySummaryBody => 'গত সপ্তাহের সংক্ষিপ্ত হিসাব';
 
   @override
-  String get scheduleSection => 'সময়সূচী';
+  String get scheduleSection => 'সময়';
 
   @override
   String get reminderTime => 'অনুস্মারকের সময়';
@@ -820,28 +817,28 @@ class AppL10nBn extends AppL10n {
   String get summaryDay => 'সারসংক্ষেপের দিন';
 
   @override
-  String get permissionRequired => 'বিজ্ঞপ্তি বন্ধ রয়েছে';
+  String get permissionRequired => 'বিজ্ঞপ্তি বন্ধ আছে';
 
   @override
   String get permissionRequiredBody =>
-      'বিজ্ঞপ্তি চালু করুন যাতে বাজেট বা কিস্তি মিস হওয়ার আগে RainyPenny আপনাকে সতর্ক করতে পারে।';
+      'বিজ্ঞপ্তির অনুমতি দিন, যাতে বাজেট বা কিস্তি হাতছাড়া হওয়ার আগেই RainyPenny জানাতে পারে।';
 
   @override
-  String get allowNotifications => 'বিজ্ঞপ্তি চালু করুন';
+  String get allowNotifications => 'বিজ্ঞপ্তির অনুমতি দিন';
 
   @override
   String get permissionDenied =>
-      'বিজ্ঞপ্তি ব্লক করা আছে। আপনি ডিভাইস সেটিংস থেকে এটি চালু করতে পারেন।';
+      'বিজ্ঞপ্তি আটকানো আছে। ডিভাইসের সেটিংস থেকে চালু করতে পারেন।';
 
   @override
-  String get upcomingAlerts => 'নির্ধারিত অ্যালার্ট';
+  String get upcomingAlerts => 'নির্ধারিত';
 
   @override
-  String get noScheduledAlerts => 'এই মুহূর্তে নির্ধারিত কিছু নেই';
+  String get noScheduledAlerts => 'এখন কিছুই নির্ধারিত নেই';
 
   @override
   String get noScheduledAlertsBody =>
-      'বাজেট এবং কিস্তির সময় ঘনিয়ে এলে সতর্কবার্তা এখানে দেখাবে।';
+      'বাজেট আর কিস্তি সীমার কাছে এলে সতর্কতা এখানে দেখা যাবে।';
 
   @override
   String scheduledFor(String date) {
@@ -852,19 +849,19 @@ class AppL10nBn extends AppL10n {
   String get everyWeek => 'প্রতি সপ্তাহে';
 
   @override
-  String get allNotificationsOff => 'সব বিজ্ঞপ্তি বন্ধ আছে';
+  String get allNotificationsOff => 'সব বিজ্ঞপ্তি বন্ধ';
 
   @override
-  String get needsAttention => 'মনোযোগ প্রয়োজন';
+  String get needsAttention => 'নজর দরকার';
 
   @override
-  String get quickActionsTitle => 'আপনি কি করতে চান?';
+  String get quickActionsTitle => 'কী করতে চান?';
 
   @override
-  String get createSection => 'রেকর্ড';
+  String get createSection => 'লিখে রাখুন';
 
   @override
-  String get jumpToSection => 'দ্রুত যান';
+  String get jumpToSection => 'চলে যান';
 
   @override
   String get addLoanAction => 'ঋণ যোগ করুন';
@@ -876,23 +873,22 @@ class AppL10nBn extends AppL10n {
   String get addGoalAction => 'লক্ষ্য যোগ করুন';
 
   @override
-  String get longPressHint => 'পরামর্শ: সরাসরি ব্যয় যোগ করতে + চেপে ধরে রাখুন';
+  String get longPressHint => 'পরামর্শ: + চেপে ধরলেই সরাসরি খরচ লেখা যায়';
 
   @override
-  String get searchCurrencies => 'মুদ্রা অনুসন্ধান করুন';
+  String get searchCurrencies => 'মুদ্রা খুঁজুন';
 
   @override
   String get noCurrenciesFound => 'কোনো মুদ্রা পাওয়া যায়নি';
 
   @override
-  String get noCurrenciesFoundMessage =>
-      'ভিন্ন কোড, প্রতীক বা নাম চেষ্টা করুন।';
+  String get noCurrenciesFoundMessage => 'অন্য কোড, প্রতীক বা নাম দিয়ে দেখুন।';
 
   @override
   String get popularCurrencies => 'জনপ্রিয়';
 
   @override
-  String get allCurrencies => 'সকল মুদ্রা';
+  String get allCurrencies => 'সব মুদ্রা';
 
   @override
   String get totalLoanAmount => 'মোট ঋণের পরিমাণ';
@@ -907,38 +903,38 @@ class AppL10nBn extends AppL10n {
   String get paidInstallments => 'পরিশোধিত কিস্তি';
 
   @override
-  String get remainingInstallments => 'অবশিষ্ট কিস্তি';
+  String get remainingInstallments => 'বাকি কিস্তি';
 
   @override
   String installmentsPaidOf(int paid, int total) {
-    return '$total-এর মধ্যে $paid পরিশোধিত';
+    return '$total-এর মধ্যে $paidটি পরিশোধিত';
   }
 
   @override
-  String get finalPayment => 'সর্বশেষ কিস্তি';
+  String get finalPayment => 'শেষ কিস্তি';
 
   @override
-  String get paymentDueDate => 'কিস্তি পরিশোধের তারিখ';
+  String get paymentDueDate => 'কিস্তির তারিখ';
 
   @override
   String dueOnDayOfMonth(int day) {
-    return 'প্রতি মাসের $day তারিখ';
+    return 'প্রতি মাসের $day তারিখে';
   }
 
   @override
-  String get loanStatus => 'স্ট্যাটাস';
+  String get loanStatus => 'অবস্থা';
 
   @override
-  String get statusActive => 'সক্রিয়';
+  String get statusActive => 'ঠিক পথে';
 
   @override
-  String get statusDueSoon => 'শীঘ্রই প্রদেয়';
+  String get statusDueSoon => 'শিগগিরই দিতে হবে';
 
   @override
-  String get statusOverdue => 'মেয়াদোত্তীর্ণ';
+  String get statusOverdue => 'মেয়াদ পার';
 
   @override
-  String get statusCompleted => 'সম্পূর্ণ পরিশোধিত';
+  String get statusCompleted => 'পরিশোধিত';
 
   @override
   String get repaymentProgress => 'পরিশোধের অগ্রগতি';
@@ -953,7 +949,7 @@ class AppL10nBn extends AppL10n {
   String get startDate => 'শুরুর তারিখ';
 
   @override
-  String get openEnded => 'নির্দিষ্ট মেয়াদহীন';
+  String get openEnded => 'মেয়াদহীন';
 
   @override
   String get loanDetails => 'ঋণের বিবরণ';
@@ -963,12 +959,12 @@ class AppL10nBn extends AppL10n {
 
   @override
   String insightDebtDueTodayTitle(String subject) {
-    return '$subject-এর কিস্তি আজ প্রদেয়';
+    return '$subject আজ দিতে হবে';
   }
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return 'আপনার $amount টাকার কিস্তি আজ প্রদেয়। সময়মতো পরিশোধ করতে ট্যাপ করুন।';
+    return 'আপনার $amount কিস্তি আজ দিতে হবে। এক চাপেই সময়মতো হয়ে যাবে।';
   }
 
   @override
@@ -976,51 +972,49 @@ class AppL10nBn extends AppL10n {
 
   @override
   String get remindMorningBody =>
-      'দিনের শুরুতেই আর্থিক হিসাব ঠিক রাখুন। গতকালের কিছু যোগ করার আছে কি?';
+      'টাকার হিসাব হাতে রেখে দিন শুরু করুন। গতকালের কিছু যোগ করার আছে?';
 
   @override
-  String get remindNoonTitle => 'দুপুরের চেক-ইন';
+  String get remindNoonTitle => 'দুপুরের হিসাব';
 
   @override
   String get remindNoonBody =>
-      'দুপুরের খাবার, কফি বা যাতায়াত ভাড়া? কয়েক সেকেন্ডে যোগ করে নিন।';
+      'দুপুরের খাবার, চা, ভাড়া? কয়েক সেকেন্ডেই লিখে ফেলুন।';
 
   @override
-  String get remindAfternoonTitle => 'দ্রুত আপডেট';
+  String get remindAfternoonTitle => 'একটু গুছিয়ে নিন';
 
   @override
   String get remindAfternoonBody =>
-      'আজকের খরচগুলো এখনি রেকর্ড করে হিসাব নিখুঁত রাখুন।';
+      'এ পর্যন্ত যা খরচ হয়েছে লিখে ফেলুন, আজকের হিসাব ঠিক থাকবে।';
 
   @override
-  String get remindEveningTitle => 'দিনের সমাপ্তি';
+  String get remindEveningTitle => 'দিনের শেষ টানা';
 
   @override
-  String get remindEveningBody =>
-      'মাত্র দুই মিনিট সময় দিন এবং আজকের হিসাব সম্পন্ন করুন।';
+  String get remindEveningBody => 'এখন দুই মিনিট দিলেই আজকের হিসাব পূর্ণ।';
 
   @override
-  String get happyWeekendTitle => 'শুভ ছুটির দিন! 🎉';
+  String get happyWeekendTitle => 'ছুটির দিন ভালো কাটুক! 🎉';
 
   @override
   String get happyWeekendBody =>
-      'ছুটির দিন উপভোগ করুন — আর খরচের ওপর নজর রাখুন।';
+      'উপভোগ করুন — আর ছুটির খরচের দিকেও একটু নজর রাখুন।';
 
   @override
   String get dailyReminders => 'দৈনিক খরচের অনুস্মারক';
 
   @override
-  String get dailyRemindersBody =>
-      'খরচের হিসাব আপ-টু-ডেট রাখতে সহায়ক নোটিফিকেশন';
+  String get dailyRemindersBody => 'খরচ লিখে রাখতে মৃদু মনে করিয়ে দেওয়া';
 
   @override
-  String get weekendGreeting => 'উইকেন্ড গ্রিটিং';
+  String get weekendGreeting => 'ছুটির শুভেচ্ছা';
 
   @override
-  String get weekendGreetingBody => 'ছুটির দিনের শুরুতে শুভেচ্ছা বার্তা';
+  String get weekendGreetingBody => 'ছুটি শুরুর সময় একটি শুভেচ্ছা';
 
   @override
-  String get reminderTimesSection => 'অনুস্মারকের সময়সূচী';
+  String get reminderTimesSection => 'অনুস্মারকের সময়';
 
   @override
   String get slotMorning => 'সকাল';
@@ -1029,7 +1023,7 @@ class AppL10nBn extends AppL10n {
   String get slotNoon => 'দুপুর';
 
   @override
-  String get slotAfternoon => 'বিকাল';
+  String get slotAfternoon => 'বিকেল';
 
   @override
   String get slotEvening => 'সন্ধ্যা';
@@ -1038,17 +1032,17 @@ class AppL10nBn extends AppL10n {
   String get everyDay => 'প্রতিদিন';
 
   @override
-  String get financialReport => 'আর্থিক প্রতিবেদন';
+  String get financialReport => 'আর্থিক রিপোর্ট';
 
   @override
-  String get preparedFor => 'যার জন্য প্রস্তুতকৃত';
+  String get preparedFor => 'যাঁর জন্য তৈরি';
 
   @override
-  String get generatedOn => 'তৈরির তারিখ';
+  String get generatedOn => 'তৈরির সময়';
 
   @override
   String get reportDisclaimer =>
-      'আপনার সংরক্ষিত তথ্যের ভিত্তিতে RainyPenny কর্তৃক প্রস্তুতকৃত।';
+      'আপনার নিজের রেকর্ড থেকে RainyPenny তৈরি করেছে।';
 
   @override
   String pageOf(int page, int total) {
@@ -1080,7 +1074,7 @@ class AppL10nBn extends AppL10n {
   String get goal => 'লক্ষ্য';
 
   @override
-  String get targetDate => 'লক্ষ্যমাত্রা তারিখ';
+  String get targetDate => 'লক্ষ্যের তারিখ';
 
   @override
   String get progress => 'অগ্রগতি';
@@ -1089,7 +1083,7 @@ class AppL10nBn extends AppL10n {
   String get paidOffShort => 'পরিশোধিত';
 
   @override
-  String get transactions => 'লেনদেনসমূহ';
+  String get transactions => 'লেনদেন';
 
   @override
   String andMoreTransactions(int count) {
@@ -1097,66 +1091,66 @@ class AppL10nBn extends AppL10n {
       count,
       locale: localeName,
       other: 'এবং আরও $countটি লেনদেন',
-      one: 'এবং আরও ১টি লেনদেন',
+      one: 'এবং আরও $countটি লেনদেন',
     );
     return '$_temp0';
   }
 
   @override
-  String get exportPdf => 'PDF রপ্তানি করুন';
+  String get exportPdf => 'PDF রপ্তানি';
 
   @override
-  String get sharePdf => 'প্রতিবেদন শেয়ার করুন';
+  String get sharePdf => 'রিপোর্ট শেয়ার';
 
   @override
-  String get preparingReport => 'প্রতিবেদন প্রস্তুত করা হচ্ছে…';
+  String get preparingReport => 'রিপোর্ট তৈরি হচ্ছে…';
 
   @override
-  String get reportReady => 'প্রতিবেদন প্রস্তুত';
+  String get reportReady => 'রিপোর্ট তৈরি';
 
   @override
-  String get reportFailed => 'প্রতিবেদন তৈরি করা সম্ভব হয়নি';
+  String get reportFailed => 'রিপোর্ট তৈরি করা যায়নি';
 
   @override
-  String get categories => 'বিভাগসমূহ';
+  String get categories => 'শ্রেণি';
 
   @override
   String get categoriesIntro =>
-      'আপনার সুবিধা অনুযায়ী আয় এবং ব্যয়ের হিসাব রাখতে নিজস্ব বিভাগ যোগ করুন।';
+      'নিজের শ্রেণি যোগ করুন, যাতে আয়-ব্যয় ঠিক আপনার ভাবনার মতোই সাজানো যায়।';
 
   @override
-  String get expenseCategories => 'ব্যয়ের বিভাগসমূহ';
+  String get expenseCategories => 'ব্যয়ের শ্রেণি';
 
   @override
-  String get incomeCategories => 'আয়ের বিভাগসমূহ';
+  String get incomeCategories => 'আয়ের শ্রেণি';
 
   @override
-  String get newCategory => 'নতুন বিভাগ';
+  String get newCategory => 'নতুন শ্রেণি';
 
   @override
-  String get editCategory => 'বিভাগ সম্পাদনা করুন';
+  String get editCategory => 'শ্রেণি সম্পাদনা';
 
   @override
   String get categoryName => 'নাম';
 
   @override
-  String get categoryNameHint => 'যেমন: গৃহপালিত প্রাণী';
+  String get categoryNameHint => 'যেমন: পোষা প্রাণী';
 
   @override
   String get icon => 'আইকন';
 
   @override
-  String get categorySaved => 'বিভাগ সংরক্ষিত হয়েছে';
+  String get categorySaved => 'শ্রেণি সংরক্ষিত';
 
   @override
-  String get categoryDeleted => 'বিভাগ মুছে ফেলা হয়েছে';
+  String get categoryDeleted => 'শ্রেণি মোছা হয়েছে';
 
   @override
-  String get deleteCategory => 'এই বিভাগটি মুছে ফেলবেন?';
+  String get deleteCategory => 'এই শ্রেণি মুছবেন?';
 
   @override
   String deleteCategoryBody(String name) {
-    return '$name আপনার বিভাগসমূহ থেকে মুছে ফেলা হবে।';
+    return '$name আপনার শ্রেণির তালিকা থেকে সরে যাবে।';
   }
 
   @override
@@ -1164,8 +1158,8 @@ class AppL10nBn extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$countটি রেকর্ডে এখনো এই বিভাগটি ব্যবহৃত হচ্ছে',
-      one: '১টি রেকর্ডে এখনো এই বিভাগটি ব্যবহৃত হচ্ছে',
+      other: '$countটি রেকর্ড এখনো এই শ্রেণি ব্যবহার করছে',
+      one: '$countটি রেকর্ড এখনো এই শ্রেণি ব্যবহার করছে',
     );
     return '$_temp0';
   }
@@ -1174,29 +1168,29 @@ class AppL10nBn extends AppL10n {
   String get noCategoriesYet => 'এখানে এখনো কিছু নেই।';
 
   @override
-  String get builtIn => 'বিল্ট-ইন';
+  String get builtIn => 'অন্তর্নির্মিত';
 
   @override
-  String get manageCategories => 'বিভাগ পরিচালনা করুন';
+  String get manageCategories => 'শ্রেণি ব্যবস্থাপনা';
 
   @override
   String get expense => 'ব্যয়';
 
   @override
   String get languageNote =>
-      'আরবি, উর্দু, ফার্সি এবং হিব্রু নির্বাচন করলে চার্ট এবং পিডিএফ সহ পুরো ইন্টারফেস ডান-থেকে-বামে পরিবর্তিত হবে।';
+      'আরবি, উর্দু, ফারসি ও হিব্রু পুরো ইন্টারফেস ডান-থেকে-বামে করে দেয় — চার্ট আর PDF রিপোর্টসহ।';
 
   @override
   String get next => 'পরবর্তী';
 
   @override
-  String get back => 'পূর্ববর্তী';
+  String get back => 'ফিরুন';
 
   @override
   String get skip => 'এড়িয়ে যান';
 
   @override
-  String get continueLabel => 'এগিয়ে যান';
+  String get continueLabel => 'চালিয়ে যান';
 
   @override
   String get selected => 'নির্বাচিত';
@@ -1211,34 +1205,34 @@ class AppL10nBn extends AppL10n {
   String get confirmPasswordLabel => 'পাসওয়ার্ড নিশ্চিত করুন';
 
   @override
-  String get passwordsDoNotMatch => 'উভয় পাসওয়ার্ড একই হতে হবে';
+  String get passwordsDoNotMatch => 'দুটি পাসওয়ার্ড একই হতে হবে';
 
   @override
-  String get showPassword => 'পাসওয়ার্ড দেখুন';
+  String get showPassword => 'পাসওয়ার্ড দেখান';
 
   @override
   String get hidePassword => 'পাসওয়ার্ড লুকান';
 
   @override
-  String get savePassword => 'পাসওয়ার্ড সংরক্ষণ করুন';
+  String get savePassword => 'পাসওয়ার্ড সংরক্ষণ';
 
   @override
-  String get backToSignIn => 'সাইন ইন-এ ফিরে যান';
+  String get backToSignIn => 'সাইন ইনে ফিরুন';
 
   @override
-  String get alreadyHaveAccount => 'আমার ইতিমধ্যে একটি অ্যাকাউন্ট আছে';
+  String get alreadyHaveAccount => 'আমার আগে থেকেই অ্যাকাউন্ট আছে';
 
   @override
   String get getStarted => 'শুরু করুন';
 
   @override
-  String get acceptTerms => 'আমি সেবার শর্তাবলী এবং গোপনীয়তা নীতিতে সম্মত';
+  String get acceptTerms => 'আমি সেবার শর্তাবলি ও গোপনীয়তা নীতিতে সম্মত';
 
   @override
-  String get acceptTermsRequired => 'এগিয়ে যেতে অনুগ্রহ করে সম্মতি দিন';
+  String get acceptTermsRequired => 'চালিয়ে যেতে সম্মতি দিন';
 
   @override
-  String get passwordStrengthTooShort => 'খুব সংক্ষিপ্ত';
+  String get passwordStrengthTooShort => 'খুব ছোট';
 
   @override
   String get passwordStrengthWeak => 'দুর্বল';
@@ -1254,44 +1248,43 @@ class AppL10nBn extends AppL10n {
 
   @override
   String get passwordAdvice =>
-      'প্রতীকে ভরা জটিল ছোট পাসওয়ার্ডের চেয়ে মনে রাখার মতো দীর্ঘ শব্দগুচ্ছ বেশি কার্যকর। অন্য কোথাও ব্যবহৃত পাসওয়ার্ড এড়িয়ে চলুন।';
+      'চিহ্নে ঠাসা ছোট পাসওয়ার্ডের চেয়ে মনে থাকে এমন লম্বা বাক্য ভালো। অন্য কোথাও ব্যবহার করা কিছু বেছে নেবেন না।';
 
   @override
-  String get authInvalidCredentials => 'ইমেইল এবং পাসওয়ার্ড সঠিক নয়';
+  String get authInvalidCredentials =>
+      'এই ইমেইল ও পাসওয়ার্ড কোনো অ্যাকাউন্টের সঙ্গে মেলে না';
 
   @override
   String get authEmailNotConfirmed =>
-      'সাইন ইন করার আগে আপনার ইমেইল নিশ্চিত করুন';
+      'সাইন ইনের আগে আপনার ইমেইল ঠিকানা নিশ্চিত করুন';
 
   @override
   String get authEmailAlreadyRegistered =>
-      'এই ইমেইল দিয়ে ইতিমধ্যে একটি অ্যাকাউন্ট রয়েছে';
+      'এই ইমেইলে একটি অ্যাকাউন্ট আগে থেকেই আছে';
 
   @override
-  String get authWeakPassword => 'একটি শক্তিশালী পাসওয়ার্ড নির্বাচন করুন';
+  String get authWeakPassword => 'আরও লম্বা পাসওয়ার্ড বাছুন';
 
   @override
   String get authRateLimited =>
-      'অতিরিক্ত চেষ্টা করা হয়েছে। কয়েক মিনিট পর আবার চেষ্টা করুন';
+      'অনেকবার চেষ্টা হয়েছে। কয়েক মিনিট পরে আবার চেষ্টা করুন';
 
   @override
-  String get authNetworkError =>
-      'সংযোগ নেই। ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন';
+  String get authNetworkError => 'সংযোগ নেই। নেটওয়ার্ক দেখে আবার চেষ্টা করুন';
 
   @override
-  String get authGenericError =>
-      'কিছু সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন';
+  String get authGenericError => 'কিছু একটা ভুল হয়েছে। আবার চেষ্টা করুন';
 
   @override
-  String get confirmEmailTitle => 'ইমেইল চেক করুন';
+  String get confirmEmailTitle => 'আপনার ইমেইল দেখুন';
 
   @override
   String confirmEmailBody(String email) {
-    return 'আমরা $email ঠিকানায় একটি নিশ্চিতকরণ লিঙ্ক পাঠিয়েছি। অ্যাকাউন্ট সেটআপ সম্পন্ন করতে এটি খুলুন।';
+    return 'আমরা $email-এ একটি নিশ্চিতকরণ লিংক পাঠিয়েছি। অ্যাকাউন্ট সম্পূর্ণ করতে সেটি খুলুন।';
   }
 
   @override
-  String get resendConfirmation => 'নিশ্চিতকরণ ইমেইল পুনরায় পাঠান';
+  String get resendConfirmation => 'নিশ্চিতকরণ ইমেইল আবার পাঠান';
 
   @override
   String get confirmationResent => 'নিশ্চিতকরণ ইমেইল পাঠানো হয়েছে';
@@ -1301,73 +1294,73 @@ class AppL10nBn extends AppL10n {
 
   @override
   String get forgotPasswordSubtitle =>
-      'আপনার নিবন্ধিত ইমেইল লিখুন এবং আমরা নতুন পাসওয়ার্ড বেছে নেওয়ার জন্য একটি লিঙ্ক পাঠাব।';
+      'যে ইমেইলে সাইন আপ করেছিলেন সেটি লিখুন, নতুন পাসওয়ার্ড বেছে নেওয়ার লিংক পাঠিয়ে দেব।';
 
   @override
-  String get sendResetLink => 'রিসেট লিঙ্ক পাঠান';
+  String get sendResetLink => 'রিসেট লিংক পাঠান';
 
   @override
-  String get resetLinkSentTitle => 'রিসেট লিঙ্ক পাঠানো হয়েছে';
+  String get resetLinkSentTitle => 'লিংক পাঠানো হয়েছে';
 
   @override
   String resetLinkSentBody(String email) {
-    return '$email দিয়ে অ্যাকাউন্ট খোলা থাকলে একটি রিসেট লিঙ্ক পাঠানো হয়েছে।';
+    return '$email-এর অ্যাকাউন্ট থাকলে রিসেট লিংক পথেই আছে।';
   }
 
   @override
   String get resetLinkSentHint =>
-      'লিঙ্কটি এক ঘণ্টার মধ্যে মেয়াদোত্তীর্ণ হবে। না পেলে আবার অনুরোধ করার আগে স্প্যাম ফোল্ডার পরীক্ষা করুন।';
+      'লিংকটি এক ঘণ্টায় মেয়াদ হারায়। না এলে নতুন চাওয়ার আগে স্প্যাম ফোল্ডার দেখুন।';
 
   @override
-  String get tryAnotherEmail => 'ভিন্ন ইমেইল ব্যবহার করুন';
+  String get tryAnotherEmail => 'অন্য ইমেইল ব্যবহার করুন';
 
   @override
-  String get resetPasswordTitle => 'নতুন পাসওয়ার্ড বেছে নিন';
+  String get resetPasswordTitle => 'নতুন পাসওয়ার্ড বাছুন';
 
   @override
   String get resetPasswordSubtitle =>
-      'এমন কিছু বেছে নিন যা আগে এই অ্যাকাউন্টে ব্যবহার করেননি।';
+      'এই অ্যাকাউন্টে আগে ব্যবহার করেননি এমন কিছু বেছে নিন।';
 
   @override
-  String get passwordChangedTitle => 'পাসওয়ার্ড আপডেট করা হয়েছে';
+  String get passwordChangedTitle => 'পাসওয়ার্ড হালনাগাদ হয়েছে';
 
   @override
   String get passwordChangedBody =>
-      'আপনার নতুন পাসওয়ার্ড সংরক্ষিত হয়েছে। আপনি সাইন ইন করেছেন।';
+      'নতুন পাসওয়ার্ড সংরক্ষিত। আপনি সাইন ইন করা আছেন, শুরু করতে পারেন।';
 
   @override
-  String get demoModeHint => 'ডেমো সংস্করণ — অ্যাকাউন্টের প্রয়োজন নেই';
+  String get demoModeHint => 'ডেমো সংস্করণ — অ্যাকাউন্ট লাগবে না';
 
   @override
-  String get demoModeFill => 'পূরণ করুন';
+  String get demoModeFill => 'বসিয়ে দিন';
 
   @override
-  String get welcomeTrackTitle => 'আপনার অর্থ কোথায় ব্যয় হয় তা জানুন';
+  String get welcomeTrackTitle => 'টাকা কোথায় যায় দেখুন';
 
   @override
   String get welcomeTrackBody =>
-      'আয় ও ব্যয়ের হিসাব রাখুন। RainyPenny এটিকে একটি স্পষ্ট ও সহজবোধ্য চিত্রে রূপান্তর করে।';
+      'কী আসছে আর কী যাচ্ছে লিখে রাখুন। RainyPenny সেটিকে এমন ছবিতে বদলে দেয় যা সত্যিই পড়া যায়।';
 
   @override
-  String get welcomeBudgetTitle => 'কার্যকর বাজেট সীমা নির্ধারণ করুন';
+  String get welcomeBudgetTitle => 'এমন সীমা যা টেকে';
 
   @override
   String get welcomeBudgetBody =>
-      'আপনার খরচের প্রতিটি অংশে একটি মাসিক সীমা দিন এবং বাজেট অতিক্রম করার আগেই সতর্কবার্তা পান।';
+      'খরচের প্রতিটি দিকের জন্য মাসিক সীমা ঠিক করুন, আর সীমা পার হওয়ার পরে নয় — আগেই জেনে যান।';
 
   @override
-  String get welcomeGoalsTitle => 'প্রয়োজনীয় বিষয়ের জন্য সঞ্চয় করুন';
+  String get welcomeGoalsTitle => 'যা জরুরি তার জন্য জমান';
 
   @override
   String get welcomeGoalsBody =>
-      'লক্ষ্যের নাম দিন, পরিমাণ নির্ধারণ করুন এবং অগ্রগতি দেখুন। চোখে দেখলে সঞ্চয় করা সহজ হয়।';
+      'লক্ষ্যের নাম দিন, পরিমাণ ঠিক করুন, আর ভরে ওঠা দেখুন। দুর্দিনের তহবিল চোখে দেখা গেলে গড়ে তোলা সহজ।';
 
   @override
-  String get welcomePrivacyTitle => 'আপনার আর্থিক তথ্য সম্পূর্ণ নিরাপদ';
+  String get welcomePrivacyTitle => 'আপনার টাকা আপনারই থাকে';
 
   @override
   String get welcomePrivacyBody =>
-      'আপনার তথ্য সম্পূর্ণ আপনার নিজের। কোনো তথ্য বিক্রি করা হয় না এবং কারো সাথে শেয়ার করা হয় না।';
+      'আপনার হিসাব কেবল আপনার। কিছু বিক্রি হয় না, কারও সঙ্গে ভাগও করা হয় না।';
 
   @override
   String stepOf(int step, int total) {
@@ -1375,88 +1368,86 @@ class AppL10nBn extends AppL10n {
   }
 
   @override
-  String get onboardingNameTitle => 'আমরা আপনাকে কী নামে ডাকব?';
+  String get onboardingNameTitle => 'আপনাকে কী বলে ডাকব?';
 
   @override
   String get onboardingNameBody =>
-      'আমরা কেবল আপনাকে অভিবাদন জানাতে এটি ব্যবহার করব, অন্য কোথাও নয়।';
+      'শুধু শুভেচ্ছা জানাতেই ব্যবহার হবে, আর কোথাও নয়।';
 
   @override
-  String get onboardingNameHint =>
-      'ডাকনামই যথেষ্ট। আপনি পরে এটি পরিবর্তন করতে পারবেন।';
+  String get onboardingNameHint => 'ডাকনামই যথেষ্ট। পরে বদলাতে পারবেন।';
 
   @override
   String get onboardingCurrencyTitle => 'আপনি কোন মুদ্রা ব্যবহার করেন?';
 
   @override
   String get onboardingCurrencyBody =>
-      'অ্যাপের প্রতিটি পরিমাণ এই মুদ্রায় দেখানো হবে। এটি নির্বাচন করলে কোনো রূপান্তর ঘটে না।';
+      'অ্যাপের সব অঙ্ক এই মুদ্রাতেই দেখানো হবে। এটি বাছলে কোনো রূপান্তর হয় না।';
 
   @override
-  String get onboardingCurrencySearch => 'সকল মুদ্রা অনুসন্ধান করুন';
+  String get onboardingCurrencySearch => 'সব মুদ্রায় খুঁজুন';
 
   @override
-  String get onboardingAppearanceTitle => 'আপনার পছন্দমতো সাজান';
+  String get onboardingAppearanceTitle => 'নিজের মতো সাজান';
 
   @override
   String get onboardingAppearanceBody =>
-      'একটি রূপরেখা বেছে নিন। ট্যাপ করলেই সবকিছু পরিবর্তিত হবে এবং আপনি যেকোনো সময় এটি পরিবর্তন করতে পারবেন।';
+      'একটি চেহারা বাছুন। ছোঁয়ার সঙ্গে সঙ্গেই সব বদলায়, আর যখন খুশি ফিরে আসতে পারেন।';
 
   @override
-  String get onboardingNotificationsTitle => 'সবসময় আপ-টু-ডেট থাকুন';
+  String get onboardingNotificationsTitle => 'নজরে রাখুন';
 
   @override
   String get onboardingNotificationsBody =>
-      'সঠিক সময়ে একটি মৃদু অনুস্মারক এটিকে অভ্যাসে পরিণত করতে সাহায্য করে।';
+      'সঠিক সময়ে একটি নীরব মনে করিয়ে দেওয়াই এটিকে অভ্যাসে বদলে দেয়।';
 
   @override
   String get onboardingNotifyReminders =>
-      'খরচ লিপিবদ্ধ করার একটি সহজ অনুস্মারক';
+      'কত খরচ হলো লিখে রাখার মৃদু অনুস্মারক';
 
   @override
-  String get onboardingNotifyBudget => 'বাজেট শেষ হওয়ার আগেই একটি সতর্কতা';
+  String get onboardingNotifyBudget => 'বাজেট ফুরানোর আগেই একটি খবর';
 
   @override
-  String get onboardingNotifySummary =>
-      'অর্থ কোথায় গেল তার একটি সাপ্তাহিক সারসংক্ষেপ';
+  String get onboardingNotifySummary => 'টাকা কোথায় গেল তার সাপ্তাহিক হিসাব';
 
   @override
   String get onboardingNotifyEnable => 'বিজ্ঞপ্তি চালু করুন';
 
   @override
-  String get onboardingNotifyDone => 'বিজ্ঞপ্তি সেটিংস সংরক্ষিত হয়েছে';
+  String get onboardingNotifyDone => 'বিজ্ঞপ্তির সেটিংস সংরক্ষিত';
 
   @override
   String get onboardingNotifyLater =>
-      'আপনি সেটিংস থেকে যেকোনো সময় এগুলো পরিবর্তন করতে পারেন।';
+      'এসবই সেটিংসে গিয়ে যখন খুশি বদলাতে পারবেন।';
 
   @override
-  String get onboardingReadyTitle => 'আপনার সেটআপ সম্পন্ন হয়েছে';
+  String get onboardingReadyTitle => 'সব প্রস্তুত';
 
   @override
   String onboardingReadyTitleNamed(String name) {
-    return 'আপনার সেটআপ সম্পন্ন হয়েছে, $name';
+    return 'সব প্রস্তুত, $name';
   }
 
   @override
   String get onboardingReadyBody =>
-      'সেটআপ সম্পন্ন হয়েছে। সবকিছু কীভাবে কাজ করে তার একটি দ্রুত গাইড দেখতে চান?';
+      'সেটআপ শেষ। সবকিছু কীভাবে চলে, একবার দ্রুত দেখে নেবেন?';
 
   @override
-  String get onboardingTakeTour => 'আমাকে ঘুরে দেখান';
+  String get onboardingTakeTour => 'ঘুরিয়ে দেখান';
 
   @override
-  String get onboardingGoToApp => 'সরাসরি অ্যাপে যান';
+  String get onboardingGoToApp => 'অ্যাপে নিয়ে চলুন';
 
   @override
   String get onboardingTourLater =>
-      'এখন নয়? গাইডটি সেটিংসে থাকবে, যখন ইচ্ছা দেখতে পারবেন।';
+      'এখন নয়? নির্দেশিকা সেটিংসেই থাকবে, যখন খুশি দেখে নেবেন।';
 
   @override
-  String get beginnersGuide => 'প্রাথমিক ব্যবহার নির্দেশিকা';
+  String get beginnersGuide => 'শিক্ষানবিশ নির্দেশিকা';
 
   @override
-  String get guideFinish => 'সমাপ্ত';
+  String get guideFinish => 'শেষ';
 
   @override
   String chapterOf(int number, int total) {
@@ -1473,174 +1464,171 @@ class AppL10nBn extends AppL10n {
 
   @override
   String get guideDashboardBody =>
-      'সবকিছু এখান থেকেই শুরু হয়। শীর্ষে অবশিষ্ট অর্থ, তার নিচে আয়-ব্যয় এবং তারপর আপনার খরচ, বাজেট ও লক্ষ্যসমূহ দেখা যাবে।';
+      'সবকিছু এখান থেকেই শুরু। ওপরের কার্ডটি বলে আপনার কত বাকি; তার নিচে এই সময়ের আয় আর ব্যয়, তারপর আপনার খরচ, বাজেট আর লক্ষ্য।';
 
   @override
-  String get guideDashboardTip1 =>
-      'একসাথে সবকিছু রিফ্রেশ করতে স্ক্রিনটি নিচের দিকে টানুন।';
+  String get guideDashboardTip1 => 'একসঙ্গে সব হালনাগাদ করতে পর্দা নিচে টানুন।';
 
   @override
   String get guideDashboardTip2 =>
-      'তালিকায় যেতে আয় বা ব্যয়ের কার্ডে ট্যাপ করুন।';
+      'সেই তালিকায় সরাসরি যেতে আয় বা ব্যয়ের কার্ডে চাপ দিন।';
 
   @override
   String get guideDashboardTip3 =>
-      'কোনো লেনদেন রেকর্ড করার সাথে সাথেই গ্রাফ ও অন্তর্দৃষ্টি আপডেট হয়।';
+      'কিছু লিখলেই বৃত্ত আর পর্যবেক্ষণ সঙ্গে সঙ্গে বদলে যায়।';
 
   @override
-  String get guideAddTitle => 'অর্থের হিসাব রাখা';
+  String get guideAddTitle => 'টাকা লিখে রাখা';
 
   @override
   String get guideAddBody =>
-      'নিচের বারের মাঝখানের বোতাম থেকে সবকিছু শুরু হয়। এটি একটি সংক্ষিপ্ত মেনু খোলে: ব্যয়, আয়, ঋণ, বাজেট বা সঞ্চয়ের লক্ষ্য।';
+      'বারের মাঝখানের বোতামটিই সব কিছুর শুরু। এটি ছোট একটি মেনু খোলে: ব্যয়, আয়, দেনা, বাজেট বা সঞ্চয়ের লক্ষ্য।';
 
   @override
-  String get guideAddTip1 =>
-      'আয় বা ব্যয়ের হিসাব রাখতে মাঝের বোতামটি ট্যাপ করুন।';
+  String get guideAddTip1 => 'আয় বা ব্যয় লিখতে মাঝের বোতামে চাপ দিন।';
 
   @override
   String get guideAddTip2 =>
-      'মেনু এড়িয়ে সরাসরি ব্যয়ের ফর্মে যেতে এটি চেপে ধরে রাখুন।';
+      'মেনু এড়িয়ে সরাসরি নতুন খরচে যেতে বোতামটি চেপে ধরুন।';
 
   @override
   String get guideAddTip3 =>
-      'সর্বদা একটি বিভাগ নির্বাচন করুন — এটি চার্ট এবং বাজেট সঠিকভাবে পরিচালনা করতে সাহায্য করে।';
+      'সবসময় একটি শ্রেণি বাছুন — চার্ট আর বাজেট এর ওপরেই দাঁড়িয়ে।';
 
   @override
-  String get guideCategoriesTitle => 'বিভাগসমূহ';
+  String get guideCategoriesTitle => 'শ্রেণি';
 
   @override
   String get guideCategoriesBody =>
-      'বিভাগগুলোর মাধ্যমে খরচের গ্রুপ তৈরি হয়। অ্যাপে ডিফল্ট কিছু বিভাগ থাকে, তবে আপনি নিজের মতো বিভাগ তৈরি বা সম্পাদনা করতে পারেন।';
+      'শ্রেণি দিয়েই খরচ দলে ভাগ হয়। অ্যাপের সঙ্গে আসা শ্রেণিগুলো বেশির ভাগ মানুষের জন্য যথেষ্ট, আর আপনি নাম বদলাতে বা নিজের যোগ করতে পারেন।';
 
   @override
   String get guideCategoriesTip1 =>
-      'বিভাগ পরিবর্তন বা নতুন বিভাগ যোগ করতে সেটিংস > বিভাগ পরিচালনা-য় যান।';
+      'বদলাতে বা যোগ করতে সেটিংস, তারপর শ্রেণি ব্যবস্থাপনা।';
 
   @override
   String get guideCategoriesTip2 =>
-      'অশ্রেণিভুক্ত খরচগুলো \'অন্যান্য\' বিভাগে জমা হয়, যাতে হিসাব সঠিক থাকে।';
+      'শ্রেণিহীন সবকিছু «অন্যান্য»-তে যায়, তাই চার্ট সৎ থাকে।';
 
   @override
   String get guideBudgetTitle => 'বাজেট';
 
   @override
   String get guideBudgetBody =>
-      'বাজেট হলো কোনো নির্দিষ্ট বিভাগের জন্য মাসিক খরচের সর্বোচ্চ সীমা। খরচ বাড়ার সাথে সাথে বারটি পূর্ণ হতে থাকে এবং সীমা পার হওয়ার আগেই সতর্ক করে।';
+      'বাজেট মানে একটি শ্রেণির মাসিক সীমা। খরচের সঙ্গে বারটি ভরে ওঠে আর সীমার কাছে এলে রং বদলায়, তাই পার হওয়ার আগেই টের পান।';
 
   @override
   String get guideBudgetTip1 =>
-      'একসাথে সবগুলো নয়, দুই বা তিনটি বিভাগ দিয়ে শুরু করুন।';
+      'সব একসঙ্গে নয় — দুই-তিনটি শ্রেণি দিয়ে শুরু করুন।';
 
   @override
   String get guideBudgetTip2 =>
-      'স্বাভাবিক খরচের চেয়ে সীমা কিছুটা বেশি রাখুন, তারপর ধীরে ধীরে তা নিয়ন্ত্রণ করুন।';
+      'সীমাটা আপনার সাধারণ খরচের সামান্য ওপরে রাখুন, পরে ধীরে ধীরে কমান।';
 
   @override
   String get guideBudgetTip3 =>
-      'বাজেট সতর্কতা চালু রাখুন যাতে বাজেট শেষ হওয়ার আগেই অ্যাপ আপনাকে সতর্ক করে।';
+      'বাজেট সতর্কতা চালু রাখুন, ফুরিয়ে আসার আগেই অ্যাপ জানাবে।';
 
   @override
   String get guideSavingsTitle => 'সঞ্চয়ের লক্ষ্য';
 
   @override
   String get guideSavingsBody =>
-      'কীসের জন্য সঞ্চয় করছেন তা উল্লেখ করুন, লক্ষ্যমাত্রা ও তারিখ নির্ধারণ করুন এবং অ্যাপ হিসেব করে দেবে প্রতি মাসে কত জমা করতে হবে।';
+      'কিসের জন্য জমাচ্ছেন তার নাম দিন, পরিমাণ আর তারিখ ঠিক করুন — অ্যাপ হিসাব করে দেবে প্রতি মাসে কত রাখতে হবে।';
 
   @override
   String get guideSavingsTip1 =>
-      'অনির্দিষ্ট ইচ্ছার চেয়ে সুনির্দিষ্ট লক্ষ্য অর্জন করা সহজ।';
+      'নাম দেওয়া লক্ষ্য, «জমাব» এমন অস্পষ্ট ইচ্ছার চেয়ে অনেক সহজে টেকে।';
 
   @override
   String get guideSavingsTip2 =>
-      'একটি বড় লক্ষ্যের চেয়ে কয়েকটি ছোট লক্ষ্য দ্রুত অর্জিত হয়।';
+      'একটি বড় লক্ষ্যের চেয়ে কয়েকটি ছোট লক্ষ্য বেশিবার পূর্ণ হয়।';
 
   @override
-  String get guideLoansTitle => 'ঋণ ও দেনা';
+  String get guideLoansTitle => 'দেনা ও ঋণ';
 
   @override
   String get guideLoansBody =>
-      'কত দেনা আছে, খরচ কত এবং পরবর্তী কিস্তি কবে তা রেকর্ড করুন। সমস্ত পরিশোধযোগ্য ঋণের তালিকা মোট বকেয়াসহ এক স্থানে দেখতে পাবেন।';
+      'কত দেনা, কত খরচ পড়ছে আর পরের কিস্তি কবে — সব লিখে রাখুন। যা কিছু শোধ করছেন, বাকি অঙ্কসহ এক তালিকাতেই থাকে।';
 
   @override
   String get guideLoansTip1 =>
-      'নির্দিষ্ট তারিখ যুক্ত করুন এবং অনুস্মারকগুলো আপনাকে সময়মতো মনে করিয়ে দেবে।';
+      'তারিখ যোগ করে দিন, কিস্তির অনুস্মারক আপনার হয়ে তাগাদা দেবে।';
 
   @override
   String get guideLoansTip2 =>
-      'মেয়াদোত্তীর্ণ ঋণ পরিশোধ না হওয়া পর্যন্ত ড্যাশবোর্ডে লাল রঙে প্রদর্শিত হয়।';
+      'মেয়াদ পেরোনো দেনা শোধ না হওয়া পর্যন্ত ড্যাশবোর্ডে লাল দেখায়।';
 
   @override
-  String get guideReportsTitle => 'প্রতিবেদন';
+  String get guideReportsTitle => 'রিপোর্ট';
 
   @override
   String get guideReportsBody =>
-      'গভীর পর্যালোচনা: আয় বনাম ব্যয়, বিভাগভিত্তিক খরচ, বাজেটের অবস্থা এবং আয়ের কত অংশ সঞ্চয় করতে পেরেছেন।';
+      'গভীর দৃষ্টি: আয়ের বিপরীতে ব্যয়, শ্রেণি অনুযায়ী খরচ, বাজেট কেমন টিকল, আর আয়ের কতটা আপনার হাতে থাকল।';
 
   @override
   String get guideReportsTip1 =>
-      'স্ক্রিনের উপরে সপ্তাহ, মাস এবং ত্রৈমাসিকের মধ্যে পরিবর্তন করুন।';
+      'পর্দার ওপরে সপ্তাহ, মাস আর ত্রৈমাসিকের মধ্যে বদল করুন।';
 
   @override
   String get guideReportsTip2 =>
-      'পিডিএফ রপ্তানি বা শেয়ার করুন — এটি আপনার ভাষা ও দিকবিন্যাসে তৈরি হবে।';
+      'PDF রপ্তানি বা শেয়ার করুন — সেটি আপনার ভাষায় আর সঠিক দিকেই তৈরি হয়।';
 
   @override
   String get guideSettingsTitle => 'সেটিংস';
 
   @override
   String get guideSettingsBody =>
-      'ভাষা, মুদ্রা, রঙ এবং সতর্কবার্তা সবকিছু এখানে থাকে। সেটআপের কোনো কিছুই অপরিবর্তনীয় নয় — যেকোনো সময় পরিবর্তন করতে পারেন।';
+      'ভাষা, মুদ্রা, রং আর সতর্কতা সবই এখানে, আর সেটআপে কোনোটাই স্থায়ী হয়ে যায় না — যখন খুশি বদলান।';
 
   @override
   String get guideSettingsTip1 =>
-      'চল্লিশটি ভাষা সমর্থিত এবং ডান-থেকে-বাম ভাষার জন্য সম্পূর্ণ লেআউট মিরর হয়।';
+      'চল্লিশটি ভাষা, আর ডান-থেকে-বাম ভাষার জন্য পুরো লেআউট উল্টে যায়।';
 
   @override
   String get guideSettingsTip2 =>
-      'কোন অ্যালার্ট চান এবং কখন চান তা নির্বাচন করুন।';
+      'কোন সতর্কতা চান আর সেগুলো কখন আসতে পারে, বেছে নিন।';
 
   @override
-  String get guideSettingsTip3 =>
-      'নীরব সময় সকাল পর্যন্ত সমস্ত নোটিফিকেশন আটকে রাখে।';
+  String get guideSettingsTip3 => 'নীরব সময় সবকিছু সকাল পর্যন্ত আটকে রাখে।';
 
   @override
-  String get guideHabitTitle => 'অভ্যাসে রূপান্তর করুন';
+  String get guideHabitTitle => 'অভ্যাস বানিয়ে ফেলুন';
 
   @override
   String get guideHabitBody =>
-      'নিয়মিত ব্যবহারেই এই অ্যাপের আসল কার্যকারিতা। মাসে একবার এক ঘণ্টার চেয়ে দিনে এক মিনিট বেশি কার্যকর; দুই সপ্তাহেই ফলাফল বুঝতে পারবেন।';
+      'অ্যাপ ততটাই কাজের, যতটা আপনি এতে দেন। মাসে এক ঘণ্টার চেয়ে দিনে এক মিনিট ভালো, আর দুই সপ্তাহ পরেই সংখ্যাগুলো কিছু বলতে শুরু করে।';
 
   @override
-  String get guideHabitTip1 => 'সপ্তাহের শেষে নয়, খরচের সময়ই তা রেকর্ড করুন।';
+  String get guideHabitTip1 =>
+      'খরচ হওয়ার সঙ্গে সঙ্গেই লিখুন, সপ্তাহের শেষে নয়।';
 
   @override
   String get guideHabitTip2 =>
-      'দিনে একবার ড্যাশবোর্ডে চোখ বুলিয়ে নিন। দশ সেকেন্ডই যথেষ্ট।';
+      'দিনে একবার ড্যাশবোর্ডে চোখ বুলান। দশ সেকেন্ডই যথেষ্ট।';
 
   @override
   String get guideHabitTip3 =>
-      'এই গাইডটি সেটিংসে সংরক্ষিত থাকবে — যখন ইচ্ছা দেখতে পারেন।';
+      'এই নির্দেশিকা সেটিংসেই থাকে — যখন খুশি ফিরে আসুন।';
 
   @override
-  String get appearance => 'চেহারা ও থিম';
+  String get appearance => 'চেহারা';
 
   @override
-  String get themeCaption => 'লাইট, ডার্ক অথবা আপনার ফোনের সিস্টেম থিম।';
+  String get themeCaption => 'উজ্জ্বল, গাঢ়, বা আপনার ফোন যা করছে।';
 
   @override
-  String get accentColor => 'অ্যাকসেন্ট রঙ';
+  String get accentColor => 'প্রধান রং';
 
   @override
-  String get accentColorCaption =>
-      'বোতাম, হাইলাইট এবং চার্টের রঙ পরিবর্তন করে।';
+  String get accentColorCaption => 'বোতাম, হাইলাইট আর চার্টে রং দেয়।';
 
   @override
   String get accentSemanticsNote =>
-      'আয় এবং ব্যয়ের নিজস্ব রঙ সব থিমেই অপরিবর্তিত থাকে, যাতে অ্যাকসেন্ট পরিবর্তনের কারণে অর্থের অর্থ বদলে না যায়।';
+      'আয় আর ব্যয় সব থিমেই নিজের রং ধরে রাখে, তাই প্রধান রং বদলালে কোনো সংখ্যার মানে বদলায় না।';
 
   @override
-  String get accentTeal => 'টিল';
+  String get accentTeal => 'ফিরোজা';
 
   @override
   String get accentGreen => 'সবুজ';
@@ -1652,7 +1640,7 @@ class AppL10nBn extends AppL10n {
   String get accentBlue => 'নীল';
 
   @override
-  String get accentIndigo => 'ইন্ডিগো';
+  String get accentIndigo => 'নীলাভ বেগুনি';
 
   @override
   String get accentViolet => 'বেগুনি';
@@ -1661,61 +1649,61 @@ class AppL10nBn extends AppL10n {
   String get accentPink => 'গোলাপি';
 
   @override
-  String get accentCrimson => 'ক্রিমসন';
+  String get accentCrimson => 'টকটকে লাল';
 
   @override
   String get accentOrange => 'কমলা';
 
   @override
-  String get accentSlate => 'স্লেট';
+  String get accentSlate => 'ধূসর';
 
   @override
-  String get searchLanguages => 'ভাষা অনুসন্ধান করুন';
+  String get searchLanguages => 'ভাষা খুঁজুন';
 
   @override
   String get suggestedLanguages => 'প্রস্তাবিত';
 
   @override
-  String get allLanguages => 'সকল ভাষা';
+  String get allLanguages => 'সব ভাষা';
 
   @override
   String get noLanguagesFound => 'কোনো ভাষা পাওয়া যায়নি';
 
   @override
   String get noLanguagesFoundMessage =>
-      'ইংরেজিতে নাম বা দুই অক্ষরের কোড দিয়ে চেষ্টা করুন।';
+      'ইংরেজি নাম বা দুই অক্ষরের কোড দিয়ে দেখুন।';
 
   @override
   String get rightToLeft => 'ডান থেকে বাম';
 
   @override
-  String get replayGuide => 'গাইড পুনরায় দেখুন';
+  String get replayGuide => 'নির্দেশিকা আবার দেখুন';
 
   @override
-  String get replaySetup => 'সেটআপ পুনরায় চালান';
+  String get replaySetup => 'সেটআপ আবার চালান';
 
   @override
   String get replaySetupBody =>
-      'প্রাথমিক প্রশ্নগুলোর উত্তর আবার দিন। আপনার সংরক্ষিত কোনো রেকর্ড মুছে যাবে না।';
+      'শুরুর প্রশ্নগুলোর মধ্য দিয়ে আবার যান। আপনার লেখা কিছুই মুছে যাবে না।';
 
   @override
   String get rateTitle => 'RainyPenny ভালো লাগছে?';
 
   @override
   String get rateBody =>
-      'আপনি বেশ কিছুদিন ধরে এটি ব্যবহার করছেন। একটি রেটিং দিতে মাত্র এক মুহূর্ত লাগে এবং এটি অন্যদের অ্যাপটি খুঁজে পেতে সাহায্য করে।';
+      'আপনি বেশ কিছুদিন ধরে এটি ব্যবহার করছেন। একটি রেটিং দিতে এক মুহূর্ত লাগে এবং অন্যদের অ্যাপটি খুঁজে পেতে সাহায্য করে।';
 
   @override
-  String get rateAction => 'রেটিং দিন';
+  String get rateAction => 'অ্যাপ রেট করুন';
 
   @override
-  String get rateLater => 'পরে হতে পারে';
+  String get rateLater => 'পরে হয়তো';
 
   @override
   String get rateNever => 'না, ধন্যবাদ';
 
   @override
-  String get rateThanks => 'আপনাকে ধন্যবাদ';
+  String get rateThanks => 'ধন্যবাদ';
 
   @override
   String get monthlySalary => 'মাসিক বেতন';
@@ -2159,4 +2147,10 @@ class AppL10nBn extends AppL10n {
 
   @override
   String get recommendedBudget => 'প্রস্তাবিত বাজেট';
+
+  @override
+  String get due => 'Due';
+
+  @override
+  String get dueAmount => 'Due amount';
 }

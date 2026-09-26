@@ -1417,5 +1417,8 @@
   "@failedToSaveBudgets": {
     "description": "Error message when saving budgets fails"
   },
-  "recommendedBudget": "Recommended budget"
+  
+  "recommendedBudget": "Recommended budget",
+  "due": "Due",
+  "dueAmount": "Due amount"
 }

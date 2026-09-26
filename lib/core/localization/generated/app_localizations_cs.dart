@@ -18,7 +18,7 @@ class AppL10nCs extends AppL10n {
   String get navHome => 'Domů';
 
   @override
-  String get navTransactions => 'Transakce';
+  String get navTransactions => 'Pohyby';
 
   @override
   String get navAdd => 'Přidat';
@@ -36,7 +36,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String greetingAfternoon(String name) {
-    return 'Dobré odpoledne, $name';
+    return 'Dobrý den, $name';
   }
 
   @override
@@ -45,7 +45,7 @@ class AppL10nCs extends AppL10n {
   }
 
   @override
-  String get greetingSubtitle => 'Zde je váš finanční přehled';
+  String get greetingSubtitle => 'Tady je vaše finanční situace';
 
   @override
   String get totalBalance => 'Celkový zůstatek';
@@ -78,25 +78,25 @@ class AppL10nCs extends AppL10n {
   String get spendingOverview => 'Přehled výdajů';
 
   @override
-  String get recentTransactions => 'Poslední transakce';
+  String get recentTransactions => 'Poslední pohyby';
 
   @override
   String get seeAll => 'Zobrazit vše';
 
   @override
-  String get viewAll => 'Zobrazit vše';
+  String get viewAll => 'Ukázat všechny';
 
   @override
-  String get budgetProgress => 'Průběh rozpočtu';
+  String get budgetProgress => 'Plnění rozpočtů';
 
   @override
-  String get savingsGoals => 'Cíle spoření';
+  String get savingsGoals => 'Spořicí cíle';
 
   @override
-  String get financialInsight => 'Finanční přehled';
+  String get financialInsight => 'Postřeh';
 
   @override
-  String get financialHealth => 'Finanční kondice';
+  String get financialHealth => 'Finanční zdraví';
 
   @override
   String ofTotal(String total) {
@@ -104,7 +104,7 @@ class AppL10nCs extends AppL10n {
   }
 
   @override
-  String get searchTransactions => 'Hledat transakce';
+  String get searchTransactions => 'Hledat pohyby';
 
   @override
   String get filterAll => 'Vše';
@@ -122,28 +122,28 @@ class AppL10nCs extends AppL10n {
   String get yesterday => 'Včera';
 
   @override
-  String get noTransactionsTitle => 'Nebyly nalezeny žádné transakce';
+  String get noTransactionsTitle => 'Žádné pohyby nenalezeny';
 
   @override
   String get noTransactionsBody =>
-      'Zkuste jiné vyhledávání nebo filtr a zobrazte více své aktivity.';
+      'Zkuste jiné hledání nebo filtr, ať uvidíte více záznamů.';
 
   @override
   String transactionCount(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count transakce',
-      many: '$count transakcí',
-      few: '$count transakce',
-      one: '1 transakce',
-      zero: 'Žádné transakce',
+      other: '$count pohybů',
+      many: '$count pohybu',
+      few: '$count pohyby',
+      one: '$count pohyb',
+      zero: 'Žádné pohyby',
     );
     return '$_temp0';
   }
 
   @override
-  String get addTransaction => 'Přidat transakci';
+  String get addTransaction => 'Přidat pohyb';
 
   @override
   String get amount => 'Částka';
@@ -158,7 +158,7 @@ class AppL10nCs extends AppL10n {
   String get note => 'Poznámka';
 
   @override
-  String get noteHint => 'Volitelná poznámka';
+  String get noteHint => 'Poznámka (nepovinné)';
 
   @override
   String get saveIncome => 'Uložit příjem';
@@ -167,22 +167,22 @@ class AppL10nCs extends AppL10n {
   String get saveExpense => 'Uložit výdaj';
 
   @override
-  String get selectCategory => 'Vybrat kategorii';
+  String get selectCategory => 'Vyberte kategorii';
 
   @override
-  String get transactionSaved => 'Transakce uložena';
+  String get transactionSaved => 'Pohyb uložen';
 
   @override
   String get amountRequired => 'Zadejte částku větší než nula';
 
   @override
-  String get titleRequired => 'Pojmenujte tuto transakci';
+  String get titleRequired => 'Pojmenujte tento pohyb';
 
   @override
   String get descriptionLabel => 'Popis';
 
   @override
-  String get descriptionHint => 'např. Potraviny';
+  String get descriptionHint => 'např. nákup potravin';
 
   @override
   String get budget => 'Rozpočet';
@@ -201,17 +201,17 @@ class AppL10nCs extends AppL10n {
 
   @override
   String budgetUsed(int percent) {
-    return 'Využito $percent %';
+    return 'Využito $percent%';
   }
 
   @override
   String get onTrack => 'Podle plánu';
 
   @override
-  String get approachingLimit => 'Blížíte se limitu';
+  String get approachingLimit => 'Blízko limitu';
 
   @override
-  String get overBudget => 'Překročený rozpočet';
+  String get overBudget => 'Nad rozpočet';
 
   @override
   String get savings => 'Úspory';
@@ -220,7 +220,7 @@ class AppL10nCs extends AppL10n {
   String get yourGoals => 'Vaše cíle';
 
   @override
-  String get saved => 'Ušetřeno';
+  String get saved => 'Naspořeno';
 
   @override
   String get target => 'Cíl';
@@ -229,10 +229,10 @@ class AppL10nCs extends AppL10n {
   String get monthlyContribution => 'Měsíčně';
 
   @override
-  String get addFunds => 'Přidat prostředky';
+  String get addFunds => 'Vložit peníze';
 
   @override
-  String get goalComplete => 'Cíl dosažen';
+  String get goalComplete => 'Cíl splněn';
 
   @override
   String monthsToGo(int count) {
@@ -240,9 +240,9 @@ class AppL10nCs extends AppL10n {
       count,
       locale: localeName,
       other: 'zbývá $count měsíců',
-      many: 'zbývá $count měsíců',
+      many: 'zbývá $count měsíce',
       few: 'zbývají $count měsíce',
-      one: 'zbývá 1 měsíc',
+      one: 'zbývá $count měsíc',
     );
     return '$_temp0';
   }
@@ -251,7 +251,7 @@ class AppL10nCs extends AppL10n {
   String get loansAndDebts => 'Půjčky a dluhy';
 
   @override
-  String get totalOutstanding => 'Celkem nesplaceno';
+  String get totalOutstanding => 'Celkem k doplacení';
 
   @override
   String get monthlyPayment => 'Měsíčně';
@@ -261,25 +261,25 @@ class AppL10nCs extends AppL10n {
 
   @override
   String paidOff(int percent) {
-    return 'Splaceno $percent %';
+    return 'Splaceno $percent%';
   }
 
   @override
   String get interestRate => 'Úrok';
 
   @override
-  String get upcomingPayments => 'Nadcházející platby';
+  String get upcomingPayments => 'Nadcházející splátky';
 
   @override
   String dueInDays(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Splatnost za $count dní',
-      many: 'Splatnost za $count dní',
-      few: 'Splatnost za $count dny',
-      one: 'Splatnost zítra',
-      zero: 'Splatnost dnes',
+      other: 'Za $count dní',
+      many: 'Za $count dne',
+      few: 'Za $count dny',
+      one: 'Za $count den',
+      zero: 'Splatné dnes',
     );
     return '$_temp0';
   }
@@ -300,16 +300,16 @@ class AppL10nCs extends AppL10n {
   String get quarter => 'Čtvrtletí';
 
   @override
-  String get incomeVsExpenses => 'Příjmy vs. výdaje';
+  String get incomeVsExpenses => 'Příjmy a výdaje';
 
   @override
   String get spendingByCategory => 'Výdaje podle kategorií';
 
   @override
-  String get budgetPerformance => 'Vývoj rozpočtu';
+  String get budgetPerformance => 'Plnění rozpočtů';
 
   @override
-  String get insights => 'Přehledy';
+  String get insights => 'Postřehy';
 
   @override
   String get savingsRate => 'Míra úspor';
@@ -354,7 +354,7 @@ class AppL10nCs extends AppL10n {
   String get helpAndSupport => 'Nápověda a podpora';
 
   @override
-  String get termsAndConditions => 'Obchodní podmínky';
+  String get termsAndConditions => 'Podmínky použití';
 
   @override
   String get logOut => 'Odhlásit se';
@@ -365,7 +365,7 @@ class AppL10nCs extends AppL10n {
   }
 
   @override
-  String get themeSystem => 'Systémový';
+  String get themeSystem => 'Podle systému';
 
   @override
   String get themeLight => 'Světlý';
@@ -377,11 +377,11 @@ class AppL10nCs extends AppL10n {
   String get settings => 'Nastavení';
 
   @override
-  String get noNotificationsTitle => 'Vše máte vyřízené';
+  String get noNotificationsTitle => 'Máte vše přečtené';
 
   @override
   String get noNotificationsBody =>
-      'Nové přehledy a připomínky se zobrazí zde.';
+      'Nové postřehy a připomínky se objeví tady.';
 
   @override
   String get cancel => 'Zrušit';
@@ -402,7 +402,7 @@ class AppL10nCs extends AppL10n {
   String get somethingWentWrong => 'Něco se pokazilo';
 
   @override
-  String get comingSoon => 'Již brzy v plné verzi';
+  String get comingSoon => 'Přijde v plné verzi';
 
   @override
   String get edit => 'Upravit';
@@ -420,27 +420,27 @@ class AppL10nCs extends AppL10n {
   String get create => 'Vytvořit';
 
   @override
-  String get nameRequired => 'Zadejte své jméno';
+  String get nameRequired => 'Dejte tomu název';
 
   @override
   String get amountAboveZero => 'Zadejte částku větší než nula';
 
   @override
-  String get editTransaction => 'Upravit transakci';
+  String get editTransaction => 'Upravit pohyb';
 
   @override
-  String get deleteTransaction => 'Smazat transakci?';
+  String get deleteTransaction => 'Smazat pohyb?';
 
   @override
   String deleteTransactionBody(String title) {
-    return '$title bude odstraněna z vašeho přehledu.';
+    return 'Pohyb $title zmizí z vašich záznamů.';
   }
 
   @override
-  String get transactionDeleted => 'Transakce smazána';
+  String get transactionDeleted => 'Pohyb smazán';
 
   @override
-  String get transactionUpdated => 'Transakce aktualizována';
+  String get transactionUpdated => 'Pohyb upraven';
 
   @override
   String get newBudget => 'Nový rozpočet';
@@ -456,7 +456,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String deleteBudgetBody(String category) {
-    return 'Rozpočet pro kategorii $category bude odstraněn. Vaše transakce zůstanou beze změny.';
+    return 'Rozpočet $category bude odstraněn. Vašich pohybů se to nedotkne.';
   }
 
   @override
@@ -466,14 +466,14 @@ class AppL10nCs extends AppL10n {
   String get budgetDeleted => 'Rozpočet smazán';
 
   @override
-  String get allCategoriesBudgeted => 'Každá kategorie již má rozpočet';
+  String get allCategoriesBudgeted => 'Každá kategorie už rozpočet má';
 
   @override
   String get noBudgetsTitle => 'Zatím žádné rozpočty';
 
   @override
   String get noBudgetsBody =>
-      'Nastavte měsíční limit pro kategorii a začněte ji sledovat.';
+      'Nastavte kategorii měsíční limit a začneme ji sledovat.';
 
   @override
   String get newGoal => 'Nový cíl';
@@ -485,20 +485,20 @@ class AppL10nCs extends AppL10n {
   String get goalName => 'Název cíle';
 
   @override
-  String get goalNameHint => 'např. Rezervní fond';
+  String get goalNameHint => 'např. rezerva';
 
   @override
   String get targetAmount => 'Cílová částka';
 
   @override
-  String get alreadySaved => 'Již ušetřeno';
+  String get alreadySaved => 'Již naspořeno';
 
   @override
   String get deleteGoal => 'Smazat cíl?';
 
   @override
   String deleteGoalBody(String name) {
-    return '$name a jeho průběh budou odstraněny.';
+    return 'Cíl $name i jeho průběh budou odstraněny.';
   }
 
   @override
@@ -508,14 +508,14 @@ class AppL10nCs extends AppL10n {
   String get goalDeleted => 'Cíl smazán';
 
   @override
-  String get noGoalsTitle => 'Zatím žádné cíle spoření';
+  String get noGoalsTitle => 'Zatím žádné spořicí cíle';
 
   @override
   String get noGoalsBody =>
       'Nastavte si cíl a RainyPenny bude sledovat váš postup.';
 
   @override
-  String get fundsAdded => 'Prostředky přidány';
+  String get fundsAdded => 'Peníze přidány';
 
   @override
   String get newDebt => 'Nová půjčka nebo karta';
@@ -527,13 +527,13 @@ class AppL10nCs extends AppL10n {
   String get debtName => 'Název';
 
   @override
-  String get debtNameHint => 'např. Půjčka na auto';
+  String get debtNameHint => 'např. půjčka na auto';
 
   @override
   String get lender => 'Věřitel';
 
   @override
-  String get lenderHint => 'např. Meridian Bank';
+  String get lenderHint => 'např. Česká spořitelna';
 
   @override
   String get originalAmount => 'Původní částka';
@@ -542,7 +542,7 @@ class AppL10nCs extends AppL10n {
   String get creditLimit => 'Úvěrový limit';
 
   @override
-  String get remainingBalance => 'Zbývající zůstatek';
+  String get remainingBalance => 'Zbývá splatit';
 
   @override
   String get interestRatePercent => 'Úroková sazba (%)';
@@ -564,7 +564,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String deleteDebtBody(String name) {
-    return '$name bude odstraněn z vašich dluhů.';
+    return 'Dluh $name zmizí z vašeho seznamu.';
   }
 
   @override
@@ -578,16 +578,16 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get noDebtsBody =>
-      'Přidejte půjčku nebo kreditní kartu a mějte přehled o splácení.';
+      'Přidejte půjčku nebo kreditní kartu, ať máte splátky na očích.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return 'Rozpočet pro $subject překročen';
+    return 'Rozpočet $subject překročen';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return 'V tomto období jste $amount nad rozpočtem pro $subject.';
+    return 'V tomto období jste rozpočet $subject překročili o $amount.';
   }
 
   @override
@@ -601,7 +601,7 @@ class AppL10nCs extends AppL10n {
     int percent,
     String amount,
   ) {
-    return 'Rozpočet pro $subject je využit na $percent %, zbývá $amount.';
+    return 'Rozpočet $subject je využitý na $percent%, zbývá $amount.';
   }
 
   @override
@@ -609,16 +609,16 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get insightOverIncomeBody =>
-      'V tomto období jste utratili více, než jste vydělali. Prohlédněte si největší kategorie a vraťte výdaje do rovnováhy.';
+      'V tomto období jste utratili víc, než jste vydělali. Projděte největší kategorie a srovnejte to.';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return 'Výdaje za $subject rostou';
+    return 'Výdaje na $subject vzrostly';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return 'Vaše výdaje za $subject jsou oproti předchozímu období o $percent % vyšší.';
+    return 'Vaše výdaje na $subject jsou o $percent% vyšší než v minulém období.';
   }
 
   @override
@@ -626,7 +626,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String insightTrendDownBody(int percent) {
-    return 'Celkové výdaje jsou oproti předchozímu období o $percent % nižší.';
+    return 'Celkové výdaje jsou o $percent% nižší než v minulém období.';
   }
 
   @override
@@ -634,15 +634,15 @@ class AppL10nCs extends AppL10n {
 
   @override
   String insightTrendUpBody(int percent) {
-    return 'Celkové výdaje jsou oproti předchozímu období o $percent % vyšší.';
+    return 'Celkové výdaje jsou o $percent% vyšší než v minulém období.';
   }
 
   @override
-  String get insightSavingsStrongTitle => 'Silné úspory za toto období';
+  String get insightSavingsStrongTitle => 'Skvělé úspory v tomto období';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
-    return 'Podařilo se vám ušetřit $percent % příjmů — výrazně více než cílových $target %.';
+    return 'Nechali jste si $percent% příjmu — výrazně nad cílem $target%.';
   }
 
   @override
@@ -650,22 +650,22 @@ class AppL10nCs extends AppL10n {
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return 'V tomto období jste ušetřili $percent % příjmů. Usilujte o $target %.';
+    return 'V tomto období jste si nechali $percent% příjmu. Miřte na $target%.';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return '$subject je téměř naspořen';
+    return '$subject je téměř naspořeno';
   }
 
   @override
   String insightGoalNearlyBody(String amount, String subject) {
-    return 'Do dosažení cíle $subject zbývá už jen $amount.';
+    return 'Na cíl $subject zbývá už jen $amount.';
   }
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return 'Cíl $subject je podle plánu';
+    return '$subject jde podle plánu';
   }
 
   @override
@@ -674,11 +674,11 @@ class AppL10nCs extends AppL10n {
       months,
       locale: localeName,
       other: '$months měsíců',
-      many: '$months měsíců',
+      many: '$months měsíce',
       few: '$months měsíce',
-      one: '1 měsíc',
+      one: '$months měsíc',
     );
-    return 'Při spoření $amount měsíčně dosáhnete tohoto cíle za $_temp0.';
+    return 'Při $amount měsíčně dosáhnete tohoto cíle za $_temp0.';
   }
 
   @override
@@ -692,11 +692,11 @@ class AppL10nCs extends AppL10n {
       days,
       locale: localeName,
       other: '$days dní',
-      many: '$days dní',
+      many: '$days dne',
       few: '$days dny',
-      one: '1 den',
+      one: '$days den',
     );
-    return 'Splátka $subject ve výši $amount je $_temp0 po splatnosti.';
+    return 'Splátka $amount za $subject je $_temp0 po splatnosti.';
   }
 
   @override
@@ -710,12 +710,12 @@ class AppL10nCs extends AppL10n {
       days,
       locale: localeName,
       other: 'za $days dní',
-      many: 'za $days dní',
+      many: 'za $days dne',
       few: 'za $days dny',
-      one: 'zítra',
+      one: 'za $days den',
       zero: 'dnes',
     );
-    return 'Částka $amount je splatná $_temp0.';
+    return '$amount je splatných $_temp0.';
   }
 
   @override
@@ -728,32 +728,31 @@ class AppL10nCs extends AppL10n {
   String get signInSubtitle => 'Vítejte zpět. Vaše peníze čekají.';
 
   @override
-  String get signUpSubtitle => 'Stačí pár údajů a můžete začít.';
+  String get signUpSubtitle => 'Pár údajů a je hotovo.';
 
   @override
   String get emailLabel => 'E-mail';
 
   @override
-  String get emailHint => 'vy@email.com';
+  String get emailHint => 'ty@email.com';
 
   @override
   String get passwordLabel => 'Heslo';
 
   @override
-  String get passwordHint => 'Alespoň 8 znaků';
+  String get passwordHint => 'Nejméně 8 znaků';
 
   @override
   String get fullNameLabel => 'Celé jméno';
 
   @override
-  String get fullNameHint => 'Alex Morgan';
+  String get fullNameHint => 'Jan Novák';
 
   @override
-  String get forgotPassword => 'Zapomenuté heslo?';
+  String get forgotPassword => 'Zapomněli jste heslo?';
 
   @override
-  String get resetSent =>
-      'Zkontrolujte schránku, kam jsme poslali odkaz pro obnovení';
+  String get resetSent => 'Odkaz pro obnovení najdete ve své schránce';
 
   @override
   String get noAccountYet => 'Jste tu poprvé?';
@@ -772,17 +771,17 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get signOutBody =>
-      'Pro zobrazení svých financí se budete muset znovu přihlásit.';
+      'Abyste své finance viděli znovu, budete se muset přihlásit.';
 
   @override
   String get dataSource => 'Zdroj dat';
 
   @override
-  String get insightWeeklySummaryTitle => 'Váš týden v kostce';
+  String get insightWeeklySummaryTitle => 'Váš týden ve zkratce';
 
   @override
   String get insightWeeklySummaryBody =>
-      'Podívejte se, kam tento týden šly vaše peníze a jak si vedou vaše rozpočty.';
+      'Podívejte se, kam tento týden šly peníze a jak drží vaše rozpočty.';
 
   @override
   String get notificationSettings => 'Oznámení';
@@ -795,34 +794,34 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get budgetAlertsBody =>
-      'Když se rozpočet blíží limitu nebo jej překročí';
+      'Když se rozpočet blíží limitu nebo ho překročí';
 
   @override
-  String get paymentReminders => 'Připomínky plateb';
+  String get paymentReminders => 'Připomínky splátek';
 
   @override
-  String get paymentRemindersBody => 'Několik dní před splatností platby';
+  String get paymentRemindersBody => 'Pár dní před splatností';
 
   @override
-  String get savingsUpdates => 'Aktualizace spoření';
+  String get savingsUpdates => 'Novinky ze spoření';
 
   @override
-  String get savingsUpdatesBody => 'Postup směrem k vašim cílům';
+  String get savingsUpdatesBody => 'Postup k vašim cílům';
 
   @override
-  String get weeklySummaryLabel => 'Týdenní přehled';
+  String get weeklySummaryLabel => 'Týdenní souhrn';
 
   @override
-  String get weeklySummaryBody => 'Souhrn právě uplynulého týdne';
+  String get weeklySummaryBody => 'Shrnutí uplynulého týdne';
 
   @override
-  String get scheduleSection => 'Časování';
+  String get scheduleSection => 'Načasování';
 
   @override
   String get reminderTime => 'Čas připomínky';
 
   @override
-  String get quietHours => 'Doba klidu';
+  String get quietHours => 'Tiché hodiny';
 
   @override
   String quietHoursValue(String start, String end) {
@@ -830,31 +829,31 @@ class AppL10nCs extends AppL10n {
   }
 
   @override
-  String get summaryDay => 'Den přehledu';
+  String get summaryDay => 'Den souhrnu';
 
   @override
   String get permissionRequired => 'Oznámení jsou vypnutá';
 
   @override
   String get permissionRequiredBody =>
-      'Povolte oznámení, aby vás RainyPenny mohl upozornit dříve, než se rozpočet nebo platba vymkne kontrole.';
+      'Povolte oznámení, aby vás RainyPenny varoval dřív, než se rozpočet nebo splátka vymkne z rukou.';
 
   @override
   String get allowNotifications => 'Povolit oznámení';
 
   @override
   String get permissionDenied =>
-      'Oznámení jsou zablokovaná. Můžete je zapnout v nastavení zařízení.';
+      'Oznámení jsou blokovaná. Zapnout je můžete v nastavení zařízení.';
 
   @override
-  String get upcomingAlerts => 'Naplánované';
+  String get upcomingAlerts => 'Naplánováno';
 
   @override
-  String get noScheduledAlerts => 'Momentálně nic naplánováno';
+  String get noScheduledAlerts => 'Momentálně není nic naplánováno';
 
   @override
   String get noScheduledAlertsBody =>
-      'Upozornění se zde zobrazí, když se vaše rozpočty a platby přiblíží svým limitům nebo termínům.';
+      'Upozornění se tu objeví, jak se rozpočty a splátky budou blížit svým hranicím.';
 
   @override
   String scheduledFor(String date) {
@@ -889,14 +888,13 @@ class AppL10nCs extends AppL10n {
   String get addGoalAction => 'Přidat cíl';
 
   @override
-  String get longPressHint =>
-      'Tip: podržením tlačítka + rovnou zaznamenáte výdaj';
+  String get longPressHint => 'Tip: podržte +, ať rovnou zapíšete výdaj';
 
   @override
   String get searchCurrencies => 'Hledat měny';
 
   @override
-  String get noCurrenciesFound => 'Měny nenalezeny';
+  String get noCurrenciesFound => 'Žádné měny nenalezeny';
 
   @override
   String get noCurrenciesFoundMessage => 'Zkuste jiný kód, symbol nebo název.';
@@ -908,7 +906,7 @@ class AppL10nCs extends AppL10n {
   String get allCurrencies => 'Všechny měny';
 
   @override
-  String get totalLoanAmount => 'Celková částka půjčky';
+  String get totalLoanAmount => 'Celková výše půjčky';
 
   @override
   String get installmentAmount => 'Výše splátky';
@@ -935,7 +933,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String dueOnDayOfMonth(int day) {
-    return 'Den $day každého měsíce';
+    return '$day. den každého měsíce';
   }
 
   @override
@@ -963,25 +961,25 @@ class AppL10nCs extends AppL10n {
   String get byInstallments => 'Podle splátek';
 
   @override
-  String get startDate => 'Datum zahájení';
+  String get startDate => 'Datum začátku';
 
   @override
-  String get openEnded => 'Bez pevného konce';
+  String get openEnded => 'Bez konce';
 
   @override
-  String get loanDetails => 'Podrobnosti půjčky';
+  String get loanDetails => 'Detaily půjčky';
 
   @override
   String get notSet => 'Nenastaveno';
 
   @override
   String insightDebtDueTodayTitle(String subject) {
-    return '$subject je splatný dnes';
+    return '$subject je splatné dnes';
   }
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return 'Vaše splátka $amount je splatná dnes. Rychlé klepnutí ji udrží včas.';
+    return 'Splátka $amount je splatná dnes. Jedno klepnutí a je to včas.';
   }
 
   @override
@@ -989,42 +987,42 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get remindMorningBody =>
-      'Začněte den s přehledem o svých penězích. Máte něco ze včerejška k zaznamenání?';
+      'Začněte den s penězi pod kontrolou. Zbylo něco ze včerejška?';
 
   @override
   String get remindNoonTitle => 'Polední kontrola';
 
   @override
   String get remindNoonBody =>
-      'Oběd, káva, jízdné? Přidejte to během pár sekund.';
+      'Oběd, káva, jízdenka? Zapíšete to za pár vteřin.';
 
   @override
   String get remindAfternoonTitle => 'Rychlé doplnění';
 
   @override
   String get remindAfternoonBody =>
-      'Zaznamenejte, co jste zatím utratili, a udržujte dnešní údaje přesné.';
+      'Zapište, co jste zatím utratili, ať dnešní čísla sedí.';
 
   @override
-  String get remindEveningTitle => 'Konec dne';
+  String get remindEveningTitle => 'Uzavíráme den';
 
   @override
   String get remindEveningBody =>
-      'Dvě minuty teď a dnešní čísla budou kompletní.';
+      'Dvě minuty teď a dnešní záznamy jsou kompletní.';
 
   @override
   String get happyWeekendTitle => 'Hezký víkend! 🎉';
 
   @override
   String get happyWeekendBody =>
-      'Užijte si ho — a mějte přehled o víkendových výdajích.';
+      'Užijte si ho — a mějte oko i na víkendových výdajích.';
 
   @override
   String get dailyReminders => 'Denní připomínky výdajů';
 
   @override
   String get dailyRemindersBody =>
-      'Přátelské připomínky, které vám pomohou udržovat výdaje aktuální';
+      'Jemná pošťouchnutí, ať jsou výdaje pořád aktuální';
 
   @override
   String get weekendGreeting => 'Víkendový pozdrav';
@@ -1057,11 +1055,11 @@ class AppL10nCs extends AppL10n {
   String get preparedFor => 'Připraveno pro';
 
   @override
-  String get generatedOn => 'Vygenerováno';
+  String get generatedOn => 'Vytvořeno';
 
   @override
   String get reportDisclaimer =>
-      'Vygenerováno aplikací RainyPenny z vašich vlastních záznamů.';
+      'Vytvořil RainyPenny z vašich vlastních záznamů.';
 
   @override
   String pageOf(int page, int total) {
@@ -1081,7 +1079,7 @@ class AppL10nCs extends AppL10n {
   String get totalExpenses => 'Celkové výdaje';
 
   @override
-  String get totalSaved => 'Celkem ušetřeno';
+  String get totalSaved => 'Celkem naspořeno';
 
   @override
   String get shareOfTotal => 'Podíl';
@@ -1102,17 +1100,17 @@ class AppL10nCs extends AppL10n {
   String get paidOffShort => 'Splaceno';
 
   @override
-  String get transactions => 'Transakce';
+  String get transactions => 'Pohyby';
 
   @override
   String andMoreTransactions(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'a dalších $count transakcí',
-      many: 'a dalších $count transakcí',
-      few: 'a další $count transakce',
-      one: 'a 1 další transakce',
+      other: 'a ještě $count pohybů',
+      many: 'a ještě $count pohybu',
+      few: 'a ještě $count pohyby',
+      one: 'a ještě $count pohyb',
     );
     return '$_temp0';
   }
@@ -1124,10 +1122,10 @@ class AppL10nCs extends AppL10n {
   String get sharePdf => 'Sdílet přehled';
 
   @override
-  String get preparingReport => 'Připravuje se váš přehled…';
+  String get preparingReport => 'Připravujeme váš přehled…';
 
   @override
-  String get reportReady => 'Přehled je připraven';
+  String get reportReady => 'Přehled je hotový';
 
   @override
   String get reportFailed => 'Přehled se nepodařilo vytvořit';
@@ -1137,7 +1135,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get categoriesIntro =>
-      'Přidejte vlastní kategorie pro třídění příjmů a výdajů přesně podle toho, jak o nich přemýšlíte.';
+      'Přidejte si vlastní kategorie, ať jsou příjmy a výdaje rozdělené přesně tak, jak o nich přemýšlíte.';
 
   @override
   String get expenseCategories => 'Kategorie výdajů';
@@ -1155,7 +1153,7 @@ class AppL10nCs extends AppL10n {
   String get categoryName => 'Název';
 
   @override
-  String get categoryNameHint => 'např. Péče o mazlíčky';
+  String get categoryNameHint => 'např. domácí mazlíček';
 
   @override
   String get icon => 'Ikona';
@@ -1171,7 +1169,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String deleteCategoryBody(String name) {
-    return '$name bude odstraněna z vašich kategorií.';
+    return 'Kategorie $name zmizí z vašeho seznamu.';
   }
 
   @override
@@ -1179,32 +1177,32 @@ class AppL10nCs extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count záznamů stále používá tuto kategorii',
-      many: '$count záznamů stále používá tuto kategorii',
-      few: '$count záznamy stále používají tuto kategorii',
-      one: '1 záznam stále používá tuto kategorii',
+      other: '$count záznamů tuto kategorii stále používá',
+      many: '$count záznamu tuto kategorii stále používá',
+      few: '$count záznamy tuto kategorii stále používají',
+      one: '$count záznam tuto kategorii stále používá',
     );
     return '$_temp0';
   }
 
   @override
-  String get noCategoriesYet => 'Zatím zde nic není.';
+  String get noCategoriesYet => 'Zatím tu nic není.';
 
   @override
   String get builtIn => 'Vestavěná';
 
   @override
-  String get manageCategories => 'Spravovat kategorie';
+  String get manageCategories => 'Správa kategorií';
 
   @override
   String get expense => 'Výdaj';
 
   @override
   String get languageNote =>
-      'Arabština, urdština, perština a hebrejština přepnou celé rozhraní zprava doleva, včetně grafů a PDF přehledů.';
+      'Arabština, urdština, perština a hebrejština překlopí celé rozhraní zprava doleva, včetně grafů a PDF přehledů.';
 
   @override
-  String get next => 'Další';
+  String get next => 'Dále';
 
   @override
   String get back => 'Zpět';
@@ -1225,10 +1223,10 @@ class AppL10nCs extends AppL10n {
   String get newPasswordLabel => 'Nové heslo';
 
   @override
-  String get confirmPasswordLabel => 'Potvrdit heslo';
+  String get confirmPasswordLabel => 'Potvrďte heslo';
 
   @override
-  String get passwordsDoNotMatch => 'Hesla se musí shodovat';
+  String get passwordsDoNotMatch => 'Obě hesla se musí shodovat';
 
   @override
   String get showPassword => 'Zobrazit heslo';
@@ -1240,20 +1238,20 @@ class AppL10nCs extends AppL10n {
   String get savePassword => 'Uložit heslo';
 
   @override
-  String get backToSignIn => 'Zpět k přihlášení';
+  String get backToSignIn => 'Zpět na přihlášení';
 
   @override
-  String get alreadyHaveAccount => 'Již mám účet';
+  String get alreadyHaveAccount => 'Už mám účet';
 
   @override
-  String get getStarted => 'Začít';
+  String get getStarted => 'Pojďme na to';
 
   @override
   String get acceptTerms =>
-      'Souhlasím s Podmínkami služby a Zásadami ochrany osobních údajů';
+      'Souhlasím s podmínkami použití a zásadami ochrany soukromí';
 
   @override
-  String get acceptTermsRequired => 'Pro pokračování přijměte podmínky';
+  String get acceptTermsRequired => 'Pro pokračování prosím souhlaste';
 
   @override
   String get passwordStrengthTooShort => 'Příliš krátké';
@@ -1262,7 +1260,7 @@ class AppL10nCs extends AppL10n {
   String get passwordStrengthWeak => 'Slabé';
 
   @override
-  String get passwordStrengthFair => 'Přijatelné';
+  String get passwordStrengthFair => 'Ucházející';
 
   @override
   String get passwordStrengthGood => 'Dobré';
@@ -1272,7 +1270,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get passwordAdvice =>
-      'Dlouhá fráze, kterou si zapamatujete, je lepší než krátké heslo plné symbolů. Vyhněte se čemukoli, co již používáte jinde.';
+      'Dlouhá věta, kterou si zapamatujete, je lepší než krátké heslo plné znaků. Vyhněte se čemukoli, co už používáte jinde.';
 
   @override
   String get authInvalidCredentials =>
@@ -1283,57 +1281,56 @@ class AppL10nCs extends AppL10n {
       'Před přihlášením potvrďte svou e-mailovou adresu';
 
   @override
-  String get authEmailAlreadyRegistered => 'Účet s tímto e-mailem již existuje';
+  String get authEmailAlreadyRegistered => 'Účet s tímto e-mailem už existuje';
 
   @override
   String get authWeakPassword => 'Zvolte delší heslo';
 
   @override
-  String get authRateLimited =>
-      'Příliš mnoho pokusů. Zkuste to znovu za několik minut';
+  String get authRateLimited => 'Příliš mnoho pokusů. Zkuste to za pár minut';
 
   @override
   String get authNetworkError =>
       'Žádné připojení. Zkontrolujte síť a zkuste to znovu';
 
   @override
-  String get authGenericError => 'Něco se pokazilo. Zkuste to znovu';
+  String get authGenericError => 'Něco se pokazilo. Zkuste to prosím znovu';
 
   @override
-  String get confirmEmailTitle => 'Zkontrolujte svůj e-mail';
+  String get confirmEmailTitle => 'Zkontrolujte e-mail';
 
   @override
   String confirmEmailBody(String email) {
-    return 'Na adresu $email jsme poslali potvrzovací odkaz. Otevřete jej a dokončete nastavení účtu.';
+    return 'Poslali jsme potvrzovací odkaz na $email. Otevřete jej a dokončete založení účtu.';
   }
 
   @override
-  String get resendConfirmation => 'Znovu odeslat potvrzovací e-mail';
+  String get resendConfirmation => 'Znovu poslat potvrzovací e-mail';
 
   @override
   String get confirmationResent => 'Potvrzovací e-mail odeslán';
 
   @override
-  String get forgotPasswordTitle => 'Obnovit heslo';
+  String get forgotPasswordTitle => 'Obnovení hesla';
 
   @override
   String get forgotPasswordSubtitle =>
-      'Zadejte e-mail, se kterým jste se zaregistrovali, a pošleme vám odkaz pro nastavení nového hesla.';
+      'Zadejte e-mail, se kterým jste se registrovali, a pošleme vám odkaz pro nastavení nového hesla.';
 
   @override
-  String get sendResetLink => 'Odeslat odkaz pro obnovení';
+  String get sendResetLink => 'Poslat odkaz';
 
   @override
-  String get resetLinkSentTitle => 'Odkaz pro obnovení odeslán';
+  String get resetLinkSentTitle => 'Odkaz odeslán';
 
   @override
   String resetLinkSentBody(String email) {
-    return 'Pokud má $email účet, odkaz pro obnovení je na cestě.';
+    return 'Pokud k $email existuje účet, odkaz už je na cestě.';
   }
 
   @override
   String get resetLinkSentHint =>
-      'Odkaz vyprší za hodinu. Pokud nedorazí, před žádostí o nový zkontrolujte složku se spamem.';
+      'Odkaz vyprší za hodinu. Pokud nedorazí, mrkněte do spamu, než si vyžádáte nový.';
 
   @override
   String get tryAnotherEmail => 'Použít jiný e-mail';
@@ -1343,48 +1340,48 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get resetPasswordSubtitle =>
-      'Zvolte heslo, které jste na tomto účtu ještě nepoužili.';
+      'Vyberte něco, co jste u tohoto účtu ještě nepoužili.';
 
   @override
   String get passwordChangedTitle => 'Heslo aktualizováno';
 
   @override
   String get passwordChangedBody =>
-      'Vaše nové heslo je uloženo. Jste přihlášeni a můžete začít.';
+      'Vaše nové heslo je uložené. Jste přihlášeni a můžete pokračovat.';
 
   @override
-  String get demoModeHint => 'Demo verze — účet není potřeba';
+  String get demoModeHint => 'Ukázková verze — účet není potřeba';
 
   @override
   String get demoModeFill => 'Vyplnit';
 
   @override
-  String get welcomeTrackTitle => 'Zjistěte, kam vaše peníze míří';
+  String get welcomeTrackTitle => 'Uvidíte, kam jdou vaše peníze';
 
   @override
   String get welcomeTrackBody =>
-      'Zaznamenávejte příjmy a výdaje. RainyPenny je promění v přehled, kterému opravdu porozumíte.';
+      'Zapisujte, co přijde a co odejde. RainyPenny z toho udělá obrázek, který se dá opravdu číst.';
 
   @override
-  String get welcomeBudgetTitle => 'Nastavte limity, které vydrží';
+  String get welcomeBudgetTitle => 'Hranice, které vydrží';
 
   @override
   String get welcomeBudgetBody =>
-      'Dejte každé oblasti výdajů měsíční strop a nechte se upozornit dříve, než jej překročíte, nikoli až poté.';
+      'Dejte každé části svých výdajů měsíční strop a zjistěte to dřív, než ho překročíte, ne až potom.';
 
   @override
-  String get welcomeGoalsTitle => 'Šetřete na tom, na čem záleží';
+  String get welcomeGoalsTitle => 'Spořte na to, na čem záleží';
 
   @override
   String get welcomeGoalsBody =>
-      'Pojmenujte cíl, nastavte částku a sledujte, jak se plní. Rezervní fond se buduje snáz, když jeho růst vidíte.';
+      'Pojmenujte cíl, nastavte částku a sledujte, jak se plní. Rezervu se buduje snáz, když ji vidíte.';
 
   @override
   String get welcomePrivacyTitle => 'Vaše peníze zůstávají vaše';
 
   @override
   String get welcomePrivacyBody =>
-      'Vaše finanční údaje patří jen vám. Nic neprodáváme a s nikým nic nesdílíme.';
+      'Vaše čísla patří jen vám. Nic se neprodává a nic se s nikým nesdílí.';
 
   @override
   String stepOf(int step, int total) {
@@ -1395,46 +1392,45 @@ class AppL10nCs extends AppL10n {
   String get onboardingNameTitle => 'Jak vám máme říkat?';
 
   @override
-  String get onboardingNameBody => 'Použijeme to pro pozdravy a nikde jinde.';
+  String get onboardingNameBody => 'Použijeme to jen k pozdravu, nikde jinde.';
 
   @override
   String get onboardingNameHint =>
-      'Stačí křestní jméno. Později ho můžete změnit.';
+      'Křestní jméno stačí. Později ho můžete změnit.';
 
   @override
   String get onboardingCurrencyTitle => 'Jakou měnu používáte?';
 
   @override
   String get onboardingCurrencyBody =>
-      'Všechny částky v aplikaci se zobrazí v této měně. Jejím výběrem se nic nepřepočítává.';
+      'Všechny částky v aplikaci se zobrazují v této měně. Volba nic nepřevádí.';
 
   @override
-  String get onboardingCurrencySearch => 'Hledat všechny měny';
+  String get onboardingCurrencySearch => 'Hledat mezi všemi měnami';
 
   @override
-  String get onboardingAppearanceTitle => 'Přizpůsobte si aplikaci';
+  String get onboardingAppearanceTitle => 'Udělejte si to po svém';
 
   @override
   String get onboardingAppearanceBody =>
-      'Vyberte si vzhled. Vše se změní podle vašeho výběru a kdykoli se k němu můžete vrátit.';
+      'Vyberte si vzhled. Všechno se mění hned při ťuknutí a kdykoli se sem můžete vrátit.';
 
   @override
-  String get onboardingNotificationsTitle => 'Mějte vše pod kontrolou';
+  String get onboardingNotificationsTitle => 'Mějte to pod kontrolou';
 
   @override
   String get onboardingNotificationsBody =>
-      'Tiché připomenutí ve správný okamžik pomůže vytvořit návyk.';
+      'Tiché pošťouchnutí ve správnou chvíli je to, co z toho udělá zvyk.';
 
   @override
   String get onboardingNotifyReminders =>
-      'Jemná připomínka, abyste zaznamenali, co jste utratili';
+      'Jemná připomínka, ať si zapíšete, co jste utratili';
 
   @override
-  String get onboardingNotifyBudget => 'Upozornění před vyčerpáním rozpočtu';
+  String get onboardingNotifyBudget => 'Upozornění dřív, než dojde rozpočet';
 
   @override
-  String get onboardingNotifySummary =>
-      'Týdenní přehled toho, kam vaše peníze šly';
+  String get onboardingNotifySummary => 'Týdenní souhrn, kam šly vaše peníze';
 
   @override
   String get onboardingNotifyEnable => 'Zapnout oznámení';
@@ -1443,7 +1439,8 @@ class AppL10nCs extends AppL10n {
   String get onboardingNotifyDone => 'Nastavení oznámení uloženo';
 
   @override
-  String get onboardingNotifyLater => 'Vše můžete kdykoli změnit v Nastavení.';
+  String get onboardingNotifyLater =>
+      'Všechno tohle můžete kdykoli změnit v Nastavení.';
 
   @override
   String get onboardingReadyTitle => 'Vše je připraveno';
@@ -1455,17 +1452,17 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get onboardingReadyBody =>
-      'Nastavení je hotové. Chcete si projít krátkou ukázku, jak vše funguje?';
+      'Nastavení je hotové. Chcete rychlou prohlídku, jak to všechno funguje?';
 
   @override
-  String get onboardingTakeTour => 'Prohlédnout aplikaci';
+  String get onboardingTakeTour => 'Ukažte mi to';
 
   @override
-  String get onboardingGoToApp => 'Přejít do aplikace';
+  String get onboardingGoToApp => 'Vezměte mě do aplikace';
 
   @override
   String get onboardingTourLater =>
-      'Teď ne? Průvodce zůstane v Nastavení, kdykoli se k němu budete chtít vrátit.';
+      'Teď ne? Průvodce zůstává v Nastavení, kdykoli budete chtít.';
 
   @override
   String get beginnersGuide => 'Průvodce pro začátečníky';
@@ -1480,179 +1477,177 @@ class AppL10nCs extends AppL10n {
 
   @override
   String guideOpenScreen(String screen) {
-    return 'Otevřít $screen';
+    return 'Otevřít: $screen';
   }
 
   @override
-  String get guideDashboardTitle => 'Váš přehled';
+  String get guideDashboardTitle => 'Vaše domovská obrazovka';
 
   @override
   String get guideDashboardBody =>
-      'Zde vše začíná. Karta nahoře ukazuje, kolik vám zbývá; pod ní jsou příjmy a výdaje za toto období, následované výdaji, rozpočty a cíli.';
+      'Všechno začíná tady. Karta nahoře ukazuje, co vám zbývá; pod ní je, co v tomto období přišlo a odešlo, a dál vaše výdaje, rozpočty a cíle.';
 
   @override
   String get guideDashboardTip1 =>
-      'Stažením obrazovky dolů vše najednou aktualizujete.';
+      'Stáhněte obrazovku dolů, ať se všechno naráz obnoví.';
 
   @override
   String get guideDashboardTip2 =>
-      'Klepnutím na kartu příjmů nebo výdajů přejdete na příslušný seznam.';
+      'Klepněte na kartu příjmů nebo výdajů a skočíte rovnou na ten seznam.';
 
   @override
   String get guideDashboardTip3 =>
-      'Kruhové ukazatele a přehledy se aktualizují okamžitě po zaznamenání nové položky.';
+      'Kroužky i postřehy se obnoví ve chvíli, kdy něco zapíšete.';
 
   @override
-  String get guideAddTitle => 'Zaznamenávání peněz';
+  String get guideAddTitle => 'Zapisování peněz';
 
   @override
   String get guideAddBody =>
-      'Tlačítko uprostřed lišty je místem, kde vše začíná. Otevře krátkou nabídku: výdaj, příjem, dluh, rozpočet nebo cíl spoření.';
+      'Tlačítko uprostřed lišty je začátek všeho. Otevře krátkou nabídku: výdaj, příjem, dluh, rozpočet nebo spořicí cíl.';
 
   @override
   String get guideAddTip1 =>
-      'Klepnutím na prostřední tlačítko zaznamenáte příjem nebo výdaj.';
+      'Klepněte na prostřední tlačítko a zapište příjem nebo výdaj.';
 
   @override
   String get guideAddTip2 =>
-      'Podržením tlačítka přejdete rovnou na nový výdaj a přeskočíte nabídku.';
+      'Podržte ho a přejdete rovnou k novému výdaji bez nabídky.';
 
   @override
   String get guideAddTip3 =>
-      'Vždy vyberte kategorii — díky ní fungují grafy a rozpočty.';
+      'Vždy vyberte kategorii — na ní stojí grafy i rozpočty.';
 
   @override
   String get guideCategoriesTitle => 'Kategorie';
 
   @override
   String get guideCategoriesBody =>
-      'Kategorie určují, jak se výdaje seskupují. Ty, které jsou v aplikaci přednastavené, pokryjí většinu potřeb a můžete je přejmenovat nebo přidat vlastní.';
+      'Kategorie seskupují výdaje. Ty vestavěné většině lidí stačí, ale můžete je přejmenovat nebo si přidat vlastní.';
 
   @override
   String get guideCategoriesTip1 =>
-      'Přejděte do Nastavení a poté na Spravovat kategorie, kde je můžete měnit nebo přidávat.';
+      'Nastavení, pak Správa kategorií — tam se upravuje i přidává.';
 
   @override
   String get guideCategoriesTip2 =>
-      'Vše, co zůstane bez kategorie, skončí v Ostatní, aby grafy zůstaly přesné.';
+      'Co zůstane bez kategorie, spadne do „Ostatní“, aby grafy zůstaly poctivé.';
 
   @override
   String get guideBudgetTitle => 'Rozpočty';
 
   @override
   String get guideBudgetBody =>
-      'Rozpočet je měsíční strop pro jednu kategorii. Lišta se při utrácení plní a při přiblížení k limitu se změní, takže se to dozvíte dříve, než limit překročíte.';
+      'Rozpočet je měsíční strop pro jednu kategorii. Pruh se plní, jak utrácíte, a u hranice mění barvu, takže to zjistíte dřív, než ho překročíte.';
 
   @override
   String get guideBudgetTip1 =>
-      'Začněte se dvěma nebo třemi kategoriemi, ne se všemi najednou.';
+      'Začněte dvěma třemi kategoriemi, ne všemi najednou.';
 
   @override
   String get guideBudgetTip2 =>
-      'Nastavte limit trochu nad běžnou úroveň výdajů a pak jej postupně zpřísňujte.';
+      'Nastavte limit kousek nad své obvyklé výdaje a pak ho utahujte.';
 
   @override
   String get guideBudgetTip3 =>
-      'Nechte zapnutá upozornění na rozpočet a aplikace vás upozorní, když se některý rozpočet začne blížit vyčerpání.';
+      'Nechte upozornění zapnutá a aplikace se ozve, až bude rozpočet docházet.';
 
   @override
-  String get guideSavingsTitle => 'Cíle spoření';
+  String get guideSavingsTitle => 'Spořicí cíle';
 
   @override
   String get guideSavingsBody =>
-      'Pojmenujte, na co šetříte, nastavte cílovou částku a datum a aplikace vypočítá, kolik potřebujete měsíčně odkládat, abyste cíle dosáhli.';
+      'Pojmenujte, na co spoříte, nastavte částku a datum, a aplikace spočítá, kolik je potřeba měsíčně odkládat.';
 
   @override
   String get guideSavingsTip1 =>
-      'Pojmenovaný cíl se dodržuje snáz než neurčitý záměr spořit.';
+      'Pojmenovaný cíl se drží líp než mlhavý úmysl něco ušetřit.';
 
   @override
   String get guideSavingsTip2 =>
-      'Několik menších cílů bývá dokončeno častěji než jeden velký.';
+      'Několik malých cílů se dotáhne do konce častěji než jeden velký.';
 
   @override
   String get guideLoansTitle => 'Dluhy a půjčky';
 
   @override
   String get guideLoansBody =>
-      'Zaznamenejte, kolik dlužíte, kolik vás to stojí a kdy je splatná další platba. Vše, co splácíte, máte v jednom seznamu spolu s celkovou zbývající částkou.';
+      'Zapište, kolik dlužíte, kolik to stojí a kdy je další splátka. Všechno, co splácíte, je v jednom seznamu i se zbývající částkou.';
 
   @override
   String get guideLoansTip1 =>
-      'Přidejte datum splatnosti a připomínky plateb vás na něj upozorní.';
+      'Doplňte datum splatnosti a připomínky ho pohlídají za vás.';
 
   @override
   String get guideLoansTip2 =>
-      'Dluh označený jako po splatnosti se na přehledu zobrazí červeně, dokud jej neuhradíte.';
+      'Dluh po splatnosti svítí na domovské obrazovce červeně, dokud ho nezaplatíte.';
 
   @override
   String get guideReportsTitle => 'Přehledy';
 
   @override
   String get guideReportsBody =>
-      'Podrobnější pohled: příjmy oproti výdajům, výdaje podle kategorií, jak si vedly rozpočty a jakou část příjmů jste si ponechali.';
+      'Pohled do hloubky: příjmy proti výdajům, výdaje podle kategorií, jak držely rozpočty a jaká část příjmu vám zůstala.';
 
   @override
   String get guideReportsTip1 =>
-      'Nahoře na obrazovce přepínejte mezi týdnem, měsícem a čtvrtletím.';
+      'Nahoře přepínáte mezi týdnem, měsícem a čtvrtletím.';
 
   @override
   String get guideReportsTip2 =>
-      'Exportujte nebo sdílejte PDF — vytvoří se ve vašem jazyce a směru textu.';
+      'Vyexportujte nebo sdílejte PDF — vyjde ve vašem jazyce a jeho směru psaní.';
 
   @override
   String get guideSettingsTitle => 'Nastavení';
 
   @override
   String get guideSettingsBody =>
-      'Jazyk, měna, barvy a upozornění najdete zde a žádné z nich nejsou nastavením natrvalo uzamčené — kdykoli je můžete změnit.';
+      'Jazyk, měna, barvy i upozornění jsou tady a úvodní nastavení nic z toho nezamyká — měňte, co chcete a kdy chcete.';
 
   @override
   String get guideSettingsTip1 =>
-      'Čtyřicet jazyků a celé rozhraní se u jazyků psaných zprava doleva zrcadlově otočí.';
+      'Čtyřicet jazyků a celé rozvržení se u těch psaných zprava doleva zrcadlí.';
 
   @override
   String get guideSettingsTip2 =>
-      'Vyberte si, která upozornění chcete dostávat a v jakých hodinách.';
+      'Vyberte, jaká upozornění chcete a v jakých hodinách smí chodit.';
 
   @override
-  String get guideSettingsTip3 =>
-      'Doba klidu všechna upozornění pozdrží až do rána.';
+  String get guideSettingsTip3 => 'Tiché hodiny zadrží všechno až do rána.';
 
   @override
-  String get guideHabitTitle => 'Vytvořte si návyk';
+  String get guideHabitTitle => 'Ať to vydrží';
 
   @override
   String get guideHabitBody =>
-      'Aplikace je jen tak dobrá, jako jsou údaje, které do ní zadáváte. Minuta denně je lepší než hodina jednou za měsíc a po dvou týdnech vám čísla začnou něco říkat.';
+      'Aplikace je tak dobrá, kolik do ní vložíte. Minuta denně je lepší než hodina měsíčně a po dvou týdnech vám čísla začnou něco říkat.';
 
   @override
-  String get guideHabitTip1 =>
-      'Zaznamenávejte výdaje průběžně, ne až na konci týdne.';
+  String get guideHabitTip1 => 'Zapisujte výdaje hned, ne až na konci týdne.';
 
   @override
   String get guideHabitTip2 =>
-      'Jednou denně se podívejte na přehled. Stačí deset sekund.';
+      'Mrkněte na domovskou obrazovku jednou denně. Deset vteřin stačí.';
 
   @override
   String get guideHabitTip3 =>
-      'Tento průvodce zůstává v Nastavení — vraťte se k němu, kdykoli budete chtít.';
+      'Tento průvodce zůstává v Nastavení — vraťte se kdykoli.';
 
   @override
   String get appearance => 'Vzhled';
 
   @override
-  String get themeCaption => 'Světlý, tmavý nebo podle nastavení telefonu.';
+  String get themeCaption => 'Světlý, tmavý, nebo jak to má telefon.';
 
   @override
   String get accentColor => 'Barva zvýraznění';
 
   @override
-  String get accentColorCaption => 'Obarví tlačítka, zvýraznění a grafy.';
+  String get accentColorCaption => 'Barví tlačítka, zvýraznění a grafy.';
 
   @override
   String get accentSemanticsNote =>
-      'Příjmy a výdaje mají ve všech motivech vlastní barvy, takže číslo nikdy nezmění význam kvůli změně barvy zvýraznění.';
+      'Příchozí i odchozí peníze si v každém motivu drží vlastní barvu, takže číslo nikdy nezmění význam jen proto, že jste změnili zvýraznění.';
 
   @override
   String get accentTeal => 'Tyrkysová';
@@ -1661,7 +1656,7 @@ class AppL10nCs extends AppL10n {
   String get accentGreen => 'Zelená';
 
   @override
-  String get accentSky => 'Nebeská modrá';
+  String get accentSky => 'Blankytná';
 
   @override
   String get accentBlue => 'Modrá';
@@ -1694,31 +1689,31 @@ class AppL10nCs extends AppL10n {
   String get allLanguages => 'Všechny jazyky';
 
   @override
-  String get noLanguagesFound => 'Jazyky nenalezeny';
+  String get noLanguagesFound => 'Žádné jazyky nenalezeny';
 
   @override
   String get noLanguagesFoundMessage =>
-      'Zkuste název v angličtině nebo dvoupísmenný kód.';
+      'Zkuste název anglicky nebo dvoupísmenný kód.';
 
   @override
   String get rightToLeft => 'Zprava doleva';
 
   @override
-  String get replayGuide => 'Spustit průvodce znovu';
+  String get replayGuide => 'Znovu si projít průvodce';
 
   @override
   String get replaySetup => 'Spustit nastavení znovu';
 
   @override
   String get replaySetupBody =>
-      'Projděte znovu otázky při prvním spuštění. Nic z toho, co jste zaznamenali, nebude smazáno.';
+      'Projděte úvodní otázky ještě jednou. Nic z toho, co jste zapsali, se nesmaže.';
 
   @override
   String get rateTitle => 'Líbí se vám RainyPenny?';
 
   @override
   String get rateBody =>
-      'Už nějakou dobu se o své finance staráte. Hodnocení zabere chvíli a pomůže ostatním aplikaci najít.';
+      'Už nějakou dobu u toho vydržíte. Hodnocení zabere chvilku a pomůže ostatním aplikaci najít.';
 
   @override
   String get rateAction => 'Ohodnotit aplikaci';
@@ -2181,4 +2176,10 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get recommendedBudget => 'Doporučený rozpočet';
+
+  @override
+  String get due => 'Due';
+
+  @override
+  String get dueAmount => 'Due amount';
 }

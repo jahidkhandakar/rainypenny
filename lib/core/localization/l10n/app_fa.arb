@@ -1,161 +1,98 @@
 {
   "@@locale": "fa",
   "appName": "RainyPenny",
-  "appTagline": "پس‌انداز برای روز مبادا",
+  "appTagline": "برای روز مبادا پس‌انداز کنید",
   "navHome": "خانه",
   "navTransactions": "تراکنش‌ها",
   "navAdd": "افزودن",
   "navReports": "گزارش‌ها",
-  "navProfile": "پروفایل",
+  "navProfile": "نمایه",
   "greetingMorning": "صبح بخیر، {name}",
-  "@greetingMorning": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingAfternoon": "عصر بخیر، {name}",
-  "@greetingAfternoon": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingEvening": "شب بخیر، {name}",
-  "@greetingEvening": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingSubtitle": "نمای کلی وضعیت مالی شما",
-  "totalBalance": "موجودی کل",
+  "greetingAfternoon": "ظهر بخیر، {name}",
+  "greetingEvening": "عصر بخیر، {name}",
+  "greetingSubtitle": "این تصویر مالی شماست",
+  "totalBalance": "مانده کل",
   "vsLastPeriod": "نسبت به دوره قبل",
   "income": "درآمد",
   "expenses": "هزینه‌ها",
-  "netBalance": "موجودی خالص",
+  "netBalance": "مانده خالص",
   "lastThirtyDays": "۳۰ روز گذشته",
-  "quickActions": "دسترسی سریع",
-  "addIncome": "ثبت درآمد",
-  "addExpense": "ثبت هزینه",
-  "spendingOverview": "نمای کلی مخارج",
+  "quickActions": "کارهای سریع",
+  "addIncome": "افزودن درآمد",
+  "addExpense": "افزودن هزینه",
+  "spendingOverview": "نمای کلی هزینه‌ها",
   "recentTransactions": "تراکنش‌های اخیر",
-  "seeAll": "مشاهده همه",
+  "seeAll": "دیدن همه",
   "viewAll": "نمایش همه",
-  "budgetProgress": "وضعیت بودجه",
-  "savingsGoals": "اهداف پس‌انداز",
-  "financialInsight": "بینش مالی",
+  "budgetProgress": "پیشرفت بودجه",
+  "savingsGoals": "هدف‌های پس‌انداز",
+  "financialInsight": "نکته مالی",
   "financialHealth": "سلامت مالی",
   "ofTotal": "از {total}",
-  "@ofTotal": {
-    "placeholders": {
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "searchTransactions": "جستجوی تراکنش‌ها",
+  "searchTransactions": "جست‌وجوی تراکنش",
   "filterAll": "همه",
   "filterIncome": "درآمد",
   "filterExpenses": "هزینه",
   "today": "امروز",
   "yesterday": "دیروز",
-  "noTransactionsTitle": "تراکندی یافت نشد",
-  "noTransactionsBody": "برای دیدن فعالیت‌های بیشتر، عبارت جستجو یا فیلتر دیگری را امتحان کنید.",
-  "transactionCount": "{count, plural, =0{بدون تراکنش} =1{۱ تراکنش} other{{count} تراکنش}}",
-  "@transactionCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "noTransactionsTitle": "تراکنشی پیدا نشد",
+  "noTransactionsBody": "جست‌وجو یا فیلتر دیگری را امتحان کنید تا رکوردهای بیشتری ببینید.",
+  "transactionCount": "{count, plural, =0{تراکنشی نیست} one{{count} تراکنش} other{{count} تراکنش}}",
   "addTransaction": "افزودن تراکنش",
   "amount": "مبلغ",
-  "category": "دسته‌بندی",
+  "category": "دسته",
   "date": "تاریخ",
   "note": "یادداشت",
-  "noteHint": "یادداشت اختیاری",
+  "noteHint": "یادداشت (اختیاری)",
   "saveIncome": "ذخیره درآمد",
   "saveExpense": "ذخیره هزینه",
-  "selectCategory": "انتخاب دسته‌بندی",
+  "selectCategory": "انتخاب دسته",
   "transactionSaved": "تراکنش ذخیره شد",
-  "amountRequired": "مبلغی بیشتر از صفر وارد کنید",
-  "titleRequired": "برای این تراکنش نامی تعیین کنید",
-  "descriptionLabel": "توضیحات",
-  "descriptionHint": "مثلاً خرید خواربار",
+  "amountRequired": "مبلغی بزرگ‌تر از صفر وارد کنید",
+  "titleRequired": "برای این تراکنش نامی بگذارید",
+  "descriptionLabel": "شرح",
+  "descriptionHint": "مثلاً خرید خانه",
   "budget": "بودجه",
   "budgets": "بودجه‌ها",
-  "totalBudget": "کل بودجه",
+  "totalBudget": "بودجه کل",
   "spent": "خرج‌شده",
-  "remaining": "باقیمانده",
-  "budgetUsed": "{percent}٪ مصرف شده",
-  "@budgetUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
+  "remaining": "باقی‌مانده",
+  "budgetUsed": "{percent}% مصرف شده",
   "onTrack": "طبق برنامه",
-  "approachingLimit": "نزدیک به سقف بودجه",
+  "approachingLimit": "نزدیک سقف",
   "overBudget": "فراتر از بودجه",
   "savings": "پس‌انداز",
-  "yourGoals": "اهداف شما",
+  "yourGoals": "هدف‌های شما",
   "saved": "پس‌انداز شده",
   "target": "هدف",
   "monthlyContribution": "ماهانه",
-  "addFunds": "افزایش موجودی",
+  "addFunds": "واریز",
   "goalComplete": "هدف محقق شد",
-  "monthsToGo": "{count, plural, =1{۱ ماه مانده} other{{count} ماه مانده}}",
-  "@monthsToGo": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "monthsToGo": "{count, plural, one{{count} ماه مانده} other{{count} ماه مانده}}",
   "loansAndDebts": "وام‌ها و بدهی‌ها",
-  "totalOutstanding": "کل بدهی باقیمانده",
-  "monthlyPayment": "قسط ماهانه",
-  "nextPayment": "پرداخت بعدی",
-  "paidOff": "{percent}٪ پرداخت شده",
-  "@paidOff": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "interestRate": "نرخ سود",
+  "totalOutstanding": "کل بدهی باقی‌مانده",
+  "monthlyPayment": "ماهانه",
+  "nextPayment": "قسط بعدی",
+  "paidOff": "{percent}% پرداخت شده",
+  "interestRate": "سود",
   "upcomingPayments": "پرداخت‌های پیش‌رو",
-  "dueInDays": "{count, plural, =0{سررسید امروز} =1{سررسید فردا} other{سررسید تا {count} روز دیگر}}",
-  "@dueInDays": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "overdue": "معوقه",
+  "dueInDays": "{count, plural, =0{سررسید امروز} one{{count} روز دیگر} other{{count} روز دیگر}}",
+  "overdue": "معوق",
   "reports": "گزارش‌ها",
   "week": "هفته",
   "month": "ماه",
   "quarter": "فصل",
-  "incomeVsExpenses": "درآمد در برابر هزینه",
-  "spendingByCategory": "هزینه‌ها بر اساس دسته‌بندی",
+  "incomeVsExpenses": "درآمد و هزینه",
+  "spendingByCategory": "هزینه بر پایه دسته",
   "budgetPerformance": "عملکرد بودجه",
-  "insights": "بینش‌ها",
+  "insights": "نکته‌ها",
   "savingsRate": "نرخ پس‌انداز",
-  "profile": "پروفایل",
-  "account": "حساب کاربری",
-  "personalInformation": "اطلاعات فردی",
-  "changePassword": "تغییر رمز عبور",
+  "profile": "نمایه",
+  "account": "حساب",
+  "personalInformation": "اطلاعات شخصی",
+  "changePassword": "تغییر گذرواژه",
   "notifications": "اعلان‌ها",
-  "preferences": "تنظیمات ترجیحی",
+  "preferences": "ترجیحات",
   "language": "زبان",
   "currency": "واحد پول",
   "theme": "پوسته",
@@ -163,91 +100,63 @@
   "privacyAndSecurity": "حریم خصوصی و امنیت",
   "help": "راهنما",
   "helpAndSupport": "راهنما و پشتیبانی",
-  "termsAndConditions": "شرایط و قوانین",
-  "logOut": "خروج از حساب",
-  "memberSince": "عضویت از {date}",
-  "@memberSince": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
-  "themeSystem": "سیستم",
+  "termsAndConditions": "شرایط و ضوابط",
+  "logOut": "خروج",
+  "memberSince": "عضو از {date}",
+  "themeSystem": "مطابق سیستم",
   "themeLight": "روشن",
-  "themeDark": "تاریک",
+  "themeDark": "تیره",
   "settings": "تنظیمات",
-  "noNotificationsTitle": "اعلان جدیدی وجود ندارد",
-  "noNotificationsBody": "بینش‌ها و یادآورهای جدید در اینجا نمایش داده می‌شوند.",
+  "noNotificationsTitle": "همه‌چیز دیده شد",
+  "noNotificationsBody": "نکته‌ها و یادآوری‌های تازه اینجا نمایش داده می‌شوند.",
   "cancel": "انصراف",
   "save": "ذخیره",
   "done": "انجام شد",
-  "retry": "تلاش مجدد",
+  "retry": "تلاش دوباره",
   "close": "بستن",
   "somethingWentWrong": "مشکلی پیش آمد",
-  "comingSoon": "به‌زودی در نسخه کامل",
+  "comingSoon": "در نسخه کامل خواهد آمد",
   "edit": "ویرایش",
   "delete": "حذف",
-  "undo": "واگرد",
+  "undo": "برگرداندن",
   "add": "افزودن",
-  "create": "ایجاد",
-  "nameRequired": "نامی وارد کنید",
-  "amountAboveZero": "مبلغی بیشتر از صفر وارد کنید",
+  "create": "ساختن",
+  "nameRequired": "برای این نامی بگذارید",
+  "amountAboveZero": "مبلغی بزرگ‌تر از صفر وارد کنید",
   "editTransaction": "ویرایش تراکنش",
-  "deleteTransaction": "حذف تراکنش؟",
-  "deleteTransactionBody": "تراکنش «{title}» از دفتر حساب شما حذف خواهد شد.",
-  "@deleteTransactionBody": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteTransaction": "تراکنش حذف شود؟",
+  "deleteTransactionBody": "{title} از دفتر شما حذف می‌شود.",
   "transactionDeleted": "تراکنش حذف شد",
   "transactionUpdated": "تراکنش به‌روزرسانی شد",
-  "newBudget": "بودجه جدید",
+  "newBudget": "بودجه تازه",
   "editBudget": "ویرایش بودجه",
   "budgetLimit": "سقف ماهانه",
-  "deleteBudget": "حذف بودجه؟",
-  "deleteBudgetBody": "بودجه دسته‌بندی «{category}» حذف خواهد شد. تراکنش‌های شما تغییری نمی‌کنند.",
-  "@deleteBudgetBody": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteBudget": "بودجه حذف شود؟",
+  "deleteBudgetBody": "بودجه {category} حذف می‌شود. تراکنش‌های شما دست‌نخورده می‌مانند.",
   "budgetSaved": "بودجه ذخیره شد",
   "budgetDeleted": "بودجه حذف شد",
-  "allCategoriesBudgeted": "تمام دسته‌بندی‌ها دارای بودجه هستند",
-  "noBudgetsTitle": "هنوز بودجه‌ای تعریف نشده است",
-  "noBudgetsBody": "برای شروع ردیابی، برای یکی از دسته‌بندی‌ها سقف ماهانه تعیین کنید.",
-  "newGoal": "هدف جدید",
+  "allCategoriesBudgeted": "همه دسته‌ها بودجه دارند",
+  "noBudgetsTitle": "هنوز بودجه‌ای نیست",
+  "noBudgetsBody": "برای یک دسته سقف ماهانه بگذارید تا پیگیری آغاز شود.",
+  "newGoal": "هدف تازه",
   "editGoal": "ویرایش هدف",
   "goalName": "نام هدف",
   "goalNameHint": "مثلاً صندوق اضطراری",
   "targetAmount": "مبلغ هدف",
-  "alreadySaved": "پس‌انداز شده تاکنون",
-  "deleteGoal": "حذف هدف؟",
-  "deleteGoalBody": "هدف «{name}» و پیشرفت آن حذف خواهد شد.",
-  "@deleteGoalBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
+  "alreadySaved": "پس‌انداز شده",
+  "deleteGoal": "هدف حذف شود؟",
+  "deleteGoalBody": "{name} و پیشرفت آن حذف می‌شود.",
   "goalSaved": "هدف ذخیره شد",
   "goalDeleted": "هدف حذف شد",
-  "noGoalsTitle": "هنوز هدف پس‌اندازی ثبت نشده است",
-  "noGoalsBody": "مبلغ هدفی تعیین کنید تا RainyPenny مسیر پیشرفت شما را دنبال کند.",
-  "fundsAdded": "مبلغ افزوده شد",
-  "newDebt": "وام یا کارت اعتباری جدید",
+  "noGoalsTitle": "هنوز هدف پس‌اندازی نیست",
+  "noGoalsBody": "هدفی بگذارید تا RainyPenny پیشرفت شما را دنبال کند.",
+  "fundsAdded": "مبلغ واریز شد",
+  "newDebt": "وام یا کارت تازه",
   "editDebt": "ویرایش وام",
   "debtName": "نام",
   "debtNameHint": "مثلاً وام خودرو",
   "lender": "وام‌دهنده",
-  "lenderHint": "مثلاً بانک ملی",
+  "lenderHint": "مثلاً بانک ملت",
   "originalAmount": "مبلغ اولیه",
   "creditLimit": "سقف اعتبار",
   "remainingBalance": "مانده بدهی",
@@ -256,885 +165,333 @@
   "kindCreditCard": "کارت اعتباری",
   "recordPayment": "ثبت پرداخت",
   "paymentRecorded": "پرداخت ثبت شد",
-  "deleteDebt": "حذف این بدهی؟",
-  "deleteDebtBody": "«{name}» از فهرست بدهی‌های شما حذف خواهد شد.",
-  "@deleteDebtBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteDebt": "این بدهی حذف شود؟",
+  "deleteDebtBody": "{name} از فهرست بدهی‌های شما حذف می‌شود.",
   "debtSaved": "ذخیره شد",
   "debtDeleted": "حذف شد",
-  "noDebtsTitle": "بدهی ثبت‌شده‌ای وجود ندارد",
-  "noDebtsBody": "برای نظارت بر بازپرداخت‌ها، یک وام یا کارت اعتباری اضافه کنید.",
-  "insightBudgetExceededTitle": "تجاوز از بودجه {subject}",
-  "@insightBudgetExceededTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetExceededBody": "در این دوره، مخارج شما {amount} بیشتر از بودجه تعیین‌شده برای {subject} بوده است.",
-  "@insightBudgetExceededBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingTitle": "{subject} نزدیک به سقف بودجه است",
-  "@insightBudgetApproachingTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingBody": "{percent}٪ از بودجه {subject} مصرف شده و {amount} باقیمانده است.",
-  "@insightBudgetApproachingBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
-  "insightOverIncomeTitle": "مخارج بیشتر از درآمد است",
-  "insightOverIncomeBody": "در این دوره بیش از درآمدتان خرج کرده‌اید. بزرگ‌ترین دسته‌های هزینه‌ای خود را برای تعادل مجدد بررسی کنید.",
-  "insightCategoryUpTitle": "افزایش هزینه‌های {subject}",
-  "@insightCategoryUpTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightCategoryUpBody": "مخارج شما در بخش {subject} نسبت به دوره قبل {percent}٪ افزایش یافته است.",
-  "@insightCategoryUpBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightTrendDownTitle": "روند مخارج رو به کاهش است",
-  "insightTrendDownBody": "مجموع مخارج شما نسبت به دوره قبل {percent}٪ کمتر شده است.",
-  "@insightTrendDownBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightTrendUpTitle": "روند مخارج رو به افزایش است",
-  "insightTrendUpBody": "مجموع مخارج شما نسبت به دوره قبل {percent}٪ بیشتر شده است.",
-  "@insightTrendUpBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsStrongTitle": "پس‌انداز عالی در این دوره",
-  "insightSavingsStrongBody": "شما {percent}٪ از درآمد خود را حفظ کرده‌اید — که بالاتر از هدف {target}٪ است.",
-  "@insightSavingsStrongBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsLowTitle": "نرخ پس‌انداز کمتر از حد انتظار است",
-  "insightSavingsLowBody": "در این دوره {percent}٪ از درآمدتان را پس‌انداز کرده‌اید. تلاش کنید به هدف {target}٪ برسید.",
-  "@insightSavingsLowBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightGoalNearlyTitle": "هدف «{subject}» در آستانه تکمیل است",
-  "@insightGoalNearlyTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalNearlyBody": "تنها {amount} تا رسیدن به هدف {subject} باقی مانده است.",
-  "@insightGoalNearlyBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackTitle": "در مسیر دستیابی به {subject}",
-  "@insightGoalOnTrackTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackBody": "با پرداخت ماهانه {amount}، ظرف مدت {months, plural, =1{۱ ماه} other{{months} ماه}} به این هدف خواهید رسید.",
-  "@insightGoalOnTrackBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "months": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtOverdueTitle": "سررسید پرداخت {subject} گذشته است",
-  "@insightDebtOverdueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtOverdueBody": "پرداخت مبلغ {amount} مربوط به {subject} به مدت {days, plural, =1{۱ روز} other{{days} روز}} به تعویق افتاده است.",
-  "@insightDebtOverdueBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtDueTitle": "سررسید قسط {subject} نزدیک است",
-  "@insightDebtDueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueBody": "مبلغ {amount} در موعد {days, plural, =0{امروز} =1{فردا} other{{days} روز دیگر}} سررسید می‌شود.",
-  "@insightDebtDueBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
+  "noDebtsTitle": "بدهی‌ای پیگیری نمی‌شود",
+  "noDebtsBody": "وام یا کارت اعتباری اضافه کنید تا اقساط از دستتان در نرود.",
+  "insightBudgetExceededTitle": "بودجه {subject} فراتر رفت",
+  "insightBudgetExceededBody": "در این دوره {amount} بیشتر از بودجه {subject} خرج کرده‌اید.",
+  "insightBudgetApproachingTitle": "{subject} به سقف نزدیک است",
+  "insightBudgetApproachingBody": "بودجه {subject} شما {percent}% مصرف شده و {amount} باقی مانده است.",
+  "insightOverIncomeTitle": "هزینه بیش از درآمد",
+  "insightOverIncomeBody": "در این دوره بیش از آنچه به دست آورده‌اید خرج کرده‌اید. بزرگ‌ترین دسته‌ها را ببینید تا اوضاع به تعادل برگردد.",
+  "insightCategoryUpTitle": "هزینه {subject} بالا رفته",
+  "insightCategoryUpBody": "هزینه {subject} شما {percent}% بیشتر از دوره قبل است.",
+  "insightTrendDownTitle": "هزینه‌ها رو به کاهش است",
+  "insightTrendDownBody": "هزینه کلی {percent}% کمتر از دوره قبل است.",
+  "insightTrendUpTitle": "هزینه‌ها رو به افزایش است",
+  "insightTrendUpBody": "هزینه کلی {percent}% بیشتر از دوره قبل است.",
+  "insightSavingsStrongTitle": "پس‌انداز این دوره عالی بود",
+  "insightSavingsStrongBody": "{percent}% از درآمدتان را نگه داشتید — بسیار بالاتر از هدف {target}%.",
+  "insightSavingsLowTitle": "نرخ پس‌انداز کمتر از هدف",
+  "insightSavingsLowBody": "در این دوره {percent}% از درآمدتان را نگه داشتید. هدف {target}% است.",
+  "insightGoalNearlyTitle": "{subject} تقریباً کامل شد",
+  "insightGoalNearlyBody": "تا رسیدن به {subject} تنها {amount} مانده است.",
+  "insightGoalOnTrackTitle": "{subject} طبق برنامه پیش می‌رود",
+  "insightGoalOnTrackBody": "با ماهی {amount} در {months, plural, one{{months} ماه} other{{months} ماه}} به این هدف می‌رسید.",
+  "insightDebtOverdueTitle": "پرداخت {subject} معوق شده",
+  "insightDebtOverdueBody": "پرداخت {amount} مربوط به {subject} به مدت {days, plural, one{{days} روز} other{{days} روز}} معوق است.",
+  "insightDebtDueTitle": "پرداخت {subject} نزدیک است",
+  "insightDebtDueBody": "{amount} {days, plural, =0{امروز} one{{days} روز دیگر} other{{days} روز دیگر}} سررسید می‌شود.",
   "signIn": "ورود",
-  "signUp": "ایجاد حساب کاربری",
-  "signInSubtitle": "خوش آمدید. حساب‌های شما آماده بررسی است.",
-  "signUpSubtitle": "با چند مرحله ساده حساب شما راه‌اندازی می‌شود.",
+  "signUp": "ساخت حساب",
+  "signInSubtitle": "خوش برگشتید. پولتان منتظر شماست.",
+  "signUpSubtitle": "چند مورد و کارتان راه می‌افتد.",
   "emailLabel": "ایمیل",
   "emailHint": "you@email.com",
-  "passwordLabel": "رمز عبور",
-  "passwordHint": "حداقل ۸ نویسه",
-  "fullNameLabel": "نام و نام خانوادگی",
-  "fullNameHint": "علی محمدی",
-  "forgotPassword": "رمز عبور را فراموش کرده‌اید؟",
-  "resetSent": "پیوند بازنشانی رمز عبور به ایمیل شما ارسال شد",
-  "noAccountYet": "حساب کاربری ندارید؟",
-  "haveAccount": "از قبل حساب کاربری دارید؟",
-  "emailInvalid": "یک ایمیل معتبر وارد کنید",
-  "passwordTooShort": "حداقل از ۸ نویسه استفاده کنید",
-  "signOutConfirm": "خروج از حساب؟",
-  "signOutBody": "برای مشاهده وضعیت مالی، باید دوباره وارد حساب شوید.",
+  "passwordLabel": "گذرواژه",
+  "passwordHint": "دست‌کم ۸ نویسه",
+  "fullNameLabel": "نام کامل",
+  "fullNameHint": "علی رضایی",
+  "forgotPassword": "گذرواژه را فراموش کرده‌اید؟",
+  "resetSent": "برای پیوند بازنشانی، صندوق ایمیل را ببینید",
+  "noAccountYet": "تازه آمده‌اید؟",
+  "haveAccount": "از قبل حساب دارید؟",
+  "emailInvalid": "نشانی ایمیل معتبری وارد کنید",
+  "passwordTooShort": "دست‌کم ۸ نویسه بگذارید",
+  "signOutConfirm": "خارج می‌شوید؟",
+  "signOutBody": "برای دیدن دوباره وضعیت مالی‌تان باید دوباره وارد شوید.",
   "dataSource": "منبع داده",
-  "insightWeeklySummaryTitle": "مرور هفتگی شما",
-  "insightWeeklySummaryBody": "ببینید پول شما در این هفته کجا صرف شده و وضعیت بودجه‌های شما چگونه است.",
-  "notificationSettings": "تنظیمات اعلان‌ها",
+  "insightWeeklySummaryTitle": "مرور هفته شما",
+  "insightWeeklySummaryBody": "ببینید این هفته پولتان کجا رفت و بودجه‌ها چطور دوام آوردند.",
+  "notificationSettings": "اعلان‌ها",
   "alertsSection": "هشدارها",
-  "budgetAlerts": "هشدارهای بودجه",
-  "budgetAlertsBody": "هنگامی که یک بودجه نزدیک به سقف است یا از آن عبور می‌کند",
-  "paymentReminders": "یادآورهای پرداخت",
-  "paymentRemindersBody": "چند روز قبل از موعد سررسید اقساط",
-  "savingsUpdates": "گزارش وضعیت پس‌انداز",
-  "savingsUpdatesBody": "پیشرفت به سمت اهداف شما",
+  "budgetAlerts": "هشدار بودجه",
+  "budgetAlertsBody": "وقتی بودجه به سقف نزدیک یا از آن رد شود",
+  "paymentReminders": "یادآوری پرداخت",
+  "paymentRemindersBody": "چند روز پیش از سررسید",
+  "savingsUpdates": "خبرهای پس‌انداز",
+  "savingsUpdatesBody": "پیشرفت به‌سوی هدف‌هایتان",
   "weeklySummaryLabel": "خلاصه هفتگی",
-  "weeklySummaryBody": "گزارشی از عملکرد مالی هفته گذشته",
+  "weeklySummaryBody": "جمع‌بندی هفته‌ای که گذشت",
   "scheduleSection": "زمان‌بندی",
   "reminderTime": "زمان یادآوری",
-  "quietHours": "ساعات سکوت",
-  "quietHoursValue": "{start} تا {end}",
-  "@quietHoursValue": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-  "summaryDay": "روز دریافت خلاصه",
-  "permissionRequired": "اعلان‌ها غیرفعال هستند",
-  "permissionRequiredBody": "دسترسی اعلان‌ها را فعال کنید تا RainyPenny قبل از خارج شدن بودجه یا پرداخت‌ها از کنترل، به شما هشدار دهد.",
-  "allowNotifications": "فعال‌سازی اعلان‌ها",
-  "permissionDenied": "اعلان‌ها مسدود شده‌اند. می‌توانید آن‌ها را از تنظیمات دستگاه فعال کنید.",
-  "upcomingAlerts": "برنامه‌ریزی‌شده",
-  "noScheduledAlerts": "در حال حاضر رویداد برنامه‌ریزی‌شده‌ای نیست",
-  "noScheduledAlertsBody": "با نزدیک شدن بودجه‌ها و اقساط به سررسید، هشدارها در اینجا نمایان می‌شوند.",
-  "scheduledFor": "برنامه‌ریزی‌شده برای {date}",
-  "@scheduledFor": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
+  "quietHours": "ساعت‌های سکوت",
+  "quietHoursValue": "{start} – {end}",
+  "summaryDay": "روز خلاصه",
+  "permissionRequired": "اعلان‌ها خاموش است",
+  "permissionRequiredBody": "اجازه اعلان بدهید تا RainyPenny پیش از آنکه بودجه یا پرداختی از دستتان در برود به شما هشدار دهد.",
+  "allowNotifications": "اجازه اعلان",
+  "permissionDenied": "اعلان‌ها مسدود شده‌اند. می‌توانید از تنظیمات دستگاه روشنشان کنید.",
+  "upcomingAlerts": "زمان‌بندی‌شده",
+  "noScheduledAlerts": "اکنون چیزی زمان‌بندی نشده",
+  "noScheduledAlertsBody": "وقتی بودجه‌ها و پرداخت‌ها به سررسید نزدیک شوند، هشدارها اینجا می‌آیند.",
+  "scheduledFor": "زمان‌بندی برای {date}",
   "everyWeek": "هر هفته",
-  "allNotificationsOff": "تمام اعلان‌ها خاموش هستند",
-  "needsAttention": "نیاز به توجه",
-  "quickActionsTitle": "چه کاری می‌خواهید انجام دهید؟",
+  "allNotificationsOff": "همه اعلان‌ها خاموش است",
+  "needsAttention": "نیازمند توجه",
+  "quickActionsTitle": "چه کاری می‌خواهید بکنید؟",
   "createSection": "ثبت",
   "jumpToSection": "رفتن به",
   "addLoanAction": "افزودن وام",
   "addBudgetAction": "افزودن بودجه",
   "addGoalAction": "افزودن هدف",
-  "longPressHint": "نکته: برای ثبت سریع هزینه، دکمه + را نگه دارید",
-  "searchCurrencies": "جستجوی ارزها",
-  "@searchCurrencies": {
-    "description": "Currency picker: searchCurrencies"
-  },
-  "noCurrenciesFound": "ارزی یافت نشد",
-  "@noCurrenciesFound": {
-    "description": "Currency picker: noCurrenciesFound"
-  },
-  "noCurrenciesFoundMessage": "کد، نماد یا نام دیگری را جستجو کنید.",
-  "@noCurrenciesFoundMessage": {
-    "description": "Currency picker: noCurrenciesFoundMessage"
-  },
-  "popularCurrencies": "محبوب",
-  "@popularCurrencies": {
-    "description": "Currency picker: popularCurrencies"
-  },
-  "allCurrencies": "همه ارزها",
-  "@allCurrencies": {
-    "description": "Currency picker: allCurrencies"
-  },
+  "longPressHint": "نکته: دکمه + را نگه دارید تا مستقیم هزینه ثبت شود",
+  "searchCurrencies": "جست‌وجوی واحد پول",
+  "noCurrenciesFound": "واحد پولی پیدا نشد",
+  "noCurrenciesFoundMessage": "کد، نماد یا نام دیگری را امتحان کنید.",
+  "popularCurrencies": "پرکاربرد",
+  "allCurrencies": "همه واحدهای پول",
   "totalLoanAmount": "مبلغ کل وام",
-  "@totalLoanAmount": {
-    "description": "Loan detail: the original amount borrowed"
-  },
-  "installmentAmount": "مبلغ قسط",
-  "@installmentAmount": {
-    "description": "Loan detail: what falls due each cycle"
-  },
+  "installmentAmount": "مبلغ هر قسط",
   "numberOfInstallments": "تعداد اقساط",
-  "@numberOfInstallments": {
-    "description": "Loan editor: length of the repayment plan"
-  },
   "paidInstallments": "اقساط پرداخت‌شده",
-  "@paidInstallments": {
-    "description": "Loan detail: installments already settled"
-  },
-  "remainingInstallments": "اقساط باقیمانده",
-  "@remainingInstallments": {
-    "description": "Loan detail: installments still to pay"
-  },
+  "remainingInstallments": "اقساط باقی‌مانده",
   "installmentsPaidOf": "{paid} از {total} پرداخت شده",
-  "@installmentsPaidOf": {
-    "description": "Loan detail: installment counter",
-    "placeholders": {
-      "paid": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "finalPayment": "آخرین قسط",
-  "@finalPayment": {
-    "description": "Loan detail: date of the last installment"
-  },
-  "paymentDueDate": "تاریخ سررسید پرداخت",
-  "@paymentDueDate": {
-    "description": "Loan detail: the day of the month a payment falls due"
-  },
+  "finalPayment": "قسط آخر",
+  "paymentDueDate": "تاریخ سررسید",
   "dueOnDayOfMonth": "روز {day} هر ماه",
-  "@dueOnDayOfMonth": {
-    "description": "Loan detail: recurring due day",
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "loanStatus": "وضعیت",
-  "@loanStatus": {
-    "description": "Loan detail: current standing of the debt"
-  },
-  "statusActive": "جاری",
-  "@statusActive": {
-    "description": "Loan status: being repaid normally"
-  },
-  "statusDueSoon": "سررسید نزدیک",
-  "@statusDueSoon": {
-    "description": "Loan status: inside the reminder window"
-  },
-  "statusOverdue": "معوقه",
-  "@statusOverdue": {
-    "description": "Loan status: the due date has passed"
-  },
+  "statusActive": "طبق برنامه",
+  "statusDueSoon": "نزدیک سررسید",
+  "statusOverdue": "معوق",
   "statusCompleted": "تسویه‌شده",
-  "@statusCompleted": {
-    "description": "Loan status: fully repaid"
-  },
   "repaymentProgress": "پیشرفت بازپرداخت",
-  "@repaymentProgress": {
-    "description": "Loan detail: section heading for the progress bars"
-  },
-  "byAmount": "بر اساس مبلغ",
-  "@byAmount": {
-    "description": "Loan detail: progress measured in money"
-  },
-  "byInstallments": "بر اساس تعداد اقساط",
-  "@byInstallments": {
-    "description": "Loan detail: progress measured in payments"
-  },
+  "byAmount": "بر پایه مبلغ",
+  "byInstallments": "بر پایه اقساط",
   "startDate": "تاریخ شروع",
-  "@startDate": {
-    "description": "Loan editor: when repayment began"
-  },
-  "openEnded": "بدون سررسید مشخص",
-  "@openEnded": {
-    "description": "Loan detail: a revolving balance with no fixed term"
-  },
+  "openEnded": "بدون سررسید",
   "loanDetails": "جزئیات وام",
-  "@loanDetails": {
-    "description": "Title of the loan detail screen"
-  },
-  "notSet": "تنظیم‌نشده",
-  "@notSet": {
-    "description": "Shown where an optional value has not been entered"
-  },
-  "insightDebtDueTodayTitle": "امروز سررسید قسط {subject} است",
-  "@insightDebtDueTodayTitle": {
-    "description": "Notification: an installment falls due today",
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueTodayBody": "قسط {amount} شما امروز سررسید می‌شود. با یک لمس آن را به‌موقع پرداخت کنید.",
-  "@insightDebtDueTodayBody": {
-    "description": "Notification body: installment due today",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
+  "notSet": "تعیین‌نشده",
+  "insightDebtDueTodayTitle": "{subject} امروز سررسید است",
+  "insightDebtDueTodayBody": "پرداخت {amount} امروز سررسید می‌شود. یک ضربه کافی است تا به‌موقع انجام شود.",
   "remindMorningTitle": "صبح بخیر ☀️",
-  "@remindMorningTitle": {
-    "description": "Morning expense reminder title"
-  },
-  "remindMorningBody": "روز خود را با مدیریت دقیق مالی آغاز کنید. آیا هزینه‌ای از دیروز مانده که ثبت نشده باشد؟",
-  "@remindMorningBody": {
-    "description": "Morning expense reminder body"
-  },
-  "remindNoonTitle": "بررسی نیمروزی",
-  "@remindNoonTitle": {
-    "description": "Noon expense reminder title"
-  },
-  "remindNoonBody": "ناهار، قهوه یا کرایه رفت‌وآمد؟ در چند ثانیه آن را ثبت کنید.",
-  "@remindNoonBody": {
-    "description": "Noon expense reminder body"
-  },
-  "remindAfternoonTitle": "مرور سریع",
-  "@remindAfternoonTitle": {
-    "description": "Afternoon expense reminder title"
-  },
-  "remindAfternoonBody": "مخارجی را که تا الان داشته‌اید ثبت کنید تا حساب امروز دقیق بماند.",
-  "@remindAfternoonBody": {
-    "description": "Afternoon expense reminder body"
-  },
-  "remindEveningTitle": "پایان روز",
-  "@remindEveningTitle": {
-    "description": "Evening expense reminder title"
-  },
-  "remindEveningBody": "با دو دقیقه وقت، گزارش مالی امروزتان کامل می‌شود.",
-  "@remindEveningBody": {
-    "description": "Evening expense reminder body"
-  },
+  "remindMorningBody": "روز را با تسلط بر پولتان آغاز کنید. از دیروز چیزی مانده که ثبت کنید؟",
+  "remindNoonTitle": "وارسی نیم‌روز",
+  "remindNoonBody": "ناهار، قهوه، کرایه؟ در چند ثانیه ثبتش کنید.",
+  "remindAfternoonTitle": "یک جمع‌بندی کوتاه",
+  "remindAfternoonBody": "آنچه تا حالا خرج کرده‌اید را ثبت کنید تا عدد امروز دقیق بماند.",
+  "remindEveningTitle": "بستن پرونده امروز",
+  "remindEveningBody": "دو دقیقه همین حالا و حساب امروز کامل می‌شود.",
   "happyWeekendTitle": "آخر هفته خوش! 🎉",
-  "@happyWeekendTitle": {
-    "description": "Weekend greeting title"
-  },
-  "happyWeekendBody": "از تعطیلات لذت ببرید — و حواستان به هزینه‌های آخر هفته هم باشد.",
-  "@happyWeekendBody": {
-    "description": "Weekend greeting body"
-  },
-  "dailyReminders": "یادآورهای روزانه مخارج",
-  "@dailyReminders": {
-    "description": "Notification setting: the daily nudges"
-  },
-  "dailyRemindersBody": "پیام‌های کوتاه برای به‌روز نگه‌داشتن حساب هزینه‌ها",
-  "@dailyRemindersBody": {
-    "description": "Notification setting description"
-  },
-  "weekendGreeting": "پیام تبریک آخر هفته",
-  "@weekendGreeting": {
-    "description": "Notification setting: the weekend greeting"
-  },
-  "weekendGreetingBody": "پیام آغاز تعطیلات آخر هفته",
-  "@weekendGreetingBody": {
-    "description": "Notification setting description"
-  },
+  "happyWeekendBody": "خوش بگذرد — و حواستان به خرج آخر هفته هم باشد.",
+  "dailyReminders": "یادآوری روزانه هزینه‌ها",
+  "dailyRemindersBody": "تلنگرهای ملایم تا هزینه‌ها به‌روز بماند",
+  "weekendGreeting": "سلام آخر هفته",
+  "weekendGreetingBody": "یک سلام دوستانه در آغاز آخر هفته",
   "reminderTimesSection": "زمان‌های یادآوری",
-  "@reminderTimesSection": {
-    "description": "Section heading for the four daily slots"
-  },
   "slotMorning": "صبح",
-  "@slotMorning": {
-    "description": "Daily reminder slot"
-  },
   "slotNoon": "ظهر",
-  "@slotNoon": {
-    "description": "Daily reminder slot"
-  },
   "slotAfternoon": "بعدازظهر",
-  "@slotAfternoon": {
-    "description": "Daily reminder slot"
-  },
   "slotEvening": "شب",
-  "@slotEvening": {
-    "description": "Daily reminder slot"
-  },
   "everyDay": "هر روز",
-  "@everyDay": {
-    "description": "How often a repeating notification arrives"
-  },
   "financialReport": "گزارش مالی",
-  "@financialReport": {
-    "description": "Title of the exported PDF"
-  },
   "preparedFor": "تهیه‌شده برای",
-  "@preparedFor": {
-    "description": "PDF cover: whose report this is"
-  },
-  "generatedOn": "تاریخ گزارش",
-  "@generatedOn": {
-    "description": "PDF cover: the date the report was produced"
-  },
-  "reportDisclaimer": "تولیدشده توسط RainyPenny بر اساس سوابق حساب شما.",
-  "@reportDisclaimer": {
-    "description": "PDF footer note"
-  },
+  "generatedOn": "تاریخ تهیه",
+  "reportDisclaimer": "RainyPenny این را از روی رکوردهای خود شما ساخته است.",
   "pageOf": "صفحه {page} از {total}",
-  "@pageOf": {
-    "description": "PDF footer page number",
-    "placeholders": {
-      "page": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
   "overview": "نمای کلی",
-  "@overview": {
-    "description": "PDF section: the headline totals"
-  },
   "description": "شرح",
-  "@description": {
-    "description": "Table column heading"
-  },
   "totalIncome": "کل درآمد",
-  "@totalIncome": {
-    "description": "Summary table row"
-  },
-  "totalExpenses": "کل هزینه‌ها",
-  "@totalExpenses": {
-    "description": "Summary table row"
-  },
+  "totalExpenses": "کل هزینه",
   "totalSaved": "کل پس‌انداز",
-  "@totalSaved": {
-    "description": "Summary table row"
-  },
-  "shareOfTotal": "سهم از کل",
-  "@shareOfTotal": {
-    "description": "Table column: this category's share of all spending"
-  },
+  "shareOfTotal": "سهم",
   "used": "مصرف‌شده",
-  "@used": {
-    "description": "Table column: percentage of a budget consumed"
-  },
   "goal": "هدف",
-  "@goal": {
-    "description": "Table column heading for a savings goal"
-  },
   "targetDate": "تاریخ هدف",
-  "@targetDate": {
-    "description": "Table column heading"
-  },
   "progress": "پیشرفت",
-  "@progress": {
-    "description": "Table column heading"
-  },
   "paidOffShort": "پرداخت‌شده",
-  "@paidOffShort": {
-    "description": "Table column: percentage of a debt repaid"
-  },
   "transactions": "تراکنش‌ها",
-  "@transactions": {
-    "description": "PDF section listing individual entries"
-  },
-  "andMoreTransactions": "{count, plural, =1{و ۱ تراکنش دیگر} other{و {count} تراکنش دیگر}}",
-  "@andMoreTransactions": {
-    "description": "PDF note when the transaction table is truncated",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "andMoreTransactions": "{count, plural, one{و {count} تراکنش دیگر} other{و {count} تراکنش دیگر}}",
   "exportPdf": "خروجی PDF",
-  "@exportPdf": {
-    "description": "Button that produces the report"
-  },
-  "sharePdf": "اشتراک‌گذاری گزارش",
-  "@sharePdf": {
-    "description": "Button that opens the share sheet"
-  },
+  "sharePdf": "هم‌رسانی گزارش",
   "preparingReport": "در حال آماده‌سازی گزارش…",
-  "@preparingReport": {
-    "description": "Progress message while the PDF builds"
-  },
   "reportReady": "گزارش آماده است",
-  "@reportReady": {
-    "description": "Confirmation once the PDF is produced"
-  },
-  "reportFailed": "خطا در ایجاد گزارش",
-  "@reportFailed": {
-    "description": "Error message when export fails"
-  },
-  "categories": "دسته‌بندی‌ها",
-  "@categories": {
-    "description": "Title of the category management screen"
-  },
-  "categoriesIntro": "دسته‌بندی‌های اختصاصی خود را بسازید تا درآمدها و هزینه‌ها را مطابق سلیقه خود ثبت کنید.",
-  "@categoriesIntro": {
-    "description": "Explains what the screen is for"
-  },
-  "expenseCategories": "دسته‌بندی‌های هزینه",
-  "@expenseCategories": {
-    "description": "Section heading"
-  },
-  "incomeCategories": "دسته‌بندی‌های درآمد",
-  "@incomeCategories": {
-    "description": "Section heading"
-  },
-  "newCategory": "دسته‌بندی جدید",
-  "@newCategory": {
-    "description": "Title of the create form"
-  },
-  "editCategory": "ویرایش دسته‌بندی",
-  "@editCategory": {
-    "description": "Title of the edit form"
-  },
+  "reportFailed": "گزارش ساخته نشد",
+  "categories": "دسته‌ها",
+  "categoriesIntro": "دسته‌های خودتان را بسازید تا درآمد و هزینه دقیقاً همان‌طور که در ذهن دارید مرتب شود.",
+  "expenseCategories": "دسته‌های هزینه",
+  "incomeCategories": "دسته‌های درآمد",
+  "newCategory": "دسته تازه",
+  "editCategory": "ویرایش دسته",
   "categoryName": "نام",
-  "@categoryName": {
-    "description": "Category form field label"
-  },
-  "categoryNameHint": "مثلاً حیوانات خانگی",
-  "@categoryNameHint": {
-    "description": "Category name placeholder"
-  },
-  "icon": "آیکون",
-  "@icon": {
-    "description": "Category form field label"
-  },
-  "categorySaved": "دسته‌بندی ذخیره شد",
-  "@categorySaved": {
-    "description": "Confirmation"
-  },
-  "categoryDeleted": "دسته‌بندی حذف شد",
-  "@categoryDeleted": {
-    "description": "Confirmation"
-  },
-  "deleteCategory": "حذف این دسته‌بندی؟",
-  "@deleteCategory": {
-    "description": "Delete confirmation title"
-  },
-  "deleteCategoryBody": "دسته‌بندی «{name}» از لیست دسته‌های شما حذف خواهد شد.",
-  "@deleteCategoryBody": {
-    "description": "Delete confirmation body",
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "categoryInUse": "{count, plural, =1{۱ رکورد هنوز از این دسته‌بندی استفاده می‌کند} other{{count} رکورد هنوز از این دسته‌بندی استفاده می‌کنند}}",
-  "@categoryInUse": {
-    "description": "Explains why a category cannot be deleted",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "noCategoriesYet": "هنوز موردی اضافه نشده است.",
-  "@noCategoriesYet": {
-    "description": "Empty group in the category list"
-  },
+  "categoryNameHint": "مثلاً حیوان خانگی",
+  "icon": "نماد",
+  "categorySaved": "دسته ذخیره شد",
+  "categoryDeleted": "دسته حذف شد",
+  "deleteCategory": "این دسته حذف شود؟",
+  "deleteCategoryBody": "{name} از دسته‌های شما حذف می‌شود.",
+  "categoryInUse": "{count, plural, one{{count} رکورد هنوز از این دسته استفاده می‌کند} other{{count} رکورد هنوز از این دسته استفاده می‌کنند}}",
+  "noCategoriesYet": "اینجا هنوز چیزی نیست.",
   "builtIn": "پیش‌فرض",
-  "@builtIn": {
-    "description": "Marks a shared, read-only category"
-  },
-  "manageCategories": "مدیریت دسته‌بندی‌ها",
-  "@manageCategories": {
-    "description": "Settings row that opens the category screen"
-  },
+  "manageCategories": "مدیریت دسته‌ها",
   "expense": "هزینه",
-  "@expense": {
-    "description": "Singular label for an outgoing transaction"
-  },
-  "languageNote": "زبان‌های فارسی، عربی، اردو و عبری تمام محیط برنامه از جمله نمودارها و گزارش‌های PDF را به حالت راست‌به‌چپ تغییر می‌دهند.",
-  "@languageNote": {
-    "description": "Note under the language picker explaining RTL support"
-  },
+  "languageNote": "عربی، اردو، فارسی و عبری کل رابط کاربری را راست‌به‌چپ می‌کنند — از جمله نمودارها و گزارش‌های PDF.",
   "next": "بعدی",
-  "back": "قبلی",
-  "skip": "رد شدن",
+  "back": "بازگشت",
+  "skip": "رد کردن",
   "continueLabel": "ادامه",
-  "@continueLabel": {
-    "description": "Primary action that advances a multi-step flow. Named with a suffix because \"continue\" is a Dart keyword."
-  },
   "selected": "انتخاب‌شده",
-  "passwordRequired": "رمز عبور خود را وارد کنید",
-  "newPasswordLabel": "رمز عبور جدید",
-  "confirmPasswordLabel": "تکرار رمز عبور",
-  "passwordsDoNotMatch": "هر دو رمز عبور باید یکسان باشند",
-  "showPassword": "نمایش رمز عبور",
-  "hidePassword": "مخفی کردن رمز عبور",
-  "savePassword": "ذخیره رمز عبور",
-  "backToSignIn": "بازگشت به صفحه ورود",
-  "alreadyHaveAccount": "قبلاً حساب کاربری ساخته‌ام",
-  "getStarted": "شروع کنید",
-  "acceptTerms": "شرایط استفاده از خدمات و سیاست حفظ حریم خصوصی را می‌پذیرم",
-  "acceptTermsRequired": "برای ادامه لطفاً شرایط را بپذیرید",
-  "passwordStrengthTooShort": "بسیار کوتاه",
+  "passwordRequired": "گذرواژه‌تان را وارد کنید",
+  "newPasswordLabel": "گذرواژه تازه",
+  "confirmPasswordLabel": "تکرار گذرواژه",
+  "passwordsDoNotMatch": "هر دو گذرواژه باید یکی باشند",
+  "showPassword": "نمایش گذرواژه",
+  "hidePassword": "پنهان کردن گذرواژه",
+  "savePassword": "ذخیره گذرواژه",
+  "backToSignIn": "بازگشت به ورود",
+  "alreadyHaveAccount": "از قبل حساب دارم",
+  "getStarted": "شروع کنیم",
+  "acceptTerms": "با شرایط خدمات و سیاست حریم خصوصی موافقم",
+  "acceptTermsRequired": "برای ادامه موافقت کنید",
+  "passwordStrengthTooShort": "خیلی کوتاه",
   "passwordStrengthWeak": "ضعیف",
   "passwordStrengthFair": "متوسط",
   "passwordStrengthGood": "خوب",
   "passwordStrengthStrong": "قوی",
-  "passwordAdvice": "یک عبارت طولانی و قابل‌به‌خاطرسپاری بسیار بهتر از یک رمز کوتاه با نمادهای پیچیده است. از رمزی که در جای دیگری استفاده کرده‌اید پرهیز کنید.",
-  "authInvalidCredentials": "ایمیل یا رمز عبور اشتباه است",
-  "authEmailNotConfirmed": "لطفاً قبل از ورود، ایمیل خود را تأیید کنید",
+  "passwordAdvice": "عبارتی بلند که به یاد می‌سپارید بهتر از گذرواژه‌ای کوتاه پر از نماد است. چیزی را که جای دیگری به کار می‌برید انتخاب نکنید.",
+  "authInvalidCredentials": "این ایمیل و گذرواژه با هیچ حسابی نمی‌خواند",
+  "authEmailNotConfirmed": "پیش از ورود، نشانی ایمیل‌تان را تأیید کنید",
   "authEmailAlreadyRegistered": "حسابی با این ایمیل از قبل وجود دارد",
-  "authWeakPassword": "رمز عبور طولانی‌تری انتخاب کنید",
-  "authRateLimited": "تلاش‌های بیش از حد مجاز. لطفاً چند دقیقه بعد امتحان کنید",
-  "authNetworkError": "عدم برقراری ارتباط. اتصال اینترنت خود را بررسی کنید",
-  "authGenericError": "خطایی رخ داد. لطفاً دوباره تلاش کنید",
-  "confirmEmailTitle": "ایمیل خود را بررسی کنید",
-  "confirmEmailBody": "پیوند تأیید به {email} ارسال شد. آن را باز کنید تا حساب شما تکمیل شود.",
-  "@confirmEmailBody": {
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
-  "resendConfirmation": "ارسال مجدد ایمیل تأیید",
-  "confirmationResent": "ایمیل تأیید مجدداً ارسال شد",
-  "forgotPasswordTitle": "بازیابی رمز عبور",
-  "forgotPasswordSubtitle": "ایمیلی را که با آن ثبت‌نام کرده‌اید وارد کنید تا پیوند تغییر رمز عبور را بفرستیم.",
-  "sendResetLink": "ارسال پیوند بازیابی",
-  "resetLinkSentTitle": "پیوند بازنشانی ارسال شد",
-  "resetLinkSentBody": "اگر حسابی با ایمیل {email} وجود داشته باشد، پیوند بازیابی برای آن ارسال شده است.",
-  "@resetLinkSentBody": {
-    "description": "Deliberately conditional: confirming whether an address is registered would let anyone enumerate the app users.",
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
-  "resetLinkSentHint": "این پیوند تا یک ساعت معتبر است. در صورت دریافت نشدن، پوشه هرزنامه (Spam) را بررسی کنید.",
-  "tryAnotherEmail": "استفاده از ایمیل دیگر",
-  "resetPasswordTitle": "انتخاب رمز عبور جدید",
-  "resetPasswordSubtitle": "رمزی را انتخاب کنید که قبلاً برای این حساب استفاده نکرده‌اید.",
-  "passwordChangedTitle": "رمز عبور به‌روز شد",
-  "passwordChangedBody": "رمز عبور جدید با موفقیت ذخیره شد. وارد حساب شدید و آماده استفاده هستید.",
-  "demoModeHint": "نسخه نمایشی — بدون نیاز به حساب کاربری",
-  "demoModeFill": "تکمیل آزمایشی",
-  "welcomeTrackTitle": "مسیر حرکت پول‌هایتان را ببینید",
-  "welcomeTrackBody": "درآمدها و مخارج را ثبت کنید. RainyPenny آن‌ها را به تصویری واضح و خوانا تبدیل می‌کند.",
-  "welcomeBudgetTitle": "سقف‌های ماندگار تعیین کنید",
-  "welcomeBudgetBody": "برای هر بخش از هزینه‌هایتان سقفی ماهانه تعیین کنید و قبل از رد شدن از آن مطلع شوید، نه بعد از آن.",
-  "welcomeGoalsTitle": "برای آنچه ارزش دارد پس‌انداز کنید",
-  "welcomeGoalsBody": "هدفی نام‌گذاری کنید، مبلغش را مشخص کنید و رشد آن را ببینید. وقتی مسیر را ببینید، پس‌انداز آسان‌تر می‌شود.",
-  "welcomePrivacyTitle": "پول و اطلاعات شما، متعلق به شماست",
-  "welcomePrivacyBody": "ارقام و داده‌ها تنها متعلق به شما هستند. هیچ داده‌ای فروخته نمی‌شود و با کسی به اشتراک گذاشته نخواهد شد.",
-  "stepOf": "مرحله {step} از {total}",
-  "@stepOf": {
-    "placeholders": {
-      "step": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "onboardingNameTitle": "شما را چه بنامیم؟",
-  "onboardingNameBody": "ما از آن تنها برای خوش‌آمدگویی به شما استفاده می‌کنیم و جای دیگری استفاده نمی‌شود.",
-  "onboardingNameHint": "نام کوچک کافیست. بعداً می‌توانید آن را تغییر دهید.",
-  "onboardingCurrencyTitle": "واحد پول شما چیست؟",
-  "onboardingCurrencyBody": "تمام مبالغ برنامه با این واحد پولی نشان داده می‌شوند. این انتخاب باعث تبدیل مبالغ نمی‌شود.",
-  "onboardingCurrencySearch": "جستجوی همه ارزها",
-  "onboardingAppearanceTitle": "ظاهر برنامه را شخصی کنید",
-  "onboardingAppearanceBody": "یک ظاهر را انتخاب کنید. با هر انتخاب محیط برنامه عوض می‌شود و هر زمان می‌توانید آن را تغییر دهید.",
-  "onboardingNotificationsTitle": "همیشه در جریان باشید",
-  "onboardingNotificationsBody": "یک یادآوری آرام و به‌موقع چیزی است که این کار را به یک عادت ماندگار تبدیل می‌کند.",
-  "onboardingNotifyReminders": "یادآوری ملایم برای ثبت هزینه‌های روزمره",
-  "onboardingNotifyBudget": "هشدار زودهنگام قبل از اتمام بودجه",
-  "onboardingNotifySummary": "گزارش هفتگی از مسیر هزینه‌ها",
-  "onboardingNotifyEnable": "فعال‌سازی اعلان‌ها",
-  "onboardingNotifyDone": "تنظیمات اعلان‌ها ذخیره شد",
-  "onboardingNotifyLater": "هر زمان که مایل باشید می‌توانید این موارد را در تنظیمات تغییر دهید.",
-  "onboardingReadyTitle": "همه چیز آماده است",
-  "onboardingReadyTitleNamed": "همه چیز آماده است، {name}",
-  "@onboardingReadyTitleNamed": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "onboardingReadyBody": "راه‌اندازی به پایان رسید. مایلید یک تور سریع از نحوه کار برنامه داشته باشیم؟",
-  "onboardingTakeTour": "راهنمایی‌ام کن",
-  "onboardingGoToApp": "رفتن به محیط برنامه",
-  "onboardingTourLater": "الان نه؟ راهنما همیشه در بخش تنظیمات در دسترس شماست.",
-  "beginnersGuide": "راهنمای مبتدیان",
+  "authWeakPassword": "گذرواژه بلندتری انتخاب کنید",
+  "authRateLimited": "تلاش‌های بیش از حد. چند دقیقه دیگر دوباره امتحان کنید",
+  "authNetworkError": "اتصالی نیست. شبکه را بررسی و دوباره تلاش کنید",
+  "authGenericError": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید",
+  "confirmEmailTitle": "ایمیل‌تان را ببینید",
+  "confirmEmailBody": "پیوند تأیید را به {email} فرستادیم. برای کامل کردن حساب، آن را باز کنید.",
+  "resendConfirmation": "ارسال دوباره ایمیل تأیید",
+  "confirmationResent": "ایمیل تأیید فرستاده شد",
+  "forgotPasswordTitle": "بازنشانی گذرواژه",
+  "forgotPasswordSubtitle": "ایمیلی را که با آن ثبت‌نام کرده‌اید وارد کنید تا پیوند انتخاب گذرواژه تازه را برایتان بفرستیم.",
+  "sendResetLink": "ارسال پیوند بازنشانی",
+  "resetLinkSentTitle": "پیوند فرستاده شد",
+  "resetLinkSentBody": "اگر {email} حسابی داشته باشد، پیوند بازنشانی در راه است.",
+  "resetLinkSentHint": "پیوند یک ساعت اعتبار دارد. اگر نرسید، پیش از درخواست دوباره، پوشه هرزنامه را ببینید.",
+  "tryAnotherEmail": "ایمیل دیگری به کار ببرید",
+  "resetPasswordTitle": "گذرواژه تازه‌ای انتخاب کنید",
+  "resetPasswordSubtitle": "چیزی را برگزینید که پیش‌تر روی این حساب به کار نبرده‌اید.",
+  "passwordChangedTitle": "گذرواژه به‌روزرسانی شد",
+  "passwordChangedBody": "گذرواژه تازه‌تان ذخیره شد. وارد شده‌اید و همه‌چیز آماده است.",
+  "demoModeHint": "نسخه نمایشی — نیازی به حساب نیست",
+  "demoModeFill": "پر کن",
+  "welcomeTrackTitle": "ببینید پولتان کجا می‌رود",
+  "welcomeTrackBody": "آنچه می‌آید و آنچه می‌رود را ثبت کنید. RainyPenny آن را به تصویری تبدیل می‌کند که واقعاً خوانده می‌شود.",
+  "welcomeBudgetTitle": "مرزهایی که دوام می‌آورند",
+  "welcomeBudgetBody": "برای هر بخش از خرجتان سقفی ماهانه بگذارید و پیش از رد شدن از آن باخبر شوید، نه پس از آن.",
+  "welcomeGoalsTitle": "برای آنچه مهم است پس‌انداز کنید",
+  "welcomeGoalsBody": "به هدفی نام بدهید، مبلغی تعیین کنید و پر شدنش را تماشا کنید. صندوق روز مبادا وقتی دیده شود آسان‌تر ساخته می‌شود.",
+  "welcomePrivacyTitle": "پول شما از آنِ شما می‌ماند",
+  "welcomePrivacyBody": "عددهای شما فقط مال خودتان است. چیزی فروخته و با کسی به اشتراک گذاشته نمی‌شود.",
+  "stepOf": "گام {step} از {total}",
+  "onboardingNameTitle": "شما را چه صدا کنیم؟",
+  "onboardingNameBody": "فقط برای سلام گفتن به کار می‌رود، جای دیگری نه.",
+  "onboardingNameHint": "نام کوچک کافی است. بعداً می‌توانید تغییرش دهید.",
+  "onboardingCurrencyTitle": "از چه واحد پولی استفاده می‌کنید؟",
+  "onboardingCurrencyBody": "همه مبالغ برنامه با این واحد نشان داده می‌شوند. انتخاب آن چیزی را تبدیل نمی‌کند.",
+  "onboardingCurrencySearch": "جست‌وجو در همه واحدهای پول",
+  "onboardingAppearanceTitle": "به سلیقه خودتان درآورید",
+  "onboardingAppearanceBody": "ظاهری برگزینید. با هر لمس همه‌چیز عوض می‌شود و هر وقت خواستید می‌توانید برگردید.",
+  "onboardingNotificationsTitle": "از اوضاع باخبر بمانید",
+  "onboardingNotificationsBody": "یک تلنگر آرام در لحظه درست، همان چیزی است که این کار را به عادت تبدیل می‌کند.",
+  "onboardingNotifyReminders": "یادآوری ملایم برای ثبت آنچه خرج کرده‌اید",
+  "onboardingNotifyBudget": "خبر دادن پیش از آنکه بودجه‌ای تمام شود",
+  "onboardingNotifySummary": "خلاصه هفتگی از اینکه پولتان کجا رفت",
+  "onboardingNotifyEnable": "روشن کردن اعلان‌ها",
+  "onboardingNotifyDone": "تنظیمات اعلان ذخیره شد",
+  "onboardingNotifyLater": "همه اینها را هر وقت خواستید در تنظیمات تغییر می‌دهید.",
+  "onboardingReadyTitle": "همه‌چیز آماده است",
+  "onboardingReadyTitleNamed": "همه‌چیز آماده است، {name}",
+  "onboardingReadyBody": "راه‌اندازی تمام شد. مایل‌اید نگاهی سریع به شیوه کار بیندازیم؟",
+  "onboardingTakeTour": "نشانم بده",
+  "onboardingGoToApp": "برو به برنامه",
+  "onboardingTourLater": "الان نه؟ راهنما در تنظیمات می‌ماند، هر وقت خواستید.",
+  "beginnersGuide": "راهنمای تازه‌واردها",
   "guideFinish": "پایان",
   "chapterOf": "فصل {number} از {total}",
-  "@chapterOf": {
-    "placeholders": {
-      "number": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
   "guideOpenScreen": "باز کردن {screen}",
-  "@guideOpenScreen": {
-    "placeholders": {
-      "screen": {
-        "type": "String"
-      }
-    }
-  },
-  "guideDashboardTitle": "پیشخوان شما",
-  "guideDashboardBody": "همه چیز از اینجا شروع می‌شود. کارت بالای صفحه مانده حساب شماست؛ زیر آن ورودی و خروجی دوره و سپس هزینه‌ها، بودجه‌ها و اهداف قرار دارند.",
-  "guideDashboardTip1": "صفحه را به پایین بکشید تا همه موارد به‌یک‌باره به‌روزرسانی شوند.",
-  "guideDashboardTip2": "برای رفتن به لیست، روی کارت درآمد یا هزینه ضربه بزنید.",
-  "guideDashboardTip3": "نمودارها و بینش‌ها بلافاصله پس از ثبت هر تراکنش به‌روز می‌شوند.",
-  "guideAddTitle": "ثبت تراکنش‌ها",
-  "guideAddBody": "دکمه وسط نوار پایین شروع همه چیز است. یک منوی کاربردی باز می‌شود: هزینه، درآمد، بدهی، بودجه یا هدف پس‌انداز.",
-  "guideAddTip1": "برای ثبت درآمد یا هزینه دکمه مرکزی را لمس کنید.",
-  "guideAddTip2": "با نگه داشتن دکمه مستقیم به صفحه ثبت هزینه جدید می‌روید.",
-  "guideAddTip3": "همیشه یک دسته‌بندی انتخاب کنید — این کار عملکرد صحیح نمودارها و بودجه را تضمین می‌کند.",
-  "guideCategoriesTitle": "دسته‌بندی‌ها",
-  "guideCategoriesBody": "هزینه‌ها از طریق دسته‌ها گروه‌بندی می‌شوند. دسته‌های پیش‌فرض برنامه اکثر نیازها را برطرف می‌کنند و می‌توانید نام آن‌ها را تغییر دهید یا دسته جدید بسازید.",
-  "guideCategoriesTip1": "از مسیر تنظیمات > مدیریت دسته‌بندی‌ها می‌توانید دسته‌ها را تغییر دهید.",
-  "guideCategoriesTip2": "موارد بدون دسته به دسته‌بندی «سایر» منتقل می‌شوند تا گزارش‌ها شفاف بمانند.",
+  "guideDashboardTitle": "داشبورد شما",
+  "guideDashboardBody": "همه‌چیز از اینجا آغاز می‌شود. کارت بالا نشان می‌دهد چقدر برایتان مانده؛ زیر آن، آنچه در این دوره آمده و رفته، سپس خرج، بودجه‌ها و هدف‌هایتان.",
+  "guideDashboardTip1": "برای تازه‌سازی همه‌چیز، صفحه را پایین بکشید.",
+  "guideDashboardTip2": "برای رفتن مستقیم به آن فهرست، روی کارت درآمد یا هزینه بزنید.",
+  "guideDashboardTip3": "همین که چیزی ثبت کنید، حلقه‌ها و نکته‌ها به‌روز می‌شوند.",
+  "guideAddTitle": "ثبت پول",
+  "guideAddBody": "دکمه میان نوار پایین، نقطه شروع همه‌چیز است. منویی کوتاه باز می‌کند: هزینه، درآمد، بدهی، بودجه یا هدف پس‌انداز.",
+  "guideAddTip1": "برای ثبت ورود یا خروج پول، دکمه میانی را بزنید.",
+  "guideAddTip2": "نگهش دارید تا منو رد شود و مستقیم به هزینه تازه بروید.",
+  "guideAddTip3": "همیشه دسته‌ای انتخاب کنید — نمودارها و بودجه‌ها بر همین استوارند.",
+  "guideCategoriesTitle": "دسته‌ها",
+  "guideCategoriesBody": "دسته‌ها همان شیوه گروه‌بندی خرج هستند. آنچه با برنامه می‌آید برای بیشتر مردم کافی است و می‌توانید نامشان را عوض کنید یا دسته خودتان را بسازید.",
+  "guideCategoriesTip1": "تنظیمات، سپس مدیریت دسته‌ها، برای تغییر یا افزودن.",
+  "guideCategoriesTip2": "هر چیزی بی‌دسته بماند به «سایر» می‌رود تا نمودارها صادق بمانند.",
   "guideBudgetTitle": "بودجه‌ها",
-  "guideBudgetBody": "بودجه سقف ماهیانه برای یک دسته مشخص است. نوار آن با خرج کردن پر شده و با نزدیک شدن به سقف رنگش عوض می‌شود تا قبل از اتمام باخبر شوید.",
-  "guideBudgetTip1": "با دو یا سه دسته شروع کنید، نه همه آن‌ها به‌طور همزمان.",
-  "guideBudgetTip2": "سقف را کمی بیشتر از هزینه معمول بگذارید، سپس آن را محدودتر کنید.",
-  "guideBudgetTip3": "هشدارهای بودجه را روشن بگذارید تا برنامه پیش از تمام شدن به شما اطلاع دهد.",
-  "guideSavingsTitle": "اهداف پس‌انداز",
-  "guideSavingsBody": "هدف را نام‌گذاری کنید، مبلغ و تاریخ را مشخص کنید و برنامه سهم ماهانه لازم برای رسیدن به آن را محاسبه می‌کند.",
-  "guideSavingsTip1": "پایبندی به هدفی مشخص بسیار آسان‌تر از نیت مبهم پس‌انداز است.",
-  "guideSavingsTip2": "دستیابی به چند هدف کوچک‌تر معمولاً موفق‌تر از یک هدف بسیار بزرگ است.",
+  "guideBudgetBody": "بودجه سقف ماهانه یک دسته است. نوار با خرج کردن پر می‌شود و نزدیک سقف رنگ عوض می‌کند، پس پیش از رد شدن باخبر می‌شوید.",
+  "guideBudgetTip1": "با دو سه دسته شروع کنید، نه همه با هم.",
+  "guideBudgetTip2": "سقف را کمی بالاتر از خرج معمولتان بگذارید و بعد تنگ‌ترش کنید.",
+  "guideBudgetTip3": "هشدار بودجه را روشن بگذارید تا برنامه هنگام کم شدن خبرتان کند.",
+  "guideSavingsTitle": "هدف‌های پس‌انداز",
+  "guideSavingsBody": "نام آنچه برایش پس‌انداز می‌کنید را بنویسید، مبلغ و تاریخ بگذارید و برنامه حساب می‌کند ماهی چقدر باید کنار بگذارید.",
+  "guideSavingsTip1": "هدفی که نام دارد آسان‌تر از نیتی مبهم برای پس‌انداز دوام می‌آورد.",
+  "guideSavingsTip2": "چند هدف کوچک بیشتر از یک هدف بزرگ به سرانجام می‌رسند.",
   "guideLoansTitle": "بدهی‌ها و وام‌ها",
-  "guideLoansBody": "بدهی، هزینه اقساط و موعد پرداخت بعدی را ثبت کنید. همه پرداخت‌ها با مبلغ باقیمانده در یک فهرست منظم گردآوری می‌شوند.",
-  "guideLoansTip1": "تاریخ سررسید را ثبت کنید تا یادآورهای پرداخت به موقع شما را مطلع کنند.",
-  "guideLoansTip2": "بدهی معوق تا زمان پرداخت، با رنگ قرمز روی پیشخوان مشخص می‌ماند.",
+  "guideLoansBody": "ثبت کنید چقدر بدهکارید، چقدر خرج برمی‌دارد و قسط بعدی کی سررسید می‌شود. هر چه در حال بازپرداختش هستید با مانده‌اش در یک فهرست است.",
+  "guideLoansTip1": "تاریخ سررسید را بگذارید تا یادآوری‌های پرداخت به جای شما پیگیرش باشند.",
+  "guideLoansTip2": "بدهی معوق تا پرداخت شدن، روی داشبورد قرمز می‌ماند.",
   "guideReportsTitle": "گزارش‌ها",
-  "guideReportsBody": "نمای عمیق‌تر: مقایسه درآمد با هزینه، هزینه‌ها بر پایه دسته، نحوه رعایت بودجه و سهمی از درآمد که پس‌انداز کرده‌اید.",
-  "guideReportsTip1": "در بالای صفحه بین بازه‌های هفتگی، ماهانه و فصلی جابجا شوید.",
-  "guideReportsTip2": "خروجی PDF بگیرید یا آن را به اشتراک بگذارید — به زبان و جهت خوانش خودتان تولید می‌شود.",
+  "guideReportsBody": "نگاهی ژرف‌تر: درآمد در برابر هزینه، خرج بر پایه دسته، اینکه بودجه‌ها چقدر دوام آوردند و چه سهمی از درآمدتان نزد خودتان ماند.",
+  "guideReportsTip1": "در بالای صفحه میان هفته، ماه و فصل جابه‌جا شوید.",
+  "guideReportsTip2": "PDF بگیرید یا هم‌رسانی کنید — به زبان و جهت نوشتار خودتان درمی‌آید.",
   "guideSettingsTitle": "تنظیمات",
-  "guideSettingsBody": "زبان، واحد پول، رنگ‌ها و هشدارها در اینجا قرار دارند و هیچ‌کدام قفل نیستند — هر زمان مایل بودید تغییرشان دهید.",
-  "guideSettingsTip1": "پشتیبانی از چهل زبان همراه با چیدمان قرینه برای زبان‌های راست‌به‌چپ.",
-  "guideSettingsTip2": "انتخاب کنید کدام هشدارها و در چه بازه زمانی به دستتان برسند.",
-  "guideSettingsTip3": "ساعات سکوت همه اعلان‌ها را تا صبح به تأخیر می‌اندازد.",
-  "guideHabitTitle": "پایبند باشید",
-  "guideHabitBody": "برنامه تنها به اندازه داده‌هایی که وارد می‌کنید مفید است. یک دقیقه در روز از یک ساعت در ماه مؤثرتر است و بعد از دو هفته اعداد پیام روشنی برایتان خواهند داشت.",
-  "guideHabitTip1": "هزینه‌ها را همان لحظه ثبت کنید، نه در انتهای هفته.",
-  "guideHabitTip2": "روزی یک بار نگاهی به پیشخوان بیندازید. ده ثانیه کافی است.",
-  "guideHabitTip3": "این راهنما در بخش تنظیمات در دسترس است — هر زمان مایل بودید برگردید.",
-  "appearance": "ظاهر برنامه",
-  "themeCaption": "روشن، تاریک، یا هماهنگ با تم گوشی شما.",
+  "guideSettingsBody": "زبان، واحد پول، رنگ‌ها و هشدارها همه اینجا هستند و هیچ‌کدام با راه‌اندازی اولیه قفل نمی‌شوند — هر وقت خواستید عوضشان کنید.",
+  "guideSettingsTip1": "چهل زبان، و برای زبان‌های راست‌به‌چپ کل چیدمان آینه می‌شود.",
+  "guideSettingsTip2": "انتخاب کنید چه هشدارهایی می‌خواهید و در چه ساعت‌هایی برسند.",
+  "guideSettingsTip3": "ساعت‌های سکوت همه‌چیز را تا صبح نگه می‌دارد.",
+  "guideHabitTitle": "ماندگارش کنید",
+  "guideHabitBody": "این برنامه به اندازه‌ای خوب است که در آن بگذارید. روزی یک دقیقه بهتر از ماهی یک ساعت است و پس از دو هفته عددها چیزی به شما می‌گویند.",
+  "guideHabitTip1": "خرج را همان لحظه ثبت کنید، نه آخر هفته.",
+  "guideHabitTip2": "روزی یک بار نگاهی به داشبورد بیندازید. ده ثانیه بس است.",
+  "guideHabitTip3": "این راهنما در تنظیمات می‌ماند — هر وقت خواستید برگردید.",
+  "appearance": "ظاهر",
+  "themeCaption": "روشن، تیره، یا هر چه گوشی‌تان انجام می‌دهد.",
   "accentColor": "رنگ شاخص",
-  "accentColorCaption": "رنگ دکمه‌ها، نشانگرها و نمودارها را مشخص می‌کند.",
-  "accentSemanticsNote": "درآمد و هزینه در هر پوسته‌ای رنگ ویژه خود را حفظ می‌کنند تا با تغییر تم، مفهوم اعداد دگرگون نشود.",
+  "accentColorCaption": "به دکمه‌ها، برجسته‌ها و نمودارها رنگ می‌دهد.",
+  "accentSemanticsNote": "پول ورودی و خروجی در هر پوسته رنگ خودشان را نگه می‌دارند، پس هیچ عددی تنها به خاطر تغییر رنگ شاخص معنایش عوض نمی‌شود.",
   "accentTeal": "فیروزه‌ای",
   "accentGreen": "سبز",
-  "accentSky": "آسمانی",
+  "accentSky": "آبی آسمانی",
   "accentBlue": "آبی",
   "accentIndigo": "نیلی",
   "accentViolet": "بنفش",
   "accentPink": "صورتی",
-  "accentCrimson": "زرشکی",
+  "accentCrimson": "قرمز تند",
   "accentOrange": "نارنجی",
-  "accentSlate": "سربی",
-  "searchLanguages": "جستجوی زبان‌ها",
+  "accentSlate": "خاکستری تیره",
+  "searchLanguages": "جست‌وجوی زبان",
   "suggestedLanguages": "پیشنهادی",
   "allLanguages": "همه زبان‌ها",
-  "noLanguagesFound": "زبانی یافت نشد",
-  "noLanguagesFoundMessage": "نام زبان را به انگلیسی یا کد دورقمی آن را امتحان کنید.",
+  "noLanguagesFound": "زبانی پیدا نشد",
+  "noLanguagesFoundMessage": "نام انگلیسی یا کد دوحرفی را امتحان کنید.",
   "rightToLeft": "راست به چپ",
-  "replayGuide": "نمایش دوباره راهنما",
-  "replaySetup": "اجرای مجدد راه‌اندازی اولیه",
-  "replaySetupBody": "پرسش‌های اولیه را دوباره پاسخ دهید. هیچ‌کدام از اطلاعات ثبت‌شده حذف نخواهند شد.",
+  "replayGuide": "دیدن دوباره راهنما",
+  "replaySetup": "اجرای دوباره راه‌اندازی",
+  "replaySetupBody": "دوباره از پرسش‌های آغازین بگذرید. هیچ‌یک از آنچه ثبت کرده‌اید پاک نمی‌شود.",
   "rateTitle": "از RainyPenny راضی هستید؟",
-  "rateBody": "مدتی است که از برنامه استفاده می‌کنید. ثبت یک امتیاز تنها یک لحظه زمان می‌برد و به دیگران در پیدا کردن برنامه کمک می‌کند.",
-  "rateAction": "امتیاز دادن به برنامه",
+  "rateBody": "مدتی است که از آن استفاده می‌کنید. امتیازدادن لحظه‌ای طول می‌کشد و به دیگران کمک می‌کند برنامه را پیدا کنند.",
+  "rateAction": "امتیاز به برنامه",
   "rateLater": "شاید بعداً",
-  "rateNever": "خیر، ممنون",
-  "rateThanks": "با تشکر از شما",
-
+  "rateNever": "نه، ممنون",
+  "rateThanks": "سپاسگزاریم",
   "monthlySalary": "حقوق ماهانه",
   "remainingAmount": "باقیمانده",
   "carriedForward": "انتقال از دوره قبل",
@@ -1145,22 +502,8 @@
   "paydayDescription": "روزی که حقوق دریافت می‌کنید. ماه مالی شما از این روز تا روز قبل از واریز بعدی محاسبه می‌شود.",
   "paydayUpdated": "روز حقوق به‌روزرسانی شد",
   "paydayDayOfMonth": "روز {day} ماه",
-  "@paydayDayOfMonth": {
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "paydayShortMonthNote": "در ماه‌های کوتاه‌تر، دوره از آخرین روز ماه آغاز می‌شود.",
   "daysLeftInCycle": "{count, plural, =0{آخرین روز دوره} =1{۱ روز تا روز حقوق} other{{count} روز تا روز حقوق}}",
-  "@daysLeftInCycle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "nextPayday": "روز حقوق بعدی",
   "spentSoFar": "خرج‌شده تا این لحظه",
   "dailyAllowance": "سقف مجاز مخارج روزانه",
@@ -1170,17 +513,6 @@
   "noSalaryRecorded": "هنوز حقوقی ثبت نشده است",
   "addSalaryAction": "ثبت حقوق",
   "cycleOf": "{start} تا {end}",
-  "@cycleOf": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "healthExcellent": "عالی",
   "healthGood": "خوب",
   "healthFair": "متوسط",
@@ -1194,67 +526,21 @@
   "factorDebtLoad": "بار بدهی‌ها",
   "factorSpendingTrend": "روند مخارج",
   "factorKept": "{percent}٪ ذخیره‌شده",
-  "@factorKept": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorUsed": "{percent}٪ مصرف‌شده",
-  "@factorUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorOfIncome": "{percent}٪ از درآمد",
-  "@factorOfIncome": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorTrendUp": "{percent}٪ افزایش",
-  "@factorTrendUp": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorTrendDown": "{percent}٪ کاهش",
-  "@factorTrendDown": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "howScoreWorks": "نحوه محاسبه این امتیاز",
   "healthScoreExplainer": "امتیاز شما ترکیبی از چهار عامل است: چه میزان از درآمدتان را حفظ می‌کنید، چقدر به بودجه پایبندید، چه درصدی از درآمد صرف بدهی می‌شود و آیا هزینه‌هایتان روندی افزایشی دارند یا کاهشی.",
   "scoreWeightLabel": "{percent}٪ از امتیاز کل",
-  "@scoreWeightLabel": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "viewHealthDetails": "مشاهده جزئیات",
-
   "saveChanges": "ذخیره تغییرات",
   "profileUpdated": "پروفایل به‌روزرسانی شد",
   "changePhoto": "تغییر تصویر",
   "removePhoto": "حذف تصویر",
   "personalInformationIntro": "نام و تصویر شما در بخش‌های مختلف برنامه نمایش داده می‌شود. ایمیل شما همان نشانی ورود به حساب است.",
-  "nameRequired": "نام خود را وارد کنید",
   "emailNotEditable": "برای تغییر نشانی ایمیل ورود، با پشتیبانی تماس بگیرید.",
-
   "pressBackAgainToExit": "برای خروج، دوباره دکمه بازگشت را بزنید",
-
   "categoryHousing": "مسکن",
   "categoryFood": "خوراک و رستوران",
   "categoryTransport": "حمل و نقل",
@@ -1308,112 +594,33 @@
   "categoryCashback": "بازگشت وجه",
   "categoryRefund": "استرداد وجه",
   "categoryRentalIncome": "درآمد اجاره",
-
   "addCategory": "دسته‌بندی جدید",
   "filterByCategory": "فیلتر بر اساس دسته‌بندی",
   "allCategories": "همه دسته‌بندی‌ها",
   "clearFilters": "پاک کردن فیلترها",
   "spentInCategory": "{category}  ·  {amount}",
-  "@spentInCategory": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "allTime": "کل دوره",
   "customRange": "سفارشی",
   "selectDateRange": "انتخاب بازه زمانی",
   "rangeApplied": "نمایش بازه {start} تا {end}",
-  "@rangeApplied": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "loans": "وام‌ها",
   "debts": "بدهی‌ها",
   "noLoansTitle": "وامی وجود ندارد",
   "noLoansBody": "در حال حاضر هیچ وام فعالی ندارید.",
-
   "emptyHealthTitle": "هنوز امتیاز مالی ثبت نشده است",
-  "@emptyHealthTitle": {
-    "description": "Title shown when there is not enough data to compute a health score"
-  },
   "emptyHealthDescription": "برای محاسبه دقیق امتیاز سلامت مالی، به مقداری فعالیت و ثبت تراکنش نیاز داریم.",
-  "@emptyHealthDescription": {
-    "description": "Explainer message shown in the empty state on the financial health screen"
-  },
   "emptyHealthAddTransactions": "تراکنش‌های درآمد یا هزینه را وارد کنید",
-  "@emptyHealthAddTransactions": {
-    "description": "Checklist item prompting user to add transactions"
-  },
   "emptyHealthSetBudgets": "بودجه‌های ماهانه خود را مشخص کنید",
-  "@emptyHealthSetBudgets": {
-    "description": "Checklist item prompting user to set budgets"
-  },
   "emptyHealthTrackLoans": "وام‌ها یا بدهی‌ها را پیگیری کنید (اختیاری)",
-  "@emptyHealthTrackLoans": {
-    "description": "Checklist item prompting user to track loans"
-  },
   "emptyHealthCardSubtitle": "برای محاسبه امتیاز و دریافت تحلیل‌ها، تراکنش‌ها را ثبت کنید.",
-  "@emptyHealthCardSubtitle": {
-    "description": "Subtitle shown on the dashboard health card when no data is available"
-  },
-  
   "smartBudgetSplit": "تقسیم هوشمند بودجه",
-  "@smartBudgetSplit": {
-    "description": "Title for smart salary budget split sheet"
-  },
   "smartBudgetSplitSubtitle": "حقوق ماهانه خود را وارد کنید تا سقف‌های پیشنهادی محاسبه شوند",
-  "@smartBudgetSplitSubtitle": {
-    "description": "Subtitle explaining how salary budget split works"
-  },
   "monthlyNetSalary": "حقوق خالص ماهانه",
-  "@monthlyNetSalary": {
-    "description": "Label for monthly net salary input field"
-  },
   "categoryAllocations": "تخصیص سهم دسته‌بندی‌ها",
-  "@categoryAllocations": {
-    "description": "Header for recommended category allocations list"
-  },
   "totalBudgeted": "مجموع: {amount}",
-  "@totalBudgeted": {
-    "description": "Total amount budgeted across categories",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "applyAllBudgets": "اعمال تمام بودجه‌ها",
-  "@applyAllBudgets": {
-    "description": "Button label to apply all recommended category limits"
-  },
   "applyingBudgets": "در حال اعمال بودجه‌ها...",
-  "@applyingBudgets": {
-    "description": "Loading state label while applying budgets"
-  },
   "budgetsCreatedSuccess": "{count, plural, =1{بودجه ۱ دسته‌بندی ایجاد شد.} other{بودجه {count} دسته‌بندی ایجاد شد.}}",
-  "@budgetsCreatedSuccess": {
-    "description": "Success snackbar message when budgets are created",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "failedToSaveBudgets": "ذخیره بودجه‌ها انجام نشد.",
-  "@failedToSaveBudgets": {
-    "description": "Error message when saving budgets fails"
-  },
   "recommendedBudget": "بودجه پیشنهادی"
 }

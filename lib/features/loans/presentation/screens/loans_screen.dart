@@ -412,7 +412,7 @@ class _LoanCard extends ConsumerWidget {
           Row(
             children: [
               _LoanFigure(
-                label: l10n.remaining,
+                label: l10n.dueAmount,
                 value: money.format(loan.remaining, decimals: false),
                 emphasised: true,
               ),

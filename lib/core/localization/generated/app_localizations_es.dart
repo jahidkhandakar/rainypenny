@@ -133,9 +133,9 @@ class AppL10nEs extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count transacciones',
-      one: '1 transacción',
-      zero: 'Sin transacciones',
+      other: '$count movimientos',
+      one: '1 movimiento',
+      zero: 'Sin movimientos',
     );
     return '$_temp0';
   }
@@ -174,7 +174,7 @@ class AppL10nEs extends AppL10n {
   String get amountRequired => 'Introduce un importe mayor que cero';
 
   @override
-  String get titleRequired => 'Ponle un nombre a esta transacción';
+  String get titleRequired => 'Ponle un nombre a este movimiento';
 
   @override
   String get descriptionLabel => 'Descripción';
@@ -199,7 +199,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String budgetUsed(int percent) {
-    return '$percent% utilizado';
+    return '$percent% usado';
   }
 
   @override
@@ -237,8 +237,8 @@ class AppL10nEs extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count meses restantes',
-      one: '1 mes restante',
+      other: 'quedan $count meses',
+      one: 'queda 1 mes',
     );
     return '$_temp0';
   }
@@ -414,16 +414,16 @@ class AppL10nEs extends AppL10n {
   String get create => 'Crear';
 
   @override
-  String get nameRequired => 'Introduce tu nombre';
+  String get nameRequired => 'Ponle un nombre';
 
   @override
   String get amountAboveZero => 'Introduce un importe mayor que cero';
 
   @override
-  String get editTransaction => 'Editar transacción';
+  String get editTransaction => 'Editar movimiento';
 
   @override
-  String get deleteTransaction => '¿Eliminar transacción?';
+  String get deleteTransaction => '¿Eliminar movimiento?';
 
   @override
   String deleteTransactionBody(String title) {
@@ -431,10 +431,10 @@ class AppL10nEs extends AppL10n {
   }
 
   @override
-  String get transactionDeleted => 'Transacción eliminada';
+  String get transactionDeleted => 'Movimiento eliminado';
 
   @override
-  String get transactionUpdated => 'Transacción actualizada';
+  String get transactionUpdated => 'Movimiento actualizado';
 
   @override
   String get newBudget => 'Nuevo presupuesto';
@@ -450,7 +450,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String deleteBudgetBody(String category) {
-    return 'El presupuesto de $category se eliminará. Tus transacciones no se verán afectadas.';
+    return 'Se eliminará el presupuesto de $category. Tus movimientos no se verán afectados.';
   }
 
   @override
@@ -468,7 +468,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get noBudgetsBody =>
-      'Establece un límite mensual para una categoría para empezar a controlarla.';
+      'Fija un límite mensual en una categoría para empezar a seguirla.';
 
   @override
   String get newGoal => 'Nueva meta';
@@ -480,7 +480,7 @@ class AppL10nEs extends AppL10n {
   String get goalName => 'Nombre de la meta';
 
   @override
-  String get goalNameHint => 'p. ej., Fondo de emergencia';
+  String get goalNameHint => 'p. ej. Fondo de emergencia';
 
   @override
   String get targetAmount => 'Importe objetivo';
@@ -507,7 +507,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Establece un objetivo y RainyPenny seguirá tu progreso.';
+      'Fija un objetivo y RainyPenny seguirá tu progreso.';
 
   @override
   String get fundsAdded => 'Fondos añadidos';
@@ -522,13 +522,13 @@ class AppL10nEs extends AppL10n {
   String get debtName => 'Nombre';
 
   @override
-  String get debtNameHint => 'p. ej., Préstamo del coche';
+  String get debtNameHint => 'p. ej. Préstamo del coche';
 
   @override
   String get lender => 'Prestamista';
 
   @override
-  String get lenderHint => 'p. ej., Banco Meridian';
+  String get lenderHint => 'p. ej. Banco Meridian';
 
   @override
   String get originalAmount => 'Importe original';
@@ -540,7 +540,7 @@ class AppL10nEs extends AppL10n {
   String get remainingBalance => 'Saldo pendiente';
 
   @override
-  String get interestRatePercent => 'Tasa de interés (%)';
+  String get interestRatePercent => 'Tipo de interés (%)';
 
   @override
   String get kindLoan => 'Préstamo';
@@ -573,21 +573,21 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get noDebtsBody =>
-      'Añade un préstamo o una tarjeta de crédito para controlar tus pagos.';
+      'Añade un préstamo o una tarjeta para no perder de vista los pagos.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return 'Presupuesto de $subject excedido';
+    return 'Presupuesto de $subject superado';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return 'Has superado en $amount el presupuesto de $subject para este período.';
+    return 'Has superado en $amount tu presupuesto de $subject en este periodo.';
   }
 
   @override
   String insightBudgetApproachingTitle(String subject) {
-    return '$subject está cerca de su límite';
+    return '$subject se acerca a su límite';
   }
 
   @override
@@ -596,44 +596,44 @@ class AppL10nEs extends AppL10n {
     int percent,
     String amount,
   ) {
-    return 'Tu presupuesto de $subject está utilizado al $percent%, con $amount restantes.';
+    return 'Tu presupuesto de $subject está al $percent%, quedan $amount.';
   }
 
   @override
-  String get insightOverIncomeTitle => 'Los gastos superan los ingresos';
+  String get insightOverIncomeTitle => 'Gastas más de lo que ingresas';
 
   @override
   String get insightOverIncomeBody =>
-      'Has gastado más de lo que has ganado en este período. Revisa tus categorías con mayores gastos para volver a equilibrar tus finanzas.';
+      'Este periodo has gastado más de lo que has ingresado. Revisa tus categorías más grandes para reequilibrar.';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return 'Los gastos de $subject han aumentado';
+    return 'El gasto en $subject ha subido';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return 'Tus gastos de $subject son un $percent% superiores a los del período anterior.';
+    return 'Tu gasto en $subject es un $percent% mayor que el periodo anterior.';
   }
 
   @override
-  String get insightTrendDownTitle => 'Los gastos están disminuyendo';
+  String get insightTrendDownTitle => 'El gasto está bajando';
 
   @override
   String insightTrendDownBody(int percent) {
-    return 'Los gastos generales son un $percent% inferiores a los del período anterior.';
+    return 'El gasto total es un $percent% menor que el periodo anterior.';
   }
 
   @override
-  String get insightTrendUpTitle => 'Los gastos están aumentando';
+  String get insightTrendUpTitle => 'El gasto está subiendo';
 
   @override
   String insightTrendUpBody(int percent) {
-    return 'Los gastos generales son un $percent% superiores a los del período anterior.';
+    return 'El gasto total es un $percent% mayor que el periodo anterior.';
   }
 
   @override
-  String get insightSavingsStrongTitle => 'Buen nivel de ahorro este período';
+  String get insightSavingsStrongTitle => 'Buen ahorro este periodo';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
@@ -646,12 +646,12 @@ class AppL10nEs extends AppL10n {
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return 'Has conservado el $percent% de tus ingresos este período. Intenta llegar al $target%.';
+    return 'Este periodo has conservado el $percent% de tus ingresos. Apunta al $target%.';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return '$subject está casi financiada';
+    return '$subject está casi completa';
   }
 
   @override
@@ -661,7 +661,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return 'En camino hacia $subject';
+    return 'Vas bien con $subject';
   }
 
   @override
@@ -688,12 +688,12 @@ class AppL10nEs extends AppL10n {
       other: '$days días',
       one: '1 día',
     );
-    return 'El pago de $amount de $subject lleva $_temp0 de retraso.';
+    return 'El pago de $subject de $amount lleva $_temp0 de retraso.';
   }
 
   @override
   String insightDebtDueTitle(String subject) {
-    return 'Próximo pago de $subject';
+    return 'Se acerca el pago de $subject';
   }
 
   @override
@@ -705,7 +705,7 @@ class AppL10nEs extends AppL10n {
       one: 'mañana',
       zero: 'hoy',
     );
-    return 'Vencen $amount $_temp0.';
+    return '$amount vence $_temp0.';
   }
 
   @override
@@ -715,16 +715,16 @@ class AppL10nEs extends AppL10n {
   String get signUp => 'Crear cuenta';
 
   @override
-  String get signInSubtitle => 'Te damos la bienvenida. Tu dinero te espera.';
+  String get signInSubtitle => 'Bienvenido de nuevo. Tu dinero te espera.';
 
   @override
-  String get signUpSubtitle => 'Unos pocos datos y tendrás todo listo.';
+  String get signUpSubtitle => 'Unos datos y ya estás listo.';
 
   @override
   String get emailLabel => 'Correo electrónico';
 
   @override
-  String get emailHint => '[tu@email.com](mailto:tu@email.com)';
+  String get emailHint => 'tu@email.com';
 
   @override
   String get passwordLabel => 'Contraseña';
@@ -739,20 +739,19 @@ class AppL10nEs extends AppL10n {
   String get fullNameHint => 'Alex Morgan';
 
   @override
-  String get forgotPassword => '¿Has olvidado tu contraseña?';
+  String get forgotPassword => '¿Olvidaste tu contraseña?';
 
   @override
-  String get resetSent =>
-      'Revisa tu bandeja de entrada para encontrar el enlace de restablecimiento';
+  String get resetSent => 'Revisa tu correo para el enlace de restablecimiento';
 
   @override
-  String get noAccountYet => '¿Eres nuevo aquí?';
+  String get noAccountYet => '¿Eres nuevo?';
 
   @override
-  String get haveAccount => '¿Ya tienes una cuenta?';
+  String get haveAccount => '¿Ya tienes cuenta?';
 
   @override
-  String get emailInvalid => 'Introduce una dirección de correo válida';
+  String get emailInvalid => 'Introduce un correo válido';
 
   @override
   String get passwordTooShort => 'Usa al menos 8 caracteres';
@@ -762,30 +761,30 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get signOutBody =>
-      'Tendrás que volver a iniciar sesión para ver tus finanzas.';
+      'Tendrás que iniciar sesión de nuevo para ver tus finanzas.';
 
   @override
   String get dataSource => 'Fuente de datos';
 
   @override
-  String get insightWeeklySummaryTitle => 'Resumen de tu semana';
+  String get insightWeeklySummaryTitle => 'Tu semana en resumen';
 
   @override
   String get insightWeeklySummaryBody =>
-      'Descubre en qué se fue tu dinero esta semana y cómo van tus presupuestos.';
+      'Mira a dónde ha ido tu dinero esta semana y cómo van tus presupuestos.';
 
   @override
   String get notificationSettings => 'Notificaciones';
 
   @override
-  String get alertsSection => 'Alertas';
+  String get alertsSection => 'Avisos';
 
   @override
-  String get budgetAlerts => 'Alertas de presupuesto';
+  String get budgetAlerts => 'Avisos de presupuesto';
 
   @override
   String get budgetAlertsBody =>
-      'Cuando un presupuesto se acerque o supere su límite';
+      'Cuando un presupuesto se acerca a su límite o lo supera';
 
   @override
   String get paymentReminders => 'Recordatorios de pago';
@@ -794,20 +793,19 @@ class AppL10nEs extends AppL10n {
   String get paymentRemindersBody => 'Unos días antes de que venza un pago';
 
   @override
-  String get savingsUpdates => 'Actualizaciones de ahorro';
+  String get savingsUpdates => 'Novedades de ahorro';
 
   @override
-  String get savingsUpdatesBody => 'Progreso de tus metas';
+  String get savingsUpdatesBody => 'Tu progreso hacia las metas';
 
   @override
   String get weeklySummaryLabel => 'Resumen semanal';
 
   @override
-  String get weeklySummaryBody =>
-      'Un resumen de la semana que acaba de terminar';
+  String get weeklySummaryBody => 'Un resumen de la semana que termina';
 
   @override
-  String get scheduleSection => 'Horarios';
+  String get scheduleSection => 'Horario';
 
   @override
   String get reminderTime => 'Hora del recordatorio';
@@ -828,7 +826,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Permite las notificaciones para que RainyPenny pueda avisarte antes de que un presupuesto o un pago se descontrole.';
+      'Permite las notificaciones para que RainyPenny pueda avisarte antes de que se te escape un presupuesto o un pago.';
 
   @override
   String get allowNotifications => 'Permitir notificaciones';
@@ -838,18 +836,18 @@ class AppL10nEs extends AppL10n {
       'Las notificaciones están bloqueadas. Puedes activarlas en los ajustes de tu dispositivo.';
 
   @override
-  String get upcomingAlerts => 'Programadas';
+  String get upcomingAlerts => 'Programados';
 
   @override
-  String get noScheduledAlerts => 'No hay nada programado';
+  String get noScheduledAlerts => 'Ahora mismo no hay nada programado';
 
   @override
   String get noScheduledAlertsBody =>
-      'Las alertas aparecerán aquí cuando tus presupuestos y pagos se acerquen a sus límites o fechas.';
+      'Los avisos aparecerán aquí a medida que tus presupuestos y pagos se acerquen a sus límites.';
 
   @override
   String scheduledFor(String date) {
-    return 'Programada para $date';
+    return 'Programado para $date';
   }
 
   @override
@@ -882,13 +880,13 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get longPressHint =>
-      'Consejo: mantén pulsado + para registrar un gasto directamente';
+      'Consejo: mantén pulsado + para registrar un gasto al instante';
 
   @override
   String get searchCurrencies => 'Buscar monedas';
 
   @override
-  String get noCurrenciesFound => 'No se encontraron monedas';
+  String get noCurrenciesFound => 'No se han encontrado monedas';
 
   @override
   String get noCurrenciesFoundMessage =>
@@ -913,7 +911,7 @@ class AppL10nEs extends AppL10n {
   String get paidInstallments => 'Cuotas pagadas';
 
   @override
-  String get remainingInstallments => 'Cuotas restantes';
+  String get remainingInstallments => 'Cuotas pendientes';
 
   @override
   String installmentsPaidOf(int paid, int total) {
@@ -921,21 +919,21 @@ class AppL10nEs extends AppL10n {
   }
 
   @override
-  String get finalPayment => 'Pago final';
+  String get finalPayment => 'Último pago';
 
   @override
-  String get paymentDueDate => 'Fecha de vencimiento del pago';
+  String get paymentDueDate => 'Fecha de vencimiento';
 
   @override
   String dueOnDayOfMonth(int day) {
-    return 'Día $day de cada mes';
+    return 'El día $day de cada mes';
   }
 
   @override
   String get loanStatus => 'Estado';
 
   @override
-  String get statusActive => 'En buen camino';
+  String get statusActive => 'Al día';
 
   @override
   String get statusDueSoon => 'Vence pronto';
@@ -947,7 +945,7 @@ class AppL10nEs extends AppL10n {
   String get statusCompleted => 'Pagado';
 
   @override
-  String get repaymentProgress => 'Progreso del pago';
+  String get repaymentProgress => 'Progreso de la amortización';
 
   @override
   String get byAmount => 'Por importe';
@@ -965,7 +963,7 @@ class AppL10nEs extends AppL10n {
   String get loanDetails => 'Detalles del préstamo';
 
   @override
-  String get notSet => 'No establecido';
+  String get notSet => 'Sin definir';
 
   @override
   String insightDebtDueTodayTitle(String subject) {
@@ -974,7 +972,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return 'Tu pago de $amount vence hoy. Un toque rápido lo mantiene al día.';
+    return 'Tu pago de $amount vence hoy. Un toque y queda al día.';
   }
 
   @override
@@ -982,52 +980,51 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get remindMorningBody =>
-      'Empieza el día con tus finanzas bajo control. ¿Hay algo que añadir de ayer?';
+      'Empieza el día con tus cuentas al día. ¿Queda algo de ayer por anotar?';
 
   @override
-  String get remindNoonTitle => 'Control del mediodía';
+  String get remindNoonTitle => 'Repaso de mediodía';
 
   @override
   String get remindNoonBody =>
-      '¿Almuerzo, café, transporte? Añádelo en unos segundos.';
+      '¿Comida, café, un billete? Anótalo en segundos.';
 
   @override
-  String get remindAfternoonTitle => 'Puesta al día rápida';
+  String get remindAfternoonTitle => 'Repaso rápido';
 
   @override
   String get remindAfternoonBody =>
-      'Registra lo que has gastado hasta ahora y mantén el día actualizado.';
+      'Anota lo que llevas gastado y mantén el día al día.';
 
   @override
   String get remindEveningTitle => 'Cerrando el día';
 
   @override
   String get remindEveningBody =>
-      'Dos minutos ahora y los números de hoy estarán completos.';
+      'Dos minutos ahora y las cifras de hoy quedan completas.';
 
   @override
   String get happyWeekendTitle => '¡Feliz fin de semana! 🎉';
 
   @override
   String get happyWeekendBody =>
-      'Disfrútalo y no pierdas de vista los gastos del fin de semana.';
+      'Disfrútalo y no pierdas de vista el gasto del fin de semana.';
 
   @override
   String get dailyReminders => 'Recordatorios diarios de gastos';
 
   @override
   String get dailyRemindersBody =>
-      'Recordatorios amables para mantener tus gastos al día';
+      'Avisos amables para mantener tus gastos al día';
 
   @override
-  String get weekendGreeting => 'Saludo de fin de semana';
+  String get weekendGreeting => 'Feliz fin de semana';
 
   @override
-  String get weekendGreetingBody =>
-      'Un saludo amable al comenzar el fin de semana';
+  String get weekendGreetingBody => 'Un saludo al empezar tu fin de semana';
 
   @override
-  String get reminderTimesSection => 'Horarios de los recordatorios';
+  String get reminderTimesSection => 'Horas de recordatorio';
 
   @override
   String get slotMorning => 'Mañana';
@@ -1042,7 +1039,7 @@ class AppL10nEs extends AppL10n {
   String get slotEvening => 'Noche';
 
   @override
-  String get everyDay => 'Todos los días';
+  String get everyDay => 'Cada día';
 
   @override
   String get financialReport => 'Informe financiero';
@@ -1078,10 +1075,10 @@ class AppL10nEs extends AppL10n {
   String get totalSaved => 'Total ahorrado';
 
   @override
-  String get shareOfTotal => 'Proporción';
+  String get shareOfTotal => 'Porcentaje';
 
   @override
-  String get used => 'Utilizado';
+  String get used => 'Usado';
 
   @override
   String get goal => 'Meta';
@@ -1096,15 +1093,15 @@ class AppL10nEs extends AppL10n {
   String get paidOffShort => 'Pagado';
 
   @override
-  String get transactions => 'Transacciones';
+  String get transactions => 'Movimientos';
 
   @override
   String andMoreTransactions(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'y $count transacciones más',
-      one: 'y 1 transacción más',
+      other: 'y $count movimientos más',
+      one: 'y 1 movimiento más',
     );
     return '$_temp0';
   }
@@ -1122,20 +1119,20 @@ class AppL10nEs extends AppL10n {
   String get reportReady => 'Informe listo';
 
   @override
-  String get reportFailed => 'No se pudo crear el informe';
+  String get reportFailed => 'No se ha podido crear el informe';
 
   @override
   String get categories => 'Categorías';
 
   @override
   String get categoriesIntro =>
-      'Añade tus propias categorías para clasificar ingresos y gastos exactamente como tú los entiendes.';
+      'Crea tus propias categorías para clasificar ingresos y gastos tal y como tú los piensas.';
 
   @override
-  String get expenseCategories => 'Categorías de gastos';
+  String get expenseCategories => 'Categorías de gasto';
 
   @override
-  String get incomeCategories => 'Categorías de ingresos';
+  String get incomeCategories => 'Categorías de ingreso';
 
   @override
   String get newCategory => 'Nueva categoría';
@@ -1147,7 +1144,7 @@ class AppL10nEs extends AppL10n {
   String get categoryName => 'Nombre';
 
   @override
-  String get categoryNameHint => 'p. ej., Cuidado de mascotas';
+  String get categoryNameHint => 'p. ej. Mascotas';
 
   @override
   String get icon => 'Icono';
@@ -1171,17 +1168,17 @@ class AppL10nEs extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count registros todavía usan esta categoría',
-      one: '1 registro todavía usa esta categoría',
+      other: '$count registros siguen usando esta categoría',
+      one: '1 registro sigue usando esta categoría',
     );
     return '$_temp0';
   }
 
   @override
-  String get noCategoriesYet => 'Aún no hay nada aquí.';
+  String get noCategoriesYet => 'Aquí todavía no hay nada.';
 
   @override
-  String get builtIn => 'Integrada';
+  String get builtIn => 'Predefinida';
 
   @override
   String get manageCategories => 'Gestionar categorías';
@@ -1191,7 +1188,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get languageNote =>
-      'El árabe, urdu, persa y hebreo cambian toda la interfaz a derecha a izquierda, incluidos los gráficos y los informes PDF.';
+      'El árabe, el urdu, el persa y el hebreo cambian toda la interfaz a derecha-izquierda, incluidos los gráficos y los informes PDF.';
 
   @override
   String get next => 'Siguiente';
@@ -1218,7 +1215,7 @@ class AppL10nEs extends AppL10n {
   String get confirmPasswordLabel => 'Confirmar contraseña';
 
   @override
-  String get passwordsDoNotMatch => 'Ambas contraseñas deben coincidir';
+  String get passwordsDoNotMatch => 'Las dos contraseñas deben coincidir';
 
   @override
   String get showPassword => 'Mostrar contraseña';
@@ -1230,7 +1227,7 @@ class AppL10nEs extends AppL10n {
   String get savePassword => 'Guardar contraseña';
 
   @override
-  String get backToSignIn => 'Volver a iniciar sesión';
+  String get backToSignIn => 'Volver al inicio de sesión';
 
   @override
   String get alreadyHaveAccount => 'Ya tengo una cuenta';
@@ -1240,7 +1237,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get acceptTerms =>
-      'Acepto los Términos del servicio y la Política de privacidad';
+      'Acepto las Condiciones del servicio y la Política de privacidad';
 
   @override
   String get acceptTermsRequired => 'Acepta para continuar';
@@ -1252,7 +1249,7 @@ class AppL10nEs extends AppL10n {
   String get passwordStrengthWeak => 'Débil';
 
   @override
-  String get passwordStrengthFair => 'Regular';
+  String get passwordStrengthFair => 'Aceptable';
 
   @override
   String get passwordStrengthGood => 'Buena';
@@ -1262,11 +1259,11 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get passwordAdvice =>
-      'Una frase larga que puedas recordar es mejor que una corta llena de símbolos. Evita cualquier contraseña que ya uses en otro lugar.';
+      'Una frase larga que recuerdes vale más que una corta llena de símbolos. Evita cualquiera que ya uses en otro sitio.';
 
   @override
   String get authInvalidCredentials =>
-      'Ese correo y contraseña no coinciden con ninguna cuenta';
+      'Ese correo y esa contraseña no coinciden con ninguna cuenta';
 
   @override
   String get authEmailNotConfirmed =>
@@ -1288,7 +1285,7 @@ class AppL10nEs extends AppL10n {
       'Sin conexión. Comprueba tu red e inténtalo de nuevo';
 
   @override
-  String get authGenericError => 'Algo salió mal. Inténtalo de nuevo';
+  String get authGenericError => 'Algo ha salido mal. Inténtalo de nuevo';
 
   @override
   String get confirmEmailTitle => 'Revisa tu correo';
@@ -1299,32 +1296,32 @@ class AppL10nEs extends AppL10n {
   }
 
   @override
-  String get resendConfirmation => 'Volver a enviar el correo de confirmación';
+  String get resendConfirmation => 'Reenviar correo de confirmación';
 
   @override
   String get confirmationResent => 'Correo de confirmación enviado';
 
   @override
-  String get forgotPasswordTitle => 'Restablece tu contraseña';
+  String get forgotPasswordTitle => 'Restablecer la contraseña';
 
   @override
   String get forgotPasswordSubtitle =>
-      'Introduce el correo con el que te registraste y te enviaremos un enlace para elegir una nueva contraseña.';
+      'Escribe el correo con el que te registraste y te enviaremos un enlace para elegir una nueva contraseña.';
 
   @override
-  String get sendResetLink => 'Enviar enlace de restablecimiento';
+  String get sendResetLink => 'Enviar enlace';
 
   @override
-  String get resetLinkSentTitle => 'Enlace de restablecimiento enviado';
+  String get resetLinkSentTitle => 'Enlace enviado';
 
   @override
   String resetLinkSentBody(String email) {
-    return 'Si $email tiene una cuenta, recibirá un enlace de restablecimiento.';
+    return 'Si $email tiene una cuenta, el enlace ya va de camino.';
   }
 
   @override
   String get resetLinkSentHint =>
-      'El enlace caduca en una hora. Si no llega, revisa la carpeta de spam antes de solicitar otro.';
+      'El enlace caduca en una hora. Si no llega, mira en la carpeta de spam antes de pedir otro.';
 
   @override
   String get tryAnotherEmail => 'Usar otro correo';
@@ -1334,49 +1331,48 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get resetPasswordSubtitle =>
-      'Elige una que no hayas usado antes en esta cuenta.';
+      'Elige algo que no hayas usado antes en esta cuenta.';
 
   @override
   String get passwordChangedTitle => 'Contraseña actualizada';
 
   @override
   String get passwordChangedBody =>
-      'Tu nueva contraseña se ha guardado. Has iniciado sesión y todo está listo.';
+      'Tu nueva contraseña está guardada. Has iniciado sesión y todo listo.';
 
   @override
-  String get demoModeHint =>
-      'Versión de demostración — no necesitas una cuenta';
+  String get demoModeHint => 'Versión de demostración: no hace falta cuenta';
 
   @override
   String get demoModeFill => 'Rellenar';
 
   @override
-  String get welcomeTrackTitle => 'Descubre adónde va tu dinero';
+  String get welcomeTrackTitle => 'Mira a dónde va tu dinero';
 
   @override
   String get welcomeTrackBody =>
-      'Registra lo que entra y lo que sale. RainyPenny lo convierte en una imagen que realmente puedes entender.';
+      'Anota lo que entra y lo que sale. RainyPenny lo convierte en una imagen que de verdad se entiende.';
 
   @override
-  String get welcomeBudgetTitle => 'Establece límites que funcionen';
+  String get welcomeBudgetTitle => 'Límites que se sostienen';
 
   @override
   String get welcomeBudgetBody =>
-      'Da a cada parte de tus gastos un límite mensual y recibe un aviso antes de superarlo, no después.';
+      'Pon un techo mensual a cada parte de tu gasto y entérate antes de superarlo, no después.';
 
   @override
   String get welcomeGoalsTitle => 'Ahorra para lo que importa';
 
   @override
   String get welcomeGoalsBody =>
-      'Ponle nombre a una meta, establece un objetivo y observa cómo se completa. Un fondo para días difíciles es más fácil de construir cuando puedes verlo.';
+      'Ponle nombre a una meta, fija una cantidad y mírala crecer. Un fondo para imprevistos se construye mejor cuando se ve.';
 
   @override
   String get welcomePrivacyTitle => 'Tu dinero sigue siendo tuyo';
 
   @override
   String get welcomePrivacyBody =>
-      'Tus datos financieros son solo tuyos. No vendemos nada ni compartimos nada con nadie.';
+      'Tus cifras son solo tuyas. No se vende nada ni se comparte con nadie.';
 
   @override
   String stepOf(int step, int total) {
@@ -1388,39 +1384,39 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get onboardingNameBody =>
-      'Lo usaremos para saludarte y para nada más.';
+      'Lo usaremos para saludarte, y para nada más.';
 
   @override
   String get onboardingNameHint =>
-      'Con tu nombre de pila es suficiente. Puedes cambiarlo más adelante.';
+      'Con el nombre de pila basta. Puedes cambiarlo luego.';
 
   @override
-  String get onboardingCurrencyTitle => '¿Qué moneda utilizas?';
+  String get onboardingCurrencyTitle => '¿Qué moneda usas?';
 
   @override
   String get onboardingCurrencyBody =>
-      'Todas las cantidades de la aplicación se mostrarán en esta moneda. Elegirla no convierte nada.';
+      'Todos los importes se muestran en esta moneda. Elegirla no convierte nada.';
 
   @override
-  String get onboardingCurrencySearch => 'Buscar todas las monedas';
+  String get onboardingCurrencySearch => 'Buscar en todas las monedas';
 
   @override
-  String get onboardingAppearanceTitle => 'Hazlo tuyo';
+  String get onboardingAppearanceTitle => 'Dale tu estilo';
 
   @override
   String get onboardingAppearanceBody =>
-      'Elige un aspecto. Todo cambiará al tocarlo y podrás volver a cambiarlo cuando quieras.';
+      'Elige un aspecto. Todo cambia al tocarlo y puedes volver cuando quieras.';
 
   @override
-  String get onboardingNotificationsTitle => 'Mantente al día';
+  String get onboardingNotificationsTitle => 'No pierdas el hilo';
 
   @override
   String get onboardingNotificationsBody =>
-      'Un pequeño recordatorio en el momento adecuado es lo que convierte esto en un hábito.';
+      'Un aviso discreto en el momento justo es lo que convierte esto en un hábito.';
 
   @override
   String get onboardingNotifyReminders =>
-      'Un recordatorio amable para registrar lo que has gastado';
+      'Un recordatorio amable para anotar lo que has gastado';
 
   @override
   String get onboardingNotifyBudget =>
@@ -1428,7 +1424,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get onboardingNotifySummary =>
-      'Un resumen semanal de adónde fue tu dinero';
+      'Un resumen semanal de a dónde fue tu dinero';
 
   @override
   String get onboardingNotifyEnable => 'Activar notificaciones';
@@ -1450,17 +1446,17 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get onboardingReadyBody =>
-      'Ya has terminado la configuración. ¿Quieres hacer un recorrido rápido para ver cómo funciona todo?';
+      'La configuración está hecha. ¿Quieres un recorrido rápido por la aplicación?';
 
   @override
-  String get onboardingTakeTour => 'Enséñame cómo funciona';
+  String get onboardingTakeTour => 'Enséñamela';
 
   @override
   String get onboardingGoToApp => 'Ir a la aplicación';
 
   @override
   String get onboardingTourLater =>
-      '¿Ahora no? La guía seguirá en Ajustes cuando quieras verla.';
+      '¿Ahora no? La guía se queda en Ajustes para cuando quieras.';
 
   @override
   String get beginnersGuide => 'Guía para principiantes';
@@ -1483,7 +1479,7 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get guideDashboardBody =>
-      'Todo comienza aquí. La tarjeta superior muestra lo que te queda; debajo aparecen lo que entró y salió durante este período, seguidos de tus gastos, presupuestos y metas.';
+      'Todo empieza aquí. La tarjeta de arriba es lo que te queda; debajo, lo que entró y salió en este periodo, y luego tus gastos, presupuestos y metas.';
 
   @override
   String get guideDashboardTip1 =>
@@ -1491,52 +1487,52 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get guideDashboardTip2 =>
-      'Toca la tarjeta de ingresos o gastos para ir directamente a esa lista.';
+      'Toca la tarjeta de ingresos o gastos para ir directo a esa lista.';
 
   @override
   String get guideDashboardTip3 =>
-      'Los anillos y la información se actualizan en cuanto registras algo.';
+      'Los anillos y los análisis se actualizan en cuanto anotas algo.';
 
   @override
-  String get guideAddTitle => 'Registrar dinero';
+  String get guideAddTitle => 'Anotar dinero';
 
   @override
   String get guideAddBody =>
-      'El botón del centro de la barra es donde empieza todo. Abre un menú breve: dinero que sale, dinero que entra, una deuda, un presupuesto o una meta de ahorro.';
+      'El botón del centro de la barra es donde empieza todo. Abre un menú corto: gasto, ingreso, deuda, presupuesto o meta de ahorro.';
 
   @override
   String get guideAddTip1 =>
-      'Toca el botón central para registrar dinero que entra o sale.';
+      'Toca el botón central para anotar una entrada o una salida.';
 
   @override
   String get guideAddTip2 =>
-      'Manténlo pulsado para ir directamente a un nuevo gasto y saltarte el menú.';
+      'Mantenlo pulsado para ir directo a un gasto nuevo y saltarte el menú.';
 
   @override
   String get guideAddTip3 =>
-      'Elige siempre una categoría: eso es lo que hace que funcionen los gráficos y presupuestos.';
+      'Elige siempre una categoría: es lo que hace funcionar los gráficos y los presupuestos.';
 
   @override
   String get guideCategoriesTitle => 'Categorías';
 
   @override
   String get guideCategoriesBody =>
-      'Las categorías sirven para agrupar los gastos. Las que vienen con la aplicación cubren a la mayoría de las personas, y puedes cambiarles el nombre o añadir las tuyas.';
+      'Las categorías agrupan tus gastos. Las que trae la aplicación sirven a casi todo el mundo, y puedes renombrarlas o crear las tuyas.';
 
   @override
   String get guideCategoriesTip1 =>
-      'Ve a Ajustes y después a Gestionar categorías para cambiar o añadir una.';
+      'Ajustes y luego Gestionar categorías para cambiar o añadir una.';
 
   @override
   String get guideCategoriesTip2 =>
-      'Todo lo que quede sin categorizar irá a Otros para que los gráficos sigan siendo fieles.';
+      'Lo que quede sin categoría acaba en «Otros», para que los gráficos sigan siendo sinceros.';
 
   @override
   String get guideBudgetTitle => 'Presupuestos';
 
   @override
   String get guideBudgetBody =>
-      'Un presupuesto es un límite mensual para una categoría. La barra se llena a medida que gastas y cambia cuando te acercas al límite, para que lo sepas antes de superarlo.';
+      'Un presupuesto es un techo mensual para una categoría. La barra se llena según gastas y cambia de color al acercarse, así te enteras antes de pasarte.';
 
   @override
   String get guideBudgetTip1 =>
@@ -1544,115 +1540,115 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get guideBudgetTip2 =>
-      'Establece el límite un poco por encima de lo que sueles gastar y después ajústalo.';
+      'Pon el límite un poco por encima de lo que sueles gastar y luego ajústalo.';
 
   @override
   String get guideBudgetTip3 =>
-      'Deja activadas las alertas de presupuesto y la aplicación te avisará cuando uno esté cerca de agotarse.';
+      'Deja activados los avisos y la aplicación te advertirá cuando uno se agote.';
 
   @override
   String get guideSavingsTitle => 'Metas de ahorro';
 
   @override
   String get guideSavingsBody =>
-      'Pon nombre a aquello para lo que ahorras, establece un objetivo y una fecha, y la aplicación calcula cuánto necesitas apartar cada mes para conseguirlo.';
+      'Ponle nombre a lo que estás ahorrando, fija una cantidad y una fecha, y la aplicación calcula cuánto apartar cada mes para llegar.';
 
   @override
   String get guideSavingsTip1 =>
-      'Una meta con nombre es más fácil de mantener que una intención vaga de ahorrar.';
+      'Una meta con nombre se mantiene mejor que la intención vaga de ahorrar.';
 
   @override
   String get guideSavingsTip2 =>
-      'Varias metas pequeñas suelen completarse más que una grande.';
+      'Varias metas pequeñas se terminan más a menudo que una grande.';
 
   @override
   String get guideLoansTitle => 'Deudas y préstamos';
 
   @override
   String get guideLoansBody =>
-      'Registra lo que debes, cuánto cuesta y cuándo vence el próximo pago. Todo lo que estás pagando aparece en una sola lista con el total pendiente.';
+      'Anota lo que debes, lo que te cuesta y cuándo vence el próximo pago. Todo lo que estás pagando queda en una lista con el saldo pendiente.';
 
   @override
   String get guideLoansTip1 =>
-      'Añade la fecha de vencimiento y los recordatorios de pago se encargarán de avisarte.';
+      'Añade la fecha de vencimiento y los recordatorios se encargarán de perseguirla.';
 
   @override
   String get guideLoansTip2 =>
-      'Una deuda marcada como vencida aparece en rojo en el panel hasta que se paga.';
+      'Una deuda vencida aparece en rojo en el panel hasta que se paga.';
 
   @override
   String get guideReportsTitle => 'Informes';
 
   @override
   String get guideReportsBody =>
-      'La vista detallada: ingresos frente a gastos, gastos por categoría, cómo se comportaron tus presupuestos y qué proporción de tus ingresos conservaste.';
+      'La mirada de fondo: ingresos frente a gastos, gasto por categoría, cómo aguantaron tus presupuestos y qué parte de tus ingresos conservaste.';
 
   @override
   String get guideReportsTip1 =>
-      'Cambia entre semana, mes y trimestre en la parte superior de la pantalla.';
+      'Cambia entre semana, mes y trimestre en la parte de arriba.';
 
   @override
   String get guideReportsTip2 =>
-      'Exporta o comparte un PDF: se genera en tu propio idioma y dirección de escritura.';
+      'Exporta o comparte un PDF: sale en tu idioma y en su dirección de lectura.';
 
   @override
   String get guideSettingsTitle => 'Ajustes';
 
   @override
   String get guideSettingsBody =>
-      'El idioma, la moneda, los colores y las alertas están aquí, y ninguno queda bloqueado durante la configuración. Puedes cambiar cualquiera cuando quieras.';
+      'Idioma, moneda, colores y avisos están todos aquí, y la configuración inicial no fija ninguno: cámbialos cuando quieras.';
 
   @override
   String get guideSettingsTip1 =>
-      'Cuarenta idiomas y toda la interfaz se refleja para los que escriben de derecha a izquierda.';
+      'Cuarenta idiomas, y toda la interfaz se refleja en los que se leen de derecha a izquierda.';
 
   @override
   String get guideSettingsTip2 =>
-      'Elige qué alertas quieres y durante qué horas pueden llegar.';
+      'Elige qué avisos quieres y a qué horas pueden llegar.';
 
   @override
   String get guideSettingsTip3 =>
       'Las horas de silencio retienen todo hasta la mañana.';
 
   @override
-  String get guideHabitTitle => 'Haz que se convierta en un hábito';
+  String get guideHabitTitle => 'Que se te quede';
 
   @override
   String get guideHabitBody =>
-      'La aplicación solo es tan buena como los datos que introduces. Un minuto al día vale más que una hora una vez al mes, y después de un par de semanas los números empiezan a decirte algo.';
+      'La aplicación vale lo que le pongas dentro. Un minuto al día gana a una hora al mes, y a las dos semanas los números empiezan a decirte algo.';
 
   @override
   String get guideHabitTip1 =>
-      'Registra lo que gastas cuando sucede, no al final de la semana.';
+      'Anota lo que gastas en el momento, no al final de la semana.';
 
   @override
   String get guideHabitTip2 =>
-      'Mira el panel una vez al día. Diez segundos son suficientes.';
+      'Echa un vistazo al panel una vez al día. Diez segundos bastan.';
 
   @override
   String get guideHabitTip3 =>
-      'Esta guía permanece en Ajustes: vuelve a ella cuando quieras.';
+      'Esta guía se queda en Ajustes: vuelve cuando quieras.';
 
   @override
   String get appearance => 'Apariencia';
 
   @override
   String get themeCaption =>
-      'Claro, oscuro o como esté configurado tu teléfono.';
+      'Claro, oscuro o lo que esté haciendo tu teléfono.';
 
   @override
   String get accentColor => 'Color de acento';
 
   @override
   String get accentColorCaption =>
-      'Colorea los botones, resaltados y gráficos.';
+      'Colorea los botones, los resaltes y los gráficos.';
 
   @override
   String get accentSemanticsNote =>
-      'Los ingresos y los gastos mantienen sus propios colores en todos los temas, para que una cifra nunca cambie de significado al cambiar el color de acento.';
+      'Las entradas y las salidas conservan sus colores en todos los temas, así que una cifra nunca cambia de significado porque hayas cambiado el acento.';
 
   @override
-  String get accentTeal => 'Verde azulado';
+  String get accentTeal => 'Turquesa';
 
   @override
   String get accentGreen => 'Verde';
@@ -1691,7 +1687,7 @@ class AppL10nEs extends AppL10n {
   String get allLanguages => 'Todos los idiomas';
 
   @override
-  String get noLanguagesFound => 'No se encontraron idiomas';
+  String get noLanguagesFound => 'No se han encontrado idiomas';
 
   @override
   String get noLanguagesFoundMessage =>
@@ -1701,27 +1697,27 @@ class AppL10nEs extends AppL10n {
   String get rightToLeft => 'De derecha a izquierda';
 
   @override
-  String get replayGuide => 'Repetir la guía';
+  String get replayGuide => 'Volver a ver la guía';
 
   @override
-  String get replaySetup => 'Volver a configurar';
+  String get replaySetup => 'Repetir la configuración';
 
   @override
   String get replaySetupBody =>
-      'Vuelve a responder las preguntas iniciales. No se eliminará nada de lo que hayas registrado.';
+      'Vuelve a pasar por las preguntas iniciales. No se borra nada de lo que hayas registrado.';
 
   @override
   String get rateTitle => '¿Te gusta RainyPenny?';
 
   @override
   String get rateBody =>
-      'Llevas un tiempo manteniendo este hábito. Una valoración solo lleva un momento y ayuda a otras personas a encontrar la aplicación.';
+      'Llevas ya un tiempo con esto. Valorar la app lleva un momento y ayuda a que otras personas la encuentren.';
 
   @override
-  String get rateAction => 'Valorar la aplicación';
+  String get rateAction => 'Valorar la app';
 
   @override
-  String get rateLater => 'Quizás más tarde';
+  String get rateLater => 'Quizá más tarde';
 
   @override
   String get rateNever => 'No, gracias';
@@ -1739,20 +1735,20 @@ class AppL10nEs extends AppL10n {
   String get carriedForward => 'Arrastrado';
 
   @override
-  String get carriedForwardHint => 'Lo que sobró del ciclo anterior';
+  String get carriedForwardHint => 'Sobrante del ciclo anterior';
 
   @override
-  String get totalSpending => 'Gastos totales';
+  String get totalSpending => 'Gasto total';
 
   @override
-  String get salaryCycle => 'Ciclo salarial';
+  String get salaryCycle => 'Ciclo de salario';
 
   @override
   String get payday => 'Día de cobro';
 
   @override
   String get paydayDescription =>
-      'El día en que recibes tu salario. Tu mes financiero va desde este día hasta el día anterior al siguiente.';
+      'El día en que llega tu salario. Tu mes financiero va desde ese día hasta el día antes del siguiente.';
 
   @override
   String get paydayUpdated => 'Día de cobro actualizado';
@@ -1764,32 +1760,32 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get paydayShortMonthNote =>
-      'En los meses más cortos, el ciclo comienza en el último día en su lugar.';
+      'En los meses más cortos el ciclo empieza el último día del mes.';
 
   @override
   String daysLeftInCycle(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count días para cobrar',
-      one: '1 día para cobrar',
+      other: '$count días para el cobro',
+      one: '1 día para el cobro',
       zero: 'Último día del ciclo',
     );
     return '$_temp0';
   }
 
   @override
-  String get nextPayday => 'Próximo día de cobro';
+  String get nextPayday => 'Próximo cobro';
 
   @override
   String get spentSoFar => 'Gastado hasta ahora';
 
   @override
-  String get dailyAllowance => 'Disponible para gastar al día';
+  String get dailyAllowance => 'Gasto diario seguro';
 
   @override
   String get overspentNotice =>
-      'Has gastado más de lo que ingresó en este ciclo.';
+      'Has gastado más de lo que ingresaste en este ciclo.';
 
   @override
   String get backToThisMonth => 'Volver a este mes';
@@ -1798,10 +1794,10 @@ class AppL10nEs extends AppL10n {
   String get cycleRangeLabel => 'Ciclo';
 
   @override
-  String get noSalaryRecorded => 'Aún no se ha registrado ningún salario';
+  String get noSalaryRecorded => 'Aún no hay salario registrado';
 
   @override
-  String get addSalaryAction => 'Añadir tu salario';
+  String get addSalaryAction => 'Añade tu salario';
 
   @override
   String cycleOf(String start, String end) {
@@ -1812,29 +1808,28 @@ class AppL10nEs extends AppL10n {
   String get healthExcellent => 'Excelente';
 
   @override
-  String get healthGood => 'Buena';
+  String get healthGood => 'Bien';
 
   @override
-  String get healthFair => 'Regular';
+  String get healthFair => 'Aceptable';
 
   @override
   String get healthNeedsWork => 'Necesita mejorar';
 
   @override
   String get healthExcellentBody =>
-      'Estás ahorrando bien y manteniéndote dentro de tus presupuestos.';
+      'Estás ahorrando bien y te mantienes dentro de tus presupuestos.';
 
   @override
-  String get healthGoodBody =>
-      'Tus gastos están dentro de lo previsto en este período.';
+  String get healthGoodBody => 'Tu gasto va por buen camino este periodo.';
 
   @override
   String get healthFairBody =>
-      'Algunos presupuestos están cerca del límite. Unos pequeños cambios ayudarán.';
+      'Algunos presupuestos están al límite. Pequeños cambios ayudarán.';
 
   @override
   String get healthNeedsWorkBody =>
-      'Los gastos están superando tu plan. Empieza por tu categoría con mayor gasto.';
+      'El gasto supera tu plan. Empieza por tu categoría más grande.';
 
   @override
   String get factorSavingsRate => 'Tasa de ahorro';
@@ -1846,7 +1841,7 @@ class AppL10nEs extends AppL10n {
   String get factorDebtLoad => 'Carga de deuda';
 
   @override
-  String get factorSpendingTrend => 'Tendencia de gastos';
+  String get factorSpendingTrend => 'Tendencia del gasto';
 
   @override
   String factorKept(String percent) {
@@ -1865,20 +1860,20 @@ class AppL10nEs extends AppL10n {
 
   @override
   String factorTrendUp(String percent) {
-    return 'Sube un $percent%';
+    return 'Sube $percent%';
   }
 
   @override
   String factorTrendDown(String percent) {
-    return 'Baja un $percent%';
+    return 'Baja $percent%';
   }
 
   @override
-  String get howScoreWorks => 'Cómo funciona esta puntuación';
+  String get howScoreWorks => 'Cómo se calcula esta puntuación';
 
   @override
   String get healthScoreExplainer =>
-      'Tu puntuación combina cuatro factores: cuánto de tus ingresos conservas, qué tan bien te mantienes dentro de tus presupuestos, cuánto de tus ingresos se destina a deudas y si tus gastos están aumentando o disminuyendo.';
+      'Tu puntuación combina cuatro factores: cuánto de tus ingresos conservas, cuánto respetas tus presupuestos, qué parte de tus ingresos va a deudas, y si tu gasto sube o baja.';
 
   @override
   String scoreWeightLabel(int percent) {
@@ -1898,24 +1893,24 @@ class AppL10nEs extends AppL10n {
   String get changePhoto => 'Cambiar foto';
 
   @override
-  String get removePhoto => 'Eliminar foto';
+  String get removePhoto => 'Quitar foto';
 
   @override
   String get personalInformationIntro =>
-      'Tu nombre y foto aparecen en toda la aplicación. Tu correo electrónico es la dirección con la que inicias sesión.';
+      'Tu nombre y tu foto aparecen en toda la aplicación. Tu correo es la dirección con la que inicias sesión.';
 
   @override
   String get emailNotEditable =>
-      'Contacta con soporte para cambiar la dirección con la que inicias sesión.';
+      'Contacta con soporte para cambiar la dirección de inicio de sesión.';
 
   @override
-  String get pressBackAgainToExit => 'Pulsa atrás de nuevo para salir';
+  String get pressBackAgainToExit => 'Pulsa atrás otra vez para salir';
 
   @override
   String get categoryHousing => 'Vivienda';
 
   @override
-  String get categoryFood => 'Comida y restaurantes';
+  String get categoryFood => 'Alimentación';
 
   @override
   String get categoryTransport => 'Transporte';
@@ -1927,7 +1922,7 @@ class AppL10nEs extends AppL10n {
   String get categoryBills => 'Facturas y servicios';
 
   @override
-  String get categoryEntertainment => 'Entretenimiento';
+  String get categoryEntertainment => 'Ocio';
 
   @override
   String get categoryHealth => 'Salud y bienestar';
@@ -1942,7 +1937,7 @@ class AppL10nEs extends AppL10n {
   String get categorySalary => 'Salario';
 
   @override
-  String get categoryFreelance => 'Trabajo freelance';
+  String get categoryFreelance => 'Autónomo';
 
   @override
   String get categoryInvestments => 'Inversiones';
@@ -2088,13 +2083,13 @@ class AppL10nEs extends AppL10n {
   }
 
   @override
-  String get allTime => 'Todo el tiempo';
+  String get allTime => 'Todo el historial';
 
   @override
   String get customRange => 'Personalizado';
 
   @override
-  String get selectDateRange => 'Elegir período';
+  String get selectDateRange => 'Elegir un periodo';
 
   @override
   String rangeApplied(String start, String end) {
@@ -2174,4 +2169,10 @@ class AppL10nEs extends AppL10n {
 
   @override
   String get recommendedBudget => 'Presupuesto recomendado';
+
+  @override
+  String get due => 'Due';
+
+  @override
+  String get dueAmount => 'Due amount';
 }

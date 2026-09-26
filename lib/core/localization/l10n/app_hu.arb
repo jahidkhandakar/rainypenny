@@ -1,154 +1,91 @@
 {
   "@@locale": "hu",
   "appName": "RainyPenny",
-  "appTagline": "Tegyél félre a nehezebb napokra",
+  "appTagline": "Tegyen félre a nehezebb napokra",
   "navHome": "Kezdőlap",
-  "navTransactions": "Tranzakciók",
+  "navTransactions": "Tételek",
   "navAdd": "Hozzáadás",
-  "navReports": "Jelentések",
+  "navReports": "Kimutatások",
   "navProfile": "Profil",
-  "greetingMorning": "Jó reggelt, {name}!",
-  "@greetingMorning": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingAfternoon": "Szép napot, {name}!",
-  "@greetingAfternoon": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingEvening": "Jó estét, {name}!",
-  "@greetingEvening": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingSubtitle": "Itt van a pénzügyi áttekintésed",
+  "greetingMorning": "Jó reggelt, {name}",
+  "greetingAfternoon": "Jó napot, {name}",
+  "greetingEvening": "Jó estét, {name}",
+  "greetingSubtitle": "Így áll a pénzügyi helyzete",
   "totalBalance": "Teljes egyenleg",
   "vsLastPeriod": "az előző időszakhoz képest",
   "income": "Bevétel",
-  "expenses": "Kiadások",
+  "expenses": "Kiadás",
   "netBalance": "Nettó egyenleg",
   "lastThirtyDays": "Elmúlt 30 nap",
-  "quickActions": "Gyorsműveletek",
+  "quickActions": "Gyors műveletek",
   "addIncome": "Bevétel hozzáadása",
   "addExpense": "Kiadás hozzáadása",
-  "spendingOverview": "Költési áttekintés",
-  "recentTransactions": "Legutóbbi tranzakciók",
+  "spendingOverview": "Kiadások áttekintése",
+  "recentTransactions": "Legutóbbi tételek",
   "seeAll": "Összes megtekintése",
-  "viewAll": "Összes megtekintése",
-  "budgetProgress": "Költségkeret állása",
+  "viewAll": "Mind megjelenítése",
+  "budgetProgress": "Keretek állása",
   "savingsGoals": "Megtakarítási célok",
-  "financialInsight": "Pénzügyi betekintés",
+  "financialInsight": "Pénzügyi észrevétel",
   "financialHealth": "Pénzügyi egészség",
-  "ofTotal": "/ {total}",
-  "@ofTotal": {
-    "placeholders": {
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "searchTransactions": "Tranzakciók keresése",
+  "ofTotal": "ebből: {total}",
+  "searchTransactions": "Tételek keresése",
   "filterAll": "Összes",
   "filterIncome": "Bevétel",
-  "filterExpenses": "Kiadások",
+  "filterExpenses": "Kiadás",
   "today": "Ma",
   "yesterday": "Tegnap",
-  "noTransactionsTitle": "Nem találhatók tranzakciók",
-  "noTransactionsBody": "Próbálkozz más kereséssel vagy szűrővel a korábbi tételek megtekintéséhez.",
-  "transactionCount": "{count, plural, =0{Nincs tranzakció} =1{1 tranzakció} other{{count} tranzakció}}",
-  "@transactionCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "addTransaction": "Tranzakció hozzáadása",
+  "noTransactionsTitle": "Nincs találat",
+  "noTransactionsBody": "Próbáljon másik keresést vagy szűrőt, hogy több bejegyzést lásson.",
+  "transactionCount": "{count, plural, =0{Nincs tétel} other{{count} tétel}}",
+  "addTransaction": "Tétel hozzáadása",
   "amount": "Összeg",
   "category": "Kategória",
   "date": "Dátum",
   "note": "Megjegyzés",
-  "noteHint": "Opcionális megjegyzés",
+  "noteHint": "Megjegyzés (nem kötelező)",
   "saveIncome": "Bevétel mentése",
   "saveExpense": "Kiadás mentése",
-  "selectCategory": "Kategória kiválasztása",
-  "transactionSaved": "Tranzakció mentve",
-  "amountRequired": "Adj meg nullánál nagyobb összeget",
-  "titleRequired": "Adj nevet ennek a tranzakciónak",
+  "selectCategory": "Kategória választása",
+  "transactionSaved": "A tétel mentve",
+  "amountRequired": "Adjon meg nullánál nagyobb összeget",
+  "titleRequired": "Adjon nevet ennek a tételnek",
   "descriptionLabel": "Leírás",
-  "descriptionHint": "pl. Élelmiszer",
-  "budget": "Költségkeret",
-  "budgets": "Költségkeretek",
-  "totalBudget": "Teljes költségkeret",
+  "descriptionHint": "pl. bevásárlás",
+  "budget": "Keret",
+  "budgets": "Keretek",
+  "totalBudget": "Teljes keret",
   "spent": "Elköltve",
-  "remaining": "Fennmaradó",
+  "remaining": "Maradt",
   "budgetUsed": "{percent}% felhasználva",
-  "@budgetUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "onTrack": "Megfelelő",
-  "approachingLimit": "Közelít a limithez",
-  "overBudget": "Keret túllépve",
-  "savings": "Megtakarítások",
-  "yourGoals": "Céljaid",
+  "onTrack": "Jó úton",
+  "approachingLimit": "Közel a határhoz",
+  "overBudget": "Kereten felül",
+  "savings": "Megtakarítás",
+  "yourGoals": "Az Ön céljai",
   "saved": "Megtakarítva",
-  "target": "Célösszeg",
+  "target": "Cél",
   "monthlyContribution": "Havonta",
-  "addFunds": "Összeg hozzáadása",
-  "goalComplete": "Cél elérve",
-  "monthsToGo": "{count, plural, =1{1 hónap van hátra} other{{count} hónap van hátra}}",
-  "@monthsToGo": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "addFunds": "Befizetés",
+  "goalComplete": "A cél teljesült",
+  "monthsToGo": "{count, plural, other{még {count} hónap}}",
   "loansAndDebts": "Hitelek és tartozások",
-  "totalOutstanding": "Fennmaradó teljes tartozás",
+  "totalOutstanding": "Fennálló tartozás",
   "monthlyPayment": "Havonta",
-  "nextPayment": "Következő törlesztés",
-  "paidOff": "{percent}% visszafizetve",
-  "@paidOff": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
+  "nextPayment": "Következő részlet",
+  "paidOff": "{percent}% törlesztve",
   "interestRate": "Kamat",
-  "upcomingPayments": "Közelgő fizetések",
-  "dueInDays": "{count, plural, =0{Ma esedékes} =1{Holnap esedékes} other{{count} nap múlva esedékes}}",
-  "@dueInDays": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "overdue": "Késedelmes",
-  "reports": "Jelentések",
+  "upcomingPayments": "Közelgő részletek",
+  "dueInDays": "{count, plural, =0{Ma esedékes} other{{count} nap múlva}}",
+  "overdue": "Lejárt",
+  "reports": "Kimutatások",
   "week": "Hét",
   "month": "Hónap",
   "quarter": "Negyedév",
-  "incomeVsExpenses": "Bevételek és kiadások",
-  "spendingByCategory": "Költés kategóriák szerint",
-  "budgetPerformance": "Költségkeret teljesítése",
-  "insights": "Elemzések",
+  "incomeVsExpenses": "Bevétel és kiadás",
+  "spendingByCategory": "Kiadás kategóriánként",
+  "budgetPerformance": "Keretek teljesülése",
+  "insights": "Észrevételek",
   "savingsRate": "Megtakarítási ráta",
   "profile": "Profil",
   "account": "Fiók",
@@ -165,976 +102,396 @@
   "helpAndSupport": "Súgó és támogatás",
   "termsAndConditions": "Felhasználási feltételek",
   "logOut": "Kijelentkezés",
-  "memberSince": "Tagság kezdete: {date}",
-  "@memberSince": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
-  "themeSystem": "Rendszer",
+  "memberSince": "Tag {date} óta",
+  "themeSystem": "Rendszer szerint",
   "themeLight": "Világos",
   "themeDark": "Sötét",
   "settings": "Beállítások",
-  "noNotificationsTitle": "Nincsenek új értesítéseid",
-  "noNotificationsBody": "Az új betekintések és emlékeztetők itt fognak megjelenni.",
+  "noNotificationsTitle": "Mindent látott",
+  "noNotificationsBody": "Az új észrevételek és emlékeztetők itt jelennek meg.",
   "cancel": "Mégse",
   "save": "Mentés",
   "done": "Kész",
   "retry": "Újra",
   "close": "Bezárás",
   "somethingWentWrong": "Valami hiba történt",
-  "comingSoon": "Hamarosan elérhető a teljes verzióban",
+  "comingSoon": "A teljes verzióban érkezik",
   "edit": "Szerkesztés",
   "delete": "Törlés",
   "undo": "Visszavonás",
   "add": "Hozzáadás",
   "create": "Létrehozás",
-  "nameRequired": "Adj meg egy nevet",
-  "amountAboveZero": "Adj meg nullánál nagyobb összeget",
-  "editTransaction": "Tranzakció szerkesztése",
-  "deleteTransaction": "Törlöd a tranzakciót?",
-  "deleteTransactionBody": "A(z) „{title}” törlődik a nyilvántartásodból.",
-  "@deleteTransactionBody": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    }
-  },
-  "transactionDeleted": "Tranzakció törölve",
-  "transactionUpdated": "Tranzakció frissítve",
-  "newBudget": "Új költségkeret",
-  "editBudget": "Költségkeret szerkesztése",
-  "budgetLimit": "Havi limit",
-  "deleteBudget": "Törlöd a költségkeretet?",
-  "deleteBudgetBody": "A(z) „{category}” kategória költségkerete törlődik. A tranzakcióidat ez nem érinti.",
-  "@deleteBudgetBody": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      }
-    }
-  },
-  "budgetSaved": "Költségkeret mentve",
-  "budgetDeleted": "Költségkeret törölve",
-  "allCategoriesBudgeted": "Minden kategóriához tartozik már költségkeret",
-  "noBudgetsTitle": "Még nincsenek költségkeretek",
-  "noBudgetsBody": "Állíts be egy havi limitet valamelyik kategóriához a nyomon követés megkezdéséhez.",
+  "nameRequired": "Adjon neki nevet",
+  "amountAboveZero": "Adjon meg nullánál nagyobb összeget",
+  "editTransaction": "Tétel szerkesztése",
+  "deleteTransaction": "Törli a tételt?",
+  "deleteTransactionBody": "A(z) {title} kikerül a nyilvántartásából.",
+  "transactionDeleted": "A tétel törölve",
+  "transactionUpdated": "A tétel frissítve",
+  "newBudget": "Új keret",
+  "editBudget": "Keret szerkesztése",
+  "budgetLimit": "Havi felső határ",
+  "deleteBudget": "Törli a keretet?",
+  "deleteBudgetBody": "A(z) {category} keret törlődik. A tételeit ez nem érinti.",
+  "budgetSaved": "A keret mentve",
+  "budgetDeleted": "A keret törölve",
+  "allCategoriesBudgeted": "Minden kategóriának van már kerete",
+  "noBudgetsTitle": "Még nincs keret",
+  "noBudgetsBody": "Adjon havi felső határt egy kategóriának, és elindul a követése.",
   "newGoal": "Új cél",
   "editGoal": "Cél szerkesztése",
-  "goalName": "Cél neve",
-  "goalNameHint": "pl. Vészalap",
+  "goalName": "A cél neve",
+  "goalNameHint": "pl. vésztartalék",
   "targetAmount": "Célösszeg",
   "alreadySaved": "Már megtakarítva",
-  "deleteGoal": "Törlöd a célt?",
-  "deleteGoalBody": "A(z) „{name}” cél és az eddigi haladás törlődik.",
-  "@deleteGoalBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "goalSaved": "Cél mentve",
-  "goalDeleted": "Cél törölve",
-  "noGoalsTitle": "Még nincsenek megtakarítási célok",
-  "noGoalsBody": "Tűzz ki egy célt, és a RainyPenny segít nyomon követni az előrehaladásodat.",
-  "fundsAdded": "Összeg hozzáadva",
+  "deleteGoal": "Törli a célt?",
+  "deleteGoalBody": "A(z) {name} és a hozzá tartozó haladás törlődik.",
+  "goalSaved": "A cél mentve",
+  "goalDeleted": "A cél törölve",
+  "noGoalsTitle": "Még nincs megtakarítási cél",
+  "noGoalsBody": "Tűzzön ki célt, és a RainyPenny követi a haladását.",
+  "fundsAdded": "Az összeg hozzáadva",
   "newDebt": "Új hitel vagy kártya",
   "editDebt": "Hitel szerkesztése",
   "debtName": "Név",
-  "debtNameHint": "pl. Autóhitel",
+  "debtNameHint": "pl. autóhitel",
   "lender": "Hitelező",
   "lenderHint": "pl. OTP Bank",
   "originalAmount": "Eredeti összeg",
-  "creditLimit": "Hitellimit",
-  "remainingBalance": "Fennmaradó egyenleg",
+  "creditLimit": "Hitelkeret",
+  "remainingBalance": "Fennmaradó tartozás",
   "interestRatePercent": "Kamatláb (%)",
   "kindLoan": "Hitel",
   "kindCreditCard": "Hitelkártya",
   "recordPayment": "Törlesztés rögzítése",
-  "paymentRecorded": "Törlesztés rögzítve",
-  "deleteDebt": "Törlöd ezt a tartozást?",
-  "deleteDebtBody": "A(z) „{name}” törlődik a tartozásaid közül.",
-  "@deleteDebtBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
+  "paymentRecorded": "A törlesztés rögzítve",
+  "deleteDebt": "Törli ezt a tartozást?",
+  "deleteDebtBody": "A(z) {name} kikerül a tartozásai közül.",
   "debtSaved": "Mentve",
   "debtDeleted": "Törölve",
-  "noDebtsTitle": "Nincsenek nyomon követett tartozások",
-  "noDebtsBody": "Adj hozzá egy hitelt vagy hitelkártyát a törlesztések figyeléséhez.",
-  "insightBudgetExceededTitle": "Túllépted a(z) {subject} költségkeretet",
-  "@insightBudgetExceededTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetExceededBody": "{amount} összeggel lépted túl a(z) {subject} költségkeretedet ebben az időszakban.",
-  "@insightBudgetExceededBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingTitle": "A(z) {subject} keret a végéhez közeledik",
-  "@insightBudgetApproachingTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingBody": "A(z) {subject} kereted {percent}%-a fogyott el, még {amount} maradt.",
-  "@insightBudgetApproachingBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
-  "insightOverIncomeTitle": "A kiadások meghaladják a bevételeket",
-  "insightOverIncomeBody": "Többet költöttél ebben az időszakban, mint amennyit kerestél. Nézd át a legnagyobb kategóriáidat az egyensúly visszaállításához.",
-  "insightCategoryUpTitle": "Megnőttek a(z) {subject} kiadásaid",
-  "@insightCategoryUpTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightCategoryUpBody": "A(z) {subject} kategóriára fordított összeg {percent}%-kal magasabb, mint az előző időszakban.",
-  "@insightCategoryUpBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightTrendDownTitle": "A kiadásaid csökkenő tendenciát mutatnak",
-  "insightTrendDownBody": "Az összes kiadásod {percent}%-kal alacsonyabb, mint az előző időszakban.",
-  "@insightTrendDownBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightTrendUpTitle": "A kiadásaid növekvő tendenciát mutatnak",
-  "insightTrendUpBody": "Az összes kiadásod {percent}%-kal magasabb, mint az előző időszakban.",
-  "@insightTrendUpBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsStrongTitle": "Kiváló megtakarítás ebben az időszakban",
-  "insightSavingsStrongBody": "A bevételed {percent}%-át sikerült félretenned — ami jóval a kitűzött {target}% felett van.",
-  "@insightSavingsStrongBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsLowTitle": "A megtakarítási ráta a cél alatt maradt",
-  "insightSavingsLowBody": "A bevételed {percent}%-át tetted félre ebben az időszakban. Célozd meg a {target}%-ot.",
-  "@insightSavingsLowBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightGoalNearlyTitle": "A(z) „{subject}” cél majdnem teljesült",
-  "@insightGoalNearlyTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalNearlyBody": "Már csak {amount} hiányzik a(z) „{subject}” cél eléréséhez.",
-  "@insightGoalNearlyBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackTitle": "Jó úton jársz a(z) „{subject}” cél felé",
-  "@insightGoalOnTrackTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackBody": "Havi {amount} összeggel {months, plural, =1{1 hónap} other{{months} hónap}} múlva éred el ezt a célt.",
-  "@insightGoalOnTrackBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "months": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtOverdueTitle": "A(z) {subject} törlesztése késedelmes",
-  "@insightDebtOverdueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtOverdueBody": "A(z) {subject} {amount} összegű fizetése {days, plural, =1{1 napja} other{{days} napja}} késik.",
-  "@insightDebtOverdueBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtDueTitle": "A(z) {subject} fizetése hamarosan esedékes",
-  "@insightDebtDueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueBody": "{amount} fizetendő {days, plural, =0{ma} =1{holnap} other{{days} nap múlva}}.",
-  "@insightDebtDueBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
+  "noDebtsTitle": "Nincs követett tartozás",
+  "noDebtsBody": "Vegyen fel hitelt vagy hitelkártyát, hogy szemmel tarthassa a törlesztéseket.",
+  "insightBudgetExceededTitle": "A(z) {subject} keret túllépve",
+  "insightBudgetExceededBody": "Ebben az időszakban {amount} összeggel lépte túl a(z) {subject} keretet.",
+  "insightBudgetApproachingTitle": "A(z) {subject} közelít a határhoz",
+  "insightBudgetApproachingBody": "A(z) {subject} keret {percent}%-a elfogyott, {amount} maradt.",
+  "insightOverIncomeTitle": "A kiadás meghaladja a bevételt",
+  "insightOverIncomeBody": "Ebben az időszakban többet költött, mint amennyit keresett. Nézze át a legnagyobb kategóriákat, hogy helyreálljon az egyensúly.",
+  "insightCategoryUpTitle": "A(z) {subject} kiadás nőtt",
+  "insightCategoryUpBody": "A(z) {subject} kiadása {percent}%-kal magasabb az előző időszakhoz képest.",
+  "insightTrendDownTitle": "A kiadások csökkennek",
+  "insightTrendDownBody": "Az összes kiadás {percent}%-kal alacsonyabb az előző időszakhoz képest.",
+  "insightTrendUpTitle": "A kiadások nőnek",
+  "insightTrendUpBody": "Az összes kiadás {percent}%-kal magasabb az előző időszakhoz képest.",
+  "insightSavingsStrongTitle": "Erős megtakarítás ebben az időszakban",
+  "insightSavingsStrongBody": "Bevételének {percent}%-át megtartotta — jóval a {target}%-os cél felett.",
+  "insightSavingsLowTitle": "A megtakarítási ráta a cél alatt van",
+  "insightSavingsLowBody": "Ebben az időszakban bevételének {percent}%-át tartotta meg. A cél {target}%.",
+  "insightGoalNearlyTitle": "A(z) {subject} majdnem összegyűlt",
+  "insightGoalNearlyBody": "Már csak {amount} hiányzik a(z) {subject} eléréséhez.",
+  "insightGoalOnTrackTitle": "A(z) {subject} jó úton halad",
+  "insightGoalOnTrackBody": "Havi {amount} mellett {months, plural, other{{months} hónap}} alatt éri el ezt a célt.",
+  "insightDebtOverdueTitle": "A(z) {subject} törlesztése lejárt",
+  "insightDebtOverdueBody": "A(z) {subject} {amount} összegű törlesztése {days, plural, other{{days} napja}} késik.",
+  "insightDebtDueTitle": "Közeleg a(z) {subject} törlesztése",
+  "insightDebtDueBody": "{amount} esedékes {days, plural, =0{ma} other{{days} nap múlva}}.",
   "signIn": "Bejelentkezés",
   "signUp": "Fiók létrehozása",
-  "signInSubtitle": "Üdv újra itt! Pénzügyeid kéznél vannak.",
-  "signUpSubtitle": "Pár adat megadása, és már készen is vagy.",
+  "signInSubtitle": "Üdv újra. A pénze várja.",
+  "signUpSubtitle": "Néhány adat, és készen is van.",
   "emailLabel": "E-mail",
   "emailHint": "te@email.com",
   "passwordLabel": "Jelszó",
   "passwordHint": "Legalább 8 karakter",
   "fullNameLabel": "Teljes név",
   "fullNameHint": "Kovács Anna",
-  "forgotPassword": "Elfelejtetted a jelszavad?",
-  "resetSent": "Nézd meg a postafiókod a visszaállító linkért",
-  "noAccountYet": "Új vagy itt?",
-  "haveAccount": "Már van fiókod?",
-  "emailInvalid": "Érvényes e-mail-címet adj meg",
-  "passwordTooShort": "Legalább 8 karaktert használj",
-  "signOutConfirm": "Kijelentkezel?",
-  "signOutBody": "A pénzügyeid megtekintéséhez újra be kell jelentkezned.",
+  "forgotPassword": "Elfelejtette a jelszavát?",
+  "resetSent": "Nézze meg a postaládáját a visszaállító hivatkozásért",
+  "noAccountYet": "Először jár itt?",
+  "haveAccount": "Már van fiókja?",
+  "emailInvalid": "Adjon meg érvényes e-mail-címet",
+  "passwordTooShort": "Használjon legalább 8 karaktert",
+  "signOutConfirm": "Kijelentkezik?",
+  "signOutBody": "Újra be kell jelentkeznie, hogy lássa a pénzügyeit.",
   "dataSource": "Adatforrás",
-  "insightWeeklySummaryTitle": "A heted áttekintése",
-  "insightWeeklySummaryBody": "Nézd meg, mire ment el a pénzed a héten, és hogyan állnak a költségkereteid.",
+  "insightWeeklySummaryTitle": "A hete egy pillantásra",
+  "insightWeeklySummaryBody": "Nézze meg, hová ment a pénze a héten, és hogyan tartanak a keretei.",
   "notificationSettings": "Értesítések",
-  "alertsSection": "Figyelmeztetések",
-  "budgetAlerts": "Költségkeret-értesítések",
-  "budgetAlertsBody": "Ha a költségkeret a limithez közelít vagy átlépi azt",
+  "alertsSection": "Riasztások",
+  "budgetAlerts": "Keretriasztások",
+  "budgetAlertsBody": "Amikor egy keret közelít a határhoz vagy túllépi azt",
   "paymentReminders": "Fizetési emlékeztetők",
   "paymentRemindersBody": "Néhány nappal az esedékesség előtt",
-  "savingsUpdates": "Megtakarítási frissítések",
-  "savingsUpdatesBody": "Előrehaladás a céljaid felé",
+  "savingsUpdates": "Megtakarítási hírek",
+  "savingsUpdatesBody": "Haladás a céljai felé",
   "weeklySummaryLabel": "Heti összefoglaló",
-  "weeklySummaryBody": "Áttekintés az elmúlt hétről",
+  "weeklySummaryBody": "Az elmúlt hét összegzése",
   "scheduleSection": "Időzítés",
   "reminderTime": "Emlékeztető időpontja",
-  "quietHours": "Csendes időszak",
+  "quietHours": "Csendes órák",
   "quietHoursValue": "{start} – {end}",
-  "@quietHoursValue": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-  "summaryDay": "Összefoglaló napja",
+  "summaryDay": "Az összefoglaló napja",
   "permissionRequired": "Az értesítések ki vannak kapcsolva",
-  "permissionRequiredBody": "Engedélyezd az értesítéseket, hogy a RainyPenny időben figyelmeztethessen a túllépésekre és a fizetési határidőkre.",
+  "permissionRequiredBody": "Engedélyezze az értesítéseket, hogy a RainyPenny szólhasson, mielőtt egy keret vagy egy részlet kicsúszna a kezéből.",
   "allowNotifications": "Értesítések engedélyezése",
-  "permissionDenied": "Az értesítések le vannak tiltva. Az eszköz beállításaiban tudod bekapcsolni őket.",
-  "upcomingAlerts": "Ütemezett",
-  "noScheduledAlerts": "Jelenleg nincs ütemezett értesítés",
-  "noScheduledAlertsBody": "Az értesítések itt jelennek meg, amint a költségkeretek vagy a számlák határideje közeledik.",
+  "permissionDenied": "Az értesítések le vannak tiltva. A készülék beállításaiban kapcsolhatja be őket.",
+  "upcomingAlerts": "Ütemezve",
+  "noScheduledAlerts": "Jelenleg nincs ütemezve semmi",
+  "noScheduledAlertsBody": "A riasztások itt jelennek meg, ahogy a keretek és a részletek közelítenek a határukhoz.",
   "scheduledFor": "Ütemezve: {date}",
-  "@scheduledFor": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
   "everyWeek": "Minden héten",
   "allNotificationsOff": "Minden értesítés ki van kapcsolva",
   "needsAttention": "Figyelmet igényel",
-  "quickActionsTitle": "Mit szeretnél csinálni?",
+  "quickActionsTitle": "Mit szeretne csinálni?",
   "createSection": "Rögzítés",
   "jumpToSection": "Ugrás ide",
   "addLoanAction": "Hitel hozzáadása",
   "addBudgetAction": "Keret hozzáadása",
   "addGoalAction": "Cél hozzáadása",
-  "longPressHint": "Tipp: tartsd lenyomva a + gombot kiadás azonnali rögzítéséhez",
+  "longPressHint": "Tipp: tartsa nyomva a + gombot a kiadás azonnali rögzítéséhez",
   "searchCurrencies": "Pénznemek keresése",
-  "@searchCurrencies": {
-    "description": "Currency picker: searchCurrencies"
-  },
-  "noCurrenciesFound": "Nem található pénznem",
-  "@noCurrenciesFound": {
-    "description": "Currency picker: noCurrenciesFound"
-  },
-  "noCurrenciesFoundMessage": "Próbálkozz más kóddal, szimbólummal vagy névvel.",
-  "@noCurrenciesFoundMessage": {
-    "description": "Currency picker: noCurrenciesFoundMessage"
-  },
+  "noCurrenciesFound": "Nincs találat",
+  "noCurrenciesFoundMessage": "Próbáljon másik kódot, jelet vagy nevet.",
   "popularCurrencies": "Népszerű",
-  "@popularCurrencies": {
-    "description": "Currency picker: popularCurrencies"
-  },
   "allCurrencies": "Összes pénznem",
-  "@allCurrencies": {
-    "description": "Currency picker: allCurrencies"
-  },
   "totalLoanAmount": "Teljes hitelösszeg",
-  "@totalLoanAmount": {
-    "description": "Loan detail: the original amount borrowed"
-  },
-  "installmentAmount": "Törlesztőrészlet összege",
-  "@installmentAmount": {
-    "description": "Loan detail: what falls due each cycle"
-  },
+  "installmentAmount": "Részlet összege",
   "numberOfInstallments": "Részletek száma",
-  "@numberOfInstallments": {
-    "description": "Loan editor: length of the repayment plan"
-  },
   "paidInstallments": "Kifizetett részletek",
-  "@paidInstallments": {
-    "description": "Loan detail: installments already settled"
-  },
-  "remainingInstallments": "Fennmaradó részletek",
-  "@remainingInstallments": {
-    "description": "Loan detail: installments still to pay"
-  },
-  "installmentsPaidOf": "{paid} / {total} kifizetve",
-  "@installmentsPaidOf": {
-    "description": "Loan detail: installment counter",
-    "placeholders": {
-      "paid": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "finalPayment": "Utolsó törlesztés",
-  "@finalPayment": {
-    "description": "Loan detail: date of the last installment"
-  },
+  "remainingInstallments": "Hátralévő részletek",
+  "installmentsPaidOf": "{total} részletből {paid} kifizetve",
+  "finalPayment": "Utolsó részlet",
   "paymentDueDate": "Esedékesség napja",
-  "@paymentDueDate": {
-    "description": "Loan detail: the day of the month a payment falls due"
-  },
   "dueOnDayOfMonth": "Minden hónap {day}. napján",
-  "@dueOnDayOfMonth": {
-    "description": "Loan detail: recurring due day",
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "loanStatus": "Állapot",
-  "@loanStatus": {
-    "description": "Loan detail: current standing of the debt"
-  },
-  "statusActive": "Megfelelő",
-  "@statusActive": {
-    "description": "Loan status: being repaid normally"
-  },
+  "statusActive": "Jó úton",
   "statusDueSoon": "Hamarosan esedékes",
-  "@statusDueSoon": {
-    "description": "Loan status: inside the reminder window"
-  },
-  "statusOverdue": "Késedelmes",
-  "@statusOverdue": {
-    "description": "Loan status: the due date has passed"
-  },
-  "statusCompleted": "Visszafizetve",
-  "@statusCompleted": {
-    "description": "Loan status: fully repaid"
-  },
-  "repaymentProgress": "Visszafizetés állása",
-  "@repaymentProgress": {
-    "description": "Loan detail: section heading for the progress bars"
-  },
+  "statusOverdue": "Lejárt",
+  "statusCompleted": "Kifizetve",
+  "repaymentProgress": "Törlesztés állása",
   "byAmount": "Összeg szerint",
-  "@byAmount": {
-    "description": "Loan detail: progress measured in money"
-  },
   "byInstallments": "Részletek szerint",
-  "@byInstallments": {
-    "description": "Loan detail: progress measured in payments"
-  },
-  "startDate": "Kezdés dátuma",
-  "@startDate": {
-    "description": "Loan editor: when repayment began"
-  },
-  "openEnded": "Határozatlan idejű",
-  "@openEnded": {
-    "description": "Loan detail: a revolving balance with no fixed term"
-  },
-  "loanDetails": "Hitel részletei",
-  "@loanDetails": {
-    "description": "Title of the loan detail screen"
-  },
+  "startDate": "Kezdő dátum",
+  "openEnded": "Határidő nélkül",
+  "loanDetails": "A hitel adatai",
   "notSet": "Nincs megadva",
-  "@notSet": {
-    "description": "Shown where an optional value has not been entered"
-  },
-  "insightDebtDueTodayTitle": "A(z) {subject} fizetése ma esedékes",
-  "@insightDebtDueTodayTitle": {
-    "description": "Notification: an installment falls due today",
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueTodayBody": "A(z) {amount} összegű törlesztésed ma esedékes. Rögzítsd egyszerűen időben.",
-  "@insightDebtDueTodayBody": {
-    "description": "Notification body: installment due today",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
-  "remindMorningTitle": "Jó reggelt! ☀️",
-  "@remindMorningTitle": {
-    "description": "Morning expense reminder title"
-  },
-  "remindMorningBody": "Indítsd a napot átlátva a pénzügyeidet. Van valami feljegyeznivaló tegnapról?",
-  "@remindMorningBody": {
-    "description": "Morning expense reminder body"
-  },
-  "remindNoonTitle": "Napközbeni ellenőrzés",
-  "@remindNoonTitle": {
-    "description": "Noon expense reminder title"
-  },
-  "remindNoonBody": "Ebéd, kávé vagy utazás? Rögzítsd pár másodperc alatt.",
-  "@remindNoonBody": {
-    "description": "Noon expense reminder body"
-  },
-  "remindAfternoonTitle": "Gyors összesítés",
-  "@remindAfternoonTitle": {
-    "description": "Afternoon expense reminder title"
-  },
-  "remindAfternoonBody": "Jegyezd fel az eddigi kiadásaidat a nap pontos zárásához.",
-  "@remindAfternoonBody": {
-    "description": "Afternoon expense reminder body"
-  },
-  "remindEveningTitle": "Nap zárása",
-  "@remindEveningTitle": {
-    "description": "Evening expense reminder title"
-  },
-  "remindEveningBody": "Csak két perc, és a mai számok a helyükre kerülnek.",
-  "@remindEveningBody": {
-    "description": "Evening expense reminder body"
-  },
-  "happyWeekendTitle": "Kellemes hétvégét! 🎉",
-  "@happyWeekendTitle": {
-    "description": "Weekend greeting title"
-  },
-  "happyWeekendBody": "Kapcsolódj ki — de tartsd szemmel a hétvégi költéseket is.",
-  "@happyWeekendBody": {
-    "description": "Weekend greeting body"
-  },
+  "insightDebtDueTodayTitle": "A(z) {subject} ma esedékes",
+  "insightDebtDueTodayBody": "A(z) {amount} összegű törlesztés ma esedékes. Egy koppintás, és időben megvan.",
+  "remindMorningTitle": "Jó reggelt ☀️",
+  "remindMorningBody": "Kezdje a napot a pénzügyei felett tartva a kezét. Van még tegnapról rögzítenivaló?",
+  "remindNoonTitle": "Déli ellenőrzés",
+  "remindNoonBody": "Ebéd, kávé, jegy? Pár másodperc alatt rögzíthető.",
+  "remindAfternoonTitle": "Gyors pótlás",
+  "remindAfternoonBody": "Rögzítse, amit eddig költött, hogy a mai számok pontosak legyenek.",
+  "remindEveningTitle": "A nap lezárása",
+  "remindEveningBody": "Két perc most, és a mai bejegyzései teljesek.",
+  "happyWeekendTitle": "Szép hétvégét! 🎉",
+  "happyWeekendBody": "Élvezze — és tartsa fél szemmel a hétvégi költéseket is.",
   "dailyReminders": "Napi kiadás-emlékeztetők",
-  "@dailyReminders": {
-    "description": "Notification setting: the daily nudges"
-  },
-  "dailyRemindersBody": "Barátságos emlékeztetők a kiadások naprakészen tartásához",
-  "@dailyRemindersBody": {
-    "description": "Notification setting description"
-  },
+  "dailyRemindersBody": "Finom emlékeztetők, hogy a kiadásai naprakészek maradjanak",
   "weekendGreeting": "Hétvégi köszöntés",
-  "@weekendGreeting": {
-    "description": "Notification setting: the weekend greeting"
-  },
-  "weekendGreetingBody": "Kedves üdvözlet a hétvégéd kezdetén",
-  "@weekendGreetingBody": {
-    "description": "Notification setting description"
-  },
+  "weekendGreetingBody": "Egy barátságos köszöntés a hétvége elején",
   "reminderTimesSection": "Emlékeztetők időpontjai",
-  "@reminderTimesSection": {
-    "description": "Section heading for the four daily slots"
-  },
   "slotMorning": "Reggel",
-  "@slotMorning": {
-    "description": "Daily reminder slot"
-  },
-  "slotNoon": "Délben",
-  "@slotNoon": {
-    "description": "Daily reminder slot"
-  },
+  "slotNoon": "Dél",
   "slotAfternoon": "Délután",
-  "@slotAfternoon": {
-    "description": "Daily reminder slot"
-  },
   "slotEvening": "Este",
-  "@slotEvening": {
-    "description": "Daily reminder slot"
-  },
   "everyDay": "Minden nap",
-  "@everyDay": {
-    "description": "How often a repeating notification arrives"
-  },
-  "financialReport": "Pénzügyi jelentés",
-  "@financialReport": {
-    "description": "Title of the exported PDF"
-  },
-  "preparedFor": "Készült:",
-  "@preparedFor": {
-    "description": "PDF cover: whose report this is"
-  },
-  "generatedOn": "Létrehozva:",
-  "@generatedOn": {
-    "description": "PDF cover: the date the report was produced"
-  },
-  "reportDisclaimer": "A RainyPenny által, a saját bejegyzéseid alapján készítve.",
-  "@reportDisclaimer": {
-    "description": "PDF footer note"
-  },
-  "pageOf": "{page} / {total} oldal",
-  "@pageOf": {
-    "description": "PDF footer page number",
-    "placeholders": {
-      "page": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
+  "financialReport": "Pénzügyi kimutatás",
+  "preparedFor": "Készült",
+  "generatedOn": "Létrehozva",
+  "reportDisclaimer": "A RainyPenny készítette az Ön saját bejegyzéseiből.",
+  "pageOf": "{page}. oldal, összesen {total}",
   "overview": "Áttekintés",
-  "@overview": {
-    "description": "PDF section: the headline totals"
-  },
   "description": "Leírás",
-  "@description": {
-    "description": "Table column heading"
-  },
-  "totalIncome": "Teljes bevétel",
-  "@totalIncome": {
-    "description": "Summary table row"
-  },
-  "totalExpenses": "Teljes kiadás",
-  "@totalExpenses": {
-    "description": "Summary table row"
-  },
+  "totalIncome": "Összes bevétel",
+  "totalExpenses": "Összes kiadás",
   "totalSaved": "Összes megtakarítás",
-  "@totalSaved": {
-    "description": "Summary table row"
-  },
   "shareOfTotal": "Arány",
-  "@shareOfTotal": {
-    "description": "Table column: this category's share of all spending"
-  },
-  "used": "Kihasználtság",
-  "@used": {
-    "description": "Table column: percentage of a budget consumed"
-  },
+  "used": "Felhasználva",
   "goal": "Cél",
-  "@goal": {
-    "description": "Table column heading for a savings goal"
-  },
   "targetDate": "Céldátum",
-  "@targetDate": {
-    "description": "Table column heading"
-  },
   "progress": "Haladás",
-  "@progress": {
-    "description": "Table column heading"
-  },
   "paidOffShort": "Törlesztve",
-  "@paidOffShort": {
-    "description": "Table column: percentage of a debt repaid"
-  },
-  "transactions": "Tranzakciók",
-  "@transactions": {
-    "description": "PDF section listing individual entries"
-  },
-  "andMoreTransactions": "{count, plural, =1{és még 1 tranzakció} other{és még {count} tranzakció}}",
-  "@andMoreTransactions": {
-    "description": "PDF note when the transaction table is truncated",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "transactions": "Tételek",
+  "andMoreTransactions": "{count, plural, other{és további {count} tétel}}",
   "exportPdf": "PDF exportálása",
-  "@exportPdf": {
-    "description": "Button that produces the report"
-  },
-  "sharePdf": "Jelentés megosztása",
-  "@sharePdf": {
-    "description": "Button that opens the share sheet"
-  },
-  "preparingReport": "Jelentés elkészítése…",
-  "@preparingReport": {
-    "description": "Progress message while the PDF builds"
-  },
-  "reportReady": "A jelentés elkészült",
-  "@reportReady": {
-    "description": "Confirmation once the PDF is produced"
-  },
-  "reportFailed": "Nem sikerült elkészíteni a jelentést",
-  "@reportFailed": {
-    "description": "Error message when export fails"
-  },
+  "sharePdf": "Kimutatás megosztása",
+  "preparingReport": "Készül a kimutatása…",
+  "reportReady": "A kimutatás elkészült",
+  "reportFailed": "A kimutatást nem sikerült elkészíteni",
   "categories": "Kategóriák",
-  "@categories": {
-    "description": "Title of the category management screen"
-  },
-  "categoriesIntro": "Hozz létre saját kategóriákat, hogy a bevételeket és kiadásokat pontosan a számodra megfelelő módon csoportosíthasd.",
-  "@categoriesIntro": {
-    "description": "Explains what the screen is for"
-  },
+  "categoriesIntro": "Vegyen fel saját kategóriákat, hogy a bevételei és kiadásai pontosan úgy álljanak, ahogy Ön gondol rájuk.",
   "expenseCategories": "Kiadási kategóriák",
-  "@expenseCategories": {
-    "description": "Section heading"
-  },
   "incomeCategories": "Bevételi kategóriák",
-  "@incomeCategories": {
-    "description": "Section heading"
-  },
   "newCategory": "Új kategória",
-  "@newCategory": {
-    "description": "Title of the create form"
-  },
   "editCategory": "Kategória szerkesztése",
-  "@editCategory": {
-    "description": "Title of the edit form"
-  },
   "categoryName": "Név",
-  "@categoryName": {
-    "description": "Category form field label"
-  },
-  "categoryNameHint": "pl. Kisállat",
-  "@categoryNameHint": {
-    "description": "Category name placeholder"
-  },
+  "categoryNameHint": "pl. háziállat",
   "icon": "Ikon",
-  "@icon": {
-    "description": "Category form field label"
-  },
-  "categorySaved": "Kategória mentve",
-  "@categorySaved": {
-    "description": "Confirmation"
-  },
-  "categoryDeleted": "Kategória törölve",
-  "@categoryDeleted": {
-    "description": "Confirmation"
-  },
-  "deleteCategory": "Törlöd ezt a kategóriát?",
-  "@deleteCategory": {
-    "description": "Delete confirmation title"
-  },
-  "deleteCategoryBody": "A(z) „{name}” törlődik a kategóriáid közül.",
-  "@deleteCategoryBody": {
-    "description": "Delete confirmation body",
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "categoryInUse": "{count, plural, =1{1 tétel még mindig használja ezt a kategóriát} other{{count} tétel még mindig használja ezt a kategóriát}}",
-  "@categoryInUse": {
-    "description": "Explains why a category cannot be deleted",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "noCategoriesYet": "Itt még nincsen semmi.",
-  "@noCategoriesYet": {
-    "description": "Empty group in the category list"
-  },
+  "categorySaved": "A kategória mentve",
+  "categoryDeleted": "A kategória törölve",
+  "deleteCategory": "Törli ezt a kategóriát?",
+  "deleteCategoryBody": "A(z) {name} kikerül a kategóriái közül.",
+  "categoryInUse": "{count, plural, other{{count} bejegyzés még ezt a kategóriát használja}}",
+  "noCategoriesYet": "Itt még nincs semmi.",
   "builtIn": "Beépített",
-  "@builtIn": {
-    "description": "Marks a shared, read-only category"
-  },
   "manageCategories": "Kategóriák kezelése",
-  "@manageCategories": {
-    "description": "Settings row that opens the category screen"
-  },
   "expense": "Kiadás",
-  "@expense": {
-    "description": "Singular label for an outgoing transaction"
-  },
-  "languageNote": "Az arab, az urdu, a perzsa és a héber nyelv jobbról balra rendezi a teljes felületet, a diagramokat és a PDF-jelentéseket is beleértve.",
-  "@languageNote": {
-    "description": "Note under the language picker explaining RTL support"
-  },
+  "languageNote": "Az arab, az urdu, a perzsa és a héber a teljes felületet jobbról balra fordítja, a diagramokkal és a PDF-kimutatásokkal együtt.",
   "next": "Tovább",
   "back": "Vissza",
   "skip": "Kihagyás",
   "continueLabel": "Folytatás",
-  "@continueLabel": {
-    "description": "Primary action that advances a multi-step flow. Named with a suffix because \"continue\" is a Dart keyword."
-  },
   "selected": "Kiválasztva",
-  "passwordRequired": "Add meg a jelszavad",
+  "passwordRequired": "Adja meg a jelszavát",
   "newPasswordLabel": "Új jelszó",
   "confirmPasswordLabel": "Jelszó megerősítése",
-  "passwordsDoNotMatch": "A jelszavaknak meg kell egyezniük",
+  "passwordsDoNotMatch": "A két jelszónak egyeznie kell",
   "showPassword": "Jelszó megjelenítése",
   "hidePassword": "Jelszó elrejtése",
   "savePassword": "Jelszó mentése",
   "backToSignIn": "Vissza a bejelentkezéshez",
   "alreadyHaveAccount": "Már van fiókom",
-  "getStarted": "Kezdés",
-  "acceptTerms": "Elfogadom a Szolgáltatási feltételeket és az Adatvédelmi szabályzatot",
-  "acceptTermsRequired": "Kérjük, fogadd el a folytatáshoz",
+  "getStarted": "Kezdjük",
+  "acceptTerms": "Elfogadom a felhasználási feltételeket és az adatvédelmi tájékoztatót",
+  "acceptTermsRequired": "A folytatáshoz fogadja el",
   "passwordStrengthTooShort": "Túl rövid",
   "passwordStrengthWeak": "Gyenge",
-  "passwordStrengthFair": "Közepes",
+  "passwordStrengthFair": "Megfelelő",
   "passwordStrengthGood": "Jó",
   "passwordStrengthStrong": "Erős",
-  "passwordAdvice": "Egy hosszú, könnyen megjegyezhető kifejezés jobb, mint egy szimbólumokkal teli rövid. Kerüld azokat, amelyeket máshol már használsz.",
-  "authInvalidCredentials": "Az e-mail-cím vagy a jelszó nem egyezik",
-  "authEmailNotConfirmed": "Bejelentkezés előtt erősítsd meg az e-mail-címedet",
+  "passwordAdvice": "Egy hosszú mondat, amit megjegyez, jobb egy rövid, jelekkel teli jelszónál. Kerülje azt, amit már máshol is használ.",
+  "authInvalidCredentials": "Ez az e-mail-cím és jelszó egyetlen fiókhoz sem tartozik",
+  "authEmailNotConfirmed": "Bejelentkezés előtt erősítse meg az e-mail-címét",
   "authEmailAlreadyRegistered": "Ezzel az e-mail-címmel már létezik fiók",
-  "authWeakPassword": "Válassz hosszabb jelszót",
-  "authRateLimited": "Túl sok próbálkozás. Próbáld újra néhány perc múlva",
-  "authNetworkError": "Nincs kapcsolat. Ellenőrizd a hálózatot, és próbáld újra",
-  "authGenericError": "Valami hiba történt. Kérjük, próbáld újra",
-  "confirmEmailTitle": "Ellenőrizd az e-mailjeidet",
-  "confirmEmailBody": "Megerősítő linket küldtünk a(z) {email} címre. Nyisd meg a fiók beállításának befejezéséhez.",
-  "@confirmEmailBody": {
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
+  "authWeakPassword": "Válasszon hosszabb jelszót",
+  "authRateLimited": "Túl sok próbálkozás. Néhány perc múlva próbálja újra",
+  "authNetworkError": "Nincs kapcsolat. Ellenőrizze a hálózatot, majd próbálja újra",
+  "authGenericError": "Valami hiba történt. Kérjük, próbálja újra",
+  "confirmEmailTitle": "Nézze meg a postaládáját",
+  "confirmEmailBody": "Megerősítő hivatkozást küldtünk a következő címre: {email}. Nyissa meg a fiók befejezéséhez.",
   "resendConfirmation": "Megerősítő e-mail újraküldése",
-  "confirmationResent": "Megerősítő e-mail elküldve",
+  "confirmationResent": "A megerősítő e-mail elküldve",
   "forgotPasswordTitle": "Jelszó visszaállítása",
-  "forgotPasswordSubtitle": "Add meg a regisztrációhoz használt e-mail-címedet, és küldünk egy linket az új jelszó megadásához.",
-  "sendResetLink": "Visszaállító link küldése",
-  "resetLinkSentTitle": "Visszaállító link elküldve",
-  "resetLinkSentBody": "Ha a(z) {email} címhez tartozik fiók, a visszaállító link már úton van.",
-  "@resetLinkSentBody": {
-    "description": "Deliberately conditional: confirming whether an address is registered would let anyone enumerate the app users.",
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
-  "resetLinkSentHint": "A link egy órán belül lejár. Ha nem érkezik meg, nézd meg a spam mappádat is, mielőtt újat kérnél.",
-  "tryAnotherEmail": "Másik e-mail megadása",
-  "resetPasswordTitle": "Új jelszó megadása",
-  "resetPasswordSubtitle": "Válassz olyat, amelyet korábban még nem használtál ennél a fióknál.",
-  "passwordChangedTitle": "Jelszó frissítve",
-  "passwordChangedBody": "Az új jelszavadat elmentettük. Bejelentkeztél, és készen állsz a folytatásra.",
-  "demoModeHint": "Demó verzió — fiók nem szükséges",
+  "forgotPasswordSubtitle": "Adja meg az e-mail-címet, amellyel regisztrált, és küldünk egy hivatkozást új jelszó megadásához.",
+  "sendResetLink": "Hivatkozás küldése",
+  "resetLinkSentTitle": "A hivatkozás elküldve",
+  "resetLinkSentBody": "Ha a(z) {email} címhez tartozik fiók, a hivatkozás már úton van.",
+  "resetLinkSentHint": "A hivatkozás egy óra alatt lejár. Ha nem érkezik meg, nézze meg a levélszemét mappát, mielőtt újat kérne.",
+  "tryAnotherEmail": "Másik e-mail-cím",
+  "resetPasswordTitle": "Válasszon új jelszót",
+  "resetPasswordSubtitle": "Olyat válasszon, amit ennél a fióknál még nem használt.",
+  "passwordChangedTitle": "A jelszó frissítve",
+  "passwordChangedBody": "Az új jelszava elmentve. Be van jelentkezve, mehet tovább.",
+  "demoModeHint": "Bemutató verzió — nem kell fiók",
   "demoModeFill": "Kitöltés",
-  "welcomeTrackTitle": "Lásd át, hova megy a pénzed",
-  "welcomeTrackBody": "Rögzítsd a bevételeidet és kiadásaidat. A RainyPenny könnyen értelmezhető képpé formálja a számaidat.",
-  "welcomeBudgetTitle": "Állíts be tartható kereteket",
-  "welcomeBudgetBody": "Adj minden kiadási területnek havi plafont, és értesülj róla, mielőtt túllépnéd, nem pedig utána.",
-  "welcomeGoalsTitle": "Gyűjts arra, ami igazán számít",
-  "welcomeGoalsBody": "Nevezz meg egy célt, tűzz ki egy összeget, és kövesd figyelemmel a gyarapodását. A vészalapot könnyebb felépíteni, ha látod a haladást.",
-  "welcomePrivacyTitle": "A pénzed a tiéd marad",
-  "welcomePrivacyBody": "A számaid kizárólag rád tartoznak. Semmit sem adunk el, és semmit sem osztunk meg senkivel.",
-  "stepOf": "{step}. / {total} lépés",
-  "@stepOf": {
-    "placeholders": {
-      "step": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "onboardingNameTitle": "Hogyan szólíthatunk?",
-  "onboardingNameBody": "Kizárólag az üdvözlésedre fogjuk használni, sehol máshol.",
-  "onboardingNameHint": "Egy keresztnév bőven elég. Később bármikor módosíthatod.",
-  "onboardingCurrencyTitle": "Milyen pénznemet használsz?",
-  "onboardingCurrencyBody": "Az alkalmazás minden összeget ebben a pénznemben jelenít meg. A kiválasztása nem vált át semmit.",
+  "welcomeTrackTitle": "Lássa, hová megy a pénze",
+  "welcomeTrackBody": "Rögzítse, mi jön be és mi megy ki. A RainyPenny olyan képet csinál belőle, amit tényleg el lehet olvasni.",
+  "welcomeBudgetTitle": "Határok, amik tartanak",
+  "welcomeBudgetBody": "Adjon minden kiadási területnek havi felső határt, és még azelőtt tudja meg, hogy átlépné — ne utána.",
+  "welcomeGoalsTitle": "Tegyen félre arra, ami számít",
+  "welcomeGoalsBody": "Nevezzen el egy célt, adjon meg összeget, és nézze, ahogy megtelik. A vésztartalékot könnyebb felépíteni, ha látja is.",
+  "welcomePrivacyTitle": "A pénze az Öné marad",
+  "welcomePrivacyBody": "A számai csak Önhöz tartoznak. Semmit nem adunk el és senkivel nem osztunk meg.",
+  "stepOf": "{total} lépésből a(z) {step}.",
+  "onboardingNameTitle": "Hogy szólíthatjuk?",
+  "onboardingNameBody": "Csak köszöntésre használjuk, máshol sehol.",
+  "onboardingNameHint": "A keresztnév bőven elég. Később módosíthatja.",
+  "onboardingCurrencyTitle": "Milyen pénznemet használ?",
+  "onboardingCurrencyBody": "Az alkalmazásban minden összeg ebben a pénznemben jelenik meg. A választás semmit nem vált át.",
   "onboardingCurrencySearch": "Keresés az összes pénznem között",
-  "onboardingAppearanceTitle": "Tedd egyedivé",
-  "onboardingAppearanceBody": "Válassz egy stílust. Koppintás közben minden azonnal átvált, és később is bármikor visszatérhetsz ide.",
-  "onboardingNotificationsTitle": "Maradj mindig naprakész",
-  "onboardingNotificationsBody": "Egy diszkrét emlékeztető a megfelelő pillanatban segít, hogy ez igazi szokássá váljon.",
-  "onboardingNotifyReminders": "Finom emlékeztető a kiadásaid rögzítésére",
-  "onboardingNotifyBudget": "Időben figyelmeztet, mielőtt a kereted elfogyna",
-  "onboardingNotifySummary": "Heti összefoglaló arról, hová ment a pénzed",
+  "onboardingAppearanceTitle": "Alakítsa a magáévá",
+  "onboardingAppearanceBody": "Válasszon kinézetet. Minden azonnal változik, és bármikor visszatérhet ide.",
+  "onboardingNotificationsTitle": "Tartsa kézben",
+  "onboardingNotificationsBody": "Egy csendes emlékeztető a megfelelő pillanatban — ettől lesz ebből szokás.",
+  "onboardingNotifyReminders": "Finom emlékeztető, hogy rögzítse, amit költött",
+  "onboardingNotifyBudget": "Jelzés, mielőtt elfogyna egy keret",
+  "onboardingNotifySummary": "Heti összegzés arról, hová ment a pénze",
   "onboardingNotifyEnable": "Értesítések bekapcsolása",
-  "onboardingNotifyDone": "Értesítési beállítások mentve",
-  "onboardingNotifyLater": "Mindezt a Beállításokban bármikor később is módosíthatod.",
+  "onboardingNotifyDone": "Az értesítési beállítások mentve",
+  "onboardingNotifyLater": "Mindezt bármikor módosíthatja a Beállításokban.",
   "onboardingReadyTitle": "Minden készen áll",
-  "onboardingReadyTitleNamed": "Minden készen áll, {name}!",
-  "@onboardingReadyTitleNamed": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "onboardingReadyBody": "A beállítás kész. Szeretnél egy gyors bemutatót arról, hogyan működik az alkalmazás?",
-  "onboardingTakeTour": "Körbevezetés kérése",
-  "onboardingGoToApp": "Ugrás az alkalmazásba",
-  "onboardingTourLater": "Most nem? Az útmutató a Beállításokban bármikor elérhető marad.",
-  "beginnersGuide": "Kezdők útmutatója",
+  "onboardingReadyTitleNamed": "Minden készen áll, {name}",
+  "onboardingReadyBody": "A beállítás kész. Szeretne egy gyors körutat arról, hogyan működik?",
+  "onboardingTakeTour": "Mutassa meg",
+  "onboardingGoToApp": "Irány az alkalmazás",
+  "onboardingTourLater": "Most nem? Az útmutató a Beállításokban marad, amikor csak kell.",
+  "beginnersGuide": "Kezdő útmutató",
   "guideFinish": "Befejezés",
-  "chapterOf": "{number}. / {total} fejezet",
-  "@chapterOf": {
-    "placeholders": {
-      "number": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
+  "chapterOf": "{total} fejezetből a(z) {number}.",
   "guideOpenScreen": "{screen} megnyitása",
-  "@guideOpenScreen": {
-    "placeholders": {
-      "screen": {
-        "type": "String"
-      }
-    }
-  },
-  "guideDashboardTitle": "Az irányítópultod",
-  "guideDashboardBody": "Minden innen indul. A felső kártya mutatja a fennmaradó összeget; alatta a bevételek és kiadások láthatók, majd a költéseid, kereteid és céljaid.",
-  "guideDashboardTip1": "Húzd lefelé a képernyőt mindennek az azonnali frissítéséhez.",
-  "guideDashboardTip2": "Koppints a bevétel vagy kiadás kártyára a listához való ugráshoz.",
-  "guideDashboardTip3": "A kördiagramok és az elemzések a rögzítés pillanatában frissülnek.",
+  "guideDashboardTitle": "A kezdőlapja",
+  "guideDashboardBody": "Minden itt kezdődik. A felső kártya azt mutatja, mennyi maradt; alatta az időszak bevétele és kiadása, majd a költései, keretei és céljai.",
+  "guideDashboardTip1": "Húzza le a képernyőt, hogy minden egyszerre frissüljön.",
+  "guideDashboardTip2": "Koppintson a bevételi vagy kiadási kártyára, hogy egyenesen arra a listára jusson.",
+  "guideDashboardTip3": "A gyűrűk és az észrevételek abban a pillanatban frissülnek, ahogy rögzít valamit.",
   "guideAddTitle": "Pénz rögzítése",
-  "guideAddBody": "Az alsó sáv közepén lévő gomb a kiindulópont. Egy rövid menüt nyit meg: kiadás, bevétel, hitel, keret vagy megtakarítási cél.",
-  "guideAddTip1": "Koppints a középső gombra bevétel vagy kiadás rögzítéséhez.",
-  "guideAddTip2": "Tartsd hosszan lenyomva a menü kihagyásához és azonnali új kiadáshoz.",
-  "guideAddTip3": "Mindig válassz kategóriát — ez teszi működőképessé a diagramokat és kereteket.",
+  "guideAddBody": "A sáv közepén lévő gomb minden kiindulópontja. Rövid menüt nyit: kiadás, bevétel, tartozás, keret vagy megtakarítási cél.",
+  "guideAddTip1": "Koppintson a középső gombra bevétel vagy kiadás rögzítéséhez.",
+  "guideAddTip2": "Tartsa nyomva, hogy a menüt kihagyva egyenesen új kiadáshoz jusson.",
+  "guideAddTip3": "Mindig válasszon kategóriát — ezen múlnak a diagramok és a keretek.",
   "guideCategoriesTitle": "Kategóriák",
-  "guideCategoriesBody": "A kategóriák segítségével csoportosíthatók a kiadások. Az alapértelmezettek a legtöbb igényt lefedik, de átnevezheted őket vagy újakat is hozzáadhatsz.",
-  "guideCategoriesTip1": "Beállítások, majd Kategóriák kezelése a módosításhoz vagy létrehozáshoz.",
-  "guideCategoriesTip2": "Bármi, ami kategória nélkül marad, az Egyéb alá kerül, így a kimutatások pontosak maradnak.",
-  "guideBudgetTitle": "Költségkeretek",
-  "guideBudgetBody": "A költségkeret egy kategóriára vonatkozó havi limit. A sáv feltöltődik költés közben, és színt vált, ha közeledsz a plafonhoz.",
-  "guideBudgetTip1": "Kezdd két vagy három kategóriával, ne az összessel egyszerre.",
-  "guideBudgetTip2": "Állítsd a limitet kicsivel a szokásos költésed fölé, majd fokozatosan szűkítsd.",
-  "guideBudgetTip3": "Hagyd bekapcsolva a keretriasztásokat, hogy az app időben figyelmeztessen.",
+  "guideCategoriesBody": "A kategóriák csoportosítják a kiadásokat. Az alapból meglévők a legtöbb embernek elegendők, de átnevezheti őket, vagy vehet fel sajátot.",
+  "guideCategoriesTip1": "Beállítások, majd Kategóriák kezelése a módosításhoz vagy hozzáadáshoz.",
+  "guideCategoriesTip2": "Ami kategória nélkül marad, az „Egyéb” alá kerül, így a diagramok őszinték maradnak.",
+  "guideBudgetTitle": "Keretek",
+  "guideBudgetBody": "A keret egy kategória havi felső határa. A sáv telik, ahogy költ, és színt vált, amikor közeledik — így még azelőtt megtudja, hogy átlépné.",
+  "guideBudgetTip1": "Kezdje két-három kategóriával, ne mindegyikkel egyszerre.",
+  "guideBudgetTip2": "A határt tegye kicsit a szokásos költése fölé, aztán szorítsa meg.",
+  "guideBudgetTip3": "Hagyja bekapcsolva a keretriasztásokat, és az alkalmazás szól, amikor fogytán van.",
   "guideSavingsTitle": "Megtakarítási célok",
-  "guideSavingsBody": "Nevezd meg, mire gyűjtesz, határozz meg egy célösszeget és dátumot, az alkalmazás pedig kiszámolja a szükséges havi összeget.",
-  "guideSavingsTip1": "Egy konkrét célhoz könnyebb ragaszkodni, mint egy általános megtakarítási szándékhoz.",
-  "guideSavingsTip2": "Több kisebb célt gyakrabban sikerül elérni, mint egyetlen hatalmasat.",
-  "guideLoansTitle": "Hitelek és tartozások",
-  "guideLoansBody": "Rögzítsd, mivel tartozol, mennyibe kerül, és mikor esedékes a következő fizetés. Minden törlesztés egy helyen látható a fennmaradó összeggel.",
-  "guideLoansTip1": "Add meg az esedékesség napját, és a fizetési emlékeztetők szólni fognak helyetted.",
-  "guideLoansTip2": "A késedelmes tartozás pirossal jelenik meg a kezdőlapon, amíg ki nem fizeted.",
-  "guideReportsTitle": "Jelentések",
-  "guideReportsBody": "Részletes betekintés: bevételek és kiadások aránya, kategóriánkénti bontás, a költségkeretek betartása és a megtakarított jövedelemrész.",
-  "guideReportsTip1": "Válts a heti, havi és negyedéves nézetek között a képernyő tetején.",
-  "guideReportsTip2": "Exportálj vagy ossz meg PDF-et — a saját nyelveden és olvasási irányodban készül el.",
+  "guideSavingsBody": "Nevezze meg, mire gyűjt, adjon meg összeget és dátumot, az alkalmazás pedig kiszámolja, mennyit kell havonta félretennie.",
+  "guideSavingsTip1": "Egy nevesített célt könnyebb tartani, mint azt a homályos szándékot, hogy „félre kéne tenni”.",
+  "guideSavingsTip2": "Több kis cél gyakrabban ér célba, mint egyetlen nagy.",
+  "guideLoansTitle": "Tartozások és hitelek",
+  "guideLoansBody": "Rögzítse, mennyivel tartozik, mennyibe kerül, és mikor esedékes a következő részlet. Amit törleszt, mind egy listában van a hátralékkal együtt.",
+  "guideLoansTip1": "Adja meg az esedékesség napját, és az emlékeztetők Ön helyett figyelnek rá.",
+  "guideLoansTip2": "A lejárt tartozás pirosan látszik a kezdőlapon, amíg ki nem fizeti.",
+  "guideReportsTitle": "Kimutatások",
+  "guideReportsBody": "A mélyebb kép: bevétel a kiadással szemben, kiadás kategóriánként, hogyan tartottak a keretei, és jövedelmének mekkora része maradt meg.",
+  "guideReportsTip1": "A képernyő tetején váltson hét, hónap és negyedév között.",
+  "guideReportsTip2": "Exportáljon vagy osszon meg PDF-et — az Ön nyelvén és írásirányában készül.",
   "guideSettingsTitle": "Beállítások",
-  "guideSettingsBody": "A nyelv, pénznem, színek és értesítések mind itt találhatók, és semmi sincs kőbe vésve — bármikor módosíthatod őket.",
-  "guideSettingsTip1": "Negyven nyelv támogatott, és a teljes elrendezés tükröződik a jobbról balra író nyelvekhez.",
-  "guideSettingsTip2": "Válaszd ki, milyen értesítéseket szeretnél és mikor érkezhetnek.",
-  "guideSettingsTip3": "A csendes időszak minden értesítést visszatart reggelig.",
-  "guideHabitTitle": "Alakíts ki szokást",
-  "guideHabitBody": "Az alkalmazás csak annyira hasznos, amennyi adatot rögzítesz benne. Napi egy perc többet ér, mint havonta egy óra, és két hét után a számok kezdenek valódi képet mutatni.",
-  "guideHabitTip1": "Rögzítsd a költéseidet azonnal, ne a hét végén halmozd fel őket.",
-  "guideHabitTip2": "Naponta egyszer nézz rá az irányítópultra. Tíz másodperc elegendő.",
-  "guideHabitTip3": "Ez az útmutató a Beállításokban marad — bármikor visszatérhetsz hozzá.",
+  "guideSettingsBody": "A nyelv, a pénznem, a színek és a riasztások mind itt vannak, és a kezdeti beállítás egyiket sem rögzíti véglegesen — módosítsa, amikor csak akarja.",
+  "guideSettingsTip1": "Negyven nyelv, és a teljes elrendezés tükröződik a jobbról balra írt nyelveknél.",
+  "guideSettingsTip2": "Válassza ki, mely riasztásokat kéri, és mikor érkezhetnek.",
+  "guideSettingsTip3": "A csendes órák reggelig visszatartanak mindent.",
+  "guideHabitTitle": "Váljon szokássá",
+  "guideHabitBody": "Az alkalmazás annyit ér, amennyit beletesz. Napi egy perc többet ér, mint havi egy óra, és két hét után a számok elkezdenek mondani valamit.",
+  "guideHabitTip1": "A kiadást akkor rögzítse, amikor történik, ne a hét végén.",
+  "guideHabitTip2": "Naponta egyszer pillantson a kezdőlapra. Tíz másodperc elég.",
+  "guideHabitTip3": "Ez az útmutató a Beállításokban marad — térjen vissza bármikor.",
   "appearance": "Megjelenés",
-  "themeCaption": "Világos, sötét vagy a telefonod beállításait követő.",
-  "accentColor": "Kiemelő szín",
+  "themeCaption": "Világos, sötét, vagy ahogy a telefonja áll.",
+  "accentColor": "Kiemelőszín",
   "accentColorCaption": "A gombok, kiemelések és diagramok színe.",
-  "accentSemanticsNote": "A bevételek és kiadások minden témában megőrzik saját színeiket, így egy összeg jelentése soha nem változik meg a kiemelő szín módosításakor.",
-  "accentTeal": "Pávakék",
+  "accentSemanticsNote": "A bejövő és kimenő pénz minden témában megtartja a saját színét, így egy szám sosem változtat jelentést csak azért, mert kiemelőszínt váltott.",
+  "accentTeal": "Türkiz",
   "accentGreen": "Zöld",
   "accentSky": "Égszínkék",
   "accentBlue": "Kék",
-  "accentIndigo": "Indigókék",
-  "accentViolet": "Ibolyalila",
+  "accentIndigo": "Indigó",
+  "accentViolet": "Ibolya",
   "accentPink": "Rózsaszín",
-  "accentCrimson": "Karmazsinvörös",
-  "accentOrange": "Narancssárga",
+  "accentCrimson": "Bíbor",
+  "accentOrange": "Narancs",
   "accentSlate": "Palaszürke",
   "searchLanguages": "Nyelvek keresése",
   "suggestedLanguages": "Javasolt",
   "allLanguages": "Összes nyelv",
-  "noLanguagesFound": "Nem található nyelv",
-  "noLanguagesFoundMessage": "Próbáld meg az angol nevet vagy a kétbetűs kódot.",
+  "noLanguagesFound": "Nincs találat",
+  "noLanguagesFoundMessage": "Próbálja az angol nevet vagy a kétbetűs kódot.",
   "rightToLeft": "Jobbról balra",
-  "replayGuide": "Útmutató újrajátszása",
-  "replaySetup": "Kezdeti beállítás újrafuttatása",
-  "replaySetupBody": "Válaszold meg újra a kezdeti kérdéseket. Egyetlen korábban rögzített adatod sem fog törlődni.",
+  "replayGuide": "Útmutató újranézése",
+  "replaySetup": "Beállítás újrafuttatása",
+  "replaySetupBody": "Menjen végig újra a kezdeti kérdéseken. Semmi nem törlődik abból, amit rögzített.",
   "rateTitle": "Tetszik a RainyPenny?",
-  "rateBody": "Már egy ideje használod az alkalmazást. Egy értékelés csak egy pillanatot vesz igénybe, és segít másoknak rátalálni az appra.",
+  "rateBody": "Már egy ideje kitart mellette. Az értékelés egy pillanat, és segít másoknak megtalálni az alkalmazást.",
   "rateAction": "Alkalmazás értékelése",
   "rateLater": "Talán később",
-  "rateNever": "Nem, köszönöm",
-  "rateThanks": "Köszönjük szépen!",
-
+  "rateNever": "Köszönöm, nem",
+  "rateThanks": "Köszönjük",
   "monthlySalary": "Havi fizetés",
   "remainingAmount": "Fennmaradó",
   "carriedForward": "Áthozott összeg",
@@ -1145,22 +502,8 @@
   "paydayDescription": "A nap, amikor a fizetésed megérkezik. A pénzügyi hónapod ettől a naptól a következő előtti napig tart.",
   "paydayUpdated": "Fizetésnap frissítve",
   "paydayDayOfMonth": "A hónap {day}. napja",
-  "@paydayDayOfMonth": {
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "paydayShortMonthNote": "Rövidebb hónapokban a ciklus a hónap utolsó napján indul.",
   "daysLeftInCycle": "{count, plural, =0{A ciklus utolsó napja} =1{1 nap van a fizetésig} other{{count} nap van a fizetésig}}",
-  "@daysLeftInCycle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "nextPayday": "Következő fizetésnap",
   "spentSoFar": "Eddig elköltve",
   "dailyAllowance": "Biztonságos napi költési keret",
@@ -1170,17 +513,6 @@
   "noSalaryRecorded": "Még nincs rögzítve fizetés",
   "addSalaryAction": "Fizetés megadása",
   "cycleOf": "{start} – {end}",
-  "@cycleOf": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "healthExcellent": "Kiváló",
   "healthGood": "Jó",
   "healthFair": "Közepes",
@@ -1194,67 +526,21 @@
   "factorDebtLoad": "Adósságteher",
   "factorSpendingTrend": "Költési tendencia",
   "factorKept": "{percent}% megtartva",
-  "@factorKept": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorUsed": "{percent}% felhasználva",
-  "@factorUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorOfIncome": "a bevétel {percent}%-a",
-  "@factorOfIncome": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorTrendUp": "{percent}%-os növekedés",
-  "@factorTrendUp": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorTrendDown": "{percent}%-os csökkenés",
-  "@factorTrendDown": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "howScoreWorks": "Hogyan működik ez a pontszám?",
   "healthScoreExplainer": "A pontszámod négy tényezőből áll össze: a bevételed mekkora részét tartod meg, mennyire tartod a költségkereteidet, a jövedelmed mekkora része megy törlesztésre, és hogy a költéseid növekednek vagy csökkennek-e.",
   "scoreWeightLabel": "A pontszám {percent}%-a",
-  "@scoreWeightLabel": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "viewHealthDetails": "Részletek megtekintése",
-
   "saveChanges": "Módosítások mentése",
   "profileUpdated": "Profil frissítve",
   "changePhoto": "Fotó módosítása",
   "removePhoto": "Fotó eltávolítása",
   "personalInformationIntro": "A neved és a fotód az egész alkalmazásban megjelenik. Az e-mail-címed az, amellyel bejelentkezel.",
-  "nameRequired": "Add meg a neved",
   "emailNotEditable": "A bejelentkezési e-mail-cím módosításához lépj kapcsolatba az ügyfélszolgálattal.",
-
   "pressBackAgainToExit": "Nyomd meg újra a vissza gombot a kilépéshez",
-
   "categoryHousing": "Lakhatás",
   "categoryFood": "Étel és étkezés",
   "categoryTransport": "Közlekedés",
@@ -1308,112 +594,33 @@
   "categoryCashback": "Pénzvisszafizetés",
   "categoryRefund": "Visszatérítés",
   "categoryRentalIncome": "Bérbeadásból származó jövedelem",
-
   "addCategory": "Új kategória",
   "filterByCategory": "Szűrés kategória szerint",
   "allCategories": "Összes kategória",
   "clearFilters": "Szűrők törlése",
   "spentInCategory": "{category}  ·  {amount}",
-  "@spentInCategory": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "allTime": "Kezdetektől",
   "customRange": "Egyéni",
   "selectDateRange": "Időszak kiválasztása",
   "rangeApplied": "Megjelenítve: {start} – {end}",
-  "@rangeApplied": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "loans": "Hitelek",
   "debts": "Tartozások",
   "noLoansTitle": "Nincsenek hitelek",
   "noLoansBody": "Nincsenek aktív hiteleid.",
-
   "emptyHealthTitle": "Még nincs pénzügyi pontszám",
-  "@emptyHealthTitle": {
-    "description": "Title shown when there is not enough data to compute a health score"
-  },
   "emptyHealthDescription": "Szükségünk van egy kis pénzügyi aktivitásra a pontos pontszám kiszámításához.",
-  "@emptyHealthDescription": {
-    "description": "Explainer message shown in the empty state on the financial health screen"
-  },
   "emptyHealthAddTransactions": "Adj hozzá bevételi vagy kiadási tranzakciókat",
-  "@emptyHealthAddTransactions": {
-    "description": "Checklist item prompting user to add transactions"
-  },
   "emptyHealthSetBudgets": "Állítsd be a havi költségkereteidet",
-  "@emptyHealthSetBudgets": {
-    "description": "Checklist item prompting user to set budgets"
-  },
   "emptyHealthTrackLoans": "Kövesd nyomon a hiteleket vagy tartozásokat (opcionális)",
-  "@emptyHealthTrackLoans": {
-    "description": "Checklist item prompting user to track loans"
-  },
   "emptyHealthCardSubtitle": "Adj hozzá tranzakciókat a pontszámod kiszámításához és az elemzésekhez.",
-  "@emptyHealthCardSubtitle": {
-    "description": "Subtitle shown on the dashboard health card when no data is available"
-  },
-  
   "smartBudgetSplit": "Okos költségkeret-elosztás",
-  "@smartBudgetSplit": {
-    "description": "Title for smart salary budget split sheet"
-  },
   "smartBudgetSplitSubtitle": "Add meg a havi fizetésed az ajánlott keretek kiszámításához",
-  "@smartBudgetSplitSubtitle": {
-    "description": "Subtitle explaining how salary budget split works"
-  },
   "monthlyNetSalary": "Havi nettó fizetés",
-  "@monthlyNetSalary": {
-    "description": "Label for monthly net salary input field"
-  },
   "categoryAllocations": "Kategória-elosztások",
-  "@categoryAllocations": {
-    "description": "Header for recommended category allocations list"
-  },
   "totalBudgeted": "Összesen: {amount}",
-  "@totalBudgeted": {
-    "description": "Total amount budgeted across categories",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "applyAllBudgets": "Összes keret alkalmazása",
-  "@applyAllBudgets": {
-    "description": "Button label to apply all recommended category limits"
-  },
   "applyingBudgets": "Keretek alkalmazása folyamatban...",
-  "@applyingBudgets": {
-    "description": "Loading state label while applying budgets"
-  },
   "budgetsCreatedSuccess": "{count, plural, =1{1 kategória költségkerete létrehozva.} other{{count} kategória költségkerete létrehozva.}}",
-  "@budgetsCreatedSuccess": {
-    "description": "Success snackbar message when budgets are created",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "failedToSaveBudgets": "Nem sikerült elmenteni a költségkereteket.",
-  "@failedToSaveBudgets": {
-    "description": "Error message when saving budgets fails"
-  },
   "recommendedBudget": "Ajánlott költségkeret"
 }

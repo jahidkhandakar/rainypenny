@@ -3913,6 +3913,18 @@ abstract class AppL10n {
   /// In en, this message translates to:
   /// **'Recommended budget'**
   String get recommendedBudget;
+
+  /// No description provided for @due.
+  ///
+  /// In en, this message translates to:
+  /// **'Due'**
+  String get due;
+
+  /// No description provided for @dueAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Due amount'**
+  String get dueAmount;
 }
 
 class _AppL10nDelegate extends LocalizationsDelegate<AppL10n> {

@@ -150,7 +150,7 @@ class _Body extends ConsumerWidget {
                   children: [
                     _DetailRow(label: l10n.totalLoanAmount, value: money.format(loan.principal)),
                     _DetailRow(
-                      label: l10n.remainingBalance,
+                      label: l10n.dueAmount,
                       value: money.format(loan.remaining),
                       emphasised: true,
                     ),
@@ -289,7 +289,7 @@ class _HeaderCard extends ConsumerWidget {
           ),
           const SizedBox(height: AppSpacing.xl),
           Text(
-            l10n.remainingBalance.toUpperCase(),
+            l10n.dueAmount.toUpperCase(),
             style: AppTypography.overline.copyWith(color: Colors.white.withValues(alpha: 0.7)),
           ),
           const SizedBox(height: AppSpacing.sm),

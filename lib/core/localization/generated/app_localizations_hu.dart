@@ -12,40 +12,40 @@ class AppL10nHu extends AppL10n {
   String get appName => 'RainyPenny';
 
   @override
-  String get appTagline => 'Tegyél félre a nehezebb napokra';
+  String get appTagline => 'Tegyen félre a nehezebb napokra';
 
   @override
   String get navHome => 'Kezdőlap';
 
   @override
-  String get navTransactions => 'Tranzakciók';
+  String get navTransactions => 'Tételek';
 
   @override
   String get navAdd => 'Hozzáadás';
 
   @override
-  String get navReports => 'Jelentések';
+  String get navReports => 'Kimutatások';
 
   @override
   String get navProfile => 'Profil';
 
   @override
   String greetingMorning(String name) {
-    return 'Jó reggelt, $name!';
+    return 'Jó reggelt, $name';
   }
 
   @override
   String greetingAfternoon(String name) {
-    return 'Szép napot, $name!';
+    return 'Jó napot, $name';
   }
 
   @override
   String greetingEvening(String name) {
-    return 'Jó estét, $name!';
+    return 'Jó estét, $name';
   }
 
   @override
-  String get greetingSubtitle => 'Itt van a pénzügyi áttekintésed';
+  String get greetingSubtitle => 'Így áll a pénzügyi helyzete';
 
   @override
   String get totalBalance => 'Teljes egyenleg';
@@ -57,7 +57,7 @@ class AppL10nHu extends AppL10n {
   String get income => 'Bevétel';
 
   @override
-  String get expenses => 'Kiadások';
+  String get expenses => 'Kiadás';
 
   @override
   String get netBalance => 'Nettó egyenleg';
@@ -66,7 +66,7 @@ class AppL10nHu extends AppL10n {
   String get lastThirtyDays => 'Elmúlt 30 nap';
 
   @override
-  String get quickActions => 'Gyorsműveletek';
+  String get quickActions => 'Gyors műveletek';
 
   @override
   String get addIncome => 'Bevétel hozzáadása';
@@ -75,36 +75,36 @@ class AppL10nHu extends AppL10n {
   String get addExpense => 'Kiadás hozzáadása';
 
   @override
-  String get spendingOverview => 'Költési áttekintés';
+  String get spendingOverview => 'Kiadások áttekintése';
 
   @override
-  String get recentTransactions => 'Legutóbbi tranzakciók';
+  String get recentTransactions => 'Legutóbbi tételek';
 
   @override
   String get seeAll => 'Összes megtekintése';
 
   @override
-  String get viewAll => 'Összes megtekintése';
+  String get viewAll => 'Mind megjelenítése';
 
   @override
-  String get budgetProgress => 'Költségkeret állása';
+  String get budgetProgress => 'Keretek állása';
 
   @override
   String get savingsGoals => 'Megtakarítási célok';
 
   @override
-  String get financialInsight => 'Pénzügyi betekintés';
+  String get financialInsight => 'Pénzügyi észrevétel';
 
   @override
   String get financialHealth => 'Pénzügyi egészség';
 
   @override
   String ofTotal(String total) {
-    return '/ $total';
+    return 'ebből: $total';
   }
 
   @override
-  String get searchTransactions => 'Tranzakciók keresése';
+  String get searchTransactions => 'Tételek keresése';
 
   @override
   String get filterAll => 'Összes';
@@ -113,7 +113,7 @@ class AppL10nHu extends AppL10n {
   String get filterIncome => 'Bevétel';
 
   @override
-  String get filterExpenses => 'Kiadások';
+  String get filterExpenses => 'Kiadás';
 
   @override
   String get today => 'Ma';
@@ -122,26 +122,25 @@ class AppL10nHu extends AppL10n {
   String get yesterday => 'Tegnap';
 
   @override
-  String get noTransactionsTitle => 'Nem találhatók tranzakciók';
+  String get noTransactionsTitle => 'Nincs találat';
 
   @override
   String get noTransactionsBody =>
-      'Próbálkozz más kereséssel vagy szűrővel a korábbi tételek megtekintéséhez.';
+      'Próbáljon másik keresést vagy szűrőt, hogy több bejegyzést lásson.';
 
   @override
   String transactionCount(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count tranzakció',
-      one: '1 tranzakció',
-      zero: 'Nincs tranzakció',
+      other: '$count tétel',
+      zero: 'Nincs tétel',
     );
     return '$_temp0';
   }
 
   @override
-  String get addTransaction => 'Tranzakció hozzáadása';
+  String get addTransaction => 'Tétel hozzáadása';
 
   @override
   String get amount => 'Összeg';
@@ -156,7 +155,7 @@ class AppL10nHu extends AppL10n {
   String get note => 'Megjegyzés';
 
   @override
-  String get noteHint => 'Opcionális megjegyzés';
+  String get noteHint => 'Megjegyzés (nem kötelező)';
 
   @override
   String get saveIncome => 'Bevétel mentése';
@@ -165,37 +164,37 @@ class AppL10nHu extends AppL10n {
   String get saveExpense => 'Kiadás mentése';
 
   @override
-  String get selectCategory => 'Kategória kiválasztása';
+  String get selectCategory => 'Kategória választása';
 
   @override
-  String get transactionSaved => 'Tranzakció mentve';
+  String get transactionSaved => 'A tétel mentve';
 
   @override
-  String get amountRequired => 'Adj meg nullánál nagyobb összeget';
+  String get amountRequired => 'Adjon meg nullánál nagyobb összeget';
 
   @override
-  String get titleRequired => 'Adj nevet ennek a tranzakciónak';
+  String get titleRequired => 'Adjon nevet ennek a tételnek';
 
   @override
   String get descriptionLabel => 'Leírás';
 
   @override
-  String get descriptionHint => 'pl. Élelmiszer';
+  String get descriptionHint => 'pl. bevásárlás';
 
   @override
-  String get budget => 'Költségkeret';
+  String get budget => 'Keret';
 
   @override
-  String get budgets => 'Költségkeretek';
+  String get budgets => 'Keretek';
 
   @override
-  String get totalBudget => 'Teljes költségkeret';
+  String get totalBudget => 'Teljes keret';
 
   @override
   String get spent => 'Elköltve';
 
   @override
-  String get remaining => 'Fennmaradó';
+  String get remaining => 'Maradt';
 
   @override
   String budgetUsed(int percent) {
@@ -203,42 +202,41 @@ class AppL10nHu extends AppL10n {
   }
 
   @override
-  String get onTrack => 'Megfelelő';
+  String get onTrack => 'Jó úton';
 
   @override
-  String get approachingLimit => 'Közelít a limithez';
+  String get approachingLimit => 'Közel a határhoz';
 
   @override
-  String get overBudget => 'Keret túllépve';
+  String get overBudget => 'Kereten felül';
 
   @override
-  String get savings => 'Megtakarítások';
+  String get savings => 'Megtakarítás';
 
   @override
-  String get yourGoals => 'Céljaid';
+  String get yourGoals => 'Az Ön céljai';
 
   @override
   String get saved => 'Megtakarítva';
 
   @override
-  String get target => 'Célösszeg';
+  String get target => 'Cél';
 
   @override
   String get monthlyContribution => 'Havonta';
 
   @override
-  String get addFunds => 'Összeg hozzáadása';
+  String get addFunds => 'Befizetés';
 
   @override
-  String get goalComplete => 'Cél elérve';
+  String get goalComplete => 'A cél teljesült';
 
   @override
   String monthsToGo(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count hónap van hátra',
-      one: '1 hónap van hátra',
+      other: 'még $count hónap',
     );
     return '$_temp0';
   }
@@ -247,42 +245,41 @@ class AppL10nHu extends AppL10n {
   String get loansAndDebts => 'Hitelek és tartozások';
 
   @override
-  String get totalOutstanding => 'Fennmaradó teljes tartozás';
+  String get totalOutstanding => 'Fennálló tartozás';
 
   @override
   String get monthlyPayment => 'Havonta';
 
   @override
-  String get nextPayment => 'Következő törlesztés';
+  String get nextPayment => 'Következő részlet';
 
   @override
   String paidOff(int percent) {
-    return '$percent% visszafizetve';
+    return '$percent% törlesztve';
   }
 
   @override
   String get interestRate => 'Kamat';
 
   @override
-  String get upcomingPayments => 'Közelgő fizetések';
+  String get upcomingPayments => 'Közelgő részletek';
 
   @override
   String dueInDays(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count nap múlva esedékes',
-      one: 'Holnap esedékes',
+      other: '$count nap múlva',
       zero: 'Ma esedékes',
     );
     return '$_temp0';
   }
 
   @override
-  String get overdue => 'Késedelmes';
+  String get overdue => 'Lejárt';
 
   @override
-  String get reports => 'Jelentések';
+  String get reports => 'Kimutatások';
 
   @override
   String get week => 'Hét';
@@ -294,16 +291,16 @@ class AppL10nHu extends AppL10n {
   String get quarter => 'Negyedév';
 
   @override
-  String get incomeVsExpenses => 'Bevételek és kiadások';
+  String get incomeVsExpenses => 'Bevétel és kiadás';
 
   @override
-  String get spendingByCategory => 'Költés kategóriák szerint';
+  String get spendingByCategory => 'Kiadás kategóriánként';
 
   @override
-  String get budgetPerformance => 'Költségkeret teljesítése';
+  String get budgetPerformance => 'Keretek teljesülése';
 
   @override
-  String get insights => 'Elemzések';
+  String get insights => 'Észrevételek';
 
   @override
   String get savingsRate => 'Megtakarítási ráta';
@@ -355,11 +352,11 @@ class AppL10nHu extends AppL10n {
 
   @override
   String memberSince(String date) {
-    return 'Tagság kezdete: $date';
+    return 'Tag $date óta';
   }
 
   @override
-  String get themeSystem => 'Rendszer';
+  String get themeSystem => 'Rendszer szerint';
 
   @override
   String get themeLight => 'Világos';
@@ -371,11 +368,11 @@ class AppL10nHu extends AppL10n {
   String get settings => 'Beállítások';
 
   @override
-  String get noNotificationsTitle => 'Nincsenek új értesítéseid';
+  String get noNotificationsTitle => 'Mindent látott';
 
   @override
   String get noNotificationsBody =>
-      'Az új betekintések és emlékeztetők itt fognak megjelenni.';
+      'Az új észrevételek és emlékeztetők itt jelennek meg.';
 
   @override
   String get cancel => 'Mégse';
@@ -396,7 +393,7 @@ class AppL10nHu extends AppL10n {
   String get somethingWentWrong => 'Valami hiba történt';
 
   @override
-  String get comingSoon => 'Hamarosan elérhető a teljes verzióban';
+  String get comingSoon => 'A teljes verzióban érkezik';
 
   @override
   String get edit => 'Szerkesztés';
@@ -414,61 +411,60 @@ class AppL10nHu extends AppL10n {
   String get create => 'Létrehozás';
 
   @override
-  String get nameRequired => 'Add meg a neved';
+  String get nameRequired => 'Adjon neki nevet';
 
   @override
-  String get amountAboveZero => 'Adj meg nullánál nagyobb összeget';
+  String get amountAboveZero => 'Adjon meg nullánál nagyobb összeget';
 
   @override
-  String get editTransaction => 'Tranzakció szerkesztése';
+  String get editTransaction => 'Tétel szerkesztése';
 
   @override
-  String get deleteTransaction => 'Törlöd a tranzakciót?';
+  String get deleteTransaction => 'Törli a tételt?';
 
   @override
   String deleteTransactionBody(String title) {
-    return 'A(z) „$title” törlődik a nyilvántartásodból.';
+    return 'A(z) $title kikerül a nyilvántartásából.';
   }
 
   @override
-  String get transactionDeleted => 'Tranzakció törölve';
+  String get transactionDeleted => 'A tétel törölve';
 
   @override
-  String get transactionUpdated => 'Tranzakció frissítve';
+  String get transactionUpdated => 'A tétel frissítve';
 
   @override
-  String get newBudget => 'Új költségkeret';
+  String get newBudget => 'Új keret';
 
   @override
-  String get editBudget => 'Költségkeret szerkesztése';
+  String get editBudget => 'Keret szerkesztése';
 
   @override
-  String get budgetLimit => 'Havi limit';
+  String get budgetLimit => 'Havi felső határ';
 
   @override
-  String get deleteBudget => 'Törlöd a költségkeretet?';
+  String get deleteBudget => 'Törli a keretet?';
 
   @override
   String deleteBudgetBody(String category) {
-    return 'A(z) „$category” kategória költségkerete törlődik. A tranzakcióidat ez nem érinti.';
+    return 'A(z) $category keret törlődik. A tételeit ez nem érinti.';
   }
 
   @override
-  String get budgetSaved => 'Költségkeret mentve';
+  String get budgetSaved => 'A keret mentve';
 
   @override
-  String get budgetDeleted => 'Költségkeret törölve';
+  String get budgetDeleted => 'A keret törölve';
 
   @override
-  String get allCategoriesBudgeted =>
-      'Minden kategóriához tartozik már költségkeret';
+  String get allCategoriesBudgeted => 'Minden kategóriának van már kerete';
 
   @override
-  String get noBudgetsTitle => 'Még nincsenek költségkeretek';
+  String get noBudgetsTitle => 'Még nincs keret';
 
   @override
   String get noBudgetsBody =>
-      'Állíts be egy havi limitet valamelyik kategóriához a nyomon követés megkezdéséhez.';
+      'Adjon havi felső határt egy kategóriának, és elindul a követése.';
 
   @override
   String get newGoal => 'Új cél';
@@ -477,10 +473,10 @@ class AppL10nHu extends AppL10n {
   String get editGoal => 'Cél szerkesztése';
 
   @override
-  String get goalName => 'Cél neve';
+  String get goalName => 'A cél neve';
 
   @override
-  String get goalNameHint => 'pl. Vészalap';
+  String get goalNameHint => 'pl. vésztartalék';
 
   @override
   String get targetAmount => 'Célösszeg';
@@ -489,28 +485,28 @@ class AppL10nHu extends AppL10n {
   String get alreadySaved => 'Már megtakarítva';
 
   @override
-  String get deleteGoal => 'Törlöd a célt?';
+  String get deleteGoal => 'Törli a célt?';
 
   @override
   String deleteGoalBody(String name) {
-    return 'A(z) „$name” cél és az eddigi haladás törlődik.';
+    return 'A(z) $name és a hozzá tartozó haladás törlődik.';
   }
 
   @override
-  String get goalSaved => 'Cél mentve';
+  String get goalSaved => 'A cél mentve';
 
   @override
-  String get goalDeleted => 'Cél törölve';
+  String get goalDeleted => 'A cél törölve';
 
   @override
-  String get noGoalsTitle => 'Még nincsenek megtakarítási célok';
+  String get noGoalsTitle => 'Még nincs megtakarítási cél';
 
   @override
   String get noGoalsBody =>
-      'Tűzz ki egy célt, és a RainyPenny segít nyomon követni az előrehaladásodat.';
+      'Tűzzön ki célt, és a RainyPenny követi a haladását.';
 
   @override
-  String get fundsAdded => 'Összeg hozzáadva';
+  String get fundsAdded => 'Az összeg hozzáadva';
 
   @override
   String get newDebt => 'Új hitel vagy kártya';
@@ -522,7 +518,7 @@ class AppL10nHu extends AppL10n {
   String get debtName => 'Név';
 
   @override
-  String get debtNameHint => 'pl. Autóhitel';
+  String get debtNameHint => 'pl. autóhitel';
 
   @override
   String get lender => 'Hitelező';
@@ -534,10 +530,10 @@ class AppL10nHu extends AppL10n {
   String get originalAmount => 'Eredeti összeg';
 
   @override
-  String get creditLimit => 'Hitellimit';
+  String get creditLimit => 'Hitelkeret';
 
   @override
-  String get remainingBalance => 'Fennmaradó egyenleg';
+  String get remainingBalance => 'Fennmaradó tartozás';
 
   @override
   String get interestRatePercent => 'Kamatláb (%)';
@@ -552,14 +548,14 @@ class AppL10nHu extends AppL10n {
   String get recordPayment => 'Törlesztés rögzítése';
 
   @override
-  String get paymentRecorded => 'Törlesztés rögzítve';
+  String get paymentRecorded => 'A törlesztés rögzítve';
 
   @override
-  String get deleteDebt => 'Törlöd ezt a tartozást?';
+  String get deleteDebt => 'Törli ezt a tartozást?';
 
   @override
   String deleteDebtBody(String name) {
-    return 'A(z) „$name” törlődik a tartozásaid közül.';
+    return 'A(z) $name kikerül a tartozásai közül.';
   }
 
   @override
@@ -569,25 +565,25 @@ class AppL10nHu extends AppL10n {
   String get debtDeleted => 'Törölve';
 
   @override
-  String get noDebtsTitle => 'Nincsenek nyomon követett tartozások';
+  String get noDebtsTitle => 'Nincs követett tartozás';
 
   @override
   String get noDebtsBody =>
-      'Adj hozzá egy hitelt vagy hitelkártyát a törlesztések figyeléséhez.';
+      'Vegyen fel hitelt vagy hitelkártyát, hogy szemmel tarthassa a törlesztéseket.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
-    return 'Túllépted a(z) $subject költségkeretet';
+    return 'A(z) $subject keret túllépve';
   }
 
   @override
   String insightBudgetExceededBody(String amount, String subject) {
-    return '$amount összeggel lépted túl a(z) $subject költségkeretedet ebben az időszakban.';
+    return 'Ebben az időszakban $amount összeggel lépte túl a(z) $subject keretet.';
   }
 
   @override
   String insightBudgetApproachingTitle(String subject) {
-    return 'A(z) $subject keret a végéhez közeledik';
+    return 'A(z) $subject közelít a határhoz';
   }
 
   @override
@@ -596,74 +592,72 @@ class AppL10nHu extends AppL10n {
     int percent,
     String amount,
   ) {
-    return 'A(z) $subject kereted $percent%-a fogyott el, még $amount maradt.';
+    return 'A(z) $subject keret $percent%-a elfogyott, $amount maradt.';
   }
 
   @override
-  String get insightOverIncomeTitle => 'A kiadások meghaladják a bevételeket';
+  String get insightOverIncomeTitle => 'A kiadás meghaladja a bevételt';
 
   @override
   String get insightOverIncomeBody =>
-      'Többet költöttél ebben az időszakban, mint amennyit kerestél. Nézd át a legnagyobb kategóriáidat az egyensúly visszaállításához.';
+      'Ebben az időszakban többet költött, mint amennyit keresett. Nézze át a legnagyobb kategóriákat, hogy helyreálljon az egyensúly.';
 
   @override
   String insightCategoryUpTitle(String subject) {
-    return 'Megnőttek a(z) $subject kiadásaid';
+    return 'A(z) $subject kiadás nőtt';
   }
 
   @override
   String insightCategoryUpBody(String subject, int percent) {
-    return 'A(z) $subject kategóriára fordított összeg $percent%-kal magasabb, mint az előző időszakban.';
+    return 'A(z) $subject kiadása $percent%-kal magasabb az előző időszakhoz képest.';
   }
 
   @override
-  String get insightTrendDownTitle =>
-      'A kiadásaid csökkenő tendenciát mutatnak';
+  String get insightTrendDownTitle => 'A kiadások csökkennek';
 
   @override
   String insightTrendDownBody(int percent) {
-    return 'Az összes kiadásod $percent%-kal alacsonyabb, mint az előző időszakban.';
+    return 'Az összes kiadás $percent%-kal alacsonyabb az előző időszakhoz képest.';
   }
 
   @override
-  String get insightTrendUpTitle => 'A kiadásaid növekvő tendenciát mutatnak';
+  String get insightTrendUpTitle => 'A kiadások nőnek';
 
   @override
   String insightTrendUpBody(int percent) {
-    return 'Az összes kiadásod $percent%-kal magasabb, mint az előző időszakban.';
+    return 'Az összes kiadás $percent%-kal magasabb az előző időszakhoz képest.';
   }
 
   @override
   String get insightSavingsStrongTitle =>
-      'Kiváló megtakarítás ebben az időszakban';
+      'Erős megtakarítás ebben az időszakban';
 
   @override
   String insightSavingsStrongBody(int percent, int target) {
-    return 'A bevételed $percent%-át sikerült félretenned — ami jóval a kitűzött $target% felett van.';
+    return 'Bevételének $percent%-át megtartotta — jóval a $target%-os cél felett.';
   }
 
   @override
-  String get insightSavingsLowTitle =>
-      'A megtakarítási ráta a cél alatt maradt';
+  String get insightSavingsLowTitle => 'A megtakarítási ráta a cél alatt van';
 
   @override
   String insightSavingsLowBody(int percent, int target) {
-    return 'A bevételed $percent%-át tetted félre ebben az időszakban. Célozd meg a $target%-ot.';
+    return 'Ebben az időszakban bevételének $percent%-át tartotta meg. A cél $target%.';
   }
 
   @override
   String insightGoalNearlyTitle(String subject) {
-    return 'A(z) „$subject” cél majdnem teljesült';
+    return 'A(z) $subject majdnem összegyűlt';
   }
 
   @override
   String insightGoalNearlyBody(String amount, String subject) {
-    return 'Már csak $amount hiányzik a(z) „$subject” cél eléréséhez.';
+    return 'Már csak $amount hiányzik a(z) $subject eléréséhez.';
   }
 
   @override
   String insightGoalOnTrackTitle(String subject) {
-    return 'Jó úton jársz a(z) „$subject” cél felé';
+    return 'A(z) $subject jó úton halad';
   }
 
   @override
@@ -672,14 +666,13 @@ class AppL10nHu extends AppL10n {
       months,
       locale: localeName,
       other: '$months hónap',
-      one: '1 hónap',
     );
-    return 'Havi $amount összeggel $_temp0 múlva éred el ezt a célt.';
+    return 'Havi $amount mellett $_temp0 alatt éri el ezt a célt.';
   }
 
   @override
   String insightDebtOverdueTitle(String subject) {
-    return 'A(z) $subject törlesztése késedelmes';
+    return 'A(z) $subject törlesztése lejárt';
   }
 
   @override
@@ -688,14 +681,13 @@ class AppL10nHu extends AppL10n {
       days,
       locale: localeName,
       other: '$days napja',
-      one: '1 napja',
     );
-    return 'A(z) $subject $amount összegű fizetése $_temp0 késik.';
+    return 'A(z) $subject $amount összegű törlesztése $_temp0 késik.';
   }
 
   @override
   String insightDebtDueTitle(String subject) {
-    return 'A(z) $subject fizetése hamarosan esedékes';
+    return 'Közeleg a(z) $subject törlesztése';
   }
 
   @override
@@ -704,10 +696,9 @@ class AppL10nHu extends AppL10n {
       days,
       locale: localeName,
       other: '$days nap múlva',
-      one: 'holnap',
       zero: 'ma',
     );
-    return '$amount fizetendő $_temp0.';
+    return '$amount esedékes $_temp0.';
   }
 
   @override
@@ -717,10 +708,10 @@ class AppL10nHu extends AppL10n {
   String get signUp => 'Fiók létrehozása';
 
   @override
-  String get signInSubtitle => 'Üdv újra itt! Pénzügyeid kéznél vannak.';
+  String get signInSubtitle => 'Üdv újra. A pénze várja.';
 
   @override
-  String get signUpSubtitle => 'Pár adat megadása, és már készen is vagy.';
+  String get signUpSubtitle => 'Néhány adat, és készen is van.';
 
   @override
   String get emailLabel => 'E-mail';
@@ -741,52 +732,53 @@ class AppL10nHu extends AppL10n {
   String get fullNameHint => 'Kovács Anna';
 
   @override
-  String get forgotPassword => 'Elfelejtetted a jelszavad?';
+  String get forgotPassword => 'Elfelejtette a jelszavát?';
 
   @override
-  String get resetSent => 'Nézd meg a postafiókod a visszaállító linkért';
+  String get resetSent =>
+      'Nézze meg a postaládáját a visszaállító hivatkozásért';
 
   @override
-  String get noAccountYet => 'Új vagy itt?';
+  String get noAccountYet => 'Először jár itt?';
 
   @override
-  String get haveAccount => 'Már van fiókod?';
+  String get haveAccount => 'Már van fiókja?';
 
   @override
-  String get emailInvalid => 'Érvényes e-mail-címet adj meg';
+  String get emailInvalid => 'Adjon meg érvényes e-mail-címet';
 
   @override
-  String get passwordTooShort => 'Legalább 8 karaktert használj';
+  String get passwordTooShort => 'Használjon legalább 8 karaktert';
 
   @override
-  String get signOutConfirm => 'Kijelentkezel?';
+  String get signOutConfirm => 'Kijelentkezik?';
 
   @override
   String get signOutBody =>
-      'A pénzügyeid megtekintéséhez újra be kell jelentkezned.';
+      'Újra be kell jelentkeznie, hogy lássa a pénzügyeit.';
 
   @override
   String get dataSource => 'Adatforrás';
 
   @override
-  String get insightWeeklySummaryTitle => 'A heted áttekintése';
+  String get insightWeeklySummaryTitle => 'A hete egy pillantásra';
 
   @override
   String get insightWeeklySummaryBody =>
-      'Nézd meg, mire ment el a pénzed a héten, és hogyan állnak a költségkereteid.';
+      'Nézze meg, hová ment a pénze a héten, és hogyan tartanak a keretei.';
 
   @override
   String get notificationSettings => 'Értesítések';
 
   @override
-  String get alertsSection => 'Figyelmeztetések';
+  String get alertsSection => 'Riasztások';
 
   @override
-  String get budgetAlerts => 'Költségkeret-értesítések';
+  String get budgetAlerts => 'Keretriasztások';
 
   @override
   String get budgetAlertsBody =>
-      'Ha a költségkeret a limithez közelít vagy átlépi azt';
+      'Amikor egy keret közelít a határhoz vagy túllépi azt';
 
   @override
   String get paymentReminders => 'Fizetési emlékeztetők';
@@ -795,16 +787,16 @@ class AppL10nHu extends AppL10n {
   String get paymentRemindersBody => 'Néhány nappal az esedékesség előtt';
 
   @override
-  String get savingsUpdates => 'Megtakarítási frissítések';
+  String get savingsUpdates => 'Megtakarítási hírek';
 
   @override
-  String get savingsUpdatesBody => 'Előrehaladás a céljaid felé';
+  String get savingsUpdatesBody => 'Haladás a céljai felé';
 
   @override
   String get weeklySummaryLabel => 'Heti összefoglaló';
 
   @override
-  String get weeklySummaryBody => 'Áttekintés az elmúlt hétről';
+  String get weeklySummaryBody => 'Az elmúlt hét összegzése';
 
   @override
   String get scheduleSection => 'Időzítés';
@@ -813,7 +805,7 @@ class AppL10nHu extends AppL10n {
   String get reminderTime => 'Emlékeztető időpontja';
 
   @override
-  String get quietHours => 'Csendes időszak';
+  String get quietHours => 'Csendes órák';
 
   @override
   String quietHoursValue(String start, String end) {
@@ -821,31 +813,31 @@ class AppL10nHu extends AppL10n {
   }
 
   @override
-  String get summaryDay => 'Összefoglaló napja';
+  String get summaryDay => 'Az összefoglaló napja';
 
   @override
   String get permissionRequired => 'Az értesítések ki vannak kapcsolva';
 
   @override
   String get permissionRequiredBody =>
-      'Engedélyezd az értesítéseket, hogy a RainyPenny időben figyelmeztethessen a túllépésekre és a fizetési határidőkre.';
+      'Engedélyezze az értesítéseket, hogy a RainyPenny szólhasson, mielőtt egy keret vagy egy részlet kicsúszna a kezéből.';
 
   @override
   String get allowNotifications => 'Értesítések engedélyezése';
 
   @override
   String get permissionDenied =>
-      'Az értesítések le vannak tiltva. Az eszköz beállításaiban tudod bekapcsolni őket.';
+      'Az értesítések le vannak tiltva. A készülék beállításaiban kapcsolhatja be őket.';
 
   @override
-  String get upcomingAlerts => 'Ütemezett';
+  String get upcomingAlerts => 'Ütemezve';
 
   @override
-  String get noScheduledAlerts => 'Jelenleg nincs ütemezett értesítés';
+  String get noScheduledAlerts => 'Jelenleg nincs ütemezve semmi';
 
   @override
   String get noScheduledAlertsBody =>
-      'Az értesítések itt jelennek meg, amint a költségkeretek vagy a számlák határideje közeledik.';
+      'A riasztások itt jelennek meg, ahogy a keretek és a részletek közelítenek a határukhoz.';
 
   @override
   String scheduledFor(String date) {
@@ -862,7 +854,7 @@ class AppL10nHu extends AppL10n {
   String get needsAttention => 'Figyelmet igényel';
 
   @override
-  String get quickActionsTitle => 'Mit szeretnél csinálni?';
+  String get quickActionsTitle => 'Mit szeretne csinálni?';
 
   @override
   String get createSection => 'Rögzítés';
@@ -881,17 +873,17 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get longPressHint =>
-      'Tipp: tartsd lenyomva a + gombot kiadás azonnali rögzítéséhez';
+      'Tipp: tartsa nyomva a + gombot a kiadás azonnali rögzítéséhez';
 
   @override
   String get searchCurrencies => 'Pénznemek keresése';
 
   @override
-  String get noCurrenciesFound => 'Nem található pénznem';
+  String get noCurrenciesFound => 'Nincs találat';
 
   @override
   String get noCurrenciesFoundMessage =>
-      'Próbálkozz más kóddal, szimbólummal vagy névvel.';
+      'Próbáljon másik kódot, jelet vagy nevet.';
 
   @override
   String get popularCurrencies => 'Népszerű';
@@ -903,7 +895,7 @@ class AppL10nHu extends AppL10n {
   String get totalLoanAmount => 'Teljes hitelösszeg';
 
   @override
-  String get installmentAmount => 'Törlesztőrészlet összege';
+  String get installmentAmount => 'Részlet összege';
 
   @override
   String get numberOfInstallments => 'Részletek száma';
@@ -912,15 +904,15 @@ class AppL10nHu extends AppL10n {
   String get paidInstallments => 'Kifizetett részletek';
 
   @override
-  String get remainingInstallments => 'Fennmaradó részletek';
+  String get remainingInstallments => 'Hátralévő részletek';
 
   @override
   String installmentsPaidOf(int paid, int total) {
-    return '$paid / $total kifizetve';
+    return '$total részletből $paid kifizetve';
   }
 
   @override
-  String get finalPayment => 'Utolsó törlesztés';
+  String get finalPayment => 'Utolsó részlet';
 
   @override
   String get paymentDueDate => 'Esedékesség napja';
@@ -934,19 +926,19 @@ class AppL10nHu extends AppL10n {
   String get loanStatus => 'Állapot';
 
   @override
-  String get statusActive => 'Megfelelő';
+  String get statusActive => 'Jó úton';
 
   @override
   String get statusDueSoon => 'Hamarosan esedékes';
 
   @override
-  String get statusOverdue => 'Késedelmes';
+  String get statusOverdue => 'Lejárt';
 
   @override
-  String get statusCompleted => 'Visszafizetve';
+  String get statusCompleted => 'Kifizetve';
 
   @override
-  String get repaymentProgress => 'Visszafizetés állása';
+  String get repaymentProgress => 'Törlesztés állása';
 
   @override
   String get byAmount => 'Összeg szerint';
@@ -955,74 +947,74 @@ class AppL10nHu extends AppL10n {
   String get byInstallments => 'Részletek szerint';
 
   @override
-  String get startDate => 'Kezdés dátuma';
+  String get startDate => 'Kezdő dátum';
 
   @override
-  String get openEnded => 'Határozatlan idejű';
+  String get openEnded => 'Határidő nélkül';
 
   @override
-  String get loanDetails => 'Hitel részletei';
+  String get loanDetails => 'A hitel adatai';
 
   @override
   String get notSet => 'Nincs megadva';
 
   @override
   String insightDebtDueTodayTitle(String subject) {
-    return 'A(z) $subject fizetése ma esedékes';
+    return 'A(z) $subject ma esedékes';
   }
 
   @override
   String insightDebtDueTodayBody(String amount) {
-    return 'A(z) $amount összegű törlesztésed ma esedékes. Rögzítsd egyszerűen időben.';
+    return 'A(z) $amount összegű törlesztés ma esedékes. Egy koppintás, és időben megvan.';
   }
 
   @override
-  String get remindMorningTitle => 'Jó reggelt! ☀️';
+  String get remindMorningTitle => 'Jó reggelt ☀️';
 
   @override
   String get remindMorningBody =>
-      'Indítsd a napot átlátva a pénzügyeidet. Van valami feljegyeznivaló tegnapról?';
+      'Kezdje a napot a pénzügyei felett tartva a kezét. Van még tegnapról rögzítenivaló?';
 
   @override
-  String get remindNoonTitle => 'Napközbeni ellenőrzés';
+  String get remindNoonTitle => 'Déli ellenőrzés';
 
   @override
   String get remindNoonBody =>
-      'Ebéd, kávé vagy utazás? Rögzítsd pár másodperc alatt.';
+      'Ebéd, kávé, jegy? Pár másodperc alatt rögzíthető.';
 
   @override
-  String get remindAfternoonTitle => 'Gyors összesítés';
+  String get remindAfternoonTitle => 'Gyors pótlás';
 
   @override
   String get remindAfternoonBody =>
-      'Jegyezd fel az eddigi kiadásaidat a nap pontos zárásához.';
+      'Rögzítse, amit eddig költött, hogy a mai számok pontosak legyenek.';
 
   @override
-  String get remindEveningTitle => 'Nap zárása';
+  String get remindEveningTitle => 'A nap lezárása';
 
   @override
   String get remindEveningBody =>
-      'Csak két perc, és a mai számok a helyükre kerülnek.';
+      'Két perc most, és a mai bejegyzései teljesek.';
 
   @override
-  String get happyWeekendTitle => 'Kellemes hétvégét! 🎉';
+  String get happyWeekendTitle => 'Szép hétvégét! 🎉';
 
   @override
   String get happyWeekendBody =>
-      'Kapcsolódj ki — de tartsd szemmel a hétvégi költéseket is.';
+      'Élvezze — és tartsa fél szemmel a hétvégi költéseket is.';
 
   @override
   String get dailyReminders => 'Napi kiadás-emlékeztetők';
 
   @override
   String get dailyRemindersBody =>
-      'Barátságos emlékeztetők a kiadások naprakészen tartásához';
+      'Finom emlékeztetők, hogy a kiadásai naprakészek maradjanak';
 
   @override
   String get weekendGreeting => 'Hétvégi köszöntés';
 
   @override
-  String get weekendGreetingBody => 'Kedves üdvözlet a hétvégéd kezdetén';
+  String get weekendGreetingBody => 'Egy barátságos köszöntés a hétvége elején';
 
   @override
   String get reminderTimesSection => 'Emlékeztetők időpontjai';
@@ -1031,7 +1023,7 @@ class AppL10nHu extends AppL10n {
   String get slotMorning => 'Reggel';
 
   @override
-  String get slotNoon => 'Délben';
+  String get slotNoon => 'Dél';
 
   @override
   String get slotAfternoon => 'Délután';
@@ -1043,21 +1035,21 @@ class AppL10nHu extends AppL10n {
   String get everyDay => 'Minden nap';
 
   @override
-  String get financialReport => 'Pénzügyi jelentés';
+  String get financialReport => 'Pénzügyi kimutatás';
 
   @override
-  String get preparedFor => 'Készült:';
+  String get preparedFor => 'Készült';
 
   @override
-  String get generatedOn => 'Létrehozva:';
+  String get generatedOn => 'Létrehozva';
 
   @override
   String get reportDisclaimer =>
-      'A RainyPenny által, a saját bejegyzéseid alapján készítve.';
+      'A RainyPenny készítette az Ön saját bejegyzéseiből.';
 
   @override
   String pageOf(int page, int total) {
-    return '$page / $total oldal';
+    return '$page. oldal, összesen $total';
   }
 
   @override
@@ -1067,10 +1059,10 @@ class AppL10nHu extends AppL10n {
   String get description => 'Leírás';
 
   @override
-  String get totalIncome => 'Teljes bevétel';
+  String get totalIncome => 'Összes bevétel';
 
   @override
-  String get totalExpenses => 'Teljes kiadás';
+  String get totalExpenses => 'Összes kiadás';
 
   @override
   String get totalSaved => 'Összes megtakarítás';
@@ -1079,7 +1071,7 @@ class AppL10nHu extends AppL10n {
   String get shareOfTotal => 'Arány';
 
   @override
-  String get used => 'Kihasználtság';
+  String get used => 'Felhasználva';
 
   @override
   String get goal => 'Cél';
@@ -1094,15 +1086,14 @@ class AppL10nHu extends AppL10n {
   String get paidOffShort => 'Törlesztve';
 
   @override
-  String get transactions => 'Tranzakciók';
+  String get transactions => 'Tételek';
 
   @override
   String andMoreTransactions(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'és még $count tranzakció',
-      one: 'és még 1 tranzakció',
+      other: 'és további $count tétel',
     );
     return '$_temp0';
   }
@@ -1111,23 +1102,23 @@ class AppL10nHu extends AppL10n {
   String get exportPdf => 'PDF exportálása';
 
   @override
-  String get sharePdf => 'Jelentés megosztása';
+  String get sharePdf => 'Kimutatás megosztása';
 
   @override
-  String get preparingReport => 'Jelentés elkészítése…';
+  String get preparingReport => 'Készül a kimutatása…';
 
   @override
-  String get reportReady => 'A jelentés elkészült';
+  String get reportReady => 'A kimutatás elkészült';
 
   @override
-  String get reportFailed => 'Nem sikerült elkészíteni a jelentést';
+  String get reportFailed => 'A kimutatást nem sikerült elkészíteni';
 
   @override
   String get categories => 'Kategóriák';
 
   @override
   String get categoriesIntro =>
-      'Hozz létre saját kategóriákat, hogy a bevételeket és kiadásokat pontosan a számodra megfelelő módon csoportosíthasd.';
+      'Vegyen fel saját kategóriákat, hogy a bevételei és kiadásai pontosan úgy álljanak, ahogy Ön gondol rájuk.';
 
   @override
   String get expenseCategories => 'Kiadási kategóriák';
@@ -1145,23 +1136,23 @@ class AppL10nHu extends AppL10n {
   String get categoryName => 'Név';
 
   @override
-  String get categoryNameHint => 'pl. Kisállat';
+  String get categoryNameHint => 'pl. háziállat';
 
   @override
   String get icon => 'Ikon';
 
   @override
-  String get categorySaved => 'Kategória mentve';
+  String get categorySaved => 'A kategória mentve';
 
   @override
-  String get categoryDeleted => 'Kategória törölve';
+  String get categoryDeleted => 'A kategória törölve';
 
   @override
-  String get deleteCategory => 'Törlöd ezt a kategóriát?';
+  String get deleteCategory => 'Törli ezt a kategóriát?';
 
   @override
   String deleteCategoryBody(String name) {
-    return 'A(z) „$name” törlődik a kategóriáid közül.';
+    return 'A(z) $name kikerül a kategóriái közül.';
   }
 
   @override
@@ -1169,14 +1160,13 @@ class AppL10nHu extends AppL10n {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count tétel még mindig használja ezt a kategóriát',
-      one: '1 tétel még mindig használja ezt a kategóriát',
+      other: '$count bejegyzés még ezt a kategóriát használja',
     );
     return '$_temp0';
   }
 
   @override
-  String get noCategoriesYet => 'Itt még nincsen semmi.';
+  String get noCategoriesYet => 'Itt még nincs semmi.';
 
   @override
   String get builtIn => 'Beépített';
@@ -1189,7 +1179,7 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get languageNote =>
-      'Az arab, az urdu, a perzsa és a héber nyelv jobbról balra rendezi a teljes felületet, a diagramokat és a PDF-jelentéseket is beleértve.';
+      'Az arab, az urdu, a perzsa és a héber a teljes felületet jobbról balra fordítja, a diagramokkal és a PDF-kimutatásokkal együtt.';
 
   @override
   String get next => 'Tovább';
@@ -1207,7 +1197,7 @@ class AppL10nHu extends AppL10n {
   String get selected => 'Kiválasztva';
 
   @override
-  String get passwordRequired => 'Add meg a jelszavad';
+  String get passwordRequired => 'Adja meg a jelszavát';
 
   @override
   String get newPasswordLabel => 'Új jelszó';
@@ -1216,7 +1206,7 @@ class AppL10nHu extends AppL10n {
   String get confirmPasswordLabel => 'Jelszó megerősítése';
 
   @override
-  String get passwordsDoNotMatch => 'A jelszavaknak meg kell egyezniük';
+  String get passwordsDoNotMatch => 'A két jelszónak egyeznie kell';
 
   @override
   String get showPassword => 'Jelszó megjelenítése';
@@ -1234,14 +1224,14 @@ class AppL10nHu extends AppL10n {
   String get alreadyHaveAccount => 'Már van fiókom';
 
   @override
-  String get getStarted => 'Kezdés';
+  String get getStarted => 'Kezdjük';
 
   @override
   String get acceptTerms =>
-      'Elfogadom a Szolgáltatási feltételeket és az Adatvédelmi szabályzatot';
+      'Elfogadom a felhasználási feltételeket és az adatvédelmi tájékoztatót';
 
   @override
-  String get acceptTermsRequired => 'Kérjük, fogadd el a folytatáshoz';
+  String get acceptTermsRequired => 'A folytatáshoz fogadja el';
 
   @override
   String get passwordStrengthTooShort => 'Túl rövid';
@@ -1250,7 +1240,7 @@ class AppL10nHu extends AppL10n {
   String get passwordStrengthWeak => 'Gyenge';
 
   @override
-  String get passwordStrengthFair => 'Közepes';
+  String get passwordStrengthFair => 'Megfelelő';
 
   @override
   String get passwordStrengthGood => 'Jó';
@@ -1260,214 +1250,212 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get passwordAdvice =>
-      'Egy hosszú, könnyen megjegyezhető kifejezés jobb, mint egy szimbólumokkal teli rövid. Kerüld azokat, amelyeket máshol már használsz.';
+      'Egy hosszú mondat, amit megjegyez, jobb egy rövid, jelekkel teli jelszónál. Kerülje azt, amit már máshol is használ.';
 
   @override
   String get authInvalidCredentials =>
-      'Az e-mail-cím vagy a jelszó nem egyezik';
+      'Ez az e-mail-cím és jelszó egyetlen fiókhoz sem tartozik';
 
   @override
   String get authEmailNotConfirmed =>
-      'Bejelentkezés előtt erősítsd meg az e-mail-címedet';
+      'Bejelentkezés előtt erősítse meg az e-mail-címét';
 
   @override
   String get authEmailAlreadyRegistered =>
       'Ezzel az e-mail-címmel már létezik fiók';
 
   @override
-  String get authWeakPassword => 'Válassz hosszabb jelszót';
+  String get authWeakPassword => 'Válasszon hosszabb jelszót';
 
   @override
   String get authRateLimited =>
-      'Túl sok próbálkozás. Próbáld újra néhány perc múlva';
+      'Túl sok próbálkozás. Néhány perc múlva próbálja újra';
 
   @override
   String get authNetworkError =>
-      'Nincs kapcsolat. Ellenőrizd a hálózatot, és próbáld újra';
+      'Nincs kapcsolat. Ellenőrizze a hálózatot, majd próbálja újra';
 
   @override
-  String get authGenericError => 'Valami hiba történt. Kérjük, próbáld újra';
+  String get authGenericError => 'Valami hiba történt. Kérjük, próbálja újra';
 
   @override
-  String get confirmEmailTitle => 'Ellenőrizd az e-mailjeidet';
+  String get confirmEmailTitle => 'Nézze meg a postaládáját';
 
   @override
   String confirmEmailBody(String email) {
-    return 'Megerősítő linket küldtünk a(z) $email címre. Nyisd meg a fiók beállításának befejezéséhez.';
+    return 'Megerősítő hivatkozást küldtünk a következő címre: $email. Nyissa meg a fiók befejezéséhez.';
   }
 
   @override
   String get resendConfirmation => 'Megerősítő e-mail újraküldése';
 
   @override
-  String get confirmationResent => 'Megerősítő e-mail elküldve';
+  String get confirmationResent => 'A megerősítő e-mail elküldve';
 
   @override
   String get forgotPasswordTitle => 'Jelszó visszaállítása';
 
   @override
   String get forgotPasswordSubtitle =>
-      'Add meg a regisztrációhoz használt e-mail-címedet, és küldünk egy linket az új jelszó megadásához.';
+      'Adja meg az e-mail-címet, amellyel regisztrált, és küldünk egy hivatkozást új jelszó megadásához.';
 
   @override
-  String get sendResetLink => 'Visszaállító link küldése';
+  String get sendResetLink => 'Hivatkozás küldése';
 
   @override
-  String get resetLinkSentTitle => 'Visszaállító link elküldve';
+  String get resetLinkSentTitle => 'A hivatkozás elküldve';
 
   @override
   String resetLinkSentBody(String email) {
-    return 'Ha a(z) $email címhez tartozik fiók, a visszaállító link már úton van.';
+    return 'Ha a(z) $email címhez tartozik fiók, a hivatkozás már úton van.';
   }
 
   @override
   String get resetLinkSentHint =>
-      'A link egy órán belül lejár. Ha nem érkezik meg, nézd meg a spam mappádat is, mielőtt újat kérnél.';
+      'A hivatkozás egy óra alatt lejár. Ha nem érkezik meg, nézze meg a levélszemét mappát, mielőtt újat kérne.';
 
   @override
-  String get tryAnotherEmail => 'Másik e-mail megadása';
+  String get tryAnotherEmail => 'Másik e-mail-cím';
 
   @override
-  String get resetPasswordTitle => 'Új jelszó megadása';
+  String get resetPasswordTitle => 'Válasszon új jelszót';
 
   @override
   String get resetPasswordSubtitle =>
-      'Válassz olyat, amelyet korábban még nem használtál ennél a fióknál.';
+      'Olyat válasszon, amit ennél a fióknál még nem használt.';
 
   @override
-  String get passwordChangedTitle => 'Jelszó frissítve';
+  String get passwordChangedTitle => 'A jelszó frissítve';
 
   @override
   String get passwordChangedBody =>
-      'Az új jelszavadat elmentettük. Bejelentkeztél, és készen állsz a folytatásra.';
+      'Az új jelszava elmentve. Be van jelentkezve, mehet tovább.';
 
   @override
-  String get demoModeHint => 'Demó verzió — fiók nem szükséges';
+  String get demoModeHint => 'Bemutató verzió — nem kell fiók';
 
   @override
   String get demoModeFill => 'Kitöltés';
 
   @override
-  String get welcomeTrackTitle => 'Lásd át, hova megy a pénzed';
+  String get welcomeTrackTitle => 'Lássa, hová megy a pénze';
 
   @override
   String get welcomeTrackBody =>
-      'Rögzítsd a bevételeidet és kiadásaidat. A RainyPenny könnyen értelmezhető képpé formálja a számaidat.';
+      'Rögzítse, mi jön be és mi megy ki. A RainyPenny olyan képet csinál belőle, amit tényleg el lehet olvasni.';
 
   @override
-  String get welcomeBudgetTitle => 'Állíts be tartható kereteket';
+  String get welcomeBudgetTitle => 'Határok, amik tartanak';
 
   @override
   String get welcomeBudgetBody =>
-      'Adj minden kiadási területnek havi plafont, és értesülj róla, mielőtt túllépnéd, nem pedig utána.';
+      'Adjon minden kiadási területnek havi felső határt, és még azelőtt tudja meg, hogy átlépné — ne utána.';
 
   @override
-  String get welcomeGoalsTitle => 'Gyűjts arra, ami igazán számít';
+  String get welcomeGoalsTitle => 'Tegyen félre arra, ami számít';
 
   @override
   String get welcomeGoalsBody =>
-      'Nevezz meg egy célt, tűzz ki egy összeget, és kövesd figyelemmel a gyarapodását. A vészalapot könnyebb felépíteni, ha látod a haladást.';
+      'Nevezzen el egy célt, adjon meg összeget, és nézze, ahogy megtelik. A vésztartalékot könnyebb felépíteni, ha látja is.';
 
   @override
-  String get welcomePrivacyTitle => 'A pénzed a tiéd marad';
+  String get welcomePrivacyTitle => 'A pénze az Öné marad';
 
   @override
   String get welcomePrivacyBody =>
-      'A számaid kizárólag rád tartoznak. Semmit sem adunk el, és semmit sem osztunk meg senkivel.';
+      'A számai csak Önhöz tartoznak. Semmit nem adunk el és senkivel nem osztunk meg.';
 
   @override
   String stepOf(int step, int total) {
-    return '$step. / $total lépés';
+    return '$total lépésből a(z) $step.';
   }
 
   @override
-  String get onboardingNameTitle => 'Hogyan szólíthatunk?';
+  String get onboardingNameTitle => 'Hogy szólíthatjuk?';
 
   @override
-  String get onboardingNameBody =>
-      'Kizárólag az üdvözlésedre fogjuk használni, sehol máshol.';
+  String get onboardingNameBody => 'Csak köszöntésre használjuk, máshol sehol.';
 
   @override
   String get onboardingNameHint =>
-      'Egy keresztnév bőven elég. Később bármikor módosíthatod.';
+      'A keresztnév bőven elég. Később módosíthatja.';
 
   @override
-  String get onboardingCurrencyTitle => 'Milyen pénznemet használsz?';
+  String get onboardingCurrencyTitle => 'Milyen pénznemet használ?';
 
   @override
   String get onboardingCurrencyBody =>
-      'Az alkalmazás minden összeget ebben a pénznemben jelenít meg. A kiválasztása nem vált át semmit.';
+      'Az alkalmazásban minden összeg ebben a pénznemben jelenik meg. A választás semmit nem vált át.';
 
   @override
   String get onboardingCurrencySearch => 'Keresés az összes pénznem között';
 
   @override
-  String get onboardingAppearanceTitle => 'Tedd egyedivé';
+  String get onboardingAppearanceTitle => 'Alakítsa a magáévá';
 
   @override
   String get onboardingAppearanceBody =>
-      'Válassz egy stílust. Koppintás közben minden azonnal átvált, és később is bármikor visszatérhetsz ide.';
+      'Válasszon kinézetet. Minden azonnal változik, és bármikor visszatérhet ide.';
 
   @override
-  String get onboardingNotificationsTitle => 'Maradj mindig naprakész';
+  String get onboardingNotificationsTitle => 'Tartsa kézben';
 
   @override
   String get onboardingNotificationsBody =>
-      'Egy diszkrét emlékeztető a megfelelő pillanatban segít, hogy ez igazi szokássá váljon.';
+      'Egy csendes emlékeztető a megfelelő pillanatban — ettől lesz ebből szokás.';
 
   @override
   String get onboardingNotifyReminders =>
-      'Finom emlékeztető a kiadásaid rögzítésére';
+      'Finom emlékeztető, hogy rögzítse, amit költött';
 
   @override
-  String get onboardingNotifyBudget =>
-      'Időben figyelmeztet, mielőtt a kereted elfogyna';
+  String get onboardingNotifyBudget => 'Jelzés, mielőtt elfogyna egy keret';
 
   @override
   String get onboardingNotifySummary =>
-      'Heti összefoglaló arról, hová ment a pénzed';
+      'Heti összegzés arról, hová ment a pénze';
 
   @override
   String get onboardingNotifyEnable => 'Értesítések bekapcsolása';
 
   @override
-  String get onboardingNotifyDone => 'Értesítési beállítások mentve';
+  String get onboardingNotifyDone => 'Az értesítési beállítások mentve';
 
   @override
   String get onboardingNotifyLater =>
-      'Mindezt a Beállításokban bármikor később is módosíthatod.';
+      'Mindezt bármikor módosíthatja a Beállításokban.';
 
   @override
   String get onboardingReadyTitle => 'Minden készen áll';
 
   @override
   String onboardingReadyTitleNamed(String name) {
-    return 'Minden készen áll, $name!';
+    return 'Minden készen áll, $name';
   }
 
   @override
   String get onboardingReadyBody =>
-      'A beállítás kész. Szeretnél egy gyors bemutatót arról, hogyan működik az alkalmazás?';
+      'A beállítás kész. Szeretne egy gyors körutat arról, hogyan működik?';
 
   @override
-  String get onboardingTakeTour => 'Körbevezetés kérése';
+  String get onboardingTakeTour => 'Mutassa meg';
 
   @override
-  String get onboardingGoToApp => 'Ugrás az alkalmazásba';
+  String get onboardingGoToApp => 'Irány az alkalmazás';
 
   @override
   String get onboardingTourLater =>
-      'Most nem? Az útmutató a Beállításokban bármikor elérhető marad.';
+      'Most nem? Az útmutató a Beállításokban marad, amikor csak kell.';
 
   @override
-  String get beginnersGuide => 'Kezdők útmutatója';
+  String get beginnersGuide => 'Kezdő útmutató';
 
   @override
   String get guideFinish => 'Befejezés';
 
   @override
   String chapterOf(int number, int total) {
-    return '$number. / $total fejezet';
+    return '$total fejezetből a(z) $number.';
   }
 
   @override
@@ -1476,179 +1464,178 @@ class AppL10nHu extends AppL10n {
   }
 
   @override
-  String get guideDashboardTitle => 'Az irányítópultod';
+  String get guideDashboardTitle => 'A kezdőlapja';
 
   @override
   String get guideDashboardBody =>
-      'Minden innen indul. A felső kártya mutatja a fennmaradó összeget; alatta a bevételek és kiadások láthatók, majd a költéseid, kereteid és céljaid.';
+      'Minden itt kezdődik. A felső kártya azt mutatja, mennyi maradt; alatta az időszak bevétele és kiadása, majd a költései, keretei és céljai.';
 
   @override
   String get guideDashboardTip1 =>
-      'Húzd lefelé a képernyőt mindennek az azonnali frissítéséhez.';
+      'Húzza le a képernyőt, hogy minden egyszerre frissüljön.';
 
   @override
   String get guideDashboardTip2 =>
-      'Koppints a bevétel vagy kiadás kártyára a listához való ugráshoz.';
+      'Koppintson a bevételi vagy kiadási kártyára, hogy egyenesen arra a listára jusson.';
 
   @override
   String get guideDashboardTip3 =>
-      'A kördiagramok és az elemzések a rögzítés pillanatában frissülnek.';
+      'A gyűrűk és az észrevételek abban a pillanatban frissülnek, ahogy rögzít valamit.';
 
   @override
   String get guideAddTitle => 'Pénz rögzítése';
 
   @override
   String get guideAddBody =>
-      'Az alsó sáv közepén lévő gomb a kiindulópont. Egy rövid menüt nyit meg: kiadás, bevétel, hitel, keret vagy megtakarítási cél.';
+      'A sáv közepén lévő gomb minden kiindulópontja. Rövid menüt nyit: kiadás, bevétel, tartozás, keret vagy megtakarítási cél.';
 
   @override
   String get guideAddTip1 =>
-      'Koppints a középső gombra bevétel vagy kiadás rögzítéséhez.';
+      'Koppintson a középső gombra bevétel vagy kiadás rögzítéséhez.';
 
   @override
   String get guideAddTip2 =>
-      'Tartsd hosszan lenyomva a menü kihagyásához és azonnali új kiadáshoz.';
+      'Tartsa nyomva, hogy a menüt kihagyva egyenesen új kiadáshoz jusson.';
 
   @override
   String get guideAddTip3 =>
-      'Mindig válassz kategóriát — ez teszi működőképessé a diagramokat és kereteket.';
+      'Mindig válasszon kategóriát — ezen múlnak a diagramok és a keretek.';
 
   @override
   String get guideCategoriesTitle => 'Kategóriák';
 
   @override
   String get guideCategoriesBody =>
-      'A kategóriák segítségével csoportosíthatók a kiadások. Az alapértelmezettek a legtöbb igényt lefedik, de átnevezheted őket vagy újakat is hozzáadhatsz.';
+      'A kategóriák csoportosítják a kiadásokat. Az alapból meglévők a legtöbb embernek elegendők, de átnevezheti őket, vagy vehet fel sajátot.';
 
   @override
   String get guideCategoriesTip1 =>
-      'Beállítások, majd Kategóriák kezelése a módosításhoz vagy létrehozáshoz.';
+      'Beállítások, majd Kategóriák kezelése a módosításhoz vagy hozzáadáshoz.';
 
   @override
   String get guideCategoriesTip2 =>
-      'Bármi, ami kategória nélkül marad, az Egyéb alá kerül, így a kimutatások pontosak maradnak.';
+      'Ami kategória nélkül marad, az „Egyéb” alá kerül, így a diagramok őszinték maradnak.';
 
   @override
-  String get guideBudgetTitle => 'Költségkeretek';
+  String get guideBudgetTitle => 'Keretek';
 
   @override
   String get guideBudgetBody =>
-      'A költségkeret egy kategóriára vonatkozó havi limit. A sáv feltöltődik költés közben, és színt vált, ha közeledsz a plafonhoz.';
+      'A keret egy kategória havi felső határa. A sáv telik, ahogy költ, és színt vált, amikor közeledik — így még azelőtt megtudja, hogy átlépné.';
 
   @override
   String get guideBudgetTip1 =>
-      'Kezdd két vagy három kategóriával, ne az összessel egyszerre.';
+      'Kezdje két-három kategóriával, ne mindegyikkel egyszerre.';
 
   @override
   String get guideBudgetTip2 =>
-      'Állítsd a limitet kicsivel a szokásos költésed fölé, majd fokozatosan szűkítsd.';
+      'A határt tegye kicsit a szokásos költése fölé, aztán szorítsa meg.';
 
   @override
   String get guideBudgetTip3 =>
-      'Hagyd bekapcsolva a keretriasztásokat, hogy az app időben figyelmeztessen.';
+      'Hagyja bekapcsolva a keretriasztásokat, és az alkalmazás szól, amikor fogytán van.';
 
   @override
   String get guideSavingsTitle => 'Megtakarítási célok';
 
   @override
   String get guideSavingsBody =>
-      'Nevezd meg, mire gyűjtesz, határozz meg egy célösszeget és dátumot, az alkalmazás pedig kiszámolja a szükséges havi összeget.';
+      'Nevezze meg, mire gyűjt, adjon meg összeget és dátumot, az alkalmazás pedig kiszámolja, mennyit kell havonta félretennie.';
 
   @override
   String get guideSavingsTip1 =>
-      'Egy konkrét célhoz könnyebb ragaszkodni, mint egy általános megtakarítási szándékhoz.';
+      'Egy nevesített célt könnyebb tartani, mint azt a homályos szándékot, hogy „félre kéne tenni”.';
 
   @override
   String get guideSavingsTip2 =>
-      'Több kisebb célt gyakrabban sikerül elérni, mint egyetlen hatalmasat.';
+      'Több kis cél gyakrabban ér célba, mint egyetlen nagy.';
 
   @override
-  String get guideLoansTitle => 'Hitelek és tartozások';
+  String get guideLoansTitle => 'Tartozások és hitelek';
 
   @override
   String get guideLoansBody =>
-      'Rögzítsd, mivel tartozol, mennyibe kerül, és mikor esedékes a következő fizetés. Minden törlesztés egy helyen látható a fennmaradó összeggel.';
+      'Rögzítse, mennyivel tartozik, mennyibe kerül, és mikor esedékes a következő részlet. Amit törleszt, mind egy listában van a hátralékkal együtt.';
 
   @override
   String get guideLoansTip1 =>
-      'Add meg az esedékesség napját, és a fizetési emlékeztetők szólni fognak helyetted.';
+      'Adja meg az esedékesség napját, és az emlékeztetők Ön helyett figyelnek rá.';
 
   @override
   String get guideLoansTip2 =>
-      'A késedelmes tartozás pirossal jelenik meg a kezdőlapon, amíg ki nem fizeted.';
+      'A lejárt tartozás pirosan látszik a kezdőlapon, amíg ki nem fizeti.';
 
   @override
-  String get guideReportsTitle => 'Jelentések';
+  String get guideReportsTitle => 'Kimutatások';
 
   @override
   String get guideReportsBody =>
-      'Részletes betekintés: bevételek és kiadások aránya, kategóriánkénti bontás, a költségkeretek betartása és a megtakarított jövedelemrész.';
+      'A mélyebb kép: bevétel a kiadással szemben, kiadás kategóriánként, hogyan tartottak a keretei, és jövedelmének mekkora része maradt meg.';
 
   @override
   String get guideReportsTip1 =>
-      'Válts a heti, havi és negyedéves nézetek között a képernyő tetején.';
+      'A képernyő tetején váltson hét, hónap és negyedév között.';
 
   @override
   String get guideReportsTip2 =>
-      'Exportálj vagy ossz meg PDF-et — a saját nyelveden és olvasási irányodban készül el.';
+      'Exportáljon vagy osszon meg PDF-et — az Ön nyelvén és írásirányában készül.';
 
   @override
   String get guideSettingsTitle => 'Beállítások';
 
   @override
   String get guideSettingsBody =>
-      'A nyelv, pénznem, színek és értesítések mind itt találhatók, és semmi sincs kőbe vésve — bármikor módosíthatod őket.';
+      'A nyelv, a pénznem, a színek és a riasztások mind itt vannak, és a kezdeti beállítás egyiket sem rögzíti véglegesen — módosítsa, amikor csak akarja.';
 
   @override
   String get guideSettingsTip1 =>
-      'Negyven nyelv támogatott, és a teljes elrendezés tükröződik a jobbról balra író nyelvekhez.';
+      'Negyven nyelv, és a teljes elrendezés tükröződik a jobbról balra írt nyelveknél.';
 
   @override
   String get guideSettingsTip2 =>
-      'Válaszd ki, milyen értesítéseket szeretnél és mikor érkezhetnek.';
+      'Válassza ki, mely riasztásokat kéri, és mikor érkezhetnek.';
 
   @override
   String get guideSettingsTip3 =>
-      'A csendes időszak minden értesítést visszatart reggelig.';
+      'A csendes órák reggelig visszatartanak mindent.';
 
   @override
-  String get guideHabitTitle => 'Alakíts ki szokást';
+  String get guideHabitTitle => 'Váljon szokássá';
 
   @override
   String get guideHabitBody =>
-      'Az alkalmazás csak annyira hasznos, amennyi adatot rögzítesz benne. Napi egy perc többet ér, mint havonta egy óra, és két hét után a számok kezdenek valódi képet mutatni.';
+      'Az alkalmazás annyit ér, amennyit beletesz. Napi egy perc többet ér, mint havi egy óra, és két hét után a számok elkezdenek mondani valamit.';
 
   @override
   String get guideHabitTip1 =>
-      'Rögzítsd a költéseidet azonnal, ne a hét végén halmozd fel őket.';
+      'A kiadást akkor rögzítse, amikor történik, ne a hét végén.';
 
   @override
   String get guideHabitTip2 =>
-      'Naponta egyszer nézz rá az irányítópultra. Tíz másodperc elegendő.';
+      'Naponta egyszer pillantson a kezdőlapra. Tíz másodperc elég.';
 
   @override
   String get guideHabitTip3 =>
-      'Ez az útmutató a Beállításokban marad — bármikor visszatérhetsz hozzá.';
+      'Ez az útmutató a Beállításokban marad — térjen vissza bármikor.';
 
   @override
   String get appearance => 'Megjelenés';
 
   @override
-  String get themeCaption =>
-      'Világos, sötét vagy a telefonod beállításait követő.';
+  String get themeCaption => 'Világos, sötét, vagy ahogy a telefonja áll.';
 
   @override
-  String get accentColor => 'Kiemelő szín';
+  String get accentColor => 'Kiemelőszín';
 
   @override
   String get accentColorCaption => 'A gombok, kiemelések és diagramok színe.';
 
   @override
   String get accentSemanticsNote =>
-      'A bevételek és kiadások minden témában megőrzik saját színeiket, így egy összeg jelentése soha nem változik meg a kiemelő szín módosításakor.';
+      'A bejövő és kimenő pénz minden témában megtartja a saját színét, így egy szám sosem változtat jelentést csak azért, mert kiemelőszínt váltott.';
 
   @override
-  String get accentTeal => 'Pávakék';
+  String get accentTeal => 'Türkiz';
 
   @override
   String get accentGreen => 'Zöld';
@@ -1660,19 +1647,19 @@ class AppL10nHu extends AppL10n {
   String get accentBlue => 'Kék';
 
   @override
-  String get accentIndigo => 'Indigókék';
+  String get accentIndigo => 'Indigó';
 
   @override
-  String get accentViolet => 'Ibolyalila';
+  String get accentViolet => 'Ibolya';
 
   @override
   String get accentPink => 'Rózsaszín';
 
   @override
-  String get accentCrimson => 'Karmazsinvörös';
+  String get accentCrimson => 'Bíbor';
 
   @override
-  String get accentOrange => 'Narancssárga';
+  String get accentOrange => 'Narancs';
 
   @override
   String get accentSlate => 'Palaszürke';
@@ -1687,31 +1674,31 @@ class AppL10nHu extends AppL10n {
   String get allLanguages => 'Összes nyelv';
 
   @override
-  String get noLanguagesFound => 'Nem található nyelv';
+  String get noLanguagesFound => 'Nincs találat';
 
   @override
   String get noLanguagesFoundMessage =>
-      'Próbáld meg az angol nevet vagy a kétbetűs kódot.';
+      'Próbálja az angol nevet vagy a kétbetűs kódot.';
 
   @override
   String get rightToLeft => 'Jobbról balra';
 
   @override
-  String get replayGuide => 'Útmutató újrajátszása';
+  String get replayGuide => 'Útmutató újranézése';
 
   @override
-  String get replaySetup => 'Kezdeti beállítás újrafuttatása';
+  String get replaySetup => 'Beállítás újrafuttatása';
 
   @override
   String get replaySetupBody =>
-      'Válaszold meg újra a kezdeti kérdéseket. Egyetlen korábban rögzített adatod sem fog törlődni.';
+      'Menjen végig újra a kezdeti kérdéseken. Semmi nem törlődik abból, amit rögzített.';
 
   @override
   String get rateTitle => 'Tetszik a RainyPenny?';
 
   @override
   String get rateBody =>
-      'Már egy ideje használod az alkalmazást. Egy értékelés csak egy pillanatot vesz igénybe, és segít másoknak rátalálni az appra.';
+      'Már egy ideje kitart mellette. Az értékelés egy pillanat, és segít másoknak megtalálni az alkalmazást.';
 
   @override
   String get rateAction => 'Alkalmazás értékelése';
@@ -1720,10 +1707,10 @@ class AppL10nHu extends AppL10n {
   String get rateLater => 'Talán később';
 
   @override
-  String get rateNever => 'Nem, köszönöm';
+  String get rateNever => 'Köszönöm, nem';
 
   @override
-  String get rateThanks => 'Köszönjük szépen!';
+  String get rateThanks => 'Köszönjük';
 
   @override
   String get monthlySalary => 'Havi fizetés';
@@ -2173,4 +2160,10 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get recommendedBudget => 'Ajánlott költségkeret';
+
+  @override
+  String get due => 'Due';
+
+  @override
+  String get dueAmount => 'Due amount';
 }

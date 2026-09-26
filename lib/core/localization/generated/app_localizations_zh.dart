@@ -2075,6 +2075,12 @@ class AppL10nZh extends AppL10n {
 
   @override
   String get recommendedBudget => 'Recommended budget';
+
+  @override
+  String get due => 'Due';
+
+  @override
+  String get dueAmount => 'Due amount';
 }
 
 /// The translations for Chinese, using the Han script (`zh_Hant`).

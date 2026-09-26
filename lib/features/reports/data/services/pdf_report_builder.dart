@@ -74,20 +74,10 @@ class ReportAssets {
 
   /// The face that can actually draw this language, with the others behind it
   /// as fallbacks so a mixed-script report never renders a row of tofu.
-  ({pw.Font base, pw.Font bold, List<pw.Font> fallback}) forLanguage(
-    String languageCode,
-  ) {
+  ({pw.Font base, pw.Font bold, List<pw.Font> fallback}) forLanguage(String languageCode) {
     return switch (languageCode) {
-      'ar' || 'ur' => (
-        base: arabic,
-        bold: arabicBold,
-        fallback: [base, bold, devanagari],
-      ),
-      'hi' => (
-        base: devanagari,
-        bold: devanagariBold,
-        fallback: [base, bold, arabic],
-      ),
+      'ar' || 'ur' => (base: arabic, bold: arabicBold, fallback: [base, bold, devanagari]),
+      'hi' => (base: devanagari, bold: devanagariBold, fallback: [base, bold, arabic]),
       _ => (base: base, bold: bold, fallback: [arabic, devanagari]),
     };
   }
@@ -121,8 +111,7 @@ class PdfReportBuilder {
 
   bool get _isRtl => _rtlLanguages.contains(report.languageCode);
 
-  pw.TextDirection get _direction =>
-      _isRtl ? pw.TextDirection.rtl : pw.TextDirection.ltr;
+  pw.TextDirection get _direction => _isRtl ? pw.TextDirection.rtl : pw.TextDirection.ltr;
 
   /// The transactions table would run to hundreds of rows on a quarterly
   /// report; the most recent are the ones anyone actually reads.
@@ -148,8 +137,7 @@ class PdfReportBuilder {
         pageFormat: PdfPageFormat.a4,
         textDirection: _direction,
         margin: const pw.EdgeInsets.fromLTRB(36, 36, 36, 48),
-        header: (context) =>
-            context.pageNumber == 1 ? pw.SizedBox() : _runningHeader(),
+        header: (context) => context.pageNumber == 1 ? pw.SizedBox() : _runningHeader(),
         footer: _footer,
         // Flat rather than nested: a `MultiPage` can only break between the
         // widgets in this list and inside a `Table`, so wrapping a long table
@@ -159,8 +147,7 @@ class PdfReportBuilder {
           _cover(),
           pw.SizedBox(height: 22),
           ..._summarySection(),
-          if (report.summary.spendingByCategory.isNotEmpty)
-            ..._categorySection(),
+          if (report.summary.spendingByCategory.isNotEmpty) ..._categorySection(),
           if (report.budgets.isNotEmpty) ..._budgetSection(),
           if (report.goals.isNotEmpty) ..._savingsSection(),
           if (report.loans.isNotEmpty) ..._loansSection(),
@@ -214,10 +201,7 @@ class PdfReportBuilder {
                   ),
                   pw.Text(
                     l10n.appTagline,
-                    style: const pw.TextStyle(
-                      fontSize: 9,
-                      color: PdfColor.fromInt(0xFFB9E8E5),
-                    ),
+                    style: const pw.TextStyle(fontSize: 9, color: PdfColor.fromInt(0xFFB9E8E5)),
                   ),
                 ],
               ),
@@ -226,19 +210,12 @@ class PdfReportBuilder {
           pw.SizedBox(height: 24),
           pw.Text(
             l10n.financialReport,
-            style: pw.TextStyle(
-              fontSize: 26,
-              fontWeight: pw.FontWeight.bold,
-              color: _Brand.white,
-            ),
+            style: pw.TextStyle(fontSize: 26, fontWeight: pw.FontWeight.bold, color: _Brand.white),
           ),
           pw.SizedBox(height: 4),
           pw.Text(
             report.rangeLabel,
-            style: const pw.TextStyle(
-              fontSize: 12,
-              color: PdfColor.fromInt(0xFFD5F0EE),
-            ),
+            style: const pw.TextStyle(fontSize: 12, color: PdfColor.fromInt(0xFFD5F0EE)),
           ),
           pw.SizedBox(height: 18),
           pw.Divider(color: PdfColor.fromInt(0x33FFFFFF), height: 1),
@@ -263,19 +240,12 @@ class PdfReportBuilder {
         children: [
           pw.Text(
             label.toUpperCase(),
-            style: const pw.TextStyle(
-              fontSize: 6.5,
-              color: PdfColor.fromInt(0xFF9FDCD8),
-            ),
+            style: const pw.TextStyle(fontSize: 6.5, color: PdfColor.fromInt(0xFF9FDCD8)),
           ),
           pw.SizedBox(height: 3),
           pw.Text(
             value,
-            style: pw.TextStyle(
-              fontSize: 9,
-              fontWeight: pw.FontWeight.bold,
-              color: _Brand.white,
-            ),
+            style: pw.TextStyle(fontSize: 9, fontWeight: pw.FontWeight.bold, color: _Brand.white),
           ),
         ],
       ),
@@ -291,11 +261,7 @@ class PdfReportBuilder {
       ),
       child: pw.Row(
         children: [
-          pw.Container(
-            width: 16,
-            height: 16,
-            child: pw.SvgImage(svg: assets.logoSvg),
-          ),
+          pw.Container(width: 16, height: 16, child: pw.SvgImage(svg: assets.logoSvg)),
           pw.SizedBox(width: 7),
           pw.Text(
             l10n.appName,
@@ -306,10 +272,7 @@ class PdfReportBuilder {
             ),
           ),
           pw.Spacer(),
-          pw.Text(
-            report.rangeLabel,
-            style: const pw.TextStyle(fontSize: 8.5, color: _Brand.muted),
-          ),
+          pw.Text(report.rangeLabel, style: const pw.TextStyle(fontSize: 8.5, color: _Brand.muted)),
         ],
       ),
     );
@@ -351,11 +314,7 @@ class PdfReportBuilder {
           pw.SizedBox(width: 7),
           pw.Text(
             title,
-            style: pw.TextStyle(
-              fontSize: 13,
-              fontWeight: pw.FontWeight.bold,
-              color: _Brand.ink,
-            ),
+            style: pw.TextStyle(fontSize: 13, fontWeight: pw.FontWeight.bold, color: _Brand.ink),
           ),
         ],
       ),
@@ -371,11 +330,7 @@ class PdfReportBuilder {
         children: [
           _statTile(l10n.income, money.format(summary.income), _Brand.primary),
           pw.SizedBox(width: 8),
-          _statTile(
-            l10n.expenses,
-            money.format(summary.expenses),
-            _Brand.secondary,
-          ),
+          _statTile(l10n.expenses, money.format(summary.expenses), _Brand.secondary),
           pw.SizedBox(width: 8),
           _statTile(
             l10n.netBalance,
@@ -383,11 +338,7 @@ class PdfReportBuilder {
             summary.net >= 0 ? _Brand.primaryDark : _Brand.error,
           ),
           pw.SizedBox(width: 8),
-          _statTile(
-            l10n.savingsRate,
-            '${(summary.savingsRate * 100).round()}%',
-            _Brand.ink,
-          ),
+          _statTile(l10n.savingsRate, '${(summary.savingsRate * 100).round()}%', _Brand.ink),
         ],
       ),
       pw.SizedBox(height: 10),
@@ -398,12 +349,9 @@ class PdfReportBuilder {
           [l10n.totalExpenses, money.format(summary.expenses)],
           [l10n.netBalance, money.formatSigned(summary.net)],
           [l10n.totalBalance, money.format(summary.balance)],
-          if (report.budgets.isNotEmpty)
-            [l10n.totalBudget, money.format(report.totalBudgeted)],
-          if (report.goals.isNotEmpty)
-            [l10n.totalSaved, money.format(report.totalSaved)],
-          if (report.loans.isNotEmpty)
-            [l10n.totalOutstanding, money.format(report.totalOwed)],
+          if (report.budgets.isNotEmpty) [l10n.totalBudget, money.format(report.totalBudgeted)],
+          if (report.goals.isNotEmpty) [l10n.totalSaved, money.format(report.totalSaved)],
+          if (report.loans.isNotEmpty) [l10n.totalOutstanding, money.format(report.totalOwed)],
         ],
         alignRightLast: true,
       ),
@@ -429,11 +377,7 @@ class PdfReportBuilder {
             pw.SizedBox(height: 3),
             pw.Text(
               value,
-              style: pw.TextStyle(
-                fontSize: 11,
-                fontWeight: pw.FontWeight.bold,
-                color: color,
-              ),
+              style: pw.TextStyle(fontSize: 11, fontWeight: pw.FontWeight.bold, color: color),
             ),
           ],
         ),
@@ -467,13 +411,7 @@ class PdfReportBuilder {
     return [
       _sectionTitle(l10n.budgets),
       _table(
-        headers: [
-          l10n.category,
-          l10n.budgetLimit,
-          l10n.spent,
-          l10n.remaining,
-          l10n.used,
-        ],
+        headers: [l10n.category, l10n.budgetLimit, l10n.spent, l10n.remaining, l10n.used],
         rows: [
           for (final Budget budget in report.budgets)
             [
@@ -495,13 +433,7 @@ class PdfReportBuilder {
     return [
       _sectionTitle(l10n.savingsGoals),
       _table(
-        headers: [
-          l10n.goal,
-          l10n.saved,
-          l10n.target,
-          l10n.targetDate,
-          l10n.progress,
-        ],
+        headers: [l10n.goal, l10n.saved, l10n.target, l10n.targetDate, l10n.progress],
         rows: [
           for (final SavingsGoal goal in report.goals)
             [
@@ -523,7 +455,7 @@ class PdfReportBuilder {
       _table(
         headers: [
           l10n.debtName,
-          l10n.remainingBalance,
+          l10n.dueAmount,
           l10n.installmentAmount,
           l10n.remainingInstallments,
           l10n.nextPayment,
@@ -535,9 +467,7 @@ class PdfReportBuilder {
               loan.name,
               money.format(loan.remaining),
               money.format(loan.installmentAmount),
-              loan.hasSchedule
-                  ? '${loan.remainingInstallments}/${loan.totalInstallments}'
-                  : '—',
+              loan.hasSchedule ? '${loan.remainingInstallments}/${loan.totalInstallments}' : '—',
               dates.short(loan.nextPaymentDate),
               '${loan.percentPaid}%',
             ],
@@ -557,12 +487,7 @@ class PdfReportBuilder {
         headers: [l10n.date, l10n.description, l10n.category, l10n.amount],
         rows: [
           for (final tx in rows)
-            [
-              dates.short(tx.date),
-              tx.title,
-              tx.category.name,
-              money.formatSigned(tx.signedAmount),
-            ],
+            [dates.short(tx.date), tx.title, tx.category.name, money.formatSigned(tx.signedAmount)],
         ],
         alignRightLast: true,
       ),
@@ -594,12 +519,8 @@ class PdfReportBuilder {
     bool Function(int index)? highlightRow,
     bool alignRightLast = false,
   }) {
-    final startAlign = _isRtl
-        ? pw.Alignment.centerRight
-        : pw.Alignment.centerLeft;
-    final endAlign = _isRtl
-        ? pw.Alignment.centerLeft
-        : pw.Alignment.centerRight;
+    final startAlign = _isRtl ? pw.Alignment.centerRight : pw.Alignment.centerLeft;
+    final endAlign = _isRtl ? pw.Alignment.centerLeft : pw.Alignment.centerRight;
     final startText = _isRtl ? pw.TextAlign.right : pw.TextAlign.left;
     final endText = _isRtl ? pw.TextAlign.left : pw.TextAlign.right;
 
@@ -619,9 +540,7 @@ class PdfReportBuilder {
           textAlign: trailing ? endText : startText,
           style: pw.TextStyle(
             fontSize: header ? 7.5 : 8.5,
-            fontWeight: header || highlight
-                ? pw.FontWeight.bold
-                : pw.FontWeight.normal,
+            fontWeight: header || highlight ? pw.FontWeight.bold : pw.FontWeight.normal,
             color: header
                 ? _Brand.muted
                 : highlight
@@ -638,8 +557,7 @@ class PdfReportBuilder {
       ),
       columnWidths: {
         0: const pw.FlexColumnWidth(2.2),
-        for (var i = 1; i < headers.length; i++)
-          i: const pw.FlexColumnWidth(1.4),
+        for (var i = 1; i < headers.length; i++) i: const pw.FlexColumnWidth(1.4),
       },
       children: [
         pw.TableRow(

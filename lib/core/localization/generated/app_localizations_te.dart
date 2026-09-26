@@ -2160,4 +2160,10 @@ class AppL10nTe extends AppL10n {
 
   @override
   String get recommendedBudget => 'Recommended budget';
+
+  @override
+  String get due => 'Due';
+
+  @override
+  String get dueAmount => 'Due amount';
 }

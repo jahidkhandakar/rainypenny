@@ -231,7 +231,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
           ),
         ),
         SheetField(
-          label: l10n.remainingBalance,
+          label: l10n.dueAmount,
           child: AmountField(
             controller: _remainingController,
             symbol: symbol,

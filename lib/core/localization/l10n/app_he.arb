@@ -1,37 +1,16 @@
 {
   "@@locale": "he",
   "appName": "RainyPenny",
-  "appTagline": "חיסכון ליום סגריר",
+  "appTagline": "לחסוך ליום סגריר",
   "navHome": "בית",
   "navTransactions": "תנועות",
   "navAdd": "הוספה",
   "navReports": "דוחות",
   "navProfile": "פרופיל",
   "greetingMorning": "בוקר טוב, {name}",
-  "@greetingMorning": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "greetingAfternoon": "צהריים טובים, {name}",
-  "@greetingAfternoon": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "greetingEvening": "ערב טוב, {name}",
-  "@greetingEvening": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "greetingSubtitle": "הנה הסקירה הפיננסית שלך",
+  "greetingSubtitle": "הנה התמונה הפיננסית שלך",
   "totalBalance": "יתרה כוללת",
   "vsLastPeriod": "לעומת התקופה הקודמת",
   "income": "הכנסות",
@@ -43,20 +22,13 @@
   "addExpense": "הוספת הוצאה",
   "spendingOverview": "סקירת הוצאות",
   "recentTransactions": "תנועות אחרונות",
-  "seeAll": "הצג הכול",
-  "viewAll": "הצג הכול",
+  "seeAll": "הצגת הכול",
+  "viewAll": "לראות הכול",
   "budgetProgress": "התקדמות התקציב",
   "savingsGoals": "יעדי חיסכון",
   "financialInsight": "תובנה פיננסית",
-  "financialHealth": "חוסן פיננסי",
+  "financialHealth": "בריאות פיננסית",
   "ofTotal": "מתוך {total}",
-  "@ofTotal": {
-    "placeholders": {
-      "total": {
-        "type": "String"
-      }
-    }
-  },
   "searchTransactions": "חיפוש תנועות",
   "filterAll": "הכול",
   "filterIncome": "הכנסות",
@@ -64,95 +36,60 @@
   "today": "היום",
   "yesterday": "אתמול",
   "noTransactionsTitle": "לא נמצאו תנועות",
-  "noTransactionsBody": "נסה לחפש או לסנן אחרת כדי לראות פעילות נוספת.",
-  "transactionCount": "{count, plural, =0{אין תנועות} =1{תנועה אחת} other{{count} תנועות}}",
-  "@transactionCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "noTransactionsBody": "נסו חיפוש או מסנן אחר כדי לראות עוד רשומות.",
+  "transactionCount": "{count, plural, =0{אין תנועות} one{תנועה אחת} other{{count} תנועות}}",
   "addTransaction": "הוספת תנועה",
   "amount": "סכום",
   "category": "קטגוריה",
   "date": "תאריך",
   "note": "הערה",
-  "noteHint": "הערה אופציונלית",
+  "noteHint": "הערה (לא חובה)",
   "saveIncome": "שמירת הכנסה",
   "saveExpense": "שמירת הוצאה",
   "selectCategory": "בחירת קטגוריה",
   "transactionSaved": "התנועה נשמרה",
-  "amountRequired": "יש להזין סכום גדול מאפס",
-  "titleRequired": "יש לתת שם לתנועה זו",
+  "amountRequired": "הזינו סכום גדול מאפס",
+  "titleRequired": "תנו שם לתנועה הזו",
   "descriptionLabel": "תיאור",
-  "descriptionHint": "למשל, קניות בסופר",
+  "descriptionHint": "למשל: קניות בסופר",
   "budget": "תקציב",
   "budgets": "תקציבים",
-  "totalBudget": "סך כל התקציב",
-  "spent": "הוצאו",
+  "totalBudget": "סך התקציב",
+  "spent": "הוצא",
   "remaining": "נותר",
   "budgetUsed": "{percent}% נוצלו",
-  "@budgetUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "onTrack": "במסלול הנכון",
-  "approachingLimit": "מתקרב למגבלה",
+  "onTrack": "במסלול",
+  "approachingLimit": "מתקרב לתקרה",
   "overBudget": "חריגה מהתקציב",
-  "savings": "חסכונות",
+  "savings": "חיסכון",
   "yourGoals": "היעדים שלך",
   "saved": "נחסך",
   "target": "יעד",
   "monthlyContribution": "חודשי",
-  "addFunds": "הפקדת כספים",
+  "addFunds": "הפקדה",
   "goalComplete": "היעד הושג",
-  "monthsToGo": "{count, plural, =1{חודש אחד נותר} other{עוד {count} חודשים}}",
-  "@monthsToGo": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "monthsToGo": "{count, plural, one{נותר חודש} other{נותרו {count} חודשים}}",
   "loansAndDebts": "הלוואות וחובות",
-  "totalOutstanding": "סך כל החוב הנותר",
+  "totalOutstanding": "סך החוב שנותר",
   "monthlyPayment": "חודשי",
   "nextPayment": "התשלום הבא",
   "paidOff": "{percent}% שולמו",
-  "@paidOff": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "interestRate": "ריבית",
   "upcomingPayments": "תשלומים קרובים",
-  "dueInDays": "{count, plural, =0{לתשלום היום} =1{לתשלום מחר} other{לתשלום בעוד {count} ימים}}",
-  "@dueInDays": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "overdue": "בפיגור",
+  "dueInDays": "{count, plural, =0{לתשלום היום} one{בעוד יום} other{בעוד {count} ימים}}",
+  "overdue": "באיחור",
   "reports": "דוחות",
   "week": "שבוע",
   "month": "חודש",
   "quarter": "רבעון",
   "incomeVsExpenses": "הכנסות מול הוצאות",
   "spendingByCategory": "הוצאות לפי קטגוריה",
-  "budgetPerformance": "ביצועי תקציב",
+  "budgetPerformance": "ביצועי התקציב",
   "insights": "תובנות",
-  "savingsRate": "שיעור חיסכון",
+  "savingsRate": "שיעור החיסכון",
   "profile": "פרופיל",
   "account": "חשבון",
-  "personalInformation": "מידע אישי",
+  "personalInformation": "פרטים אישיים",
   "changePassword": "שינוי סיסמה",
   "notifications": "התראות",
   "preferences": "העדפות",
@@ -163,952 +100,373 @@
   "privacyAndSecurity": "פרטיות ואבטחה",
   "help": "עזרה",
   "helpAndSupport": "עזרה ותמיכה",
-  "termsAndConditions": "תנאי שימוש",
+  "termsAndConditions": "תנאים והגבלות",
   "logOut": "התנתקות",
   "memberSince": "חבר מאז {date}",
-  "@memberSince": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
-  "themeSystem": "מערכת",
+  "themeSystem": "לפי המערכת",
   "themeLight": "בהיר",
   "themeDark": "כהה",
   "settings": "הגדרות",
-  "noNotificationsTitle": "אין התראות חדשות",
+  "noNotificationsTitle": "הכול מעודכן",
   "noNotificationsBody": "תובנות ותזכורות חדשות יופיעו כאן.",
   "cancel": "ביטול",
   "save": "שמירה",
-  "done": "בוצע",
-  "retry": "ניסיון חוזר",
+  "done": "סיום",
+  "retry": "ניסיון נוסף",
   "close": "סגירה",
   "somethingWentWrong": "משהו השתבש",
-  "comingSoon": "בקרוב בגרסה המלאה",
+  "comingSoon": "יגיע בגרסה המלאה",
   "edit": "עריכה",
   "delete": "מחיקה",
   "undo": "ביטול פעולה",
   "add": "הוספה",
   "create": "יצירה",
-  "nameRequired": "יש להזין שם",
-  "amountAboveZero": "יש להזין סכום גדול מאפס",
+  "nameRequired": "תנו לזה שם",
+  "amountAboveZero": "הזינו סכום גדול מאפס",
   "editTransaction": "עריכת תנועה",
   "deleteTransaction": "למחוק את התנועה?",
-  "deleteTransactionBody": "התנועה «{title}» תוסר מיומן התנועות שלך.",
-  "@deleteTransactionBody": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteTransactionBody": "{title} תוסר מהרישומים שלך.",
   "transactionDeleted": "התנועה נמחקה",
   "transactionUpdated": "התנועה עודכנה",
   "newBudget": "תקציב חדש",
   "editBudget": "עריכת תקציב",
-  "budgetLimit": "מגבלה חודשית",
+  "budgetLimit": "תקרה חודשית",
   "deleteBudget": "למחוק את התקציב?",
-  "deleteBudgetBody": "תקציב «{category}» יימחק. התנועות שלך לא יושפעו.",
-  "@deleteBudgetBody": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteBudgetBody": "תקציב {category} יוסר. התנועות שלך לא ייפגעו.",
   "budgetSaved": "התקציב נשמר",
   "budgetDeleted": "התקציב נמחק",
-  "allCategoriesBudgeted": "לכל הקטגוריות כבר יש תקציב",
+  "allCategoriesBudgeted": "לכל קטגוריה כבר יש תקציב",
   "noBudgetsTitle": "אין עדיין תקציבים",
-  "noBudgetsBody": "הגדר מגבלה חודשית לקטגוריה כדי להתחיל לעקוב אחריה.",
+  "noBudgetsBody": "קבעו תקרה חודשית לקטגוריה כדי להתחיל לעקוב אחריה.",
   "newGoal": "יעד חדש",
   "editGoal": "עריכת יעד",
   "goalName": "שם היעד",
-  "goalNameHint": "למשל, קרן חירום",
+  "goalNameHint": "למשל: קרן חירום",
   "targetAmount": "סכום היעד",
   "alreadySaved": "כבר נחסך",
   "deleteGoal": "למחוק את היעד?",
-  "deleteGoalBody": "היעד «{name}» וההתקדמות בו יימחקו.",
-  "@deleteGoalBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteGoalBody": "{name} וההתקדמות שלו יוסרו.",
   "goalSaved": "היעד נשמר",
   "goalDeleted": "היעד נמחק",
   "noGoalsTitle": "אין עדיין יעדי חיסכון",
-  "noGoalsBody": "הגדר יעד ו-RainyPenny תעקוב אחר ההתקדמות שלך.",
-  "fundsAdded": "הכספים נוספו",
-  "newDebt": "הלוואה או כרטיס אשראי חדש",
+  "noGoalsBody": "קבעו יעד ו-RainyPenny יעקוב אחרי ההתקדמות שלכם.",
+  "fundsAdded": "הכסף נוסף",
+  "newDebt": "הלוואה או כרטיס חדשים",
   "editDebt": "עריכת הלוואה",
   "debtName": "שם",
-  "debtNameHint": "למשל, הלוואת רכב",
-  "lender": "מלווה",
-  "lenderHint": "למשל, בנק לאומי",
+  "debtNameHint": "למשל: הלוואת רכב",
+  "lender": "המלווה",
+  "lenderHint": "למשל: בנק הפועלים",
   "originalAmount": "סכום מקורי",
   "creditLimit": "מסגרת אשראי",
-  "remainingBalance": "יתרת חוב",
+  "remainingBalance": "יתרה לתשלום",
   "interestRatePercent": "שיעור ריבית (%)",
   "kindLoan": "הלוואה",
   "kindCreditCard": "כרטיס אשראי",
   "recordPayment": "רישום תשלום",
   "paymentRecorded": "התשלום נרשם",
-  "deleteDebt": "למחוק חוב זה?",
-  "deleteDebtBody": "«{name}» יוסר מרשימת החובות שלך.",
-  "@deleteDebtBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteDebt": "למחוק את החוב הזה?",
+  "deleteDebtBody": "{name} יוסר מרשימת החובות שלך.",
   "debtSaved": "נשמר",
   "debtDeleted": "נמחק",
   "noDebtsTitle": "אין חובות במעקב",
-  "noDebtsBody": "הוסף הלוואה או כרטיס אשראי כדי לעקוב אחר ההחזרים.",
+  "noDebtsBody": "הוסיפו הלוואה או כרטיס אשראי כדי לעקוב אחרי ההחזרים.",
   "insightBudgetExceededTitle": "חריגה מתקציב {subject}",
-  "@insightBudgetExceededTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetExceededBody": "חרגת ב-{amount} מתקציב {subject} לתקופה זו.",
-  "@insightBudgetExceededBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingTitle": "קטגוריית {subject} קרובה למגבלה",
-  "@insightBudgetApproachingTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingBody": "{percent}% מתקציב {subject} כבר נוצלו, נותרו {amount}.",
-  "@insightBudgetApproachingBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
-  "insightOverIncomeTitle": "ההוצאות עולות על ההכנסות",
-  "insightOverIncomeBody": "הוצאת יותר ממה שהרווחת בתקופה זו. כדאי לעבור על הקטגוריות הגדולות ביותר כדי לאזן את המצב.",
-  "insightCategoryUpTitle": "ההוצאות על {subject} עלו",
-  "@insightCategoryUpTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightCategoryUpBody": "ההוצאות שלך על {subject} גבוהות ב-{percent}% בהשוואה לתקופה הקודמת.",
-  "@insightCategoryUpBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
+  "insightBudgetExceededBody": "חרגתם מתקציב {subject} ב-{amount} בתקופה הזו.",
+  "insightBudgetApproachingTitle": "{subject} מתקרב לתקרה",
+  "insightBudgetApproachingBody": "תקציב {subject} נוצל ב-{percent}%, נותרו {amount}.",
+  "insightOverIncomeTitle": "ההוצאות גבוהות מההכנסות",
+  "insightOverIncomeBody": "בתקופה הזו הוצאתם יותר ממה שהרווחתם. עברו על הקטגוריות הגדולות כדי לאזן מחדש.",
+  "insightCategoryUpTitle": "ההוצאה על {subject} עלתה",
+  "insightCategoryUpBody": "ההוצאה שלכם על {subject} גבוהה ב-{percent}% מהתקופה הקודמת.",
   "insightTrendDownTitle": "ההוצאות במגמת ירידה",
-  "insightTrendDownBody": "סך כל ההוצאות נמוך ב-{percent}% בהשוואה לתקופה הקודמת.",
-  "@insightTrendDownBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
+  "insightTrendDownBody": "סך ההוצאות נמוך ב-{percent}% מהתקופה הקודמת.",
   "insightTrendUpTitle": "ההוצאות במגמת עלייה",
-  "insightTrendUpBody": "סך כל ההוצאות גבוה ב-{percent}% בהשוואה לתקופה הקודמת.",
-  "@insightTrendUpBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsStrongTitle": "חיסכון מעולה בתקופה זו",
-  "insightSavingsStrongBody": "שמרת {percent}% מההכנסה שלך — הרבה מעל יעד ה-{target}%.",
-  "@insightSavingsStrongBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsLowTitle": "שיעור החיסכון נמוך מהיעד",
-  "insightSavingsLowBody": "שמרת {percent}% מההכנסה שלך בתקופה זו. היעד המומלץ הוא {target}%.",
-  "@insightSavingsLowBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightGoalNearlyTitle": "היעד «{subject}» כמעט הושלם",
-  "@insightGoalNearlyTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalNearlyBody": "נותרו רק {amount} להשגת היעד «{subject}».",
-  "@insightGoalNearlyBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackTitle": "במסלול הנכון להשגת «{subject}»",
-  "@insightGoalOnTrackTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackBody": "בחיסכון של {amount} בחודש, תגיע ליעד זה בעוד {months, plural, =1{חודש אחד} other{{months} חודשים}}.",
-  "@insightGoalOnTrackBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "months": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtOverdueTitle": "התשלום עבור «{subject}» בפיגור",
-  "@insightDebtOverdueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtOverdueBody": "התשלום בסך {amount} עבור «{subject}» מתעכב ב-{days, plural, =1{יום אחד} other{{days} ימים}}.",
-  "@insightDebtOverdueBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtDueTitle": "תשלום עבור «{subject}» מתקרב",
-  "@insightDebtDueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueBody": "סך של {amount} לתשלום {days, plural, =0{היום} =1{מחר} other{בעוד {days} ימים}}.",
-  "@insightDebtDueBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
+  "insightTrendUpBody": "סך ההוצאות גבוה ב-{percent}% מהתקופה הקודמת.",
+  "insightSavingsStrongTitle": "חיסכון מצוין בתקופה הזו",
+  "insightSavingsStrongBody": "שמרתם {percent}% מההכנסה — הרבה מעל היעד של {target}%.",
+  "insightSavingsLowTitle": "שיעור החיסכון מתחת ליעד",
+  "insightSavingsLowBody": "בתקופה הזו שמרתם {percent}% מההכנסה. כוונו ל-{target}%.",
+  "insightGoalNearlyTitle": "{subject} כמעט מלא",
+  "insightGoalNearlyBody": "נותרו רק {amount} כדי להגיע ל{subject}.",
+  "insightGoalOnTrackTitle": "{subject} במסלול",
+  "insightGoalOnTrackBody": "בקצב של {amount} לחודש תגיעו ליעד הזה בעוד {months, plural, one{חודש} other{{months} חודשים}}.",
+  "insightDebtOverdueTitle": "תשלום {subject} באיחור",
+  "insightDebtOverdueBody": "התשלום של {amount} עבור {subject} באיחור של {days, plural, one{יום} other{{days} ימים}}.",
+  "insightDebtDueTitle": "תשלום {subject} מתקרב",
+  "insightDebtDueBody": "{amount} לתשלום {days, plural, =0{היום} one{בעוד יום} other{בעוד {days} ימים}}.",
   "signIn": "התחברות",
-  "signUp": "הרשמה",
-  "signInSubtitle": "ברוך שובך. הנתונים שלך מחכים לך.",
-  "signUpSubtitle": "כמה פרטים קצרים ואתה מוכן.",
+  "signUp": "יצירת חשבון",
+  "signInSubtitle": "טוב לראות אתכם שוב. הכסף שלכם מחכה.",
+  "signUpSubtitle": "כמה פרטים והכול מוכן.",
   "emailLabel": "אימייל",
   "emailHint": "you@email.com",
   "passwordLabel": "סיסמה",
   "passwordHint": "לפחות 8 תווים",
   "fullNameLabel": "שם מלא",
-  "fullNameHint": "ישראל ישראלי",
-  "forgotPassword": "שכחת סיסמה?",
-  "resetSent": "בדוק את תיבת הדואר שלך לקבלת קישור לאיפוס",
-  "noAccountYet": "חדש כאן?",
-  "haveAccount": "כבר יש לך חשבון?",
-  "emailInvalid": "יש להזין כתובת אימייל תקינה",
-  "passwordTooShort": "יש להשתמש בלפחות 8 תווים",
-  "signOutConfirm": "להתנתק מהחשבון?",
-  "signOutBody": "יהיה עליך להתחבר שוב כדי לצפות בנתונים הפיננסיים שלך.",
-  "dataSource": "מקור נתונים",
-  "insightWeeklySummaryTitle": "סיכום השבוע שלך",
-  "insightWeeklySummaryBody": "ראה לאן הלך הכסף שלך השבוע ומה מצב התקציבים שלך.",
+  "fullNameHint": "נועה לוי",
+  "forgotPassword": "שכחתם סיסמה?",
+  "resetSent": "בדקו את תיבת הדואר לקישור לאיפוס",
+  "noAccountYet": "פעם ראשונה כאן?",
+  "haveAccount": "כבר יש לכם חשבון?",
+  "emailInvalid": "הזינו כתובת אימייל תקינה",
+  "passwordTooShort": "השתמשו בלפחות 8 תווים",
+  "signOutConfirm": "להתנתק?",
+  "signOutBody": "כדי לראות שוב את הכספים שלכם תצטרכו להתחבר מחדש.",
+  "dataSource": "מקור הנתונים",
+  "insightWeeklySummaryTitle": "השבוע שלכם במבט",
+  "insightWeeklySummaryBody": "ראו לאן הלך הכסף השבוע ואיך התקציבים מחזיקים מעמד.",
   "notificationSettings": "התראות",
-  "alertsSection": "התראות",
-  "budgetAlerts": "התראות תקציב",
-  "budgetAlertsBody": "כשתקציב מתקרב למגבלה שלו או עובר אותה",
+  "alertsSection": "התרעות",
+  "budgetAlerts": "התרעות תקציב",
+  "budgetAlertsBody": "כשתקציב מתקרב לתקרה או חורג ממנה",
   "paymentReminders": "תזכורות תשלום",
-  "paymentRemindersBody": "כמה ימים לפני מועד הפירעון של תשלום",
+  "paymentRemindersBody": "כמה ימים לפני מועד התשלום",
   "savingsUpdates": "עדכוני חיסכון",
-  "savingsUpdatesBody": "התקדמות לקראת היעדים שלך",
+  "savingsUpdatesBody": "התקדמות לעבר היעדים שלכם",
   "weeklySummaryLabel": "סיכום שבועי",
-  "weeklySummaryBody": "תקציר השבוע שחלף",
+  "weeklySummaryBody": "תמצית השבוע שחלף",
   "scheduleSection": "תזמון",
-  "reminderTime": "שעת תזכורת",
-  "quietHours": "שעות שקטות",
+  "reminderTime": "שעת התזכורת",
+  "quietHours": "שעות שקט",
   "quietHoursValue": "{start} – {end}",
-  "@quietHoursValue": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
   "summaryDay": "יום הסיכום",
   "permissionRequired": "ההתראות כבויות",
-  "permissionRequiredBody": "אפשר התראות כדי ש-RainyPenny תוכל להזהיר אותך לפני שתקציב או תשלום יחרגו משליטה.",
+  "permissionRequiredBody": "אפשרו התראות כדי ש-RainyPenny יוכל להזהיר אתכם לפני שתקציב או תשלום יוצאים משליטה.",
   "allowNotifications": "אפשר התראות",
-  "permissionDenied": "ההתראות חסומות. ניתן להפעיל אותן בהגדרות המכשיר.",
-  "upcomingAlerts": "מתוזמנות",
-  "noScheduledAlerts": "אין שום דבר מתוזמן כרגע",
-  "noScheduledAlertsBody": "התראות יופיעו כאן ככל שהתקציבים והתשלומים יתקרבו למגבלות שלהם.",
-  "scheduledFor": "מתוזמן ל-{date}",
-  "@scheduledFor": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
-  "everyWeek": "בכל שבוע",
+  "permissionDenied": "ההתראות חסומות. אפשר להפעיל אותן בהגדרות המכשיר.",
+  "upcomingAlerts": "מתוזמן",
+  "noScheduledAlerts": "כרגע לא מתוזמן דבר",
+  "noScheduledAlertsBody": "התרעות יופיעו כאן כשהתקציבים והתשלומים יתקרבו לגבולות שלהם.",
+  "scheduledFor": "מתוזמן ל־{date}",
+  "everyWeek": "כל שבוע",
   "allNotificationsOff": "כל ההתראות כבויות",
   "needsAttention": "דורש תשומת לב",
-  "quickActionsTitle": "מה תרצה לעשות?",
+  "quickActionsTitle": "מה תרצו לעשות?",
   "createSection": "רישום",
   "jumpToSection": "מעבר אל",
   "addLoanAction": "הוספת הלוואה",
   "addBudgetAction": "הוספת תקציב",
   "addGoalAction": "הוספת יעד",
-  "longPressHint": "טיפ: לחיצה ארוכה על + לרישום הוצאה מיידי",
+  "longPressHint": "טיפ: החזיקו את + כדי לרשום הוצאה מיד",
   "searchCurrencies": "חיפוש מטבעות",
-  "@searchCurrencies": {
-    "description": "Currency picker: searchCurrencies"
-  },
   "noCurrenciesFound": "לא נמצאו מטבעות",
-  "@noCurrenciesFound": {
-    "description": "Currency picker: noCurrenciesFound"
-  },
-  "noCurrenciesFoundMessage": "נסה קוד, סמל או שם אחר.",
-  "@noCurrenciesFoundMessage": {
-    "description": "Currency picker: noCurrenciesFoundMessage"
-  },
-  "popularCurrencies": "פופולריים",
-  "@popularCurrencies": {
-    "description": "Currency picker: popularCurrencies"
-  },
+  "noCurrenciesFoundMessage": "נסו קוד, סמל או שם אחר.",
+  "popularCurrencies": "נפוצים",
   "allCurrencies": "כל המטבעות",
-  "@allCurrencies": {
-    "description": "Currency picker: allCurrencies"
-  },
   "totalLoanAmount": "סכום ההלוואה הכולל",
-  "@totalLoanAmount": {
-    "description": "Loan detail: the original amount borrowed"
-  },
-  "installmentAmount": "סכום התשלום התקופתי",
-  "@installmentAmount": {
-    "description": "Loan detail: what falls due each cycle"
-  },
-  "numberOfInstallments": "מספר תשלומים",
-  "@numberOfInstallments": {
-    "description": "Loan editor: length of the repayment plan"
-  },
+  "installmentAmount": "סכום התשלום",
+  "numberOfInstallments": "מספר התשלומים",
   "paidInstallments": "תשלומים ששולמו",
-  "@paidInstallments": {
-    "description": "Loan detail: installments already settled"
-  },
   "remainingInstallments": "תשלומים שנותרו",
-  "@remainingInstallments": {
-    "description": "Loan detail: installments still to pay"
-  },
-  "installmentsPaidOf": "שולמו {paid} מתוך {total}",
-  "@installmentsPaidOf": {
-    "description": "Loan detail: installment counter",
-    "placeholders": {
-      "paid": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "finalPayment": "תשלום אחרון",
-  "@finalPayment": {
-    "description": "Loan detail: date of the last installment"
-  },
-  "paymentDueDate": "מועד פירעון התשלום",
-  "@paymentDueDate": {
-    "description": "Loan detail: the day of the month a payment falls due"
-  },
-  "dueOnDayOfMonth": "ב-{day} בכל חודש",
-  "@dueOnDayOfMonth": {
-    "description": "Loan detail: recurring due day",
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
-  "loanStatus": "סטטוס",
-  "@loanStatus": {
-    "description": "Loan detail: current standing of the debt"
-  },
-  "statusActive": "פעיל",
-  "@statusActive": {
-    "description": "Loan status: being repaid normally"
-  },
-  "statusDueSoon": "מועד הפירעון קרוב",
-  "@statusDueSoon": {
-    "description": "Loan status: inside the reminder window"
-  },
-  "statusOverdue": "בפיגור",
-  "@statusOverdue": {
-    "description": "Loan status: the due date has passed"
-  },
-  "statusCompleted": "נפרע במלואו",
-  "@statusCompleted": {
-    "description": "Loan status: fully repaid"
-  },
+  "installmentsPaidOf": "{paid} מתוך {total} שולמו",
+  "finalPayment": "התשלום האחרון",
+  "paymentDueDate": "מועד התשלום",
+  "dueOnDayOfMonth": "ב-{day} לכל חודש",
+  "loanStatus": "מצב",
+  "statusActive": "במסלול",
+  "statusDueSoon": "מועד קרוב",
+  "statusOverdue": "באיחור",
+  "statusCompleted": "שולם במלואו",
   "repaymentProgress": "התקדמות ההחזר",
-  "@repaymentProgress": {
-    "description": "Loan detail: section heading for the progress bars"
-  },
   "byAmount": "לפי סכום",
-  "@byAmount": {
-    "description": "Loan detail: progress measured in money"
-  },
   "byInstallments": "לפי תשלומים",
-  "@byInstallments": {
-    "description": "Loan detail: progress measured in payments"
-  },
   "startDate": "תאריך התחלה",
-  "@startDate": {
-    "description": "Loan editor: when repayment began"
-  },
-  "openEnded": "ללא מועד סיום מוגדר",
-  "@openEnded": {
-    "description": "Loan detail: a revolving balance with no fixed term"
-  },
-  "loanDetails": "פרטי הלוואה",
-  "@loanDetails": {
-    "description": "Title of the loan detail screen"
-  },
-  "notSet": "לא הוגדר",
-  "@notSet": {
-    "description": "Shown where an optional value has not been entered"
-  },
-  "insightDebtDueTodayTitle": "התשלום עבור «{subject}» חל היום",
-  "@insightDebtDueTodayTitle": {
-    "description": "Notification: an installment falls due today",
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueTodayBody": "התשלום שלך בסך {amount} חל היום. הקש כדי לשמור עליו בזמן.",
-  "@insightDebtDueTodayBody": {
-    "description": "Notification body: installment due today",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
+  "openEnded": "ללא מועד סיום",
+  "loanDetails": "פרטי ההלוואה",
+  "notSet": "לא נקבע",
+  "insightDebtDueTodayTitle": "{subject} לתשלום היום",
+  "insightDebtDueTodayBody": "התשלום של {amount} מגיע היום. הקשה אחת והכול בזמן.",
   "remindMorningTitle": "בוקר טוב ☀️",
-  "@remindMorningTitle": {
-    "description": "Morning expense reminder title"
-  },
-  "remindMorningBody": "התחל את היום בשליטה על הכסף שלך. יש משהו להוסיף מאתמול?",
-  "@remindMorningBody": {
-    "description": "Morning expense reminder body"
-  },
+  "remindMorningBody": "התחילו את היום עם שליטה על הכסף. יש משהו מאתמול להוסיף?",
   "remindNoonTitle": "בדיקת צהריים",
-  "@remindNoonTitle": {
-    "description": "Noon expense reminder title"
-  },
-  "remindNoonBody": "ארוחת צהריים, קפה, או נסיעה? רשום אותם בכמה שניות.",
-  "@remindNoonBody": {
-    "description": "Noon expense reminder body"
-  },
-  "remindAfternoonTitle": "עדכון מהיר",
-  "@remindAfternoonTitle": {
-    "description": "Afternoon expense reminder title"
-  },
-  "remindAfternoonBody": "רשום את מה שהוצאת עד כה ושמור על יומן תנועות מדויק.",
-  "@remindAfternoonBody": {
-    "description": "Afternoon expense reminder body"
-  },
-  "remindEveningTitle": "סיכום היום",
-  "@remindEveningTitle": {
-    "description": "Evening expense reminder title"
-  },
-  "remindEveningBody": "שתי דקות עכשיו והנתונים של היום מושלמים.",
-  "@remindEveningBody": {
-    "description": "Evening expense reminder body"
-  },
+  "remindNoonBody": "ארוחה, קפה, נסיעה? רישום בכמה שניות.",
+  "remindAfternoonTitle": "השלמה מהירה",
+  "remindAfternoonBody": "רשמו מה הוצאתם עד עכשיו כדי שהמספרים של היום יהיו מדויקים.",
+  "remindEveningTitle": "סוגרים את היום",
+  "remindEveningBody": "שתי דקות עכשיו והרישומים של היום מלאים.",
   "happyWeekendTitle": "סוף שבוע נעים! 🎉",
-  "@happyWeekendTitle": {
-    "description": "Weekend greeting title"
-  },
-  "happyWeekendBody": "תיהנה ממנו — ושים עין על הוצאות סוף השבוע.",
-  "@happyWeekendBody": {
-    "description": "Weekend greeting body"
-  },
-  "dailyReminders": "תזכורות יומיות להוצאות",
-  "@dailyReminders": {
-    "description": "Notification setting: the daily nudges"
-  },
-  "dailyRemindersBody": "תזכורות עדינות לשמירה על הוצאות מעודכנות",
-  "@dailyRemindersBody": {
-    "description": "Notification setting description"
-  },
+  "happyWeekendBody": "תיהנו — ושימו עין גם על ההוצאות של סוף השבוע.",
+  "dailyReminders": "תזכורות הוצאות יומיות",
+  "dailyRemindersBody": "דחיפות עדינות כדי שההוצאות יישארו מעודכנות",
   "weekendGreeting": "ברכת סוף שבוע",
-  "@weekendGreeting": {
-    "description": "Notification setting: the weekend greeting"
-  },
-  "weekendGreetingBody": "ברכה ידידותית בתחילת סוף השבוע שלך",
-  "@weekendGreetingBody": {
-    "description": "Notification setting description"
-  },
-  "reminderTimesSection": "זמני תזכורות",
-  "@reminderTimesSection": {
-    "description": "Section heading for the four daily slots"
-  },
+  "weekendGreetingBody": "ברכה חמה בתחילת סוף השבוע",
+  "reminderTimesSection": "שעות התזכורות",
   "slotMorning": "בוקר",
-  "@slotMorning": {
-    "description": "Daily reminder slot"
-  },
   "slotNoon": "צהריים",
-  "@slotNoon": {
-    "description": "Daily reminder slot"
-  },
   "slotAfternoon": "אחר הצהריים",
-  "@slotAfternoon": {
-    "description": "Daily reminder slot"
-  },
   "slotEvening": "ערב",
-  "@slotEvening": {
-    "description": "Daily reminder slot"
-  },
-  "everyDay": "בכל יום",
-  "@everyDay": {
-    "description": "How often a repeating notification arrives"
-  },
+  "everyDay": "כל יום",
   "financialReport": "דוח פיננסי",
-  "@financialReport": {
-    "description": "Title of the exported PDF"
-  },
   "preparedFor": "הוכן עבור",
-  "@preparedFor": {
-    "description": "PDF cover: whose report this is"
-  },
-  "generatedOn": "הופק בתאריך",
-  "@generatedOn": {
-    "description": "PDF cover: the date the report was produced"
-  },
-  "reportDisclaimer": "הופק על ידי RainyPenny מתוך הרישומים שלך.",
-  "@reportDisclaimer": {
-    "description": "PDF footer note"
-  },
+  "generatedOn": "נוצר בתאריך",
+  "reportDisclaimer": "נוצר על ידי RainyPenny מהרישומים שלכם.",
   "pageOf": "עמוד {page} מתוך {total}",
-  "@pageOf": {
-    "description": "PDF footer page number",
-    "placeholders": {
-      "page": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "overview": "סקירה כללית",
-  "@overview": {
-    "description": "PDF section: the headline totals"
-  },
+  "overview": "סקירה",
   "description": "תיאור",
-  "@description": {
-    "description": "Table column heading"
-  },
-  "totalIncome": "סך כל ההכנסות",
-  "@totalIncome": {
-    "description": "Summary table row"
-  },
-  "totalExpenses": "סך כל ההוצאות",
-  "@totalExpenses": {
-    "description": "Summary table row"
-  },
-  "totalSaved": "סך הכול נחסך",
-  "@totalSaved": {
-    "description": "Summary table row"
-  },
+  "totalIncome": "סך ההכנסות",
+  "totalExpenses": "סך ההוצאות",
+  "totalSaved": "סך החיסכון",
   "shareOfTotal": "חלק",
-  "@shareOfTotal": {
-    "description": "Table column: this category's share of all spending"
-  },
   "used": "נוצל",
-  "@used": {
-    "description": "Table column: percentage of a budget consumed"
-  },
   "goal": "יעד",
-  "@goal": {
-    "description": "Table column heading for a savings goal"
-  },
   "targetDate": "תאריך יעד",
-  "@targetDate": {
-    "description": "Table column heading"
-  },
   "progress": "התקדמות",
-  "@progress": {
-    "description": "Table column heading"
-  },
   "paidOffShort": "שולם",
-  "@paidOffShort": {
-    "description": "Table column: percentage of a debt repaid"
-  },
   "transactions": "תנועות",
-  "@transactions": {
-    "description": "PDF section listing individual entries"
-  },
-  "andMoreTransactions": "{count, plural, =1{ועוד תנועה אחת} other{ועוד {count} תנועות}}",
-  "@andMoreTransactions": {
-    "description": "PDF note when the transaction table is truncated",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "exportPdf": "ייצוא PDF",
-  "@exportPdf": {
-    "description": "Button that produces the report"
-  },
-  "sharePdf": "שיתוף דוח",
-  "@sharePdf": {
-    "description": "Button that opens the share sheet"
-  },
-  "preparingReport": "מכין את הדוח שלך…",
-  "@preparingReport": {
-    "description": "Progress message while the PDF builds"
-  },
+  "andMoreTransactions": "{count, plural, one{ועוד תנועה אחת} other{ועוד {count} תנועות}}",
+  "exportPdf": "ייצוא ל-PDF",
+  "sharePdf": "שיתוף הדוח",
+  "preparingReport": "מכינים את הדוח…",
   "reportReady": "הדוח מוכן",
-  "@reportReady": {
-    "description": "Confirmation once the PDF is produced"
-  },
-  "reportFailed": "לא ניתן היה ליצור את הדוח",
-  "@reportFailed": {
-    "description": "Error message when export fails"
-  },
+  "reportFailed": "לא הצלחנו ליצור את הדוח",
   "categories": "קטגוריות",
-  "@categories": {
-    "description": "Title of the category management screen"
-  },
-  "categoriesIntro": "הוסף קטגוריות משלך כדי לתייג הכנסות והוצאות בדיוק כפי שנוח לך.",
-  "@categoriesIntro": {
-    "description": "Explains what the screen is for"
-  },
-  "expenseCategories": "קטגוריות הוצאות",
-  "@expenseCategories": {
-    "description": "Section heading"
-  },
-  "incomeCategories": "קטגוריות הכנסות",
-  "@incomeCategories": {
-    "description": "Section heading"
-  },
+  "categoriesIntro": "הוסיפו קטגוריות משלכם כדי לסדר הכנסות והוצאות בדיוק כמו שאתם חושבים עליהן.",
+  "expenseCategories": "קטגוריות הוצאה",
+  "incomeCategories": "קטגוריות הכנסה",
   "newCategory": "קטגוריה חדשה",
-  "@newCategory": {
-    "description": "Title of the create form"
-  },
   "editCategory": "עריכת קטגוריה",
-  "@editCategory": {
-    "description": "Title of the edit form"
-  },
   "categoryName": "שם",
-  "@categoryName": {
-    "description": "Category form field label"
-  },
-  "categoryNameHint": "למשל, טיפול בחיות מחמד",
-  "@categoryNameHint": {
-    "description": "Category name placeholder"
-  },
+  "categoryNameHint": "למשל: חיות מחמד",
   "icon": "סמל",
-  "@icon": {
-    "description": "Category form field label"
-  },
   "categorySaved": "הקטגוריה נשמרה",
-  "@categorySaved": {
-    "description": "Confirmation"
-  },
   "categoryDeleted": "הקטגוריה נמחקה",
-  "@categoryDeleted": {
-    "description": "Confirmation"
-  },
-  "deleteCategory": "למחוק קטגוריה זו?",
-  "@deleteCategory": {
-    "description": "Delete confirmation title"
-  },
-  "deleteCategoryBody": "«{name}» תוסר מרשימת הקטגוריות שלך.",
-  "@deleteCategoryBody": {
-    "description": "Delete confirmation body",
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "categoryInUse": "{count, plural, =1{רשומה אחת עדיין משתמשת בקטגוריה זו} other{{count} רשומות עדיין משתמשות בקטגוריה זו}}",
-  "@categoryInUse": {
-    "description": "Explains why a category cannot be deleted",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "noCategoriesYet": "אין כאן שום דבר עדיין.",
-  "@noCategoriesYet": {
-    "description": "Empty group in the category list"
-  },
+  "deleteCategory": "למחוק את הקטגוריה?",
+  "deleteCategoryBody": "{name} תוסר מהקטגוריות שלך.",
+  "categoryInUse": "{count, plural, one{רשומה אחת עדיין משתמשת בקטגוריה הזו} other{{count} רשומות עדיין משתמשות בקטגוריה הזו}}",
+  "noCategoriesYet": "אין כאן עדיין כלום.",
   "builtIn": "מובנית",
-  "@builtIn": {
-    "description": "Marks a shared, read-only category"
-  },
   "manageCategories": "ניהול קטגוריות",
-  "@manageCategories": {
-    "description": "Settings row that opens the category screen"
-  },
   "expense": "הוצאה",
-  "@expense": {
-    "description": "Singular label for an outgoing transaction"
-  },
-  "languageNote": "ערבית, אורדו, פרסית ועברית משנות את הממשק כולו לימין-לשמאל, כולל תרשימים ודוחות PDF.",
-  "@languageNote": {
-    "description": "Note under the language picker explaining RTL support"
-  },
+  "languageNote": "ערבית, אורדו, פרסית ועברית הופכות את כל הממשק לימין-לשמאל, כולל תרשימים ודוחות PDF.",
   "next": "הבא",
   "back": "חזרה",
   "skip": "דילוג",
   "continueLabel": "המשך",
-  "@continueLabel": {
-    "description": "Primary action that advances a multi-step flow. Named with a suffix because \"continue\" is a Dart keyword."
-  },
   "selected": "נבחר",
-  "passwordRequired": "יש להזין סיסמה",
+  "passwordRequired": "הזינו את הסיסמה",
   "newPasswordLabel": "סיסמה חדשה",
-  "confirmPasswordLabel": "אימות סיסמה",
-  "passwordsDoNotMatch": "הסיסמאות חייבות להתאים",
-  "showPassword": "הצגת סיסמה",
-  "hidePassword": "הסתרת סיסמה",
-  "savePassword": "שמירת סיסמה",
+  "confirmPasswordLabel": "אישור סיסמה",
+  "passwordsDoNotMatch": "שתי הסיסמאות חייבות להיות זהות",
+  "showPassword": "הצגת הסיסמה",
+  "hidePassword": "הסתרת הסיסמה",
+  "savePassword": "שמירת הסיסמה",
   "backToSignIn": "חזרה להתחברות",
   "alreadyHaveAccount": "כבר יש לי חשבון",
   "getStarted": "בואו נתחיל",
-  "acceptTerms": "אני מסכים לתנאי השירות ולמדיניות הפרטיות",
-  "acceptTermsRequired": "יש לאשר כדי להמשיך",
+  "acceptTerms": "אני מסכים לתנאי השימוש ולמדיניות הפרטיות",
+  "acceptTermsRequired": "אשרו כדי להמשיך",
   "passwordStrengthTooShort": "קצרה מדי",
   "passwordStrengthWeak": "חלשה",
   "passwordStrengthFair": "סבירה",
   "passwordStrengthGood": "טובה",
   "passwordStrengthStrong": "חזקה",
-  "passwordAdvice": "ביטוי ארוך שתזכור עדיף על ביטוי קצר מלא בסמלים. הימנע משימוש בסיסמה שבה אתה משתמש במקום אחר.",
-  "authInvalidCredentials": "כתובת האימייל והסיסמה אינן תואמות לחשבון קיים",
-  "authEmailNotConfirmed": "יש לאמת את כתובת האימייל לפני ההתחברות",
-  "authEmailAlreadyRegistered": "כבר קיים חשבון עם כתובת אימייל זו",
-  "authWeakPassword": "בחר סיסמה ארוכה יותר",
-  "authRateLimited": "יותר מדי ניסיונות. נסה שוב בעוד מספר דקות",
-  "authNetworkError": "אין חיבור. בדוק את החיבור לרשת ונסה שוב",
-  "authGenericError": "משהו השתבש. אנא נסה שוב",
-  "confirmEmailTitle": "בדוק את האימייל שלך",
-  "confirmEmailBody": "שלחנו קישור אימות אל {email}. פתח אותו כדי לסיים את הגדרת החשבון.",
-  "@confirmEmailBody": {
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
-  "resendConfirmation": "שליחה חוזרת של אימייל אימות",
-  "confirmationResent": "אימייל אימות נשלח שוב",
-  "forgotPasswordTitle": "איפוס סיסמה",
-  "forgotPasswordSubtitle": "הזן את האימייל שאיתו נרשמת ונשלח לך קישור לבחירת סיסמה חדשה.",
-  "sendResetLink": "שליחת קישור לאיפוס",
-  "resetLinkSentTitle": "קישור לאיפוס נשלח",
-  "resetLinkSentBody": "אם קיים חשבון עבור {email}, קישור לאיפוס בדרך אליך.",
-  "@resetLinkSentBody": {
-    "description": "Deliberately conditional: confirming whether an address is registered would let anyone enumerate the app users.",
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
-  "resetLinkSentHint": "תוקף הקישור יפוג בעוד שעה. אם הוא לא מגיע, בדוק את תיקיית הספאם לפני שתבקש שוב.",
-  "tryAnotherEmail": "שימוש באימייל אחר",
+  "passwordAdvice": "משפט ארוך שתזכרו עדיף על סיסמה קצרה מלאה בסימנים. הימנעו ממשהו שאתם כבר משתמשים בו במקום אחר.",
+  "authInvalidCredentials": "האימייל והסיסמה האלה לא מתאימים לאף חשבון",
+  "authEmailNotConfirmed": "אשרו את כתובת האימייל לפני ההתחברות",
+  "authEmailAlreadyRegistered": "כבר קיים חשבון עם האימייל הזה",
+  "authWeakPassword": "בחרו סיסמה ארוכה יותר",
+  "authRateLimited": "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות",
+  "authNetworkError": "אין חיבור. בדקו את הרשת ונסו שוב",
+  "authGenericError": "משהו השתבש. נסו שוב",
+  "confirmEmailTitle": "בדקו את האימייל",
+  "confirmEmailBody": "שלחנו קישור אישור אל {email}. פתחו אותו כדי לסיים את הקמת החשבון.",
+  "resendConfirmation": "שליחת אימייל האישור שוב",
+  "confirmationResent": "אימייל האישור נשלח",
+  "forgotPasswordTitle": "איפוס הסיסמה",
+  "forgotPasswordSubtitle": "הזינו את האימייל שאיתו נרשמתם ונשלח לכם קישור לבחירת סיסמה חדשה.",
+  "sendResetLink": "שליחת קישור",
+  "resetLinkSentTitle": "הקישור נשלח",
+  "resetLinkSentBody": "אם ל-{email} יש חשבון, קישור האיפוס כבר בדרך.",
+  "resetLinkSentHint": "הקישור פג בתוך שעה. אם הוא לא הגיע, בדקו את תיקיית הספאם לפני שתבקשו חדש.",
+  "tryAnotherEmail": "אימייל אחר",
   "resetPasswordTitle": "בחירת סיסמה חדשה",
-  "resetPasswordSubtitle": "בחר סיסמה שלא השתמשת בה בחשבון זה בעבר.",
+  "resetPasswordSubtitle": "בחרו משהו שלא השתמשתם בו בחשבון הזה.",
   "passwordChangedTitle": "הסיסמה עודכנה",
-  "passwordChangedBody": "הסיסמה החדשה שלך נשמרה. אתה מחובר ומוכן להמשיך.",
-  "demoModeHint": "גרסת הדגמה — אין צורך בחשבון",
-  "demoModeFill": "מילוי אוטומטי",
-  "welcomeTrackTitle": "ראה לאן הולך הכסף שלך",
-  "welcomeTrackBody": "רשום מה נכנס ומה יוצא. RainyPenny תהפוך את זה לתמונה ברורה שתוכל להבין באמת.",
-  "welcomeBudgetTitle": "הגדר גבולות שמחזיקים מעמד",
-  "welcomeBudgetBody": "תן לכל חלק בהוצאות שלך תקרת גג חודשית, וקבל התראה לפני שתחרוג ממנה במקום אחרי.",
-  "welcomeGoalsTitle": "חסוך למה שחשוב באמת",
-  "welcomeGoalsBody": "תן שם ליעד, הגדר סכום, וצפה בו מתמלא. קל יותר לבנות קרן ליום סגריר כשרואים אותה גדלה.",
-  "welcomePrivacyTitle": "הכסף והנתונים שלך נשארים שלך",
-  "welcomePrivacyBody": "הנתונים שייכים אך ורק לך. דבר אינו נמכר, ודבר אינו משותף עם אף אחד.",
+  "passwordChangedBody": "הסיסמה החדשה נשמרה. אתם מחוברים ומוכנים להמשיך.",
+  "demoModeHint": "גרסת הדגמה — לא נדרש חשבון",
+  "demoModeFill": "מילוי",
+  "welcomeTrackTitle": "ראו לאן הולך הכסף",
+  "welcomeTrackBody": "רשמו מה נכנס ומה יוצא. RainyPenny הופך את זה לתמונה שאפשר באמת לקרוא.",
+  "welcomeBudgetTitle": "גבולות שמחזיקים",
+  "welcomeBudgetBody": "קבעו תקרה חודשית לכל חלק בהוצאות, ותדעו לפני שחרגתם — לא אחרי.",
+  "welcomeGoalsTitle": "לחסוך למה שחשוב",
+  "welcomeGoalsBody": "תנו שם ליעד, קבעו סכום, וצפו בו מתמלא. קרן לשעת חירום נבנית קל יותר כשרואים אותה.",
+  "welcomePrivacyTitle": "הכסף שלכם נשאר שלכם",
+  "welcomePrivacyBody": "המספרים שלכם שייכים רק לכם. שום דבר לא נמכר ולא משותף עם אף אחד.",
   "stepOf": "שלב {step} מתוך {total}",
-  "@stepOf": {
-    "placeholders": {
-      "step": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "onboardingNameTitle": "איך לקרוא לך?",
-  "onboardingNameBody": "נשתמש בשם זה רק כדי לברך אותך, ובשום מקום אחר.",
-  "onboardingNameHint": "שם פרטי מספיק בהחלט. תוכל לשנות אותו בהמשך.",
-  "onboardingCurrencyTitle": "באיזה מטבע אתה משתמש?",
-  "onboardingCurrencyBody": "כל סכום באפליקציה יוצג במטבע זה. הבחירה בו אינה מבצעת המרה כלשהי.",
+  "onboardingNameTitle": "איך לקרוא לכם?",
+  "onboardingNameBody": "נשתמש בזה רק כדי לברך אתכם, ולא בשום מקום אחר.",
+  "onboardingNameHint": "שם פרטי מספיק. אפשר לשנות אחר כך.",
+  "onboardingCurrencyTitle": "באיזה מטבע אתם משתמשים?",
+  "onboardingCurrencyBody": "כל הסכומים באפליקציה יוצגו במטבע הזה. הבחירה לא ממירה כלום.",
   "onboardingCurrencySearch": "חיפוש בכל המטבעות",
-  "onboardingAppearanceTitle": "התאם את המראה לטעמך",
-  "onboardingAppearanceBody": "בחר סגנון עיצוב. הכול משתנה תוך כדי הקשה, ותוכל לשנות זאת שוב בכל עת.",
-  "onboardingNotificationsTitle": "הישאר בשליטה",
-  "onboardingNotificationsBody": "תזכורת שקטה ברגע הנכון היא מה שהופך את המעקב להרגל קבוע.",
-  "onboardingNotifyReminders": "תזכורת עדינה לרשום מה שהוצאת",
-  "onboardingNotifyBudget": "התראה מוקדמת לפני שתקציב יאזל",
-  "onboardingNotifySummary": "סיכום שבועי על לאן הלך הכסף שלך",
+  "onboardingAppearanceTitle": "התאימו לעצמכם",
+  "onboardingAppearanceBody": "בחרו מראה. הכול משתנה תוך כדי נגיעה, ואפשר לחזור לכאן מתי שתרצו.",
+  "onboardingNotificationsTitle": "תישארו מעודכנים",
+  "onboardingNotificationsBody": "תזכורת שקטה ברגע הנכון היא מה שהופך את זה להרגל.",
+  "onboardingNotifyReminders": "תזכורת עדינה לרשום את מה שהוצאתם",
+  "onboardingNotifyBudget": "התרעה לפני שתקציב נגמר",
+  "onboardingNotifySummary": "סיכום שבועי של לאן הלך הכסף",
   "onboardingNotifyEnable": "הפעלת התראות",
   "onboardingNotifyDone": "הגדרות ההתראות נשמרו",
-  "onboardingNotifyLater": "תוכל לשנות את כל זה בהגדרות בכל עת.",
+  "onboardingNotifyLater": "אפשר לשנות את כל זה בהגדרות, מתי שתרצו.",
   "onboardingReadyTitle": "הכול מוכן",
   "onboardingReadyTitleNamed": "הכול מוכן, {name}",
-  "@onboardingReadyTitleNamed": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "onboardingReadyBody": "סיימנו את ההגדרה. רוצה סיור קצר על איך הכול עובד?",
-  "onboardingTakeTour": "הראה לי את האפליקציה",
-  "onboardingGoToApp": "מעבר לאפליקציה",
-  "onboardingTourLater": "לא עכשיו? המדריך נשאר בהגדרות לכל עת שתרצה.",
+  "onboardingReadyBody": "ההגדרה הסתיימה. רוצים סיור קצר על איך הכול עובד?",
+  "onboardingTakeTour": "תראו לי",
+  "onboardingGoToApp": "קחו אותי לאפליקציה",
+  "onboardingTourLater": "לא עכשיו? המדריך נשאר בהגדרות, מתי שתרצו.",
   "beginnersGuide": "מדריך למתחילים",
   "guideFinish": "סיום",
   "chapterOf": "פרק {number} מתוך {total}",
-  "@chapterOf": {
-    "placeholders": {
-      "number": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
   "guideOpenScreen": "פתיחת {screen}",
-  "@guideOpenScreen": {
-    "placeholders": {
-      "screen": {
-        "type": "String"
-      }
-    }
-  },
-  "guideDashboardTitle": "לוח הבקרה שלך",
-  "guideDashboardBody": "הכול מתחיל כאן. הכרטיס בראש העמוד מציג מה נותר לך; תחתיו מוצג מה שנכנס ומה שיצא בתקופה זו, ולאחר מכן ההוצאות, התקציבים והיעדים שלך.",
-  "guideDashboardTip1": "משוך את המסך כלפי מטה כדי לרענן הכול בבת אחת.",
-  "guideDashboardTip2": "הקש על כרטיס ההכנסות או ההוצאות כדי לעבור לרשימה המלאה.",
-  "guideDashboardTip3": "התרשימים והתובנות מתעדכנים ברגע שאתה רושם משהו.",
-  "guideAddTitle": "רישום כספים",
-  "guideAddBody": "הכפתור במרכז הסרגל הוא המקום שבו הכול מתחיל. הוא פותח תפריט קצר: הוצאה, הכנסה, חוב, תקציב או יעד חיסכון.",
-  "guideAddTip1": "הקש על הכפתור המרכזי כדי לרשום הכנסה או הוצאה.",
-  "guideAddTip2": "החזק אותו לחוץ כדי לעבור ישירות להוצאה חדשה ולדלג על התפריט.",
-  "guideAddTip3": "בחר תמיד קטגוריה — זה מה שגורם לתרשימים ולתקציבים לפעול כראוי.",
+  "guideDashboardTitle": "מסך הבית",
+  "guideDashboardBody": "הכול מתחיל כאן. הכרטיס למעלה הוא מה שנשאר לכם; מתחתיו מה נכנס ומה יצא בתקופה, ואז ההוצאות, התקציבים והיעדים.",
+  "guideDashboardTip1": "משכו את המסך למטה כדי לרענן הכול בבת אחת.",
+  "guideDashboardTip2": "הקישו על כרטיס ההכנסות או ההוצאות כדי לקפוץ ישר לרשימה.",
+  "guideDashboardTip3": "הטבעות והתובנות מתעדכנות ברגע שרושמים משהו.",
+  "guideAddTitle": "רישום כסף",
+  "guideAddBody": "הכפתור באמצע הסרגל הוא נקודת ההתחלה. הוא פותח תפריט קצר: הוצאה, הכנסה, חוב, תקציב או יעד חיסכון.",
+  "guideAddTip1": "הקישו על הכפתור האמצעי כדי לרשום כסף שנכנס או שיצא.",
+  "guideAddTip2": "החזיקו אותו כדי לדלג על התפריט ולעבור ישר להוצאה חדשה.",
+  "guideAddTip3": "תמיד בחרו קטגוריה — עליה עובדים התרשימים והתקציבים.",
   "guideCategoriesTitle": "קטגוריות",
-  "guideCategoriesBody": "קטגוריות הן הדרך שבה הוצאות מקובצות יחד. אלו שמגיעות עם האפליקציה מכסות את רוב הצרכים, ותוכל לשנות את שמן או להוסיף משלך.",
-  "guideCategoriesTip1": "עבור להגדרות ואז לניהול קטגוריות כדי לשנות או להוסיף.",
-  "guideCategoriesTip2": "כל מה שנשאר ללא קטגוריה נכנס ל«אחר», כך שהתרשימים נשארים מדויקים.",
+  "guideCategoriesBody": "קטגוריות הן הדרך שבה ההוצאות מקובצות. אלה שמגיעות עם האפליקציה מספיקות לרוב האנשים, ואפשר לשנות להן שם או להוסיף משלכם.",
+  "guideCategoriesTip1": "הגדרות, ואז ניהול קטגוריות, כדי לשנות או להוסיף.",
+  "guideCategoriesTip2": "כל מה שנשאר ללא קטגוריה נופל ל«אחר», כדי שהתרשימים יישארו כנים.",
   "guideBudgetTitle": "תקציבים",
-  "guideBudgetBody": "תקציב הוא תקרת הוצאה חודשית לקטגוריה אחת. הפס מתמלא ככל שאתה מוציא ומשנה צבע כשמתקרבים למגבלה, כך שתדע לפני שתחרוג.",
-  "guideBudgetTip1": "התחל עם שתיים או שלוש קטגוריות, לא עם כולן בבת אחת.",
-  "guideBudgetTip2": "קבע את המגבלה מעט מעל מה שאתה מוציא בדרך כלל, ואז הדק אותה.",
-  "guideBudgetTip3": "השאר את התראות התקציב פועלות והאפליקציה תזהיר אותך כשהתקציב עומד להסתיים.",
+  "guideBudgetBody": "תקציב הוא תקרה חודשית לקטגוריה אחת. הפס מתמלא ככל שמוציאים ומשנה צבע כשמתקרבים, כך שתדעו לפני שחרגתם.",
+  "guideBudgetTip1": "התחילו משתיים-שלוש קטגוריות, לא מכולן בבת אחת.",
+  "guideBudgetTip2": "קבעו תקרה מעט מעל ההוצאה הרגילה שלכם, ואז הדקו אותה.",
+  "guideBudgetTip3": "השאירו את התרעות התקציב פועלות והאפליקציה תזהיר כשתקציב אוזל.",
   "guideSavingsTitle": "יעדי חיסכון",
-  "guideSavingsBody": "ציין עבור מה אתה חוסך, קבע סכום ותאריך יעד, והאפליקציה תחשב כמה עליך לשים בצד בכל חודש כדי להגיע לשם.",
-  "guideSavingsTip1": "קל יותר להתמיד ביעד מוגדר מאשר בכוונה כללית לחסוך.",
-  "guideSavingsTip2": "כמה יעדים קטנים מושגים לעיתים קרובות יותר מאשר יעד אחד גדול.",
+  "guideSavingsBody": "תנו שם למה שאתם חוסכים בשבילו, קבעו סכום ותאריך, והאפליקציה תחשב כמה צריך להפריש כל חודש.",
+  "guideSavingsTip1": "יעד עם שם קל יותר לשמור עליו מכוונה מעורפלת לחסוך.",
+  "guideSavingsTip2": "כמה יעדים קטנים מסתיימים לעתים קרובות יותר מיעד גדול אחד.",
   "guideLoansTitle": "חובות והלוואות",
-  "guideLoansBody": "רשום מה אתה חייב, כמה זה עולה ומתי מועד התשלום הבא. כל מה שאתה מחזיר נמצא ברשימה אחת עם הסכום הכולל שנותר.",
-  "guideLoansTip1": "הוסף את תאריך הפירעון ותזכורות התשלום יעקבו אחריו עבורך.",
-  "guideLoansTip2": "חוב שמסומן בפיגור מופיע באדום בלוח הבקרה עד לתשלומו.",
+  "guideLoansBody": "רשמו כמה אתם חייבים, כמה זה עולה ומתי התשלום הבא. כל מה שאתם מחזירים נמצא ברשימה אחת עם היתרה.",
+  "guideLoansTip1": "הוסיפו את מועד התשלום ותזכורות התשלום ירדפו אחריו במקומכם.",
+  "guideLoansTip2": "חוב באיחור מוצג באדום במסך הבית עד שהוא משולם.",
   "guideReportsTitle": "דוחות",
-  "guideReportsBody": "המבט המעמיק: הכנסות מול הוצאות, הוצאות לפי קטגוריה, עמידה בתקציבים ואיזה חלק מההכנסה הצלחת לשמור.",
-  "guideReportsTip1": "עבור בין תצוגת שבוע, חודש ורבעון בראש המסך.",
-  "guideReportsTip2": "ייצא או שתף קובץ PDF — הוא נוצר בשפה ובכיוון הקריאה שלך.",
+  "guideReportsBody": "המבט לעומק: הכנסות מול הוצאות, הוצאות לפי קטגוריה, איך התקציבים החזיקו מעמד, ואיזה חלק מההכנסה נשאר אצלכם.",
+  "guideReportsTip1": "עברו בין שבוע, חודש ורבעון בראש המסך.",
+  "guideReportsTip2": "ייצאו או שתפו PDF — הוא יוצא בשפה ובכיוון הכתיבה שלכם.",
   "guideSettingsTitle": "הגדרות",
-  "guideSettingsBody": "שפה, מטבע, צבעים והתראות נמצאים כאן, ושום דבר אינו נעול — שנה כל דבר מתי שתרצה.",
-  "guideSettingsTip1": "ארבעים שפות נתמכות, עם התאמה מלאה של כיוון הממשק לשפות מימין לשמאל.",
-  "guideSettingsTip2": "בחר אילו התראות תרצה לקבל ובאילו שעות מותר להן להגיע.",
-  "guideSettingsTip3": "שעות שקטות מעכבות את כל ההתראות עד לשעות הבוקר.",
-  "guideHabitTitle": "הפוך את זה להרגל",
-  "guideHabitBody": "האפליקציה טובה רק כמו הנתונים שאתה מזין בה. דקה ביום עדיפה על שעה פעם בחודש, ולאחר שבועיים המספרים יתחילו לספר לך סיפור אמיתי.",
-  "guideHabitTip1": "רשום הוצאות ברגע שהן קורות, לא בסוף השבוע.",
-  "guideHabitTip2": "הצץ בלוח הבקרה פעם ביום. עשר שניות יספיקו.",
-  "guideHabitTip3": "מדריך זה נשאר בהגדרות — חזור אליו בכל עת שתרצה.",
+  "guideSettingsBody": "שפה, מטבע, צבעים והתרעות נמצאים כאן, ושום דבר מהם לא ננעל בהגדרה הראשונית — שנו מה שתרצו, מתי שתרצו.",
+  "guideSettingsTip1": "ארבעים שפות, וכל הפריסה מתהפכת בשפות שנכתבות מימין לשמאל.",
+  "guideSettingsTip2": "בחרו אילו התרעות תרצו ובאילו שעות מותר להן להגיע.",
+  "guideSettingsTip3": "שעות שקט מעכבות הכול עד הבוקר.",
+  "guideHabitTitle": "שיישאר הרגל",
+  "guideHabitBody": "האפליקציה שווה בדיוק כמו מה שתכניסו לתוכה. דקה ביום עדיפה על שעה בחודש, ואחרי שבועיים המספרים מתחילים לספר לכם משהו.",
+  "guideHabitTip1": "רשמו הוצאות ברגע שהן קורות, לא בסוף השבוע.",
+  "guideHabitTip2": "הציצו במסך הבית פעם ביום. עשר שניות מספיקות.",
+  "guideHabitTip3": "המדריך הזה נשאר בהגדרות — חזרו אליו מתי שתרצו.",
   "appearance": "מראה",
-  "themeCaption": "בהיר, כהה או לפי הגדרות הטלפון שלך.",
+  "themeCaption": "בהיר, כהה, או מה שהטלפון עושה.",
   "accentColor": "צבע הדגשה",
-  "accentColorCaption": "קובע את צבע הכפתורים, ההדגשות והתרשימים.",
-  "accentSemanticsNote": "הכנסות והוצאות שומרות על הצבעים המקוריים שלהן בכל ערכת נושא, כך שמשמעות המספרים אינה משתנה לעולם בעקבות שינוי צבע ההדגשה.",
+  "accentColorCaption": "צובע את הכפתורים, ההדגשות והתרשימים.",
+  "accentSemanticsNote": "כסף שנכנס וכסף שיוצא שומרים על הצבעים שלהם בכל ערכת נושא, כך שמספר לעולם לא משנה משמעות רק כי שיניתם את צבע ההדגשה.",
   "accentTeal": "טורקיז",
   "accentGreen": "ירוק",
   "accentSky": "תכלת",
@@ -1120,21 +478,20 @@
   "accentOrange": "כתום",
   "accentSlate": "אפור צפחה",
   "searchLanguages": "חיפוש שפות",
-  "suggestedLanguages": "מומלצות",
+  "suggestedLanguages": "מוצעות",
   "allLanguages": "כל השפות",
   "noLanguagesFound": "לא נמצאו שפות",
-  "noLanguagesFoundMessage": "נסה לחפש את השם באנגלית או את קוד השפה בן שתי האותיות.",
+  "noLanguagesFoundMessage": "נסו את השם באנגלית, או את קוד שתי האותיות.",
   "rightToLeft": "מימין לשמאל",
-  "replayGuide": "הצג שוב את המדריך",
-  "replaySetup": "הפעל שוב את ההגדרה הראשונית",
-  "replaySetupBody": "עבור שוב על שאלות ההגדרה הראשונית. שום מידע שרשמת לא יימחק.",
-  "rateTitle": "נהנה מ-RainyPenny?",
-  "rateBody": "אתה משתמש באפליקציה כבר זמן מה. דירוג קצר לוקח רק רגע ועוזר לאחרים למצוא אותה.",
-  "rateAction": "דרג את האפליקציה",
+  "replayGuide": "צפייה במדריך שוב",
+  "replaySetup": "הרצת ההגדרה מחדש",
+  "replaySetupBody": "עברו שוב על שאלות ההתחלה. שום דבר שרשמתם לא נמחק.",
+  "rateTitle": "נהנים מ-RainyPenny?",
+  "rateBody": "אתם כבר זמן מה עם זה. דירוג לוקח רגע ועוזר לאחרים למצוא את האפליקציה.",
+  "rateAction": "דרגו את האפליקציה",
   "rateLater": "אולי מאוחר יותר",
-  "rateNever": "לא, תודה",
-  "rateThanks": "תודה רבה",
-
+  "rateNever": "לא תודה",
+  "rateThanks": "תודה",
   "monthlySalary": "משכורת חודשית",
   "remainingAmount": "נותר",
   "carriedForward": "הועבר מחודש קודם",
@@ -1145,22 +502,8 @@
   "paydayDescription": "היום שבו נכנסת המשכורת שלך. החודש הפיננסי שלך מחושב מיום זה ועד ליום שלפני המשכורת הבאה.",
   "paydayUpdated": "יום המשכורת עודכן",
   "paydayDayOfMonth": "ה-{day} בחודש",
-  "@paydayDayOfMonth": {
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "paydayShortMonthNote": "בחודשים קצרים יותר המחזור מתחיל ביום האחרון של החודש.",
   "daysLeftInCycle": "{count, plural, =0{היום האחרון במחזור} =1{יום אחד ליום המשכורת} other{עוד {count} ימים ליום המשכורת}}",
-  "@daysLeftInCycle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "nextPayday": "יום המשכורת הבא",
   "spentSoFar": "הוצא עד כה",
   "dailyAllowance": "תקציב הוצאה יומי בטוח",
@@ -1170,17 +513,6 @@
   "noSalaryRecorded": "עדיין לא נרשמה משכורת",
   "addSalaryAction": "הוסף את המשכורת שלך",
   "cycleOf": "{start} – {end}",
-  "@cycleOf": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "healthExcellent": "מצוין",
   "healthGood": "טוב",
   "healthFair": "סביר",
@@ -1194,67 +526,21 @@
   "factorDebtLoad": "עומס חובות",
   "factorSpendingTrend": "מגמת הוצאות",
   "factorKept": "{percent}% נשמרו",
-  "@factorKept": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorUsed": "{percent}% נוצלו",
-  "@factorUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorOfIncome": "{percent}% מההכנסה",
-  "@factorOfIncome": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorTrendUp": "עלייה של {percent}%",
-  "@factorTrendUp": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "factorTrendDown": "ירידה של {percent}%",
-  "@factorTrendDown": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
   "howScoreWorks": "איך הציון הזה מחושב",
   "healthScoreExplainer": "הציון שלך משלב ארבעה מדדים: איזה חלק מהכנסתך אתה שומר, עד כמה אתה עומד בתקציבים, איזה חלק מההכנסה מופנה לחובות, והאם ההוצאות שלך במגמת עלייה או ירידה.",
   "scoreWeightLabel": "{percent}% מהציון",
-  "@scoreWeightLabel": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "viewHealthDetails": "צפה בפירוט המלא",
-
   "saveChanges": "שמירת שינויים",
   "profileUpdated": "הפרופיל עודכן",
   "changePhoto": "שינוי תמונה",
   "removePhoto": "הסרת תמונה",
   "personalInformationIntro": "השם והתמונה שלך מופיעים ברחבי האפליקציה. כתובת האימייל היא זו שאיתה אתה מתחבר.",
-  "nameRequired": "יש להזין את שמך",
   "emailNotEditable": "פנה לתמיכה כדי לשנות את כתובת האימייל שבאמצעותה אתה מתחבר.",
-
   "pressBackAgainToExit": "לחץ שוב על חזרה כדי לצאת",
-
   "categoryHousing": "דיור",
   "categoryFood": "מזון ומסעדות",
   "categoryTransport": "תחבורה",
@@ -1308,112 +594,33 @@
   "categoryCashback": "החזר כספי",
   "categoryRefund": "החזר",
   "categoryRentalIncome": "הכנסה משכירות",
-
   "addCategory": "קטגוריה חדשה",
   "filterByCategory": "סינון לפי קטגוריה",
   "allCategories": "כל הקטגוריות",
   "clearFilters": "ניקוי מסננים",
   "spentInCategory": "{category}  ·  {amount}",
-  "@spentInCategory": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "allTime": "כל הזמנים",
   "customRange": "טווח מותאם אישית",
   "selectDateRange": "בחר תקופה",
   "rangeApplied": "מציג {start} – {end}",
-  "@rangeApplied": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "loans": "הלוואות",
   "debts": "חובות",
   "noLoansTitle": "אין הלוואות",
   "noLoansBody": "אין לך הלוואות פעילות.",
-
   "emptyHealthTitle": "אין עדיין ציון חוסן פיננסי",
-  "@emptyHealthTitle": {
-    "description": "Title shown when there is not enough data to compute a health score"
-  },
   "emptyHealthDescription": "אנו זקוקים לקצת פעילות פיננסית כדי לחשב ציון חוסן פיננסי מדויק.",
-  "@emptyHealthDescription": {
-    "description": "Explainer message shown in the empty state on the financial health screen"
-  },
   "emptyHealthAddTransactions": "הוסף תנועות הכנסה או הוצאה",
-  "@emptyHealthAddTransactions": {
-    "description": "Checklist item prompting user to add transactions"
-  },
   "emptyHealthSetBudgets": "הגדר את התקציבים החודשיים שלך",
-  "@emptyHealthSetBudgets": {
-    "description": "Checklist item prompting user to set budgets"
-  },
   "emptyHealthTrackLoans": "עקוב אחר הלוואות או חובות (אופציונלי)",
-  "@emptyHealthTrackLoans": {
-    "description": "Checklist item prompting user to track loans"
-  },
   "emptyHealthCardSubtitle": "הוסף תנועות כדי לחשב את הציון שלך ולקבל תובנות.",
-  "@emptyHealthCardSubtitle": {
-    "description": "Subtitle shown on the dashboard health card when no data is available"
-  },
-  
   "smartBudgetSplit": "חלוקת תקציב חכמה",
-  "@smartBudgetSplit": {
-    "description": "Title for smart salary budget split sheet"
-  },
   "smartBudgetSplitSubtitle": "הזן את המשכורת החודשית שלך כדי לחשב מגבלות מומלצות",
-  "@smartBudgetSplitSubtitle": {
-    "description": "Subtitle explaining how salary budget split works"
-  },
   "monthlyNetSalary": "משכורת חודשית נטו",
-  "@monthlyNetSalary": {
-    "description": "Label for monthly net salary input field"
-  },
   "categoryAllocations": "הקצאות לפי קטגוריה",
-  "@categoryAllocations": {
-    "description": "Header for recommended category allocations list"
-  },
   "totalBudgeted": "סה״כ: {amount}",
-  "@totalBudgeted": {
-    "description": "Total amount budgeted across categories",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "applyAllBudgets": "החל את כל התקציבים",
-  "@applyAllBudgets": {
-    "description": "Button label to apply all recommended category limits"
-  },
   "applyingBudgets": "מחיל תקציבים...",
-  "@applyingBudgets": {
-    "description": "Loading state label while applying budgets"
-  },
   "budgetsCreatedSuccess": "{count, plural, =1{נוצר תקציב קטגוריה אחד.} other{נוצרו {count} תקציבי קטגוריות.}}",
-  "@budgetsCreatedSuccess": {
-    "description": "Success snackbar message when budgets are created",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "failedToSaveBudgets": "שמירת התקציבים נכשלה.",
-  "@failedToSaveBudgets": {
-    "description": "Error message when saving budgets fails"
-  },
   "recommendedBudget": "תקציב מומלץ"
 }

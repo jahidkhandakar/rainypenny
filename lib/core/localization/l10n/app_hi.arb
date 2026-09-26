@@ -8,29 +8,8 @@
   "navReports": "रिपोर्ट",
   "navProfile": "प्रोफ़ाइल",
   "greetingMorning": "सुप्रभात, {name}",
-  "@greetingMorning": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "greetingAfternoon": "नमस्कार, {name}",
-  "@greetingAfternoon": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "greetingEvening": "शुभ संध्या, {name}",
-  "@greetingEvening": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "greetingSubtitle": "यहाँ आपकी वित्तीय स्थिति का अवलोकन है",
   "totalBalance": "कुल शेष राशि",
   "vsLastPeriod": "पिछली अवधि की तुलना में",
@@ -50,13 +29,6 @@
   "financialInsight": "वित्तीय जानकारी",
   "financialHealth": "वित्तीय स्थिति",
   "ofTotal": "{total} में से",
-  "@ofTotal": {
-    "placeholders": {
-      "total": {
-        "type": "String"
-      }
-    }
-  },
   "searchTransactions": "लेन-देन खोजें",
   "filterAll": "सभी",
   "filterIncome": "आय",
@@ -66,13 +38,6 @@
   "noTransactionsTitle": "कोई लेन-देन नहीं मिला",
   "noTransactionsBody": "अपनी गतिविधि देखने के लिए कोई दूसरा खोज शब्द या फ़िल्टर आज़माएँ।",
   "transactionCount": "{count, plural, =0{कोई लेन-देन नहीं} =1{1 लेन-देन} other{{count} लेन-देन}}",
-  "@transactionCount": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "addTransaction": "लेन-देन जोड़ें",
   "amount": "राशि",
   "category": "श्रेणी",
@@ -84,7 +49,7 @@
   "selectCategory": "श्रेणी चुनें",
   "transactionSaved": "लेन-देन सहेजा गया",
   "amountRequired": "शून्य से अधिक राशि दर्ज करें",
-  "titleRequired": "इस लेन-देन का नाम दें",
+  "titleRequired": "इस लेन-देन को एक नाम दें",
   "descriptionLabel": "विवरण",
   "descriptionHint": "जैसे किराने का सामान",
   "budget": "बजट",
@@ -93,13 +58,6 @@
   "spent": "खर्च किया गया",
   "remaining": "शेष",
   "budgetUsed": "{percent}% उपयोग हुआ",
-  "@budgetUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "onTrack": "सही दिशा में",
   "approachingLimit": "सीमा करीब है",
   "overBudget": "बजट से अधिक",
@@ -111,35 +69,14 @@
   "addFunds": "राशि जोड़ें",
   "goalComplete": "लक्ष्य पूरा हुआ",
   "monthsToGo": "{count, plural, =1{1 महीना बाकी} other{{count} महीने बाकी}}",
-  "@monthsToGo": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "loansAndDebts": "ऋण और कर्ज़",
   "totalOutstanding": "कुल बकाया",
   "monthlyPayment": "मासिक",
   "nextPayment": "अगला भुगतान",
   "paidOff": "{percent}% चुकाया गया",
-  "@paidOff": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "interestRate": "ब्याज",
   "upcomingPayments": "आगामी भुगतान",
   "dueInDays": "{count, plural, =0{आज देय} =1{कल देय} other{{count} दिनों में देय}}",
-  "@dueInDays": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "overdue": "अतिदेय",
   "reports": "रिपोर्ट",
   "week": "सप्ताह",
@@ -166,13 +103,6 @@
   "termsAndConditions": "नियम और शर्तें",
   "logOut": "लॉग आउट",
   "memberSince": "{date} से सदस्य",
-  "@memberSince": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
   "themeSystem": "सिस्टम",
   "themeLight": "हल्का",
   "themeDark": "गहरा",
@@ -191,1072 +121,428 @@
   "undo": "पूर्ववत करें",
   "add": "जोड़ें",
   "create": "बनाएँ",
-  "nameRequired": "इसका नाम दें",
+  "nameRequired": "अपना नाम दर्ज करें",
   "amountAboveZero": "शून्य से अधिक राशि दर्ज करें",
   "editTransaction": "लेन-देन संपादित करें",
   "deleteTransaction": "लेन-देन हटाएँ?",
-  "deleteTransactionBody": "{title} को आपके लेज़र से हटा दिया जाएगा।",
-  "@deleteTransactionBody": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    }
-  },
-  "transactionDeleted": "लेन-देन हटा दिया गया",
-  "transactionUpdated": "लेन-देन अपडेट किया गया",
+  "deleteTransactionBody": "{title} आपके खाते से हटा दिया जाएगा।",
+  "transactionDeleted": "लेन-देन हटाया गया",
+  "transactionUpdated": "लेन-देन अपडेट हुआ",
   "newBudget": "नया बजट",
   "editBudget": "बजट संपादित करें",
   "budgetLimit": "मासिक सीमा",
   "deleteBudget": "बजट हटाएँ?",
-  "deleteBudgetBody": "{category} बजट हटा दिया जाएगा। आपके लेन-देन प्रभावित नहीं होंगे।",
-  "@deleteBudgetBody": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      }
-    }
-  },
+  "deleteBudgetBody": "{category} का बजट हटा दिया जाएगा। आपके लेन-देन प्रभावित नहीं होंगे।",
   "budgetSaved": "बजट सहेजा गया",
-  "budgetDeleted": "बजट हटा दिया गया",
-  "allCategoriesBudgeted": "हर श्रेणी के लिए पहले से बजट मौजूद है",
+  "budgetDeleted": "बजट हटाया गया",
+  "allCategoriesBudgeted": "हर श्रेणी का बजट पहले से है",
   "noBudgetsTitle": "अभी कोई बजट नहीं",
-  "noBudgetsBody": "किसी श्रेणी पर मासिक सीमा तय करके उसकी निगरानी शुरू करें।",
+  "noBudgetsBody": "किसी श्रेणी पर मासिक सीमा तय करें और उसे ट्रैक करना शुरू करें।",
   "newGoal": "नया लक्ष्य",
   "editGoal": "लक्ष्य संपादित करें",
   "goalName": "लक्ष्य का नाम",
-  "goalNameHint": "जैसे आपातकालीन निधि",
+  "goalNameHint": "जैसे आपातकालीन कोष",
   "targetAmount": "लक्ष्य राशि",
-  "alreadySaved": "पहले से बचाई गई राशि",
+  "alreadySaved": "अब तक बचाया",
   "deleteGoal": "लक्ष्य हटाएँ?",
   "deleteGoalBody": "{name} और उसकी प्रगति हटा दी जाएगी।",
-  "@deleteGoalBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
   "goalSaved": "लक्ष्य सहेजा गया",
-  "goalDeleted": "लक्ष्य हटा दिया गया",
+  "goalDeleted": "लक्ष्य हटाया गया",
   "noGoalsTitle": "अभी कोई बचत लक्ष्य नहीं",
-  "noGoalsBody": "एक लक्ष्य तय करें और RainyPenny आपकी प्रगति पर नज़र रखेगा।",
-  "fundsAdded": "राशि जोड़ दी गई",
+  "noGoalsBody": "एक लक्ष्य तय करें और RainyPenny आपकी प्रगति देखेगा।",
+  "fundsAdded": "राशि जोड़ी गई",
   "newDebt": "नया ऋण या कार्ड",
   "editDebt": "ऋण संपादित करें",
   "debtName": "नाम",
   "debtNameHint": "जैसे कार ऋण",
   "lender": "ऋणदाता",
-  "lenderHint": "जैसे Meridian Bank",
+  "lenderHint": "जैसे मेरिडियन बैंक",
   "originalAmount": "मूल राशि",
   "creditLimit": "क्रेडिट सीमा",
-  "remainingBalance": "शेष बकाया",
+  "remainingBalance": "शेष राशि",
   "interestRatePercent": "ब्याज दर (%)",
   "kindLoan": "ऋण",
   "kindCreditCard": "क्रेडिट कार्ड",
   "recordPayment": "भुगतान दर्ज करें",
-  "paymentRecorded": "भुगतान दर्ज किया गया",
-  "deleteDebt": "यह कर्ज़ हटाएँ?",
-  "deleteDebtBody": "{name} को आपके कर्ज़ों से हटा दिया जाएगा।",
-  "@deleteDebtBody": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
+  "paymentRecorded": "भुगतान दर्ज हुआ",
+  "deleteDebt": "यह ऋण हटाएँ?",
+  "deleteDebtBody": "{name} आपके ऋणों से हटा दिया जाएगा।",
   "debtSaved": "सहेजा गया",
-  "debtDeleted": "हटा दिया गया",
-  "noDebtsTitle": "कोई कर्ज़ दर्ज नहीं है",
-  "noDebtsBody": "भुगतान पर नज़र रखने के लिए कोई ऋण या क्रेडिट कार्ड जोड़ें।",
-  "insightBudgetExceededTitle": "{subject} बजट से अधिक",
-  "@insightBudgetExceededTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetExceededBody": "इस अवधि में आप अपने {subject} बजट से {amount} अधिक खर्च कर चुके हैं।",
-  "@insightBudgetExceededBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingTitle": "{subject} अपनी सीमा के करीब है",
-  "@insightBudgetApproachingTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightBudgetApproachingBody": "आपके {subject} बजट का {percent}% उपयोग हो चुका है और {amount} बाकी है।",
-  "@insightBudgetApproachingBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
+  "debtDeleted": "हटाया गया",
+  "noDebtsTitle": "कोई ऋण ट्रैक नहीं हो रहा",
+  "noDebtsBody": "भुगतानों पर नज़र रखने के लिए ऋण या क्रेडिट कार्ड जोड़ें।",
+  "insightBudgetExceededTitle": "{subject} का बजट पार हुआ",
+  "insightBudgetExceededBody": "इस अवधि में आप {subject} के बजट से {amount} अधिक खर्च कर चुके हैं।",
+  "insightBudgetApproachingTitle": "{subject} अपनी सीमा के पास है",
+  "insightBudgetApproachingBody": "{subject} का बजट {percent}% उपयोग हो चुका है, {amount} बचा है।",
   "insightOverIncomeTitle": "खर्च आय से अधिक है",
-  "insightOverIncomeBody": "इस अवधि में आपने जितना कमाया उससे अधिक खर्च किया। स्थिति को फिर से संतुलित करने के लिए अपनी सबसे बड़ी खर्च श्रेणियों की समीक्षा करें।",
-  "insightCategoryUpTitle": "{subject} का खर्च बढ़ा है",
-  "@insightCategoryUpTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightCategoryUpBody": "पिछली अवधि की तुलना में आपका {subject} खर्च {percent}% अधिक है।",
-  "@insightCategoryUpBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightTrendDownTitle": "खर्च घटने की दिशा में है",
-  "insightTrendDownBody": "पिछली अवधि की तुलना में कुल खर्च {percent}% कम है।",
-  "@insightTrendDownBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightTrendUpTitle": "खर्च बढ़ने की दिशा में है",
-  "insightTrendUpBody": "पिछली अवधि की तुलना में कुल खर्च {percent}% अधिक है।",
-  "@insightTrendUpBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
-  "insightSavingsStrongTitle": "इस अवधि में अच्छी बचत",
-  "insightSavingsStrongBody": "आपने अपनी आय का {percent}% बचाकर रखा — {target}% के लक्ष्य से काफी अधिक।",
-  "@insightSavingsStrongBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
+  "insightOverIncomeBody": "इस अवधि में आपने कमाई से ज़्यादा खर्च किया। संतुलन बनाने के लिए अपनी सबसे बड़ी श्रेणियाँ देखें।",
+  "insightCategoryUpTitle": "{subject} पर खर्च बढ़ा",
+  "insightCategoryUpBody": "{subject} पर आपका खर्च पिछली अवधि से {percent}% अधिक है।",
+  "insightTrendDownTitle": "खर्च घट रहा है",
+  "insightTrendDownBody": "कुल खर्च पिछली अवधि से {percent}% कम है।",
+  "insightTrendUpTitle": "खर्च बढ़ रहा है",
+  "insightTrendUpBody": "कुल खर्च पिछली अवधि से {percent}% अधिक है।",
+  "insightSavingsStrongTitle": "इस अवधि में शानदार बचत",
+  "insightSavingsStrongBody": "आपने अपनी आय का {percent}% बचाया — {target}% के लक्ष्य से कहीं अधिक।",
   "insightSavingsLowTitle": "बचत दर लक्ष्य से कम है",
-  "insightSavingsLowBody": "इस अवधि में आपने अपनी आय का {percent}% बचाया। {target}% का लक्ष्य रखें।",
-  "@insightSavingsLowBody": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      },
-      "target": {
-        "type": "int"
-      }
-    }
-  },
-  "insightGoalNearlyTitle": "{subject} लगभग पूरा हो गया है",
-  "@insightGoalNearlyTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
+  "insightSavingsLowBody": "इस अवधि में आपने आय का {percent}% बचाया। {target}% का लक्ष्य रखें।",
+  "insightGoalNearlyTitle": "{subject} लगभग पूरा है",
   "insightGoalNearlyBody": "{subject} तक पहुँचने के लिए केवल {amount} बाकी है।",
-  "@insightGoalNearlyBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackTitle": "{subject} के लिए प्रगति सही दिशा में है",
-  "@insightGoalOnTrackTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightGoalOnTrackBody": "हर महीने {amount} बचाने पर आप यह लक्ष्य {months, plural, =1{1 महीने} other{{months} महीनों}} में पूरा कर लेंगे।",
-  "@insightGoalOnTrackBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "months": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtOverdueTitle": "{subject} का भुगतान अतिदेय है",
-  "@insightDebtOverdueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtOverdueBody": "{subject} का {amount} का भुगतान {days, plural, =1{1 दिन} other{{days} दिनों}} से अतिदेय है।",
-  "@insightDebtOverdueBody": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
-  "insightDebtDueTitle": "{subject} का भुगतान जल्द देय है",
-  "@insightDebtDueTitle": {
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueBody": "{amount} का भुगतान {days, plural, =0{आज} =1{कल} other{{days} दिनों में}} देय है।",
-  "@insightDebtDueBody": {
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      },
-      "days": {
-        "type": "int"
-      }
-    }
-  },
-  "signIn": "साइन इन करें",
+  "insightGoalOnTrackTitle": "{subject} के लिए आप सही रास्ते पर हैं",
+  "insightGoalOnTrackBody": "हर महीने {amount} से आप यह लक्ष्य {months, plural, =1{1 महीने} other{{months} महीनों}} में पा लेंगे।",
+  "insightDebtOverdueTitle": "{subject} का भुगतान बकाया है",
+  "insightDebtOverdueBody": "{subject} का {amount} का भुगतान {days, plural, =1{1 दिन} other{{days} दिन}} से बकाया है।",
+  "insightDebtDueTitle": "{subject} का भुगतान आने वाला है",
+  "insightDebtDueBody": "{amount} {days, plural, =0{आज} =1{कल} other{{days} दिनों में}} देय है।",
+  "signIn": "साइन इन",
   "signUp": "खाता बनाएँ",
-  "signInSubtitle": "वापसी पर स्वागत है। आपका पैसा आपका इंतज़ार कर रहा है।",
-  "signUpSubtitle": "कुछ जानकारी दें और आप तैयार हैं।",
+  "signInSubtitle": "वापसी पर स्वागत है। आपका पैसा इंतज़ार कर रहा है।",
+  "signUpSubtitle": "कुछ जानकारी और आप तैयार हैं।",
   "emailLabel": "ईमेल",
   "emailHint": "you@email.com",
   "passwordLabel": "पासवर्ड",
   "passwordHint": "कम से कम 8 अक्षर",
   "fullNameLabel": "पूरा नाम",
-  "fullNameHint": "Alex Morgan",
+  "fullNameHint": "एलेक्स मॉर्गन",
   "forgotPassword": "पासवर्ड भूल गए?",
   "resetSent": "रीसेट लिंक के लिए अपना इनबॉक्स देखें",
   "noAccountYet": "यहाँ नए हैं?",
-  "haveAccount": "क्या आपका पहले से खाता है?",
-  "emailInvalid": "मान्य ईमेल पता दर्ज करें",
-  "passwordTooShort": "कम से कम 8 अक्षरों का उपयोग करें",
+  "haveAccount": "पहले से खाता है?",
+  "emailInvalid": "एक वैध ईमेल पता दर्ज करें",
+  "passwordTooShort": "कम से कम 8 अक्षर उपयोग करें",
   "signOutConfirm": "साइन आउट करें?",
-  "signOutBody": "अपनी वित्तीय जानकारी देखने के लिए आपको फिर से साइन इन करना होगा।",
+  "signOutBody": "अपने वित्त देखने के लिए आपको फिर से साइन इन करना होगा।",
   "dataSource": "डेटा स्रोत",
-  "insightWeeklySummaryTitle": "आपके सप्ताह की समीक्षा",
-  "insightWeeklySummaryBody": "देखें कि इस सप्ताह आपका पैसा कहाँ गया और आपके बजट कितने नियंत्रण में रहे।",
+  "insightWeeklySummaryTitle": "आपका सप्ताह एक नज़र में",
+  "insightWeeklySummaryBody": "देखें कि इस सप्ताह आपका पैसा कहाँ गया और आपके बजट कैसे चल रहे हैं।",
   "notificationSettings": "सूचनाएँ",
   "alertsSection": "अलर्ट",
   "budgetAlerts": "बजट अलर्ट",
-  "budgetAlertsBody": "जब कोई बजट अपनी सीमा के करीब पहुँचे या उसे पार करे",
-  "paymentReminders": "भुगतान रिमाइंडर",
-  "paymentRemindersBody": "भुगतान की देय तारीख से कुछ दिन पहले",
+  "budgetAlertsBody": "जब कोई बजट अपनी सीमा के पास पहुँचे या उसे पार करे",
+  "paymentReminders": "भुगतान अनुस्मारक",
+  "paymentRemindersBody": "भुगतान देय होने से कुछ दिन पहले",
   "savingsUpdates": "बचत अपडेट",
-  "savingsUpdatesBody": "आपके लक्ष्यों की प्रगति",
+  "savingsUpdatesBody": "आपके लक्ष्यों की ओर प्रगति",
   "weeklySummaryLabel": "साप्ताहिक सारांश",
-  "weeklySummaryBody": "बीते सप्ताह का संक्षिप्त विवरण",
+  "weeklySummaryBody": "बीते सप्ताह का सारांश",
   "scheduleSection": "समय",
-  "reminderTime": "रिमाइंडर का समय",
-  "quietHours": "शांत समय",
+  "reminderTime": "अनुस्मारक का समय",
+  "quietHours": "शांत घंटे",
   "quietHoursValue": "{start} – {end}",
-  "@quietHoursValue": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
   "summaryDay": "सारांश का दिन",
   "permissionRequired": "सूचनाएँ बंद हैं",
-  "permissionRequiredBody": "सूचनाओं की अनुमति दें ताकि RainyPenny बजट या भुगतान नियंत्रण से बाहर होने से पहले आपको चेतावनी दे सके।",
+  "permissionRequiredBody": "सूचनाओं की अनुमति दें ताकि RainyPenny आपको बजट या भुगतान हाथ से निकलने से पहले चेता सके।",
   "allowNotifications": "सूचनाओं की अनुमति दें",
-  "permissionDenied": "सूचनाएँ ब्लॉक हैं। आप उन्हें अपने डिवाइस की सेटिंग्स में चालू कर सकते हैं।",
-  "upcomingAlerts": "शेड्यूल किए गए",
-  "noScheduledAlerts": "अभी कुछ भी शेड्यूल नहीं है",
-  "noScheduledAlertsBody": "जब आपके बजट और भुगतान अपनी सीमाओं के करीब पहुँचेंगे, तो अलर्ट यहाँ दिखाई देंगे।",
-  "scheduledFor": "{date} के लिए शेड्यूल किया गया",
-  "@scheduledFor": {
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
-  },
+  "permissionDenied": "सूचनाएँ अवरुद्ध हैं। आप उन्हें अपनी डिवाइस सेटिंग्स में चालू कर सकते हैं।",
+  "upcomingAlerts": "निर्धारित",
+  "noScheduledAlerts": "अभी कुछ भी निर्धारित नहीं",
+  "noScheduledAlertsBody": "जैसे-जैसे आपके बजट और भुगतान अपनी सीमाओं के पास आएँगे, अलर्ट यहाँ दिखेंगे।",
+  "scheduledFor": "{date} के लिए निर्धारित",
   "everyWeek": "हर सप्ताह",
   "allNotificationsOff": "सभी सूचनाएँ बंद हैं",
-  "needsAttention": "ध्यान देने की आवश्यकता है",
+  "needsAttention": "ध्यान चाहिए",
   "quickActionsTitle": "आप क्या करना चाहेंगे?",
   "createSection": "दर्ज करें",
   "jumpToSection": "यहाँ जाएँ",
   "addLoanAction": "ऋण जोड़ें",
   "addBudgetAction": "बजट जोड़ें",
   "addGoalAction": "लक्ष्य जोड़ें",
-  "longPressHint": "सुझाव: खर्च तुरंत दर्ज करने के लिए + को दबाकर रखें",
+  "longPressHint": "सुझाव: खर्च तुरंत दर्ज करने के लिए + दबाकर रखें",
   "searchCurrencies": "मुद्राएँ खोजें",
-  "@searchCurrencies": {
-    "description": "मुद्रा चयनकर्ता: searchCurrencies"
-  },
   "noCurrenciesFound": "कोई मुद्रा नहीं मिली",
-  "@noCurrenciesFound": {
-    "description": "मुद्रा चयनकर्ता: noCurrenciesFound"
-  },
-  "noCurrenciesFoundMessage": "कोई दूसरा कोड, प्रतीक या नाम आज़माएँ।",
-  "@noCurrenciesFoundMessage": {
-    "description": "मुद्रा चयनकर्ता: noCurrenciesFoundMessage"
-  },
+  "noCurrenciesFoundMessage": "कोई दूसरा कोड, चिह्न या नाम आज़माएँ।",
   "popularCurrencies": "लोकप्रिय",
-  "@popularCurrencies": {
-    "description": "मुद्रा चयनकर्ता: popularCurrencies"
-  },
   "allCurrencies": "सभी मुद्राएँ",
-  "@allCurrencies": {
-    "description": "मुद्रा चयनकर्ता: allCurrencies"
-  },
   "totalLoanAmount": "कुल ऋण राशि",
-  "@totalLoanAmount": {
-    "description": "ऋण विवरण: मूल उधार ली गई राशि"
-  },
-  "installmentAmount": "किश्त की राशि",
-  "@installmentAmount": {
-    "description": "ऋण विवरण: प्रत्येक चक्र में देय राशि"
-  },
-  "numberOfInstallments": "किश्तों की संख्या",
-  "@numberOfInstallments": {
-    "description": "ऋण संपादक: पुनर्भुगतान योजना की अवधि"
-  },
-  "paidInstallments": "भुगतान की गई किश्तें",
-  "@paidInstallments": {
-    "description": "ऋण विवरण: पहले से चुकाई गई किश्तें"
-  },
-  "remainingInstallments": "बाकी किश्तें",
-  "@remainingInstallments": {
-    "description": "ऋण विवरण: अभी चुकाई जाने वाली किश्तें"
-  },
-  "installmentsPaidOf": "{paid} में से {total} भुगतान किए गए",
-  "@installmentsPaidOf": {
-    "description": "ऋण विवरण: किश्त काउंटर",
-    "placeholders": {
-      "paid": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
+  "installmentAmount": "किस्त राशि",
+  "numberOfInstallments": "किस्तों की संख्या",
+  "paidInstallments": "चुकाई गई किस्तें",
+  "remainingInstallments": "शेष किस्तें",
+  "installmentsPaidOf": "{total} में से {paid} चुकाई गईं",
   "finalPayment": "अंतिम भुगतान",
-  "@finalPayment": {
-    "description": "ऋण विवरण: अंतिम किश्त की तारीख"
-  },
-  "paymentDueDate": "भुगतान की देय तारीख",
-  "@paymentDueDate": {
-    "description": "ऋण विवरण: महीने का वह दिन जिस दिन भुगतान देय होता है"
-  },
+  "paymentDueDate": "भुगतान की देय तिथि",
   "dueOnDayOfMonth": "हर महीने की {day} तारीख",
-  "@dueOnDayOfMonth": {
-    "description": "ऋण विवरण: दोहराई जाने वाली देय तारीख",
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
   "loanStatus": "स्थिति",
-  "@loanStatus": {
-    "description": "ऋण विवरण: कर्ज़ की वर्तमान स्थिति"
-  },
-  "statusActive": "सही दिशा में",
-  "@statusActive": {
-    "description": "ऋण स्थिति: सामान्य रूप से भुगतान किया जा रहा है"
-  },
+  "statusActive": "सही राह पर",
   "statusDueSoon": "जल्द देय",
-  "@statusDueSoon": {
-    "description": "ऋण स्थिति: रिमाइंडर अवधि के भीतर"
-  },
-  "statusOverdue": "अतिदेय",
-  "@statusOverdue": {
-    "description": "ऋण स्थिति: देय तारीख बीत चुकी है"
-  },
-  "statusCompleted": "पूरी तरह चुकाया गया",
-  "@statusCompleted": {
-    "description": "ऋण स्थिति: पूरी तरह चुकाया गया"
-  },
-  "repaymentProgress": "पुनर्भुगतान की प्रगति",
-  "@repaymentProgress": {
-    "description": "ऋण विवरण: प्रगति बार का सेक्शन शीर्षक"
-  },
+  "statusOverdue": "बकाया",
+  "statusCompleted": "पूरा चुकाया",
+  "repaymentProgress": "चुकौती की प्रगति",
   "byAmount": "राशि के अनुसार",
-  "@byAmount": {
-    "description": "ऋण विवरण: पैसे के आधार पर मापी गई प्रगति"
-  },
-  "byInstallments": "किश्तों के अनुसार",
-  "@byInstallments": {
-    "description": "ऋण विवरण: भुगतानों के आधार पर मापी गई प्रगति"
-  },
-  "startDate": "आरंभ तारीख",
-  "@startDate": {
-    "description": "ऋण संपादक: पुनर्भुगतान कब शुरू हुआ"
-  },
-  "openEnded": "कोई निश्चित अवधि नहीं",
-  "@openEnded": {
-    "description": "ऋण विवरण: बिना निश्चित अवधि वाली घूमती हुई शेष राशि"
-  },
+  "byInstallments": "किस्तों के अनुसार",
+  "startDate": "प्रारंभ तिथि",
+  "openEnded": "अवधि तय नहीं",
   "loanDetails": "ऋण विवरण",
-  "@loanDetails": {
-    "description": "ऋण विवरण स्क्रीन का शीर्षक"
-  },
-  "notSet": "सेट नहीं किया गया",
-  "@notSet": {
-    "description": "जहाँ वैकल्पिक मान दर्ज नहीं किया गया है वहाँ दिखाया जाता है"
-  },
+  "notSet": "तय नहीं",
   "insightDebtDueTodayTitle": "{subject} आज देय है",
-  "@insightDebtDueTodayTitle": {
-    "description": "सूचना: आज एक किश्त देय है",
-    "placeholders": {
-      "subject": {
-        "type": "String"
-      }
-    }
-  },
-  "insightDebtDueTodayBody": "आपका {amount} का भुगतान आज देय है। एक त्वरित टैप इसे समय पर रखने में मदद करता है।",
-  "@insightDebtDueTodayBody": {
-    "description": "सूचना का विवरण: आज किश्त देय है",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
+  "insightDebtDueTodayBody": "आपका {amount} का भुगतान आज देय है। एक टैप और यह समय पर रहेगा।",
   "remindMorningTitle": "सुप्रभात ☀️",
-  "@remindMorningTitle": {
-    "description": "सुबह के खर्च रिमाइंडर का शीर्षक"
-  },
-  "remindMorningBody": "अपने पैसे पर नज़र रखते हुए दिन शुरू करें। क्या कल का कोई खर्च जोड़ना है?",
-  "@remindMorningBody": {
-    "description": "सुबह के खर्च रिमाइंडर का विवरण"
-  },
-  "remindNoonTitle": "दोपहर का चेक-इन",
-  "@remindNoonTitle": {
-    "description": "दोपहर के खर्च रिमाइंडर का शीर्षक"
-  },
-  "remindNoonBody": "दोपहर का खाना, कॉफ़ी या किराया? कुछ ही सेकंड में जोड़ें।",
-  "@remindNoonBody": {
-    "description": "दोपहर के खर्च रिमाइंडर का विवरण"
-  },
-  "remindAfternoonTitle": "त्वरित अपडेट",
-  "@remindAfternoonTitle": {
-    "description": "दोपहर बाद के खर्च रिमाइंडर का शीर्षक"
-  },
-  "remindAfternoonBody": "अब तक किए गए खर्च दर्ज करें और आज के आँकड़े सही रखें।",
-  "@remindAfternoonBody": {
-    "description": "दोपहर बाद के खर्च रिमाइंडर का विवरण"
-  },
-  "remindEveningTitle": "दिन का समापन",
-  "@remindEveningTitle": {
-    "description": "शाम के खर्च रिमाइंडर का शीर्षक"
-  },
-  "remindEveningBody": "अभी दो मिनट दें और आज के आँकड़े पूरे कर लें।",
-  "@remindEveningBody": {
-    "description": "शाम के खर्च रिमाइंडर का विवरण"
-  },
-  "happyWeekendTitle": "सुखद सप्ताहांत! 🎉",
-  "@happyWeekendTitle": {
-    "description": "सप्ताहांत अभिवादन का शीर्षक"
-  },
+  "remindMorningBody": "दिन की शुरुआत अपने पैसे पर पकड़ के साथ करें। कल का कुछ जोड़ना है?",
+  "remindNoonTitle": "दोपहर की जाँच",
+  "remindNoonBody": "खाना, कॉफ़ी, किराया? कुछ सेकंड में जोड़ें।",
+  "remindAfternoonTitle": "एक त्वरित नज़र",
+  "remindAfternoonBody": "अब तक किया खर्च दर्ज करें और आज का हिसाब सही रखें।",
+  "remindEveningTitle": "दिन को समेटते हुए",
+  "remindEveningBody": "अभी दो मिनट और आज के आँकड़े पूरे।",
+  "happyWeekendTitle": "सप्ताहांत मुबारक! 🎉",
   "happyWeekendBody": "इसका आनंद लें — और सप्ताहांत के खर्च पर नज़र रखें।",
-  "@happyWeekendBody": {
-    "description": "सप्ताहांत अभिवादन का विवरण"
-  },
-  "dailyReminders": "दैनिक खर्च रिमाइंडर",
-  "@dailyReminders": {
-    "description": "सूचना सेटिंग: दैनिक रिमाइंडर"
-  },
-  "dailyRemindersBody": "अपने खर्चों को अपडेट रखने के लिए उपयोगी रिमाइंडर",
-  "@dailyRemindersBody": {
-    "description": "सूचना सेटिंग का विवरण"
-  },
-  "weekendGreeting": "सुखद सप्ताहांत",
-  "@weekendGreeting": {
-    "description": "सूचना सेटिंग: सप्ताहांत अभिवादन"
-  },
-  "weekendGreetingBody": "सप्ताहांत की शुरुआत में एक दोस्ताना संदेश",
-  "@weekendGreetingBody": {
-    "description": "सूचना सेटिंग का विवरण"
-  },
-  "reminderTimesSection": "रिमाइंडर के समय",
-  "@reminderTimesSection": {
-    "description": "चार दैनिक स्लॉट का सेक्शन शीर्षक"
-  },
+  "dailyReminders": "दैनिक खर्च अनुस्मारक",
+  "dailyRemindersBody": "आपके खर्च अद्यतन रखने के लिए मैत्रीपूर्ण अनुस्मारक",
+  "weekendGreeting": "सप्ताहांत मुबारक",
+  "weekendGreetingBody": "आपके सप्ताहांत की शुरुआत पर एक मैत्रीपूर्ण अभिवादन",
+  "reminderTimesSection": "अनुस्मारक के समय",
   "slotMorning": "सुबह",
-  "@slotMorning": {
-    "description": "दैनिक रिमाइंडर स्लॉट"
-  },
   "slotNoon": "दोपहर",
-  "@slotNoon": {
-    "description": "दैनिक रिमाइंडर स्लॉट"
-  },
-  "slotAfternoon": "दोपहर बाद",
-  "@slotAfternoon": {
-    "description": "दैनिक रिमाइंडर स्लॉट"
-  },
+  "slotAfternoon": "अपराह्न",
   "slotEvening": "शाम",
-  "@slotEvening": {
-    "description": "दैनिक रिमाइंडर स्लॉट"
-  },
   "everyDay": "हर दिन",
-  "@everyDay": {
-    "description": "दोहराई जाने वाली सूचना कितनी बार आती है"
-  },
   "financialReport": "वित्तीय रिपोर्ट",
-  "@financialReport": {
-    "description": "निर्यात की गई PDF का शीर्षक"
-  },
-  "preparedFor": "के लिए तैयार",
-  "@preparedFor": {
-    "description": "PDF कवर: यह रिपोर्ट किसकी है"
-  },
-  "generatedOn": "बनाई गई तारीख",
-  "@generatedOn": {
-    "description": "PDF कवर: रिपोर्ट बनाए जाने की तारीख"
-  },
-  "reportDisclaimer": "RainyPenny ने आपके अपने रिकॉर्ड से यह रिपोर्ट बनाई है।",
-  "@reportDisclaimer": {
-    "description": "PDF फ़ुटर नोट"
-  },
+  "preparedFor": "किसके लिए तैयार",
+  "generatedOn": "तैयार करने की तिथि",
+  "reportDisclaimer": "RainyPenny द्वारा आपके ही रिकॉर्ड से तैयार।",
   "pageOf": "पृष्ठ {page} / {total}",
-  "@pageOf": {
-    "description": "PDF फ़ुटर पृष्ठ संख्या",
-    "placeholders": {
-      "page": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
   "overview": "अवलोकन",
-  "@overview": {
-    "description": "PDF सेक्शन: मुख्य कुल राशियाँ"
-  },
   "description": "विवरण",
-  "@description": {
-    "description": "तालिका कॉलम शीर्षक"
-  },
   "totalIncome": "कुल आय",
-  "@totalIncome": {
-    "description": "सारांश तालिका की पंक्ति"
-  },
-  "totalExpenses": "कुल खर्च",
-  "@totalExpenses": {
-    "description": "सारांश तालिका की पंक्ति"
-  },
+  "totalExpenses": "कुल व्यय",
   "totalSaved": "कुल बचत",
-  "@totalSaved": {
-    "description": "सारांश तालिका की पंक्ति"
-  },
   "shareOfTotal": "हिस्सा",
-  "@shareOfTotal": {
-    "description": "तालिका कॉलम: कुल खर्च में इस श्रेणी का हिस्सा"
-  },
   "used": "उपयोग हुआ",
-  "@used": {
-    "description": "तालिका कॉलम: उपयोग किए गए बजट का प्रतिशत"
-  },
   "goal": "लक्ष्य",
-  "@goal": {
-    "description": "बचत लक्ष्य के लिए तालिका कॉलम शीर्षक"
-  },
-  "targetDate": "लक्ष्य तारीख",
-  "@targetDate": {
-    "description": "तालिका कॉलम शीर्षक"
-  },
+  "targetDate": "लक्ष्य तिथि",
   "progress": "प्रगति",
-  "@progress": {
-    "description": "तालिका कॉलम शीर्षक"
-  },
   "paidOffShort": "चुकाया",
-  "@paidOffShort": {
-    "description": "तालिका कॉलम: चुकाए गए कर्ज़ का प्रतिशत"
-  },
   "transactions": "लेन-देन",
-  "@transactions": {
-    "description": "PDF सेक्शन जिसमें व्यक्तिगत प्रविष्टियाँ सूचीबद्ध हैं"
-  },
-  "andMoreTransactions": "{count, plural, =1{और 1 लेन-देन} other{और {count} अन्य लेन-देन}}",
-  "@andMoreTransactions": {
-    "description": "जब लेन-देन तालिका पूरी तरह प्रदर्शित नहीं होती तब PDF नोट",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
+  "andMoreTransactions": "{count, plural, =1{और 1 अन्य लेन-देन} other{और {count} अन्य लेन-देन}}",
   "exportPdf": "PDF निर्यात करें",
-  "@exportPdf": {
-    "description": "रिपोर्ट बनाने वाला बटन"
-  },
   "sharePdf": "रिपोर्ट साझा करें",
-  "@sharePdf": {
-    "description": "शेयर शीट खोलने वाला बटन"
-  },
-  "preparingReport": "आपकी रिपोर्ट तैयार की जा रही है…",
-  "@preparingReport": {
-    "description": "PDF तैयार होने के दौरान प्रगति संदेश"
-  },
+  "preparingReport": "आपकी रिपोर्ट तैयार हो रही है…",
   "reportReady": "रिपोर्ट तैयार है",
-  "@reportReady": {
-    "description": "PDF बनने के बाद पुष्टि संदेश"
-  },
-  "reportFailed": "रिपोर्ट नहीं बनाई जा सकी",
-  "@reportFailed": {
-    "description": "निर्यात विफल होने पर त्रुटि संदेश"
-  },
+  "reportFailed": "रिपोर्ट नहीं बन सकी",
   "categories": "श्रेणियाँ",
-  "@categories": {
-    "description": "श्रेणी प्रबंधन स्क्रीन का शीर्षक"
-  },
-  "categoriesIntro": "अपनी आय और खर्च को उसी तरह व्यवस्थित करने के लिए अपनी श्रेणियाँ जोड़ें, जैसे आप उन्हें समझते हैं।",
-  "@categoriesIntro": {
-    "description": "बताता है कि यह स्क्रीन किस काम के लिए है"
-  },
-  "expenseCategories": "खर्च की श्रेणियाँ",
-  "@expenseCategories": {
-    "description": "सेक्शन शीर्षक"
-  },
-  "incomeCategories": "आय की श्रेणियाँ",
-  "@incomeCategories": {
-    "description": "सेक्शन शीर्षक"
-  },
+  "categoriesIntro": "अपनी श्रेणियाँ जोड़ें ताकि आय और व्यय ठीक वैसे ही दर्ज हों जैसे आप सोचते हैं।",
+  "expenseCategories": "व्यय श्रेणियाँ",
+  "incomeCategories": "आय श्रेणियाँ",
   "newCategory": "नई श्रेणी",
-  "@newCategory": {
-    "description": "बनाने वाले फ़ॉर्म का शीर्षक"
-  },
   "editCategory": "श्रेणी संपादित करें",
-  "@editCategory": {
-    "description": "संपादन फ़ॉर्म का शीर्षक"
-  },
   "categoryName": "नाम",
-  "@categoryName": {
-    "description": "श्रेणी फ़ॉर्म फ़ील्ड लेबल"
-  },
-  "categoryNameHint": "जैसे पालतू जानवरों की देखभाल",
-  "@categoryNameHint": {
-    "description": "श्रेणी नाम का प्लेसहोल्डर"
-  },
+  "categoryNameHint": "जैसे पालतू देखभाल",
   "icon": "आइकन",
-  "@icon": {
-    "description": "श्रेणी फ़ॉर्म फ़ील्ड लेबल"
-  },
   "categorySaved": "श्रेणी सहेजी गई",
-  "@categorySaved": {
-    "description": "पुष्टि संदेश"
-  },
-  "categoryDeleted": "श्रेणी हटा दी गई",
-  "@categoryDeleted": {
-    "description": "पुष्टि संदेश"
-  },
+  "categoryDeleted": "श्रेणी हटाई गई",
   "deleteCategory": "यह श्रेणी हटाएँ?",
-  "@deleteCategory": {
-    "description": "हटाने की पुष्टि का शीर्षक"
-  },
-  "deleteCategoryBody": "{name} को आपकी श्रेणियों से हटा दिया जाएगा।",
-  "@deleteCategoryBody": {
-    "description": "हटाने की पुष्टि का विवरण",
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "categoryInUse": "{count, plural, =1{1 रिकॉर्ड अभी भी इस श्रेणी का उपयोग करता है} other{{count} रिकॉर्ड अभी भी इस श्रेणी का उपयोग करते हैं}}",
-  "@categoryInUse": {
-    "description": "बताता है कि श्रेणी क्यों हटाई नहीं जा सकती",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "noCategoriesYet": "अभी यहाँ कुछ नहीं है।",
-  "@noCategoriesYet": {
-    "description": "श्रेणी सूची में खाली समूह"
-  },
-  "builtIn": "अंतर्निर्मित",
-  "@builtIn": {
-    "description": "साझा, केवल-पढ़ने योग्य श्रेणी को दर्शाता है"
-  },
+  "deleteCategoryBody": "{name} आपकी श्रेणियों से हटा दी जाएगी।",
+  "categoryInUse": "{count, plural, =1{1 रिकॉर्ड अब भी इस श्रेणी का उपयोग करता है} other{{count} रिकॉर्ड अब भी इस श्रेणी का उपयोग करते हैं}}",
+  "noCategoriesYet": "यहाँ अभी कुछ नहीं है।",
+  "builtIn": "अंतर्निहित",
   "manageCategories": "श्रेणियाँ प्रबंधित करें",
-  "@manageCategories": {
-    "description": "सेटिंग्स पंक्ति जो श्रेणी स्क्रीन खोलती है"
-  },
-  "expense": "खर्च",
-  "@expense": {
-    "description": "बाहर जाने वाले लेन-देन के लिए एकवचन लेबल"
-  },
-  "languageNote": "अरबी, उर्दू, फ़ारसी और हिब्रू में चार्ट और PDF रिपोर्ट सहित पूरा इंटरफ़ेस दाएँ से बाएँ हो जाता है।",
-  "@languageNote": {
-    "description": "भाषा चयनकर्ता के नीचे RTL समर्थन समझाने वाला नोट"
-  },
-  "next": "अगला",
-  "back": "वापस",
+  "expense": "व्यय",
+  "languageNote": "अरबी, उर्दू, फ़ारसी और हिब्रू पूरे इंटरफ़ेस को दाएँ-से-बाएँ कर देती हैं — चार्ट और PDF रिपोर्ट सहित।",
+  "next": "आगे",
+  "back": "पीछे",
   "skip": "छोड़ें",
   "continueLabel": "जारी रखें",
-  "@continueLabel": {
-    "description": "मुख्य कार्रवाई जो बहु-चरणीय प्रक्रिया को आगे बढ़ाती है। \"continue\" Dart का कीवर्ड होने के कारण प्रत्यय के साथ नामित है।"
-  },
   "selected": "चयनित",
-  "passwordRequired": "अपना पासवर्ड दर्ज करें",
+  "passwordRequired": "अपना पासवर्ड डालें",
   "newPasswordLabel": "नया पासवर्ड",
   "confirmPasswordLabel": "पासवर्ड की पुष्टि करें",
-  "passwordsDoNotMatch": "दोनों पासवर्ड समान होने चाहिए",
+  "passwordsDoNotMatch": "दोनों पासवर्ड एक जैसे होने चाहिए",
   "showPassword": "पासवर्ड दिखाएँ",
   "hidePassword": "पासवर्ड छिपाएँ",
   "savePassword": "पासवर्ड सहेजें",
-  "backToSignIn": "साइन इन पर वापस जाएँ",
-  "alreadyHaveAccount": "मेरा पहले से खाता है",
+  "backToSignIn": "साइन इन पर लौटें",
+  "alreadyHaveAccount": "मेरा खाता पहले से है",
   "getStarted": "शुरू करें",
   "acceptTerms": "मैं सेवा की शर्तों और गोपनीयता नीति से सहमत हूँ",
-  "acceptTermsRequired": "जारी रखने के लिए कृपया स्वीकार करें",
+  "acceptTermsRequired": "जारी रखने के लिए सहमति दें",
   "passwordStrengthTooShort": "बहुत छोटा",
   "passwordStrengthWeak": "कमज़ोर",
-  "passwordStrengthFair": "ठीक",
+  "passwordStrengthFair": "ठीक-ठाक",
   "passwordStrengthGood": "अच्छा",
   "passwordStrengthStrong": "मज़बूत",
-  "passwordAdvice": "ऐसा लंबा वाक्यांश जिसे आप याद रख सकें, प्रतीकों से भरे छोटे पासवर्ड से बेहतर है। ऐसा पासवर्ड न रखें जिसे आप पहले से कहीं और इस्तेमाल करते हैं।",
+  "passwordAdvice": "याद रहने वाला लंबा वाक्यांश, चिह्नों से भरे छोटे पासवर्ड से बेहतर है। जो कहीं और इस्तेमाल कर रहे हों, उससे बचें।",
   "authInvalidCredentials": "यह ईमेल और पासवर्ड किसी खाते से मेल नहीं खाते",
-  "authEmailNotConfirmed": "साइन इन करने से पहले अपने ईमेल पते की पुष्टि करें",
-  "authEmailAlreadyRegistered": "इस ईमेल से पहले से एक खाता मौजूद है",
+  "authEmailNotConfirmed": "साइन इन से पहले अपना ईमेल पता पुष्ट करें",
+  "authEmailAlreadyRegistered": "इस ईमेल से खाता पहले से मौजूद है",
   "authWeakPassword": "लंबा पासवर्ड चुनें",
-  "authRateLimited": "बहुत अधिक प्रयास किए गए। कुछ मिनट बाद फिर प्रयास करें",
-  "authNetworkError": "कोई कनेक्शन नहीं है। अपना नेटवर्क जाँचें और फिर प्रयास करें",
-  "authGenericError": "कुछ गलत हो गया। कृपया फिर प्रयास करें",
+  "authRateLimited": "बहुत अधिक प्रयास। कुछ मिनट बाद फिर कोशिश करें",
+  "authNetworkError": "कनेक्शन नहीं है। नेटवर्क जाँचकर फिर कोशिश करें",
+  "authGenericError": "कुछ गड़बड़ हुई। कृपया फिर कोशिश करें",
   "confirmEmailTitle": "अपना ईमेल देखें",
-  "confirmEmailBody": "हमने {email} पर पुष्टि लिंक भेजा है। अपना खाता सेट अप पूरा करने के लिए उसे खोलें।",
-  "@confirmEmailBody": {
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
+  "confirmEmailBody": "हमने {email} पर पुष्टि लिंक भेजा है। खाता पूरा करने के लिए उसे खोलें।",
   "resendConfirmation": "पुष्टि ईमेल फिर भेजें",
   "confirmationResent": "पुष्टि ईमेल भेज दिया गया",
-  "forgotPasswordTitle": "अपना पासवर्ड रीसेट करें",
-  "forgotPasswordSubtitle": "वह ईमेल दर्ज करें जिससे आपने साइन अप किया था और हम आपको नया पासवर्ड चुनने के लिए एक लिंक भेजेंगे।",
+  "forgotPasswordTitle": "पासवर्ड रीसेट करें",
+  "forgotPasswordSubtitle": "जिस ईमेल से आपने साइन अप किया था वह डालें, हम नया पासवर्ड चुनने का लिंक भेज देंगे।",
   "sendResetLink": "रीसेट लिंक भेजें",
-  "resetLinkSentTitle": "रीसेट लिंक भेज दिया गया",
-  "resetLinkSentBody": "अगर {email} से कोई खाता जुड़ा है, तो रीसेट लिंक भेज दिया गया है।",
-  "@resetLinkSentBody": {
-    "description": "जानबूझकर सशर्त: यह पुष्टि करना कि कोई पता पंजीकृत है या नहीं, किसी को ऐप के उपयोगकर्ताओं की सूची बनाने की अनुमति दे सकता है।",
-    "placeholders": {
-      "email": {
-        "type": "String"
-      }
-    }
-  },
-  "resetLinkSentHint": "लिंक एक घंटे में समाप्त हो जाएगा। अगर वह नहीं आता है, तो दूसरा माँगने से पहले अपना स्पैम फ़ोल्डर देखें।",
+  "resetLinkSentTitle": "लिंक भेज दिया गया",
+  "resetLinkSentBody": "अगर {email} का खाता है, तो रीसेट लिंक रास्ते में है।",
+  "resetLinkSentHint": "लिंक एक घंटे में समाप्त हो जाता है। न मिले तो दूसरा माँगने से पहले स्पैम फ़ोल्डर देखें।",
   "tryAnotherEmail": "दूसरा ईमेल इस्तेमाल करें",
   "resetPasswordTitle": "नया पासवर्ड चुनें",
-  "resetPasswordSubtitle": "ऐसा पासवर्ड चुनें जिसे आपने इस खाते पर पहले इस्तेमाल न किया हो।",
-  "passwordChangedTitle": "पासवर्ड अपडेट किया गया",
+  "resetPasswordSubtitle": "ऐसा कुछ चुनें जो इस खाते पर पहले न इस्तेमाल किया हो।",
+  "passwordChangedTitle": "पासवर्ड अपडेट हुआ",
   "passwordChangedBody": "आपका नया पासवर्ड सहेज लिया गया है। आप साइन इन हैं और तैयार हैं।",
-  "demoModeHint": "डेमो बिल्ड — खाते की आवश्यकता नहीं",
-  "demoModeFill": "भरें",
+  "demoModeHint": "डेमो बिल्ड — खाते की ज़रूरत नहीं",
+  "demoModeFill": "भर दें",
   "welcomeTrackTitle": "देखें आपका पैसा कहाँ जाता है",
-  "welcomeTrackBody": "जो पैसा आता और जाता है उसे दर्ज करें। RainyPenny उसे एक ऐसी तस्वीर में बदल देता है जिसे आप वास्तव में समझ सकते हैं।",
-  "welcomeBudgetTitle": "ऐसी सीमाएँ तय करें जो टिकें",
-  "welcomeBudgetBody": "अपने खर्च के हर हिस्से के लिए मासिक सीमा तय करें और सीमा पार होने के बाद नहीं, बल्कि उससे पहले चेतावनी पाएँ।",
-  "welcomeGoalsTitle": "उन चीज़ों के लिए बचत करें जो मायने रखती हैं",
-  "welcomeGoalsBody": "एक लक्ष्य का नाम दें, लक्ष्य राशि तय करें और उसे पूरा होते देखें। जब आप प्रगति देख सकते हैं तो मुश्किल समय के लिए बचत बनाना आसान होता है।",
+  "welcomeTrackBody": "जो आता है और जो जाता है, दोनों दर्ज करें। RainyPenny उसे ऐसी तस्वीर में बदल देता है जो सचमुच पढ़ी जा सके।",
+  "welcomeBudgetTitle": "ऐसी सीमाएँ जो टिकें",
+  "welcomeBudgetBody": "अपने खर्च के हर हिस्से पर मासिक सीमा रखें, और सीमा पार होने से पहले जानें — बाद में नहीं।",
+  "welcomeGoalsTitle": "जो अहम है उसके लिए बचत करें",
+  "welcomeGoalsBody": "लक्ष्य को नाम दें, राशि तय करें, और उसे भरते देखें। मुश्किल दिनों का कोष तब आसानी से बनता है जब वह दिखे।",
   "welcomePrivacyTitle": "आपका पैसा आपका ही रहता है",
-  "welcomePrivacyBody": "आपके आँकड़े केवल आपके हैं। कुछ भी बेचा या किसी के साथ साझा नहीं किया जाता।",
+  "welcomePrivacyBody": "आपके आँकड़े सिर्फ़ आपके हैं। न कुछ बेचा जाता है, न किसी से साझा किया जाता है।",
   "stepOf": "चरण {step} / {total}",
-  "@stepOf": {
-    "placeholders": {
-      "step": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
-  "onboardingNameTitle": "हम आपको किस नाम से बुलाएँ?",
-  "onboardingNameBody": "हम इसका उपयोग आपको अभिवादन करने के लिए करेंगे, और कहीं नहीं।",
-  "onboardingNameHint": "पहला नाम ही पर्याप्त है। आप इसे बाद में बदल सकते हैं।",
+  "onboardingNameTitle": "हम आपको क्या कहकर बुलाएँ?",
+  "onboardingNameBody": "इसका उपयोग सिर्फ़ अभिवादन में होगा, और कहीं नहीं।",
+  "onboardingNameHint": "पहला नाम काफ़ी है। बाद में बदल सकते हैं।",
   "onboardingCurrencyTitle": "आप कौन-सी मुद्रा इस्तेमाल करते हैं?",
-  "onboardingCurrencyBody": "ऐप में हर राशि इसी मुद्रा में दिखाई जाएगी। इसे चुनने से कोई राशि परिवर्तित नहीं होगी।",
-  "onboardingCurrencySearch": "सभी मुद्राएँ खोजें",
+  "onboardingCurrencyBody": "ऐप में हर राशि इसी मुद्रा में दिखेगी। इसे चुनने से कोई रूपांतरण नहीं होता।",
+  "onboardingCurrencySearch": "सभी मुद्राओं में खोजें",
   "onboardingAppearanceTitle": "इसे अपना बनाएँ",
-  "onboardingAppearanceBody": "एक रूप चुनें। टैप करते ही सब कुछ बदल जाएगा और आप इसे कभी भी फिर से बदल सकते हैं।",
-  "onboardingNotificationsTitle": "सब कुछ नियंत्रण में रखें",
-  "onboardingNotificationsBody": "सही समय पर मिलने वाला एक हल्का रिमाइंडर ही इसे आदत में बदलता है।",
-  "onboardingNotifyReminders": "अपने खर्च दर्ज करने के लिए एक हल्का रिमाइंडर",
-  "onboardingNotifyBudget": "बजट खत्म होने से पहले एक चेतावनी",
-  "onboardingNotifySummary": "आपका पैसा कहाँ गया, इसका साप्ताहिक सारांश",
+  "onboardingAppearanceBody": "एक रूप चुनें। छूते ही सब बदल जाता है, और आप कभी भी लौट सकते हैं।",
+  "onboardingNotificationsTitle": "पकड़ बनाए रखें",
+  "onboardingNotificationsBody": "सही समय पर हल्की-सी याद ही इसे आदत बनाती है।",
+  "onboardingNotifyReminders": "खर्च दर्ज करने की सौम्य याद",
+  "onboardingNotifyBudget": "बजट खत्म होने से पहले चेतावनी",
+  "onboardingNotifySummary": "आपका पैसा कहाँ गया, इसका साप्ताहिक सार",
   "onboardingNotifyEnable": "सूचनाएँ चालू करें",
-  "onboardingNotifyDone": "सूचना सेटिंग्स सहेजी गईं",
-  "onboardingNotifyLater": "जब चाहें, आप यह सब सेटिंग्स में बदल सकते हैं।",
-  "onboardingReadyTitle": "आप पूरी तरह तैयार हैं",
-  "onboardingReadyTitleNamed": "आप पूरी तरह तैयार हैं, {name}",
-  "@onboardingReadyTitleNamed": {
-    "placeholders": {
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "onboardingReadyBody": "सेटअप पूरा हो गया है। क्या आप जानना चाहेंगे कि सब कुछ कैसे काम करता है?",
-  "onboardingTakeTour": "मुझे ऐप दिखाएँ",
-  "onboardingGoToApp": "मुझे ऐप पर ले चलें",
-  "onboardingTourLater": "अभी नहीं? जब भी चाहें, गाइड सेटिंग्स में उपलब्ध रहेगा।",
+  "onboardingNotifyDone": "सूचना सेटिंग सहेजी गई",
+  "onboardingNotifyLater": "यह सब आप सेटिंग में जब चाहें बदल सकते हैं।",
+  "onboardingReadyTitle": "सब तैयार है",
+  "onboardingReadyTitleNamed": "सब तैयार है, {name}",
+  "onboardingReadyBody": "सेटअप हो गया। क्या ऐप कैसे चलता है, इसकी छोटी-सी सैर करेंगे?",
+  "onboardingTakeTour": "मुझे दिखाइए",
+  "onboardingGoToApp": "ऐप पर ले चलें",
+  "onboardingTourLater": "अभी नहीं? गाइड सेटिंग में रहेगी, जब चाहें देख लें।",
   "beginnersGuide": "शुरुआती गाइड",
-  "guideFinish": "समाप्त करें",
+  "guideFinish": "समाप्त",
   "chapterOf": "अध्याय {number} / {total}",
-  "@chapterOf": {
-    "placeholders": {
-      "number": {
-        "type": "int"
-      },
-      "total": {
-        "type": "int"
-      }
-    }
-  },
   "guideOpenScreen": "{screen} खोलें",
-  "@guideOpenScreen": {
-    "placeholders": {
-      "screen": {
-        "type": "String"
-      }
-    }
-  },
   "guideDashboardTitle": "आपका डैशबोर्ड",
-  "guideDashboardBody": "सब कुछ यहीं से शुरू होता है। ऊपर वाला कार्ड बताता है कि आपके पास कितना बाकी है; उसके नीचे इस अवधि की आय और खर्च, फिर आपके खर्च, बजट और लक्ष्य दिखाई देते हैं।",
-  "guideDashboardTip1": "सब कुछ एक साथ रिफ्रेश करने के लिए स्क्रीन को नीचे खींचें।",
-  "guideDashboardTip2": "उस सूची पर जाने के लिए आय या खर्च वाले कार्ड पर टैप करें।",
-  "guideDashboardTip3": "आप कुछ दर्ज करते ही रिंग और जानकारियाँ अपडेट हो जाती हैं।",
+  "guideDashboardBody": "सब यहीं से शुरू होता है। ऊपर वाला कार्ड बताता है कि आपके पास क्या बचा है; उसके नीचे इस अवधि की आय और व्यय, फिर आपका खर्च, बजट और लक्ष्य।",
+  "guideDashboardTip1": "सब कुछ एक साथ ताज़ा करने के लिए स्क्रीन नीचे खींचें।",
+  "guideDashboardTip2": "उस सूची पर सीधे जाने के लिए आय या व्यय कार्ड पर टैप करें।",
+  "guideDashboardTip3": "जैसे ही आप कुछ दर्ज करते हैं, रिंग और सुझाव अपडेट हो जाते हैं।",
   "guideAddTitle": "पैसा दर्ज करना",
-  "guideAddBody": "बार के बीच का बटन वह जगह है जहाँ से सब कुछ शुरू होता है। यह एक छोटा मेनू खोलता है: पैसा बाहर, पैसा अंदर, कर्ज़, बजट या बचत लक्ष्य।",
-  "guideAddTip1": "अंदर आए या बाहर गए पैसे को दर्ज करने के लिए बीच वाले बटन पर टैप करें।",
-  "guideAddTip2": "नए खर्च पर सीधे जाने और मेनू छोड़ने के लिए इसे दबाकर रखें।",
-  "guideAddTip3": "हमेशा एक श्रेणी चुनें — इसी से चार्ट और बजट काम करते हैं।",
+  "guideAddBody": "बार के बीच वाला बटन ही शुरुआत है। यह एक छोटा मेन्यू खोलता है: खर्च, आय, कर्ज़, बजट या बचत लक्ष्य।",
+  "guideAddTip1": "आय या खर्च दर्ज करने के लिए बीच वाला बटन दबाएँ।",
+  "guideAddTip2": "मेन्यू छोड़कर सीधे नए खर्च पर जाने के लिए उसे दबाए रखें।",
+  "guideAddTip3": "श्रेणी हमेशा चुनें — चार्ट और बजट इसी से काम करते हैं।",
   "guideCategoriesTitle": "श्रेणियाँ",
-  "guideCategoriesBody": "श्रेणियाँ खर्च को समूहों में बाँटने का तरीका हैं। ऐप के साथ आने वाली श्रेणियाँ अधिकांश लोगों के लिए पर्याप्त हैं, और आप उनका नाम बदल सकते हैं या अपनी श्रेणियाँ जोड़ सकते हैं।",
-  "guideCategoriesTip1": "किसी श्रेणी को बदलने या जोड़ने के लिए सेटिंग्स, फिर श्रेणियाँ प्रबंधित करें पर जाएँ।",
-  "guideCategoriesTip2": "बिना श्रेणी वाला कोई भी खर्च अन्य में चला जाता है, ताकि चार्ट सही बने रहें।",
+  "guideCategoriesBody": "श्रेणियाँ खर्च को समूहों में बाँटती हैं। ऐप के साथ आने वाली श्रेणियाँ ज़्यादातर लोगों के लिए काफ़ी हैं, और आप उनके नाम बदल सकते हैं या अपनी जोड़ सकते हैं।",
+  "guideCategoriesTip1": "बदलने या जोड़ने के लिए सेटिंग, फिर श्रेणियाँ प्रबंधित करें।",
+  "guideCategoriesTip2": "बिना श्रेणी वाली हर चीज़ «अन्य» में जाती है, ताकि चार्ट सही रहें।",
   "guideBudgetTitle": "बजट",
-  "guideBudgetBody": "बजट किसी एक श्रेणी के लिए मासिक अधिकतम सीमा है। खर्च करते ही बार भरता जाता है और सीमा के करीब पहुँचने पर बदलता है, ताकि सीमा पार करने से पहले आपको पता चल जाए।",
-  "guideBudgetTip1": "एक साथ सभी श्रेणियों के बजाय दो या तीन श्रेणियों से शुरुआत करें।",
-  "guideBudgetTip2": "सीमा को सामान्य खर्च से थोड़ा ऊपर रखें, फिर धीरे-धीरे कम करें।",
-  "guideBudgetTip3": "बजट अलर्ट चालू रखें और जब बजट कम होने लगे तो ऐप आपको चेतावनी देगा।",
+  "guideBudgetBody": "बजट किसी एक श्रेणी की मासिक सीमा है। खर्च के साथ पट्टी भरती है और सीमा पास आते ही रंग बदलती है, इसलिए पार करने से पहले ही पता चल जाता है।",
+  "guideBudgetTip1": "एक साथ सब नहीं — दो-तीन श्रेणियों से शुरू करें।",
+  "guideBudgetTip2": "सीमा अपने सामान्य खर्च से थोड़ी ऊपर रखें, फिर धीरे-धीरे कसें।",
+  "guideBudgetTip3": "बजट अलर्ट चालू रहने दें, ऐप समय रहते चेता देगा।",
   "guideSavingsTitle": "बचत लक्ष्य",
-  "guideSavingsBody": "बताएँ कि आप किस लिए बचत कर रहे हैं, लक्ष्य और तारीख तय करें, और ऐप गणना करेगा कि वहाँ पहुँचने के लिए आपको हर महीने कितनी राशि अलग रखनी होगी।",
-  "guideSavingsTip1": "नाम वाला लक्ष्य बचत करने के अस्पष्ट इरादे की तुलना में बनाए रखना आसान होता है।",
-  "guideSavingsTip2": "एक बड़े लक्ष्य की तुलना में कई छोटे लक्ष्य अधिक बार पूरे होते हैं।",
+  "guideSavingsBody": "जिसके लिए बचत कर रहे हैं उसे नाम दें, राशि और तारीख तय करें — ऐप हिसाब लगा देगा कि हर महीने कितना अलग रखना है।",
+  "guideSavingsTip1": "नाम वाला लक्ष्य, बचत के अस्पष्ट इरादे से कहीं आसानी से निभता है।",
+  "guideSavingsTip2": "एक बड़े लक्ष्य से ज़्यादा बार कई छोटे लक्ष्य पूरे होते हैं।",
   "guideLoansTitle": "कर्ज़ और ऋण",
-  "guideLoansBody": "आप पर कितना कर्ज़ है, उसकी लागत कितनी है और अगला भुगतान कब देय है, यह दर्ज करें। जो कुछ भी आप चुका रहे हैं वह एक ही सूची में कुल शेष राशि के साथ दिखाई देगा।",
-  "guideLoansTip1": "देय तारीख जोड़ें और भुगतान रिमाइंडर आपके लिए उसका ध्यान रखेंगे।",
-  "guideLoansTip2": "अतिदेय कर्ज़ भुगतान होने तक डैशबोर्ड पर लाल रंग में दिखाई देगा।",
+  "guideLoansBody": "जो आप पर बकाया है, उसकी लागत और अगली किस्त की तारीख दर्ज करें। जो कुछ चुका रहे हैं, वह सब शेष राशि के साथ एक सूची में रहता है।",
+  "guideLoansTip1": "देय तारीख जोड़ दें, भुगतान की याद अपने-आप आती रहेगी।",
+  "guideLoansTip2": "बकाया कर्ज़ चुकाने तक डैशबोर्ड पर लाल रंग में दिखता है।",
   "guideReportsTitle": "रिपोर्ट",
-  "guideReportsBody": "विस्तृत जानकारी: आय बनाम खर्च, श्रेणी के अनुसार खर्च, आपके बजट कितने अच्छे रहे और आपने अपनी आय का कितना हिस्सा बचाया।",
-  "guideReportsTip1": "स्क्रीन के ऊपर सप्ताह, महीना और तिमाही के बीच बदलें।",
-  "guideReportsTip2": "PDF निर्यात या साझा करें — यह आपकी अपनी भाषा और दिशा में तैयार होगी।",
-  "guideSettingsTitle": "सेटिंग्स",
-  "guideSettingsBody": "भाषा, मुद्रा, रंग और अलर्ट सभी यहाँ हैं, और सेटअप के बाद इनमें से कोई भी स्थायी नहीं है — जब चाहें इन्हें बदलें।",
-  "guideSettingsTip1": "चालीस भाषाएँ उपलब्ध हैं और दाएँ-से-बाएँ वाली भाषाओं के लिए पूरा लेआउट उलट जाता है।",
-  "guideSettingsTip2": "चुनें कि आपको कौन-से अलर्ट चाहिए और वे किन समयों पर आ सकते हैं।",
-  "guideSettingsTip3": "शांत समय के दौरान सभी सूचनाएँ सुबह तक रुक जाती हैं।",
+  "guideReportsBody": "गहरी नज़र: आय बनाम व्यय, श्रेणीवार खर्च, बजट कैसा टिका, और आपकी आय का कितना हिस्सा बचा।",
+  "guideReportsTip1": "स्क्रीन के ऊपर से सप्ताह, महीने और तिमाही के बीच बदलें।",
+  "guideReportsTip2": "PDF निर्यात करें या साझा करें — वह आपकी भाषा और दिशा में ही बनती है।",
+  "guideSettingsTitle": "सेटिंग",
+  "guideSettingsBody": "भाषा, मुद्रा, रंग और अलर्ट सब यहीं हैं, और सेटअप से कुछ भी तय नहीं हो जाता — जब चाहें बदलें।",
+  "guideSettingsTip1": "चालीस भाषाएँ, और दाएँ-से-बाएँ भाषाओं के लिए पूरा लेआउट पलट जाता है।",
+  "guideSettingsTip2": "चुनें कि कौन-से अलर्ट चाहिए और वे किन घंटों में आ सकते हैं।",
+  "guideSettingsTip3": "शांत घंटे सब कुछ सुबह तक रोक रखते हैं।",
   "guideHabitTitle": "इसे आदत बनाएँ",
-  "guideHabitBody": "ऐप उतना ही उपयोगी है जितना डेटा आप इसमें डालते हैं। महीने में एक बार एक घंटे देने से बेहतर है कि रोज़ एक मिनट दें, और दो सप्ताह बाद आँकड़े आपको कुछ बताने लगेंगे।",
-  "guideHabitTip1": "सप्ताह के अंत में नहीं, बल्कि खर्च करते समय उसे दर्ज करें।",
-  "guideHabitTip2": "दिन में एक बार डैशबोर्ड पर नज़र डालें। दस सेकंड पर्याप्त हैं।",
-  "guideHabitTip3": "यह गाइड सेटिंग्स में मौजूद रहेगा — जब चाहें वापस आएँ।",
-  "appearance": "दिखावट",
-  "themeCaption": "हल्का, गहरा या आपके फ़ोन की वर्तमान सेटिंग के अनुसार।",
+  "guideHabitBody": "ऐप उतना ही अच्छा है जितना आप उसमें डालें। महीने में एक घंटे से रोज़ का एक मिनट बेहतर है, और दो हफ़्ते बाद आँकड़े कुछ कहने लगते हैं।",
+  "guideHabitTip1": "खर्च उसी समय दर्ज करें, हफ़्ते के आख़िर में नहीं।",
+  "guideHabitTip2": "दिन में एक बार डैशबोर्ड देखें। दस सेकंड काफ़ी हैं।",
+  "guideHabitTip3": "यह गाइड सेटिंग में रहती है — जब चाहें लौट आएँ।",
+  "appearance": "रूप-रंग",
+  "themeCaption": "हल्का, गहरा, या जो आपका फ़ोन कर रहा हो।",
   "accentColor": "मुख्य रंग",
-  "accentColorCaption": "बटन, हाइलाइट और चार्ट का रंग बदलता है।",
-  "accentSemanticsNote": "हर थीम में आय और खर्च अपने अलग रंग बनाए रखते हैं, इसलिए मुख्य रंग बदलने पर किसी आँकड़े का अर्थ नहीं बदलता।",
-  "accentTeal": "टील",
+  "accentColorCaption": "बटन, हाइलाइट और चार्ट को रंग देता है।",
+  "accentSemanticsNote": "आय और व्यय हर थीम में अपने रंग बनाए रखते हैं, इसलिए मुख्य रंग बदलने से किसी आँकड़े का अर्थ नहीं बदलता।",
+  "accentTeal": "फ़िरोज़ी",
   "accentGreen": "हरा",
   "accentSky": "आसमानी",
   "accentBlue": "नीला",
-  "accentIndigo": "इंडिगो",
+  "accentIndigo": "जामुनी नीला",
   "accentViolet": "बैंगनी",
   "accentPink": "गुलाबी",
-  "accentCrimson": "गहरा लाल",
+  "accentCrimson": "सुर्ख़ लाल",
   "accentOrange": "नारंगी",
-  "accentSlate": "स्लेट",
+  "accentSlate": "स्लेटी",
   "searchLanguages": "भाषाएँ खोजें",
   "suggestedLanguages": "सुझाई गई",
   "allLanguages": "सभी भाषाएँ",
   "noLanguagesFound": "कोई भाषा नहीं मिली",
-  "noLanguagesFoundMessage": "अंग्रेज़ी में नाम या दो-अक्षर वाला कोड आज़माएँ।",
+  "noLanguagesFoundMessage": "अंग्रेज़ी नाम या दो अक्षरों का कोड आज़माएँ।",
   "rightToLeft": "दाएँ से बाएँ",
-  "replayGuide": "गाइड फिर से चलाएँ",
-  "replaySetup": "सेटअप फिर से करें",
-  "replaySetupBody": "पहली बार वाले सवालों से फिर गुजरें। आपके द्वारा दर्ज की गई कोई भी जानकारी हटाई नहीं जाएगी।",
-  "rateTitle": "क्या आपको RainyPenny पसंद आ रहा है?",
-  "rateBody": "आप इसे कुछ समय से इस्तेमाल कर रहे हैं। रेटिंग देने में बस एक पल लगता है और इससे दूसरे लोगों को ऐप खोजने में मदद मिलती है।",
+  "replayGuide": "गाइड फिर देखें",
+  "replaySetup": "सेटअप दोबारा चलाएँ",
+  "replaySetupBody": "शुरुआती सवालों से फिर गुज़रें। आपका दर्ज किया कुछ भी नहीं मिटेगा।",
+  "rateTitle": "RainyPenny पसंद आ रहा है?",
+  "rateBody": "आप कुछ समय से इसका इस्तेमाल कर रहे हैं। रेटिंग देने में एक पल लगता है और इससे दूसरों को ऐप खोजने में मदद मिलती है।",
   "rateAction": "ऐप को रेट करें",
   "rateLater": "शायद बाद में",
   "rateNever": "नहीं, धन्यवाद",
   "rateThanks": "धन्यवाद",
-
   "monthlySalary": "मासिक वेतन",
   "remainingAmount": "शेष",
-  "carriedForward": "आगे जोड़ी गई राशि",
-  "carriedForwardHint": "पिछली अवधि से बची राशि",
+  "carriedForward": "आगे लाया गया",
+  "carriedForwardHint": "पिछले चक्र से बचा हुआ",
   "totalSpending": "कुल खर्च",
   "salaryCycle": "वेतन चक्र",
   "payday": "वेतन दिवस",
-  "paydayDescription": "जिस दिन आपका वेतन आता है। आपका वित्तीय महीना इस दिन से अगले वेतन दिवस से एक दिन पहले तक चलता है।",
-  "paydayUpdated": "वेतन दिवस अपडेट किया गया",
+  "paydayDescription": "वह दिन जब आपका वेतन आता है। आपका वित्तीय महीना इस दिन से अगले वेतन से एक दिन पहले तक चलता है।",
+  "paydayUpdated": "वेतन दिवस अपडेट हुआ",
   "paydayDayOfMonth": "दिन {day}",
-  "@paydayDayOfMonth": {
-    "placeholders": {
-      "day": {
-        "type": "int"
-      }
-    }
-  },
-  "paydayShortMonthNote": "छोटे महीनों में चक्र इसके बजाय महीने के आखिरी दिन शुरू होता है।",
-  "daysLeftInCycle": "{count, plural, =0{चक्र का अंतिम दिन} =1{वेतन दिवस तक 1 दिन} other{वेतन दिवस तक {count} दिन}}",
-  "@daysLeftInCycle": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
-  "nextPayday": "अगला वेतन दिवस",
+  "paydayShortMonthNote": "छोटे महीनों में चक्र महीने के अंतिम दिन से शुरू होता है।",
+  "daysLeftInCycle": "{count, plural, =0{चक्र का अंतिम दिन} =1{वेतन में 1 दिन शेष} other{वेतन में {count} दिन शेष}}",
+  "nextPayday": "अगला वेतन",
   "spentSoFar": "अब तक खर्च",
-  "dailyAllowance": "रोज़ सुरक्षित रूप से खर्च कर सकते हैं",
-  "overspentNotice": "इस चक्र में आपने आने वाली राशि से अधिक खर्च किया है।",
-  "backToThisMonth": "इस महीने पर वापस जाएँ",
+  "dailyAllowance": "प्रतिदिन सुरक्षित खर्च",
+  "overspentNotice": "आपने इस चक्र में आमदनी से अधिक खर्च किया है।",
+  "backToThisMonth": "इस महीने पर लौटें",
   "cycleRangeLabel": "चक्र",
-  "noSalaryRecorded": "अभी कोई वेतन दर्ज नहीं है",
+  "noSalaryRecorded": "अभी कोई वेतन दर्ज नहीं",
   "addSalaryAction": "अपना वेतन जोड़ें",
   "cycleOf": "{start} – {end}",
-  "@cycleOf": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "healthExcellent": "उत्कृष्ट",
   "healthGood": "अच्छा",
   "healthFair": "ठीक",
-  "healthNeedsWork": "सुधार की आवश्यकता",
-  "healthExcellentBody": "आप अच्छी बचत कर रहे हैं और अपने बजट के अंदर रह रहे हैं।",
-  "healthGoodBody": "इस अवधि में आपका खर्च सही दिशा में है।",
-  "healthFairBody": "कुछ बजट तेज़ी से खर्च हो रहे हैं। छोटे बदलाव मदद करेंगे।",
-  "healthNeedsWorkBody": "खर्च आपकी योजना से तेज़ बढ़ रहा है। अपनी सबसे बड़ी श्रेणी से शुरुआत करें।",
+  "healthNeedsWork": "सुधार चाहिए",
+  "healthExcellentBody": "आप अच्छी बचत कर रहे हैं और अपने बजट में रह रहे हैं।",
+  "healthGoodBody": "इस अवधि में आपका खर्च सही राह पर है।",
+  "healthFairBody": "कुछ बजट सीमा के करीब हैं। छोटे बदलाव मदद करेंगे।",
+  "healthNeedsWorkBody": "खर्च आपकी योजना से आगे निकल रहा है। अपनी सबसे बड़ी श्रेणी से शुरू करें।",
   "factorSavingsRate": "बचत दर",
   "factorBudgetControl": "बजट नियंत्रण",
-  "factorDebtLoad": "कर्ज़ का भार",
+  "factorDebtLoad": "कर्ज़ का बोझ",
   "factorSpendingTrend": "खर्च की प्रवृत्ति",
-  "factorKept": "{percent}% बचाकर रखा",
-  "@factorKept": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
-  "factorUsed": "{percent}% उपयोग हुआ",
-  "@factorUsed": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
+  "factorKept": "{percent}% बचाया",
+  "factorUsed": "{percent}% उपयोग",
   "factorOfIncome": "आय का {percent}%",
-  "@factorOfIncome": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
-  "factorTrendUp": "{percent}% बढ़ा",
-  "@factorTrendUp": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
-  "factorTrendDown": "{percent}% घटा",
-  "@factorTrendDown": {
-    "placeholders": {
-      "percent": {
-        "type": "String"
-      }
-    }
-  },
-  "howScoreWorks": "यह स्कोर कैसे काम करता है",
-  "healthScoreExplainer": "आपका स्कोर चार चीज़ों को मिलाकर बनता है: आप अपनी आय का कितना हिस्सा बचाकर रखते हैं, आप अपने बजट के अंदर कितनी अच्छी तरह रहते हैं, आपकी आय का कितना हिस्सा कर्ज़ में जाता है और आपका खर्च बढ़ रहा है या घट रहा है।",
+  "factorTrendUp": "{percent}% वृद्धि",
+  "factorTrendDown": "{percent}% कमी",
+  "howScoreWorks": "यह स्कोर कैसे बनता है",
+  "healthScoreExplainer": "आपका स्कोर चार बातों को जोड़ता है: आप अपनी आय का कितना हिस्सा बचाते हैं, आप अपने बजट में कितना रहते हैं, आपकी आय का कितना हिस्सा कर्ज़ में जाता है, और आपका खर्च बढ़ रहा है या घट रहा है।",
   "scoreWeightLabel": "स्कोर का {percent}%",
-  "@scoreWeightLabel": {
-    "placeholders": {
-      "percent": {
-        "type": "int"
-      }
-    }
-  },
   "viewHealthDetails": "विवरण देखें",
-
-  "saveChanges": "बदलाव सहेजें",
-  "profileUpdated": "प्रोफ़ाइल अपडेट की गई",
+  "saveChanges": "परिवर्तन सहेजें",
+  "profileUpdated": "प्रोफ़ाइल अपडेट हुई",
   "changePhoto": "फ़ोटो बदलें",
   "removePhoto": "फ़ोटो हटाएँ",
-  "personalInformationIntro": "आपका नाम और फ़ोटो पूरे ऐप में दिखाई देंगे। आपका ईमेल वही पता है जिससे आप साइन इन करते हैं।",
-  "nameRequired": "अपना नाम दर्ज करें",
-  "emailNotEditable": "जिस पते से आप साइन इन करते हैं उसे बदलने के लिए सहायता से संपर्क करें।",
-
+  "personalInformationIntro": "आपका नाम और फ़ोटो पूरे ऐप में दिखते हैं। आपका ईमेल वही पता है जिससे आप साइन इन करते हैं।",
+  "emailNotEditable": "साइन इन पता बदलने के लिए सहायता से संपर्क करें।",
   "pressBackAgainToExit": "बाहर निकलने के लिए फिर से बैक दबाएँ",
-
   "categoryHousing": "आवास",
-  "categoryFood": "खाना और बाहर खाना",
+  "categoryFood": "खाना और भोजन",
   "categoryTransport": "परिवहन",
   "categoryShopping": "खरीदारी",
   "categoryBills": "बिल और उपयोगिताएँ",
@@ -1308,112 +594,33 @@
   "categoryCashback": "कैशबैक",
   "categoryRefund": "रिफंड",
   "categoryRentalIncome": "किराये की आय",
-
   "addCategory": "नई श्रेणी",
-  "filterByCategory": "श्रेणी के अनुसार फ़िल्टर करें",
+  "filterByCategory": "श्रेणी से छाँटें",
   "allCategories": "सभी श्रेणियाँ",
-  "clearFilters": "फ़िल्टर साफ़ करें",
+  "clearFilters": "फ़िल्टर हटाएँ",
   "spentInCategory": "{category}  ·  {amount}",
-  "@spentInCategory": {
-    "placeholders": {
-      "category": {
-        "type": "String"
-      },
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "allTime": "सभी समय",
   "customRange": "कस्टम",
   "selectDateRange": "अवधि चुनें",
   "rangeApplied": "{start} – {end} दिखाया जा रहा है",
-  "@rangeApplied": {
-    "placeholders": {
-      "start": {
-        "type": "String"
-      },
-      "end": {
-        "type": "String"
-      }
-    }
-  },
-
   "loans": "ऋण",
   "debts": "कर्ज़",
   "noLoansTitle": "कोई ऋण नहीं",
   "noLoansBody": "आपके पास कोई सक्रिय ऋण नहीं है।",
-
   "emptyHealthTitle": "अभी कोई वित्तीय स्कोर नहीं",
-  "@emptyHealthTitle": {
-    "description": "जब वित्तीय स्थिति का स्कोर निकालने के लिए पर्याप्त डेटा न हो तब दिखाया जाने वाला शीर्षक"
-  },
   "emptyHealthDescription": "सटीक वित्तीय स्थिति का स्कोर निकालने से पहले हमें आपकी थोड़ी वित्तीय गतिविधि चाहिए।",
-  "@emptyHealthDescription": {
-    "description": "वित्तीय स्थिति स्क्रीन के खाली स्टेट में दिखाया जाने वाला विवरण"
-  },
   "emptyHealthAddTransactions": "आय या खर्च के लेन-देन जोड़ें",
-  "@emptyHealthAddTransactions": {
-    "description": "उपयोगकर्ता को लेन-देन जोड़ने के लिए कहने वाली चेकलिस्ट आइटम"
-  },
   "emptyHealthSetBudgets": "अपने मासिक बजट सेट करें",
-  "@emptyHealthSetBudgets": {
-    "description": "उपयोगकर्ता को बजट सेट करने के लिए कहने वाली चेकलिस्ट आइटम"
-  },
   "emptyHealthTrackLoans": "ऋण या कर्ज़ ट्रैक करें (वैकल्पिक)",
-  "@emptyHealthTrackLoans": {
-    "description": "उपयोगकर्ता को ऋण ट्रैक करने के लिए कहने वाली चेकलिस्ट आइटम"
-  },
   "emptyHealthCardSubtitle": "अपना स्कोर निकालने और जानकारियाँ पाने के लिए लेन-देन जोड़ें।",
-  "@emptyHealthCardSubtitle": {
-    "description": "जब कोई डेटा उपलब्ध न हो तब डैशबोर्ड वित्तीय स्थिति कार्ड पर दिखाया जाने वाला उपशीर्षक"
-  },
-  
   "smartBudgetSplit": "स्मार्ट बजट विभाजन",
-  "@smartBudgetSplit": {
-    "description": "स्मार्ट वेतन बजट विभाजन शीट का शीर्षक"
-  },
   "smartBudgetSplitSubtitle": "अनुशंसित सीमाएँ निकालने के लिए अपना मासिक वेतन दर्ज करें",
-  "@smartBudgetSplitSubtitle": {
-    "description": "बताता है कि वेतन बजट विभाजन कैसे काम करता है"
-  },
   "monthlyNetSalary": "मासिक शुद्ध वेतन",
-  "@monthlyNetSalary": {
-    "description": "मासिक शुद्ध वेतन इनपुट फ़ील्ड का लेबल"
-  },
   "categoryAllocations": "श्रेणी आवंटन",
-  "@categoryAllocations": {
-    "description": "अनुशंसित श्रेणी आवंटन सूची का शीर्षक"
-  },
   "totalBudgeted": "कुल: {amount}",
-  "@totalBudgeted": {
-    "description": "सभी श्रेणियों में बजट की गई कुल राशि",
-    "placeholders": {
-      "amount": {
-        "type": "String"
-      }
-    }
-  },
   "applyAllBudgets": "सभी बजट लागू करें",
-  "@applyAllBudgets": {
-    "description": "सभी अनुशंसित श्रेणी सीमाएँ लागू करने वाले बटन का लेबल"
-  },
   "applyingBudgets": "बजट लागू किए जा रहे हैं...",
-  "@applyingBudgets": {
-    "description": "बजट लागू करते समय लोडिंग स्टेट लेबल"
-  },
   "budgetsCreatedSuccess": "{count, plural, =1{1 श्रेणी का बजट बनाया गया।} other{{count} श्रेणियों के बजट बनाए गए।}}",
-  "@budgetsCreatedSuccess": {
-    "description": "बजट बनाए जाने पर सफलता स्नैकबार संदेश",
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    }
-  },
   "failedToSaveBudgets": "बजट सहेजने में विफल।",
-  "@failedToSaveBudgets": {
-    "description": "बजट सहेजने में विफल होने पर त्रुटि संदेश"
-  },
   "recommendedBudget": "अनुशंसित बजट"
 }
