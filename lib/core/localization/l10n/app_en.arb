@@ -1369,5 +1369,53 @@
   "emptyHealthCardSubtitle": "Add transactions to calculate your score and get insights.",
   "@emptyHealthCardSubtitle": {
     "description": "Subtitle shown on the dashboard health card when no data is available"
-  }
+  },
+  
+  "smartBudgetSplit": "Smart Budget Split",
+  "@smartBudgetSplit": {
+    "description": "Title for smart salary budget split sheet"
+  },
+  "smartBudgetSplitSubtitle": "Enter your monthly salary to calculate recommended limits",
+  "@smartBudgetSplitSubtitle": {
+    "description": "Subtitle explaining how salary budget split works"
+  },
+  "monthlyNetSalary": "Monthly Net Salary",
+  "@monthlyNetSalary": {
+    "description": "Label for monthly net salary input field"
+  },
+  "categoryAllocations": "Category Allocations",
+  "@categoryAllocations": {
+    "description": "Header for recommended category allocations list"
+  },
+  "totalBudgeted": "Total: {amount}",
+  "@totalBudgeted": {
+    "description": "Total amount budgeted across categories",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "Apply All Budgets",
+  "@applyAllBudgets": {
+    "description": "Button label to apply all recommended category limits"
+  },
+  "applyingBudgets": "Applying budgets...",
+  "@applyingBudgets": {
+    "description": "Loading state label while applying budgets"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{1 category budget created.} other{{count} category budgets created.}}",
+  "@budgetsCreatedSuccess": {
+    "description": "Success snackbar message when budgets are created",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "Failed to save budgets.",
+  "@failedToSaveBudgets": {
+    "description": "Error message when saving budgets fails"
+  },
+  "recommendedBudget": "Recommended budget"
 }

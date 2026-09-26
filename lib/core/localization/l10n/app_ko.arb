@@ -1,93 +1,156 @@
 {
   "@@locale": "ko",
   "appName": "RainyPenny",
-  "appTagline": "비 오는 날을 위해 모으세요",
+  "appTagline": "만약을 대비해 저축하세요",
   "navHome": "홈",
-  "navTransactions": "내역",
+  "navTransactions": "거래 내역",
   "navAdd": "추가",
-  "navReports": "리포트",
-  "navProfile": "내 정보",
-  "greetingMorning": "좋은 아침이에요, {name}님",
-  "greetingAfternoon": "안녕하세요, {name}님",
-  "greetingEvening": "좋은 저녁이에요, {name}님",
-  "greetingSubtitle": "지금 재정 상황이에요",
-  "totalBalance": "총 잔액",
-  "vsLastPeriod": "지난 기간 대비",
+  "navReports": "보고서",
+  "navProfile": "프로필",
+  "greetingMorning": "좋은 아침입니다, {name}님",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingAfternoon": "좋은 오후입니다, {name}님",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingEvening": "좋은 저녁입니다, {name}님",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingSubtitle": "현재 금융 현황 요약입니다",
+  "totalBalance": "총잔액",
+  "vsLastPeriod": "이전 기간 대비",
   "income": "수입",
   "expenses": "지출",
-  "netBalance": "순수지",
+  "netBalance": "순잔액",
   "lastThirtyDays": "최근 30일",
   "quickActions": "빠른 작업",
-  "addIncome": "수입 기록",
-  "addExpense": "지출 기록",
-  "spendingOverview": "지출 개요",
-  "recentTransactions": "최근 내역",
-  "seeAll": "모두 보기",
+  "addIncome": "수입 추가",
+  "addExpense": "지출 추가",
+  "spendingOverview": "지출 현황",
+  "recentTransactions": "최근 거래",
+  "seeAll": "전체 보기",
   "viewAll": "전체 보기",
-  "budgetProgress": "예산 진행",
+  "budgetProgress": "예산 진행 상황",
   "savingsGoals": "저축 목표",
-  "financialInsight": "재정 인사이트",
-  "financialHealth": "재정 건전성",
-  "ofTotal": "{total} 중",
-  "searchTransactions": "내역 검색",
+  "financialInsight": "금융 인사이트",
+  "financialHealth": "재정 건강 상태",
+  "ofTotal": "/ {total}",
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "searchTransactions": "거래 내역 검색",
   "filterAll": "전체",
   "filterIncome": "수입",
   "filterExpenses": "지출",
   "today": "오늘",
   "yesterday": "어제",
-  "noTransactionsTitle": "내역을 찾을 수 없어요",
-  "noTransactionsBody": "검색어나 필터를 바꾸면 더 많은 기록을 볼 수 있어요.",
-  "transactionCount": "{count, plural, =0{내역 없음} other{내역 {count}건}}",
-  "addTransaction": "내역 추가",
+  "noTransactionsTitle": "거래 내역이 없습니다",
+  "noTransactionsBody": "다른 검색어나 필터를 선택하여 내역을 확인해 보세요.",
+  "transactionCount": "{count, plural, =0{거래 내역 없음} =1{거래 1건} other{거래 {count}건}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addTransaction": "거래 추가",
   "amount": "금액",
-  "category": "분류",
+  "category": "카테고리",
   "date": "날짜",
   "note": "메모",
-  "noteHint": "메모 (선택)",
+  "noteHint": "메모 입력 (선택 사항)",
   "saveIncome": "수입 저장",
   "saveExpense": "지출 저장",
-  "selectCategory": "분류 선택",
-  "transactionSaved": "저장했어요",
+  "selectCategory": "카테고리 선택",
+  "transactionSaved": "거래가 저장되었습니다",
   "amountRequired": "0보다 큰 금액을 입력하세요",
-  "titleRequired": "이 내역에 이름을 지어 주세요",
+  "titleRequired": "거래 이름을 입력하세요",
   "descriptionLabel": "설명",
-  "descriptionHint": "예: 장보기",
+  "descriptionHint": "예: 식료품 구매",
   "budget": "예산",
-  "budgets": "예산",
-  "totalBudget": "총 예산",
-  "spent": "사용",
-  "remaining": "남음",
-  "budgetUsed": "{percent}% 사용",
-  "onTrack": "순조로움",
-  "approachingLimit": "한도 임박",
+  "budgets": "예산 목록",
+  "totalBudget": "총예산",
+  "spent": "지출액",
+  "remaining": "남은 금액",
+  "budgetUsed": "{percent}% 사용됨",
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "onTrack": "안정적",
+  "approachingLimit": "한도 근접",
   "overBudget": "예산 초과",
   "savings": "저축",
   "yourGoals": "내 목표",
   "saved": "모은 금액",
-  "target": "목표",
-  "monthlyContribution": "매월",
-  "addFunds": "입금",
+  "target": "목표 금액",
+  "monthlyContribution": "월별",
+  "addFunds": "금액 추가",
   "goalComplete": "목표 달성",
-  "monthsToGo": "{count, plural, other{{count}개월 남음}}",
-  "loansAndDebts": "대출과 빚",
-  "totalOutstanding": "총 잔여 금액",
-  "monthlyPayment": "매월",
-  "nextPayment": "다음 상환",
-  "paidOff": "{percent}% 상환",
-  "interestRate": "이자율",
-  "upcomingPayments": "예정된 상환",
+  "monthsToGo": "{count, plural, =1{1개월 남음} other{{count}개월 남음}}",
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "loansAndDebts": "대출 및 부채",
+  "totalOutstanding": "총 미상환 잔액",
+  "monthlyPayment": "월 상환액",
+  "nextPayment": "다음 납부일",
+  "paidOff": "{percent}% 상환 완료",
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "interestRate": "금리",
+  "upcomingPayments": "예정된 결제",
   "dueInDays": "{count, plural, =0{오늘 마감} =1{내일 마감} other{{count}일 후 마감}}",
-  "overdue": "연체",
-  "reports": "리포트",
-  "week": "주",
-  "month": "월",
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overdue": "기한 경과",
+  "reports": "보고서",
+  "week": "주간",
+  "month": "월간",
   "quarter": "분기",
-  "incomeVsExpenses": "수입과 지출",
-  "spendingByCategory": "분류별 지출",
-  "budgetPerformance": "예산 이행",
+  "incomeVsExpenses": "수입 대비 지출",
+  "spendingByCategory": "카테고리별 지출",
+  "budgetPerformance": "예산 관리 현황",
   "insights": "인사이트",
   "savingsRate": "저축률",
-  "profile": "내 정보",
+  "profile": "프로필",
   "account": "계정",
   "personalInformation": "개인 정보",
   "changePassword": "비밀번호 변경",
@@ -97,399 +160,1260 @@
   "currency": "통화",
   "theme": "테마",
   "security": "보안",
-  "privacyAndSecurity": "개인정보 및 보안",
+  "privacyAndSecurity": "개인정보 보호 및 보안",
   "help": "도움말",
   "helpAndSupport": "도움말 및 지원",
   "termsAndConditions": "이용약관",
   "logOut": "로그아웃",
-  "memberSince": "{date}부터 이용",
+  "memberSince": "가입일: {date}",
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "themeSystem": "시스템 설정",
-  "themeLight": "라이트",
-  "themeDark": "다크",
+  "themeLight": "라이트 모드",
+  "themeDark": "다크 모드",
   "settings": "설정",
-  "noNotificationsTitle": "모두 확인했어요",
-  "noNotificationsBody": "새로운 인사이트와 알림이 여기에 표시돼요.",
+  "noNotificationsTitle": "새로운 알림이 없습니다",
+  "noNotificationsBody": "새로운 인사이트와 알림이 여기에 표시됩니다.",
   "cancel": "취소",
   "save": "저장",
   "done": "완료",
   "retry": "다시 시도",
   "close": "닫기",
-  "somethingWentWrong": "문제가 발생했어요",
-  "comingSoon": "정식 버전에서 제공될 예정이에요",
+  "somethingWentWrong": "문제가 발생했습니다",
+  "comingSoon": "정식 출시 버전에서 곧 제공됩니다",
   "edit": "수정",
   "delete": "삭제",
   "undo": "실행 취소",
   "add": "추가",
-  "create": "만들기",
-  "nameRequired": "이름을 지어 주세요",
+  "create": "생성",
+  "nameRequired": "이름을 입력하세요",
   "amountAboveZero": "0보다 큰 금액을 입력하세요",
-  "editTransaction": "내역 수정",
-  "deleteTransaction": "내역을 삭제할까요?",
-  "deleteTransactionBody": "{title}이(가) 장부에서 삭제돼요.",
-  "transactionDeleted": "내역을 삭제했어요",
-  "transactionUpdated": "내역을 수정했어요",
+  "editTransaction": "거래 수정",
+  "deleteTransaction": "거래를 삭제하시겠습니까?",
+  "deleteTransactionBody": "{title} 항목이 장부에서 삭제됩니다.",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "transactionDeleted": "거래가 삭제되었습니다",
+  "transactionUpdated": "거래가 수정되었습니다",
   "newBudget": "새 예산",
   "editBudget": "예산 수정",
   "budgetLimit": "월 한도",
-  "deleteBudget": "예산을 삭제할까요?",
-  "deleteBudgetBody": "{category} 예산이 삭제돼요. 내역에는 영향이 없어요.",
-  "budgetSaved": "예산을 저장했어요",
-  "budgetDeleted": "예산을 삭제했어요",
-  "allCategoriesBudgeted": "모든 분류에 이미 예산이 있어요",
-  "noBudgetsTitle": "아직 예산이 없어요",
-  "noBudgetsBody": "분류에 월 한도를 정하면 그때부터 관리가 시작돼요.",
+  "deleteBudget": "예산을 삭제하시겠습니까?",
+  "deleteBudgetBody": "{category} 예산이 삭제됩니다. 기존 거래 내역에는 영향을 주지 않습니다.",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetSaved": "예산이 저장되었습니다",
+  "budgetDeleted": "예산이 삭제되었습니다",
+  "allCategoriesBudgeted": "모든 카테고리에 이미 예산이 설정되어 있습니다",
+  "noBudgetsTitle": "아직 설정된 예산이 없습니다",
+  "noBudgetsBody": "카테고리에 월 한도를 설정하여 지출 관리를 시작해 보세요.",
   "newGoal": "새 목표",
   "editGoal": "목표 수정",
   "goalName": "목표 이름",
   "goalNameHint": "예: 비상금",
   "targetAmount": "목표 금액",
-  "alreadySaved": "이미 모은 금액",
-  "deleteGoal": "목표를 삭제할까요?",
-  "deleteGoalBody": "{name}과(와) 진행 상황이 삭제돼요.",
-  "goalSaved": "목표를 저장했어요",
-  "goalDeleted": "목표를 삭제했어요",
-  "noGoalsTitle": "아직 저축 목표가 없어요",
-  "noGoalsBody": "목표를 정하면 RainyPenny가 진행 상황을 추적해요.",
-  "fundsAdded": "입금했어요",
-  "newDebt": "새 대출 또는 카드",
-  "editDebt": "대출 수정",
+  "alreadySaved": "현재까지 모은 금액",
+  "deleteGoal": "목표를 삭제하시겠습니까?",
+  "deleteGoalBody": "{name} 목표와 진행 상황이 삭제됩니다.",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "goalSaved": "목표가 저장되었습니다",
+  "goalDeleted": "목표가 삭제되었습니다",
+  "noGoalsTitle": "아직 저축 목표가 없습니다",
+  "noGoalsBody": "목표를 설정하면 RainyPenny가 진행 상황을 추적해 드립니다.",
+  "fundsAdded": "금액이 추가되었습니다",
+  "newDebt": "새 대출 또는 카드 등록",
+  "editDebt": "대출 정보 수정",
   "debtName": "이름",
-  "debtNameHint": "예: 자동차 할부",
-  "lender": "채권자",
+  "debtNameHint": "예: 자동차 대출",
+  "lender": "금융기관/대출처",
   "lenderHint": "예: 국민은행",
-  "originalAmount": "최초 금액",
-  "creditLimit": "한도",
+  "originalAmount": "원금",
+  "creditLimit": "한도 금액",
   "remainingBalance": "남은 잔액",
-  "interestRatePercent": "이자율 (%)",
+  "interestRatePercent": "금리 (%)",
   "kindLoan": "대출",
   "kindCreditCard": "신용카드",
   "recordPayment": "상환 기록",
-  "paymentRecorded": "상환을 기록했어요",
-  "deleteDebt": "이 빚을 삭제할까요?",
-  "deleteDebtBody": "{name}이(가) 목록에서 삭제돼요.",
-  "debtSaved": "저장했어요",
-  "debtDeleted": "삭제했어요",
-  "noDebtsTitle": "관리 중인 빚이 없어요",
-  "noDebtsBody": "대출이나 신용카드를 추가해 상환을 챙겨 보세요.",
-  "insightBudgetExceededTitle": "{subject} 예산을 초과했어요",
-  "insightBudgetExceededBody": "이번 기간 {subject} 예산을 {amount} 초과했어요.",
-  "insightBudgetApproachingTitle": "{subject}이(가) 한도에 가까워요",
-  "insightBudgetApproachingBody": "{subject} 예산을 {percent}% 사용했고 {amount} 남았어요.",
-  "insightOverIncomeTitle": "지출이 수입을 넘었어요",
-  "insightOverIncomeBody": "이번 기간에는 번 것보다 많이 썼어요. 금액이 큰 분류부터 살펴보고 균형을 되찾아 보세요.",
-  "insightCategoryUpTitle": "{subject} 지출이 늘었어요",
-  "insightCategoryUpBody": "{subject} 지출이 지난 기간보다 {percent}% 많아요.",
-  "insightTrendDownTitle": "지출이 줄고 있어요",
-  "insightTrendDownBody": "전체 지출이 지난 기간보다 {percent}% 적어요.",
-  "insightTrendUpTitle": "지출이 늘고 있어요",
-  "insightTrendUpBody": "전체 지출이 지난 기간보다 {percent}% 많아요.",
-  "insightSavingsStrongTitle": "이번 기간 저축이 좋았어요",
-  "insightSavingsStrongBody": "수입의 {percent}%를 남겼어요 — 목표 {target}%를 크게 넘었어요.",
-  "insightSavingsLowTitle": "저축률이 목표에 못 미쳐요",
-  "insightSavingsLowBody": "이번 기간 수입의 {percent}%를 남겼어요. 목표는 {target}%예요.",
-  "insightGoalNearlyTitle": "{subject}이(가) 거의 다 찼어요",
-  "insightGoalNearlyBody": "{subject}까지 {amount}만 남았어요.",
-  "insightGoalOnTrackTitle": "{subject}, 순조로워요",
-  "insightGoalOnTrackBody": "매월 {amount}이면 {months, plural, other{{months}개월}} 뒤에 이 목표에 닿아요.",
-  "insightDebtOverdueTitle": "{subject} 상환이 연체됐어요",
-  "insightDebtOverdueBody": "{subject}의 {amount} 상환이 {days, plural, other{{days}일}} 연체됐어요.",
-  "insightDebtDueTitle": "{subject} 상환일이 다가와요",
-  "insightDebtDueBody": "{amount}을(를) {days, plural, =0{오늘} =1{내일} other{{days}일 뒤}} 내야 해요.",
+  "paymentRecorded": "상환이 기록되었습니다",
+  "deleteDebt": "이 부채 항목을 삭제하시겠습니까?",
+  "deleteDebtBody": "{name} 항목이 부채 목록에서 삭제됩니다.",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "debtSaved": "저장되었습니다",
+  "debtDeleted": "삭제되었습니다",
+  "noDebtsTitle": "등록된 부채 내역이 없습니다",
+  "noDebtsBody": "대출이나 신용카드를 추가하여 상환 일정을 확인해 보세요.",
+  "insightBudgetExceededTitle": "{subject} 예산 초과",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "이번 기간에 {subject} 예산을 {amount} 초과하여 지출했습니다.",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingTitle": "{subject} 예산 한도에 근접했습니다",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "{subject} 예산의 {percent}%를 사용했으며, {amount} 남았습니다.",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "insightOverIncomeTitle": "지출이 수입을 초과했습니다",
+  "insightOverIncomeBody": "이번 기간에 번 돈보다 더 많은 금액을 썼습니다. 가장 큰 지출 카테고리를 검토하여 균형을 맞추세요.",
+  "insightCategoryUpTitle": "{subject} 지출 증가",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightCategoryUpBody": "{subject} 지출이 이전 기간보다 {percent}% 증가했습니다.",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "지출 감소세",
+  "insightTrendDownBody": "전체 지출이 이전 기간보다 {percent}% 감소했습니다.",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "지출 증가세",
+  "insightTrendUpBody": "전체 지출이 이전 기간보다 {percent}% 증가했습니다.",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "이번 기간 저축 우수",
+  "insightSavingsStrongBody": "수입의 {percent}%를 저축하여 목표인 {target}%를 훨씬 웃돌았습니다.",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsLowTitle": "저축률이 목표치에 미달합니다",
+  "insightSavingsLowBody": "이번 기간에 수입의 {percent}%를 저축했습니다. 목표치인 {target}% 달성을 시도해 보세요.",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "{subject} 목표 달성이 눈앞입니다",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalNearlyBody": "{subject} 목표까지 {amount} 남았습니다.",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "{subject} 목표 달성 진행 중",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "매달 {amount}씩 저축하면 {months, plural, =1{1개월} other{{months}개월}} 후에 목표를 달성할 수 있습니다.",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtOverdueTitle": "{subject} 상환 연체",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "{subject} 항목의 상환액 {amount}이(가) {days, plural, =1{1일} other{{days}일}} 연체되었습니다.",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "{subject} 결제일 도래",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "{amount} 결제일이 {days, plural, =0{오늘} =1{내일} other{{days}일 후}}입니다.",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "signIn": "로그인",
-  "signUp": "계정 만들기",
-  "signInSubtitle": "다시 오셨네요. 돈이 기다리고 있어요.",
-  "signUpSubtitle": "몇 가지만 적으면 끝이에요.",
+  "signUp": "회원가입",
+  "signInSubtitle": "다시 오신 것을 환영합니다. 나의 자산 현황을 확인해 보세요.",
+  "signUpSubtitle": "몇 가지 정보만 입력하면 준비가 완료됩니다.",
   "emailLabel": "이메일",
   "emailHint": "you@email.com",
   "passwordLabel": "비밀번호",
-  "passwordHint": "8자 이상",
+  "passwordHint": "8자 이상 입력",
   "fullNameLabel": "이름",
-  "fullNameHint": "김민준",
+  "fullNameHint": "홍길동",
   "forgotPassword": "비밀번호를 잊으셨나요?",
-  "resetSent": "재설정 링크를 보냈어요. 메일함을 확인하세요",
+  "resetSent": "받은편지함에서 비밀번호 재설정 링크를 확인하세요",
   "noAccountYet": "처음이신가요?",
-  "haveAccount": "이미 계정이 있나요?",
+  "haveAccount": "이미 계정이 있으신가요?",
   "emailInvalid": "올바른 이메일 주소를 입력하세요",
-  "passwordTooShort": "8자 이상으로 해 주세요",
-  "signOutConfirm": "로그아웃할까요?",
-  "signOutBody": "재정 상황을 다시 보려면 로그인해야 해요.",
+  "passwordTooShort": "최소 8자 이상 입력하세요",
+  "signOutConfirm": "로그아웃하시겠습니까?",
+  "signOutBody": "자산 현황을 다시 확인하려면 다시 로그인해야 합니다.",
   "dataSource": "데이터 출처",
-  "insightWeeklySummaryTitle": "이번 주 돌아보기",
-  "insightWeeklySummaryBody": "이번 주 돈이 어디로 갔는지, 예산은 잘 지켜졌는지 확인해 보세요.",
-  "notificationSettings": "알림",
-  "alertsSection": "알림",
+  "insightWeeklySummaryTitle": "주간 활동 요약",
+  "insightWeeklySummaryBody": "이번 주에 돈이 어디에 쓰였고 예산이 어떻게 유지되고 있는지 확인하세요.",
+  "notificationSettings": "알림 설정",
+  "alertsSection": "경고 알림",
   "budgetAlerts": "예산 알림",
-  "budgetAlertsBody": "예산이 한도에 가까워지거나 넘었을 때",
-  "paymentReminders": "상환 알림",
-  "paymentRemindersBody": "상환일 며칠 전",
-  "savingsUpdates": "저축 소식",
-  "savingsUpdatesBody": "목표를 향한 진행 상황",
-  "weeklySummaryLabel": "주간 요약",
-  "weeklySummaryBody": "지난 한 주의 정리",
-  "scheduleSection": "시간",
-  "reminderTime": "알림 시각",
+  "budgetAlertsBody": "예산 한도에 근접하거나 초과했을 때 알림",
+  "paymentReminders": "결제일 알림",
+  "paymentRemindersBody": "결제일 며칠 전에 미리 알림",
+  "savingsUpdates": "저축 현황 알림",
+  "savingsUpdatesBody": "저축 목표 달성 현황 알림",
+  "weeklySummaryLabel": "주간 요약 보고서",
+  "weeklySummaryBody": "지난주 지출 및 수입에 대한 주간 요약",
+  "scheduleSection": "시간 설정",
+  "reminderTime": "알림 시간",
   "quietHours": "방해 금지 시간",
   "quietHoursValue": "{start} – {end}",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
   "summaryDay": "요약 요일",
-  "permissionRequired": "알림이 꺼져 있어요",
-  "permissionRequiredBody": "알림을 허용하면 예산이나 상환이 손쓸 수 없게 되기 전에 RainyPenny가 알려 드려요.",
+  "permissionRequired": "알림이 꺼져 있습니다",
+  "permissionRequiredBody": "예산 초과나 결제일 누락을 방지하려면 RainyPenny의 알림 권한을 허용해 주세요.",
   "allowNotifications": "알림 허용",
-  "permissionDenied": "알림이 차단됐어요. 기기 설정에서 다시 켤 수 있어요.",
-  "upcomingAlerts": "예정됨",
-  "noScheduledAlerts": "지금은 예정된 알림이 없어요",
-  "noScheduledAlertsBody": "예산과 상환이 기한에 가까워지면 여기에 알림이 나타나요.",
+  "permissionDenied": "알림이 차단되어 있습니다. 기기 설정에서 알림을 켤 수 있습니다.",
+  "upcomingAlerts": "예정된 알림",
+  "noScheduledAlerts": "현재 예정된 알림이 없습니다",
+  "noScheduledAlertsBody": "예산 한도나 결제일이 다가오면 여기에 알림이 표시됩니다.",
   "scheduledFor": "{date} 예정",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "everyWeek": "매주",
-  "allNotificationsOff": "모든 알림이 꺼져 있어요",
-  "needsAttention": "확인 필요",
-  "quickActionsTitle": "무엇을 하시겠어요?",
-  "createSection": "기록",
-  "jumpToSection": "바로 가기",
+  "allNotificationsOff": "모든 알림 꺼짐",
+  "needsAttention": "주의 필요",
+  "quickActionsTitle": "무엇을 하시겠습니까?",
+  "createSection": "기록하기",
+  "jumpToSection": "바로가기",
   "addLoanAction": "대출 추가",
   "addBudgetAction": "예산 추가",
   "addGoalAction": "목표 추가",
-  "longPressHint": "팁: + 를 길게 누르면 바로 지출을 기록해요",
+  "longPressHint": "팁: + 버튼을 길게 누르면 바로 지출을 기록할 수 있습니다",
   "searchCurrencies": "통화 검색",
-  "noCurrenciesFound": "통화를 찾을 수 없어요",
-  "noCurrenciesFoundMessage": "다른 코드, 기호, 이름으로 찾아보세요.",
-  "popularCurrencies": "자주 쓰는 통화",
-  "allCurrencies": "모든 통화",
-  "totalLoanAmount": "총 대출 금액",
-  "installmentAmount": "회차 금액",
-  "numberOfInstallments": "총 회차",
-  "paidInstallments": "납부한 회차",
-  "remainingInstallments": "남은 회차",
-  "installmentsPaidOf": "{total}회 중 {paid}회 납부",
-  "finalPayment": "마지막 회차",
-  "paymentDueDate": "상환일",
+  "@searchCurrencies": {
+    "description": "Currency picker: searchCurrencies"
+  },
+  "noCurrenciesFound": "통화를 찾을 수 없습니다",
+  "@noCurrenciesFound": {
+    "description": "Currency picker: noCurrenciesFound"
+  },
+  "noCurrenciesFoundMessage": "다른 코드, 기호 또는 이름으로 검색해 보세요.",
+  "@noCurrenciesFoundMessage": {
+    "description": "Currency picker: noCurrenciesFoundMessage"
+  },
+  "popularCurrencies": "주요 통화",
+  "@popularCurrencies": {
+    "description": "Currency picker: popularCurrencies"
+  },
+  "allCurrencies": "전체 통화",
+  "@allCurrencies": {
+    "description": "Currency picker: allCurrencies"
+  },
+  "totalLoanAmount": "총 대출 원금",
+  "@totalLoanAmount": {
+    "description": "Loan detail: the original amount borrowed"
+  },
+  "installmentAmount": "월 상환액",
+  "@installmentAmount": {
+    "description": "Loan detail: what falls due each cycle"
+  },
+  "numberOfInstallments": "총 상환 횟수",
+  "@numberOfInstallments": {
+    "description": "Loan editor: length of the repayment plan"
+  },
+  "paidInstallments": "상환 완료 횟수",
+  "@paidInstallments": {
+    "description": "Loan detail: installments already settled"
+  },
+  "remainingInstallments": "남은 상환 횟수",
+  "@remainingInstallments": {
+    "description": "Loan detail: installments still to pay"
+  },
+  "installmentsPaidOf": "{total}회 중 {paid}회 납부 완료",
+  "@installmentsPaidOf": {
+    "description": "Loan detail: installment counter",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "finalPayment": "최종 상환일",
+  "@finalPayment": {
+    "description": "Loan detail: date of the last installment"
+  },
+  "paymentDueDate": "정기 결제일",
+  "@paymentDueDate": {
+    "description": "Loan detail: the day of the month a payment falls due"
+  },
   "dueOnDayOfMonth": "매월 {day}일",
+  "@dueOnDayOfMonth": {
+    "description": "Loan detail: recurring due day",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
   "loanStatus": "상태",
-  "statusActive": "순조로움",
-  "statusDueSoon": "곧 상환",
-  "statusOverdue": "연체",
-  "statusCompleted": "상환 완료",
-  "repaymentProgress": "상환 진행",
+  "@loanStatus": {
+    "description": "Loan detail: current standing of the debt"
+  },
+  "statusActive": "정상 상환 중",
+  "@statusActive": {
+    "description": "Loan status: being repaid normally"
+  },
+  "statusDueSoon": "결제 임박",
+  "@statusDueSoon": {
+    "description": "Loan status: inside the reminder window"
+  },
+  "statusOverdue": "연체 중",
+  "@statusOverdue": {
+    "description": "Loan status: the due date has passed"
+  },
+  "statusCompleted": "완납",
+  "@statusCompleted": {
+    "description": "Loan status: fully repaid"
+  },
+  "repaymentProgress": "상환 진행률",
+  "@repaymentProgress": {
+    "description": "Loan detail: section heading for the progress bars"
+  },
   "byAmount": "금액 기준",
-  "byInstallments": "회차 기준",
+  "@byAmount": {
+    "description": "Loan detail: progress measured in money"
+  },
+  "byInstallments": "상환 회차 기준",
+  "@byInstallments": {
+    "description": "Loan detail: progress measured in payments"
+  },
   "startDate": "시작일",
-  "openEnded": "기한 없음",
-  "loanDetails": "대출 상세",
-  "notSet": "미설정",
-  "insightDebtDueTodayTitle": "{subject} 상환일이 오늘이에요",
-  "insightDebtDueTodayBody": "{amount} 상환이 오늘까지예요. 한 번만 눌러도 제때 처리돼요.",
-  "remindMorningTitle": "좋은 아침이에요 ☀️",
-  "remindMorningBody": "돈을 챙기며 하루를 시작해 보세요. 어제 못 적은 게 있나요?",
-  "remindNoonTitle": "점심 무렵 확인",
-  "remindNoonBody": "점심, 커피, 교통비? 몇 초면 기록할 수 있어요.",
-  "remindAfternoonTitle": "잠깐 정리",
-  "remindAfternoonBody": "지금까지 쓴 걸 적어 두면 오늘 숫자가 정확해져요.",
-  "remindEveningTitle": "하루를 마무리하며",
-  "remindEveningBody": "지금 2분이면 오늘 기록이 완성돼요.",
+  "@startDate": {
+    "description": "Loan editor: when repayment began"
+  },
+  "openEnded": "만기일 미정",
+  "@openEnded": {
+    "description": "Loan detail: a revolving balance with no fixed term"
+  },
+  "loanDetails": "대출 상세 정보",
+  "@loanDetails": {
+    "description": "Title of the loan detail screen"
+  },
+  "notSet": "설정 안 됨",
+  "@notSet": {
+    "description": "Shown where an optional value has not been entered"
+  },
+  "insightDebtDueTodayTitle": "{subject} 결제일이 오늘입니다",
+  "@insightDebtDueTodayTitle": {
+    "description": "Notification: an installment falls due today",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "상환액 {amount}의 결제일이 오늘입니다. 늦지 않게 납부하세요.",
+  "@insightDebtDueTodayBody": {
+    "description": "Notification body: installment due today",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "remindMorningTitle": "좋은 아침입니다 ☀️",
+  "@remindMorningTitle": {
+    "description": "Morning expense reminder title"
+  },
+  "remindMorningBody": "상쾌하게 하루를 시작하세요. 어제 기록하지 않은 지출이 있으신가요?",
+  "@remindMorningBody": {
+    "description": "Morning expense reminder body"
+  },
+  "remindNoonTitle": "점심시간 확인",
+  "@remindNoonTitle": {
+    "description": "Noon expense reminder title"
+  },
+  "remindNoonBody": "점심 식사, 커피, 교통비가 있었나요? 몇 초 만에 기록해 보세요.",
+  "@remindNoonBody": {
+    "description": "Noon expense reminder body"
+  },
+  "remindAfternoonTitle": "오후 중간 점검",
+  "@remindAfternoonTitle": {
+    "description": "Afternoon expense reminder title"
+  },
+  "remindAfternoonBody": "오늘 지금까지 쓴 돈을 기록하여 내역을 정확하게 유지하세요.",
+  "@remindAfternoonBody": {
+    "description": "Afternoon expense reminder body"
+  },
+  "remindEveningTitle": "하루 마감하기",
+  "@remindEveningTitle": {
+    "description": "Evening expense reminder title"
+  },
+  "remindEveningBody": "잠깐 2분만 투자하여 오늘의 장부를 완성하세요.",
+  "@remindEveningBody": {
+    "description": "Evening expense reminder body"
+  },
   "happyWeekendTitle": "즐거운 주말 보내세요! 🎉",
-  "happyWeekendBody": "푹 쉬시고 — 주말 지출도 조금만 신경 써 보세요.",
-  "dailyReminders": "매일 지출 알림",
-  "dailyRemindersBody": "지출을 빠짐없이 적도록 부드럽게 알려 드려요",
+  "@happyWeekendTitle": {
+    "description": "Weekend greeting title"
+  },
+  "happyWeekendBody": "주말을 만끽하세요 — 주말 지출도 꼼꼼히 확인하는 것 잊지 마세요.",
+  "@happyWeekendBody": {
+    "description": "Weekend greeting body"
+  },
+  "dailyReminders": "일일 지출 알림",
+  "@dailyReminders": {
+    "description": "Notification setting: the daily nudges"
+  },
+  "dailyRemindersBody": "지출 내역을 꾸준히 기록할 수 있도록 돕는 알림",
+  "@dailyRemindersBody": {
+    "description": "Notification setting description"
+  },
   "weekendGreeting": "주말 인사",
-  "weekendGreetingBody": "주말이 시작될 때 건네는 인사",
+  "@weekendGreeting": {
+    "description": "Notification setting: the weekend greeting"
+  },
+  "weekendGreetingBody": "주말 시작을 알리는 따뜻한 인사 메시지",
+  "@weekendGreetingBody": {
+    "description": "Notification setting description"
+  },
   "reminderTimesSection": "알림 시간대",
+  "@reminderTimesSection": {
+    "description": "Section heading for the four daily slots"
+  },
   "slotMorning": "아침",
+  "@slotMorning": {
+    "description": "Daily reminder slot"
+  },
   "slotNoon": "점심",
+  "@slotNoon": {
+    "description": "Daily reminder slot"
+  },
   "slotAfternoon": "오후",
+  "@slotAfternoon": {
+    "description": "Daily reminder slot"
+  },
   "slotEvening": "저녁",
+  "@slotEvening": {
+    "description": "Daily reminder slot"
+  },
   "everyDay": "매일",
-  "financialReport": "재정 리포트",
-  "preparedFor": "작성 대상",
-  "generatedOn": "생성일",
-  "reportDisclaimer": "RainyPenny가 회원님의 기록을 바탕으로 만들었어요.",
-  "pageOf": "{total}쪽 중 {page}쪽",
+  "@everyDay": {
+    "description": "How often a repeating notification arrives"
+  },
+  "financialReport": "재정 보고서",
+  "@financialReport": {
+    "description": "Title of the exported PDF"
+  },
+  "preparedFor": "보고 대상:",
+  "@preparedFor": {
+    "description": "PDF cover: whose report this is"
+  },
+  "generatedOn": "생성 일자:",
+  "@generatedOn": {
+    "description": "PDF cover: the date the report was produced"
+  },
+  "reportDisclaimer": "사용자의 기록 데이터를 바탕으로 RainyPenny에서 생성되었습니다.",
+  "@reportDisclaimer": {
+    "description": "PDF footer note"
+  },
+  "pageOf": "{page} / {total} 페이지",
+  "@pageOf": {
+    "description": "PDF footer page number",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "overview": "개요",
-  "description": "설명",
-  "totalIncome": "총 수입",
-  "totalExpenses": "총 지출",
-  "totalSaved": "총 저축",
+  "@overview": {
+    "description": "PDF section: the headline totals"
+  },
+  "description": "내용",
+  "@description": {
+    "description": "Table column heading"
+  },
+  "totalIncome": "총수입",
+  "@totalIncome": {
+    "description": "Summary table row"
+  },
+  "totalExpenses": "총지출",
+  "@totalExpenses": {
+    "description": "Summary table row"
+  },
+  "totalSaved": "총저축액",
+  "@totalSaved": {
+    "description": "Summary table row"
+  },
   "shareOfTotal": "비중",
-  "used": "사용",
+  "@shareOfTotal": {
+    "description": "Table column: this category's share of all spending"
+  },
+  "used": "사용률",
+  "@used": {
+    "description": "Table column: percentage of a budget consumed"
+  },
   "goal": "목표",
+  "@goal": {
+    "description": "Table column heading for a savings goal"
+  },
   "targetDate": "목표일",
-  "progress": "진행",
-  "paidOffShort": "상환",
-  "transactions": "내역",
-  "andMoreTransactions": "{count, plural, other{그 외 {count}건}}",
+  "@targetDate": {
+    "description": "Table column heading"
+  },
+  "progress": "진행률",
+  "@progress": {
+    "description": "Table column heading"
+  },
+  "paidOffShort": "상환율",
+  "@paidOffShort": {
+    "description": "Table column: percentage of a debt repaid"
+  },
+  "transactions": "거래 내역",
+  "@transactions": {
+    "description": "PDF section listing individual entries"
+  },
+  "andMoreTransactions": "{count, plural, =1{외 1건의 거래} other{외 {count}건의 거래}}",
+  "@andMoreTransactions": {
+    "description": "PDF note when the transaction table is truncated",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "exportPdf": "PDF 내보내기",
-  "sharePdf": "리포트 공유",
-  "preparingReport": "리포트를 만드는 중…",
-  "reportReady": "리포트가 준비됐어요",
-  "reportFailed": "리포트를 만들지 못했어요",
-  "categories": "분류",
-  "categoriesIntro": "직접 분류를 추가해 수입과 지출을 평소 생각하는 방식 그대로 정리해 보세요.",
-  "expenseCategories": "지출 분류",
-  "incomeCategories": "수입 분류",
-  "newCategory": "새 분류",
-  "editCategory": "분류 수정",
+  "@exportPdf": {
+    "description": "Button that produces the report"
+  },
+  "sharePdf": "보고서 공유",
+  "@sharePdf": {
+    "description": "Button that opens the share sheet"
+  },
+  "preparingReport": "보고서를 생성하는 중…",
+  "@preparingReport": {
+    "description": "Progress message while the PDF builds"
+  },
+  "reportReady": "보고서가 준비되었습니다",
+  "@reportReady": {
+    "description": "Confirmation once the PDF is produced"
+  },
+  "reportFailed": "보고서를 생성하지 못했습니다",
+  "@reportFailed": {
+    "description": "Error message when export fails"
+  },
+  "categories": "카테고리",
+  "@categories": {
+    "description": "Title of the category management screen"
+  },
+  "categoriesIntro": "나만의 카테고리를 추가하여 수입과 지출을 원하는 방식대로 분류해 보세요.",
+  "@categoriesIntro": {
+    "description": "Explains what the screen is for"
+  },
+  "expenseCategories": "지출 카테고리",
+  "@expenseCategories": {
+    "description": "Section heading"
+  },
+  "incomeCategories": "수입 카테고리",
+  "@incomeCategories": {
+    "description": "Section heading"
+  },
+  "newCategory": "새 카테고리",
+  "@newCategory": {
+    "description": "Title of the create form"
+  },
+  "editCategory": "카테고리 수정",
+  "@editCategory": {
+    "description": "Title of the edit form"
+  },
   "categoryName": "이름",
+  "@categoryName": {
+    "description": "Category form field label"
+  },
   "categoryNameHint": "예: 반려동물",
+  "@categoryNameHint": {
+    "description": "Category name placeholder"
+  },
   "icon": "아이콘",
-  "categorySaved": "분류를 저장했어요",
-  "categoryDeleted": "분류를 삭제했어요",
-  "deleteCategory": "이 분류를 삭제할까요?",
-  "deleteCategoryBody": "{name}이(가) 분류에서 삭제돼요.",
-  "categoryInUse": "{count, plural, other{{count}건이 아직 이 분류를 쓰고 있어요}}",
-  "noCategoriesYet": "아직 아무것도 없어요.",
-  "builtIn": "기본",
-  "manageCategories": "분류 관리",
+  "@icon": {
+    "description": "Category form field label"
+  },
+  "categorySaved": "카테고리가 저장되었습니다",
+  "@categorySaved": {
+    "description": "Confirmation"
+  },
+  "categoryDeleted": "카테고리가 삭제되었습니다",
+  "@categoryDeleted": {
+    "description": "Confirmation"
+  },
+  "deleteCategory": "이 카테고리를 삭제하시겠습니까?",
+  "@deleteCategory": {
+    "description": "Delete confirmation title"
+  },
+  "deleteCategoryBody": "{name} 카테고리가 목록에서 삭제됩니다.",
+  "@deleteCategoryBody": {
+    "description": "Delete confirmation body",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{1개의 항목에서 이 카테고리를 사용 중입니다} other{{count}개의 항목에서 이 카테고리를 사용 중입니다}}",
+  "@categoryInUse": {
+    "description": "Explains why a category cannot be deleted",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noCategoriesYet": "항목이 없습니다.",
+  "@noCategoriesYet": {
+    "description": "Empty group in the category list"
+  },
+  "builtIn": "기본 제공",
+  "@builtIn": {
+    "description": "Marks a shared, read-only category"
+  },
+  "manageCategories": "카테고리 관리",
+  "@manageCategories": {
+    "description": "Settings row that opens the category screen"
+  },
   "expense": "지출",
-  "languageNote": "아랍어, 우르두어, 페르시아어, 히브리어는 차트와 PDF 리포트를 포함해 화면 전체가 오른쪽에서 왼쪽으로 바뀌어요.",
+  "@expense": {
+    "description": "Singular label for an outgoing transaction"
+  },
+  "languageNote": "아랍어, 우르두어, 페르시아어, 히브리어는 차트와 PDF 보고서를 포함한 전체 인터페이스를 우측에서 좌측(RTL)으로 전환합니다.",
+  "@languageNote": {
+    "description": "Note under the language picker explaining RTL support"
+  },
   "next": "다음",
-  "back": "이전",
+  "back": "뒤로",
   "skip": "건너뛰기",
   "continueLabel": "계속",
+  "@continueLabel": {
+    "description": "Primary action that advances a multi-step flow. Named with a suffix because \"continue\" is a Dart keyword."
+  },
   "selected": "선택됨",
   "passwordRequired": "비밀번호를 입력하세요",
   "newPasswordLabel": "새 비밀번호",
   "confirmPasswordLabel": "비밀번호 확인",
-  "passwordsDoNotMatch": "두 비밀번호가 같아야 해요",
+  "passwordsDoNotMatch": "비밀번호가 일치하지 않습니다",
   "showPassword": "비밀번호 표시",
   "hidePassword": "비밀번호 숨기기",
   "savePassword": "비밀번호 저장",
   "backToSignIn": "로그인으로 돌아가기",
-  "alreadyHaveAccount": "이미 계정이 있어요",
+  "alreadyHaveAccount": "이미 계정이 있습니다",
   "getStarted": "시작하기",
-  "acceptTerms": "서비스 이용약관과 개인정보 처리방침에 동의해요",
-  "acceptTermsRequired": "계속하려면 동의해 주세요",
-  "passwordStrengthTooShort": "너무 짧아요",
-  "passwordStrengthWeak": "약함",
+  "acceptTerms": "서비스 이용약관 및 개인정보 처리방침에 동의합니다",
+  "acceptTermsRequired": "계속하려면 약관에 동의해 주세요",
+  "passwordStrengthTooShort": "너무 짧음",
+  "passwordStrengthWeak": "취약함",
   "passwordStrengthFair": "보통",
-  "passwordStrengthGood": "좋음",
-  "passwordStrengthStrong": "강함",
-  "passwordAdvice": "기호로 채운 짧은 비밀번호보다, 기억나는 긴 문장이 더 안전해요. 다른 곳에서 쓰는 건 피하세요.",
-  "authInvalidCredentials": "이 이메일과 비밀번호에 맞는 계정이 없어요",
-  "authEmailNotConfirmed": "로그인 전에 이메일 주소를 인증해 주세요",
-  "authEmailAlreadyRegistered": "이 이메일로 만든 계정이 이미 있어요",
-  "authWeakPassword": "더 긴 비밀번호를 골라 주세요",
-  "authRateLimited": "시도가 너무 잦아요. 몇 분 뒤에 다시 해 주세요",
-  "authNetworkError": "연결이 없어요. 네트워크를 확인하고 다시 시도하세요",
-  "authGenericError": "문제가 발생했어요. 다시 시도해 주세요",
-  "confirmEmailTitle": "메일을 확인해 주세요",
-  "confirmEmailBody": "{email}(으)로 확인 링크를 보냈어요. 링크를 열어 계정 설정을 마쳐 주세요.",
-  "resendConfirmation": "확인 메일 다시 보내기",
-  "confirmationResent": "확인 메일을 보냈어요",
+  "passwordStrengthGood": "안전함",
+  "passwordStrengthStrong": "매우 안전함",
+  "passwordAdvice": "특수문자가 많은 짧은 비밀번호보다 기억하기 쉬운 긴 문장이 더 안전합니다. 다른 곳에서 사용하는 비밀번호는 피하세요.",
+  "authInvalidCredentials": "이메일 또는 비밀번호가 일치하지 않습니다",
+  "authEmailNotConfirmed": "로그인하기 전에 이메일을 인증해 주세요",
+  "authEmailAlreadyRegistered": "해당 이메일로 등록된 계정이 이미 존재합니다",
+  "authWeakPassword": "더 긴 비밀번호를 설정하세요",
+  "authRateLimited": "시도 횟수가 너무 많습니다. 몇 분 후 다시 시도하세요",
+  "authNetworkError": "인터넷에 연결되지 않았습니다. 네트워크 연결을 확인하세요",
+  "authGenericError": "문제가 발생했습니다. 다시 시도해 주세요",
+  "confirmEmailTitle": "이메일을 확인하세요",
+  "confirmEmailBody": "{email} 주소로 인증 링크를 보냈습니다. 링크를 클릭하여 계정 설정을 완료하세요.",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resendConfirmation": "인증 이메일 재전송",
+  "confirmationResent": "인증 이메일을 다시 보냈습니다",
   "forgotPasswordTitle": "비밀번호 재설정",
-  "forgotPasswordSubtitle": "가입할 때 쓴 이메일을 입력하시면 새 비밀번호를 정할 링크를 보내 드려요.",
-  "sendResetLink": "재설정 링크 보내기",
-  "resetLinkSentTitle": "링크를 보냈어요",
-  "resetLinkSentBody": "{email}에 계정이 있다면 재설정 링크가 가고 있어요.",
-  "resetLinkSentHint": "링크는 한 시간 뒤 만료돼요. 오지 않으면 새로 요청하기 전에 스팸함을 확인해 보세요.",
-  "tryAnotherEmail": "다른 이메일 쓰기",
-  "resetPasswordTitle": "새 비밀번호 정하기",
-  "resetPasswordSubtitle": "이 계정에서 쓴 적 없는 것으로 골라 주세요.",
-  "passwordChangedTitle": "비밀번호를 변경했어요",
-  "passwordChangedBody": "새 비밀번호를 저장했어요. 로그인된 상태라 바로 쓰실 수 있어요.",
-  "demoModeHint": "데모 버전 — 계정이 필요 없어요",
-  "demoModeFill": "채우기",
-  "welcomeTrackTitle": "돈이 어디로 가는지 보세요",
-  "welcomeTrackBody": "들어온 것과 나간 것을 적기만 하세요. RainyPenny가 정말로 읽히는 그림으로 바꿔 드려요.",
-  "welcomeBudgetTitle": "지켜지는 한도를 정하세요",
-  "welcomeBudgetBody": "지출 항목마다 월 상한을 정하고, 넘긴 뒤가 아니라 넘기 전에 알아채세요.",
-  "welcomeGoalsTitle": "소중한 것을 위해 모으세요",
-  "welcomeGoalsBody": "목표에 이름을 붙이고 금액을 정한 뒤 채워지는 걸 지켜보세요. 비상금은 눈에 보일 때 더 잘 모여요.",
-  "welcomePrivacyTitle": "당신의 돈은 당신 것입니다",
-  "welcomePrivacyBody": "숫자는 오직 당신의 것이에요. 어디에도 팔지 않고 누구와도 공유하지 않아요.",
-  "stepOf": "{total}단계 중 {step}단계",
-  "onboardingNameTitle": "어떻게 불러 드릴까요?",
-  "onboardingNameBody": "인사할 때만 쓰고, 다른 곳에는 쓰지 않아요.",
-  "onboardingNameHint": "이름만으로 충분해요. 나중에 바꿀 수 있어요.",
-  "onboardingCurrencyTitle": "어떤 통화를 쓰시나요?",
-  "onboardingCurrencyBody": "앱의 모든 금액이 이 통화로 표시돼요. 선택해도 환산은 하지 않아요.",
+  "forgotPasswordSubtitle": "가입 시 사용한 이메일을 입력하시면 새 비밀번호를 설정할 수 있는 링크를 보내드립니다.",
+  "sendResetLink": "재설정 링크 전송",
+  "resetLinkSentTitle": "재설정 링크가 전송되었습니다",
+  "resetLinkSentBody": "{email} 계정이 등록되어 있다면 비밀번호 재설정 링크가 전송되었습니다.",
+  "@resetLinkSentBody": {
+    "description": "Deliberately conditional: confirming whether an address is registered would let anyone enumerate the app users.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "링크는 1시간 동안만 유효합니다. 메일이 오지 않았다면 다시 요청하기 전에 스팸함을 확인하세요.",
+  "tryAnotherEmail": "다른 이메일 사용",
+  "resetPasswordTitle": "새 비밀번호 설정",
+  "resetPasswordSubtitle": "이전에 이 계정에서 사용한 적 없는 새 비밀번호를 입력하세요.",
+  "passwordChangedTitle": "비밀번호가 변경되었습니다",
+  "passwordChangedBody": "새 비밀번호가 저장되었습니다. 로그인되어 바로 이용하실 수 있습니다.",
+  "demoModeHint": "데모 모드 — 계정이 필요하지 않습니다",
+  "demoModeFill": "자동 채우기",
+  "welcomeTrackTitle": "내 돈이 어디로 가는지 확인하세요",
+  "welcomeTrackBody": "수입과 지출을 손쉽게 기록하세요. RainyPenny가 직관적이고 알기 쉬운 차트로 보여드립니다.",
+  "welcomeBudgetTitle": "실천 가능한 지출 한도를 정하세요",
+  "welcomeBudgetBody": "항목별로 월 예산을 지정하고, 한도를 초과하기 전에 미리 알림을 받아보세요.",
+  "welcomeGoalsTitle": "소중한 목표를 위해 저축하세요",
+  "welcomeGoalsBody": "목표를 정하고 금액을 설정하여 차곡차곡 모아보세요. 눈으로 볼 수 있으면 비상금을 모으기가 훨씬 쉬워집니다.",
+  "welcomePrivacyTitle": "금융 정보는 본인에게만 안전하게 유지됩니다",
+  "welcomePrivacyBody": "기록된 모든 자산 데이터는 온전히 사용자의 것입니다. 어떤 정보도 외부에 판매되거나 공유되지 않습니다.",
+  "stepOf": "{step}단계 / 총 {total}단계",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "이름을 알려주세요",
+  "onboardingNameBody": "입력하신 이름은 인사말에만 사용되며 다른 곳에는 공유되지 않습니다.",
+  "onboardingNameHint": "이름만 입력하셔도 충분합니다. 나중에 언제든지 변경할 수 있습니다.",
+  "onboardingCurrencyTitle": "주로 사용하는 통화는 무엇인가요?",
+  "onboardingCurrencyBody": "앱의 모든 금액이 이 통화로 표시됩니다. 선택해도 기존 금액이 환전되지는 않습니다.",
   "onboardingCurrencySearch": "모든 통화 검색",
-  "onboardingAppearanceTitle": "취향대로 꾸며 보세요",
-  "onboardingAppearanceBody": "모습을 골라 보세요. 누르는 대로 바뀌고, 언제든 다시 올 수 있어요.",
-  "onboardingNotificationsTitle": "놓치지 않게",
-  "onboardingNotificationsBody": "알맞은 순간의 조용한 알림이 이걸 습관으로 만들어요.",
-  "onboardingNotifyReminders": "쓴 돈을 적도록 살짝 알려 드려요",
-  "onboardingNotifyBudget": "예산이 바닥나기 전에 미리 알려 드려요",
-  "onboardingNotifySummary": "돈이 어디로 갔는지 주간으로 정리해 드려요",
+  "onboardingAppearanceTitle": "원하는 스타일로 꾸며보세요",
+  "onboardingAppearanceBody": "테마를 선택하세요. 탭할 때마다 화면이 바로 바뀌며 언제든지 다시 변경할 수 있습니다.",
+  "onboardingNotificationsTitle": "지출을 놓치지 않고 챙기세요",
+  "onboardingNotificationsBody": "적절한 순간에 받는 부드러운 알림이 가계부 작성을 좋은 습관으로 만들어 줍니다.",
+  "onboardingNotifyReminders": "지출을 잊지 않고 적을 수 있도록 돕는 알림",
+  "onboardingNotifyBudget": "예산 한도에 도달하기 전 미리 받는 알림",
+  "onboardingNotifySummary": "한 주간의 지출 흐름을 정리해 주는 주간 요약",
   "onboardingNotifyEnable": "알림 켜기",
-  "onboardingNotifyDone": "알림 설정을 저장했어요",
-  "onboardingNotifyLater": "이 모든 건 설정에서 언제든 바꿀 수 있어요.",
-  "onboardingReadyTitle": "준비가 끝났어요",
-  "onboardingReadyTitleNamed": "준비가 끝났어요, {name}님",
-  "onboardingReadyBody": "설정이 끝났어요. 사용법을 짧게 둘러보시겠어요?",
-  "onboardingTakeTour": "구경시켜 주세요",
-  "onboardingGoToApp": "앱으로 갈게요",
-  "onboardingTourLater": "지금은 괜찮으세요? 가이드는 설정에 늘 있어요.",
+  "onboardingNotifyDone": "알림 설정이 저장되었습니다",
+  "onboardingNotifyLater": "설정에서 언제든지 다시 변경할 수 있습니다.",
+  "onboardingReadyTitle": "모든 준비가 완료되었습니다",
+  "onboardingReadyTitleNamed": "{name}님, 모든 준비가 완료되었습니다",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "설정이 끝났습니다. 앱의 주요 기능을 둘러보시겠습니까?",
+  "onboardingTakeTour": "둘러보기 시작",
+  "onboardingGoToApp": "바로 앱 시작하기",
+  "onboardingTourLater": "나중에 보시겠습니까? 가이드는 설정 메뉴에서 언제든 다시 볼 수 있습니다.",
   "beginnersGuide": "초보자 가이드",
   "guideFinish": "완료",
-  "chapterOf": "{total}장 중 {number}장",
+  "chapterOf": "{number}장 / 총 {total}장",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "guideOpenScreen": "{screen} 열기",
-  "guideDashboardTitle": "홈 화면",
-  "guideDashboardBody": "모든 게 여기서 시작돼요. 맨 위 카드가 남은 돈이고, 그 아래가 이번 기간의 수입과 지출, 이어서 지출 내역, 예산, 목표예요.",
-  "guideDashboardTip1": "화면을 아래로 당기면 전부 한 번에 새로고침돼요.",
-  "guideDashboardTip2": "수입이나 지출 카드를 누르면 해당 목록으로 바로 가요.",
-  "guideDashboardTip3": "무언가 기록하는 순간 링과 인사이트가 바로 바뀌어요.",
-  "guideAddTitle": "돈 기록하기",
-  "guideAddBody": "하단 가운데 버튼이 모든 것의 출발점이에요. 짧은 메뉴가 열려요: 지출, 수입, 빚, 예산, 저축 목표.",
-  "guideAddTip1": "가운데 버튼을 눌러 수입이나 지출을 기록하세요.",
-  "guideAddTip2": "길게 누르면 메뉴를 건너뛰고 바로 새 지출로 가요.",
-  "guideAddTip3": "분류는 꼭 골라 주세요 — 차트와 예산이 그걸로 돌아가요.",
-  "guideCategoriesTitle": "분류",
-  "guideCategoriesBody": "분류는 지출을 묶는 방식이에요. 기본 분류로 대부분 충분하지만, 이름을 바꾸거나 직접 추가할 수도 있어요.",
-  "guideCategoriesTip1": "설정에서 «분류 관리»로 들어가면 수정하거나 추가할 수 있어요.",
-  "guideCategoriesTip2": "분류가 없는 건 «기타»로 들어가서 차트가 정직하게 유지돼요.",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "대시보드",
+  "guideDashboardBody": "모든 관리는 이곳에서 시작됩니다. 상단 카드에는 남은 잔액이 표시되며, 그 아래에는 이번 기간의 수입·지출, 예산 및 목표 현황이 한눈에 나타납니다.",
+  "guideDashboardTip1": "화면을 아래로 당기면 모든 데이터가 한 번에 새로고침됩니다.",
+  "guideDashboardTip2": "수입 또는 지출 카드를 탭하면 해당 내역 목록으로 바로 이동합니다.",
+  "guideDashboardTip3": "새로운 거래를 기록하는 즉시 차트와 인사이트가 실시간으로 갱신됩니다.",
+  "guideAddTitle": "거래 기록하기",
+  "guideAddBody": "하단 바 중앙에 있는 버튼이 시작점입니다. 탭하면 지출, 수입, 대출, 예산, 저축 목표 메뉴가 열립니다.",
+  "guideAddTip1": "가운데 버튼을 눌러 지출이나 수입을 기록하세요.",
+  "guideAddTip2": "버튼을 길게 누르면 메뉴를 건너뛰고 바로 지출 작성 화면으로 이동합니다.",
+  "guideAddTip3": "항상 카테고리를 지정하세요 — 카테고리가 있어야 차트와 예산이 올바르게 작동합니다.",
+  "guideCategoriesTitle": "카테고리",
+  "guideCategoriesBody": "카테고리는 지출을 분류하는 기준입니다. 기본 카테고리만으로도 충분하지만, 이름을 바꾸거나 직접 추가할 수도 있습니다.",
+  "guideCategoriesTip1": "설정 > 카테고리 관리에서 언제든 수정하거나 추가할 수 있습니다.",
+  "guideCategoriesTip2": "카테고리를 지정하지 않은 항목은 '기타'로 분류되어 차트의 정확도를 유지합니다.",
   "guideBudgetTitle": "예산",
-  "guideBudgetBody": "예산은 한 분류의 월 상한이에요. 쓸수록 막대가 차고 한도에 가까워지면 색이 바뀌어서, 넘기기 전에 알아챌 수 있어요.",
-  "guideBudgetTip1": "전부 말고 두세 개 분류부터 시작하세요.",
-  "guideBudgetTip2": "한도를 평소 지출보다 조금 높게 잡았다가 차차 조여 가세요.",
-  "guideBudgetTip3": "예산 알림을 켜 두면 예산이 줄어들 때 앱이 알려 줘요.",
+  "guideBudgetBody": "예산은 특정 카테고리의 월 지출 상한선입니다. 지출함에 따라 막대가 채워지며, 한도에 가까워지면 색상이 변해 초과하기 전에 알려줍니다.",
+  "guideBudgetTip1": "처음부터 모든 카테고리를 설정하지 말고, 2~3개 카테고리부터 시작해 보세요.",
+  "guideBudgetTip2": "평소 지출보다 한도를 약간 높게 잡은 뒤 서서히 조여가세요.",
+  "guideBudgetTip3": "예산 알림을 켜두면 한도에 다다랐을 때 앱이 미리 알려줍니다.",
   "guideSavingsTitle": "저축 목표",
-  "guideSavingsBody": "무엇을 위해 모으는지 이름을 붙이고 금액과 날짜를 정하면, 매달 얼마를 떼어 둬야 하는지 앱이 계산해 줘요.",
-  "guideSavingsTip1": "이름 있는 목표가 «좀 모아야지» 하는 막연한 마음보다 오래가요.",
-  "guideSavingsTip2": "큰 목표 하나보다 작은 목표 여럿이 더 자주 끝나요.",
-  "guideLoansTitle": "빚과 대출",
-  "guideLoansBody": "얼마를 빚졌고 비용이 얼마인지, 다음 상환일이 언제인지 적어 두세요. 갚고 있는 것 전부가 남은 금액과 함께 한 목록에 모여요.",
-  "guideLoansTip1": "상환일을 넣어 두면 알림이 대신 챙겨 줘요.",
-  "guideLoansTip2": "연체된 빚은 갚을 때까지 홈 화면에 빨갛게 표시돼요.",
-  "guideReportsTitle": "리포트",
-  "guideReportsBody": "조금 더 깊은 시선: 수입 대 지출, 분류별 지출, 예산이 얼마나 지켜졌는지, 수입 중 얼마가 남았는지.",
-  "guideReportsTip1": "화면 위쪽에서 주, 월, 분기를 바꿀 수 있어요.",
-  "guideReportsTip2": "PDF로 내보내거나 공유하세요 — 회원님의 언어와 읽는 방향 그대로 나와요.",
+  "guideSavingsBody": "저축하려는 목적, 목표 금액, 기한을 지정하면 매달 얼마씩 모아야 하는지 앱이 자동으로 계산해 줍니다.",
+  "guideSavingsTip1": "막연하게 저축하는 것보다 명확한 목표를 세울 때 달성하기가 훨씬 쉽습니다.",
+  "guideSavingsTip2": "큰 목표 하나보다 작은 목표 여러 개를 단계별로 달성하는 것이 효과적입니다.",
+  "guideLoansTitle": "대출 및 부채",
+  "guideLoansBody": "남은 빚, 이자, 다음 결제일을 기록하세요. 상환 중인 모든 부채를 남은 원금과 함께 한 목록에서 관리할 수 있습니다.",
+  "guideLoansTip1": "결제일을 등록해 두면 결제일 알림이 알아서 챙겨드립니다.",
+  "guideLoansTip2": "연체된 부채는 상환될 때까지 대시보드에 빨간색으로 표시됩니다.",
+  "guideReportsTitle": "보고서",
+  "guideReportsBody": "수입 대비 지출, 카테고리별 지출 비율, 예산 준수율, 수입 중 저축한 비율까지 심층적인 분석을 제공합니다.",
+  "guideReportsTip1": "화면 상단에서 주간, 월간, 분기별 보기를 쉽게 전환할 수 있습니다.",
+  "guideReportsTip2": "PDF로 내보내거나 공유할 수 있으며, 사용자의 언어 및 방향에 맞게 출력됩니다.",
   "guideSettingsTitle": "설정",
-  "guideSettingsBody": "언어, 통화, 색, 알림이 전부 여기 있고, 처음 설정으로 고정되는 건 하나도 없어요 — 언제든 바꾸세요.",
-  "guideSettingsTip1": "40개 언어를 지원하고, 오른쪽에서 왼쪽으로 읽는 언어에서는 화면 전체가 좌우로 뒤집혀요.",
-  "guideSettingsTip2": "원하는 알림과 받을 시간대를 고르세요.",
-  "guideSettingsTip3": "방해 금지 시간에는 모든 알림이 아침까지 미뤄져요.",
-  "guideHabitTitle": "습관으로 만들기",
-  "guideHabitBody": "앱은 넣은 만큼만 쓸모 있어요. 한 달에 한 시간보다 하루 1분이 낫고, 2주만 지나도 숫자가 무언가를 말해 주기 시작해요.",
-  "guideHabitTip1": "주말에 몰아서 말고, 쓴 그 자리에서 기록하세요.",
-  "guideHabitTip2": "하루 한 번 홈 화면을 보세요. 10초면 충분해요.",
-  "guideHabitTip3": "이 가이드는 설정에 남아 있어요 — 언제든 다시 오세요.",
-  "appearance": "화면",
-  "themeCaption": "라이트, 다크, 아니면 기기 설정대로.",
-  "accentColor": "강조 색",
-  "accentColorCaption": "버튼, 강조 표시, 차트에 쓰이는 색이에요.",
-  "accentSemanticsNote": "수입과 지출은 어떤 테마에서도 각자의 색을 지켜요. 강조 색을 바꿔도 숫자의 뜻은 달라지지 않아요.",
-  "accentTeal": "청록",
-  "accentGreen": "초록",
-  "accentSky": "하늘색",
-  "accentBlue": "파랑",
-  "accentIndigo": "남색",
-  "accentViolet": "보라",
-  "accentPink": "분홍",
-  "accentCrimson": "진홍",
-  "accentOrange": "주황",
-  "accentSlate": "회청색",
+  "guideSettingsBody": "언어, 통화, 테마 색상, 알림을 원하는 대로 변경할 수 있으며, 고정된 설정 없이 언제든 바꿀 수 있습니다.",
+  "guideSettingsTip1": "40개 언어를 지원하며, 우측에서 좌측으로 쓰는 언어(RTL)는 레이아웃이 자동 반전됩니다.",
+  "guideSettingsTip2": "받고 싶은 알림 종류와 알림 수신 시간을 직접 선택하세요.",
+  "guideSettingsTip3": "방해 금지 시간을 설정하면 아침까지 알림이 조용히 보류됩니다.",
+  "guideHabitTitle": "꾸준한 습관 만들기",
+  "guideHabitBody": "가계부 앱은 직접 기록하는 만큼 가치가 커집니다. 한 달에 한 번 몰아서 쓰는 것보다 하루 1분 쓰는 것이 훨씬 효과적이며, 2주만 지나도 소비 흐름이 보이기 시작합니다.",
+  "guideHabitTip1": "주말에 몰아서 쓰지 말고, 지출이 발생하는 즉시 기록해 보세요.",
+  "guideHabitTip2": "하루에 한 번 10초만 대시보드를 훑어보세요.",
+  "guideHabitTip3": "이 가이드는 설정 메뉴에 항상 보관되어 있으니 언제든 다시 읽어보세요.",
+  "appearance": "화면 테마",
+  "themeCaption": "라이트, 다크 또는 기기 설정을 따릅니다.",
+  "accentColor": "강조 색상",
+  "accentColorCaption": "버튼, 하이라이트 및 차트의 기본 색상을 지정합니다.",
+  "accentSemanticsNote": "수입과 지출은 어떤 테마에서도 고유한 색상을 유지하므로 강조 색상을 바꿔도 금액의 의미가 헷갈리지 않습니다.",
+  "accentTeal": "청록색 (Teal)",
+  "accentGreen": "녹색 (Green)",
+  "accentSky": "하늘색 (Sky)",
+  "accentBlue": "파란색 (Blue)",
+  "accentIndigo": "남색 (Indigo)",
+  "accentViolet": "보라색 (Violet)",
+  "accentPink": "분홍색 (Pink)",
+  "accentCrimson": "진홍색 (Crimson)",
+  "accentOrange": "주황색 (Orange)",
+  "accentSlate": "슬레이트 (Slate)",
   "searchLanguages": "언어 검색",
-  "suggestedLanguages": "추천",
-  "allLanguages": "모든 언어",
-  "noLanguagesFound": "언어를 찾을 수 없어요",
-  "noLanguagesFoundMessage": "영어 이름이나 두 글자 코드로 찾아보세요.",
-  "rightToLeft": "오른쪽에서 왼쪽",
+  "suggestedLanguages": "추천 언어",
+  "allLanguages": "전체 언어",
+  "noLanguagesFound": "언어를 찾을 수 없습니다",
+  "noLanguagesFoundMessage": "영어 이름이나 두 글자 언어 코드로 검색해 보세요.",
+  "rightToLeft": "오른쪽에서 왼쪽으로 (RTL)",
   "replayGuide": "가이드 다시 보기",
-  "replaySetup": "설정 다시 하기",
-  "replaySetupBody": "처음 질문을 다시 거쳐요. 기록하신 내용은 삭제되지 않아요.",
+  "replaySetup": "초기 설정 다시 실행",
+  "replaySetupBody": "처음 시작할 때의 설정을 다시 진행합니다. 기존에 기록된 데이터는 삭제되지 않습니다.",
   "rateTitle": "RainyPenny가 마음에 드시나요?",
-  "rateBody": "꽤 오래 사용해 오셨네요. 평가는 잠깐이면 되고, 다른 분들이 앱을 찾는 데 도움이 됩니다.",
+  "rateBody": "앱을 유용하게 쓰고 계신가요? 잠시 시간을 내어 평점을 남겨주시면 다른 분들이 앱을 찾는 데 큰 도움이 됩니다.",
   "rateAction": "앱 평가하기",
-  "rateLater": "나중에",
+  "rateLater": "나중에 하기",
   "rateNever": "괜찮습니다",
-  "rateThanks": "감사합니다"
+  "rateThanks": "감사합니다",
+
+  "monthlySalary": "월급",
+  "remainingAmount": "남은 금액",
+  "carriedForward": "이월금",
+  "carriedForwardHint": "지난 급여 주기에서 남은 금액",
+  "totalSpending": "총지출",
+  "salaryCycle": "급여 주기",
+  "payday": "급여일",
+  "paydayDescription": "급여를 받는 날입니다. 나의 재정 한 달은 이 날부터 다음 급여일 전날까지로 계산됩니다.",
+  "paydayUpdated": "급여일이 변경되었습니다",
+  "paydayDayOfMonth": "매월 {day}일",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "날짜 수가 적은 달에는 해당 월의 말일에 급여 주기가 시작됩니다.",
+  "daysLeftInCycle": "{count, plural, =0{급여 주기 마지막 날} =1{급여일까지 1일} other{급여일까지 {count}일}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "다음 급여일",
+  "spentSoFar": "현재까지 지출",
+  "dailyAllowance": "하루 권장 지출액",
+  "overspentNotice": "이번 주기 수입보다 더 많이 지출했습니다.",
+  "backToThisMonth": "이번 달로 돌아가기",
+  "cycleRangeLabel": "주기",
+  "noSalaryRecorded": "아직 기록된 월급이 없습니다",
+  "addSalaryAction": "월급 입력하기",
+  "cycleOf": "{start} – {end}",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "healthExcellent": "매우 우수",
+  "healthGood": "우수",
+  "healthFair": "보통",
+  "healthNeedsWork": "개선 필요",
+  "healthExcellentBody": "저축을 훌륭히 실천하고 있으며 예산도 잘 지키고 있습니다.",
+  "healthGoodBody": "이번 기간 동안 안정적으로 지출을 관리하고 있습니다.",
+  "healthFairBody": "몇몇 예산 항목이 한도에 가깝습니다. 지출을 조금만 줄여보세요.",
+  "healthNeedsWorkBody": "계획보다 지출이 많습니다. 가장 큰 비중의 카테고리부터 점검하세요.",
+  "factorSavingsRate": "저축률",
+  "factorBudgetControl": "예산 관리",
+  "factorDebtLoad": "부채 부담도",
+  "factorSpendingTrend": "지출 추이",
+  "factorKept": "{percent}% 저축함",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "{percent}% 사용함",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorOfIncome": "수입의 {percent}%",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendUp": "{percent}% 증가",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendDown": "{percent}% 감소",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "점수 산정 방식",
+  "healthScoreExplainer": "재정 건강 점수는 수입 중 저축 비율, 예산 준수도, 부채 상환 지출 비중, 지출 증가/감소 추이의 4가지 요소를 종합하여 산출됩니다.",
+  "scoreWeightLabel": "점수 반영 비중 {percent}%",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "viewHealthDetails": "세부 분석 보기",
+
+  "saveChanges": "변경사항 저장",
+  "profileUpdated": "프로필이 업데이트되었습니다",
+  "changePhoto": "사진 변경",
+  "removePhoto": "사진 삭제",
+  "personalInformationIntro": "이름과 사진은 앱 전반에 표시됩니다. 이메일은 로그인 시 사용하는 주소입니다.",
+  "nameRequired": "이름을 입력하세요",
+  "emailNotEditable": "로그인 이메일 주소를 변경하려면 고객 지원팀에 문의하세요.",
+
+  "pressBackAgainToExit": "종료하려면 뒤로가기 버튼을 한 번 더 누르세요",
+
+  "categoryHousing": "주거비",
+  "categoryFood": "식비 및 외식",
+  "categoryTransport": "교통비",
+  "categoryShopping": "쇼핑",
+  "categoryBills": "공과금 및 요금",
+  "categoryEntertainment": "문화 및 여가",
+  "categoryHealth": "건강 및 운동",
+  "categoryEducation": "교육",
+  "categoryTravel": "여행",
+  "categorySalary": "급여",
+  "categoryFreelance": "프리랜서",
+  "categoryInvestments": "투자 수익",
+  "categoryGift": "선물",
+  "categoryOther": "기타",
+  "categoryGroceries": "식료품",
+  "categoryDining": "외식",
+  "categoryCoffee": "카페/커피",
+  "categoryUtilities": "관리비/공과금",
+  "categoryInternet": "인터넷",
+  "categoryPhone": "통신비",
+  "categoryInsurance": "보험료",
+  "categorySubscriptions": "구독료",
+  "categoryPersonalCare": "미용/케어",
+  "categoryClothing": "의류/패션",
+  "categoryElectronics": "전자기기",
+  "categoryHomeSupplies": "생활용품",
+  "categoryPets": "반려동물",
+  "categoryChildcare": "육아",
+  "categoryFamily": "가족",
+  "categoryFitness": "피트니스",
+  "categorySports": "스포츠",
+  "categoryMedicine": "의약품",
+  "categoryMedical": "의료비/병원",
+  "categoryCharity": "기부/후원",
+  "categoryTaxes": "세금",
+  "categoryFees": "수수료",
+  "categoryDebt": "부채 상환",
+  "categorySavings": "저축",
+  "categoryRepairs": "수리/수선",
+  "categoryCarMaintenance": "차량 정비",
+  "categoryFuel": "주유비",
+  "categoryParking": "주차비",
+  "categoryPublicTransport": "대중교통",
+  "categoryRent": "월세",
+  "categoryMortgage": "주택담보대출",
+  "categoryBonus": "상여금/보너스",
+  "categoryCommission": "인센티브/수수료",
+  "categoryPension": "연금",
+  "categoryInterest": "이자 소득",
+  "categoryDividends": "배당금",
+  "categoryCashback": "캐시백",
+  "categoryRefund": "환불금",
+  "categoryRentalIncome": "임대 소득",
+
+  "addCategory": "새 카테고리",
+  "filterByCategory": "카테고리별 필터",
+  "allCategories": "전체 카테고리",
+  "clearFilters": "필터 초기화",
+  "spentInCategory": "{category}  ·  {amount}",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "allTime": "전체 기간",
+  "customRange": "직접 설정",
+  "selectDateRange": "기간 선택",
+  "rangeApplied": "{start} – {end} 표시 중",
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "loans": "대출 목록",
+  "debts": "부채 목록",
+  "noLoansTitle": "등록된 대출 없음",
+  "noLoansBody": "현재 이용 중인 대출이 없습니다.",
+
+  "emptyHealthTitle": "재정 점수가 아직 없습니다",
+  "@emptyHealthTitle": {
+    "description": "Title shown when there is not enough data to compute a health score"
+  },
+  "emptyHealthDescription": "정확한 재정 건강 점수를 산출하기 위해 약간의 금융 거래 기록이 필요합니다.",
+  "@emptyHealthDescription": {
+    "description": "Explainer message shown in the empty state on the financial health screen"
+  },
+  "emptyHealthAddTransactions": "수입 또는 지출 내역 추가하기",
+  "@emptyHealthAddTransactions": {
+    "description": "Checklist item prompting user to add transactions"
+  },
+  "emptyHealthSetBudgets": "월별 예산 설정하기",
+  "@emptyHealthSetBudgets": {
+    "description": "Checklist item prompting user to set budgets"
+  },
+  "emptyHealthTrackLoans": "대출이나 부채 등록하기 (선택 사항)",
+  "@emptyHealthTrackLoans": {
+    "description": "Checklist item prompting user to track loans"
+  },
+  "emptyHealthCardSubtitle": "거래 내역을 추가하여 나의 점수와 유용한 인사이트를 확인해 보세요.",
+  "@emptyHealthCardSubtitle": {
+    "description": "Subtitle shown on the dashboard health card when no data is available"
+  },
+  
+  "smartBudgetSplit": "스마트 예산 분배",
+  "@smartBudgetSplit": {
+    "description": "Title for smart salary budget split sheet"
+  },
+  "smartBudgetSplitSubtitle": "월 실수령액을 입력하면 카테고리별 권장 예산 한도를 자동으로 계산해 드립니다",
+  "@smartBudgetSplitSubtitle": {
+    "description": "Subtitle explaining how salary budget split works"
+  },
+  "monthlyNetSalary": "월 실수령 급여",
+  "@monthlyNetSalary": {
+    "description": "Label for monthly net salary input field"
+  },
+  "categoryAllocations": "카테고리별 예산 배분",
+  "@categoryAllocations": {
+    "description": "Header for recommended category allocations list"
+  },
+  "totalBudgeted": "총합계: {amount}",
+  "@totalBudgeted": {
+    "description": "Total amount budgeted across categories",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "모든 예산 적용하기",
+  "@applyAllBudgets": {
+    "description": "Button label to apply all recommended category limits"
+  },
+  "applyingBudgets": "예산 적용 중...",
+  "@applyingBudgets": {
+    "description": "Loading state label while applying budgets"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{1개의 카테고리 예산이 생성되었습니다.} other{{count}개의 카테고리 예산이 생성되었습니다.}}",
+  "@budgetsCreatedSuccess": {
+    "description": "Success snackbar message when budgets are created",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "예산을 저장하지 못했습니다.",
+  "@failedToSaveBudgets": {
+    "description": "Error message when saving budgets fails"
+  },
+  "recommendedBudget": "추천 예산"
 }

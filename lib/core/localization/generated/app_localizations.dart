@@ -3853,6 +3853,66 @@ abstract class AppL10n {
   /// In en, this message translates to:
   /// **'Add transactions to calculate your score and get insights.'**
   String get emptyHealthCardSubtitle;
+
+  /// Title for smart salary budget split sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Smart Budget Split'**
+  String get smartBudgetSplit;
+
+  /// Subtitle explaining how salary budget split works
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your monthly salary to calculate recommended limits'**
+  String get smartBudgetSplitSubtitle;
+
+  /// Label for monthly net salary input field
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly Net Salary'**
+  String get monthlyNetSalary;
+
+  /// Header for recommended category allocations list
+  ///
+  /// In en, this message translates to:
+  /// **'Category Allocations'**
+  String get categoryAllocations;
+
+  /// Total amount budgeted across categories
+  ///
+  /// In en, this message translates to:
+  /// **'Total: {amount}'**
+  String totalBudgeted(String amount);
+
+  /// Button label to apply all recommended category limits
+  ///
+  /// In en, this message translates to:
+  /// **'Apply All Budgets'**
+  String get applyAllBudgets;
+
+  /// Loading state label while applying budgets
+  ///
+  /// In en, this message translates to:
+  /// **'Applying budgets...'**
+  String get applyingBudgets;
+
+  /// Success snackbar message when budgets are created
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 category budget created.} other{{count} category budgets created.}}'**
+  String budgetsCreatedSuccess(int count);
+
+  /// Error message when saving budgets fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to save budgets.'**
+  String get failedToSaveBudgets;
+
+  /// No description provided for @recommendedBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommended budget'**
+  String get recommendedBudget;
 }
 
 class _AppL10nDelegate extends LocalizationsDelegate<AppL10n> {

@@ -1,98 +1,161 @@
 {
   "@@locale": "ja",
   "appName": "RainyPenny",
-  "appTagline": "もしもの日のために貯める",
+  "appTagline": "雨の日に備えて貯金しましょう",
   "navHome": "ホーム",
-  "navTransactions": "入出金",
+  "navTransactions": "取引",
   "navAdd": "追加",
   "navReports": "レポート",
-  "navProfile": "マイページ",
+  "navProfile": "プロフィール",
   "greetingMorning": "おはようございます、{name}さん",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingAfternoon": "こんにちは、{name}さん",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingEvening": "こんばんは、{name}さん",
-  "greetingSubtitle": "お金の全体像です",
-  "totalBalance": "残高合計",
-  "vsLastPeriod": "前期比",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingSubtitle": "あなたの財務状況はこちらです",
+  "totalBalance": "合計残高",
+  "vsLastPeriod": "前の期間との比較",
   "income": "収入",
   "expenses": "支出",
-  "netBalance": "収支",
-  "lastThirtyDays": "過去30日",
-  "quickActions": "クイック操作",
-  "addIncome": "収入を記録",
-  "addExpense": "支出を記録",
-  "spendingOverview": "支出の内訳",
-  "recentTransactions": "最近の記録",
+  "netBalance": "純残高",
+  "lastThirtyDays": "過去30日間",
+  "quickActions": "クイックアクション",
+  "addIncome": "収入を追加",
+  "addExpense": "支出を追加",
+  "spendingOverview": "支出の概要",
+  "recentTransactions": "最近の取引",
   "seeAll": "すべて見る",
   "viewAll": "すべて表示",
   "budgetProgress": "予算の進捗",
-  "savingsGoals": "貯蓄目標",
-  "financialInsight": "気づき",
-  "financialHealth": "家計の健全度",
-  "ofTotal": "{total} 中",
-  "searchTransactions": "記録を検索",
+  "savingsGoals": "貯金目標",
+  "financialInsight": "財務インサイト",
+  "financialHealth": "財務健全性",
+  "ofTotal": "{total}中",
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "searchTransactions": "取引を検索",
   "filterAll": "すべて",
   "filterIncome": "収入",
   "filterExpenses": "支出",
   "today": "今日",
   "yesterday": "昨日",
-  "noTransactionsTitle": "記録が見つかりません",
-  "noTransactionsBody": "検索語や絞り込みを変えると、ほかの記録も見つかります。",
-  "transactionCount": "{count, plural, =0{記録なし} other{{count}件の記録}}",
-  "addTransaction": "記録を追加",
+  "noTransactionsTitle": "取引が見つかりません",
+  "noTransactionsBody": "別の検索語やフィルターを試して、さらにアクティビティを確認してください。",
+  "transactionCount": "{count, plural, =0{取引なし} =1{1件の取引} other{{count}件の取引}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addTransaction": "取引を追加",
   "amount": "金額",
-  "category": "カテゴリ",
+  "category": "カテゴリー",
   "date": "日付",
   "note": "メモ",
-  "noteHint": "メモ（任意）",
+  "noteHint": "任意のメモ",
   "saveIncome": "収入を保存",
   "saveExpense": "支出を保存",
-  "selectCategory": "カテゴリを選択",
-  "transactionSaved": "保存しました",
+  "selectCategory": "カテゴリーを選択",
+  "transactionSaved": "取引を保存しました",
   "amountRequired": "0より大きい金額を入力してください",
-  "titleRequired": "この記録に名前を付けてください",
-  "descriptionLabel": "内容",
+  "titleRequired": "この取引に名前を付けてください",
+  "descriptionLabel": "説明",
   "descriptionHint": "例：食料品",
   "budget": "予算",
   "budgets": "予算",
-  "totalBudget": "予算合計",
-  "spent": "使用済み",
+  "totalBudget": "合計予算",
+  "spent": "使用額",
   "remaining": "残り",
-  "budgetUsed": "{percent}% 使用",
+  "budgetUsed": "{percent}%使用済み",
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "onTrack": "順調",
-  "approachingLimit": "上限が近い",
+  "approachingLimit": "上限に近づいています",
   "overBudget": "予算超過",
-  "savings": "貯蓄",
+  "savings": "貯金",
   "yourGoals": "あなたの目標",
-  "saved": "貯めた額",
+  "saved": "貯金済み",
   "target": "目標",
   "monthlyContribution": "毎月",
-  "addFunds": "入金する",
+  "addFunds": "資金を追加",
   "goalComplete": "目標達成",
-  "monthsToGo": "{count, plural, other{あと{count}か月}}",
-  "loansAndDebts": "ローンと負債",
-  "totalOutstanding": "残高合計",
+  "monthsToGo": "{count, plural, =1{あと1か月} other{あと{count}か月}}",
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "loansAndDebts": "ローンと借金",
+  "totalOutstanding": "未払い残高合計",
   "monthlyPayment": "毎月",
   "nextPayment": "次回の支払い",
-  "paidOff": "{percent}% 返済済み",
-  "interestRate": "金利",
-  "upcomingPayments": "支払い予定",
-  "dueInDays": "{count, plural, =0{今日が期日} =1{明日が期日} other{あと{count}日で期日}}",
-  "overdue": "延滞",
+  "paidOff": "{percent}%返済済み",
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "interestRate": "利息",
+  "upcomingPayments": "今後の支払い",
+  "dueInDays": "{count, plural, =0{今日が期限} =1{明日が期限} other{{count}日後が期限}}",
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overdue": "期限超過",
   "reports": "レポート",
   "week": "週",
   "month": "月",
   "quarter": "四半期",
-  "incomeVsExpenses": "収入と支出",
-  "spendingByCategory": "カテゴリ別支出",
-  "budgetPerformance": "予算の達成状況",
-  "insights": "気づき",
-  "savingsRate": "貯蓄率",
-  "profile": "マイページ",
+  "incomeVsExpenses": "収入と支出の比較",
+  "spendingByCategory": "カテゴリー別支出",
+  "budgetPerformance": "予算の状況",
+  "insights": "インサイト",
+  "savingsRate": "貯金率",
+  "profile": "プロフィール",
   "account": "アカウント",
   "personalInformation": "個人情報",
-  "changePassword": "パスワードの変更",
+  "changePassword": "パスワードを変更",
   "notifications": "通知",
-  "preferences": "環境設定",
+  "preferences": "設定",
   "language": "言語",
   "currency": "通貨",
   "theme": "テーマ",
@@ -102,374 +165,954 @@
   "helpAndSupport": "ヘルプとサポート",
   "termsAndConditions": "利用規約",
   "logOut": "ログアウト",
-  "memberSince": "{date} から利用",
-  "themeSystem": "システムに合わせる",
+  "memberSince": "{date}から利用",
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "themeSystem": "システム設定",
   "themeLight": "ライト",
   "themeDark": "ダーク",
   "settings": "設定",
-  "noNotificationsTitle": "確認済みです",
-  "noNotificationsBody": "新しい気づきやリマインダーはここに表示されます。",
+  "noNotificationsTitle": "すべて確認済みです",
+  "noNotificationsBody": "新しいインサイトやリマインダーがここに表示されます。",
   "cancel": "キャンセル",
   "save": "保存",
   "done": "完了",
   "retry": "再試行",
   "close": "閉じる",
   "somethingWentWrong": "問題が発生しました",
-  "comingSoon": "正式版で対応予定です",
+  "comingSoon": "完全版で近日公開",
   "edit": "編集",
   "delete": "削除",
-  "undo": "取り消す",
+  "undo": "元に戻す",
   "add": "追加",
   "create": "作成",
-  "nameRequired": "名前を入力してください",
+  "nameRequired": "名前を付けてください",
   "amountAboveZero": "0より大きい金額を入力してください",
-  "editTransaction": "記録を編集",
-  "deleteTransaction": "この記録を削除しますか？",
-  "deleteTransactionBody": "{title} が家計簿から削除されます。",
-  "transactionDeleted": "削除しました",
-  "transactionUpdated": "更新しました",
-  "newBudget": "予算を作成",
+  "editTransaction": "取引を編集",
+  "deleteTransaction": "取引を削除しますか？",
+  "deleteTransactionBody": "{title}は台帳から削除されます。",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "transactionDeleted": "取引を削除しました",
+  "transactionUpdated": "取引を更新しました",
+  "newBudget": "新しい予算",
   "editBudget": "予算を編集",
-  "budgetLimit": "月間の上限",
-  "deleteBudget": "この予算を削除しますか？",
-  "deleteBudgetBody": "{category} の予算が削除されます。記録には影響しません。",
+  "budgetLimit": "月間上限",
+  "deleteBudget": "予算を削除しますか？",
+  "deleteBudgetBody": "{category}の予算が削除されます。取引には影響しません。",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
   "budgetSaved": "予算を保存しました",
   "budgetDeleted": "予算を削除しました",
-  "allCategoriesBudgeted": "すべてのカテゴリに予算があります",
-  "noBudgetsTitle": "予算がありません",
-  "noBudgetsBody": "カテゴリに月間の上限を決めると、そこから記録が始まります。",
-  "newGoal": "目標を作成",
+  "allCategoriesBudgeted": "すべてのカテゴリーにすでに予算があります",
+  "noBudgetsTitle": "まだ予算がありません",
+  "noBudgetsBody": "カテゴリーに月間上限を設定して、管理を始めましょう。",
+  "newGoal": "新しい目標",
   "editGoal": "目標を編集",
   "goalName": "目標名",
   "goalNameHint": "例：緊急資金",
   "targetAmount": "目標金額",
-  "alreadySaved": "貯蓄済み",
-  "deleteGoal": "この目標を削除しますか？",
-  "deleteGoalBody": "{name} とその進捗が削除されます。",
+  "alreadySaved": "貯金済み",
+  "deleteGoal": "目標を削除しますか？",
+  "deleteGoalBody": "{name}とその進捗が削除されます。",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "goalSaved": "目標を保存しました",
   "goalDeleted": "目標を削除しました",
-  "noGoalsTitle": "貯蓄目標がありません",
-  "noGoalsBody": "目標を決めれば、RainyPenny が進み具合を追いかけます。",
-  "fundsAdded": "入金しました",
-  "newDebt": "ローンやカードを追加",
+  "noGoalsTitle": "まだ貯金目標がありません",
+  "noGoalsBody": "目標を設定すると、RainyPennyが進捗を追跡します。",
+  "fundsAdded": "資金を追加しました",
+  "newDebt": "新しいローンまたはカード",
   "editDebt": "ローンを編集",
-  "debtName": "名称",
+  "debtName": "名前",
   "debtNameHint": "例：自動車ローン",
-  "lender": "借入先",
-  "lenderHint": "例：みずほ銀行",
-  "originalAmount": "当初金額",
+  "lender": "貸し手",
+  "lenderHint": "例：Meridian Bank",
+  "originalAmount": "借入元金",
   "creditLimit": "利用限度額",
-  "remainingBalance": "残高",
+  "remainingBalance": "残りの残高",
   "interestRatePercent": "金利（%）",
   "kindLoan": "ローン",
   "kindCreditCard": "クレジットカード",
   "recordPayment": "支払いを記録",
   "paymentRecorded": "支払いを記録しました",
-  "deleteDebt": "この負債を削除しますか？",
-  "deleteDebtBody": "{name} が負債一覧から削除されます。",
+  "deleteDebt": "この借金を削除しますか？",
+  "deleteDebtBody": "{name}が借金一覧から削除されます。",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "debtSaved": "保存しました",
   "debtDeleted": "削除しました",
-  "noDebtsTitle": "登録された負債はありません",
-  "noDebtsBody": "ローンやクレジットカードを追加すると、返済を把握できます。",
-  "insightBudgetExceededTitle": "{subject} の予算を超えました",
-  "insightBudgetExceededBody": "今期の {subject} 予算を {amount} 超えています。",
-  "insightBudgetApproachingTitle": "{subject} が上限に近づいています",
-  "insightBudgetApproachingBody": "{subject} の予算は {percent}% 使用済みで、残りは {amount} です。",
+  "noDebtsTitle": "追跡中の借金はありません",
+  "noDebtsBody": "返済を管理するため、ローンまたはクレジットカードを追加してください。",
+  "insightBudgetExceededTitle": "{subject}の予算を超過しました",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "この期間の{subject}予算を{amount}超過しています。",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingTitle": "{subject}が上限に近づいています",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "{subject}予算を{percent}%使用しており、{amount}残っています。",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "insightOverIncomeTitle": "支出が収入を上回っています",
-  "insightOverIncomeBody": "今期は稼いだ以上に使っています。金額の大きいカテゴリを見直して立て直しましょう。",
-  "insightCategoryUpTitle": "{subject} の支出が増えています",
-  "insightCategoryUpBody": "{subject} の支出は前期より {percent}% 多くなっています。",
-  "insightTrendDownTitle": "支出が減ってきています",
-  "insightTrendDownBody": "全体の支出は前期より {percent}% 少なくなっています。",
-  "insightTrendUpTitle": "支出が増えてきています",
-  "insightTrendUpBody": "全体の支出は前期より {percent}% 多くなっています。",
-  "insightSavingsStrongTitle": "今期はよく貯まりました",
-  "insightSavingsStrongBody": "収入の {percent}% を残しました — 目標の {target}% を大きく上回っています。",
-  "insightSavingsLowTitle": "貯蓄率が目標を下回っています",
-  "insightSavingsLowBody": "今期は収入の {percent}% を残しました。目標は {target}% です。",
-  "insightGoalNearlyTitle": "{subject} はもうすぐ達成です",
-  "insightGoalNearlyBody": "{subject} まであと {amount} です。",
-  "insightGoalOnTrackTitle": "{subject} は順調です",
-  "insightGoalOnTrackBody": "毎月 {amount} なら、{months, plural, other{{months}か月}}でこの目標に届きます。",
-  "insightDebtOverdueTitle": "{subject} の支払いが延滞しています",
-  "insightDebtOverdueBody": "{subject} の {amount} の支払いが {days, plural, other{{days}日}}延滞しています。",
-  "insightDebtDueTitle": "{subject} の支払いが近づいています",
-  "insightDebtDueBody": "{amount} の支払期日は{days, plural, =0{今日} =1{明日} other{{days}日後}}です。",
-  "signIn": "ログイン",
+  "insightOverIncomeBody": "この期間は収入以上に支出しました。最も大きなカテゴリーを確認して、バランスを取り戻しましょう。",
+  "insightCategoryUpTitle": "{subject}の支出が増えています",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightCategoryUpBody": "{subject}の支出は前の期間より{percent}%増えています。",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "支出が減少傾向です",
+  "insightTrendDownBody": "全体の支出は前の期間より{percent}%減っています。",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "支出が増加傾向です",
+  "insightTrendUpBody": "全体の支出は前の期間より{percent}%増えています。",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "この期間の貯金は順調です",
+  "insightSavingsStrongBody": "収入の{percent}%を残しており、目標の{target}%を大きく上回っています。",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsLowTitle": "貯金率が目標を下回っています",
+  "insightSavingsLowBody": "この期間は収入の{percent}%を残しました。{target}%を目標にしましょう。",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "{subject}はもうすぐ達成です",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalNearlyBody": "{subject}の達成まであと{amount}です。",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "{subject}は順調です",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "毎月{amount}貯めると、{months, plural, =1{1か月} other{{months}か月}}でこの目標を達成できます。",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtOverdueTitle": "{subject}の支払いが期限超過です",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "{subject}の{amount}の支払いは{days, plural, =1{1日} other{{days}日}}遅れています。",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "{subject}の支払いが近づいています",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "{amount}の支払い期限は{days, plural, =0{今日} =1{明日} other{{days}日後}}です。",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "signIn": "サインイン",
   "signUp": "アカウントを作成",
-  "signInSubtitle": "おかえりなさい。お金が待っています。",
-  "signUpSubtitle": "いくつか入力すれば準備完了です。",
+  "signInSubtitle": "おかえりなさい。あなたのお金が待っています。",
+  "signUpSubtitle": "いくつかの情報を入力すれば準備完了です。",
   "emailLabel": "メールアドレス",
   "emailHint": "you@email.com",
   "passwordLabel": "パスワード",
   "passwordHint": "8文字以上",
-  "fullNameLabel": "お名前",
-  "fullNameHint": "山田 太郎",
+  "fullNameLabel": "氏名",
+  "fullNameHint": "Alex Morgan",
   "forgotPassword": "パスワードをお忘れですか？",
-  "resetSent": "再設定リンクを送りました。メールをご確認ください",
-  "noAccountYet": "はじめてですか？",
+  "resetSent": "リセットリンクを受信トレイで確認してください",
+  "noAccountYet": "初めてですか？",
   "haveAccount": "すでにアカウントをお持ちですか？",
   "emailInvalid": "有効なメールアドレスを入力してください",
-  "passwordTooShort": "8文字以上にしてください",
-  "signOutConfirm": "ログアウトしますか？",
-  "signOutBody": "次に家計を見るときは、もう一度ログインが必要です。",
+  "passwordTooShort": "8文字以上を使用してください",
+  "signOutConfirm": "サインアウトしますか？",
+  "signOutBody": "財務情報を見るには、もう一度サインインする必要があります。",
   "dataSource": "データソース",
-  "insightWeeklySummaryTitle": "今週のふり返り",
-  "insightWeeklySummaryBody": "今週お金がどこへ行ったか、予算はどうだったかを確認しましょう。",
+  "insightWeeklySummaryTitle": "今週を振り返る",
+  "insightWeeklySummaryBody": "今週お金をどこに使ったか、予算をどの程度守れているかを確認できます。",
   "notificationSettings": "通知",
-  "alertsSection": "お知らせ",
-  "budgetAlerts": "予算のお知らせ",
-  "budgetAlertsBody": "予算が上限に近づいた、または超えたとき",
+  "alertsSection": "アラート",
+  "budgetAlerts": "予算アラート",
+  "budgetAlertsBody": "予算が上限に近づいたとき、または上限を超えたとき",
   "paymentReminders": "支払いリマインダー",
-  "paymentRemindersBody": "支払期日の数日前",
-  "savingsUpdates": "貯蓄の進捗",
-  "savingsUpdatesBody": "目標に向けた進み具合",
-  "weeklySummaryLabel": "週次サマリー",
-  "weeklySummaryBody": "過ぎた一週間のまとめ",
+  "paymentRemindersBody": "支払い期限の数日前",
+  "savingsUpdates": "貯金の更新",
+  "savingsUpdatesBody": "目標に向けた進捗",
+  "weeklySummaryLabel": "週間サマリー",
+  "weeklySummaryBody": "直近1週間のまとめ",
   "scheduleSection": "タイミング",
-  "reminderTime": "通知の時刻",
-  "quietHours": "通知しない時間帯",
+  "reminderTime": "リマインダー時刻",
+  "quietHours": "おやすみ時間",
   "quietHoursValue": "{start} – {end}",
-  "summaryDay": "サマリーの曜日",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDay": "サマリーの日",
   "permissionRequired": "通知がオフになっています",
-  "permissionRequiredBody": "通知を許可すると、予算や支払いが手に負えなくなる前に RainyPenny が知らせます。",
+  "permissionRequiredBody": "通知を許可すると、予算や支払いが手遅れになる前にRainyPennyがお知らせします。",
   "allowNotifications": "通知を許可",
   "permissionDenied": "通知がブロックされています。端末の設定からオンにできます。",
-  "upcomingAlerts": "予定",
-  "noScheduledAlerts": "予定されているお知らせはありません",
-  "noScheduledAlertsBody": "予算や支払いが期限に近づくと、ここにお知らせが並びます。",
-  "scheduledFor": "{date} に予定",
+  "upcomingAlerts": "スケジュール済み",
+  "noScheduledAlerts": "現在スケジュールされているものはありません",
+  "noScheduledAlertsBody": "予算や支払いが上限や期限に近づくと、ここにアラートが表示されます。",
+  "scheduledFor": "{date}にスケジュール済み",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "everyWeek": "毎週",
   "allNotificationsOff": "すべての通知がオフです",
-  "needsAttention": "要注意",
+  "needsAttention": "要確認",
   "quickActionsTitle": "何をしますか？",
-  "createSection": "記録する",
-  "jumpToSection": "移動する",
+  "createSection": "記録",
+  "jumpToSection": "移動",
   "addLoanAction": "ローンを追加",
   "addBudgetAction": "予算を追加",
   "addGoalAction": "目標を追加",
-  "longPressHint": "ヒント：+ を長押しするとすぐ支出を記録できます",
+  "longPressHint": "ヒント：+を長押しすると、すぐに支出を記録できます",
   "searchCurrencies": "通貨を検索",
+  "@searchCurrencies": {
+    "description": "通貨選択：searchCurrencies"
+  },
   "noCurrenciesFound": "通貨が見つかりません",
-  "noCurrenciesFoundMessage": "別のコード、記号、名称で試してください。",
-  "popularCurrencies": "よく使う通貨",
+  "@noCurrenciesFound": {
+    "description": "通貨選択：noCurrenciesFound"
+  },
+  "noCurrenciesFoundMessage": "別のコード、記号、名前を試してください。",
+  "@noCurrenciesFoundMessage": {
+    "description": "通貨選択：noCurrenciesFoundMessage"
+  },
+  "popularCurrencies": "人気",
+  "@popularCurrencies": {
+    "description": "通貨選択：popularCurrencies"
+  },
   "allCurrencies": "すべての通貨",
-  "totalLoanAmount": "借入総額",
-  "installmentAmount": "1回の返済額",
-  "numberOfInstallments": "返済回数",
-  "paidInstallments": "返済済み回数",
-  "remainingInstallments": "残り回数",
-  "installmentsPaidOf": "{total} 回中 {paid} 回返済済み",
-  "finalPayment": "最終回",
+  "@allCurrencies": {
+    "description": "通貨選択：allCurrencies"
+  },
+  "totalLoanAmount": "ローン総額",
+  "@totalLoanAmount": {
+    "description": "ローン詳細：借り入れた元の金額"
+  },
+  "installmentAmount": "分割払い金額",
+  "@installmentAmount": {
+    "description": "ローン詳細：各サイクルで支払う金額"
+  },
+  "numberOfInstallments": "分割回数",
+  "@numberOfInstallments": {
+    "description": "ローン編集：返済計画の期間"
+  },
+  "paidInstallments": "支払い済み分割",
+  "@paidInstallments": {
+    "description": "ローン詳細：すでに支払い済みの分割払い"
+  },
+  "remainingInstallments": "残りの分割",
+  "@remainingInstallments": {
+    "description": "ローン詳細：これから支払う分割払い"
+  },
+  "installmentsPaidOf": "{paid}/{total}回支払い済み",
+  "@installmentsPaidOf": {
+    "description": "ローン詳細：分割払いカウンター",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "finalPayment": "最終支払い",
+  "@finalPayment": {
+    "description": "ローン詳細：最後の分割払いの日付"
+  },
   "paymentDueDate": "支払期日",
-  "dueOnDayOfMonth": "毎月 {day} 日",
-  "loanStatus": "状況",
+  "@paymentDueDate": {
+    "description": "ローン詳細：支払い期限となる日"
+  },
+  "dueOnDayOfMonth": "毎月{day}日",
+  "@dueOnDayOfMonth": {
+    "description": "ローン詳細：繰り返しの支払日",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "loanStatus": "ステータス",
+  "@loanStatus": {
+    "description": "ローン詳細：現在の返済状況"
+  },
   "statusActive": "順調",
-  "statusDueSoon": "まもなく期日",
-  "statusOverdue": "延滞",
+  "@statusActive": {
+    "description": "ローンステータス：通常どおり返済中"
+  },
+  "statusDueSoon": "まもなく期限",
+  "@statusDueSoon": {
+    "description": "ローンステータス：リマインダー期間内"
+  },
+  "statusOverdue": "期限超過",
+  "@statusOverdue": {
+    "description": "ローンステータス：支払期限を過ぎている"
+  },
   "statusCompleted": "完済",
+  "@statusCompleted": {
+    "description": "ローンステータス：全額返済済み"
+  },
   "repaymentProgress": "返済の進捗",
-  "byAmount": "金額で",
-  "byInstallments": "回数で",
+  "@repaymentProgress": {
+    "description": "ローン詳細：進捗バーのセクション見出し"
+  },
+  "byAmount": "金額別",
+  "@byAmount": {
+    "description": "ローン詳細：金額で測定した進捗"
+  },
+  "byInstallments": "分割回数別",
+  "@byInstallments": {
+    "description": "ローン詳細：支払い回数で測定した進捗"
+  },
   "startDate": "開始日",
+  "@startDate": {
+    "description": "ローン編集：返済を開始した日"
+  },
   "openEnded": "期限なし",
-  "loanDetails": "ローンの詳細",
+  "@openEnded": {
+    "description": "ローン詳細：固定期間のない継続的な残高"
+  },
+  "loanDetails": "ローン詳細",
+  "@loanDetails": {
+    "description": "ローン詳細画面のタイトル"
+  },
   "notSet": "未設定",
-  "insightDebtDueTodayTitle": "{subject} は今日が期日です",
-  "insightDebtDueTodayBody": "{amount} の支払いが今日期日です。ひと操作で間に合います。",
+  "@notSet": {
+    "description": "任意の値が入力されていない場合に表示"
+  },
+  "insightDebtDueTodayTitle": "{subject}の支払期限は今日です",
+  "@insightDebtDueTodayTitle": {
+    "description": "通知：分割払いの期限が今日の場合",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "{amount}の支払い期限は今日です。すぐにタップして、期限どおりに支払いましょう。",
+  "@insightDebtDueTodayBody": {
+    "description": "通知本文：分割払いの期限が今日の場合",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "remindMorningTitle": "おはようございます ☀️",
-  "remindMorningBody": "お金を把握して一日を始めましょう。昨日の分で足すものはありますか？",
-  "remindNoonTitle": "お昼の確認",
-  "remindNoonBody": "ランチ、コーヒー、交通費？数秒で記録できます。",
-  "remindAfternoonTitle": "ちょっと追記",
-  "remindAfternoonBody": "ここまでの支出を記録して、今日の数字を正確に保ちましょう。",
-  "remindEveningTitle": "今日の締めくくり",
-  "remindEveningBody": "いま2分あれば、今日の記録がそろいます。",
-  "happyWeekendTitle": "よい週末を！🎉",
-  "happyWeekendBody": "ゆっくり過ごしてください — 週末の出費にはご用心。",
-  "dailyReminders": "毎日の記録リマインダー",
-  "dailyRemindersBody": "支出を記録し忘れないよう、そっとお知らせします",
-  "weekendGreeting": "週末のあいさつ",
-  "weekendGreetingBody": "週末のはじまりに、ひとこと",
-  "reminderTimesSection": "通知の時間帯",
+  "@remindMorningTitle": {
+    "description": "朝の支出リマインダーのタイトル"
+  },
+  "remindMorningBody": "お金を把握しながら一日を始めましょう。昨日の分で追加するものはありますか？",
+  "@remindMorningBody": {
+    "description": "朝の支出リマインダーの本文"
+  },
+  "remindNoonTitle": "お昼のチェックイン",
+  "@remindNoonTitle": {
+    "description": "昼の支出リマインダーのタイトル"
+  },
+  "remindNoonBody": "ランチ、コーヒー、交通費はありませんか？数秒で追加できます。",
+  "@remindNoonBody": {
+    "description": "昼の支出リマインダーの本文"
+  },
+  "remindAfternoonTitle": "簡単な更新",
+  "@remindAfternoonTitle": {
+    "description": "午後の支出リマインダーのタイトル"
+  },
+  "remindAfternoonBody": "ここまでに使った金額を記録して、今日の記録を正確に保ちましょう。",
+  "@remindAfternoonBody": {
+    "description": "午後の支出リマインダーの本文"
+  },
+  "remindEveningTitle": "一日の締めくくり",
+  "@remindEveningTitle": {
+    "description": "夜の支出リマインダーのタイトル"
+  },
+  "remindEveningBody": "今2分使えば、今日の数字を完成させられます。",
+  "@remindEveningBody": {
+    "description": "夜の支出リマインダーの本文"
+  },
+  "happyWeekendTitle": "よい週末を！ 🎉",
+  "@happyWeekendTitle": {
+    "description": "週末のあいさつのタイトル"
+  },
+  "happyWeekendBody": "楽しんでください — そして週末の支出にも目を配りましょう。",
+  "@happyWeekendBody": {
+    "description": "週末のあいさつの本文"
+  },
+  "dailyReminders": "毎日の支出リマインダー",
+  "@dailyReminders": {
+    "description": "通知設定：毎日のリマインダー"
+  },
+  "dailyRemindersBody": "支出を最新の状態に保つためのやさしいリマインダー",
+  "@dailyRemindersBody": {
+    "description": "通知設定の説明"
+  },
+  "weekendGreeting": "よい週末を",
+  "@weekendGreeting": {
+    "description": "通知設定：週末のあいさつ"
+  },
+  "weekendGreetingBody": "週末の始まりに届く、親しみやすいあいさつ",
+  "@weekendGreetingBody": {
+    "description": "通知設定の説明"
+  },
+  "reminderTimesSection": "リマインダー時刻",
+  "@reminderTimesSection": {
+    "description": "1日の4つの時間帯のセクション見出し"
+  },
   "slotMorning": "朝",
+  "@slotMorning": {
+    "description": "毎日のリマインダー時間帯"
+  },
   "slotNoon": "昼",
+  "@slotNoon": {
+    "description": "毎日のリマインダー時間帯"
+  },
   "slotAfternoon": "午後",
+  "@slotAfternoon": {
+    "description": "毎日のリマインダー時間帯"
+  },
   "slotEvening": "夜",
+  "@slotEvening": {
+    "description": "毎日のリマインダー時間帯"
+  },
   "everyDay": "毎日",
-  "financialReport": "家計レポート",
-  "preparedFor": "作成対象",
+  "@everyDay": {
+    "description": "繰り返し通知が届く頻度"
+  },
+  "financialReport": "財務レポート",
+  "@financialReport": {
+    "description": "エクスポートされるPDFのタイトル"
+  },
+  "preparedFor": "対象者",
+  "@preparedFor": {
+    "description": "PDF表紙：このレポートの対象者"
+  },
   "generatedOn": "作成日",
-  "reportDisclaimer": "あなた自身の記録から RainyPenny が作成しました。",
-  "pageOf": "{total} ページ中 {page} ページ",
+  "@generatedOn": {
+    "description": "PDF表紙：レポートが作成された日付"
+  },
+  "reportDisclaimer": "RainyPennyがあなた自身の記録から作成しました。",
+  "@reportDisclaimer": {
+    "description": "PDFフッターの注記"
+  },
+  "pageOf": "{total}ページ中{page}ページ",
+  "@pageOf": {
+    "description": "PDFフッターのページ番号",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "overview": "概要",
-  "description": "内容",
-  "totalIncome": "収入合計",
-  "totalExpenses": "支出合計",
-  "totalSaved": "貯蓄合計",
+  "@overview": {
+    "description": "PDFセクション：主要な合計値"
+  },
+  "description": "説明",
+  "@description": {
+    "description": "表の列見出し"
+  },
+  "totalIncome": "総収入",
+  "@totalIncome": {
+    "description": "概要表の行"
+  },
+  "totalExpenses": "総支出",
+  "@totalExpenses": {
+    "description": "概要表の行"
+  },
+  "totalSaved": "総貯金額",
+  "@totalSaved": {
+    "description": "概要表の行"
+  },
   "shareOfTotal": "割合",
+  "@shareOfTotal": {
+    "description": "表の列：このカテゴリーが全支出に占める割合"
+  },
   "used": "使用済み",
+  "@used": {
+    "description": "表の列：消費した予算の割合"
+  },
   "goal": "目標",
+  "@goal": {
+    "description": "貯金目標の表の列見出し"
+  },
   "targetDate": "目標日",
+  "@targetDate": {
+    "description": "表の列見出し"
+  },
   "progress": "進捗",
+  "@progress": {
+    "description": "表の列見出し"
+  },
   "paidOffShort": "返済済み",
-  "transactions": "記録",
-  "andMoreTransactions": "{count, plural, other{ほか {count} 件の記録}}",
-  "exportPdf": "PDF を書き出す",
+  "@paidOffShort": {
+    "description": "表の列：返済済みの借金の割合"
+  },
+  "transactions": "取引",
+  "@transactions": {
+    "description": "個々の記録を一覧表示するPDFセクション"
+  },
+  "andMoreTransactions": "{count, plural, =1{さらに1件の取引} other{さらに{count}件の取引}}",
+  "@andMoreTransactions": {
+    "description": "取引表が省略された場合のPDF注記",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportPdf": "PDFをエクスポート",
+  "@exportPdf": {
+    "description": "レポートを生成するボタン"
+  },
   "sharePdf": "レポートを共有",
-  "preparingReport": "レポートを作成しています…",
-  "reportReady": "レポートができました",
+  "@sharePdf": {
+    "description": "共有シートを開くボタン"
+  },
+  "preparingReport": "レポートを準備しています…",
+  "@preparingReport": {
+    "description": "PDF作成中に表示する進捗メッセージ"
+  },
+  "reportReady": "レポートの準備ができました",
+  "@reportReady": {
+    "description": "PDF作成完了時の確認メッセージ"
+  },
   "reportFailed": "レポートを作成できませんでした",
-  "categories": "カテゴリ",
-  "categoriesIntro": "自分のカテゴリを追加して、ふだんの感覚どおりに収入と支出を仕分けましょう。",
-  "expenseCategories": "支出カテゴリ",
-  "incomeCategories": "収入カテゴリ",
-  "newCategory": "カテゴリを作成",
-  "editCategory": "カテゴリを編集",
-  "categoryName": "名称",
-  "categoryNameHint": "例：ペット",
+  "@reportFailed": {
+    "description": "エクスポートに失敗した場合のエラーメッセージ"
+  },
+  "categories": "カテゴリー",
+  "@categories": {
+    "description": "カテゴリー管理画面のタイトル"
+  },
+  "categoriesIntro": "自分の考え方に合わせて、収入と支出を整理できるカテゴリーを追加しましょう。",
+  "@categoriesIntro": {
+    "description": "この画面の目的を説明"
+  },
+  "expenseCategories": "支出カテゴリー",
+  "@expenseCategories": {
+    "description": "セクション見出し"
+  },
+  "incomeCategories": "収入カテゴリー",
+  "@incomeCategories": {
+    "description": "セクション見出し"
+  },
+  "newCategory": "新しいカテゴリー",
+  "@newCategory": {
+    "description": "作成フォームのタイトル"
+  },
+  "editCategory": "カテゴリーを編集",
+  "@editCategory": {
+    "description": "編集フォームのタイトル"
+  },
+  "categoryName": "名前",
+  "@categoryName": {
+    "description": "カテゴリー入力欄のラベル"
+  },
+  "categoryNameHint": "例：ペットの世話",
+  "@categoryNameHint": {
+    "description": "カテゴリー名のプレースホルダー"
+  },
   "icon": "アイコン",
-  "categorySaved": "カテゴリを保存しました",
-  "categoryDeleted": "カテゴリを削除しました",
-  "deleteCategory": "このカテゴリを削除しますか？",
-  "deleteCategoryBody": "{name} がカテゴリ一覧から削除されます。",
-  "categoryInUse": "{count, plural, other{{count} 件の記録がまだこのカテゴリを使っています}}",
+  "@icon": {
+    "description": "カテゴリー入力欄のラベル"
+  },
+  "categorySaved": "カテゴリーを保存しました",
+  "@categorySaved": {
+    "description": "確認メッセージ"
+  },
+  "categoryDeleted": "カテゴリーを削除しました",
+  "@categoryDeleted": {
+    "description": "確認メッセージ"
+  },
+  "deleteCategory": "このカテゴリーを削除しますか？",
+  "@deleteCategory": {
+    "description": "削除確認のタイトル"
+  },
+  "deleteCategoryBody": "{name}がカテゴリーから削除されます。",
+  "@deleteCategoryBody": {
+    "description": "削除確認の本文",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{1件の記録がこのカテゴリーを使用しています} other{{count}件の記録がこのカテゴリーを使用しています}}",
+  "@categoryInUse": {
+    "description": "カテゴリーを削除できない理由を説明"
+    ,
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "noCategoriesYet": "まだ何もありません。",
+  "@noCategoriesYet": {
+    "description": "カテゴリー一覧の空のグループ"
+  },
   "builtIn": "標準",
-  "manageCategories": "カテゴリの管理",
+  "@builtIn": {
+    "description": "共有される読み取り専用カテゴリーを示す"
+  },
+  "manageCategories": "カテゴリーを管理",
+  "@manageCategories": {
+    "description": "カテゴリー画面を開く設定項目"
+  },
   "expense": "支出",
-  "languageNote": "アラビア語・ウルドゥー語・ペルシア語・ヘブライ語では、グラフや PDF レポートを含め、画面全体が右から左になります。",
+  "@expense": {
+    "description": "支出取引の単数ラベル"
+  },
+  "languageNote": "アラビア語、ウルドゥー語、ペルシャ語、ヘブライ語では、チャートやPDFレポートを含むインターフェース全体が右から左に切り替わります。",
+  "@languageNote": {
+    "description": "言語選択画面でRTL対応を説明する注記"
+  },
   "next": "次へ",
   "back": "戻る",
   "skip": "スキップ",
-  "continueLabel": "続ける",
-  "selected": "選択中",
+  "continueLabel": "続行",
+  "@continueLabel": {
+    "description": "複数ステップのフローを進める主要アクション。「continue」がDartの予約語であるため接尾辞付きの名前になっています。"
+  },
+  "selected": "選択済み",
   "passwordRequired": "パスワードを入力してください",
   "newPasswordLabel": "新しいパスワード",
-  "confirmPasswordLabel": "パスワードの確認",
-  "passwordsDoNotMatch": "2つのパスワードが一致しません",
+  "confirmPasswordLabel": "パスワードを確認",
+  "passwordsDoNotMatch": "2つのパスワードが一致している必要があります",
   "showPassword": "パスワードを表示",
-  "hidePassword": "パスワードを隠す",
+  "hidePassword": "パスワードを非表示",
   "savePassword": "パスワードを保存",
-  "backToSignIn": "ログインに戻る",
-  "alreadyHaveAccount": "アカウントを持っています",
-  "getStarted": "はじめる",
+  "backToSignIn": "サインインに戻る",
+  "alreadyHaveAccount": "すでにアカウントを持っています",
+  "getStarted": "始める",
   "acceptTerms": "利用規約とプライバシーポリシーに同意します",
-  "acceptTermsRequired": "続けるには同意が必要です",
+  "acceptTermsRequired": "続行するには同意してください",
   "passwordStrengthTooShort": "短すぎます",
   "passwordStrengthWeak": "弱い",
-  "passwordStrengthFair": "まずまず",
-  "passwordStrengthGood": "良好",
+  "passwordStrengthFair": "普通",
+  "passwordStrengthGood": "良い",
   "passwordStrengthStrong": "強い",
-  "passwordAdvice": "記号だらけの短いパスワードより、覚えていられる長い文のほうが安全です。ほかで使っているものは避けてください。",
+  "passwordAdvice": "覚えやすい長いフレーズは、記号だらけの短いパスワードより安全です。他の場所ですでに使っているものは避けてください。",
   "authInvalidCredentials": "このメールアドレスとパスワードに一致するアカウントはありません",
-  "authEmailNotConfirmed": "ログインの前にメールアドレスを確認してください",
-  "authEmailAlreadyRegistered": "このメールアドレスのアカウントはすでにあります",
-  "authWeakPassword": "もっと長いパスワードにしてください",
+  "authEmailNotConfirmed": "サインインする前にメールアドレスを確認してください",
+  "authEmailAlreadyRegistered": "このメールアドレスのアカウントはすでに存在します",
+  "authWeakPassword": "より長いパスワードを選んでください",
   "authRateLimited": "試行回数が多すぎます。数分後にもう一度お試しください",
-  "authNetworkError": "接続がありません。ネットワークを確認して再試行してください",
+  "authNetworkError": "接続できません。ネットワークを確認してもう一度お試しください",
   "authGenericError": "問題が発生しました。もう一度お試しください",
-  "confirmEmailTitle": "メールをご確認ください",
-  "confirmEmailBody": "{email} に確認リンクを送りました。開いてアカウント登録を完了してください。",
-  "resendConfirmation": "確認メールを再送",
-  "confirmationResent": "確認メールを送りました",
-  "forgotPasswordTitle": "パスワードの再設定",
-  "forgotPasswordSubtitle": "登録に使ったメールアドレスを入力してください。新しいパスワードを決めるリンクをお送りします。",
-  "sendResetLink": "リンクを送る",
-  "resetLinkSentTitle": "リンクを送りました",
-  "resetLinkSentBody": "{email} のアカウントがあれば、再設定リンクが届きます。",
-  "resetLinkSentHint": "リンクは1時間で期限切れになります。届かない場合は、再送を頼む前に迷惑メールをご確認ください。",
-  "tryAnotherEmail": "別のメールアドレスを使う",
-  "resetPasswordTitle": "新しいパスワードを決める",
-  "resetPasswordSubtitle": "このアカウントでこれまで使っていないものにしてください。",
+  "confirmEmailTitle": "メールを確認してください",
+  "confirmEmailBody": "{email}に確認リンクを送信しました。リンクを開いてアカウントの設定を完了してください。",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resendConfirmation": "確認メールを再送信",
+  "confirmationResent": "確認メールを送信しました",
+  "forgotPasswordTitle": "パスワードをリセット",
+  "forgotPasswordSubtitle": "登録時に使用したメールアドレスを入力すると、新しいパスワードを設定するためのリンクを送信します。",
+  "sendResetLink": "リセットリンクを送信",
+  "resetLinkSentTitle": "リセットリンクを送信しました",
+  "resetLinkSentBody": "{email}のアカウントが存在する場合、リセットリンクを送信しています。",
+  "@resetLinkSentBody": {
+    "description": "登録済みかどうかを確認できると、誰でもアプリのユーザーを特定できるため、意図的に条件付きの表現にしています。",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "リンクは1時間で期限切れになります。届かない場合は、再送信を依頼する前に迷惑メールフォルダーを確認してください。",
+  "tryAnotherEmail": "別のメールアドレスを使用",
+  "resetPasswordTitle": "新しいパスワードを設定",
+  "resetPasswordSubtitle": "このアカウントで以前使用したことのないパスワードを選んでください。",
   "passwordChangedTitle": "パスワードを更新しました",
-  "passwordChangedBody": "新しいパスワードを保存しました。ログイン済みなので、そのまま使えます。",
-  "demoModeHint": "デモ版 — アカウントは不要です",
+  "passwordChangedBody": "新しいパスワードが保存されました。サインイン済みなので、すぐに利用できます。",
+  "demoModeHint": "デモ版 — アカウント不要",
   "demoModeFill": "入力する",
-  "welcomeTrackTitle": "お金の行き先が見えます",
-  "welcomeTrackBody": "入ってきたものと出ていったものを記録するだけ。RainyPenny がそれを、ちゃんと読める一枚の絵に変えます。",
-  "welcomeBudgetTitle": "守れる上限を決める",
-  "welcomeBudgetBody": "支出の項目ごとに月の上限を決めれば、超えたあとではなく、超える前に気づけます。",
-  "welcomeGoalsTitle": "大切なことのために貯める",
-  "welcomeGoalsBody": "目標に名前を付け、金額を決め、貯まっていくのを眺める。もしもの備えは、目に見えるほうが続きます。",
-  "welcomePrivacyTitle": "あなたのお金は、あなたのもの",
-  "welcomePrivacyBody": "数字はあなただけのものです。売ることも、誰かと共有することもありません。",
-  "stepOf": "ステップ {step} / {total}",
-  "onboardingNameTitle": "何とお呼びしましょう？",
-  "onboardingNameBody": "あいさつに使うだけで、ほかでは使いません。",
-  "onboardingNameHint": "下の名前だけで十分です。あとから変えられます。",
-  "onboardingCurrencyTitle": "どの通貨をお使いですか？",
-  "onboardingCurrencyBody": "アプリ内の金額はすべてこの通貨で表示されます。選んでも為替換算はしません。",
+  "welcomeTrackTitle": "お金の行き先を確認しましょう",
+  "welcomeTrackBody": "入ってくるお金と出ていくお金を記録しましょう。RainyPennyが、実際に理解できる形に変えてくれます。",
+  "welcomeBudgetTitle": "守れる上限を設定しましょう",
+  "welcomeBudgetBody": "支出の各部分に月間上限を設定し、超えてしまった後ではなく、超える前に知らせてもらいましょう。",
+  "welcomeGoalsTitle": "大切なもののために貯めましょう",
+  "welcomeGoalsBody": "目標に名前を付け、金額を設定して、達成までの進み具合を見守りましょう。雨の日のための資金も、進捗が見えると貯めやすくなります。",
+  "welcomePrivacyTitle": "あなたのお金はあなたのもの",
+  "welcomePrivacyBody": "あなたの数字はあなた自身のものです。販売されることも、誰かと共有されることもありません。",
+  "stepOf": "ステップ{step}/{total}",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "何とお呼びすればよいですか？",
+  "onboardingNameBody": "ごあいさつに使用するだけで、それ以外には使用しません。",
+  "onboardingNameHint": "名前だけで十分です。後から変更できます。",
+  "onboardingCurrencyTitle": "どの通貨を使いますか？",
+  "onboardingCurrencyBody": "アプリ内のすべての金額がこの通貨で表示されます。選択しても金額が換算されることはありません。",
   "onboardingCurrencySearch": "すべての通貨を検索",
-  "onboardingAppearanceTitle": "好みに合わせる",
-  "onboardingAppearanceBody": "見た目を選んでください。触れるたびに変わり、いつでも戻ってこられます。",
-  "onboardingNotificationsTitle": "把握しつづける",
-  "onboardingNotificationsBody": "ちょうどいいときの静かなひと声が、これを習慣に変えます。",
-  "onboardingNotifyReminders": "使った分を記録するための、やさしいリマインダー",
+  "onboardingAppearanceTitle": "自分らしく設定",
+  "onboardingAppearanceBody": "見た目を選んでください。タップするとすべてが変わり、いつでも戻って変更できます。",
+  "onboardingNotificationsTitle": "しっかり管理しましょう",
+  "onboardingNotificationsBody": "ちょうどよいタイミングのさりげない通知が、これを習慣に変えてくれます。",
+  "onboardingNotifyReminders": "使った金額を記録するためのやさしいリマインダー",
   "onboardingNotifyBudget": "予算を使い切る前のお知らせ",
-  "onboardingNotifySummary": "お金の行き先を毎週まとめてお届け",
+  "onboardingNotifySummary": "お金をどこに使ったかの週間サマリー",
   "onboardingNotifyEnable": "通知をオンにする",
   "onboardingNotifyDone": "通知設定を保存しました",
-  "onboardingNotifyLater": "これらはすべて、設定からいつでも変更できます。",
-  "onboardingReadyTitle": "準備ができました",
-  "onboardingReadyTitleNamed": "準備ができました、{name}さん",
-  "onboardingReadyBody": "初期設定は完了です。使い方をざっと見てみますか？",
-  "onboardingTakeTour": "案内してほしい",
+  "onboardingNotifyLater": "これらはすべて、いつでも設定から変更できます。",
+  "onboardingReadyTitle": "準備完了です",
+  "onboardingReadyTitleNamed": "準備完了です、{name}さん",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "これで設定は完了です。すべての使い方を簡単に案内しましょうか？",
+  "onboardingTakeTour": "案内して",
   "onboardingGoToApp": "アプリへ進む",
-  "onboardingTourLater": "いまはやめておく？ガイドは設定にいつでも置いてあります。",
-  "beginnersGuide": "はじめてのガイド",
-  "guideFinish": "終了",
-  "chapterOf": "第 {number} 章 / 全 {total} 章",
-  "guideOpenScreen": "{screen}を開く",
-  "guideDashboardTitle": "ホーム画面",
-  "guideDashboardBody": "すべてはここから。いちばん上のカードが手元に残っている額で、その下が今期の収入と支出、さらに支出の内訳、予算、目標と続きます。",
-  "guideDashboardTip1": "画面を下に引くと、まとめて更新できます。",
-  "guideDashboardTip2": "収入や支出のカードを押すと、その一覧に直行できます。",
-  "guideDashboardTip3": "何か記録すると、リングや気づきはその場で更新されます。",
+  "onboardingTourLater": "今はしない？ガイドは設定に残るので、いつでも利用できます。",
+  "beginnersGuide": "初心者ガイド",
+  "guideFinish": "完了",
+  "chapterOf": "第{number}章 / 全{total}章",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "guideOpenScreen": "「{screen}」を開く",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "ダッシュボード",
+  "guideDashboardBody": "すべてはここから始まります。上部のカードには残りの金額が表示され、その下にこの期間の収入と支出、続いて支出、予算、目標が表示されます。",
+  "guideDashboardTip1": "画面を下に引っ張って、すべてを一度に更新できます。",
+  "guideDashboardTip2": "収入または支出のカードをタップすると、その一覧に移動できます。",
+  "guideDashboardTip3": "何かを記録すると、リングとインサイトがすぐに更新されます。",
   "guideAddTitle": "お金を記録する",
-  "guideAddBody": "バーの真ん中のボタンがすべての起点です。短いメニューが開き、支出・収入・負債・予算・貯蓄目標を選べます。",
-  "guideAddTip1": "真ん中のボタンを押して、収入か支出を記録します。",
-  "guideAddTip2": "長押しするとメニューを飛ばして、すぐ支出の入力に進めます。",
-  "guideAddTip3": "カテゴリは必ず選んでください — グラフも予算もそこから動きます。",
-  "guideCategoriesTitle": "カテゴリ",
-  "guideCategoriesBody": "カテゴリは支出のまとめ方です。最初から入っているもので大半の人には足りますが、名前を変えたり自分で追加したりもできます。",
-  "guideCategoriesTip1": "設定から「カテゴリの管理」で、変更も追加もできます。",
-  "guideCategoriesTip2": "カテゴリのないものは「その他」に入るので、グラフはごまかしません。",
+  "guideAddBody": "バー中央のボタンからすべてが始まります。タップすると、支出、収入、借金、予算、貯金目標の短いメニューが開きます。",
+  "guideAddTip1": "中央のボタンをタップして、収入または支出を記録します。",
+  "guideAddTip2": "長押しすると、新しい支出の入力画面に直接移動し、メニューをスキップできます。",
+  "guideAddTip3": "必ずカテゴリーを選んでください。チャートと予算が機能するために必要です。",
+  "guideCategoriesTitle": "カテゴリー",
+  "guideCategoriesBody": "カテゴリーは支出をグループ化する方法です。アプリに用意されているカテゴリーでほとんどの人に対応できますが、名前を変更したり、自分で追加したりできます。",
+  "guideCategoriesTip1": "設定から「カテゴリーを管理」を開いて、変更または追加できます。",
+  "guideCategoriesTip2": "カテゴリー未設定のものは「その他」に入るため、チャートを正確に保てます。",
   "guideBudgetTitle": "予算",
-  "guideBudgetBody": "予算はカテゴリごとの月の上限です。使うほどバーが伸び、上限が近づくと色が変わるので、超える前に気づけます。",
-  "guideBudgetTip1": "全部いっぺんにではなく、2つか3つのカテゴリから始めましょう。",
-  "guideBudgetTip2": "上限はふだんの支出より少し高めにして、あとから締めていきます。",
-  "guideBudgetTip3": "予算のお知らせはオンのままに。残りが少なくなると教えてくれます。",
-  "guideSavingsTitle": "貯蓄目標",
-  "guideSavingsBody": "何のために貯めるのかに名前を付け、金額と期日を決めれば、毎月いくら取り分ければ届くかをアプリが計算します。",
-  "guideSavingsTip1": "名前のある目標は、漠然と「貯めたい」より続きます。",
-  "guideSavingsTip2": "大きな目標ひとつより、小さな目標をいくつかのほうが達成しやすいものです。",
-  "guideLoansTitle": "負債とローン",
-  "guideLoansBody": "いくら借りていて、いくらかかり、次の支払いがいつかを記録します。返済中のものはすべて、残額とともに一覧に並びます。",
-  "guideLoansTip1": "期日を入れておけば、支払いリマインダーが追いかけてくれます。",
-  "guideLoansTip2": "延滞した負債は、支払うまでホーム画面に赤で表示されます。",
+  "guideBudgetBody": "予算は1つのカテゴリーに設定する月間上限です。支出が増えるとバーが伸び、上限に近づくと表示が変わるので、超えてしまう前に気づけます。",
+  "guideBudgetTip1": "最初からすべてではなく、2〜3カテゴリーから始めましょう。",
+  "guideBudgetTip2": "普段の支出より少し高めに上限を設定してから、徐々に引き締めましょう。",
+  "guideBudgetTip3": "予算アラートをオンにしておけば、残りが少なくなったときにアプリがお知らせします。",
+  "guideSavingsTitle": "貯金目標",
+  "guideSavingsBody": "何のために貯めるのかを名前で設定し、目標金額と日付を決めると、達成するために毎月いくら貯める必要があるかをアプリが計算します。",
+  "guideSavingsTip1": "名前のある目標は、漠然と貯めようと思うより続けやすくなります。",
+  "guideSavingsTip2": "大きな目標を1つ設定するより、小さな目標を複数設定したほうが達成しやすいものです。",
+  "guideLoansTitle": "借金とローン",
+  "guideLoansBody": "借りている金額、かかる費用、次回の支払期限を記録しましょう。返済中のものは、残りの合計額とともに1つの一覧に表示されます。",
+  "guideLoansTip1": "支払期限を追加すれば、支払いリマインダーが知らせてくれます。",
+  "guideLoansTip2": "期限超過の借金は、支払われるまでダッシュボードに赤色で表示されます。",
   "guideReportsTitle": "レポート",
-  "guideReportsBody": "もう一段深い眺め。収入と支出の対比、カテゴリ別の支出、予算がどれだけ守れたか、そして収入のうちどれだけ手元に残ったか。",
-  "guideReportsTip1": "画面上部で、週・月・四半期を切り替えられます。",
-  "guideReportsTip2": "PDF に書き出したり共有したり — あなたの言語と読む向きで出力されます。",
+  "guideReportsBody": "より詳しい表示です。収入と支出、カテゴリー別支出、予算をどの程度守れたか、収入のうちどれだけ残したかを確認できます。",
+  "guideReportsTip1": "画面上部で週、月、四半期を切り替えられます。",
+  "guideReportsTip2": "PDFをエクスポートまたは共有できます。あなたの言語と表示方向で作成されます。",
   "guideSettingsTitle": "設定",
-  "guideSettingsBody": "言語、通貨、色、お知らせはすべてここにあります。初期設定で固定されるものは何もありません — いつでも変えられます。",
-  "guideSettingsTip1": "40の言語に対応し、右から左に読む言語では画面全体が反転します。",
-  "guideSettingsTip2": "どのお知らせを受け取るか、届いてよい時間帯かを選べます。",
-  "guideSettingsTip3": "通知しない時間帯を設定すると、朝まで届きません。",
-  "guideHabitTitle": "続けるために",
-  "guideHabitBody": "アプリは、入れたものの分だけ役に立ちます。月に1時間より1日1分。2週間続ければ、数字が何かを語り始めます。",
-  "guideHabitTip1": "週末にまとめてではなく、使ったその場で記録しましょう。",
-  "guideHabitTip2": "1日1回ホーム画面を見るだけ。10秒で十分です。",
-  "guideHabitTip3": "このガイドは設定に残ります — いつでも戻ってきてください。",
+  "guideSettingsBody": "言語、通貨、色、アラートはすべてここにあります。セットアップ時に固定されるものはないので、いつでも変更できます。",
+  "guideSettingsTip1": "40言語に対応し、右から左に読む言語ではレイアウト全体が反転します。",
+  "guideSettingsTip2": "受け取りたいアラートと、通知を受け取れる時間帯を選択できます。",
+  "guideSettingsTip3": "おやすみ時間中はすべての通知が朝まで保留されます。",
+  "guideHabitTitle": "習慣にしましょう",
+  "guideHabitBody": "アプリは入力した内容だけの価値があります。月に一度1時間使うより、毎日1分使うほうが効果的です。2週間もすれば、数字が何かを教えてくれるようになります。",
+  "guideHabitTip1": "週末にまとめてではなく、支出したときに記録しましょう。",
+  "guideHabitTip2": "1日1回ダッシュボードを確認しましょう。10秒で十分です。",
+  "guideHabitTip3": "このガイドは設定に残ります。必要なときにいつでも戻ってきてください。",
   "appearance": "外観",
-  "themeCaption": "ライト、ダーク、または端末に合わせて。",
+  "themeCaption": "ライト、ダーク、またはスマートフォンの設定に合わせます。",
   "accentColor": "アクセントカラー",
-  "accentColorCaption": "ボタン、強調表示、グラフの色になります。",
-  "accentSemanticsNote": "収入と支出はどのテーマでも自分の色を保つので、アクセントを変えても数字の意味は変わりません。",
+  "accentColorCaption": "ボタン、ハイライト、チャートの色を変更します。",
+  "accentSemanticsNote": "どのテーマでも収入と支出にはそれぞれ固有の色が使われるため、アクセントを変更しても数字の意味は変わりません。",
   "accentTeal": "ティール",
   "accentGreen": "グリーン",
-  "accentSky": "スカイブルー",
+  "accentSky": "スカイ",
   "accentBlue": "ブルー",
   "accentIndigo": "インディゴ",
   "accentViolet": "バイオレット",
@@ -481,15 +1124,299 @@
   "suggestedLanguages": "おすすめ",
   "allLanguages": "すべての言語",
   "noLanguagesFound": "言語が見つかりません",
-  "noLanguagesFoundMessage": "英語の名称か、2文字のコードで試してください。",
+  "noLanguagesFoundMessage": "英語の言語名、または2文字のコードを試してください。",
   "rightToLeft": "右から左",
   "replayGuide": "ガイドをもう一度見る",
-  "replaySetup": "初期設定をやり直す",
-  "replaySetupBody": "最初の質問にもう一度答えます。記録した内容が消えることはありません。",
-  "rateTitle": "RainyPennyはいかがですか？",
-  "rateBody": "しばらく使っていただいていますね。評価は少しの手間で、ほかの方がアプリを見つける助けになります。",
-  "rateAction": "アプリを評価する",
-  "rateLater": "あとで",
-  "rateNever": "結構です",
-  "rateThanks": "ありがとうございます"
+  "replaySetup": "セットアップをもう一度実行",
+  "replaySetupBody": "初回設定の質問をもう一度進めます。記録済みのデータは削除されません。",
+  "rateTitle": "RainyPennyを気に入っていますか？",
+  "rateBody": "しばらく継続して使っていただいています。評価はすぐに終わり、他の人がアプリを見つける助けになります。",
+  "rateAction": "アプリを評価",
+  "rateLater": "また後で",
+  "rateNever": "いいえ、結構です",
+  "rateThanks": "ありがとうございます",
+
+  "monthlySalary": "月給",
+  "remainingAmount": "残り",
+  "carriedForward": "繰り越し",
+  "carriedForwardHint": "前のサイクルからの残り",
+  "totalSpending": "総支出",
+  "salaryCycle": "給与サイクル",
+  "payday": "給料日",
+  "paydayDescription": "給料が入る日です。財務上の1か月はこの日から、次の給料日の前日までとなります。",
+  "paydayUpdated": "給料日を更新しました",
+  "paydayDayOfMonth": "{day}日",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "日数の少ない月では、代わりに月末日からサイクルが始まります。",
+  "daysLeftInCycle": "{count, plural, =0{サイクル最終日} =1{給料日まであと1日} other{給料日まであと{count}日}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "次の給料日",
+  "spentSoFar": "現在までの支出",
+  "dailyAllowance": "1日に安全に使える金額",
+  "overspentNotice": "このサイクルでは、入ってきた金額以上に支出しています。",
+  "backToThisMonth": "今月に戻る",
+  "cycleRangeLabel": "サイクル",
+  "noSalaryRecorded": "まだ給与が記録されていません",
+  "addSalaryAction": "給与を追加",
+  "cycleOf": "{start} – {end}",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "healthExcellent": "非常に良好",
+  "healthGood": "良好",
+  "healthFair": "普通",
+  "healthNeedsWork": "改善が必要",
+  "healthExcellentBody": "しっかり貯金できており、予算内に収まっています。",
+  "healthGoodBody": "この期間の支出は順調です。",
+  "healthFairBody": "いくつかの予算で支出が速いペースで進んでいます。小さな変更が役立ちます。",
+  "healthNeedsWorkBody": "支出が計画を上回っています。まずは最も大きなカテゴリーから見直しましょう。",
+  "factorSavingsRate": "貯金率",
+  "factorBudgetControl": "予算管理",
+  "factorDebtLoad": "借金の負担",
+  "factorSpendingTrend": "支出傾向",
+  "factorKept": "{percent}%を残しました",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "{percent}%使用済み",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorOfIncome": "収入の{percent}%",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendUp": "{percent}%増加",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendDown": "{percent}%減少",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "このスコアの仕組み",
+  "healthScoreExplainer": "スコアは4つの要素を組み合わせています。収入のうちどれだけ残しているか、予算内にどの程度収められているか、収入のうちどれだけが借金に回っているか、そして支出が増えているか減っているかです。",
+  "scoreWeightLabel": "スコアの{percent}%",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "viewHealthDetails": "内訳を見る",
+
+  "saveChanges": "変更を保存",
+  "profileUpdated": "プロフィールを更新しました",
+  "changePhoto": "写真を変更",
+  "removePhoto": "写真を削除",
+  "personalInformationIntro": "名前と写真はアプリ全体に表示されます。メールアドレスはサインインに使用するアドレスです。",
+  "nameRequired": "名前を入力してください",
+  "emailNotEditable": "サインインに使用するメールアドレスを変更するには、サポートにお問い合わせください。",
+
+  "pressBackAgainToExit": "もう一度戻るを押すと終了します",
+
+  "categoryHousing": "住居",
+  "categoryFood": "食事・外食",
+  "categoryTransport": "交通",
+  "categoryShopping": "買い物",
+  "categoryBills": "請求・光熱費",
+  "categoryEntertainment": "エンターテインメント",
+  "categoryHealth": "健康・フィットネス",
+  "categoryEducation": "教育",
+  "categoryTravel": "旅行",
+  "categorySalary": "給与",
+  "categoryFreelance": "フリーランス",
+  "categoryInvestments": "投資",
+  "categoryGift": "ギフト",
+  "categoryOther": "その他",
+  "categoryGroceries": "食料品",
+  "categoryDining": "外食",
+  "categoryCoffee": "コーヒー",
+  "categoryUtilities": "光熱費",
+  "categoryInternet": "インターネット",
+  "categoryPhone": "電話",
+  "categoryInsurance": "保険",
+  "categorySubscriptions": "サブスクリプション",
+  "categoryPersonalCare": "身だしなみ",
+  "categoryClothing": "衣類",
+  "categoryElectronics": "電子機器",
+  "categoryHomeSupplies": "家庭用品",
+  "categoryPets": "ペット",
+  "categoryChildcare": "育児",
+  "categoryFamily": "家族",
+  "categoryFitness": "フィットネス",
+  "categorySports": "スポーツ",
+  "categoryMedicine": "医薬品",
+  "categoryMedical": "医療",
+  "categoryCharity": "寄付",
+  "categoryTaxes": "税金",
+  "categoryFees": "手数料",
+  "categoryDebt": "借金",
+  "categorySavings": "貯金",
+  "categoryRepairs": "修理",
+  "categoryCarMaintenance": "車のメンテナンス",
+  "categoryFuel": "燃料",
+  "categoryParking": "駐車場",
+  "categoryPublicTransport": "公共交通機関",
+  "categoryRent": "家賃",
+  "categoryMortgage": "住宅ローン",
+  "categoryBonus": "ボーナス",
+  "categoryCommission": "コミッション",
+  "categoryPension": "年金",
+  "categoryInterest": "利息",
+  "categoryDividends": "配当",
+  "categoryCashback": "キャッシュバック",
+  "categoryRefund": "返金",
+  "categoryRentalIncome": "賃貸収入",
+
+  "addCategory": "新しいカテゴリー",
+  "filterByCategory": "カテゴリーで絞り込む",
+  "allCategories": "すべてのカテゴリー",
+  "clearFilters": "フィルターをクリア",
+  "spentInCategory": "{category}  ·  {amount}",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "allTime": "全期間",
+  "customRange": "カスタム",
+  "selectDateRange": "期間を選択",
+  "rangeApplied": "表示中：{start} – {end}",
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+
+
+  "loans": "ローン",
+  "debts": "借金",
+  "noLoansTitle": "ローンはありません",
+  "noLoansBody": "現在有効なローンはありません。",
+
+  "emptyHealthTitle": "財務スコアはまだありません",
+  "@emptyHealthTitle": {
+    "description": "健全性スコアを計算するためのデータが十分でない場合に表示するタイトル"
+  },
+  "emptyHealthDescription": "正確な健全性スコアを計算するには、もう少し財務アクティビティが必要です。",
+  "@emptyHealthDescription": {
+    "description": "財務健全性画面の空の状態で表示する説明メッセージ"
+  },
+  "emptyHealthAddTransactions": "収入または支出の取引を追加",
+  "@emptyHealthAddTransactions": {
+    "description": "取引の追加を促すチェックリスト項目"
+  },
+  "emptyHealthSetBudgets": "月間予算を設定",
+  "@emptyHealthSetBudgets": {
+    "description": "予算設定を促すチェックリスト項目"
+  },
+  "emptyHealthTrackLoans": "ローンや借金を記録（任意）",
+  "@emptyHealthTrackLoans": {
+    "description": "ローンの記録を促すチェックリスト項目"
+  },
+  "emptyHealthCardSubtitle": "取引を追加してスコアを計算し、インサイトを確認しましょう。",
+  "@emptyHealthCardSubtitle": {
+    "description": "データがない場合にダッシュボードの健全性カードへ表示するサブタイトル"
+  },
+  
+  "smartBudgetSplit": "スマート予算分割",
+  "@smartBudgetSplit": {
+    "description": "給与をスマートに予算分割するシートのタイトル"
+  },
+  "smartBudgetSplitSubtitle": "推奨上限を計算するため、月給を入力してください",
+  "@smartBudgetSplitSubtitle": {
+    "description": "給与予算分割の仕組みを説明するサブタイトル"
+  },
+  "monthlyNetSalary": "月間手取り給与",
+  "@monthlyNetSalary": {
+    "description": "月間手取り給与入力欄のラベル"
+  },
+  "categoryAllocations": "カテゴリー別配分",
+  "@categoryAllocations": {
+    "description": "推奨カテゴリー配分一覧の見出し"
+  },
+  "totalBudgeted": "合計：{amount}",
+  "@totalBudgeted": {
+    "description": "カテゴリー全体に設定された予算の合計額",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "すべての予算を適用",
+  "@applyAllBudgets": {
+    "description": "推奨されたすべてのカテゴリー上限を適用するボタンラベル"
+  },
+  "applyingBudgets": "予算を適用しています...",
+  "@applyingBudgets": {
+    "description": "予算適用中に表示する読み込み状態のラベル"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{1カテゴリーの予算を作成しました。} other{{count}カテゴリーの予算を作成しました。}}",
+  "@budgetsCreatedSuccess": {
+    "description": "予算作成時に表示する成功スナックバーのメッセージ",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "予算の保存に失敗しました。",
+  "@failedToSaveBudgets": {
+    "description": "予算の保存に失敗した場合のエラーメッセージ"
+  },
+  "recommendedBudget": "おすすめの予算"
 }

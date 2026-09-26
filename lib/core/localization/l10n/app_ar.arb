@@ -8,36 +8,71 @@
   "navReports": "التقارير",
   "navProfile": "الملف الشخصي",
   "greetingMorning": "صباح الخير، {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingAfternoon": "مساء الخير، {name}",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingEvening": "مساء الخير، {name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingSubtitle": "إليك نظرة عامة على وضعك المالي",
   "totalBalance": "الرصيد الإجمالي",
   "vsLastPeriod": "مقارنة بالفترة السابقة",
   "income": "الدخل",
   "expenses": "المصروفات",
   "netBalance": "صافي الرصيد",
-  "lastThirtyDays": "آخر ٣٠ يومًا",
+  "lastThirtyDays": "آخر 30 يومًا",
   "quickActions": "إجراءات سريعة",
   "addIncome": "إضافة دخل",
   "addExpense": "إضافة مصروف",
-  "spendingOverview": "نظرة على الإنفاق",
-  "recentTransactions": "أحدث المعاملات",
+  "spendingOverview": "نظرة عامة على الإنفاق",
+  "recentTransactions": "المعاملات الأخيرة",
   "seeAll": "عرض الكل",
   "viewAll": "عرض الكل",
-  "budgetProgress": "تقدّم الميزانية",
+  "budgetProgress": "تقدم الميزانية",
   "savingsGoals": "أهداف الادخار",
   "financialInsight": "رؤية مالية",
   "financialHealth": "الصحة المالية",
   "ofTotal": "من {total}",
-  "searchTransactions": "ابحث في المعاملات",
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "searchTransactions": "البحث في المعاملات",
   "filterAll": "الكل",
   "filterIncome": "الدخل",
   "filterExpenses": "المصروفات",
   "today": "اليوم",
   "yesterday": "أمس",
-  "noTransactionsTitle": "لا توجد معاملات",
-  "noTransactionsBody": "جرّب بحثًا أو تصفية مختلفة لعرض المزيد.",
-  "transactionCount": "{count, plural, =0{لا توجد معاملات} =1{معاملة واحدة} =2{معاملتان} few{{count} معاملات} many{{count} معاملة} other{{count} معاملة}}",
+  "noTransactionsTitle": "لم يتم العثور على معاملات",
+  "noTransactionsBody": "جرّب بحثًا أو فلترًا مختلفًا لعرض المزيد من نشاطك.",
+  "transactionCount": "{count, plural, =0{لا توجد معاملات} =1{معاملة واحدة} other{{count} معاملات}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "addTransaction": "إضافة معاملة",
   "amount": "المبلغ",
   "category": "الفئة",
@@ -46,37 +81,65 @@
   "noteHint": "ملاحظة اختيارية",
   "saveIncome": "حفظ الدخل",
   "saveExpense": "حفظ المصروف",
-  "selectCategory": "اختر الفئة",
+  "selectCategory": "اختر فئة",
   "transactionSaved": "تم حفظ المعاملة",
   "amountRequired": "أدخل مبلغًا أكبر من صفر",
-  "titleRequired": "أعطِ هذه المعاملة اسمًا",
+  "titleRequired": "أدخل اسمًا لهذه المعاملة",
   "descriptionLabel": "الوصف",
-  "descriptionHint": "مثال: بقالة",
+  "descriptionHint": "مثال: مشتريات البقالة",
   "budget": "الميزانية",
   "budgets": "الميزانيات",
   "totalBudget": "إجمالي الميزانية",
   "spent": "المنفق",
   "remaining": "المتبقي",
   "budgetUsed": "تم استخدام {percent}%",
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "onTrack": "على المسار",
-  "approachingLimit": "يقترب من الحد",
-  "overBudget": "تجاوز الميزانية",
-  "savings": "المدخرات",
+  "approachingLimit": "تقترب من الحد",
+  "overBudget": "تجاوزت الميزانية",
+  "savings": "الادخار",
   "yourGoals": "أهدافك",
-  "saved": "تم ادخاره",
+  "saved": "المدخر",
   "target": "الهدف",
   "monthlyContribution": "شهريًا",
-  "addFunds": "إضافة مبلغ",
+  "addFunds": "إضافة أموال",
   "goalComplete": "تم تحقيق الهدف",
-  "monthsToGo": "{count, plural, =1{بقي شهر واحد} =2{بقي شهران} few{بقيت {count} أشهر} many{بقي {count} شهرًا} other{بقي {count} شهر}}",
+  "monthsToGo": "{count, plural, =1{شهر واحد متبقٍ} other{{count} أشهر متبقية}}",
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "loansAndDebts": "القروض والديون",
   "totalOutstanding": "إجمالي المستحق",
   "monthlyPayment": "شهريًا",
-  "nextPayment": "الدفعة القادمة",
+  "nextPayment": "الدفعة التالية",
   "paidOff": "تم سداد {percent}%",
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "interestRate": "الفائدة",
   "upcomingPayments": "الدفعات القادمة",
-  "dueInDays": "{count, plural, =0{مستحق اليوم} =1{مستحق غدًا} =2{مستحق بعد يومين} few{مستحق خلال {count} أيام} many{مستحق خلال {count} يومًا} other{مستحق خلال {count} يوم}}",
+  "dueInDays": "{count, plural, =0{مستحق اليوم} =1{مستحق غدًا} other{مستحق خلال {count} أيام}}",
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "overdue": "متأخر",
   "reports": "التقارير",
   "week": "أسبوع",
@@ -85,7 +148,7 @@
   "incomeVsExpenses": "الدخل مقابل المصروفات",
   "spendingByCategory": "الإنفاق حسب الفئة",
   "budgetPerformance": "أداء الميزانية",
-  "insights": "رؤى",
+  "insights": "الرؤى",
   "savingsRate": "معدل الادخار",
   "profile": "الملف الشخصي",
   "account": "الحساب",
@@ -103,12 +166,19 @@
   "termsAndConditions": "الشروط والأحكام",
   "logOut": "تسجيل الخروج",
   "memberSince": "عضو منذ {date}",
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "themeSystem": "النظام",
   "themeLight": "فاتح",
   "themeDark": "داكن",
   "settings": "الإعدادات",
-  "noNotificationsTitle": "لا يوجد جديد",
-  "noNotificationsBody": "ستظهر هنا الرؤى والتذكيرات الجديدة.",
+  "noNotificationsTitle": "أنت على اطلاع بكل شيء",
+  "noNotificationsBody": "ستظهر الرؤى والتذكيرات الجديدة هنا.",
   "cancel": "إلغاء",
   "save": "حفظ",
   "done": "تم",
@@ -121,44 +191,65 @@
   "undo": "تراجع",
   "add": "إضافة",
   "create": "إنشاء",
-  "nameRequired": "أدخل اسمك",
+  "nameRequired": "أدخل اسمًا",
   "amountAboveZero": "أدخل مبلغًا أكبر من صفر",
   "editTransaction": "تعديل المعاملة",
   "deleteTransaction": "حذف المعاملة؟",
-  "deleteTransactionBody": "سيتم حذف {title} من سجلك.",
+  "deleteTransactionBody": "ستتم إزالة {title} من سجلك.",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
   "transactionDeleted": "تم حذف المعاملة",
   "transactionUpdated": "تم تحديث المعاملة",
   "newBudget": "ميزانية جديدة",
   "editBudget": "تعديل الميزانية",
   "budgetLimit": "الحد الشهري",
   "deleteBudget": "حذف الميزانية؟",
-  "deleteBudgetBody": "سيتم حذف ميزانية {category}. لن تتأثر معاملاتك.",
+  "deleteBudgetBody": "ستتم إزالة ميزانية {category}. لن تتأثر معاملاتك.",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
   "budgetSaved": "تم حفظ الميزانية",
   "budgetDeleted": "تم حذف الميزانية",
-  "allCategoriesBudgeted": "كل الفئات لديها ميزانية بالفعل",
+  "allCategoriesBudgeted": "لدى جميع الفئات ميزانية بالفعل",
   "noBudgetsTitle": "لا توجد ميزانيات بعد",
-  "noBudgetsBody": "حدد حدًا شهريًا لفئة لتبدأ في متابعتها.",
+  "noBudgetsBody": "حدد حدًا شهريًا لفئة ما لبدء تتبعها.",
   "newGoal": "هدف جديد",
   "editGoal": "تعديل الهدف",
   "goalName": "اسم الهدف",
   "goalNameHint": "مثال: صندوق الطوارئ",
   "targetAmount": "المبلغ المستهدف",
-  "alreadySaved": "المدخر حاليًا",
+  "alreadySaved": "المدخر بالفعل",
   "deleteGoal": "حذف الهدف؟",
-  "deleteGoalBody": "سيتم حذف {name} وكل تقدمه.",
+  "deleteGoalBody": "ستتم إزالة {name} وتقدمه.",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "goalSaved": "تم حفظ الهدف",
   "goalDeleted": "تم حذف الهدف",
   "noGoalsTitle": "لا توجد أهداف ادخار بعد",
-  "noGoalsBody": "حدد هدفًا وسيتابع RainyPenny تقدمك.",
-  "fundsAdded": "تمت إضافة المبلغ",
+  "noGoalsBody": "حدد هدفًا ومبلغًا مستهدفًا، وسيتتبع RainyPenny تقدمك.",
+  "fundsAdded": "تمت إضافة الأموال",
   "newDebt": "قرض أو بطاقة جديدة",
   "editDebt": "تعديل القرض",
   "debtName": "الاسم",
   "debtNameHint": "مثال: قرض السيارة",
-  "lender": "الجهة المُقرِضة",
-  "lenderHint": "مثال: بنك المريديان",
+  "lender": "جهة الإقراض",
+  "lenderHint": "مثال: بنك ميريديان",
   "originalAmount": "المبلغ الأصلي",
-  "creditLimit": "الحد الائتماني",
+  "creditLimit": "حد الائتمان",
   "remainingBalance": "الرصيد المتبقي",
   "interestRatePercent": "معدل الفائدة (%)",
   "kindLoan": "قرض",
@@ -166,82 +257,268 @@
   "recordPayment": "تسجيل دفعة",
   "paymentRecorded": "تم تسجيل الدفعة",
   "deleteDebt": "حذف هذا الدين؟",
-  "deleteDebtBody": "سيتم حذف {name} من ديونك.",
+  "deleteDebtBody": "ستتم إزالة {name} من ديونك.",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "debtSaved": "تم الحفظ",
   "debtDeleted": "تم الحذف",
-  "noDebtsTitle": "لا توجد ديون مُتابَعة",
+  "noDebtsTitle": "لا توجد ديون متتبعة",
   "noDebtsBody": "أضف قرضًا أو بطاقة ائتمان لمتابعة السداد.",
   "insightBudgetExceededTitle": "تم تجاوز ميزانية {subject}",
-  "insightBudgetExceededBody": "لقد تجاوزت ميزانية {subject} بمقدار {amount} في هذه الفترة.",
-  "insightBudgetApproachingTitle": "{subject} تقترب من حدها",
-  "insightBudgetApproachingBody": "تم استخدام {percent}% من ميزانية {subject}، وبقي {amount}.",
-  "insightOverIncomeTitle": "الإنفاق يتجاوز الدخل",
-  "insightOverIncomeBody": "أنفقت أكثر مما كسبت في هذه الفترة. راجع أكبر فئاتك لإعادة التوازن.",
-  "insightCategoryUpTitle": "ارتفع الإنفاق على {subject}",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "لقد أنفقت {amount} أكثر من ميزانية {subject} لهذه الفترة.",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingTitle": "اقتربت ميزانية {subject} من الحد",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "تم استخدام {percent}% من ميزانية {subject}، ويتبقى {amount}.",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "insightOverIncomeTitle": "الإنفاق أعلى من الدخل",
+  "insightOverIncomeBody": "لقد أنفقت أكثر مما كسبت خلال هذه الفترة. راجع أكبر فئات إنفاقك لإعادة التوازن.",
+  "insightCategoryUpTitle": "إنفاق {subject} مرتفع",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
   "insightCategoryUpBody": "إنفاقك على {subject} أعلى بنسبة {percent}% من الفترة السابقة.",
-  "insightTrendDownTitle": "الإنفاق في انخفاض",
-  "insightTrendDownBody": "إجمالي الإنفاق أقل بنسبة {percent}% من الفترة السابقة.",
-  "insightTrendUpTitle": "الإنفاق في ارتفاع",
-  "insightTrendUpBody": "إجمالي الإنفاق أعلى بنسبة {percent}% من الفترة السابقة.",
-  "insightSavingsStrongTitle": "ادخار قوي هذه الفترة",
-  "insightSavingsStrongBody": "احتفظت بـ {percent}% من دخلك — أعلى بكثير من هدف {target}%.",
-  "insightSavingsLowTitle": "معدل الادخار أقل من المستهدف",
-  "insightSavingsLowBody": "احتفظت بـ {percent}% من دخلك هذه الفترة. استهدف {target}%.",
-  "insightGoalNearlyTitle": "{subject} على وشك الاكتمال",
-  "insightGoalNearlyBody": "بقي {amount} فقط للوصول إلى {subject}.",
-  "insightGoalOnTrackTitle": "أنت على المسار الصحيح نحو {subject}",
-  "insightGoalOnTrackBody": "بمبلغ {amount} شهريًا ستصل إلى هذا الهدف خلال {months, plural, =1{شهر واحد} =2{شهرين} few{{months} أشهر} many{{months} شهرًا} other{{months} شهر}}.",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "الإنفاق يتجه نحو الانخفاض",
+  "insightTrendDownBody": "انخفض إجمالي الإنفاق بنسبة {percent}% مقارنة بالفترة السابقة.",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "الإنفاق يتجه نحو الارتفاع",
+  "insightTrendUpBody": "ارتفع إجمالي الإنفاق بنسبة {percent}% مقارنة بالفترة السابقة.",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "ادخار قوي خلال هذه الفترة",
+  "insightSavingsStrongBody": "احتفظت بنسبة {percent}% من دخلك — وهي أعلى بكثير من الهدف البالغ {target}%.",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsLowTitle": "معدل الادخار أقل من الهدف",
+  "insightSavingsLowBody": "احتفظت بنسبة {percent}% من دخلك خلال هذه الفترة. استهدف {target}%.",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "اقترب تمويل {subject} من الاكتمال",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalNearlyBody": "لم يتبقَّ سوى {amount} للوصول إلى {subject}.",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "أنت على المسار الصحيح لتحقيق {subject}",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "بمبلغ {amount} شهريًا، ستصل إلى هذا الهدف خلال {months, plural, =1{شهر واحد} other{{months} أشهر}}.",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
   "insightDebtOverdueTitle": "دفعة {subject} متأخرة",
-  "insightDebtOverdueBody": "دفعة {subject} البالغة {amount} متأخرة منذ {days, plural, =1{يوم واحد} =2{يومين} few{{days} أيام} many{{days} يومًا} other{{days} يوم}}.",
-  "insightDebtDueTitle": "دفعة {subject} تقترب",
-  "insightDebtDueBody": "مبلغ {amount} مستحق {days, plural, =0{اليوم} =1{غدًا} =2{بعد يومين} few{خلال {days} أيام} many{خلال {days} يومًا} other{خلال {days} يوم}}.",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "دفعة {subject} البالغة {amount} متأخرة لمدة {days, plural, =1{يوم واحد} other{{days} أيام}}.",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "دفعة {subject} قادمة",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "يستحق مبلغ {amount} {days, plural, =0{اليوم} =1{غدًا} other{خلال {days} أيام}}.",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "signIn": "تسجيل الدخول",
   "signUp": "إنشاء حساب",
-  "signInSubtitle": "أهلًا بعودتك. أموالك في انتظارك.",
-  "signUpSubtitle": "بضع تفاصيل وتكون جاهزًا.",
+  "signInSubtitle": "مرحبًا بعودتك. أموالك بانتظارك.",
+  "signUpSubtitle": "بعض التفاصيل فقط وستكون جاهزًا.",
   "emailLabel": "البريد الإلكتروني",
   "emailHint": "you@email.com",
   "passwordLabel": "كلمة المرور",
-  "passwordHint": "٨ أحرف على الأقل",
+  "passwordHint": "8 أحرف على الأقل",
   "fullNameLabel": "الاسم الكامل",
-  "fullNameHint": "أليكس مورغان",
-  "forgotPassword": "نسيت كلمة المرور؟",
-  "resetSent": "تحقق من بريدك للحصول على رابط إعادة التعيين",
+  "fullNameHint": "أحمد محمد",
+  "forgotPassword": "هل نسيت كلمة المرور؟",
+  "resetSent": "تحقق من بريدك الوارد للحصول على رابط إعادة التعيين",
   "noAccountYet": "جديد هنا؟",
   "haveAccount": "لديك حساب بالفعل؟",
-  "emailInvalid": "أدخل بريدًا إلكترونيًا صالحًا",
-  "passwordTooShort": "استخدم ٨ أحرف على الأقل",
+  "emailInvalid": "أدخل عنوان بريد إلكتروني صالحًا",
+  "passwordTooShort": "استخدم 8 أحرف على الأقل",
   "signOutConfirm": "تسجيل الخروج؟",
   "signOutBody": "ستحتاج إلى تسجيل الدخول مرة أخرى لرؤية أموالك.",
   "dataSource": "مصدر البيانات",
-  "insightWeeklySummaryTitle": "أسبوعك في لمحة",
-  "insightWeeklySummaryBody": "اطلع على أين ذهبت أموالك هذا الأسبوع وكيف تسير ميزانياتك.",
+  "insightWeeklySummaryTitle": "ملخص أسبوعك",
+  "insightWeeklySummaryBody": "شاهد أين ذهبت أموالك هذا الأسبوع وكيف تسير ميزانياتك.",
   "notificationSettings": "الإشعارات",
   "alertsSection": "التنبيهات",
   "budgetAlerts": "تنبيهات الميزانية",
-  "budgetAlertsBody": "عندما تقترب ميزانية من حدها أو تتجاوزه",
+  "budgetAlertsBody": "عندما تقترب الميزانية من حدها أو تتجاوزه",
   "paymentReminders": "تذكيرات الدفع",
-  "paymentRemindersBody": "قبل أيام قليلة من موعد استحقاق الدفعة",
+  "paymentRemindersBody": "قبل حلول موعد الدفع ببضعة أيام",
   "savingsUpdates": "تحديثات الادخار",
-  "savingsUpdatesBody": "تقدمك نحو أهدافك",
+  "savingsUpdatesBody": "تقدم أهدافك",
   "weeklySummaryLabel": "الملخص الأسبوعي",
-  "weeklySummaryBody": "خلاصة الأسبوع المنقضي",
+  "weeklySummaryBody": "ملخص للأسبوع المنصرم",
   "scheduleSection": "التوقيت",
   "reminderTime": "وقت التذكير",
   "quietHours": "ساعات الهدوء",
   "quietHoursValue": "{start} – {end}",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
   "summaryDay": "يوم الملخص",
-  "permissionRequired": "الإشعارات معطّلة",
-  "permissionRequiredBody": "اسمح بالإشعارات ليتمكن RainyPenny من تنبيهك قبل أن تفلت منك ميزانية أو دفعة.",
+  "permissionRequired": "الإشعارات متوقفة",
+  "permissionRequiredBody": "اسمح بالإشعارات حتى يتمكن RainyPenny من تنبيهك قبل أن تتجاوز ميزانية أو يفوتك موعد دفع.",
   "allowNotifications": "السماح بالإشعارات",
-  "permissionDenied": "الإشعارات محظورة. يمكنك تفعيلها من إعدادات جهازك.",
-  "upcomingAlerts": "المجدولة",
-  "noScheduledAlerts": "لا يوجد شيء مجدول حاليًا",
-  "noScheduledAlertsBody": "تظهر التنبيهات هنا كلما اقتربت ميزانياتك ودفعاتك من حدودها.",
+  "permissionDenied": "الإشعارات محظورة. يمكنك تشغيلها من إعدادات جهازك.",
+  "upcomingAlerts": "مجدولة",
+  "noScheduledAlerts": "لا توجد تنبيهات مجدولة حاليًا",
+  "noScheduledAlertsBody": "ستظهر التنبيهات هنا مع اقتراب ميزانياتك ومدفوعاتك من حدودها.",
   "scheduledFor": "مجدول في {date}",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "everyWeek": "كل أسبوع",
-  "allNotificationsOff": "جميع الإشعارات معطّلة",
-  "needsAttention": "يحتاج انتباهًا",
+  "allNotificationsOff": "جميع الإشعارات متوقفة",
+  "needsAttention": "يحتاج إلى انتباه",
   "quickActionsTitle": "ماذا تريد أن تفعل؟",
   "createSection": "تسجيل",
   "jumpToSection": "انتقل إلى",
@@ -249,101 +526,420 @@
   "addBudgetAction": "إضافة ميزانية",
   "addGoalAction": "إضافة هدف",
   "longPressHint": "نصيحة: اضغط مطولًا على + لتسجيل مصروف مباشرة",
-  "searchCurrencies": "ابحث عن عملة",
+  "searchCurrencies": "البحث عن العملات",
+  "@searchCurrencies": {
+    "description": "منتقي العملات: البحث عن العملات"
+  },
   "noCurrenciesFound": "لم يتم العثور على عملات",
-  "noCurrenciesFoundMessage": "جرّب رمزًا أو اسمًا مختلفًا.",
-  "popularCurrencies": "الأكثر استخدامًا",
-  "allCurrencies": "كل العملات",
+  "@noCurrenciesFound": {
+    "description": "منتقي العملات: لم يتم العثور على عملات"
+  },
+  "noCurrenciesFoundMessage": "جرّب رمزًا أو رمزًا مختصرًا أو اسمًا مختلفًا.",
+  "@noCurrenciesFoundMessage": {
+    "description": "منتقي العملات: رسالة عدم العثور على عملات"
+  },
+  "popularCurrencies": "شائعة",
+  "@popularCurrencies": {
+    "description": "منتقي العملات: العملات الشائعة"
+  },
+  "allCurrencies": "جميع العملات",
+  "@allCurrencies": {
+    "description": "منتقي العملات: جميع العملات"
+  },
   "totalLoanAmount": "إجمالي مبلغ القرض",
-  "installmentAmount": "قيمة القسط",
+  "@totalLoanAmount": {
+    "description": "تفاصيل القرض: المبلغ الأصلي المقترض"
+  },
+  "installmentAmount": "مبلغ القسط",
+  "@installmentAmount": {
+    "description": "تفاصيل القرض: المبلغ المستحق في كل دورة"
+  },
   "numberOfInstallments": "عدد الأقساط",
+  "@numberOfInstallments": {
+    "description": "محرر القرض: مدة خطة السداد"
+  },
   "paidInstallments": "الأقساط المدفوعة",
+  "@paidInstallments": {
+    "description": "تفاصيل القرض: الأقساط التي تمت تسويتها بالفعل"
+  },
   "remainingInstallments": "الأقساط المتبقية",
-  "installmentsPaidOf": "{paid} من {total} مدفوعة",
+  "@remainingInstallments": {
+    "description": "تفاصيل القرض: الأقساط التي لا تزال مستحقة"
+  },
+  "installmentsPaidOf": "تم دفع {paid} من أصل {total}",
+  "@installmentsPaidOf": {
+    "description": "تفاصيل القرض: عداد الأقساط",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "finalPayment": "الدفعة الأخيرة",
-  "paymentDueDate": "تاريخ استحقاق الدفعة",
+  "@finalPayment": {
+    "description": "تفاصيل القرض: تاريخ آخر قسط"
+  },
+  "paymentDueDate": "تاريخ استحقاق الدفع",
+  "@paymentDueDate": {
+    "description": "محرر القرض: يوم الشهر الذي يستحق فيه الدفع"
+  },
   "dueOnDayOfMonth": "اليوم {day} من كل شهر",
+  "@dueOnDayOfMonth": {
+    "description": "تفاصيل القرض: يوم الاستحقاق المتكرر",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
   "loanStatus": "الحالة",
-  "statusActive": "على المسار الصحيح",
-  "statusDueSoon": "مستحق قريبًا",
+  "@loanStatus": {
+    "description": "تفاصيل القرض: الحالة الحالية للدين"
+  },
+  "statusActive": "على المسار",
+  "@statusActive": {
+    "description": "حالة القرض: يتم سداده بشكل طبيعي"
+  },
+  "statusDueSoon": "يستحق قريبًا",
+  "@statusDueSoon": {
+    "description": "حالة القرض: ضمن فترة التذكير"
+  },
   "statusOverdue": "متأخر",
-  "statusCompleted": "مسدد بالكامل",
-  "repaymentProgress": "تقدّم السداد",
+  "@statusOverdue": {
+    "description": "حالة القرض: تجاوز تاريخ الاستحقاق"
+  },
+  "statusCompleted": "تم السداد",
+  "@statusCompleted": {
+    "description": "حالة القرض: تم سداده بالكامل"
+  },
+  "repaymentProgress": "تقدم السداد",
+  "@repaymentProgress": {
+    "description": "تفاصيل القرض: عنوان قسم أشرطة التقدم"
+  },
   "byAmount": "حسب المبلغ",
+  "@byAmount": {
+    "description": "تفاصيل القرض: التقدم مقاسًا بالمال"
+  },
   "byInstallments": "حسب الأقساط",
+  "@byInstallments": {
+    "description": "تفاصيل القرض: التقدم مقاسًا بالدفعات"
+  },
   "startDate": "تاريخ البدء",
-  "openEnded": "غير محدد المدة",
+  "@startDate": {
+    "description": "محرر القرض: تاريخ بدء السداد"
+  },
+  "openEnded": "مفتوح المدة",
+  "@openEnded": {
+    "description": "تفاصيل القرض: رصيد متجدد دون مدة محددة"
+  },
   "loanDetails": "تفاصيل القرض",
+  "@loanDetails": {
+    "description": "عنوان شاشة تفاصيل القرض"
+  },
   "notSet": "غير محدد",
-  "insightDebtDueTodayTitle": "{subject} مستحق اليوم",
-  "insightDebtDueTodayBody": "دفعتك البالغة {amount} مستحقة اليوم. نقرة سريعة تبقيها في موعدها.",
+  "@notSet": {
+    "description": "يظهر عندما لا يتم إدخال قيمة اختيارية"
+  },
+  "insightDebtDueTodayTitle": "يستحق {subject} اليوم",
+  "@insightDebtDueTodayTitle": {
+    "description": "إشعار: يستحق قسط اليوم",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "دفعة {amount} مستحقة اليوم. بنقرة سريعة تحافظ على انتظام السداد.",
+  "@insightDebtDueTodayBody": {
+    "description": "نص الإشعار: قسط مستحق اليوم",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "remindMorningTitle": "صباح الخير ☀️",
-  "remindMorningBody": "ابدأ يومك متحكمًا في أموالك. هل هناك ما تضيفه من الأمس؟",
-  "remindNoonTitle": "متابعة الظهيرة",
-  "remindNoonBody": "غداء أو قهوة أو مواصلات؟ أضفه في ثوانٍ.",
+  "@remindMorningTitle": {
+    "description": "عنوان تذكير المصروفات الصباحي"
+  },
+  "remindMorningBody": "ابدأ يومك وأنت مسيطر على أموالك. هل لديك شيء من الأمس تريد إضافته؟",
+  "@remindMorningBody": {
+    "description": "نص تذكير المصروفات الصباحي"
+  },
+  "remindNoonTitle": "تذكير منتصف اليوم",
+  "@remindNoonTitle": {
+    "description": "عنوان تذكير المصروفات وقت الظهر"
+  },
+  "remindNoonBody": "غداء، قهوة، أجرة؟ أضفها في بضع ثوانٍ.",
+  "@remindNoonBody": {
+    "description": "نص تذكير المصروفات وقت الظهر"
+  },
   "remindAfternoonTitle": "تحديث سريع",
-  "remindAfternoonBody": "سجّل ما أنفقته حتى الآن ليبقى يومك دقيقًا.",
-  "remindEveningTitle": "ختام اليوم",
-  "remindEveningBody": "دقيقتان الآن وتكتمل أرقام اليوم.",
-  "happyWeekendTitle": "عطلة سعيدة! 🎉",
-  "happyWeekendBody": "استمتع بها — وانتبه لمصروف نهاية الأسبوع.",
+  "@remindAfternoonTitle": {
+    "description": "عنوان تذكير المصروفات بعد الظهر"
+  },
+  "remindAfternoonBody": "سجّل ما أنفقته حتى الآن وحافظ على دقة اليوم.",
+  "@remindAfternoonBody": {
+    "description": "نص تذكير المصروفات بعد الظهر"
+  },
+  "remindEveningTitle": "اختتام اليوم",
+  "@remindEveningTitle": {
+    "description": "عنوان تذكير المصروفات المسائي"
+  },
+  "remindEveningBody": "دقيقتان الآن وتصبح أرقام اليوم مكتملة.",
+  "@remindEveningBody": {
+    "description": "نص تذكير المصروفات المسائي"
+  },
+  "happyWeekendTitle": "عطلة نهاية أسبوع سعيدة! 🎉",
+  "@happyWeekendTitle": {
+    "description": "عنوان تحية عطلة نهاية الأسبوع"
+  },
+  "happyWeekendBody": "استمتع بها — وراقب إنفاق عطلة نهاية الأسبوع.",
+  "@happyWeekendBody": {
+    "description": "نص تحية عطلة نهاية الأسبوع"
+  },
   "dailyReminders": "تذكيرات المصروفات اليومية",
-  "dailyRemindersBody": "تنبيهات لطيفة لتبقى مصروفاتك محدّثة",
-  "weekendGreeting": "عطلة سعيدة",
-  "weekendGreetingBody": "تحية ودّية في بداية عطلتك",
+  "@dailyReminders": {
+    "description": "إعداد الإشعارات: التذكيرات اليومية"
+  },
+  "dailyRemindersBody": "تذكيرات ودية للحفاظ على تحديث مصروفاتك",
+  "@dailyRemindersBody": {
+    "description": "وصف إعداد الإشعارات"
+  },
+  "weekendGreeting": "تحية عطلة نهاية الأسبوع",
+  "@weekendGreeting": {
+    "description": "إعداد الإشعارات: تحية عطلة نهاية الأسبوع"
+  },
+  "weekendGreetingBody": "تحية ودية في بداية عطلة نهاية الأسبوع",
+  "@weekendGreetingBody": {
+    "description": "وصف إعداد الإشعارات"
+  },
   "reminderTimesSection": "أوقات التذكير",
+  "@reminderTimesSection": {
+    "description": "عنوان قسم الفترات اليومية الأربع"
+  },
   "slotMorning": "الصباح",
-  "slotNoon": "الظهيرة",
+  "@slotMorning": {
+    "description": "فترة التذكير اليومية"
+  },
+  "slotNoon": "الظهر",
+  "@slotNoon": {
+    "description": "فترة التذكير اليومية"
+  },
   "slotAfternoon": "بعد الظهر",
+  "@slotAfternoon": {
+    "description": "فترة التذكير اليومية"
+  },
   "slotEvening": "المساء",
+  "@slotEvening": {
+    "description": "فترة التذكير اليومية"
+  },
   "everyDay": "كل يوم",
+  "@everyDay": {
+    "description": "تكرار وصول الإشعار"
+  },
   "financialReport": "التقرير المالي",
-  "preparedFor": "مُعد لصالح",
-  "generatedOn": "تاريخ الإصدار",
-  "reportDisclaimer": "تم إنشاؤه بواسطة RainyPenny من سجلاتك الخاصة.",
-  "pageOf": "صفحة {page} من {total}",
+  "@financialReport": {
+    "description": "عنوان ملف PDF المُصدّر"
+  },
+  "preparedFor": "مُعدّ لـ",
+  "@preparedFor": {
+    "description": "غلاف PDF: صاحب التقرير"
+  },
+  "generatedOn": "تاريخ الإنشاء",
+  "@generatedOn": {
+    "description": "غلاف PDF: تاريخ إنشاء التقرير"
+  },
+  "reportDisclaimer": "تم إنشاء هذا التقرير بواسطة RainyPenny من سجلاتك الخاصة.",
+  "@reportDisclaimer": {
+    "description": "ملاحظة تذييل PDF"
+  },
+  "pageOf": "الصفحة {page} من {total}",
+  "@pageOf": {
+    "description": "ترقيم صفحات تذييل PDF",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "overview": "نظرة عامة",
+  "@overview": {
+    "description": "قسم PDF: الإجماليات الرئيسية"
+  },
   "description": "الوصف",
+  "@description": {
+    "description": "عنوان عمود الجدول"
+  },
   "totalIncome": "إجمالي الدخل",
+  "@totalIncome": {
+    "description": "صف في جدول الملخص"
+  },
   "totalExpenses": "إجمالي المصروفات",
-  "totalSaved": "إجمالي المدخر",
+  "@totalExpenses": {
+    "description": "صف في جدول الملخص"
+  },
+  "totalSaved": "إجمالي المدخرات",
+  "@totalSaved": {
+    "description": "صف في جدول الملخص"
+  },
   "shareOfTotal": "النسبة",
+  "@shareOfTotal": {
+    "description": "عمود الجدول: حصة هذه الفئة من إجمالي الإنفاق"
+  },
   "used": "المستخدم",
+  "@used": {
+    "description": "عمود الجدول: نسبة الميزانية المستهلكة"
+  },
   "goal": "الهدف",
+  "@goal": {
+    "description": "عنوان عمود جدول هدف الادخار"
+  },
   "targetDate": "التاريخ المستهدف",
+  "@targetDate": {
+    "description": "عنوان عمود الجدول"
+  },
   "progress": "التقدم",
-  "paidOffShort": "المسدد",
+  "@progress": {
+    "description": "عنوان عمود الجدول"
+  },
+  "paidOffShort": "المسدّد",
+  "@paidOffShort": {
+    "description": "عمود الجدول: نسبة الدين المسددة"
+  },
   "transactions": "المعاملات",
-  "andMoreTransactions": "{count, plural, =1{ومعاملة واحدة أخرى} =2{ومعاملتان أخريان} few{و{count} معاملات أخرى} many{و{count} معاملة أخرى} other{و{count} معاملة أخرى}}",
+  "@transactions": {
+    "description": "قسم PDF الذي يعرض الإدخالات الفردية"
+  },
+  "andMoreTransactions": "{count, plural, =1{ومعاملة أخرى واحدة} other{و{count} معاملات أخرى}}",
+  "@andMoreTransactions": {
+    "description": "ملاحظة PDF عندما يتم اختصار جدول المعاملات",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "exportPdf": "تصدير PDF",
+  "@exportPdf": {
+    "description": "زر إنشاء التقرير"
+  },
   "sharePdf": "مشاركة التقرير",
+  "@sharePdf": {
+    "description": "زر فتح قائمة مشاركة التقرير"
+  },
   "preparingReport": "جارٍ إعداد تقريرك…",
+  "@preparingReport": {
+    "description": "رسالة أثناء إنشاء ملف PDF"
+  },
   "reportReady": "التقرير جاهز",
-  "reportFailed": "تعذّر إنشاء التقرير",
+  "@reportReady": {
+    "description": "تأكيد بعد إنشاء ملف PDF"
+  },
+  "reportFailed": "تعذر إنشاء التقرير",
+  "@reportFailed": {
+    "description": "رسالة خطأ عند فشل التصدير"
+  },
   "categories": "الفئات",
-  "categoriesIntro": "أضف فئاتك الخاصة لتصنيف الدخل والمصروفات تمامًا كما تفكر بها.",
+  "@categories": {
+    "description": "عنوان شاشة إدارة الفئات"
+  },
+  "categoriesIntro": "أضف فئاتك الخاصة لتصنيف الدخل والمصروفات بالطريقة التي تناسبك.",
+  "@categoriesIntro": {
+    "description": "شرح الغرض من الشاشة"
+  },
   "expenseCategories": "فئات المصروفات",
+  "@expenseCategories": {
+    "description": "عنوان القسم"
+  },
   "incomeCategories": "فئات الدخل",
+  "@incomeCategories": {
+    "description": "عنوان القسم"
+  },
   "newCategory": "فئة جديدة",
+  "@newCategory": {
+    "description": "عنوان نموذج الإنشاء"
+  },
   "editCategory": "تعديل الفئة",
+  "@editCategory": {
+    "description": "عنوان نموذج التعديل"
+  },
   "categoryName": "الاسم",
-  "categoryNameHint": "مثال: رعاية الحيوانات",
+  "@categoryName": {
+    "description": "تسمية حقل نموذج الفئة"
+  },
+  "categoryNameHint": "مثال: رعاية الحيوانات الأليفة",
+  "@categoryNameHint": {
+    "description": "عنصر نائب لاسم الفئة"
+  },
   "icon": "الأيقونة",
+  "@icon": {
+    "description": "تسمية حقل نموذج الفئة"
+  },
   "categorySaved": "تم حفظ الفئة",
+  "@categorySaved": {
+    "description": "تأكيد"
+  },
   "categoryDeleted": "تم حذف الفئة",
+  "@categoryDeleted": {
+    "description": "تأكيد"
+  },
   "deleteCategory": "حذف هذه الفئة؟",
-  "deleteCategoryBody": "سيتم حذف {name} من فئاتك.",
-  "categoryInUse": "{count, plural, =1{سجل واحد ما زال يستخدم هذه الفئة} =2{سجلان ما زالا يستخدمان هذه الفئة} few{{count} سجلات ما زالت تستخدم هذه الفئة} many{{count} سجلًا ما زال يستخدم هذه الفئة} other{{count} سجل ما زال يستخدم هذه الفئة}}",
+  "@deleteCategory": {
+    "description": "عنوان تأكيد الحذف"
+  },
+  "deleteCategoryBody": "ستتم إزالة {name} من فئاتك.",
+  "@deleteCategoryBody": {
+    "description": "نص تأكيد الحذف",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{سجل واحد لا يزال يستخدم هذه الفئة} other{{count} سجلات لا تزال تستخدم هذه الفئة}}",
+  "@categoryInUse": {
+    "description": "يوضح سبب عدم إمكانية حذف الفئة",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "noCategoriesYet": "لا يوجد شيء هنا بعد.",
+  "@noCategoriesYet": {
+    "description": "مجموعة فارغة في قائمة الفئات"
+  },
   "builtIn": "مدمجة",
+  "@builtIn": {
+    "description": "تحدد فئة مشتركة للقراءة فقط"
+  },
   "manageCategories": "إدارة الفئات",
+  "@manageCategories": {
+    "description": "صف الإعدادات الذي يفتح شاشة الفئات"
+  },
   "expense": "مصروف",
-  "languageNote": "العربية والأردية والفارسية والعبرية تحوّل الواجهة بالكامل إلى الاتجاه من اليمين إلى اليسار، بما في ذلك الرسوم البيانية وتقارير PDF.",
+  "@expense": {
+    "description": "تسمية مفردة لمعاملة خارجة"
+  },
+  "languageNote": "تُحوّل العربية والأردية والفارسية والعبرية الواجهة بالكامل إلى الاتجاه من اليمين إلى اليسار، بما في ذلك المخططات وتقارير PDF.",
+  "@languageNote": {
+    "description": "ملاحظة أسفل منتقي اللغة تشرح دعم RTL"
+  },
   "next": "التالي",
   "back": "رجوع",
-  "skip": "تخطٍ",
+  "skip": "تخطي",
   "continueLabel": "متابعة",
-  "selected": "محدَّد",
+  "@continueLabel": {
+    "description": "الإجراء الرئيسي للانتقال إلى الخطوة التالية في تدفق متعدد الخطوات. تمت إضافة اللاحقة لأن continue كلمة محجوزة في Dart."
+  },
+  "selected": "محدد",
   "passwordRequired": "أدخل كلمة المرور",
   "newPasswordLabel": "كلمة المرور الجديدة",
   "confirmPasswordLabel": "تأكيد كلمة المرور",
@@ -353,121 +949,170 @@
   "savePassword": "حفظ كلمة المرور",
   "backToSignIn": "العودة إلى تسجيل الدخول",
   "alreadyHaveAccount": "لدي حساب بالفعل",
-  "getStarted": "لنبدأ",
+  "getStarted": "البدء",
   "acceptTerms": "أوافق على شروط الخدمة وسياسة الخصوصية",
   "acceptTermsRequired": "يرجى الموافقة للمتابعة",
   "passwordStrengthTooShort": "قصيرة جدًا",
   "passwordStrengthWeak": "ضعيفة",
-  "passwordStrengthFair": "مقبولة",
+  "passwordStrengthFair": "متوسطة",
   "passwordStrengthGood": "جيدة",
   "passwordStrengthStrong": "قوية",
-  "passwordAdvice": "عبارة طويلة تتذكرها أفضل من كلمة قصيرة مليئة بالرموز. تجنّب أي كلمة مرور تستخدمها في مكان آخر.",
-  "authInvalidCredentials": "لا يطابق هذا البريد وكلمة المرور أي حساب",
-  "authEmailNotConfirmed": "أكّد بريدك الإلكتروني قبل تسجيل الدخول",
+  "passwordAdvice": "عبارة طويلة يسهل عليك تذكرها أفضل من كلمة قصيرة مليئة بالرموز. تجنب استخدام أي كلمة تستخدمها في مكان آخر.",
+  "authInvalidCredentials": "البريد الإلكتروني وكلمة المرور لا يتطابقان مع أي حساب",
+  "authEmailNotConfirmed": "أكد عنوان بريدك الإلكتروني قبل تسجيل الدخول",
   "authEmailAlreadyRegistered": "يوجد حساب بهذا البريد الإلكتروني بالفعل",
   "authWeakPassword": "اختر كلمة مرور أطول",
-  "authRateLimited": "محاولات كثيرة. أعد المحاولة بعد بضع دقائق",
-  "authNetworkError": "لا يوجد اتصال. تحقق من الشبكة وأعد المحاولة",
-  "authGenericError": "حدث خطأ ما. يرجى المحاولة مرة أخرى",
+  "authRateLimited": "محاولات كثيرة جدًا. حاول مرة أخرى بعد بضع دقائق",
+  "authNetworkError": "لا يوجد اتصال. تحقق من الشبكة وحاول مرة أخرى",
+  "authGenericError": "حدث خطأ ما. حاول مرة أخرى",
   "confirmEmailTitle": "تحقق من بريدك الإلكتروني",
-  "confirmEmailBody": "أرسلنا رابط تأكيد إلى {email}. افتحه لإكمال إعداد حسابك.",
+  "confirmEmailBody": "أرسلنا رابط تأكيد إلى {email}. افتحه لإنهاء إعداد حسابك.",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
   "resendConfirmation": "إعادة إرسال رسالة التأكيد",
   "confirmationResent": "تم إرسال رسالة التأكيد",
   "forgotPasswordTitle": "إعادة تعيين كلمة المرور",
-  "forgotPasswordSubtitle": "أدخل البريد الإلكتروني الذي سجّلت به وسنرسل إليك رابطًا لاختيار كلمة مرور جديدة.",
+  "forgotPasswordSubtitle": "أدخل البريد الإلكتروني الذي سجلت به وسنرسل إليك رابطًا لاختيار كلمة مرور جديدة.",
   "sendResetLink": "إرسال رابط إعادة التعيين",
-  "resetLinkSentTitle": "تم إرسال الرابط",
-  "resetLinkSentBody": "إذا كان لدى {email} حساب، فرابط إعادة التعيين في الطريق.",
-  "resetLinkSentHint": "تنتهي صلاحية الرابط خلال ساعة. إذا لم يصل، تحقق من مجلد البريد غير المرغوب فيه قبل طلب رابط آخر.",
-  "tryAnotherEmail": "استخدم بريدًا آخر",
+  "resetLinkSentTitle": "تم إرسال رابط إعادة التعيين",
+  "resetLinkSentBody": "إذا كان لدى {email} حساب، فسيصله رابط إعادة التعيين.",
+  "@resetLinkSentBody": {
+    "description": "صياغة شرطية متعمدة: تأكيد تسجيل عنوان ما يمنع حصر مستخدمي التطبيق.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "تنتهي صلاحية الرابط خلال ساعة. إذا لم يصلك، تحقق من مجلد الرسائل غير المرغوب فيها قبل طلب رابط آخر.",
+  "tryAnotherEmail": "استخدام بريد إلكتروني مختلف",
   "resetPasswordTitle": "اختر كلمة مرور جديدة",
-  "resetPasswordSubtitle": "اختر كلمة لم تستخدمها من قبل مع هذا الحساب.",
+  "resetPasswordSubtitle": "اختر كلمة مرور لم تستخدمها من قبل لهذا الحساب.",
   "passwordChangedTitle": "تم تحديث كلمة المرور",
-  "passwordChangedBody": "تم حفظ كلمة المرور الجديدة. أنت مسجَّل الدخول وجاهز للمتابعة.",
+  "passwordChangedBody": "تم حفظ كلمة المرور الجديدة. لقد سجلت الدخول وأصبحت جاهزًا للبدء.",
   "demoModeHint": "نسخة تجريبية — لا حاجة إلى حساب",
-  "demoModeFill": "املأ البيانات",
+  "demoModeFill": "تعبئة",
   "welcomeTrackTitle": "اعرف أين تذهب أموالك",
-  "welcomeTrackBody": "سجّل ما يدخل وما يخرج. يحوّل RainyPenny ذلك إلى صورة واضحة يمكنك قراءتها فعلًا.",
-  "welcomeBudgetTitle": "ضع حدودًا تلتزم بها",
-  "welcomeBudgetBody": "حدّد سقفًا شهريًا لكل جانب من إنفاقك، ودعنا ننبّهك قبل أن تتجاوزه لا بعده.",
+  "welcomeTrackBody": "سجّل ما يدخل وما يخرج من أموالك. يحوّل RainyPenny ذلك إلى صورة يمكنك فهمها فعلًا.",
+  "welcomeBudgetTitle": "ضع حدودًا للإنفاق",
+  "welcomeBudgetBody": "حدد سقفًا شهريًا لكل جزء من إنفاقك، وتلقَّ تنبيهًا قبل تجاوزه بدلًا من بعده.",
   "welcomeGoalsTitle": "ادّخر لما يهمك",
-  "welcomeGoalsBody": "سمِّ هدفًا، وحدّد مبلغًا، وشاهده يمتلئ. بناء صندوق ليوم ممطر أسهل حين تراه أمامك.",
+  "welcomeGoalsBody": "سمِّ هدفًا، وحدد مبلغًا مستهدفًا، وشاهد تقدمه. يصبح بناء صندوق للطوارئ أسهل عندما يمكنك رؤية تقدمه.",
   "welcomePrivacyTitle": "أموالك تبقى لك",
-  "welcomePrivacyBody": "أرقامك ملك لك وحدك. لا نبيع شيئًا ولا نشارك شيئًا مع أحد.",
+  "welcomePrivacyBody": "بياناتك المالية ملكك وحدك. لا يتم بيع أي شيء ولا تتم مشاركة أي شيء مع أي جهة.",
   "stepOf": "الخطوة {step} من {total}",
-  "onboardingNameTitle": "بماذا نناديك؟",
-  "onboardingNameBody": "سنستخدمه للترحيب بك، ولا شيء غير ذلك.",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "كيف نُناديك؟",
+  "onboardingNameBody": "سنستخدمه لتحيتك، ولا شيء آخر.",
   "onboardingNameHint": "الاسم الأول يكفي. يمكنك تغييره لاحقًا.",
   "onboardingCurrencyTitle": "ما العملة التي تستخدمها؟",
-  "onboardingCurrencyBody": "تُعرض كل المبالغ في التطبيق بهذه العملة. اختيارها لا يحوّل أي مبلغ.",
-  "onboardingCurrencySearch": "ابحث في كل العملات",
-  "onboardingAppearanceTitle": "اجعله على ذوقك",
-  "onboardingAppearanceBody": "اختر المظهر. كل شيء يتغيّر فور اللمس، ويمكنك العودة إليه في أي وقت.",
-  "onboardingNotificationsTitle": "ابقَ على اطّلاع",
-  "onboardingNotificationsBody": "تنبيه هادئ في اللحظة المناسبة هو ما يحوّل هذا إلى عادة.",
-  "onboardingNotifyReminders": "تذكير لطيف بتسجيل ما أنفقته",
-  "onboardingNotifyBudget": "تنبيه قبل أن تنفد الميزانية",
-  "onboardingNotifySummary": "ملخص أسبوعي لوجهة أموالك",
-  "onboardingNotifyEnable": "تفعيل الإشعارات",
+  "onboardingCurrencyBody": "يتم عرض كل مبلغ في التطبيق بهذه العملة. اختيارها لا يحوّل أي مبلغ.",
+  "onboardingCurrencySearch": "البحث في جميع العملات",
+  "onboardingAppearanceTitle": "اجعل التطبيق على ذوقك",
+  "onboardingAppearanceBody": "اختر المظهر الذي تفضله. يتغير كل شيء بمجرد اختيارك، ويمكنك العودة إليه في أي وقت.",
+  "onboardingNotificationsTitle": "ابقَ على اطلاع",
+  "onboardingNotificationsBody": "التذكير الهادئ في الوقت المناسب هو ما يحوّل المتابعة إلى عادة.",
+  "onboardingNotifyReminders": "تذكير لطيف لتسجيل ما أنفقته",
+  "onboardingNotifyBudget": "تنبيه قبل نفاد الميزانية",
+  "onboardingNotifySummary": "ملخص أسبوعي يوضح أين ذهبت أموالك",
+  "onboardingNotifyEnable": "تشغيل الإشعارات",
   "onboardingNotifyDone": "تم حفظ إعدادات الإشعارات",
-  "onboardingNotifyLater": "يمكنك تغيير كل هذا من الإعدادات، وقتما شئت.",
-  "onboardingReadyTitle": "كل شيء جاهز",
-  "onboardingReadyTitleNamed": "كل شيء جاهز يا {name}",
-  "onboardingReadyBody": "انتهى الإعداد. هل تودّ جولة سريعة على طريقة عمل التطبيق؟",
-  "onboardingTakeTour": "خذني في جولة",
-  "onboardingGoToApp": "انتقل إلى التطبيق",
-  "onboardingTourLater": "ليس الآن؟ يبقى الدليل في الإعدادات متى أردته.",
+  "onboardingNotifyLater": "يمكنك تغيير كل ذلك في الإعدادات متى شئت.",
+  "onboardingReadyTitle": "أنت جاهز تمامًا",
+  "onboardingReadyTitleNamed": "أنت جاهز تمامًا، {name}",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "اكتمل الإعداد. هل تريد جولة سريعة للتعرف على طريقة عمل كل شيء؟",
+  "onboardingTakeTour": "أرني كيفية الاستخدام",
+  "onboardingGoToApp": "الانتقال إلى التطبيق",
+  "onboardingTourLater": "ليس الآن؟ سيبقى الدليل في الإعدادات متى احتجت إليه.",
   "beginnersGuide": "دليل المبتدئين",
   "guideFinish": "إنهاء",
   "chapterOf": "الفصل {number} من {total}",
-  "guideOpenScreen": "افتح {screen}",
-  "guideDashboardTitle": "لوحتك الرئيسية",
-  "guideDashboardBody": "كل شيء يبدأ هنا. البطاقة في الأعلى هي ما تبقّى لديك، وتحتها ما دخل وما خرج في هذه الفترة، ثم إنفاقك وميزانياتك وأهدافك.",
-  "guideDashboardTip1": "اسحب الشاشة للأسفل لتحديث كل شيء دفعة واحدة.",
-  "guideDashboardTip2": "المس بطاقة الدخل أو المصروفات للانتقال إلى تلك القائمة.",
-  "guideDashboardTip3": "تتحدّث الحلقات والرؤى لحظة تسجيلك لأي شيء.",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "guideOpenScreen": "فتح {screen}",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "لوحة التحكم",
+  "guideDashboardBody": "كل شيء يبدأ من هنا. البطاقة في الأعلى تعرض ما تبقى لديك؛ وتحتها الدخل والمصروفات خلال هذه الفترة، ثم الإنفاق والميزانيات والأهداف.",
+  "guideDashboardTip1": "اسحب الشاشة إلى الأسفل لتحديث كل شيء مرة واحدة.",
+  "guideDashboardTip2": "اضغط على بطاقة الدخل أو المصروفات للانتقال إلى القائمة.",
+  "guideDashboardTip3": "تتحدث الدوائر والرؤى فور تسجيل أي شيء.",
   "guideAddTitle": "تسجيل الأموال",
-  "guideAddBody": "الزر في منتصف الشريط هو نقطة البداية لكل شيء. يفتح قائمة قصيرة: مصروف، دخل، دَين، ميزانية أو هدف ادخار.",
-  "guideAddTip1": "المس الزر الأوسط لتسجيل دخل أو مصروف.",
-  "guideAddTip2": "اضغط عليه مطوّلًا للانتقال مباشرة إلى مصروف جديد وتخطي القائمة.",
-  "guideAddTip3": "اختر فئة دائمًا — فهي ما يجعل الرسوم البيانية والميزانيات تعمل.",
+  "guideAddBody": "الزر الموجود في منتصف شريط التنقل هو نقطة البداية لكل شيء. يفتح قائمة قصيرة: أموال خارجة، أموال داخلة، دين، ميزانية أو هدف ادخار.",
+  "guideAddTip1": "اضغط على الزر الأوسط لتسجيل أموال داخلة أو خارجة.",
+  "guideAddTip2": "اضغط عليه مطولًا للانتقال مباشرة إلى إضافة مصروف جديد وتخطي القائمة.",
+  "guideAddTip3": "اختر دائمًا فئة — فهذا ما يجعل المخططات والميزانيات تعمل.",
   "guideCategoriesTitle": "الفئات",
-  "guideCategoriesBody": "الفئات هي طريقة تجميع الإنفاق. الفئات المرفقة بالتطبيق تكفي معظم الناس، ويمكنك إعادة تسميتها أو إضافة فئاتك.",
-  "guideCategoriesTip1": "الإعدادات، ثم إدارة الفئات، لتعديل فئة أو إضافة واحدة.",
-  "guideCategoriesTip2": "كل ما يبقى بلا فئة يذهب إلى «أخرى»، لتبقى الرسوم صادقة.",
+  "guideCategoriesBody": "الفئات هي الطريقة التي يتم بها تجميع الإنفاق. الفئات المرفقة مع التطبيق تغطي احتياجات معظم الناس، ويمكنك إعادة تسميتها أو إضافة فئاتك الخاصة.",
+  "guideCategoriesTip1": "الإعدادات، ثم إدارة الفئات، لتغيير فئة أو إضافة أخرى.",
+  "guideCategoriesTip2": "أي شيء غير مصنف ينتقل إلى فئة أخرى، حتى تبقى المخططات دقيقة.",
   "guideBudgetTitle": "الميزانيات",
-  "guideBudgetBody": "الميزانية سقف شهري لفئة واحدة. يمتلئ الشريط كلما أنفقت ويتغيّر لونه عند الاقتراب، فتعرف قبل أن تتجاوزه.",
-  "guideBudgetTip1": "ابدأ بفئتين أو ثلاث، لا بكلها دفعة واحدة.",
-  "guideBudgetTip2": "اجعل الحد أعلى قليلًا مما تنفقه عادةً، ثم ضيّقه تدريجيًا.",
-  "guideBudgetTip3": "أبقِ تنبيهات الميزانية مفعّلة ليحذّرك التطبيق عند اقترابها من النفاد.",
+  "guideBudgetBody": "الميزانية هي سقف شهري لفئة واحدة. يمتلئ الشريط مع إنفاقك ويتغير عند الاقتراب من الحد، لتعرف قبل تجاوزه.",
+  "guideBudgetTip1": "ابدأ بفئتين أو ثلاث، وليس بكل الفئات دفعة واحدة.",
+  "guideBudgetTip2": "حدد الحد أعلى قليلًا من إنفاقك المعتاد، ثم شدده تدريجيًا.",
+  "guideBudgetTip3": "اترك تنبيهات الميزانية مفعّلة ليحذرك التطبيق عندما تقترب إحدى الميزانيات من حدها.",
   "guideSavingsTitle": "أهداف الادخار",
-  "guideSavingsBody": "سمِّ ما تدّخر من أجله، وحدّد مبلغًا وتاريخًا، وسيحسب التطبيق ما تحتاج إلى تجنيبه شهريًا للوصول.",
-  "guideSavingsTip1": "الهدف المسمّى أسهل في الالتزام من نية غامضة بالادخار.",
-  "guideSavingsTip2": "عدة أهداف صغيرة تُنجَز أكثر من هدف واحد كبير.",
+  "guideSavingsBody": "سمِّ ما تدخر من أجله، وحدد المبلغ المستهدف والتاريخ، وسيحسب التطبيق المبلغ الذي تحتاج إلى ادخاره شهريًا للوصول إليه.",
+  "guideSavingsTip1": "الهدف المسمى أسهل في الالتزام به من نية عامة للادخار.",
+  "guideSavingsTip2": "عدة أهداف صغيرة تكتمل غالبًا أكثر من هدف واحد كبير.",
   "guideLoansTitle": "الديون والقروض",
-  "guideLoansBody": "سجّل ما عليك، وكم يكلّفك، ومتى يحين القسط التالي. كل ما تسدّده يظهر في قائمة واحدة مع المتبقي عليه.",
-  "guideLoansTip1": "أضف تاريخ الاستحقاق وستتكفّل تذكيرات السداد بملاحقته عنك.",
-  "guideLoansTip2": "الدَّين المتأخر يظهر بالأحمر على اللوحة الرئيسية حتى يُسدَّد.",
+  "guideLoansBody": "سجّل ما تدين به، وتكلفته، وموعد الدفعة التالية. ستجد كل ما تسدده في قائمة واحدة مع إجمالي المبلغ المتبقي.",
+  "guideLoansTip1": "أضف تاريخ الاستحقاق وستتولى تذكيرات الدفع تنبيهك.",
+  "guideLoansTip2": "يظهر الدين المتأخر باللون الأحمر على لوحة التحكم حتى يتم سداده.",
   "guideReportsTitle": "التقارير",
-  "guideReportsBody": "النظرة الأعمق: الدخل مقابل المصروفات، الإنفاق حسب الفئة، أداء ميزانياتك، والنسبة التي احتفظت بها من دخلك.",
-  "guideReportsTip1": "بدّل بين الأسبوع والشهر والربع من أعلى الشاشة.",
-  "guideReportsTip2": "صدّر التقرير أو شاركه بصيغة PDF — يخرج بلغتك وباتجاهها.",
+  "guideReportsBody": "الرؤية الأعمق: الدخل مقابل المصروفات، والإنفاق حسب الفئة، وأداء ميزانياتك، ونسبة الدخل التي احتفظت بها.",
+  "guideReportsTip1": "بدّل بين الأسبوع والشهر وربع السنة من أعلى الشاشة.",
+  "guideReportsTip2": "صدّر أو شارك ملف PDF — وسيظهر بلغتك واتجاه الكتابة الخاص بها.",
   "guideSettingsTitle": "الإعدادات",
-  "guideSettingsBody": "اللغة والعملة والألوان والتنبيهات كلها هنا، ولا شيء منها ثابت بعد الإعداد — غيّر ما تشاء متى شئت.",
-  "guideSettingsTip1": "أربعون لغة، والتخطيط بأكمله ينعكس مع اللغات من اليمين إلى اليسار.",
-  "guideSettingsTip2": "اختر التنبيهات التي تريدها والساعات التي قد تصل فيها.",
-  "guideSettingsTip3": "ساعات الهدوء تؤجّل كل شيء حتى الصباح.",
-  "guideHabitTitle": "اجعلها عادة",
-  "guideHabitBody": "التطبيق بقدر ما تضع فيه. دقيقة يوميًا أفضل من ساعة كل شهر، وبعد أسبوعين تبدأ الأرقام في إخبارك بشيء.",
-  "guideHabitTip1": "سجّل ما تنفقه لحظة إنفاقه، لا في نهاية الأسبوع.",
-  "guideHabitTip2": "ألقِ نظرة على اللوحة مرة يوميًا. عشر ثوانٍ تكفي.",
+  "guideSettingsBody": "اللغة والعملة والألوان والتنبيهات كلها موجودة هنا، ولا شيء منها مقيد بإعدادك الأول — يمكنك تغيير أي منها متى شئت.",
+  "guideSettingsTip1": "أربعون لغة، وتنعكس الواجهة بالكامل للغات التي تكتب من اليمين إلى اليسار.",
+  "guideSettingsTip2": "اختر التنبيهات التي تريدها والأوقات التي يمكن أن تصل فيها.",
+  "guideSettingsTip3": "تؤجل ساعات الهدوء كل شيء حتى الصباح.",
+  "guideHabitTitle": "حوّلها إلى عادة",
+  "guideHabitBody": "التطبيق جيد بقدر جودة البيانات التي تدخلها. دقيقة يوميًا أفضل من ساعة مرة واحدة في الشهر، وبعد أسبوعين تبدأ الأرقام في إخبارك بشيء مفيد.",
+  "guideHabitTip1": "سجّل ما تنفقه وقت حدوثه، وليس في نهاية الأسبوع.",
+  "guideHabitTip2": "ألقِ نظرة على لوحة التحكم مرة يوميًا. عشر ثوانٍ تكفي.",
   "guideHabitTip3": "يبقى هذا الدليل في الإعدادات — عد إليه متى شئت.",
   "appearance": "المظهر",
   "themeCaption": "فاتح أو داكن أو حسب إعداد هاتفك.",
-  "accentColor": "لون التمييز",
-  "accentColorCaption": "يلوّن الأزرار والعناصر المميّزة والرسوم البيانية.",
-  "accentSemanticsNote": "يحتفظ الدخل والمصروف بلونيهما في كل السمات، فلا يتغيّر معنى أي رقم لمجرد تغييرك لون التمييز.",
-  "accentTeal": "فيروزي",
+  "accentColor": "اللون المميز",
+  "accentColorCaption": "يُستخدم في الأزرار والتحديدات والمخططات.",
+  "accentSemanticsNote": "يحافظ الدخل والمصروفات على ألوانهما الخاصة في جميع المظاهر، حتى لا يتغير معنى الرقم عند تغيير اللون المميز.",
+  "accentTeal": "تركوازي",
   "accentGreen": "أخضر",
   "accentSky": "سماوي",
   "accentBlue": "أزرق",
@@ -476,76 +1121,143 @@
   "accentPink": "وردي",
   "accentCrimson": "قرمزي",
   "accentOrange": "برتقالي",
-  "accentSlate": "رمادي داكن",
-  "searchLanguages": "ابحث عن لغة",
+  "accentSlate": "رمادي أردوازي",
+  "searchLanguages": "البحث عن اللغات",
   "suggestedLanguages": "مقترحة",
-  "allLanguages": "كل اللغات",
-  "noLanguagesFound": "لم يُعثر على لغات",
-  "noLanguagesFoundMessage": "جرّب الاسم بالإنجليزية أو الرمز المكوّن من حرفين.",
+  "allLanguages": "جميع اللغات",
+  "noLanguagesFound": "لم يتم العثور على لغات",
+  "noLanguagesFoundMessage": "جرّب الاسم بالإنجليزية أو رمز اللغة المكوّن من حرفين.",
   "rightToLeft": "من اليمين إلى اليسار",
   "replayGuide": "إعادة تشغيل الدليل",
-  "replaySetup": "إعادة الإعداد",
-  "replaySetupBody": "أعد المرور بأسئلة البداية. لن يُحذف أي شيء سجّلته.",
-  "rateTitle": "هل تستمتع بـ RainyPenny؟",
-  "rateBody": "أنت مستمر في هذا منذ فترة الآن. التقييم يستغرق لحظة ويساعد الآخرين على اكتشاف التطبيق.",
+  "replaySetup": "تشغيل الإعداد مرة أخرى",
+  "replaySetupBody": "أجب عن أسئلة الإعداد الأولي مرة أخرى. لن يتم حذف أي شيء سجلته.",
+  "rateTitle": "هل تستمتع باستخدام RainyPenny؟",
+  "rateBody": "لقد واظبت على استخدام التطبيق لفترة. يستغرق التقييم لحظة ويساعد الآخرين على العثور على التطبيق.",
   "rateAction": "قيّم التطبيق",
   "rateLater": "ربما لاحقًا",
-  "rateNever": "لا، شكرًا",
+  "rateNever": "لا شكرًا",
   "rateThanks": "شكرًا لك",
   "monthlySalary": "الراتب الشهري",
   "remainingAmount": "المتبقي",
-  "carriedForward": "مُرحَّل",
+  "carriedForward": "المرحل",
   "carriedForwardHint": "المتبقي من الدورة السابقة",
   "totalSpending": "إجمالي الإنفاق",
   "salaryCycle": "دورة الراتب",
   "payday": "يوم الراتب",
-  "paydayDescription": "اليوم الذي يصل فيه راتبك. يبدأ شهرك المالي من هذا اليوم حتى اليوم السابق للراتب التالي.",
+  "paydayDescription": "اليوم الذي يصل فيه راتبك. تمتد دورتك المالية من هذا اليوم حتى اليوم السابق ليوم الراتب التالي.",
   "paydayUpdated": "تم تحديث يوم الراتب",
   "paydayDayOfMonth": "اليوم {day}",
-  "paydayShortMonthNote": "في الأشهر القصيرة تبدأ الدورة في آخر يوم من الشهر بدلًا من ذلك.",
-  "daysLeftInCycle": "{count, plural, =0{آخر يوم في الدورة} =1{يوم واحد حتى الراتب} =2{يومان حتى الراتب} few{{count} أيام حتى الراتب} many{{count} يومًا حتى الراتب} other{{count} يوم حتى الراتب}}",
-  "nextPayday": "الراتب القادم",
-  "spentSoFar": "المُنفَق حتى الآن",
-  "dailyAllowance": "الإنفاق اليومي الآمن",
-  "overspentNotice": "لقد أنفقت أكثر مما دخل في هذه الدورة.",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "في الأشهر الأقصر، تبدأ الدورة في اليوم الأخير بدلًا من ذلك.",
+  "daysLeftInCycle": "{count, plural, =0{آخر يوم في الدورة} =1{يوم واحد حتى الراتب} other{{count} أيام حتى الراتب}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "موعد الراتب التالي",
+  "spentSoFar": "المنفق حتى الآن",
+  "dailyAllowance": "المبلغ الآمن للإنفاق يوميًا",
+  "overspentNotice": "لقد أنفقت أكثر مما دخل إليك خلال هذه الدورة.",
   "backToThisMonth": "العودة إلى هذا الشهر",
   "cycleRangeLabel": "الدورة",
-  "noSalaryRecorded": "لم يُسجَّل راتب بعد",
+  "noSalaryRecorded": "لم يتم تسجيل راتب بعد",
   "addSalaryAction": "أضف راتبك",
   "cycleOf": "{start} – {end}",
-  "healthExcellent": "ممتاز",
-  "healthGood": "جيد",
-  "healthFair": "مقبول",
-  "healthNeedsWork": "يحتاج إلى تحسين",
-  "healthExcellentBody": "أنت تدّخر جيدًا وتلتزم بميزانياتك.",
-  "healthGoodBody": "أنت على المسار الصحيح في إنفاقك هذه الفترة.",
-  "healthFairBody": "بعض الميزانيات تقترب من حدها. تغييرات بسيطة ستساعد.",
-  "healthNeedsWorkBody": "الإنفاق يتجاوز خطتك. ابدأ بأكبر فئة لديك.",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "healthExcellent": "ممتازة",
+  "healthGood": "جيدة",
+  "healthFair": "متوسطة",
+  "healthNeedsWork": "تحتاج إلى تحسين",
+  "healthExcellentBody": "أنت تدخر بشكل جيد وتحافظ على ميزانياتك.",
+  "healthGoodBody": "إنفاقك يسير وفق الخطة خلال هذه الفترة.",
+  "healthFairBody": "بعض الميزانيات تقترب من حدودها. ستساعدك تغييرات بسيطة.",
+  "healthNeedsWorkBody": "الإنفاق يتجاوز خطتك. ابدأ بأكبر فئة إنفاق.",
   "factorSavingsRate": "معدل الادخار",
-  "factorBudgetControl": "ضبط الميزانية",
+  "factorBudgetControl": "التحكم في الميزانية",
   "factorDebtLoad": "عبء الديون",
   "factorSpendingTrend": "اتجاه الإنفاق",
-  "factorKept": "تم الاحتفاظ بـ {percent}%",
-  "factorUsed": "استُخدم {percent}%",
+  "factorKept": "احتفظت بـ {percent}%",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "تم استخدام {percent}%",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
   "factorOfIncome": "{percent}% من الدخل",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
   "factorTrendUp": "ارتفاع {percent}%",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
   "factorTrendDown": "انخفاض {percent}%",
-  "howScoreWorks": "كيف تُحتسب هذه النتيجة",
-  "healthScoreExplainer": "تجمع نتيجتك أربعة عوامل: نسبة ما تحتفظ به من دخلك، ومدى التزامك بميزانياتك، ونسبة ما يذهب من دخلك للديون، وما إذا كان إنفاقك يرتفع أم ينخفض.",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "كيف تُحسب هذه النتيجة",
+  "healthScoreExplainer": "تجمع النتيجة أربعة عوامل: مقدار ما تحتفظ به من دخلك، ومدى التزامك بميزانياتك، ونسبة دخلك التي تذهب إلى الديون، وما إذا كان إنفاقك يرتفع أو ينخفض.",
   "scoreWeightLabel": "{percent}% من النتيجة",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "viewHealthDetails": "عرض التفاصيل",
   "saveChanges": "حفظ التغييرات",
   "profileUpdated": "تم تحديث الملف الشخصي",
   "changePhoto": "تغيير الصورة",
   "removePhoto": "إزالة الصورة",
-  "personalInformationIntro": "يظهر اسمك وصورتك في جميع أنحاء التطبيق. بريدك الإلكتروني هو العنوان الذي تسجّل الدخول به.",
+  "personalInformationIntro": "يظهر اسمك وصورتك في جميع أنحاء التطبيق. بريدك الإلكتروني هو العنوان الذي تسجل الدخول به.",
+  "nameRequired": "أدخل اسمك",
   "emailNotEditable": "تواصل مع الدعم لتغيير عنوان تسجيل الدخول.",
-  "pressBackAgainToExit": "اضغط رجوع مرة أخرى للخروج",
+  "pressBackAgainToExit": "اضغط مرة أخرى للخروج",
   "categoryHousing": "السكن",
   "categoryFood": "الطعام والمطاعم",
   "categoryTransport": "المواصلات",
   "categoryShopping": "التسوق",
-  "categoryBills": "الفواتير والمرافق",
+  "categoryBills": "الفواتير والخدمات",
   "categoryEntertainment": "الترفيه",
   "categoryHealth": "الصحة واللياقة",
   "categoryEducation": "التعليم",
@@ -553,15 +1265,149 @@
   "categorySalary": "الراتب",
   "categoryFreelance": "العمل الحر",
   "categoryInvestments": "الاستثمارات",
+  "categoryGift": "الهدايا",
   "categoryOther": "أخرى",
+  "categoryGroceries": "مشتريات البقالة",
+  "categoryDining": "المطاعم",
+  "categoryCoffee": "القهوة",
+  "categoryUtilities": "الخدمات",
+  "categoryInternet": "الإنترنت",
+  "categoryPhone": "الهاتف",
+  "categoryInsurance": "التأمين",
+  "categorySubscriptions": "الاشتراكات",
+  "categoryPersonalCare": "العناية الشخصية",
+  "categoryClothing": "الملابس",
+  "categoryElectronics": "الإلكترونيات",
+  "categoryHomeSupplies": "مستلزمات المنزل",
+  "categoryPets": "الحيوانات الأليفة",
+  "categoryChildcare": "رعاية الأطفال",
+  "categoryFamily": "العائلة",
+  "categoryFitness": "اللياقة البدنية",
+  "categorySports": "الرياضة",
+  "categoryMedicine": "الأدوية",
+  "categoryMedical": "الرعاية الطبية",
+  "categoryCharity": "التبرعات",
+  "categoryTaxes": "الضرائب",
+  "categoryFees": "الرسوم",
+  "categoryDebt": "الديون",
+  "categorySavings": "الادخار",
+  "categoryRepairs": "الإصلاحات",
+  "categoryCarMaintenance": "صيانة السيارة",
+  "categoryFuel": "الوقود",
+  "categoryParking": "مواقف السيارات",
+  "categoryPublicTransport": "النقل العام",
+  "categoryRent": "الإيجار",
+  "categoryMortgage": "الرهن العقاري",
+  "categoryBonus": "المكافأة",
+  "categoryCommission": "العمولة",
+  "categoryPension": "المعاش التقاعدي",
+  "categoryInterest": "الفائدة",
+  "categoryDividends": "أرباح الأسهم",
+  "categoryCashback": "استرداد نقدي",
+  "categoryRefund": "استرداد المبلغ",
+  "categoryRentalIncome": "دخل الإيجار",
   "addCategory": "فئة جديدة",
   "filterByCategory": "تصفية حسب الفئة",
-  "allCategories": "كل الفئات",
-  "clearFilters": "مسح عوامل التصفية",
+  "allCategories": "جميع الفئات",
+  "clearFilters": "مسح الفلاتر",
   "spentInCategory": "{category}  ·  {amount}",
-  "allTime": "كل الفترات",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "allTime": "كل الوقت",
   "customRange": "مخصص",
   "selectDateRange": "اختر فترة",
   "rangeApplied": "عرض {start} – {end}",
-  "categoryRefunds": "المستردات والهدايا"
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "loans": "القروض",
+  "debts": "الديون",
+  "noLoansTitle": "لا توجد قروض",
+  "noLoansBody": "ليس لديك قروض نشطة.",
+  "emptyHealthTitle": "لا توجد نتيجة مالية بعد",
+  "@emptyHealthTitle": {
+    "description": "العنوان الذي يظهر عندما لا تتوفر بيانات كافية لحساب درجة الصحة المالية"
+  },
+  "emptyHealthDescription": "نحتاج إلى بعض النشاط المالي قبل أن نتمكن من حساب درجة صحة مالية دقيقة.",
+  "@emptyHealthDescription": {
+    "description": "النص التوضيحي الذي يظهر في الحالة الفارغة لشاشة الصحة المالية"
+  },
+  "emptyHealthAddTransactions": "أضف معاملات دخل أو مصروفات",
+  "@emptyHealthAddTransactions": {
+    "description": "عنصر قائمة يطلب من المستخدم إضافة معاملات"
+  },
+  "emptyHealthSetBudgets": "أنشئ ميزانياتك الشهرية",
+  "@emptyHealthSetBudgets": {
+    "description": "عنصر قائمة يطلب من المستخدم إعداد الميزانيات"
+  },
+  "emptyHealthTrackLoans": "تتبع القروض أو الديون (اختياري)",
+  "@emptyHealthTrackLoans": {
+    "description": "عنصر قائمة يطلب من المستخدم تتبع القروض"
+  },
+  "emptyHealthCardSubtitle": "أضف معاملات لحساب نتيجتك والحصول على رؤى.",
+  "@emptyHealthCardSubtitle": {
+    "description": "العنوان الفرعي الذي يظهر في بطاقة الصحة المالية على لوحة التحكم عند عدم توفر بيانات"
+  },
+  "smartBudgetSplit": "تقسيم الميزانية الذكي",
+  "@smartBudgetSplit": {
+    "description": "عنوان نافذة تقسيم الراتب الذكي للميزانية"
+  },
+  "smartBudgetSplitSubtitle": "أدخل راتبك الشهري لحساب الحدود المقترحة",
+  "@smartBudgetSplitSubtitle": {
+    "description": "العنوان الفرعي الذي يشرح كيفية عمل تقسيم الميزانية حسب الراتب"
+  },
+  "monthlyNetSalary": "صافي الراتب الشهري",
+  "@monthlyNetSalary": {
+    "description": "تسمية حقل إدخال صافي الراتب الشهري"
+  },
+  "categoryAllocations": "توزيعات الفئات",
+  "@categoryAllocations": {
+    "description": "عنوان قائمة التوزيعات المقترحة للفئات"
+  },
+  "totalBudgeted": "الإجمالي: {amount}",
+  "@totalBudgeted": {
+    "description": "إجمالي المبلغ المخصص للميزانيات عبر الفئات",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "تطبيق جميع الميزانيات",
+  "@applyAllBudgets": {
+    "description": "تسمية الزر لتطبيق جميع الحدود المقترحة للفئات"
+  },
+  "applyingBudgets": "جارٍ تطبيق الميزانيات...",
+  "@applyingBudgets": {
+    "description": "تسمية حالة التحميل أثناء تطبيق الميزانيات"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{تم إنشاء ميزانية لفئة واحدة.} other{تم إنشاء ميزانيات لـ {count} فئات.}}",
+  "@budgetsCreatedSuccess": {
+    "description": "رسالة نجاح عند إنشاء ميزانيات الفئات",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "فشل حفظ الميزانيات.",
+  "@failedToSaveBudgets": {
+    "description": "رسالة خطأ عند فشل حفظ الميزانيات"
+  },
+  "recommendedBudget": "الميزانية المقترحة"
 }

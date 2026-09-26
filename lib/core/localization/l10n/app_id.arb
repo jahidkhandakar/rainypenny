@@ -8,85 +8,148 @@
   "navReports": "Laporan",
   "navProfile": "Profil",
   "greetingMorning": "Selamat pagi, {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingAfternoon": "Selamat siang, {name}",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingEvening": "Selamat malam, {name}",
-  "greetingSubtitle": "Ini gambaran keuangan Anda",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingSubtitle": "Berikut ringkasan keuangan Anda",
   "totalBalance": "Total saldo",
-  "vsLastPeriod": "vs. periode lalu",
-  "income": "Pemasukan",
+  "vsLastPeriod": "vs. periode sebelumnya",
+  "income": "Pendapatan",
   "expenses": "Pengeluaran",
   "netBalance": "Saldo bersih",
   "lastThirtyDays": "30 hari terakhir",
   "quickActions": "Aksi cepat",
-  "addIncome": "Tambah pemasukan",
+  "addIncome": "Tambah pendapatan",
   "addExpense": "Tambah pengeluaran",
   "spendingOverview": "Ringkasan pengeluaran",
   "recentTransactions": "Transaksi terbaru",
   "seeAll": "Lihat semua",
-  "viewAll": "Tampilkan semua",
+  "viewAll": "Lihat semua",
   "budgetProgress": "Progres anggaran",
   "savingsGoals": "Target tabungan",
-  "financialInsight": "Wawasan keuangan",
+  "financialInsight": "Insight keuangan",
   "financialHealth": "Kesehatan keuangan",
   "ofTotal": "dari {total}",
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
   "searchTransactions": "Cari transaksi",
   "filterAll": "Semua",
-  "filterIncome": "Pemasukan",
+  "filterIncome": "Pendapatan",
   "filterExpenses": "Pengeluaran",
   "today": "Hari ini",
   "yesterday": "Kemarin",
-  "noTransactionsTitle": "Transaksi tidak ditemukan",
-  "noTransactionsBody": "Coba kata pencarian atau filter lain untuk melihat lebih banyak catatan.",
-  "transactionCount": "{count, plural, =0{Tidak ada transaksi} other{{count} transaksi}}",
+  "noTransactionsTitle": "Tidak ada transaksi ditemukan",
+  "noTransactionsBody": "Coba pencarian atau filter lain untuk melihat lebih banyak aktivitas Anda.",
+  "transactionCount": "{count, plural, =0{Tidak ada transaksi} =1{1 transaksi} other{{count} transaksi}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "addTransaction": "Tambah transaksi",
   "amount": "Jumlah",
   "category": "Kategori",
   "date": "Tanggal",
   "note": "Catatan",
-  "noteHint": "Catatan (opsional)",
-  "saveIncome": "Simpan pemasukan",
+  "noteHint": "Catatan opsional",
+  "saveIncome": "Simpan pendapatan",
   "saveExpense": "Simpan pengeluaran",
   "selectCategory": "Pilih kategori",
-  "transactionSaved": "Transaksi tersimpan",
+  "transactionSaved": "Transaksi disimpan",
   "amountRequired": "Masukkan jumlah lebih dari nol",
-  "titleRequired": "Beri nama transaksi ini",
-  "descriptionLabel": "Keterangan",
-  "descriptionHint": "mis. belanja bulanan",
+  "titleRequired": "Beri nama pada transaksi ini",
+  "descriptionLabel": "Deskripsi",
+  "descriptionHint": "mis. Belanja kebutuhan",
   "budget": "Anggaran",
   "budgets": "Anggaran",
   "totalBudget": "Total anggaran",
   "spent": "Terpakai",
-  "remaining": "Sisa",
+  "remaining": "Tersisa",
   "budgetUsed": "{percent}% terpakai",
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "onTrack": "Sesuai rencana",
   "approachingLimit": "Mendekati batas",
   "overBudget": "Melebihi anggaran",
   "savings": "Tabungan",
   "yourGoals": "Target Anda",
-  "saved": "Terkumpul",
+  "saved": "Tersimpan",
   "target": "Target",
-  "monthlyContribution": "Per bulan",
+  "monthlyContribution": "Bulanan",
   "addFunds": "Tambah dana",
   "goalComplete": "Target tercapai",
-  "monthsToGo": "{count, plural, other{{count} bulan lagi}}",
+  "monthsToGo": "{count, plural, =1{tersisa 1 bulan} other{tersisa {count} bulan}}",
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "loansAndDebts": "Pinjaman & utang",
-  "totalOutstanding": "Total sisa utang",
-  "monthlyPayment": "Per bulan",
+  "totalOutstanding": "Total yang belum dibayar",
+  "monthlyPayment": "Bulanan",
   "nextPayment": "Pembayaran berikutnya",
-  "paidOff": "{percent}% lunas",
+  "paidOff": "{percent}% terbayar",
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "interestRate": "Bunga",
   "upcomingPayments": "Pembayaran mendatang",
-  "dueInDays": "{count, plural, =0{Jatuh tempo hari ini} =1{Jatuh tempo besok} other{Jatuh tempo {count} hari lagi}}",
+  "dueInDays": "{count, plural, =0{Jatuh tempo hari ini} =1{Jatuh tempo besok} other{Jatuh tempo dalam {count} hari}}",
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "overdue": "Terlambat",
   "reports": "Laporan",
   "week": "Minggu",
   "month": "Bulan",
   "quarter": "Kuartal",
-  "incomeVsExpenses": "Pemasukan vs. pengeluaran",
-  "spendingByCategory": "Pengeluaran per kategori",
+  "incomeVsExpenses": "Pendapatan vs. pengeluaran",
+  "spendingByCategory": "Pengeluaran berdasarkan kategori",
   "budgetPerformance": "Kinerja anggaran",
-  "insights": "Wawasan",
-  "savingsRate": "Rasio tabungan",
+  "insights": "Insight",
+  "savingsRate": "Tingkat tabungan",
   "profile": "Profil",
   "account": "Akun",
   "personalInformation": "Informasi pribadi",
@@ -103,63 +166,91 @@
   "termsAndConditions": "Syarat & ketentuan",
   "logOut": "Keluar",
   "memberSince": "Anggota sejak {date}",
-  "themeSystem": "Ikuti sistem",
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "themeSystem": "Sistem",
   "themeLight": "Terang",
   "themeDark": "Gelap",
   "settings": "Pengaturan",
-  "noNotificationsTitle": "Semua sudah terbaca",
-  "noNotificationsBody": "Wawasan dan pengingat baru akan muncul di sini.",
+  "noNotificationsTitle": "Anda sudah mengetahui semuanya",
+  "noNotificationsBody": "Insight dan pengingat baru akan muncul di sini.",
   "cancel": "Batal",
   "save": "Simpan",
   "done": "Selesai",
   "retry": "Coba lagi",
   "close": "Tutup",
   "somethingWentWrong": "Terjadi kesalahan",
-  "comingSoon": "Segera hadir di versi lengkap",
-  "edit": "Ubah",
+  "comingSoon": "Segera hadir dalam rilis lengkap",
+  "edit": "Edit",
   "delete": "Hapus",
   "undo": "Urungkan",
   "add": "Tambah",
   "create": "Buat",
-  "nameRequired": "Beri nama untuk ini",
+  "nameRequired": "Beri nama",
   "amountAboveZero": "Masukkan jumlah lebih dari nol",
-  "editTransaction": "Ubah transaksi",
+  "editTransaction": "Edit transaksi",
   "deleteTransaction": "Hapus transaksi?",
-  "deleteTransactionBody": "{title} akan dihapus dari catatan Anda.",
+  "deleteTransactionBody": "{title} akan dihapus dari catatan keuangan Anda.",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
   "transactionDeleted": "Transaksi dihapus",
   "transactionUpdated": "Transaksi diperbarui",
   "newBudget": "Anggaran baru",
-  "editBudget": "Ubah anggaran",
+  "editBudget": "Edit anggaran",
   "budgetLimit": "Batas bulanan",
   "deleteBudget": "Hapus anggaran?",
   "deleteBudgetBody": "Anggaran {category} akan dihapus. Transaksi Anda tidak terpengaruh.",
-  "budgetSaved": "Anggaran tersimpan",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetSaved": "Anggaran disimpan",
   "budgetDeleted": "Anggaran dihapus",
-  "allCategoriesBudgeted": "Semua kategori sudah punya anggaran",
+  "allCategoriesBudgeted": "Semua kategori sudah memiliki anggaran",
   "noBudgetsTitle": "Belum ada anggaran",
-  "noBudgetsBody": "Tetapkan batas bulanan pada sebuah kategori untuk mulai memantaunya.",
+  "noBudgetsBody": "Tetapkan batas bulanan pada kategori untuk mulai melacaknya.",
   "newGoal": "Target baru",
-  "editGoal": "Ubah target",
+  "editGoal": "Edit target",
   "goalName": "Nama target",
-  "goalNameHint": "mis. dana darurat",
+  "goalNameHint": "mis. Dana darurat",
   "targetAmount": "Jumlah target",
-  "alreadySaved": "Sudah terkumpul",
+  "alreadySaved": "Sudah ditabung",
   "deleteGoal": "Hapus target?",
   "deleteGoalBody": "{name} dan progresnya akan dihapus.",
-  "goalSaved": "Target tersimpan",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "goalSaved": "Target disimpan",
   "goalDeleted": "Target dihapus",
   "noGoalsTitle": "Belum ada target tabungan",
-  "noGoalsBody": "Tetapkan target dan RainyPenny akan memantau kemajuan Anda.",
+  "noGoalsBody": "Tetapkan target dan RainyPenny akan melacak progres Anda.",
   "fundsAdded": "Dana ditambahkan",
   "newDebt": "Pinjaman atau kartu baru",
-  "editDebt": "Ubah pinjaman",
+  "editDebt": "Edit pinjaman",
   "debtName": "Nama",
-  "debtNameHint": "mis. kredit mobil",
+  "debtNameHint": "mis. Pinjaman mobil",
   "lender": "Pemberi pinjaman",
-  "lenderHint": "mis. Bank Mandiri",
+  "lenderHint": "mis. Meridian Bank",
   "originalAmount": "Jumlah awal",
-  "creditLimit": "Limit kredit",
-  "remainingBalance": "Sisa saldo",
+  "creditLimit": "Batas kredit",
+  "remainingBalance": "Saldo tersisa",
   "interestRatePercent": "Suku bunga (%)",
   "kindLoan": "Pinjaman",
   "kindCreditCard": "Kartu kredit",
@@ -167,183 +258,686 @@
   "paymentRecorded": "Pembayaran dicatat",
   "deleteDebt": "Hapus utang ini?",
   "deleteDebtBody": "{name} akan dihapus dari daftar utang Anda.",
-  "debtSaved": "Tersimpan",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "debtSaved": "Disimpan",
   "debtDeleted": "Dihapus",
-  "noDebtsTitle": "Tidak ada utang yang dipantau",
-  "noDebtsBody": "Tambahkan pinjaman atau kartu kredit untuk mengawasi cicilan.",
+  "noDebtsTitle": "Belum ada utang yang dilacak",
+  "noDebtsBody": "Tambahkan pinjaman atau kartu kredit untuk memantau pembayaran kembali.",
   "insightBudgetExceededTitle": "Anggaran {subject} terlampaui",
-  "insightBudgetExceededBody": "Anda melebihi anggaran {subject} sebesar {amount} pada periode ini.",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "Anda telah melebihi anggaran {subject} sebesar {amount} untuk periode ini.",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
   "insightBudgetApproachingTitle": "{subject} mendekati batas",
-  "insightBudgetApproachingBody": "Anggaran {subject} sudah terpakai {percent}%, tersisa {amount}.",
-  "insightOverIncomeTitle": "Pengeluaran melebihi pemasukan",
-  "insightOverIncomeBody": "Periode ini Anda membelanjakan lebih dari yang Anda hasilkan. Tinjau kategori terbesar untuk menyeimbangkannya kembali.",
-  "insightCategoryUpTitle": "Pengeluaran {subject} naik",
-  "insightCategoryUpBody": "Pengeluaran {subject} Anda {percent}% lebih tinggi dari periode sebelumnya.",
-  "insightTrendDownTitle": "Pengeluaran menurun",
-  "insightTrendDownBody": "Pengeluaran keseluruhan {percent}% lebih rendah dari periode sebelumnya.",
-  "insightTrendUpTitle": "Pengeluaran meningkat",
-  "insightTrendUpBody": "Pengeluaran keseluruhan {percent}% lebih tinggi dari periode sebelumnya.",
-  "insightSavingsStrongTitle": "Tabungan periode ini bagus",
-  "insightSavingsStrongBody": "Anda menyisihkan {percent}% dari pemasukan — jauh di atas target {target}%.",
-  "insightSavingsLowTitle": "Rasio tabungan di bawah target",
-  "insightSavingsLowBody": "Periode ini Anda menyisihkan {percent}% dari pemasukan. Sasarannya {target}%.",
-  "insightGoalNearlyTitle": "{subject} hampir tercapai",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "Anggaran {subject} Anda telah terpakai {percent}%, tersisa {amount}.",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "insightOverIncomeTitle": "Pengeluaran melebihi pendapatan",
+  "insightOverIncomeBody": "Anda membelanjakan lebih banyak daripada yang Anda hasilkan pada periode ini. Tinjau kategori terbesar Anda untuk menyeimbangkan kembali keuangan.",
+  "insightCategoryUpTitle": "Pengeluaran {subject} meningkat",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightCategoryUpBody": "Pengeluaran {subject} Anda {percent}% lebih tinggi dibandingkan periode sebelumnya.",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "Pengeluaran sedang menurun",
+  "insightTrendDownBody": "Pengeluaran secara keseluruhan {percent}% lebih rendah dibandingkan periode sebelumnya.",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "Pengeluaran sedang meningkat",
+  "insightTrendUpBody": "Pengeluaran secara keseluruhan {percent}% lebih tinggi dibandingkan periode sebelumnya.",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "Tabungan kuat pada periode ini",
+  "insightSavingsStrongBody": "Anda menyisihkan {percent}% dari pendapatan — jauh di atas target {target}%.",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsLowTitle": "Tingkat tabungan di bawah target",
+  "insightSavingsLowBody": "Anda menyisihkan {percent}% dari pendapatan pada periode ini. Targetkan {target}%.",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "{subject} hampir terpenuhi",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
   "insightGoalNearlyBody": "Tinggal {amount} lagi untuk mencapai {subject}.",
-  "insightGoalOnTrackTitle": "{subject} sesuai rencana",
-  "insightGoalOnTrackBody": "Dengan {amount} per bulan, target ini tercapai dalam {months, plural, other{{months} bulan}}.",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "Progres {subject} sesuai rencana",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "Dengan menabung {amount} per bulan, Anda akan mencapai target ini dalam {months, plural, =1{1 bulan} other{{months} bulan}}.",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
   "insightDebtOverdueTitle": "Pembayaran {subject} terlambat",
-  "insightDebtOverdueBody": "Pembayaran {subject} sebesar {amount} terlambat {days, plural, other{{days} hari}}.",
-  "insightDebtDueTitle": "Pembayaran {subject} mendekat",
-  "insightDebtDueBody": "{amount} jatuh tempo {days, plural, =0{hari ini} =1{besok} other{{days} hari lagi}}.",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "Pembayaran {subject} sebesar {amount} telah terlambat {days, plural, =1{1 hari} other{{days} hari}}.",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "Pembayaran {subject} akan segera jatuh tempo",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "{amount} jatuh tempo {days, plural, =0{hari ini} =1{besok} other{dalam {days} hari}}.",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "signIn": "Masuk",
   "signUp": "Buat akun",
-  "signInSubtitle": "Selamat datang kembali. Uang Anda menunggu.",
-  "signUpSubtitle": "Beberapa isian saja dan Anda siap.",
+  "signInSubtitle": "Selamat datang kembali. Keuangan Anda menunggu.",
+  "signUpSubtitle": "Isi beberapa detail dan Anda siap memulai.",
   "emailLabel": "Email",
-  "emailHint": "kamu@email.com",
+  "emailHint": "you@email.com",
   "passwordLabel": "Kata sandi",
   "passwordHint": "Minimal 8 karakter",
   "fullNameLabel": "Nama lengkap",
-  "fullNameHint": "Andi Pratama",
+  "fullNameHint": "Alex Morgan",
   "forgotPassword": "Lupa kata sandi?",
-  "resetSent": "Cek email Anda untuk tautan pengaturan ulang",
-  "noAccountYet": "Baru di sini?",
-  "haveAccount": "Sudah punya akun?",
+  "resetSent": "Periksa kotak masuk Anda untuk tautan reset",
+  "noAccountYet": "Pengguna baru?",
+  "haveAccount": "Sudah memiliki akun?",
   "emailInvalid": "Masukkan alamat email yang valid",
   "passwordTooShort": "Gunakan minimal 8 karakter",
   "signOutConfirm": "Keluar?",
-  "signOutBody": "Anda perlu masuk lagi untuk melihat keuangan Anda.",
+  "signOutBody": "Anda harus masuk kembali untuk melihat keuangan Anda.",
   "dataSource": "Sumber data",
-  "insightWeeklySummaryTitle": "Minggu Anda",
-  "insightWeeklySummaryBody": "Lihat ke mana uang Anda pergi minggu ini dan bagaimana anggaran Anda bertahan.",
+  "insightWeeklySummaryTitle": "Ringkasan minggu Anda",
+  "insightWeeklySummaryBody": "Lihat ke mana uang Anda digunakan minggu ini dan bagaimana kondisi anggaran Anda.",
   "notificationSettings": "Notifikasi",
   "alertsSection": "Peringatan",
   "budgetAlerts": "Peringatan anggaran",
   "budgetAlertsBody": "Saat anggaran mendekati atau melewati batas",
   "paymentReminders": "Pengingat pembayaran",
-  "paymentRemindersBody": "Beberapa hari sebelum jatuh tempo",
-  "savingsUpdates": "Kabar tabungan",
-  "savingsUpdatesBody": "Kemajuan menuju target Anda",
+  "paymentRemindersBody": "Beberapa hari sebelum pembayaran jatuh tempo",
+  "savingsUpdates": "Pembaruan tabungan",
+  "savingsUpdatesBody": "Progres menuju target Anda",
   "weeklySummaryLabel": "Ringkasan mingguan",
-  "weeklySummaryBody": "Rangkuman minggu yang baru lewat",
+  "weeklySummaryBody": "Ringkasan minggu yang baru saja berlalu",
   "scheduleSection": "Waktu",
   "reminderTime": "Waktu pengingat",
   "quietHours": "Jam tenang",
   "quietHoursValue": "{start} – {end}",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
   "summaryDay": "Hari ringkasan",
-  "permissionRequired": "Notifikasi dimatikan",
-  "permissionRequiredBody": "Izinkan notifikasi agar RainyPenny bisa memperingatkan Anda sebelum anggaran atau pembayaran lepas kendali.",
+  "permissionRequired": "Notifikasi dinonaktifkan",
+  "permissionRequiredBody": "Izinkan notifikasi agar RainyPenny dapat memperingatkan Anda sebelum anggaran atau pembayaran terlewat.",
   "allowNotifications": "Izinkan notifikasi",
-  "permissionDenied": "Notifikasi diblokir. Anda bisa mengaktifkannya di pengaturan perangkat.",
+  "permissionDenied": "Notifikasi diblokir. Anda dapat mengaktifkannya di pengaturan perangkat.",
   "upcomingAlerts": "Terjadwal",
-  "noScheduledAlerts": "Belum ada yang terjadwal",
-  "noScheduledAlertsBody": "Peringatan muncul di sini saat anggaran dan pembayaran mendekati batasnya.",
-  "scheduledFor": "Dijadwalkan {date}",
+  "noScheduledAlerts": "Tidak ada yang dijadwalkan saat ini",
+  "noScheduledAlertsBody": "Peringatan akan muncul di sini saat anggaran dan pembayaran Anda mendekati batasnya.",
+  "scheduledFor": "Dijadwalkan untuk {date}",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "everyWeek": "Setiap minggu",
-  "allNotificationsOff": "Semua notifikasi mati",
+  "allNotificationsOff": "Semua notifikasi dinonaktifkan",
   "needsAttention": "Perlu perhatian",
-  "quickActionsTitle": "Ingin melakukan apa?",
+  "quickActionsTitle": "Apa yang ingin Anda lakukan?",
   "createSection": "Catat",
-  "jumpToSection": "Lompat ke",
+  "jumpToSection": "Buka",
   "addLoanAction": "Tambah pinjaman",
   "addBudgetAction": "Tambah anggaran",
   "addGoalAction": "Tambah target",
   "longPressHint": "Tips: tahan + untuk langsung mencatat pengeluaran",
   "searchCurrencies": "Cari mata uang",
-  "noCurrenciesFound": "Mata uang tidak ditemukan",
+  "@searchCurrencies": {
+    "description": "Pemilih mata uang: searchCurrencies"
+  },
+  "noCurrenciesFound": "Tidak ada mata uang ditemukan",
+  "@noCurrenciesFound": {
+    "description": "Pemilih mata uang: noCurrenciesFound"
+  },
   "noCurrenciesFoundMessage": "Coba kode, simbol, atau nama lain.",
+  "@noCurrenciesFoundMessage": {
+    "description": "Pemilih mata uang: noCurrenciesFoundMessage"
+  },
   "popularCurrencies": "Populer",
+  "@popularCurrencies": {
+    "description": "Pemilih mata uang: popularCurrencies"
+  },
   "allCurrencies": "Semua mata uang",
-  "totalLoanAmount": "Total pinjaman",
-  "installmentAmount": "Nilai cicilan",
+  "@allCurrencies": {
+    "description": "Pemilih mata uang: allCurrencies"
+  },
+  "totalLoanAmount": "Total jumlah pinjaman",
+  "@totalLoanAmount": {
+    "description": "Detail pinjaman: jumlah awal yang dipinjam"
+  },
+  "installmentAmount": "Jumlah cicilan",
+  "@installmentAmount": {
+    "description": "Detail pinjaman: jumlah yang harus dibayar setiap periode"
+  },
   "numberOfInstallments": "Jumlah cicilan",
+  "@numberOfInstallments": {
+    "description": "Editor pinjaman: durasi rencana pembayaran kembali"
+  },
   "paidInstallments": "Cicilan terbayar",
-  "remainingInstallments": "Sisa cicilan",
+  "@paidInstallments": {
+    "description": "Detail pinjaman: cicilan yang sudah dilunasi"
+  },
+  "remainingInstallments": "Cicilan tersisa",
+  "@remainingInstallments": {
+    "description": "Detail pinjaman: cicilan yang masih harus dibayar"
+  },
   "installmentsPaidOf": "{paid} dari {total} terbayar",
+  "@installmentsPaidOf": {
+    "description": "Detail pinjaman: penghitung cicilan",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "finalPayment": "Pembayaran terakhir",
-  "paymentDueDate": "Tanggal jatuh tempo",
+  "@finalPayment": {
+    "description": "Detail pinjaman: tanggal cicilan terakhir"
+  },
+  "paymentDueDate": "Tanggal jatuh tempo pembayaran",
+  "@paymentDueDate": {
+    "description": "Detail pinjaman: hari dalam bulan saat pembayaran jatuh tempo"
+  },
   "dueOnDayOfMonth": "Tanggal {day} setiap bulan",
+  "@dueOnDayOfMonth": {
+    "description": "Detail pinjaman: tanggal jatuh tempo berulang",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
   "loanStatus": "Status",
+  "@loanStatus": {
+    "description": "Detail pinjaman: kondisi utang saat ini"
+  },
   "statusActive": "Sesuai rencana",
+  "@statusActive": {
+    "description": "Status pinjaman: dibayar kembali secara normal"
+  },
   "statusDueSoon": "Segera jatuh tempo",
+  "@statusDueSoon": {
+    "description": "Status pinjaman: berada dalam periode pengingat"
+  },
   "statusOverdue": "Terlambat",
+  "@statusOverdue": {
+    "description": "Status pinjaman: tanggal jatuh tempo telah lewat"
+  },
   "statusCompleted": "Lunas",
-  "repaymentProgress": "Progres pelunasan",
+  "@statusCompleted": {
+    "description": "Status pinjaman: telah dilunasi sepenuhnya"
+  },
+  "repaymentProgress": "Progres pembayaran kembali",
+  "@repaymentProgress": {
+    "description": "Detail pinjaman: judul bagian untuk bilah progres"
+  },
   "byAmount": "Berdasarkan jumlah",
+  "@byAmount": {
+    "description": "Detail pinjaman: progres diukur berdasarkan uang"
+  },
   "byInstallments": "Berdasarkan cicilan",
+  "@byInstallments": {
+    "description": "Detail pinjaman: progres diukur berdasarkan pembayaran"
+  },
   "startDate": "Tanggal mulai",
+  "@startDate": {
+    "description": "Editor pinjaman: kapan pembayaran kembali dimulai"
+  },
   "openEnded": "Tanpa batas waktu",
+  "@openEnded": {
+    "description": "Detail pinjaman: saldo bergulir tanpa jangka waktu tetap"
+  },
   "loanDetails": "Detail pinjaman",
+  "@loanDetails": {
+    "description": "Judul layar detail pinjaman"
+  },
   "notSet": "Belum diatur",
+  "@notSet": {
+    "description": "Ditampilkan ketika nilai opsional belum dimasukkan"
+  },
   "insightDebtDueTodayTitle": "{subject} jatuh tempo hari ini",
-  "insightDebtDueTodayBody": "Pembayaran {amount} jatuh tempo hari ini. Satu ketukan dan tetap tepat waktu.",
+  "@insightDebtDueTodayTitle": {
+    "description": "Notifikasi: cicilan jatuh tempo hari ini",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "Pembayaran {amount} Anda jatuh tempo hari ini. Satu ketukan cepat membuatnya tetap tepat waktu.",
+  "@insightDebtDueTodayBody": {
+    "description": "Isi notifikasi: cicilan jatuh tempo hari ini",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "remindMorningTitle": "Selamat pagi ☀️",
-  "remindMorningBody": "Mulai hari dengan menguasai keuangan Anda. Ada yang perlu ditambahkan dari kemarin?",
-  "remindNoonTitle": "Cek tengah hari",
-  "remindNoonBody": "Makan siang, kopi, ongkos? Catat dalam beberapa detik.",
-  "remindAfternoonTitle": "Menyusul sebentar",
-  "remindAfternoonBody": "Catat pengeluaran sejauh ini agar angka hari ini tetap akurat.",
+  "@remindMorningTitle": {
+    "description": "Judul pengingat pengeluaran pagi"
+  },
+  "remindMorningBody": "Mulai hari dengan mengendalikan keuangan Anda. Ada pengeluaran kemarin yang perlu ditambahkan?",
+  "@remindMorningBody": {
+    "description": "Isi pengingat pengeluaran pagi"
+  },
+  "remindNoonTitle": "Pengecekan tengah hari",
+  "@remindNoonTitle": {
+    "description": "Judul pengingat pengeluaran siang"
+  },
+  "remindNoonBody": "Makan siang, kopi, ongkos? Tambahkan dalam beberapa detik.",
+  "@remindNoonBody": {
+    "description": "Isi pengingat pengeluaran siang"
+  },
+  "remindAfternoonTitle": "Pembaruan singkat",
+  "@remindAfternoonTitle": {
+    "description": "Judul pengingat pengeluaran sore"
+  },
+  "remindAfternoonBody": "Catat apa yang sudah Anda belanjakan dan pastikan catatan hari ini tetap akurat.",
+  "@remindAfternoonBody": {
+    "description": "Isi pengingat pengeluaran sore"
+  },
   "remindEveningTitle": "Menutup hari",
-  "remindEveningBody": "Dua menit sekarang dan angka hari ini lengkap.",
+  "@remindEveningTitle": {
+    "description": "Judul pengingat pengeluaran malam"
+  },
+  "remindEveningBody": "Dua menit sekarang dan catatan hari ini sudah lengkap.",
+  "@remindEveningBody": {
+    "description": "Isi pengingat pengeluaran malam"
+  },
   "happyWeekendTitle": "Selamat akhir pekan! 🎉",
-  "happyWeekendBody": "Nikmati — dan tetap awasi pengeluaran akhir pekan.",
+  "@happyWeekendTitle": {
+    "description": "Judul sapaan akhir pekan"
+  },
+  "happyWeekendBody": "Nikmati akhir pekan Anda — dan tetap perhatikan pengeluaran akhir pekan.",
+  "@happyWeekendBody": {
+    "description": "Isi sapaan akhir pekan"
+  },
   "dailyReminders": "Pengingat pengeluaran harian",
-  "dailyRemindersBody": "Dorongan lembut agar pengeluaran selalu tercatat",
-  "weekendGreeting": "Sapaan akhir pekan",
+  "@dailyReminders": {
+    "description": "Pengaturan notifikasi: pengingat harian"
+  },
+  "dailyRemindersBody": "Pengingat ramah untuk menjaga catatan pengeluaran Anda tetap terbaru",
+  "@dailyRemindersBody": {
+    "description": "Deskripsi pengaturan notifikasi"
+  },
+  "weekendGreeting": "Selamat akhir pekan",
+  "@weekendGreeting": {
+    "description": "Pengaturan notifikasi: sapaan akhir pekan"
+  },
   "weekendGreetingBody": "Sapaan ramah di awal akhir pekan Anda",
+  "@weekendGreetingBody": {
+    "description": "Deskripsi pengaturan notifikasi"
+  },
   "reminderTimesSection": "Waktu pengingat",
+  "@reminderTimesSection": {
+    "description": "Judul bagian untuk empat slot harian"
+  },
   "slotMorning": "Pagi",
+  "@slotMorning": {
+    "description": "Slot pengingat harian"
+  },
   "slotNoon": "Siang",
+  "@slotNoon": {
+    "description": "Slot pengingat harian"
+  },
   "slotAfternoon": "Sore",
+  "@slotAfternoon": {
+    "description": "Slot pengingat harian"
+  },
   "slotEvening": "Malam",
+  "@slotEvening": {
+    "description": "Slot pengingat harian"
+  },
   "everyDay": "Setiap hari",
+  "@everyDay": {
+    "description": "Seberapa sering notifikasi berulang dikirim"
+  },
   "financialReport": "Laporan Keuangan",
+  "@financialReport": {
+    "description": "Judul PDF yang diekspor"
+  },
   "preparedFor": "Disiapkan untuk",
+  "@preparedFor": {
+    "description": "Sampul PDF: pemilik laporan"
+  },
   "generatedOn": "Dibuat pada",
-  "reportDisclaimer": "Dibuat oleh RainyPenny dari catatan Anda sendiri.",
+  "@generatedOn": {
+    "description": "Sampul PDF: tanggal laporan dibuat"
+  },
+  "reportDisclaimer": "Dibuat oleh RainyPenny berdasarkan catatan Anda sendiri.",
+  "@reportDisclaimer": {
+    "description": "Catatan kaki PDF"
+  },
   "pageOf": "Halaman {page} dari {total}",
-  "overview": "Ikhtisar",
-  "description": "Keterangan",
-  "totalIncome": "Total pemasukan",
+  "@pageOf": {
+    "description": "Nomor halaman pada kaki PDF",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "overview": "Ringkasan",
+  "@overview": {
+    "description": "Bagian PDF: total utama"
+  },
+  "description": "Deskripsi",
+  "@description": {
+    "description": "Judul kolom tabel"
+  },
+  "totalIncome": "Total pendapatan",
+  "@totalIncome": {
+    "description": "Baris tabel ringkasan"
+  },
   "totalExpenses": "Total pengeluaran",
+  "@totalExpenses": {
+    "description": "Baris tabel ringkasan"
+  },
   "totalSaved": "Total tabungan",
+  "@totalSaved": {
+    "description": "Baris tabel ringkasan"
+  },
   "shareOfTotal": "Porsi",
+  "@shareOfTotal": {
+    "description": "Kolom tabel: porsi kategori ini dari seluruh pengeluaran"
+  },
   "used": "Terpakai",
+  "@used": {
+    "description": "Kolom tabel: persentase anggaran yang telah digunakan"
+  },
   "goal": "Target",
+  "@goal": {
+    "description": "Judul kolom tabel untuk target tabungan"
+  },
   "targetDate": "Tanggal target",
+  "@targetDate": {
+    "description": "Judul kolom tabel"
+  },
   "progress": "Progres",
-  "paidOffShort": "Lunas",
+  "@progress": {
+    "description": "Judul kolom tabel"
+  },
+  "paidOffShort": "Terbayar",
+  "@paidOffShort": {
+    "description": "Kolom tabel: persentase utang yang telah dilunasi"
+  },
   "transactions": "Transaksi",
-  "andMoreTransactions": "{count, plural, other{dan {count} transaksi lainnya}}",
+  "@transactions": {
+    "description": "Bagian PDF yang mencantumkan setiap entri"
+  },
+  "andMoreTransactions": "{count, plural, =1{dan 1 transaksi lainnya} other{dan {count} transaksi lainnya}}",
+  "@andMoreTransactions": {
+    "description": "Catatan PDF ketika tabel transaksi dipotong"
+    ,
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "exportPdf": "Ekspor PDF",
+  "@exportPdf": {
+    "description": "Tombol untuk membuat laporan"
+  },
   "sharePdf": "Bagikan laporan",
+  "@sharePdf": {
+    "description": "Tombol yang membuka menu berbagi"
+  },
   "preparingReport": "Menyiapkan laporan Anda…",
+  "@preparingReport": {
+    "description": "Pesan progres saat PDF dibuat"
+  },
   "reportReady": "Laporan siap",
+  "@reportReady": {
+    "description": "Konfirmasi setelah PDF berhasil dibuat"
+  },
   "reportFailed": "Laporan tidak dapat dibuat",
+  "@reportFailed": {
+    "description": "Pesan kesalahan ketika ekspor gagal"
+  },
   "categories": "Kategori",
-  "categoriesIntro": "Tambahkan kategori Anda sendiri agar pemasukan dan pengeluaran tersusun persis seperti cara Anda memikirkannya.",
+  "@categories": {
+    "description": "Judul layar pengelolaan kategori"
+  },
+  "categoriesIntro": "Tambahkan kategori Anda sendiri untuk mencatat pendapatan dan pengeluaran sesuai cara Anda memikirkannya.",
+  "@categoriesIntro": {
+    "description": "Menjelaskan fungsi layar ini"
+  },
   "expenseCategories": "Kategori pengeluaran",
-  "incomeCategories": "Kategori pemasukan",
+  "@expenseCategories": {
+    "description": "Judul bagian"
+  },
+  "incomeCategories": "Kategori pendapatan",
+  "@incomeCategories": {
+    "description": "Judul bagian"
+  },
   "newCategory": "Kategori baru",
-  "editCategory": "Ubah kategori",
+  "@newCategory": {
+    "description": "Judul formulir pembuatan"
+  },
+  "editCategory": "Edit kategori",
+  "@editCategory": {
+    "description": "Judul formulir pengeditan"
+  },
   "categoryName": "Nama",
-  "categoryNameHint": "mis. hewan peliharaan",
+  "@categoryName": {
+    "description": "Label bidang formulir kategori"
+  },
+  "categoryNameHint": "mis. Perawatan hewan",
+  "@categoryNameHint": {
+    "description": "Placeholder nama kategori"
+  },
   "icon": "Ikon",
-  "categorySaved": "Kategori tersimpan",
+  "@icon": {
+    "description": "Label bidang formulir kategori"
+  },
+  "categorySaved": "Kategori disimpan",
+  "@categorySaved": {
+    "description": "Konfirmasi"
+  },
   "categoryDeleted": "Kategori dihapus",
+  "@categoryDeleted": {
+    "description": "Konfirmasi"
+  },
   "deleteCategory": "Hapus kategori ini?",
+  "@deleteCategory": {
+    "description": "Judul konfirmasi penghapusan"
+  },
   "deleteCategoryBody": "{name} akan dihapus dari kategori Anda.",
-  "categoryInUse": "{count, plural, other{{count} catatan masih memakai kategori ini}}",
-  "noCategoriesYet": "Belum ada apa-apa di sini.",
+  "@deleteCategoryBody": {
+    "description": "Isi konfirmasi penghapusan",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{1 catatan masih menggunakan kategori ini} other{{count} catatan masih menggunakan kategori ini}}",
+  "@categoryInUse": {
+    "description": "Menjelaskan mengapa kategori tidak dapat dihapus",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noCategoriesYet": "Belum ada apa pun di sini.",
+  "@noCategoriesYet": {
+    "description": "Grup kosong dalam daftar kategori"
+  },
   "builtIn": "Bawaan",
+  "@builtIn": {
+    "description": "Menandai kategori bersama yang hanya dapat dibaca"
+  },
   "manageCategories": "Kelola kategori",
+  "@manageCategories": {
+    "description": "Baris pengaturan yang membuka layar kategori"
+  },
   "expense": "Pengeluaran",
+  "@expense": {
+    "description": "Label tunggal untuk transaksi keluar"
+  },
   "languageNote": "Bahasa Arab, Urdu, Persia, dan Ibrani mengubah seluruh antarmuka menjadi kanan-ke-kiri, termasuk grafik dan laporan PDF.",
-  "next": "Lanjut",
+  "@languageNote": {
+    "description": "Catatan di bawah pemilih bahasa yang menjelaskan dukungan RTL"
+  },
+  "next": "Berikutnya",
   "back": "Kembali",
   "skip": "Lewati",
   "continueLabel": "Lanjutkan",
-  "selected": "Terpilih",
+  "@continueLabel": {
+    "description": "Aksi utama untuk melanjutkan alur multi-langkah. Menggunakan akhiran karena \"continue\" adalah kata kunci Dart."
+  },
+  "selected": "Dipilih",
   "passwordRequired": "Masukkan kata sandi Anda",
   "newPasswordLabel": "Kata sandi baru",
   "confirmPasswordLabel": "Konfirmasi kata sandi",
@@ -351,123 +945,172 @@
   "showPassword": "Tampilkan kata sandi",
   "hidePassword": "Sembunyikan kata sandi",
   "savePassword": "Simpan kata sandi",
-  "backToSignIn": "Kembali ke halaman masuk",
-  "alreadyHaveAccount": "Saya sudah punya akun",
+  "backToSignIn": "Kembali ke masuk",
+  "alreadyHaveAccount": "Saya sudah memiliki akun",
   "getStarted": "Mulai",
-  "acceptTerms": "Saya menyetujui Syarat Layanan dan Kebijakan Privasi",
-  "acceptTermsRequired": "Setujui dulu untuk melanjutkan",
+  "acceptTerms": "Saya menyetujui Ketentuan Layanan dan Kebijakan Privasi",
+  "acceptTermsRequired": "Harap setujui untuk melanjutkan",
   "passwordStrengthTooShort": "Terlalu pendek",
   "passwordStrengthWeak": "Lemah",
   "passwordStrengthFair": "Cukup",
-  "passwordStrengthGood": "Bagus",
+  "passwordStrengthGood": "Baik",
   "passwordStrengthStrong": "Kuat",
-  "passwordAdvice": "Kalimat panjang yang Anda ingat lebih baik daripada kata pendek penuh simbol. Hindari yang sudah Anda pakai di tempat lain.",
-  "authInvalidCredentials": "Email dan kata sandi itu tidak cocok dengan akun mana pun",
+  "passwordAdvice": "Frasa panjang yang mudah Anda ingat lebih baik daripada kata sandi pendek yang penuh simbol. Hindari apa pun yang sudah Anda gunakan di tempat lain.",
+  "authInvalidCredentials": "Email dan kata sandi tersebut tidak cocok dengan akun mana pun",
   "authEmailNotConfirmed": "Konfirmasi alamat email Anda sebelum masuk",
   "authEmailAlreadyRegistered": "Akun dengan email ini sudah ada",
   "authWeakPassword": "Pilih kata sandi yang lebih panjang",
-  "authRateLimited": "Terlalu banyak percobaan. Coba lagi beberapa menit lagi",
-  "authNetworkError": "Tidak ada koneksi. Periksa jaringan lalu coba lagi",
+  "authRateLimited": "Terlalu banyak percobaan. Coba lagi dalam beberapa menit",
+  "authNetworkError": "Tidak ada koneksi. Periksa jaringan Anda dan coba lagi",
   "authGenericError": "Terjadi kesalahan. Silakan coba lagi",
   "confirmEmailTitle": "Periksa email Anda",
-  "confirmEmailBody": "Kami mengirim tautan konfirmasi ke {email}. Buka tautan itu untuk menyelesaikan akun Anda.",
+  "confirmEmailBody": "Kami mengirim tautan konfirmasi ke {email}. Buka tautan tersebut untuk menyelesaikan penyiapan akun Anda.",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
   "resendConfirmation": "Kirim ulang email konfirmasi",
-  "confirmationResent": "Email konfirmasi terkirim",
+  "confirmationResent": "Email konfirmasi dikirim",
   "forgotPasswordTitle": "Atur ulang kata sandi",
-  "forgotPasswordSubtitle": "Masukkan email yang Anda pakai saat mendaftar dan kami kirimkan tautan untuk memilih kata sandi baru.",
-  "sendResetLink": "Kirim tautan",
-  "resetLinkSentTitle": "Tautan terkirim",
-  "resetLinkSentBody": "Jika {email} punya akun, tautannya sedang dalam perjalanan.",
-  "resetLinkSentHint": "Tautan kedaluwarsa dalam satu jam. Jika belum sampai, periksa folder spam sebelum meminta yang baru.",
-  "tryAnotherEmail": "Pakai email lain",
+  "forgotPasswordSubtitle": "Masukkan email yang Anda gunakan saat mendaftar dan kami akan mengirimkan tautan untuk memilih kata sandi baru.",
+  "sendResetLink": "Kirim tautan reset",
+  "resetLinkSentTitle": "Tautan reset dikirim",
+  "resetLinkSentBody": "Jika {email} memiliki akun, tautan reset sedang dikirim.",
+  "@resetLinkSentBody": {
+    "description": "Sengaja bersifat kondisional: mengonfirmasi apakah suatu alamat terdaftar akan memungkinkan siapa pun mengetahui daftar pengguna aplikasi.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "Tautan akan kedaluwarsa dalam satu jam. Jika tidak sampai, periksa folder spam sebelum meminta yang baru.",
+  "tryAnotherEmail": "Gunakan email lain",
   "resetPasswordTitle": "Pilih kata sandi baru",
-  "resetPasswordSubtitle": "Pilih sesuatu yang belum pernah Anda pakai di akun ini.",
+  "resetPasswordSubtitle": "Pilih sesuatu yang belum pernah Anda gunakan pada akun ini sebelumnya.",
   "passwordChangedTitle": "Kata sandi diperbarui",
-  "passwordChangedBody": "Kata sandi baru Anda tersimpan. Anda sudah masuk dan siap melanjutkan.",
-  "demoModeHint": "Versi demo — tanpa akun",
-  "demoModeFill": "Isikan",
+  "passwordChangedBody": "Kata sandi baru Anda telah disimpan. Anda sudah masuk dan siap menggunakannya.",
+  "demoModeHint": "Versi demo — tidak perlu akun",
+  "demoModeFill": "Isi",
   "welcomeTrackTitle": "Lihat ke mana uang Anda pergi",
-  "welcomeTrackBody": "Catat apa yang masuk dan apa yang keluar. RainyPenny mengubahnya jadi gambaran yang benar-benar terbaca.",
-  "welcomeBudgetTitle": "Batas yang benar-benar menahan",
-  "welcomeBudgetBody": "Beri setiap bagian pengeluaran Anda plafon bulanan, dan ketahui sebelum terlampaui, bukan sesudahnya.",
-  "welcomeGoalsTitle": "Menabung untuk yang penting",
-  "welcomeGoalsBody": "Beri nama sebuah target, tetapkan jumlahnya, lalu lihat ia terisi. Dana darurat lebih mudah dibangun kalau terlihat.",
+  "welcomeTrackBody": "Catat apa yang masuk dan keluar. RainyPenny mengubahnya menjadi gambaran yang mudah dipahami.",
+  "welcomeBudgetTitle": "Tetapkan batas yang bertahan",
+  "welcomeBudgetBody": "Berikan batas bulanan untuk setiap bagian pengeluaran Anda, dan dapatkan peringatan sebelum melewatinya, bukan setelahnya.",
+  "welcomeGoalsTitle": "Menabung untuk hal yang penting",
+  "welcomeGoalsBody": "Beri nama target, tetapkan jumlahnya, dan lihat progresnya terisi. Dana hari hujan lebih mudah dibangun ketika Anda dapat melihatnya.",
   "welcomePrivacyTitle": "Uang Anda tetap milik Anda",
-  "welcomePrivacyBody": "Angka-angka Anda hanya milik Anda. Tidak dijual, tidak dibagikan kepada siapa pun.",
+  "welcomePrivacyBody": "Data keuangan Anda hanya milik Anda. Tidak ada yang dijual dan tidak ada yang dibagikan kepada siapa pun.",
   "stepOf": "Langkah {step} dari {total}",
-  "onboardingNameTitle": "Kami panggil Anda apa?",
-  "onboardingNameBody": "Hanya untuk menyapa Anda, tidak untuk hal lain.",
-  "onboardingNameHint": "Nama depan sudah cukup. Bisa diubah nanti.",
-  "onboardingCurrencyTitle": "Mata uang apa yang Anda pakai?",
-  "onboardingCurrencyBody": "Semua nominal di aplikasi ditampilkan dalam mata uang ini. Memilihnya tidak mengonversi apa pun.",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "Kami harus memanggil Anda siapa?",
+  "onboardingNameBody": "Kami akan menggunakannya untuk menyapa Anda, dan tidak untuk hal lain.",
+  "onboardingNameHint": "Nama depan saja sudah cukup. Anda dapat mengubahnya nanti.",
+  "onboardingCurrencyTitle": "Mata uang apa yang Anda gunakan?",
+  "onboardingCurrencyBody": "Semua jumlah di aplikasi akan ditampilkan dalam mata uang ini. Memilihnya tidak akan mengonversi apa pun.",
   "onboardingCurrencySearch": "Cari semua mata uang",
-  "onboardingAppearanceTitle": "Sesuaikan dengan selera Anda",
-  "onboardingAppearanceBody": "Pilih tampilan. Semuanya berubah saat Anda menyentuh, dan Anda bisa kembali kapan saja.",
+  "onboardingAppearanceTitle": "Jadikan milik Anda",
+  "onboardingAppearanceBody": "Pilih tampilan. Semuanya berubah saat Anda memilih, dan Anda dapat kembali mengubahnya kapan saja.",
   "onboardingNotificationsTitle": "Tetap terkendali",
-  "onboardingNotificationsBody": "Dorongan kecil di saat yang tepat itulah yang mengubah ini jadi kebiasaan.",
-  "onboardingNotifyReminders": "Pengingat lembut untuk mencatat pengeluaran",
-  "onboardingNotifyBudget": "Kabar sebelum anggaran habis",
-  "onboardingNotifySummary": "Ringkasan mingguan ke mana uang Anda pergi",
+  "onboardingNotificationsBody": "Pengingat lembut pada saat yang tepat dapat mengubah ini menjadi kebiasaan.",
+  "onboardingNotifyReminders": "Pengingat lembut untuk mencatat pengeluaran Anda",
+  "onboardingNotifyBudget": "Peringatan sebelum anggaran habis",
+  "onboardingNotifySummary": "Ringkasan mingguan tentang ke mana uang Anda pergi",
   "onboardingNotifyEnable": "Aktifkan notifikasi",
-  "onboardingNotifyDone": "Pengaturan notifikasi tersimpan",
-  "onboardingNotifyLater": "Semua ini bisa Anda ubah di Pengaturan, kapan pun.",
-  "onboardingReadyTitle": "Semua siap",
-  "onboardingReadyTitleNamed": "Semua siap, {name}",
-  "onboardingReadyBody": "Penyiapan selesai. Mau lihat sekilas cara kerjanya?",
-  "onboardingTakeTour": "Tunjukkan pada saya",
+  "onboardingNotifyDone": "Pengaturan notifikasi disimpan",
+  "onboardingNotifyLater": "Anda dapat mengubah semuanya di Pengaturan kapan saja.",
+  "onboardingReadyTitle": "Anda sudah siap",
+  "onboardingReadyTitleNamed": "Anda sudah siap, {name}",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "Penyiapan selesai. Apakah Anda ingin melihat panduan singkat tentang cara kerja semuanya?",
+  "onboardingTakeTour": "Tunjukkan caranya",
   "onboardingGoToApp": "Bawa saya ke aplikasi",
-  "onboardingTourLater": "Belum sekarang? Panduannya tetap di Pengaturan, kapan pun Anda mau.",
+  "onboardingTourLater": "Tidak sekarang? Panduan tetap tersedia di Pengaturan kapan pun Anda membutuhkannya.",
   "beginnersGuide": "Panduan pemula",
   "guideFinish": "Selesai",
   "chapterOf": "Bab {number} dari {total}",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "guideOpenScreen": "Buka {screen}",
-  "guideDashboardTitle": "Beranda Anda",
-  "guideDashboardBody": "Semua bermula di sini. Kartu di atas adalah sisa yang Anda punya; di bawahnya pemasukan dan pengeluaran periode ini, lalu belanja, anggaran, dan target Anda.",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "Dasbor Anda",
+  "guideDashboardBody": "Semuanya dimulai di sini. Kartu di bagian atas menunjukkan jumlah yang tersisa; di bawahnya terdapat uang yang masuk dan keluar pada periode ini, lalu pengeluaran, anggaran, dan target Anda.",
   "guideDashboardTip1": "Tarik layar ke bawah untuk menyegarkan semuanya sekaligus.",
-  "guideDashboardTip2": "Ketuk kartu pemasukan atau pengeluaran untuk langsung ke daftarnya.",
-  "guideDashboardTip3": "Cincin dan wawasan diperbarui begitu Anda mencatat sesuatu.",
+  "guideDashboardTip2": "Ketuk kartu pendapatan atau pengeluaran untuk membuka daftar tersebut.",
+  "guideDashboardTip3": "Lingkaran dan insight diperbarui segera setelah Anda mencatat sesuatu.",
   "guideAddTitle": "Mencatat uang",
-  "guideAddBody": "Tombol di tengah bilah adalah awal dari segalanya. Ia membuka menu singkat: pengeluaran, pemasukan, utang, anggaran, atau target tabungan.",
+  "guideAddBody": "Tombol di tengah bilah adalah tempat semuanya dimulai. Tombol ini membuka menu singkat: uang keluar, uang masuk, utang, anggaran, atau target tabungan.",
   "guideAddTip1": "Ketuk tombol tengah untuk mencatat uang masuk atau keluar.",
-  "guideAddTip2": "Tahan tombolnya untuk langsung ke pengeluaran baru tanpa lewat menu.",
-  "guideAddTip3": "Selalu pilih kategori — itulah yang membuat grafik dan anggaran bekerja.",
+  "guideAddTip2": "Tekan dan tahan untuk langsung membuat pengeluaran baru tanpa membuka menu.",
+  "guideAddTip3": "Selalu pilih kategori — inilah yang membuat grafik dan anggaran berfungsi.",
   "guideCategoriesTitle": "Kategori",
-  "guideCategoriesBody": "Kategori adalah cara pengeluaran dikelompokkan. Yang bawaan sudah cukup untuk kebanyakan orang, dan Anda bisa mengganti namanya atau menambah sendiri.",
-  "guideCategoriesTip1": "Pengaturan, lalu Kelola kategori, untuk mengubah atau menambah.",
-  "guideCategoriesTip2": "Apa pun yang tanpa kategori masuk ke «Lainnya», supaya grafiknya tetap jujur.",
+  "guideCategoriesBody": "Kategori digunakan untuk mengelompokkan pengeluaran. Kategori bawaan mencakup sebagian besar kebutuhan, dan Anda dapat mengganti namanya atau menambahkan kategori sendiri.",
+  "guideCategoriesTip1": "Buka Pengaturan, lalu Kelola kategori, untuk mengubah atau menambahkan kategori.",
+  "guideCategoriesTip2": "Apa pun yang tidak dikategorikan masuk ke Lainnya, sehingga grafik tetap akurat.",
   "guideBudgetTitle": "Anggaran",
-  "guideBudgetBody": "Anggaran adalah plafon bulanan untuk satu kategori. Bilahnya terisi seiring belanja dan berubah warna saat mendekat, jadi Anda tahu sebelum terlampaui.",
-  "guideBudgetTip1": "Mulai dari dua atau tiga kategori, bukan semuanya sekaligus.",
-  "guideBudgetTip2": "Pasang batas sedikit di atas belanja biasa Anda, lalu perketat.",
-  "guideBudgetTip3": "Biarkan peringatan anggaran menyala dan aplikasi akan memberi tahu saat menipis.",
+  "guideBudgetBody": "Anggaran adalah batas bulanan untuk satu kategori. Bilah akan terisi saat Anda berbelanja dan berubah saat mendekati batas, sehingga Anda mengetahuinya sebelum melewatinya.",
+  "guideBudgetTip1": "Mulailah dengan dua atau tiga kategori, bukan semuanya sekaligus.",
+  "guideBudgetTip2": "Tetapkan batas sedikit di atas pengeluaran biasanya, lalu perketat secara bertahap.",
+  "guideBudgetTip3": "Biarkan peringatan anggaran aktif dan aplikasi akan memperingatkan Anda saat anggaran hampir habis.",
   "guideSavingsTitle": "Target tabungan",
-  "guideSavingsBody": "Beri nama untuk apa Anda menabung, tetapkan jumlah dan tanggalnya, lalu aplikasi menghitung berapa yang perlu disisihkan tiap bulan.",
-  "guideSavingsTip1": "Target yang bernama lebih mudah dijaga daripada niat samar untuk menabung.",
-  "guideSavingsTip2": "Beberapa target kecil lebih sering rampung daripada satu target besar.",
+  "guideSavingsBody": "Beri nama tujuan tabungan Anda, tetapkan target dan tanggal, lalu aplikasi menghitung jumlah yang perlu Anda sisihkan setiap bulan untuk mencapainya.",
+  "guideSavingsTip1": "Target yang memiliki nama lebih mudah dipertahankan daripada niat menabung yang masih samar.",
+  "guideSavingsTip2": "Beberapa target kecil lebih sering selesai daripada satu target besar.",
   "guideLoansTitle": "Utang dan pinjaman",
-  "guideLoansBody": "Catat berapa utang Anda, berapa biayanya, dan kapan cicilan berikutnya jatuh tempo. Semua yang sedang Anda lunasi ada dalam satu daftar beserta sisanya.",
-  "guideLoansTip1": "Isi tanggal jatuh tempo dan pengingat pembayaran akan mengejarnya untuk Anda.",
-  "guideLoansTip2": "Utang yang telat tampil merah di beranda sampai dibayar.",
+  "guideLoansBody": "Catat jumlah yang Anda utang, biayanya, dan kapan pembayaran berikutnya jatuh tempo. Semua yang sedang Anda lunasi berada dalam satu daftar dengan total yang masih tersisa.",
+  "guideLoansTip1": "Tambahkan tanggal jatuh tempo dan pengingat pembayaran akan mengingatkannya untuk Anda.",
+  "guideLoansTip2": "Utang yang ditandai terlambat akan muncul berwarna merah di dasbor sampai dibayar.",
   "guideReportsTitle": "Laporan",
-  "guideReportsBody": "Pandangan yang lebih dalam: pemasukan lawan pengeluaran, belanja per kategori, seberapa kuat anggaran Anda bertahan, dan berapa bagian pemasukan yang tersisa.",
-  "guideReportsTip1": "Ganti antara minggu, bulan, dan kuartal di bagian atas layar.",
-  "guideReportsTip2": "Ekspor atau bagikan PDF — hasilnya mengikuti bahasa dan arah baca Anda.",
+  "guideReportsBody": "Tampilan yang lebih mendalam: pendapatan dibandingkan pengeluaran, pengeluaran berdasarkan kategori, kondisi anggaran Anda, dan porsi pendapatan yang berhasil Anda simpan.",
+  "guideReportsTip1": "Beralih antara minggu, bulan, dan kuartal di bagian atas layar.",
+  "guideReportsTip2": "Ekspor atau bagikan PDF — hasilnya menggunakan bahasa dan arah tulisan Anda sendiri.",
   "guideSettingsTitle": "Pengaturan",
-  "guideSettingsBody": "Bahasa, mata uang, warna, dan peringatan semuanya di sini, dan tak satu pun terkunci oleh penyiapan awal — ubah kapan saja.",
-  "guideSettingsTip1": "Empat puluh bahasa, dan seluruh tata letak dicerminkan untuk bahasa kanan-ke-kiri.",
-  "guideSettingsTip2": "Pilih peringatan yang Anda mau dan jam berapa boleh datang.",
-  "guideSettingsTip3": "Jam tenang menahan semuanya sampai pagi.",
+  "guideSettingsBody": "Bahasa, mata uang, warna, dan peringatan semuanya ada di sini, dan tidak ada yang terkunci setelah penyiapan — ubah kapan pun Anda mau.",
+  "guideSettingsTip1": "Empat puluh bahasa, dan seluruh tata letak dicerminkan untuk bahasa yang ditulis dari kanan ke kiri.",
+  "guideSettingsTip2": "Pilih peringatan yang Anda inginkan dan waktu pengirimannya.",
+  "guideSettingsTip3": "Jam tenang menahan semuanya hingga pagi.",
   "guideHabitTitle": "Jadikan kebiasaan",
-  "guideHabitBody": "Aplikasi ini sebaik apa yang Anda masukkan. Satu menit sehari lebih baik daripada satu jam sebulan, dan setelah dua minggu angkanya mulai bicara.",
-  "guideHabitTip1": "Catat pengeluaran saat terjadi, bukan di akhir pekan.",
-  "guideHabitTip2": "Lirik beranda sekali sehari. Sepuluh detik sudah cukup.",
-  "guideHabitTip3": "Panduan ini tetap di Pengaturan — kembalilah kapan saja.",
+  "guideHabitBody": "Aplikasi ini hanya sebaik data yang Anda masukkan. Satu menit setiap hari lebih baik daripada satu jam sebulan sekali, dan setelah dua minggu angka-angka mulai menunjukkan sesuatu.",
+  "guideHabitTip1": "Catat pengeluaran saat terjadi, bukan di akhir minggu.",
+  "guideHabitTip2": "Lihat sekilas dasbor sekali sehari. Sepuluh detik sudah cukup.",
+  "guideHabitTip3": "Panduan ini tetap tersedia di Pengaturan — kembali kapan pun Anda mau.",
   "appearance": "Tampilan",
-  "themeCaption": "Terang, gelap, atau mengikuti ponsel Anda.",
+  "themeCaption": "Terang, gelap, atau mengikuti pengaturan ponsel Anda.",
   "accentColor": "Warna aksen",
-  "accentColorCaption": "Mewarnai tombol, sorotan, dan grafik.",
-  "accentSemanticsNote": "Uang masuk dan uang keluar mempertahankan warnanya sendiri di setiap tema, jadi sebuah angka tidak pernah berubah makna hanya karena Anda mengganti aksen.",
-  "accentTeal": "Tosca",
+  "accentColorCaption": "Memberi warna pada tombol, sorotan, dan grafik.",
+  "accentSemanticsNote": "Pendapatan dan pengeluaran mempertahankan warna masing-masing di setiap tema, sehingga angka tidak pernah berubah maknanya hanya karena Anda mengubah aksen.",
+  "accentTeal": "Hijau kebiruan",
   "accentGreen": "Hijau",
   "accentSky": "Biru langit",
   "accentBlue": "Biru",
@@ -475,21 +1118,305 @@
   "accentViolet": "Ungu",
   "accentPink": "Merah muda",
   "accentCrimson": "Merah tua",
-  "accentOrange": "Jingga",
-  "accentSlate": "Abu batu",
+  "accentOrange": "Oranye",
+  "accentSlate": "Abu-abu batu",
   "searchLanguages": "Cari bahasa",
   "suggestedLanguages": "Disarankan",
   "allLanguages": "Semua bahasa",
-  "noLanguagesFound": "Bahasa tidak ditemukan",
-  "noLanguagesFoundMessage": "Coba namanya dalam bahasa Inggris, atau kode dua huruf.",
+  "noLanguagesFound": "Tidak ada bahasa ditemukan",
+  "noLanguagesFoundMessage": "Coba nama dalam bahasa Inggris atau kode dua huruf.",
   "rightToLeft": "Kanan ke kiri",
   "replayGuide": "Putar ulang panduan",
-  "replaySetup": "Ulangi penyiapan",
-  "replaySetupBody": "Jawab lagi pertanyaan awalnya. Tidak ada catatan Anda yang dihapus.",
-  "rateTitle": "Suka dengan RainyPenny?",
-  "rateBody": "Anda sudah cukup lama menggunakannya. Memberi rating hanya butuh sebentar dan membantu orang lain menemukan aplikasi ini.",
-  "rateAction": "Beri rating",
+  "replaySetup": "Jalankan penyiapan lagi",
+  "replaySetupBody": "Jawab kembali pertanyaan penyiapan awal. Tidak ada data yang telah Anda catat yang akan dihapus.",
+  "rateTitle": "Menyukai RainyPenny?",
+  "rateBody": "Anda sudah menggunakannya selama beberapa waktu. Memberikan rating hanya membutuhkan waktu sebentar dan membantu orang lain menemukan aplikasi ini.",
+  "rateAction": "Beri rating aplikasi",
   "rateLater": "Mungkin nanti",
   "rateNever": "Tidak, terima kasih",
-  "rateThanks": "Terima kasih"
+  "rateThanks": "Terima kasih",
+
+  "monthlySalary": "Gaji bulanan",
+  "remainingAmount": "Tersisa",
+  "carriedForward": "Dibawa dari periode sebelumnya",
+  "carriedForwardHint": "Sisa dari periode sebelumnya",
+  "totalSpending": "Total pengeluaran",
+  "salaryCycle": "Siklus gaji",
+  "payday": "Hari gajian",
+  "paydayDescription": "Hari saat gaji Anda diterima. Bulan keuangan Anda berlangsung dari hari ini hingga sehari sebelum hari gajian berikutnya.",
+  "paydayUpdated": "Hari gajian diperbarui",
+  "paydayDayOfMonth": "Tanggal {day}",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "Pada bulan yang lebih pendek, siklus dimulai pada hari terakhir sebagai gantinya.",
+  "daysLeftInCycle": "{count, plural, =0{Hari terakhir siklus} =1{1 hari menuju gajian} other{{count} hari menuju gajian}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "Gajian berikutnya",
+  "spentSoFar": "Terpakai sejauh ini",
+  "dailyAllowance": "Aman untuk dibelanjakan per hari",
+  "overspentNotice": "Anda telah membelanjakan lebih banyak daripada pendapatan yang masuk pada siklus ini.",
+  "backToThisMonth": "Kembali ke bulan ini",
+  "cycleRangeLabel": "Siklus",
+  "noSalaryRecorded": "Belum ada gaji yang dicatat",
+  "addSalaryAction": "Tambahkan gaji Anda",
+  "cycleOf": "{start} – {end}",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "healthExcellent": "Sangat baik",
+  "healthGood": "Baik",
+  "healthFair": "Cukup",
+  "healthNeedsWork": "Perlu diperbaiki",
+  "healthExcellentBody": "Anda menabung dengan baik dan tetap berada dalam anggaran.",
+  "healthGoodBody": "Pengeluaran Anda sesuai rencana pada periode ini.",
+  "healthFairBody": "Beberapa anggaran mulai tinggi. Perubahan kecil akan membantu.",
+  "healthNeedsWorkBody": "Pengeluaran Anda melampaui rencana. Mulailah dari kategori terbesar.",
+  "factorSavingsRate": "Tingkat tabungan",
+  "factorBudgetControl": "Kendali anggaran",
+  "factorDebtLoad": "Beban utang",
+  "factorSpendingTrend": "Tren pengeluaran",
+  "factorKept": "{percent}% disimpan",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "{percent}% digunakan",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorOfIncome": "{percent}% dari pendapatan",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendUp": "Naik {percent}%",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendDown": "Turun {percent}%",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "Cara kerja skor ini",
+  "healthScoreExplainer": "Skor Anda menggabungkan empat hal: seberapa banyak pendapatan yang Anda simpan, seberapa baik Anda tetap dalam anggaran, seberapa besar pendapatan yang digunakan untuk utang, dan apakah pengeluaran Anda meningkat atau menurun.",
+  "scoreWeightLabel": "{percent}% dari skor",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "viewHealthDetails": "Lihat rinciannya",
+
+  "saveChanges": "Simpan perubahan",
+  "profileUpdated": "Profil diperbarui",
+  "changePhoto": "Ubah foto",
+  "removePhoto": "Hapus foto",
+  "personalInformationIntro": "Nama dan foto Anda akan muncul di seluruh aplikasi. Email Anda adalah alamat yang digunakan untuk masuk.",
+  "nameRequired": "Masukkan nama Anda",
+  "emailNotEditable": "Hubungi dukungan untuk mengubah alamat yang Anda gunakan untuk masuk.",
+
+  "pressBackAgainToExit": "Tekan kembali sekali lagi untuk keluar",
+
+  "categoryHousing": "Perumahan",
+  "categoryFood": "Makanan & Restoran",
+  "categoryTransport": "Transportasi",
+  "categoryShopping": "Belanja",
+  "categoryBills": "Tagihan & Utilitas",
+  "categoryEntertainment": "Hiburan",
+  "categoryHealth": "Kesehatan & Kebugaran",
+  "categoryEducation": "Pendidikan",
+  "categoryTravel": "Perjalanan",
+  "categorySalary": "Gaji",
+  "categoryFreelance": "Freelance",
+  "categoryInvestments": "Investasi",
+  "categoryGift": "Hadiah",
+  "categoryOther": "Lainnya",
+  "categoryGroceries": "Belanja kebutuhan",
+  "categoryDining": "Restoran",
+  "categoryCoffee": "Kopi",
+  "categoryUtilities": "Utilitas",
+  "categoryInternet": "Internet",
+  "categoryPhone": "Telepon",
+  "categoryInsurance": "Asuransi",
+  "categorySubscriptions": "Langganan",
+  "categoryPersonalCare": "Perawatan pribadi",
+  "categoryClothing": "Pakaian",
+  "categoryElectronics": "Elektronik",
+  "categoryHomeSupplies": "Perlengkapan rumah",
+  "categoryPets": "Hewan peliharaan",
+  "categoryChildcare": "Perawatan anak",
+  "categoryFamily": "Keluarga",
+  "categoryFitness": "Kebugaran",
+  "categorySports": "Olahraga",
+  "categoryMedicine": "Obat-obatan",
+  "categoryMedical": "Perawatan medis",
+  "categoryCharity": "Donasi",
+  "categoryTaxes": "Pajak",
+  "categoryFees": "Biaya",
+  "categoryDebt": "Utang",
+  "categorySavings": "Tabungan",
+  "categoryRepairs": "Perbaikan",
+  "categoryCarMaintenance": "Perawatan mobil",
+  "categoryFuel": "Bahan bakar",
+  "categoryParking": "Parkir",
+  "categoryPublicTransport": "Transportasi umum",
+  "categoryRent": "Sewa",
+  "categoryMortgage": "KPR",
+  "categoryBonus": "Bonus",
+  "categoryCommission": "Komisi",
+  "categoryPension": "Pensiun",
+  "categoryInterest": "Bunga",
+  "categoryDividends": "Dividen",
+  "categoryCashback": "Cashback",
+  "categoryRefund": "Pengembalian dana",
+  "categoryRentalIncome": "Pendapatan sewa",
+
+  "addCategory": "Kategori baru",
+  "filterByCategory": "Filter berdasarkan kategori",
+  "allCategories": "Semua kategori",
+  "clearFilters": "Hapus filter",
+  "spentInCategory": "{category}  ·  {amount}",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "allTime": "Sepanjang waktu",
+  "customRange": "Kustom",
+  "selectDateRange": "Pilih periode",
+  "rangeApplied": "Menampilkan {start} – {end}",
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+
+
+  "loans": "Pinjaman",
+  "debts": "Utang",
+  "noLoansTitle": "Tidak ada pinjaman",
+  "noLoansBody": "Anda tidak memiliki pinjaman aktif.",
+
+  "emptyHealthTitle": "Belum Ada Skor Keuangan",
+  "@emptyHealthTitle": {
+    "description": "Judul yang ditampilkan ketika data belum cukup untuk menghitung skor kesehatan"
+  },
+  "emptyHealthDescription": "Kami membutuhkan sedikit aktivitas keuangan sebelum dapat menghitung skor kesehatan yang akurat.",
+  "@emptyHealthDescription": {
+    "description": "Pesan penjelasan yang ditampilkan pada keadaan kosong di layar kesehatan keuangan"
+  },
+  "emptyHealthAddTransactions": "Tambahkan transaksi pendapatan atau pengeluaran",
+  "@emptyHealthAddTransactions": {
+    "description": "Item daftar periksa yang meminta pengguna menambahkan transaksi"
+  },
+  "emptyHealthSetBudgets": "Atur anggaran bulanan Anda",
+  "@emptyHealthSetBudgets": {
+    "description": "Item daftar periksa yang meminta pengguna mengatur anggaran"
+  },
+  "emptyHealthTrackLoans": "Lacak pinjaman atau utang (opsional)",
+  "@emptyHealthTrackLoans": {
+    "description": "Item daftar periksa yang meminta pengguna melacak pinjaman"
+  },
+  "emptyHealthCardSubtitle": "Tambahkan transaksi untuk menghitung skor dan mendapatkan insight.",
+  "@emptyHealthCardSubtitle": {
+    "description": "Subtitle yang ditampilkan pada kartu kesehatan di dasbor ketika tidak ada data"
+  },
+  
+  "smartBudgetSplit": "Pembagian Anggaran Cerdas",
+  "@smartBudgetSplit": {
+    "description": "Judul lembar pembagian anggaran gaji secara cerdas"
+  },
+  "smartBudgetSplitSubtitle": "Masukkan gaji bulanan Anda untuk menghitung batas yang direkomendasikan",
+  "@smartBudgetSplitSubtitle": {
+    "description": "Subtitle yang menjelaskan cara kerja pembagian anggaran gaji"
+  },
+  "monthlyNetSalary": "Gaji Bersih Bulanan",
+  "@monthlyNetSalary": {
+    "description": "Label untuk bidang input gaji bersih bulanan"
+  },
+  "categoryAllocations": "Alokasi Kategori",
+  "@categoryAllocations": {
+    "description": "Header untuk daftar alokasi kategori yang direkomendasikan"
+  },
+  "totalBudgeted": "Total: {amount}",
+  "@totalBudgeted": {
+    "description": "Total jumlah yang dianggarkan untuk semua kategori",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "Terapkan Semua Anggaran",
+  "@applyAllBudgets": {
+    "description": "Label tombol untuk menerapkan semua batas kategori yang direkomendasikan"
+  },
+  "applyingBudgets": "Menerapkan anggaran...",
+  "@applyingBudgets": {
+    "description": "Label status pemuatan saat menerapkan anggaran"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{1 anggaran kategori dibuat.} other{{count} anggaran kategori dibuat.}}",
+  "@budgetsCreatedSuccess": {
+    "description": "Pesan snackbar sukses saat anggaran dibuat",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "Gagal menyimpan anggaran.",
+  "@failedToSaveBudgets": {
+    "description": "Pesan kesalahan ketika penyimpanan anggaran gagal"
+  },
+  "recommendedBudget": "Anggaran yang direkomendasikan"
 }

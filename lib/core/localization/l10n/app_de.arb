@@ -1,44 +1,79 @@
 {
   "@@locale": "de",
   "appName": "RainyPenny",
-  "appTagline": "Sparen für schlechte Zeiten",
-  "navHome": "Start",
-  "navTransactions": "Umsätze",
-  "navAdd": "Neu",
+  "appTagline": "Für einen regnerischen Tag sparen",
+  "navHome": "Startseite",
+  "navTransactions": "Transaktionen",
+  "navAdd": "Hinzufügen",
   "navReports": "Berichte",
   "navProfile": "Profil",
   "greetingMorning": "Guten Morgen, {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingAfternoon": "Guten Tag, {name}",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingEvening": "Guten Abend, {name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingSubtitle": "Hier ist deine Finanzübersicht",
   "totalBalance": "Gesamtsaldo",
-  "vsLastPeriod": "ggü. Vorperiode",
+  "vsLastPeriod": "gegenüber dem letzten Zeitraum",
   "income": "Einnahmen",
   "expenses": "Ausgaben",
   "netBalance": "Nettosaldo",
   "lastThirtyDays": "Letzte 30 Tage",
   "quickActions": "Schnellaktionen",
-  "addIncome": "Einnahme erfassen",
-  "addExpense": "Ausgabe erfassen",
+  "addIncome": "Einnahme hinzufügen",
+  "addExpense": "Ausgabe hinzufügen",
   "spendingOverview": "Ausgabenübersicht",
-  "recentTransactions": "Letzte Umsätze",
-  "seeAll": "Alle ansehen",
-  "viewAll": "Alle ansehen",
-  "budgetProgress": "Budgetverlauf",
+  "recentTransactions": "Letzte Transaktionen",
+  "seeAll": "Alle anzeigen",
+  "viewAll": "Alle anzeigen",
+  "budgetProgress": "Budgetfortschritt",
   "savingsGoals": "Sparziele",
-  "financialInsight": "Finanz-Insight",
+  "financialInsight": "Finanzielle Erkenntnis",
   "financialHealth": "Finanzielle Gesundheit",
   "ofTotal": "von {total}",
-  "searchTransactions": "Umsätze suchen",
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "searchTransactions": "Transaktionen suchen",
   "filterAll": "Alle",
   "filterIncome": "Einnahmen",
   "filterExpenses": "Ausgaben",
   "today": "Heute",
   "yesterday": "Gestern",
-  "noTransactionsTitle": "Keine Umsätze gefunden",
-  "noTransactionsBody": "Versuche eine andere Suche oder einen anderen Filter.",
-  "transactionCount": "{count, plural, =0{Keine Buchungen} =1{1 Buchung} other{{count} Buchungen}}",
-  "addTransaction": "Umsatz erfassen",
+  "noTransactionsTitle": "Keine Transaktionen gefunden",
+  "noTransactionsBody": "Versuche eine andere Suche oder einen anderen Filter, um mehr Aktivitäten zu sehen.",
+  "transactionCount": "{count, plural, =0{Keine Transaktionen} =1{1 Transaktion} other{{count} Transaktionen}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addTransaction": "Transaktion hinzufügen",
   "amount": "Betrag",
   "category": "Kategorie",
   "date": "Datum",
@@ -46,10 +81,10 @@
   "noteHint": "Optionale Notiz",
   "saveIncome": "Einnahme speichern",
   "saveExpense": "Ausgabe speichern",
-  "selectCategory": "Kategorie wählen",
-  "transactionSaved": "Umsatz gespeichert",
-  "amountRequired": "Gib einen Betrag über null ein",
-  "titleRequired": "Gib dieser Buchung einen Namen",
+  "selectCategory": "Kategorie auswählen",
+  "transactionSaved": "Transaktion gespeichert",
+  "amountRequired": "Gib einen Betrag größer als null ein",
+  "titleRequired": "Gib dieser Transaktion einen Namen",
   "descriptionLabel": "Beschreibung",
   "descriptionHint": "z. B. Lebensmittel",
   "budget": "Budget",
@@ -57,9 +92,16 @@
   "totalBudget": "Gesamtbudget",
   "spent": "Ausgegeben",
   "remaining": "Verbleibend",
-  "budgetUsed": "{percent}% verbraucht",
+  "budgetUsed": "{percent}% verwendet",
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "onTrack": "Im Plan",
-  "approachingLimit": "Nähert sich dem Limit",
+  "approachingLimit": "Limit wird erreicht",
   "overBudget": "Budget überschritten",
   "savings": "Ersparnisse",
   "yourGoals": "Deine Ziele",
@@ -68,15 +110,36 @@
   "monthlyContribution": "Monatlich",
   "addFunds": "Geld hinzufügen",
   "goalComplete": "Ziel erreicht",
-  "monthsToGo": "{count, plural, =1{noch 1 Monat} other{noch {count} Monate}}",
+  "monthsToGo": "{count, plural, =1{Noch 1 Monat} other{Noch {count} Monate}}",
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "loansAndDebts": "Kredite & Schulden",
-  "totalOutstanding": "Gesamtschuld",
+  "totalOutstanding": "Offener Gesamtbetrag",
   "monthlyPayment": "Monatlich",
   "nextPayment": "Nächste Zahlung",
-  "paidOff": "{percent}% getilgt",
+  "paidOff": "{percent}% abbezahlt",
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "interestRate": "Zinsen",
   "upcomingPayments": "Anstehende Zahlungen",
-  "dueInDays": "{count, plural, =0{Heute fällig} =1{Morgen fällig} other{Fällig in {count} Tagen}}",
+  "dueInDays": "{count, plural, =0{Heute fällig} =1{Morgen fällig} other{In {count} Tagen fällig}}",
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "overdue": "Überfällig",
   "reports": "Berichte",
   "week": "Woche",
@@ -84,12 +147,12 @@
   "quarter": "Quartal",
   "incomeVsExpenses": "Einnahmen vs. Ausgaben",
   "spendingByCategory": "Ausgaben nach Kategorie",
-  "budgetPerformance": "Budget-Performance",
-  "insights": "Einblicke",
+  "budgetPerformance": "Budgetentwicklung",
+  "insights": "Erkenntnisse",
   "savingsRate": "Sparquote",
   "profile": "Profil",
   "account": "Konto",
-  "personalInformation": "Persönliche Daten",
+  "personalInformation": "Persönliche Informationen",
   "changePassword": "Passwort ändern",
   "notifications": "Benachrichtigungen",
   "preferences": "Einstellungen",
@@ -100,66 +163,94 @@
   "privacyAndSecurity": "Datenschutz & Sicherheit",
   "help": "Hilfe",
   "helpAndSupport": "Hilfe & Support",
-  "termsAndConditions": "AGB",
+  "termsAndConditions": "Allgemeine Geschäftsbedingungen",
   "logOut": "Abmelden",
   "memberSince": "Mitglied seit {date}",
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "themeSystem": "System",
   "themeLight": "Hell",
   "themeDark": "Dunkel",
   "settings": "Einstellungen",
-  "noNotificationsTitle": "Alles erledigt",
-  "noNotificationsBody": "Neue Insights und Erinnerungen erscheinen hier.",
+  "noNotificationsTitle": "Du bist auf dem neuesten Stand",
+  "noNotificationsBody": "Neue Erkenntnisse und Erinnerungen werden hier angezeigt.",
   "cancel": "Abbrechen",
   "save": "Speichern",
   "done": "Fertig",
   "retry": "Erneut versuchen",
   "close": "Schließen",
   "somethingWentWrong": "Etwas ist schiefgelaufen",
-  "comingSoon": "Bald verfügbar",
+  "comingSoon": "Kommt mit der vollständigen Version",
   "edit": "Bearbeiten",
   "delete": "Löschen",
   "undo": "Rückgängig",
   "add": "Hinzufügen",
   "create": "Erstellen",
-  "nameRequired": "Gib dem einen Namen",
-  "amountAboveZero": "Gib einen Betrag über null ein",
-  "editTransaction": "Buchung bearbeiten",
-  "deleteTransaction": "Buchung löschen?",
-  "deleteTransactionBody": "{title} wird aus deinem Kontobuch entfernt.",
-  "transactionDeleted": "Buchung gelöscht",
-  "transactionUpdated": "Buchung aktualisiert",
+  "nameRequired": "Gib einen Namen ein",
+  "amountAboveZero": "Gib einen Betrag größer als null ein",
+  "editTransaction": "Transaktion bearbeiten",
+  "deleteTransaction": "Transaktion löschen?",
+  "deleteTransactionBody": "{title} wird aus deinem Buch entfernt.",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "transactionDeleted": "Transaktion gelöscht",
+  "transactionUpdated": "Transaktion aktualisiert",
   "newBudget": "Neues Budget",
   "editBudget": "Budget bearbeiten",
-  "budgetLimit": "Monatslimit",
+  "budgetLimit": "Monatliches Limit",
   "deleteBudget": "Budget löschen?",
-  "deleteBudgetBody": "Das Budget für {category} wird entfernt. Deine Buchungen bleiben unberührt.",
+  "deleteBudgetBody": "Das Budget für {category} wird entfernt. Deine Transaktionen bleiben unverändert.",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
   "budgetSaved": "Budget gespeichert",
   "budgetDeleted": "Budget gelöscht",
-  "allCategoriesBudgeted": "Jede Kategorie hat bereits ein Budget",
+  "allCategoriesBudgeted": "Für jede Kategorie gibt es bereits ein Budget",
   "noBudgetsTitle": "Noch keine Budgets",
-  "noBudgetsBody": "Lege ein Monatslimit für eine Kategorie fest, um sie zu verfolgen.",
+  "noBudgetsBody": "Lege ein monatliches Limit für eine Kategorie fest, um sie zu verfolgen.",
   "newGoal": "Neues Ziel",
   "editGoal": "Ziel bearbeiten",
   "goalName": "Name des Ziels",
-  "goalNameHint": "z. B. Notgroschen",
+  "goalNameHint": "z. B. Notfallfonds",
   "targetAmount": "Zielbetrag",
   "alreadySaved": "Bereits gespart",
   "deleteGoal": "Ziel löschen?",
-  "deleteGoalBody": "{name} und der bisherige Fortschritt werden entfernt.",
+  "deleteGoalBody": "{name} und der Fortschritt werden entfernt.",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "goalSaved": "Ziel gespeichert",
   "goalDeleted": "Ziel gelöscht",
   "noGoalsTitle": "Noch keine Sparziele",
   "noGoalsBody": "Setze ein Ziel und RainyPenny verfolgt deinen Fortschritt.",
-  "fundsAdded": "Betrag hinzugefügt",
+  "fundsAdded": "Geld hinzugefügt",
   "newDebt": "Neuer Kredit oder neue Karte",
   "editDebt": "Kredit bearbeiten",
   "debtName": "Name",
   "debtNameHint": "z. B. Autokredit",
   "lender": "Kreditgeber",
   "lenderHint": "z. B. Meridian Bank",
-  "originalAmount": "Ursprungsbetrag",
-  "creditLimit": "Kreditrahmen",
-  "remainingBalance": "Restschuld",
+  "originalAmount": "Ursprünglicher Betrag",
+  "creditLimit": "Kreditlimit",
+  "remainingBalance": "Restbetrag",
   "interestRatePercent": "Zinssatz (%)",
   "kindLoan": "Kredit",
   "kindCreditCard": "Kreditkarte",
@@ -167,307 +258,855 @@
   "paymentRecorded": "Zahlung erfasst",
   "deleteDebt": "Diese Schuld löschen?",
   "deleteDebtBody": "{name} wird aus deinen Schulden entfernt.",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "debtSaved": "Gespeichert",
   "debtDeleted": "Gelöscht",
   "noDebtsTitle": "Keine Schulden erfasst",
-  "noDebtsBody": "Füge einen Kredit oder eine Kreditkarte hinzu, um die Rückzahlung im Blick zu behalten.",
-  "insightBudgetExceededTitle": "Budget für {subject} überschritten",
-  "insightBudgetExceededBody": "Du liegst in dieser Periode {amount} über deinem Budget für {subject}.",
+  "noDebtsBody": "Füge einen Kredit oder eine Kreditkarte hinzu, um deine Rückzahlungen im Blick zu behalten.",
+  "insightBudgetExceededTitle": "{subject}-Budget überschritten",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "Du hast dein {subject}-Budget für diesen Zeitraum um {amount} überschritten.",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
   "insightBudgetApproachingTitle": "{subject} nähert sich dem Limit",
-  "insightBudgetApproachingBody": "Dein Budget für {subject} ist zu {percent}% verbraucht, {amount} bleiben übrig.",
-  "insightOverIncomeTitle": "Ausgaben über den Einnahmen",
-  "insightOverIncomeBody": "Du hast in dieser Periode mehr ausgegeben als eingenommen. Sieh dir deine größten Kategorien an, um das auszugleichen.",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "Dein {subject}-Budget ist zu {percent}% ausgeschöpft. {amount} sind noch übrig.",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "insightOverIncomeTitle": "Ausgaben liegen über den Einnahmen",
+  "insightOverIncomeBody": "Du hast in diesem Zeitraum mehr ausgegeben als verdient. Prüfe deine größten Kategorien, um wieder ins Gleichgewicht zu kommen.",
   "insightCategoryUpTitle": "Ausgaben für {subject} gestiegen",
-  "insightCategoryUpBody": "Deine Ausgaben für {subject} liegen {percent}% über der Vorperiode.",
-  "insightTrendDownTitle": "Ausgaben rückläufig",
-  "insightTrendDownBody": "Die Gesamtausgaben liegen {percent}% unter der Vorperiode.",
-  "insightTrendUpTitle": "Ausgaben steigend",
-  "insightTrendUpBody": "Die Gesamtausgaben liegen {percent}% über der Vorperiode.",
-  "insightSavingsStrongTitle": "Starke Sparquote in dieser Periode",
-  "insightSavingsStrongBody": "Du hast {percent}% deiner Einnahmen behalten — deutlich über dem Ziel von {target}%.",
-  "insightSavingsLowTitle": "Sparquote unter dem Ziel",
-  "insightSavingsLowBody": "Du hast in dieser Periode {percent}% deiner Einnahmen behalten. Ziel sind {target}%.",
-  "insightGoalNearlyTitle": "{subject} ist fast finanziert",
-  "insightGoalNearlyBody": "Nur noch {amount} bis {subject}.",
-  "insightGoalOnTrackTitle": "Auf Kurs für {subject}",
-  "insightGoalOnTrackBody": "Mit {amount} im Monat erreichst du dieses Ziel in {months, plural, =1{1 Monat} other{{months} Monaten}}.",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightCategoryUpBody": "Deine Ausgaben für {subject} sind gegenüber dem vorherigen Zeitraum um {percent}% gestiegen.",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "Ausgaben gehen zurück",
+  "insightTrendDownBody": "Die Gesamtausgaben sind gegenüber dem vorherigen Zeitraum um {percent}% gesunken.",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "Ausgaben steigen",
+  "insightTrendUpBody": "Die Gesamtausgaben sind gegenüber dem vorherigen Zeitraum um {percent}% gestiegen.",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "Starke Ersparnisse in diesem Zeitraum",
+  "insightSavingsStrongBody": "Du hast {percent}% deiner Einnahmen behalten – deutlich mehr als das Ziel von {target}%.",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsLowTitle": "Sparquote liegt unter dem Ziel",
+  "insightSavingsLowBody": "Du hast in diesem Zeitraum {percent}% deiner Einnahmen behalten. Strebe {target}% an.",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "{subject} ist fast erreicht",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalNearlyBody": "Nur noch {amount}, um {subject} zu erreichen.",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "Du bist bei {subject} im Plan",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "Mit {amount} pro Monat erreichst du dieses Ziel in {months, plural, =1{1 Monat} other{{months} Monaten}}.",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
   "insightDebtOverdueTitle": "Zahlung für {subject} überfällig",
-  "insightDebtOverdueBody": "Die Zahlung für {subject} über {amount} ist seit {days, plural, =1{1 Tag} other{{days} Tagen}} überfällig.",
-  "insightDebtDueTitle": "Zahlung für {subject} steht an",
-  "insightDebtDueBody": "{amount} sind {days, plural, =0{heute} =1{morgen} other{in {days} Tagen}} fällig.",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "Die Zahlung von {amount} für {subject} ist seit {days, plural, =1{1 Tag} other{{days} Tagen}} überfällig.",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "Zahlung für {subject} steht bevor",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "{amount} ist {days, plural, =0{heute} =1{morgen} other{in {days} Tagen}} fällig.",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
   "signIn": "Anmelden",
   "signUp": "Konto erstellen",
   "signInSubtitle": "Willkommen zurück. Dein Geld wartet.",
   "signUpSubtitle": "Ein paar Angaben und du bist startklar.",
   "emailLabel": "E-Mail",
-  "emailHint": "du@email.com",
+  "emailHint": "du@email.de",
   "passwordLabel": "Passwort",
   "passwordHint": "Mindestens 8 Zeichen",
   "fullNameLabel": "Vollständiger Name",
   "fullNameHint": "Alex Morgan",
   "forgotPassword": "Passwort vergessen?",
-  "resetSent": "Prüfe dein Postfach auf den Link zum Zurücksetzen",
+  "resetSent": "Prüfe deinen Posteingang auf den Link zum Zurücksetzen",
   "noAccountYet": "Neu hier?",
-  "haveAccount": "Schon ein Konto?",
+  "haveAccount": "Du hast bereits ein Konto?",
   "emailInvalid": "Gib eine gültige E-Mail-Adresse ein",
   "passwordTooShort": "Verwende mindestens 8 Zeichen",
   "signOutConfirm": "Abmelden?",
   "signOutBody": "Du musst dich erneut anmelden, um deine Finanzen zu sehen.",
   "dataSource": "Datenquelle",
   "insightWeeklySummaryTitle": "Deine Woche im Rückblick",
-  "insightWeeklySummaryBody": "Sieh, wohin dein Geld diese Woche geflossen ist und wie deine Budgets stehen.",
-  "notificationSettings": "Mitteilungen",
-  "alertsSection": "Hinweise",
-  "budgetAlerts": "Budget-Hinweise",
-  "budgetAlertsBody": "Wenn ein Budget sein Limit fast oder ganz erreicht",
+  "insightWeeklySummaryBody": "Sieh, wofür du diese Woche Geld ausgegeben hast und wie es um deine Budgets steht.",
+  "notificationSettings": "Benachrichtigungen",
+  "alertsSection": "Alarme",
+  "budgetAlerts": "Budgetalarme",
+  "budgetAlertsBody": "Wenn sich ein Budget seinem Limit nähert oder es überschreitet",
   "paymentReminders": "Zahlungserinnerungen",
-  "paymentRemindersBody": "Ein paar Tage bevor eine Zahlung fällig wird",
-  "savingsUpdates": "Spar-Updates",
+  "paymentRemindersBody": "Einige Tage bevor eine Zahlung fällig wird",
+  "savingsUpdates": "Sparupdates",
   "savingsUpdatesBody": "Fortschritt bei deinen Zielen",
-  "weeklySummaryLabel": "Wochenrückblick",
+  "weeklySummaryLabel": "Wochenübersicht",
   "weeklySummaryBody": "Eine Zusammenfassung der vergangenen Woche",
-  "scheduleSection": "Zeitpunkt",
+  "scheduleSection": "Zeitplanung",
   "reminderTime": "Erinnerungszeit",
   "quietHours": "Ruhezeiten",
   "quietHoursValue": "{start} – {end}",
-  "summaryDay": "Tag des Rückblicks",
-  "permissionRequired": "Mitteilungen sind deaktiviert",
-  "permissionRequiredBody": "Erlaube Mitteilungen, damit RainyPenny dich warnen kann, bevor dir ein Budget oder eine Zahlung entgleitet.",
-  "allowNotifications": "Mitteilungen erlauben",
-  "permissionDenied": "Mitteilungen sind blockiert. Du kannst sie in den Geräteeinstellungen aktivieren.",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "summaryDay": "Tag der Zusammenfassung",
+  "permissionRequired": "Benachrichtigungen sind deaktiviert",
+  "permissionRequiredBody": "Erlaube Benachrichtigungen, damit RainyPenny dich warnen kann, bevor ein Budget oder eine Zahlung aus dem Blick gerät.",
+  "allowNotifications": "Benachrichtigungen erlauben",
+  "permissionDenied": "Benachrichtigungen sind blockiert. Du kannst sie in den Geräteeinstellungen aktivieren.",
   "upcomingAlerts": "Geplant",
-  "noScheduledAlerts": "Derzeit ist nichts geplant",
-  "noScheduledAlertsBody": "Hinweise erscheinen hier, sobald deine Budgets und Zahlungen an ihre Grenzen kommen.",
+  "noScheduledAlerts": "Derzeit nichts geplant",
+  "noScheduledAlertsBody": "Alarme werden hier angezeigt, wenn sich deine Budgets oder Zahlungen ihren Limits nähern.",
   "scheduledFor": "Geplant für {date}",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "everyWeek": "Jede Woche",
-  "allNotificationsOff": "Alle Mitteilungen sind aus",
-  "needsAttention": "Braucht Aufmerksamkeit",
+  "allNotificationsOff": "Alle Benachrichtigungen sind deaktiviert",
+  "needsAttention": "Erfordert Aufmerksamkeit",
   "quickActionsTitle": "Was möchtest du tun?",
   "createSection": "Erfassen",
-  "jumpToSection": "Gehe zu",
+  "jumpToSection": "Springen zu",
   "addLoanAction": "Kredit hinzufügen",
   "addBudgetAction": "Budget hinzufügen",
   "addGoalAction": "Ziel hinzufügen",
-  "longPressHint": "Tipp: + gedrückt halten, um sofort eine Ausgabe zu erfassen",
+  "longPressHint": "Tipp: Halte + gedrückt, um sofort eine Ausgabe zu erfassen",
   "searchCurrencies": "Währungen suchen",
+  "@searchCurrencies": {
+    "description": "Währungsauswahl: searchCurrencies"
+  },
   "noCurrenciesFound": "Keine Währungen gefunden",
-  "noCurrenciesFoundMessage": "Versuch einen anderen Code, ein anderes Symbol oder einen anderen Namen.",
-  "popularCurrencies": "Häufig genutzt",
+  "@noCurrenciesFound": {
+    "description": "Währungsauswahl: noCurrenciesFound"
+  },
+  "noCurrenciesFoundMessage": "Versuche einen anderen Code, ein anderes Symbol oder einen anderen Namen.",
+  "@noCurrenciesFoundMessage": {
+    "description": "Währungsauswahl: noCurrenciesFoundMessage"
+  },
+  "popularCurrencies": "Beliebt",
+  "@popularCurrencies": {
+    "description": "Währungsauswahl: beliebte Währungen"
+  },
   "allCurrencies": "Alle Währungen",
+  "@allCurrencies": {
+    "description": "Währungsauswahl: alle Währungen"
+  },
   "totalLoanAmount": "Gesamter Kreditbetrag",
-  "installmentAmount": "Ratenhöhe",
+  "@totalLoanAmount": {
+    "description": "Kreditdetails: ursprünglich geliehener Betrag"
+  },
+  "installmentAmount": "Ratenbetrag",
+  "@installmentAmount": {
+    "description": "Kreditdetails: Betrag, der in jedem Zahlungszyklus fällig wird"
+  },
   "numberOfInstallments": "Anzahl der Raten",
+  "@numberOfInstallments": {
+    "description": "Kreditbearbeitung: Dauer des Rückzahlungsplans"
+  },
   "paidInstallments": "Bezahlte Raten",
-  "remainingInstallments": "Offene Raten",
+  "@paidInstallments": {
+    "description": "Kreditdetails: bereits beglichene Raten"
+  },
+  "remainingInstallments": "Verbleibende Raten",
+  "@remainingInstallments": {
+    "description": "Kreditdetails: noch zu zahlende Raten"
+  },
   "installmentsPaidOf": "{paid} von {total} bezahlt",
-  "finalPayment": "Letzte Rate",
-  "paymentDueDate": "Fälligkeitstag",
-  "dueOnDayOfMonth": "Am {day}. jedes Monats",
+  "@installmentsPaidOf": {
+    "description": "Kreditdetails: Ratenzähler",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "finalPayment": "Letzte Zahlung",
+  "@finalPayment": {
+    "description": "Kreditdetails: Datum der letzten Rate"
+  },
+  "paymentDueDate": "Fälligkeit der Zahlung",
+  "@paymentDueDate": {
+    "description": "Kreditdetails: Tag des Monats, an dem eine Zahlung fällig wird"
+  },
+  "dueOnDayOfMonth": "Am {day}. Tag jedes Monats",
+  "@dueOnDayOfMonth": {
+    "description": "Kreditdetails: wiederkehrender Fälligkeitstag",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
   "loanStatus": "Status",
+  "@loanStatus": {
+    "description": "Kreditdetails: aktueller Stand der Schuld"
+  },
   "statusActive": "Im Plan",
+  "@statusActive": {
+    "description": "Kreditstatus: wird normal zurückgezahlt"
+  },
   "statusDueSoon": "Bald fällig",
+  "@statusDueSoon": {
+    "description": "Kreditstatus: innerhalb des Erinnerungszeitraums"
+  },
   "statusOverdue": "Überfällig",
+  "@statusOverdue": {
+    "description": "Kreditstatus: Fälligkeitsdatum ist überschritten"
+  },
   "statusCompleted": "Abbezahlt",
-  "repaymentProgress": "Tilgungsfortschritt",
+  "@statusCompleted": {
+    "description": "Kreditstatus: vollständig zurückgezahlt"
+  },
+  "repaymentProgress": "Rückzahlungsfortschritt",
+  "@repaymentProgress": {
+    "description": "Kreditdetails: Überschrift für die Fortschrittsbalken"
+  },
   "byAmount": "Nach Betrag",
+  "@byAmount": {
+    "description": "Kreditdetails: Fortschritt gemessen am Geldbetrag"
+  },
   "byInstallments": "Nach Raten",
+  "@byInstallments": {
+    "description": "Kreditdetails: Fortschritt gemessen an Zahlungen"
+  },
   "startDate": "Startdatum",
+  "@startDate": {
+    "description": "Kreditbearbeitung: Beginn der Rückzahlung"
+  },
   "openEnded": "Unbefristet",
+  "@openEnded": {
+    "description": "Kreditdetails: revolvierender Saldo ohne feste Laufzeit"
+  },
   "loanDetails": "Kreditdetails",
+  "@loanDetails": {
+    "description": "Titel des Kreditdetailbildschirms"
+  },
   "notSet": "Nicht festgelegt",
+  "@notSet": {
+    "description": "Wird angezeigt, wenn ein optionaler Wert nicht eingegeben wurde"
+  },
   "insightDebtDueTodayTitle": "{subject} ist heute fällig",
-  "insightDebtDueTodayBody": "Deine Zahlung über {amount} ist heute fällig. Ein Tippen und sie bleibt pünktlich.",
+  "@insightDebtDueTodayTitle": {
+    "description": "Benachrichtigung: Eine Rate ist heute fällig",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "Deine Zahlung von {amount} ist heute fällig. Ein kurzer Tipp hält sie pünktlich.",
+  "@insightDebtDueTodayBody": {
+    "description": "Benachrichtigungstext: Rate ist heute fällig",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "remindMorningTitle": "Guten Morgen ☀️",
-  "remindMorningBody": "Starte den Tag mit dem Überblick. Gibt es noch etwas von gestern nachzutragen?",
-  "remindNoonTitle": "Mittagscheck",
-  "remindNoonBody": "Mittagessen, Kaffee, Ticket? In Sekunden erfasst.",
-  "remindAfternoonTitle": "Kurzer Abgleich",
-  "remindAfternoonBody": "Trag ein, was du bisher ausgegeben hast, und der Tag bleibt korrekt.",
-  "remindEveningTitle": "Tagesabschluss",
-  "remindEveningBody": "Zwei Minuten jetzt und die Zahlen des Tages sind vollständig.",
+  "@remindMorningTitle": {
+    "description": "Titel der morgendlichen Erinnerung an Ausgaben"
+  },
+  "remindMorningBody": "Starte den Tag mit deinen Finanzen im Blick. Gab es gestern noch etwas einzutragen?",
+  "@remindMorningBody": {
+    "description": "Text der morgendlichen Erinnerung an Ausgaben"
+  },
+  "remindNoonTitle": "Mittags-Check-in",
+  "@remindNoonTitle": {
+    "description": "Titel der mittäglichen Erinnerung an Ausgaben"
+  },
+  "remindNoonBody": "Mittagessen, Kaffee, Fahrkarte? Trag es in wenigen Sekunden ein.",
+  "@remindNoonBody": {
+    "description": "Text der mittäglichen Erinnerung an Ausgaben"
+  },
+  "remindAfternoonTitle": "Kurzer Nachtrag",
+  "@remindAfternoonTitle": {
+    "description": "Titel der nachmittäglichen Erinnerung an Ausgaben"
+  },
+  "remindAfternoonBody": "Erfasse, was du bisher ausgegeben hast, und halte den heutigen Stand aktuell.",
+  "@remindAfternoonBody": {
+    "description": "Text der nachmittäglichen Erinnerung an Ausgaben"
+  },
+  "remindEveningTitle": "Den Tag abschließen",
+  "@remindEveningTitle": {
+    "description": "Titel der abendlichen Erinnerung an Ausgaben"
+  },
+  "remindEveningBody": "Zwei Minuten jetzt, und die Zahlen für heute sind vollständig.",
+  "@remindEveningBody": {
+    "description": "Text der abendlichen Erinnerung an Ausgaben"
+  },
   "happyWeekendTitle": "Schönes Wochenende! 🎉",
-  "happyWeekendBody": "Genieß es — und behalte die Wochenendausgaben im Blick.",
-  "dailyReminders": "Tägliche Ausgaben-Erinnerungen",
-  "dailyRemindersBody": "Freundliche Anstöße, deine Ausgaben aktuell zu halten",
+  "@happyWeekendTitle": {
+    "description": "Titel des Wochenendgrußes"
+  },
+  "happyWeekendBody": "Genieß es – und behalte deine Wochenendausgaben im Blick.",
+  "@happyWeekendBody": {
+    "description": "Text des Wochenendgrußes"
+  },
+  "dailyReminders": "Tägliche Ausgabenerinnerungen",
+  "@dailyReminders": {
+    "description": "Benachrichtigungseinstellung: tägliche Erinnerungen"
+  },
+  "dailyRemindersBody": "Freundliche Erinnerungen, damit deine Ausgaben aktuell bleiben",
+  "@dailyRemindersBody": {
+    "description": "Beschreibung der Benachrichtigungseinstellung"
+  },
   "weekendGreeting": "Schönes Wochenende",
-  "weekendGreetingBody": "Ein freundlicher Gruß zum Start ins Wochenende",
+  "@weekendGreeting": {
+    "description": "Benachrichtigungseinstellung: Wochenendgruß"
+  },
+  "weekendGreetingBody": "Ein freundlicher Gruß zum Start deines Wochenendes",
+  "@weekendGreetingBody": {
+    "description": "Beschreibung der Benachrichtigungseinstellung"
+  },
   "reminderTimesSection": "Erinnerungszeiten",
-  "slotMorning": "Morgens",
-  "slotNoon": "Mittags",
-  "slotAfternoon": "Nachmittags",
-  "slotEvening": "Abends",
-  "everyDay": "Täglich",
+  "@reminderTimesSection": {
+    "description": "Überschrift für die vier täglichen Zeitfenster"
+  },
+  "slotMorning": "Morgen",
+  "@slotMorning": {
+    "description": "Tägliches Erinnerungszeitfenster"
+  },
+  "slotNoon": "Mittag",
+  "@slotNoon": {
+    "description": "Tägliches Erinnerungszeitfenster"
+  },
+  "slotAfternoon": "Nachmittag",
+  "@slotAfternoon": {
+    "description": "Tägliches Erinnerungszeitfenster"
+  },
+  "slotEvening": "Abend",
+  "@slotEvening": {
+    "description": "Tägliches Erinnerungszeitfenster"
+  },
+  "everyDay": "Jeden Tag",
+  "@everyDay": {
+    "description": "Wie oft eine wiederkehrende Benachrichtigung erscheint"
+  },
   "financialReport": "Finanzbericht",
+  "@financialReport": {
+    "description": "Titel des exportierten PDFs"
+  },
   "preparedFor": "Erstellt für",
+  "@preparedFor": {
+    "description": "PDF-Titelseite: für wen der Bericht bestimmt ist"
+  },
   "generatedOn": "Erstellt am",
-  "reportDisclaimer": "Von RainyPenny aus deinen eigenen Aufzeichnungen erstellt.",
+  "@generatedOn": {
+    "description": "PDF-Titelseite: Datum, an dem der Bericht erstellt wurde"
+  },
+  "reportDisclaimer": "Von RainyPenny anhand deiner eigenen Aufzeichnungen erstellt.",
+  "@reportDisclaimer": {
+    "description": "Hinweis in der PDF-Fußzeile"
+  },
   "pageOf": "Seite {page} von {total}",
-  "overview": "Überblick",
+  "@pageOf": {
+    "description": "PDF-Seitennummer",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "overview": "Übersicht",
+  "@overview": {
+    "description": "PDF-Abschnitt: die wichtigsten Summen"
+  },
   "description": "Beschreibung",
-  "totalIncome": "Einnahmen gesamt",
-  "totalExpenses": "Ausgaben gesamt",
-  "totalSaved": "Gespart gesamt",
+  "@description": {
+    "description": "Tabellenspaltenüberschrift"
+  },
+  "totalIncome": "Gesamteinnahmen",
+  "@totalIncome": {
+    "description": "Zeile der Übersichtstabelle"
+  },
+  "totalExpenses": "Gesamtausgaben",
+  "@totalExpenses": {
+    "description": "Zeile der Übersichtstabelle"
+  },
+  "totalSaved": "Insgesamt gespart",
+  "@totalSaved": {
+    "description": "Zeile der Übersichtstabelle"
+  },
   "shareOfTotal": "Anteil",
-  "used": "Verbraucht",
+  "@shareOfTotal": {
+    "description": "Tabellenspalte: Anteil dieser Kategorie an allen Ausgaben"
+  },
+  "used": "Verwendet",
+  "@used": {
+    "description": "Tabellenspalte: Prozentsatz des verbrauchten Budgets"
+  },
   "goal": "Ziel",
+  "@goal": {
+    "description": "Tabellenspaltenüberschrift für ein Sparziel"
+  },
   "targetDate": "Zieldatum",
+  "@targetDate": {
+    "description": "Tabellenspaltenüberschrift"
+  },
   "progress": "Fortschritt",
-  "paidOffShort": "Getilgt",
-  "transactions": "Buchungen",
-  "andMoreTransactions": "{count, plural, =1{und 1 weitere Buchung} other{und {count} weitere Buchungen}}",
+  "@progress": {
+    "description": "Tabellenspaltenüberschrift"
+  },
+  "paidOffShort": "Abbezahlt",
+  "@paidOffShort": {
+    "description": "Tabellenspalte: Prozentsatz der zurückgezahlten Schuld"
+  },
+  "transactions": "Transaktionen",
+  "@transactions": {
+    "description": "PDF-Abschnitt mit einzelnen Einträgen"
+  },
+  "andMoreTransactions": "{count, plural, =1{und 1 weitere Transaktion} other{und {count} weitere Transaktionen}}",
+  "@andMoreTransactions": {
+    "description": "PDF-Hinweis, wenn die Transaktionstabelle gekürzt wurde",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "exportPdf": "PDF exportieren",
+  "@exportPdf": {
+    "description": "Schaltfläche zum Erstellen des Berichts"
+  },
   "sharePdf": "Bericht teilen",
-  "preparingReport": "Dein Bericht wird erstellt…",
-  "reportReady": "Bericht fertig",
+  "@sharePdf": {
+    "description": "Schaltfläche zum Öffnen des Teilen-Menüs"
+  },
+  "preparingReport": "Bericht wird vorbereitet…",
+  "@preparingReport": {
+    "description": "Fortschrittsmeldung während der PDF-Erstellung"
+  },
+  "reportReady": "Bericht ist fertig",
+  "@reportReady": {
+    "description": "Bestätigung nach Erstellung des PDFs"
+  },
   "reportFailed": "Bericht konnte nicht erstellt werden",
+  "@reportFailed": {
+    "description": "Fehlermeldung beim Export"
+  },
   "categories": "Kategorien",
-  "categoriesIntro": "Lege eigene Kategorien an, damit Einnahmen und Ausgaben genau so einsortiert werden, wie du denkst.",
+  "@categories": {
+    "description": "Titel des Bildschirms zur Kategorienverwaltung"
+  },
+  "categoriesIntro": "Füge eigene Kategorien hinzu, um Einnahmen und Ausgaben genau so zuzuordnen, wie du sie denkst.",
+  "@categoriesIntro": {
+    "description": "Erklärung des Zwecks dieses Bildschirms"
+  },
   "expenseCategories": "Ausgabenkategorien",
-  "incomeCategories": "Einnahmenkategorien",
+  "@expenseCategories": {
+    "description": "Abschnittsüberschrift"
+  },
+  "incomeCategories": "Einnahmekategorien",
+  "@incomeCategories": {
+    "description": "Abschnittsüberschrift"
+  },
   "newCategory": "Neue Kategorie",
+  "@newCategory": {
+    "description": "Titel des Erstellungsformulars"
+  },
   "editCategory": "Kategorie bearbeiten",
+  "@editCategory": {
+    "description": "Titel des Bearbeitungsformulars"
+  },
   "categoryName": "Name",
-  "categoryNameHint": "z. B. Tierpflege",
+  "@categoryName": {
+    "description": "Feldbezeichnung des Kategorieformulars"
+  },
+  "categoryNameHint": "z. B. Haustierpflege",
+  "@categoryNameHint": {
+    "description": "Platzhalter für den Kategorienamen"
+  },
   "icon": "Symbol",
+  "@icon": {
+    "description": "Feldbezeichnung des Kategorieformulars"
+  },
   "categorySaved": "Kategorie gespeichert",
+  "@categorySaved": {
+    "description": "Bestätigung"
+  },
   "categoryDeleted": "Kategorie gelöscht",
+  "@categoryDeleted": {
+    "description": "Bestätigung"
+  },
   "deleteCategory": "Diese Kategorie löschen?",
+  "@deleteCategory": {
+    "description": "Titel der Löschbestätigung"
+  },
   "deleteCategoryBody": "{name} wird aus deinen Kategorien entfernt.",
-  "categoryInUse": "{count, plural, =1{1 Eintrag nutzt diese Kategorie noch} other{{count} Einträge nutzen diese Kategorie noch}}",
-  "noCategoriesYet": "Hier ist noch nichts.",
-  "builtIn": "Vorgegeben",
+  "@deleteCategoryBody": {
+    "description": "Text der Löschbestätigung",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{1 Eintrag verwendet diese Kategorie noch} other{{count} Einträge verwenden diese Kategorie noch}}",
+  "@categoryInUse": {
+    "description": "Erklärt, warum eine Kategorie nicht gelöscht werden kann",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noCategoriesYet": "Hier gibt es noch nichts.",
+  "@noCategoriesYet": {
+    "description": "Leerer Bereich in der Kategorienliste"
+  },
+  "builtIn": "Integriert",
+  "@builtIn": {
+    "description": "Kennzeichnet eine gemeinsame, schreibgeschützte Kategorie"
+  },
   "manageCategories": "Kategorien verwalten",
+  "@manageCategories": {
+    "description": "Einstellungszeile, die den Kategorie-Bildschirm öffnet"
+  },
   "expense": "Ausgabe",
-  "languageNote": "Arabisch, Urdu, Persisch und Hebräisch stellen die gesamte Oberfläche auf Rechts-nach-links um – einschließlich Diagrammen und PDF-Berichten.",
+  "@expense": {
+    "description": "Einzahlige Bezeichnung für eine ausgehende Transaktion"
+  },
+  "languageNote": "Arabisch, Urdu, Persisch und Hebräisch stellen die gesamte Oberfläche auf Rechts-nach-Links um, einschließlich Diagrammen und PDF-Berichten.",
+  "@languageNote": {
+    "description": "Hinweis unter der Sprachauswahl zur RTL-Unterstützung"
+  },
   "next": "Weiter",
   "back": "Zurück",
   "skip": "Überspringen",
-  "continueLabel": "Weiter",
+  "continueLabel": "Fortfahren",
+  "@continueLabel": {
+    "description": "Primäre Aktion zum Fortsetzen eines mehrstufigen Ablaufs. Mit Suffix benannt, da \"continue\" ein Dart-Schlüsselwort ist."
+  },
   "selected": "Ausgewählt",
-  "passwordRequired": "Passwort eingeben",
+  "passwordRequired": "Gib dein Passwort ein",
   "newPasswordLabel": "Neues Passwort",
   "confirmPasswordLabel": "Passwort bestätigen",
   "passwordsDoNotMatch": "Beide Passwörter müssen übereinstimmen",
   "showPassword": "Passwort anzeigen",
-  "hidePassword": "Passwort verbergen",
+  "hidePassword": "Passwort ausblenden",
   "savePassword": "Passwort speichern",
   "backToSignIn": "Zurück zur Anmeldung",
   "alreadyHaveAccount": "Ich habe bereits ein Konto",
-  "getStarted": "Los geht’s",
+  "getStarted": "Loslegen",
   "acceptTerms": "Ich stimme den Nutzungsbedingungen und der Datenschutzerklärung zu",
-  "acceptTermsRequired": "Bitte zustimmen, um fortzufahren",
+  "acceptTermsRequired": "Bitte akzeptiere dies, um fortzufahren",
   "passwordStrengthTooShort": "Zu kurz",
   "passwordStrengthWeak": "Schwach",
   "passwordStrengthFair": "Mittel",
   "passwordStrengthGood": "Gut",
   "passwordStrengthStrong": "Stark",
-  "passwordAdvice": "Ein langer Satz, den Sie sich merken können, ist besser als ein kurzes Passwort voller Sonderzeichen. Verwenden Sie nichts, was Sie schon anderswo nutzen.",
-  "authInvalidCredentials": "E-Mail und Passwort passen zu keinem Konto",
-  "authEmailNotConfirmed": "Bestätigen Sie Ihre E-Mail-Adresse vor der Anmeldung",
-  "authEmailAlreadyRegistered": "Mit dieser E-Mail-Adresse besteht bereits ein Konto",
-  "authWeakPassword": "Wählen Sie ein längeres Passwort",
-  "authRateLimited": "Zu viele Versuche. Versuchen Sie es in ein paar Minuten erneut",
-  "authNetworkError": "Keine Verbindung. Prüfen Sie Ihr Netzwerk und versuchen Sie es erneut",
-  "authGenericError": "Etwas ist schiefgelaufen. Bitte erneut versuchen",
-  "confirmEmailTitle": "Prüfen Sie Ihr Postfach",
-  "confirmEmailBody": "Wir haben einen Bestätigungslink an {email} geschickt. Öffnen Sie ihn, um Ihr Konto fertig einzurichten.",
-  "resendConfirmation": "Bestätigungsmail erneut senden",
-  "confirmationResent": "Bestätigungsmail gesendet",
+  "passwordAdvice": "Eine lange, gut merkbare Passphrase ist besser als eine kurze mit vielen Symbolen. Vermeide Passwörter, die du bereits an anderer Stelle verwendest.",
+  "authInvalidCredentials": "E-Mail und Passwort stimmen mit keinem Konto überein",
+  "authEmailNotConfirmed": "Bestätige deine E-Mail-Adresse, bevor du dich anmeldest",
+  "authEmailAlreadyRegistered": "Für diese E-Mail-Adresse existiert bereits ein Konto",
+  "authWeakPassword": "Wähle ein längeres Passwort",
+  "authRateLimited": "Zu viele Versuche. Versuche es in einigen Minuten erneut",
+  "authNetworkError": "Keine Verbindung. Prüfe deine Netzwerkverbindung und versuche es erneut",
+  "authGenericError": "Etwas ist schiefgelaufen. Bitte versuche es erneut",
+  "confirmEmailTitle": "Prüfe deine E-Mail",
+  "confirmEmailBody": "Wir haben einen Bestätigungslink an {email} gesendet. Öffne ihn, um die Einrichtung deines Kontos abzuschließen.",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resendConfirmation": "Bestätigungs-E-Mail erneut senden",
+  "confirmationResent": "Bestätigungs-E-Mail gesendet",
   "forgotPasswordTitle": "Passwort zurücksetzen",
-  "forgotPasswordSubtitle": "Geben Sie die E-Mail-Adresse Ihrer Anmeldung ein. Wir senden Ihnen einen Link, um ein neues Passwort zu wählen.",
-  "sendResetLink": "Link senden",
-  "resetLinkSentTitle": "Link gesendet",
-  "resetLinkSentBody": "Falls für {email} ein Konto besteht, ist der Link unterwegs.",
-  "resetLinkSentHint": "Der Link ist eine Stunde gültig. Kommt er nicht an, sehen Sie im Spam-Ordner nach, bevor Sie einen neuen anfordern.",
-  "tryAnotherEmail": "Andere E-Mail verwenden",
+  "forgotPasswordSubtitle": "Gib die E-Mail-Adresse ein, mit der du dich registriert hast, und wir senden dir einen Link, über den du ein neues Passwort wählen kannst.",
+  "sendResetLink": "Link zum Zurücksetzen senden",
+  "resetLinkSentTitle": "Link zum Zurücksetzen gesendet",
+  "resetLinkSentBody": "Falls für {email} ein Konto existiert, ist ein Link zum Zurücksetzen unterwegs.",
+  "@resetLinkSentBody": {
+    "description": "Bewusst konditional: Die Bestätigung, ob eine Adresse registriert ist, würde es ermöglichen, App-Nutzer aufzuzählen.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "Der Link läuft in einer Stunde ab. Wenn er nicht ankommt, prüfe deinen Spam-Ordner, bevor du einen weiteren anforderst.",
+  "tryAnotherEmail": "Andere E-Mail-Adresse verwenden",
   "resetPasswordTitle": "Neues Passwort wählen",
-  "resetPasswordSubtitle": "Wählen Sie etwas, das Sie für dieses Konto noch nicht verwendet haben.",
+  "resetPasswordSubtitle": "Wähle ein Passwort, das du für dieses Konto noch nicht verwendet hast.",
   "passwordChangedTitle": "Passwort aktualisiert",
-  "passwordChangedBody": "Ihr neues Passwort ist gespeichert. Sie sind angemeldet und startklar.",
-  "demoModeHint": "Demo-Version – kein Konto nötig",
+  "passwordChangedBody": "Dein neues Passwort wurde gespeichert. Du bist angemeldet und kannst loslegen.",
+  "demoModeHint": "Demoversion – kein Konto erforderlich",
   "demoModeFill": "Ausfüllen",
-  "welcomeTrackTitle": "Sehen Sie, wohin Ihr Geld geht",
-  "welcomeTrackBody": "Halten Sie fest, was hereinkommt und was hinausgeht. RainyPenny macht daraus ein Bild, das man wirklich lesen kann.",
-  "welcomeBudgetTitle": "Grenzen, die halten",
-  "welcomeBudgetBody": "Geben Sie jedem Teil Ihrer Ausgaben eine monatliche Obergrenze – und erfahren Sie es, bevor Sie sie überschreiten, nicht danach.",
-  "welcomeGoalsTitle": "Sparen Sie für das, was zählt",
-  "welcomeGoalsBody": "Ziel benennen, Betrag festlegen, beim Wachsen zusehen. Ein Notgroschen entsteht leichter, wenn man ihn sieht.",
-  "welcomePrivacyTitle": "Ihr Geld bleibt Ihres",
-  "welcomePrivacyBody": "Ihre Zahlen gehören Ihnen allein. Nichts wird verkauft, nichts weitergegeben.",
+  "welcomeTrackTitle": "Sieh, wohin dein Geld fließt",
+  "welcomeTrackBody": "Erfasse, was reinkommt und was rausgeht. RainyPenny verwandelt es in eine Übersicht, die du wirklich lesen kannst.",
+  "welcomeBudgetTitle": "Setze Limits, die halten",
+  "welcomeBudgetBody": "Gib jedem Ausgabenbereich eine monatliche Obergrenze und werde gewarnt, bevor du sie überschreitest, nicht danach.",
+  "welcomeGoalsTitle": "Spare für das, was wichtig ist",
+  "welcomeGoalsBody": "Benenne ein Ziel, lege einen Betrag fest und sieh zu, wie es wächst. Ein Notfallfonds lässt sich leichter aufbauen, wenn du den Fortschritt sehen kannst.",
+  "welcomePrivacyTitle": "Dein Geld bleibt dein Geld",
+  "welcomePrivacyBody": "Deine Zahlen gehören nur dir. Nichts wird verkauft und nichts mit anderen geteilt.",
   "stepOf": "Schritt {step} von {total}",
-  "onboardingNameTitle": "Wie sollen wir Sie nennen?",
-  "onboardingNameBody": "Wir verwenden den Namen nur zur Begrüßung, sonst nirgends.",
-  "onboardingNameHint": "Der Vorname genügt. Sie können ihn später ändern.",
-  "onboardingCurrencyTitle": "Welche Währung nutzen Sie?",
-  "onboardingCurrencyBody": "Alle Beträge werden in dieser Währung angezeigt. Die Auswahl rechnet nichts um.",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "Wie sollen wir dich nennen?",
+  "onboardingNameBody": "Wir verwenden den Namen für deine Begrüßung und sonst nirgendwo.",
+  "onboardingNameHint": "Ein Vorname reicht. Du kannst ihn später ändern.",
+  "onboardingCurrencyTitle": "Welche Währung verwendest du?",
+  "onboardingCurrencyBody": "Alle Beträge in der App werden in dieser Währung angezeigt. Die Auswahl führt zu keiner Umrechnung.",
   "onboardingCurrencySearch": "Alle Währungen durchsuchen",
-  "onboardingAppearanceTitle": "Machen Sie es zu Ihrem",
-  "onboardingAppearanceBody": "Wählen Sie einen Look. Alles ändert sich sofort, und Sie können jederzeit zurückkommen.",
-  "onboardingNotificationsTitle": "Behalten Sie den Überblick",
-  "onboardingNotificationsBody": "Ein leiser Hinweis im richtigen Moment macht daraus eine Gewohnheit.",
-  "onboardingNotifyReminders": "Eine sanfte Erinnerung, Ausgaben einzutragen",
+  "onboardingAppearanceTitle": "Mach es zu deinem",
+  "onboardingAppearanceBody": "Wähle einen Look. Alles ändert sich, während du tippst, und du kannst jederzeit zurückkehren.",
+  "onboardingNotificationsTitle": "Bleib auf dem Laufenden",
+  "onboardingNotificationsBody": "Eine ruhige Erinnerung zum richtigen Zeitpunkt macht daraus eine Gewohnheit.",
+  "onboardingNotifyReminders": "Eine sanfte Erinnerung, deine Ausgaben zu erfassen",
   "onboardingNotifyBudget": "Ein Hinweis, bevor ein Budget aufgebraucht ist",
-  "onboardingNotifySummary": "Eine Wochenübersicht, wohin Ihr Geld ging",
-  "onboardingNotifyEnable": "Mitteilungen aktivieren",
-  "onboardingNotifyDone": "Mitteilungseinstellungen gespeichert",
-  "onboardingNotifyLater": "All das können Sie jederzeit in den Einstellungen ändern.",
-  "onboardingReadyTitle": "Alles bereit",
-  "onboardingReadyTitleNamed": "Alles bereit, {name}",
-  "onboardingReadyBody": "Die Einrichtung ist fertig. Möchten Sie eine kurze Tour durch die App?",
-  "onboardingTakeTour": "Zeig es mir",
+  "onboardingNotifySummary": "Eine wöchentliche Zusammenfassung deiner Ausgaben",
+  "onboardingNotifyEnable": "Benachrichtigungen aktivieren",
+  "onboardingNotifyDone": "Benachrichtigungseinstellungen gespeichert",
+  "onboardingNotifyLater": "Du kannst all das jederzeit in den Einstellungen ändern.",
+  "onboardingReadyTitle": "Alles ist eingerichtet",
+  "onboardingReadyTitleNamed": "Alles ist eingerichtet, {name}",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "Die Einrichtung ist abgeschlossen. Möchtest du eine kurze Einführung sehen, wie alles funktioniert?",
+  "onboardingTakeTour": "Zeig mir alles",
   "onboardingGoToApp": "Zur App",
-  "onboardingTourLater": "Nicht jetzt? Die Anleitung bleibt in den Einstellungen, wann immer Sie wollen.",
-  "beginnersGuide": "Einsteiger-Anleitung",
+  "onboardingTourLater": "Jetzt nicht? Die Anleitung bleibt in den Einstellungen, wann immer du sie brauchst.",
+  "beginnersGuide": "Anleitung für Einsteiger",
   "guideFinish": "Fertig",
   "chapterOf": "Kapitel {number} von {total}",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "guideOpenScreen": "{screen} öffnen",
-  "guideDashboardTitle": "Ihre Übersicht",
-  "guideDashboardBody": "Hier beginnt alles. Die Karte oben zeigt, was Ihnen bleibt; darunter, was in dieser Periode herein- und hinausging, dann Ausgaben, Budgets und Ziele.",
-  "guideDashboardTip1": "Ziehen Sie den Bildschirm nach unten, um alles auf einmal zu aktualisieren.",
-  "guideDashboardTip2": "Tippen Sie auf Einnahmen oder Ausgaben, um direkt zu dieser Liste zu springen.",
-  "guideDashboardTip3": "Ringe und Hinweise aktualisieren sich, sobald Sie etwas eintragen.",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "Dein Dashboard",
+  "guideDashboardBody": "Hier beginnt alles. Die Karte oben zeigt, was dir noch bleibt; darunter stehen deine Einnahmen und Ausgaben für diesen Zeitraum, gefolgt von Ausgaben, Budgets und Zielen.",
+  "guideDashboardTip1": "Ziehe den Bildschirm nach unten, um alles gleichzeitig zu aktualisieren.",
+  "guideDashboardTip2": "Tippe auf die Einnahmen- oder Ausgabenkarte, um direkt zur entsprechenden Liste zu gelangen.",
+  "guideDashboardTip3": "Die Ringe und Erkenntnisse aktualisieren sich sofort, sobald du etwas erfasst.",
   "guideAddTitle": "Geld erfassen",
-  "guideAddBody": "Die Schaltfläche in der Mitte der Leiste ist der Ausgangspunkt. Sie öffnet ein kurzes Menü: Ausgabe, Einnahme, Schuld, Budget oder Sparziel.",
-  "guideAddTip1": "Tippen Sie auf die mittlere Schaltfläche, um Geld ein- oder auszutragen.",
-  "guideAddTip2": "Halten Sie sie gedrückt, um das Menü zu überspringen und direkt eine Ausgabe zu erfassen.",
-  "guideAddTip3": "Wählen Sie immer eine Kategorie – nur so funktionieren Diagramme und Budgets.",
+  "guideAddBody": "Über die Schaltfläche in der Mitte der Leiste beginnt alles. Sie öffnet ein kurzes Menü: Geld ausgeben, Geld erhalten, Schuld, Budget oder Sparziel.",
+  "guideAddTip1": "Tippe auf die mittlere Schaltfläche, um Einnahmen oder Ausgaben zu erfassen.",
+  "guideAddTip2": "Halte sie gedrückt, um direkt eine neue Ausgabe zu erfassen und das Menü zu überspringen.",
+  "guideAddTip3": "Wähle immer eine Kategorie – dadurch funktionieren Diagramme und Budgets.",
   "guideCategoriesTitle": "Kategorien",
-  "guideCategoriesBody": "Kategorien gruppieren Ihre Ausgaben. Die mitgelieferten reichen den meisten; Sie können sie umbenennen oder eigene anlegen.",
-  "guideCategoriesTip1": "Einstellungen, dann Kategorien verwalten, zum Ändern oder Anlegen.",
-  "guideCategoriesTip2": "Alles ohne Kategorie landet in „Sonstiges“, damit die Diagramme ehrlich bleiben.",
+  "guideCategoriesBody": "Kategorien bestimmen, wie Ausgaben gruppiert werden. Die mitgelieferten Kategorien decken die meisten Fälle ab, und du kannst sie umbenennen oder eigene hinzufügen.",
+  "guideCategoriesTip1": "Gehe zu Einstellungen und dann zu Kategorien verwalten, um eine Kategorie zu ändern oder hinzuzufügen.",
+  "guideCategoriesTip2": "Alles ohne Kategorie landet unter Sonstiges, damit die Diagramme korrekt bleiben.",
   "guideBudgetTitle": "Budgets",
-  "guideBudgetBody": "Ein Budget ist eine monatliche Obergrenze für eine Kategorie. Der Balken füllt sich beim Ausgeben und färbt sich, wenn es eng wird – Sie erfahren es also vorher.",
-  "guideBudgetTip1": "Beginnen Sie mit zwei oder drei Kategorien, nicht mit allen auf einmal.",
-  "guideBudgetTip2": "Setzen Sie die Grenze etwas über Ihre üblichen Ausgaben und ziehen Sie sie dann an.",
-  "guideBudgetTip3": "Lassen Sie Budget-Warnungen an, dann meldet sich die App rechtzeitig.",
+  "guideBudgetBody": "Ein Budget ist eine monatliche Obergrenze für eine Kategorie. Die Leiste füllt sich mit deinen Ausgaben und ändert sich, wenn du dich dem Limit näherst, damit du es rechtzeitig bemerkst.",
+  "guideBudgetTip1": "Beginne mit zwei oder drei Kategorien statt mit allen auf einmal.",
+  "guideBudgetTip2": "Setze das Limit etwas über deinen üblichen Ausgaben und passe es dann schrittweise an.",
+  "guideBudgetTip3": "Lass Budgetalarme aktiviert, damit dich die App warnt, wenn ein Budget knapp wird.",
   "guideSavingsTitle": "Sparziele",
-  "guideSavingsBody": "Benennen Sie, wofür Sie sparen, setzen Sie Betrag und Datum – die App rechnet aus, was Sie monatlich zurücklegen müssen.",
-  "guideSavingsTip1": "Ein benanntes Ziel hält man leichter durch als einen vagen Sparvorsatz.",
-  "guideSavingsTip2": "Mehrere kleine Ziele werden öfter erreicht als ein großes.",
+  "guideSavingsBody": "Benenne, wofür du sparst, setze einen Zielbetrag und ein Datum, und die App berechnet, wie viel du monatlich zurücklegen musst, um das Ziel zu erreichen.",
+  "guideSavingsTip1": "Ein benanntes Ziel lässt sich leichter verfolgen als eine vage Absicht zu sparen.",
+  "guideSavingsTip2": "Mehrere kleine Ziele werden häufiger erreicht als ein großes.",
   "guideLoansTitle": "Schulden und Kredite",
-  "guideLoansBody": "Erfassen Sie, was Sie schulden, was es kostet und wann die nächste Rate fällig ist. Alles steht in einer Liste mit dem offenen Betrag.",
-  "guideLoansTip1": "Tragen Sie das Fälligkeitsdatum ein, dann erinnern Sie die Zahlungshinweise.",
-  "guideLoansTip2": "Eine überfällige Schuld erscheint rot auf der Übersicht, bis sie beglichen ist.",
+  "guideLoansBody": "Erfasse, was du schuldest, was es kostet und wann die nächste Zahlung fällig ist. Alles, was du abbezahlst, steht in einer Liste mit dem verbleibenden Gesamtbetrag.",
+  "guideLoansTip1": "Füge das Fälligkeitsdatum hinzu, und Zahlungserinnerungen kümmern sich darum.",
+  "guideLoansTip2": "Eine überfällige Schuld wird auf dem Dashboard rot angezeigt, bis sie bezahlt ist.",
   "guideReportsTitle": "Berichte",
-  "guideReportsBody": "Der genauere Blick: Einnahmen gegen Ausgaben, Ausgaben nach Kategorie, wie Ihre Budgets gehalten haben und wie viel Ihres Einkommens geblieben ist.",
-  "guideReportsTip1": "Oben wechseln Sie zwischen Woche, Monat und Quartal.",
-  "guideReportsTip2": "Exportieren oder teilen Sie ein PDF – in Ihrer Sprache und Leserichtung.",
+  "guideReportsBody": "Die detailliertere Ansicht: Einnahmen im Vergleich zu Ausgaben, Ausgaben nach Kategorie, wie sich deine Budgets entwickelt haben und welchen Anteil deiner Einnahmen du behalten hast.",
+  "guideReportsTip1": "Wechsle oben auf dem Bildschirm zwischen Woche, Monat und Quartal.",
+  "guideReportsTip2": "Exportiere oder teile ein PDF – es wird in deiner eigenen Sprache und Schreibrichtung erstellt.",
   "guideSettingsTitle": "Einstellungen",
-  "guideSettingsBody": "Sprache, Währung, Farben und Hinweise liegen alle hier, und nichts davon ist durch die Einrichtung festgelegt – ändern Sie es, wann Sie wollen.",
-  "guideSettingsTip1": "Vierzig Sprachen, und das ganze Layout spiegelt sich für Rechts-nach-links-Sprachen.",
-  "guideSettingsTip2": "Wählen Sie, welche Hinweise Sie wollen und zu welchen Zeiten.",
+  "guideSettingsBody": "Sprache, Währung, Farben und Benachrichtigungen findest du hier. Nichts davon wird durch die Einrichtung dauerhaft festgelegt – du kannst alles jederzeit ändern.",
+  "guideSettingsTip1": "Vierzig Sprachen und die gesamte Oberfläche wird bei Rechts-nach-Links-Sprachen gespiegelt.",
+  "guideSettingsTip2": "Wähle, welche Benachrichtigungen du erhalten möchtest und zu welchen Zeiten.",
   "guideSettingsTip3": "Ruhezeiten halten alles bis zum Morgen zurück.",
-  "guideHabitTitle": "Dranbleiben",
-  "guideHabitBody": "Die App ist nur so gut wie das, was Sie hineingeben. Eine Minute am Tag schlägt eine Stunde im Monat, und nach zwei Wochen sagen die Zahlen etwas aus.",
-  "guideHabitTip1": "Erfassen Sie Ausgaben sofort, nicht erst am Wochenende.",
-  "guideHabitTip2": "Ein Blick am Tag auf die Übersicht. Zehn Sekunden reichen.",
-  "guideHabitTip3": "Diese Anleitung bleibt in den Einstellungen – kommen Sie jederzeit zurück.",
+  "guideHabitTitle": "Mach es zur Gewohnheit",
+  "guideHabitBody": "Die App ist nur so gut wie die Daten, die du eingibst. Eine Minute am Tag ist besser als eine Stunde einmal im Monat, und nach zwei Wochen beginnen die Zahlen, dir etwas zu sagen.",
+  "guideHabitTip1": "Erfasse Ausgaben, sobald sie entstehen, nicht erst am Ende der Woche.",
+  "guideHabitTip2": "Schau einmal täglich auf das Dashboard. Zehn Sekunden reichen.",
+  "guideHabitTip3": "Diese Anleitung bleibt in den Einstellungen – komm jederzeit zurück.",
   "appearance": "Darstellung",
-  "themeCaption": "Hell, dunkel oder was Ihr Gerät gerade macht.",
+  "themeCaption": "Hell, dunkel oder so, wie es dein Telefon eingestellt hat.",
   "accentColor": "Akzentfarbe",
   "accentColorCaption": "Färbt Schaltflächen, Hervorhebungen und Diagramme.",
-  "accentSemanticsNote": "Einnahmen und Ausgaben behalten in jedem Design ihre eigenen Farben – eine Zahl ändert also nie ihre Bedeutung, nur weil Sie den Akzent gewechselt haben.",
-  "accentTeal": "Türkis",
+  "accentSemanticsNote": "Einnahmen und Ausgaben behalten in jedem Design ihre eigenen Farben, sodass eine Zahl ihre Bedeutung nicht durch den Wechsel der Akzentfarbe verändert.",
+  "accentTeal": "Petrol",
   "accentGreen": "Grün",
   "accentSky": "Himmelblau",
   "accentBlue": "Blau",
@@ -478,90 +1117,300 @@
   "accentOrange": "Orange",
   "accentSlate": "Schiefergrau",
   "searchLanguages": "Sprachen suchen",
-  "suggestedLanguages": "Vorschläge",
+  "suggestedLanguages": "Vorgeschlagen",
   "allLanguages": "Alle Sprachen",
   "noLanguagesFound": "Keine Sprachen gefunden",
-  "noLanguagesFoundMessage": "Versuchen Sie den englischen Namen oder das Zwei-Buchstaben-Kürzel.",
+  "noLanguagesFoundMessage": "Versuche den englischen Namen oder den zweibuchstabigen Code.",
   "rightToLeft": "Rechts nach links",
-  "replayGuide": "Anleitung erneut ansehen",
-  "replaySetup": "Einrichtung wiederholen",
-  "replaySetupBody": "Gehen Sie die Einstiegsfragen noch einmal durch. Nichts von dem, was Sie erfasst haben, wird gelöscht.",
+  "replayGuide": "Anleitung erneut anzeigen",
+  "replaySetup": "Einrichtung erneut starten",
+  "replaySetupBody": "Gehe die Fragen der Ersteinrichtung erneut durch. Nichts von dem, was du erfasst hast, wird gelöscht.",
   "rateTitle": "Gefällt dir RainyPenny?",
-  "rateBody": "Du bist jetzt schon eine Weile dabei. Eine Bewertung dauert einen Moment und hilft anderen, die App zu finden.",
+  "rateBody": "Du bist schon eine Weile dabei. Eine Bewertung dauert nur einen Moment und hilft anderen, die App zu finden.",
   "rateAction": "App bewerten",
   "rateLater": "Vielleicht später",
   "rateNever": "Nein, danke",
   "rateThanks": "Danke",
-  "monthlySalary": "Monatsgehalt",
+
+  "monthlySalary": "Monatliches Gehalt",
   "remainingAmount": "Verbleibend",
   "carriedForward": "Übertrag",
-  "carriedForwardHint": "Rest aus dem letzten Zyklus",
+  "carriedForwardHint": "Vom letzten Zyklus übrig",
   "totalSpending": "Gesamtausgaben",
   "salaryCycle": "Gehaltszyklus",
-  "payday": "Zahltag",
-  "paydayDescription": "Der Tag, an dem dein Gehalt eingeht. Dein Finanzmonat läuft von diesem Tag bis zum Tag vor dem nächsten.",
-  "paydayUpdated": "Zahltag aktualisiert",
+  "payday": "Gehaltstag",
+  "paydayDescription": "Der Tag, an dem dein Gehalt eingeht. Dein Finanzmonat läuft von diesem Tag bis zum Tag vor dem nächsten Gehaltstag.",
+  "paydayUpdated": "Gehaltstag aktualisiert",
   "paydayDayOfMonth": "Tag {day}",
-  "paydayShortMonthNote": "In kürzeren Monaten beginnt der Zyklus am letzten Tag des Monats.",
-  "daysLeftInCycle": "{count, plural, =0{Letzter Tag des Zyklus} =1{1 Tag bis zum Zahltag} other{{count} Tage bis zum Zahltag}}",
-  "nextPayday": "Nächster Zahltag",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "In kürzeren Monaten beginnt der Zyklus stattdessen am letzten Tag.",
+  "daysLeftInCycle": "{count, plural, =0{Letzter Tag des Zyklus} =1{Noch 1 Tag bis zum Gehalt} other{Noch {count} Tage bis zum Gehalt}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "Nächster Gehaltstag",
   "spentSoFar": "Bisher ausgegeben",
-  "dailyAllowance": "Sicherer Tagesbetrag",
-  "overspentNotice": "Du hast in diesem Zyklus mehr ausgegeben, als eingegangen ist.",
+  "dailyAllowance": "Täglich sicher auszugeben",
+  "overspentNotice": "Du hast in diesem Zyklus mehr ausgegeben, als hereingekommen ist.",
   "backToThisMonth": "Zurück zu diesem Monat",
   "cycleRangeLabel": "Zyklus",
   "noSalaryRecorded": "Noch kein Gehalt erfasst",
   "addSalaryAction": "Gehalt hinzufügen",
   "cycleOf": "{start} – {end}",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
   "healthExcellent": "Ausgezeichnet",
   "healthGood": "Gut",
-  "healthFair": "Befriedigend",
+  "healthFair": "Ordentlich",
   "healthNeedsWork": "Verbesserungsbedarf",
   "healthExcellentBody": "Du sparst gut und bleibst innerhalb deiner Budgets.",
-  "healthGoodBody": "Deine Ausgaben liegen in diesem Zeitraum im Plan.",
-  "healthFairBody": "Einige Budgets sind angespannt. Kleine Änderungen helfen.",
-  "healthNeedsWorkBody": "Die Ausgaben übersteigen deinen Plan. Beginne mit der größten Kategorie.",
+  "healthGoodBody": "Du liegst mit deinen Ausgaben in diesem Zeitraum im Plan.",
+  "healthFairBody": "Einige Budgets werden knapp. Kleine Änderungen können helfen.",
+  "healthNeedsWorkBody": "Deine Ausgaben übersteigen deinen Plan. Beginne mit deiner größten Kategorie.",
   "factorSavingsRate": "Sparquote",
   "factorBudgetControl": "Budgetkontrolle",
   "factorDebtLoad": "Schuldenlast",
   "factorSpendingTrend": "Ausgabentrend",
   "factorKept": "{percent}% behalten",
-  "factorUsed": "{percent}% verbraucht",
-  "factorOfIncome": "{percent}% des Einkommens",
-  "factorTrendUp": "{percent}% höher",
-  "factorTrendDown": "{percent}% niedriger",
-  "howScoreWorks": "So entsteht dieser Wert",
-  "healthScoreExplainer": "Dein Wert verbindet vier Dinge: wie viel deines Einkommens du behältst, wie gut du in deinen Budgets bleibst, wie viel deines Einkommens in Schulden fließt, und ob deine Ausgaben steigen oder fallen.",
-  "scoreWeightLabel": "{percent}% des Werts",
-  "viewHealthDetails": "Aufschlüsselung ansehen",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "{percent}% verwendet",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorOfIncome": "{percent}% der Einnahmen",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendUp": "Um {percent}% gestiegen",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendDown": "Um {percent}% gesunken",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "So funktioniert der Score",
+  "healthScoreExplainer": "Dein Score kombiniert vier Faktoren: wie viel deiner Einnahmen du behältst, wie gut du innerhalb deiner Budgets bleibst, wie viel deiner Einnahmen für Schulden verwendet wird und ob deine Ausgaben steigen oder sinken.",
+  "scoreWeightLabel": "{percent}% des Scores",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "viewHealthDetails": "Aufschlüsselung anzeigen",
+
   "saveChanges": "Änderungen speichern",
   "profileUpdated": "Profil aktualisiert",
   "changePhoto": "Foto ändern",
   "removePhoto": "Foto entfernen",
-  "personalInformationIntro": "Dein Name und dein Foto erscheinen überall in der App. Deine E-Mail ist die Adresse, mit der du dich anmeldest.",
-  "emailNotEditable": "Wende dich an den Support, um die Anmeldeadresse zu ändern.",
+  "personalInformationIntro": "Dein Name und Foto werden in der gesamten App angezeigt. Deine E-Mail-Adresse ist die Adresse, mit der du dich anmeldest.",
+  "nameRequired": "Gib deinen Namen ein",
+  "emailNotEditable": "Wende dich an den Support, um die Adresse zu ändern, mit der du dich anmeldest.",
+
   "pressBackAgainToExit": "Zum Beenden erneut zurück drücken",
+
   "categoryHousing": "Wohnen",
-  "categoryFood": "Essen und Trinken",
+  "categoryFood": "Essen & Gastronomie",
   "categoryTransport": "Transport",
-  "categoryShopping": "Einkaufen",
-  "categoryBills": "Rechnungen und Nebenkosten",
+  "categoryShopping": "Einkäufe",
+  "categoryBills": "Rechnungen & Versorger",
   "categoryEntertainment": "Unterhaltung",
-  "categoryHealth": "Gesundheit und Fitness",
+  "categoryHealth": "Gesundheit & Fitness",
   "categoryEducation": "Bildung",
   "categoryTravel": "Reisen",
   "categorySalary": "Gehalt",
   "categoryFreelance": "Freiberuflich",
   "categoryInvestments": "Investitionen",
+  "categoryGift": "Geschenk",
   "categoryOther": "Sonstiges",
+  "categoryGroceries": "Lebensmittel",
+  "categoryDining": "Restaurant",
+  "categoryCoffee": "Kaffee",
+  "categoryUtilities": "Versorgung",
+  "categoryInternet": "Internet",
+  "categoryPhone": "Telefon",
+  "categoryInsurance": "Versicherung",
+  "categorySubscriptions": "Abonnements",
+  "categoryPersonalCare": "Körperpflege",
+  "categoryClothing": "Kleidung",
+  "categoryElectronics": "Elektronik",
+  "categoryHomeSupplies": "Haushaltsbedarf",
+  "categoryPets": "Haustiere",
+  "categoryChildcare": "Kinderbetreuung",
+  "categoryFamily": "Familie",
+  "categoryFitness": "Fitness",
+  "categorySports": "Sport",
+  "categoryMedicine": "Medikamente",
+  "categoryMedical": "Medizinische Versorgung",
+  "categoryCharity": "Wohltätigkeit",
+  "categoryTaxes": "Steuern",
+  "categoryFees": "Gebühren",
+  "categoryDebt": "Schulden",
+  "categorySavings": "Sparen",
+  "categoryRepairs": "Reparaturen",
+  "categoryCarMaintenance": "Autowartung",
+  "categoryFuel": "Kraftstoff",
+  "categoryParking": "Parken",
+  "categoryPublicTransport": "Öffentliche Verkehrsmittel",
+  "categoryRent": "Miete",
+  "categoryMortgage": "Hypothek",
+  "categoryBonus": "Bonus",
+  "categoryCommission": "Provision",
+  "categoryPension": "Rente",
+  "categoryInterest": "Zinsen",
+  "categoryDividends": "Dividenden",
+  "categoryCashback": "Cashback",
+  "categoryRefund": "Rückerstattung",
+  "categoryRentalIncome": "Mieteinnahmen",
+
   "addCategory": "Neue Kategorie",
   "filterByCategory": "Nach Kategorie filtern",
   "allCategories": "Alle Kategorien",
-  "clearFilters": "Filter zurücksetzen",
+  "clearFilters": "Filter löschen",
   "spentInCategory": "{category}  ·  {amount}",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "allTime": "Gesamter Zeitraum",
   "customRange": "Benutzerdefiniert",
-  "selectDateRange": "Zeitraum wählen",
-  "rangeApplied": "Zeigt {start} – {end}",
-  "categoryRefunds": "Erstattungen und Geschenke"
+  "selectDateRange": "Zeitraum auswählen",
+  "rangeApplied": "Angezeigt: {start} – {end}",
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "loans": "Kredite",
+  "debts": "Schulden",
+  "noLoansTitle": "Keine Kredite",
+  "noLoansBody": "Du hast keine aktiven Kredite.",
+
+  "emptyHealthTitle": "Noch kein Finanzscore",
+  "@emptyHealthTitle": {
+    "description": "Titel, wenn nicht genügend Daten zur Berechnung eines Finanzscores vorhanden sind"
+  },
+  "emptyHealthDescription": "Wir benötigen zunächst ein wenig finanzielle Aktivität, bevor wir einen aussagekräftigen Finanzscore berechnen können.",
+  "@emptyHealthDescription": {
+    "description": "Erklärung im Leerzustand des Bildschirms zur finanziellen Gesundheit"
+  },
+  "emptyHealthAddTransactions": "Einnahmen oder Ausgaben hinzufügen",
+  "@emptyHealthAddTransactions": {
+    "description": "Checklistenpunkt, der zum Hinzufügen von Transaktionen auffordert"
+  },
+  "emptyHealthSetBudgets": "Monatliche Budgets einrichten",
+  "@emptyHealthSetBudgets": {
+    "description": "Checklistenpunkt, der zum Einrichten von Budgets auffordert"
+  },
+  "emptyHealthTrackLoans": "Kredite oder Schulden verfolgen (optional)",
+  "@emptyHealthTrackLoans": {
+    "description": "Checklistenpunkt, der zum Erfassen von Krediten auffordert"
+  },
+  "emptyHealthCardSubtitle": "Füge Transaktionen hinzu, um deinen Score zu berechnen und Erkenntnisse zu erhalten.",
+  "@emptyHealthCardSubtitle": {
+    "description": "Untertitel der Gesundheitskarte auf dem Dashboard, wenn keine Daten verfügbar sind"
+  },
+
+  "smartBudgetSplit": "Intelligente Budgetaufteilung",
+  "@smartBudgetSplit": {
+    "description": "Titel des Blatts zur intelligenten Gehalts-Budgetaufteilung"
+  },
+  "smartBudgetSplitSubtitle": "Gib dein monatliches Gehalt ein, um empfohlene Limits zu berechnen",
+  "@smartBudgetSplitSubtitle": {
+    "description": "Untertitel zur Erklärung der Gehalts-Budgetaufteilung"
+  },
+  "monthlyNetSalary": "Monatliches Nettogehalt",
+  "@monthlyNetSalary": {
+    "description": "Bezeichnung des Eingabefelds für das monatliche Nettogehalt"
+  },
+  "categoryAllocations": "Kategorieaufteilungen",
+  "@categoryAllocations": {
+    "description": "Überschrift der Liste mit empfohlenen Kategorieaufteilungen"
+  },
+  "totalBudgeted": "Gesamt: {amount}",
+  "@totalBudgeted": {
+    "description": "Gesamtbetrag, der über alle Kategorien budgetiert wurde",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "Alle Budgets anwenden",
+  "@applyAllBudgets": {
+    "description": "Schaltflächenbeschriftung zum Anwenden aller empfohlenen Kategorie-Limits"
+  },
+  "applyingBudgets": "Budgets werden angewendet...",
+  "@applyingBudgets": {
+    "description": "Ladeanzeige während des Anwendens der Budgets"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{1 Kategorie-Budget erstellt.} other{{count} Kategorie-Budgets erstellt.}}",
+  "@budgetsCreatedSuccess": {
+    "description": "Erfolgsmeldung, wenn Budgets erstellt wurden",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "Budgets konnten nicht gespeichert werden.",
+  "@failedToSaveBudgets": {
+    "description": "Fehlermeldung beim Speichern der Budgets"
+  },
+  "recommendedBudget": "Empfohlenes Budget"
 }

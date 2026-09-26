@@ -1,16 +1,37 @@
 {
   "@@locale": "el",
   "appName": "RainyPenny",
-  "appTagline": "Αποταμιεύστε για δύσκολες μέρες",
+  "appTagline": "Αποταμιεύστε για μια δύσκολη στιγμή",
   "navHome": "Αρχική",
-  "navTransactions": "Κινήσεις",
+  "navTransactions": "Συναλλαγές",
   "navAdd": "Προσθήκη",
   "navReports": "Αναφορές",
   "navProfile": "Προφίλ",
   "greetingMorning": "Καλημέρα, {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "greetingAfternoon": "Καλό απόγευμα, {name}",
-  "greetingEvening": "Καλησπέρα, {name}",
-  "greetingSubtitle": "Αυτή είναι η οικονομική σας εικόνα",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingEvening": "Καλό βράδυ, {name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingSubtitle": "Εδώ είναι η οικονομική σας επισκόπηση",
   "totalBalance": "Συνολικό υπόλοιπο",
   "vsLastPeriod": "σε σχέση με την προηγούμενη περίοδο",
   "income": "Έσοδα",
@@ -20,209 +41,445 @@
   "quickActions": "Γρήγορες ενέργειες",
   "addIncome": "Προσθήκη εσόδου",
   "addExpense": "Προσθήκη εξόδου",
-  "spendingOverview": "Επισκόπηση δαπανών",
-  "recentTransactions": "Πρόσφατες κινήσεις",
-  "seeAll": "Δείτε τα όλα",
-  "viewAll": "Εμφάνιση όλων",
-  "budgetProgress": "Πορεία προϋπολογισμών",
+  "spendingOverview": "Επισκόπηση εξόδων",
+  "recentTransactions": "Πρόσφατες συναλλαγές",
+  "seeAll": "Προβολή όλων",
+  "viewAll": "Προβολή όλων",
+  "budgetProgress": "Πορεία προϋπολογισμού",
   "savingsGoals": "Στόχοι αποταμίευσης",
-  "financialInsight": "Οικονομική παρατήρηση",
+  "financialInsight": "Οικονομική ανάλυση",
   "financialHealth": "Οικονομική υγεία",
   "ofTotal": "από {total}",
-  "searchTransactions": "Αναζήτηση κινήσεων",
+  "@ofTotal": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "searchTransactions": "Αναζήτηση συναλλαγών",
   "filterAll": "Όλα",
   "filterIncome": "Έσοδα",
   "filterExpenses": "Έξοδα",
   "today": "Σήμερα",
   "yesterday": "Χθες",
-  "noTransactionsTitle": "Δεν βρέθηκαν κινήσεις",
-  "noTransactionsBody": "Δοκιμάστε άλλη αναζήτηση ή φίλτρο για να δείτε περισσότερες εγγραφές.",
-  "transactionCount": "{count, plural, =0{Καμία κίνηση} one{{count} κίνηση} other{{count} κινήσεις}}",
-  "addTransaction": "Προσθήκη κίνησης",
+  "noTransactionsTitle": "Δεν βρέθηκαν συναλλαγές",
+  "noTransactionsBody": "Δοκιμάστε διαφορετική αναζήτηση ή φίλτρο για να δείτε περισσότερη δραστηριότητα.",
+  "transactionCount": "{count, plural, =0{Καμία συναλλαγή} =1{1 συναλλαγή} other{{count} συναλλαγές}}",
+  "@transactionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addTransaction": "Προσθήκη συναλλαγής",
   "amount": "Ποσό",
   "category": "Κατηγορία",
   "date": "Ημερομηνία",
   "note": "Σημείωση",
-  "noteHint": "Σημείωση (προαιρετικό)",
+  "noteHint": "Προαιρετική σημείωση",
   "saveIncome": "Αποθήκευση εσόδου",
   "saveExpense": "Αποθήκευση εξόδου",
   "selectCategory": "Επιλογή κατηγορίας",
-  "transactionSaved": "Η κίνηση αποθηκεύτηκε",
-  "amountRequired": "Δώστε ποσό μεγαλύτερο από μηδέν",
-  "titleRequired": "Δώστε όνομα σε αυτή την κίνηση",
+  "transactionSaved": "Η συναλλαγή αποθηκεύτηκε",
+  "amountRequired": "Εισαγάγετε ποσό μεγαλύτερο από μηδέν",
+  "titleRequired": "Δώστε ένα όνομα σε αυτήν τη συναλλαγή",
   "descriptionLabel": "Περιγραφή",
-  "descriptionHint": "π.χ. σούπερ μάρκετ",
+  "descriptionHint": "π.χ. Σούπερ μάρκετ",
   "budget": "Προϋπολογισμός",
   "budgets": "Προϋπολογισμοί",
   "totalBudget": "Συνολικός προϋπολογισμός",
   "spent": "Δαπανήθηκαν",
   "remaining": "Απομένουν",
-  "budgetUsed": "{percent}% σε χρήση",
-  "onTrack": "Σε καλό δρόμο",
-  "approachingLimit": "Κοντά στο όριο",
-  "overBudget": "Πάνω από τον προϋπολογισμό",
-  "savings": "Αποταμίευση",
+  "budgetUsed": "{percent}% χρησιμοποιήθηκε",
+  "@budgetUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "onTrack": "Εντός στόχου",
+  "approachingLimit": "Πλησιάζει το όριο",
+  "overBudget": "Υπέρβαση προϋπολογισμού",
+  "savings": "Αποταμιεύσεις",
   "yourGoals": "Οι στόχοι σας",
-  "saved": "Αποταμιεύτηκαν",
+  "saved": "Αποταμιευμένα",
   "target": "Στόχος",
   "monthlyContribution": "Μηνιαίως",
   "addFunds": "Προσθήκη χρημάτων",
   "goalComplete": "Ο στόχος επιτεύχθηκε",
-  "monthsToGo": "{count, plural, one{απομένει {count} μήνας} other{απομένουν {count} μήνες}}",
-  "loansAndDebts": "Δάνεια και χρέη",
-  "totalOutstanding": "Συνολικό υπόλοιπο οφειλής",
-  "monthlyPayment": "Μηνιαίως",
-  "nextPayment": "Επόμενη δόση",
+  "monthsToGo": "{count, plural, =1{Απομένει 1 μήνας} other{Απομένουν {count} μήνες}}",
+  "@monthsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "loansAndDebts": "Δάνεια & οφειλές",
+  "totalOutstanding": "Συνολικό ανεξόφλητο ποσό",
+  "monthlyPayment": "Μηνιαία δόση",
+  "nextPayment": "Επόμενη πληρωμή",
   "paidOff": "{percent}% εξοφλήθηκε",
+  "@paidOff": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
   "interestRate": "Επιτόκιο",
-  "upcomingPayments": "Επερχόμενες δόσεις",
-  "dueInDays": "{count, plural, =0{Λήγει σήμερα} one{Σε {count} ημέρα} other{Σε {count} ημέρες}}",
-  "overdue": "Ληξιπρόθεσμο",
+  "upcomingPayments": "Επερχόμενες πληρωμές",
+  "dueInDays": "{count, plural, =0{Πληρωμή σήμερα} =1{Πληρωμή αύριο} other{Πληρωμή σε {count} ημέρες}}",
+  "@dueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overdue": "Εκπρόθεσμο",
   "reports": "Αναφορές",
   "week": "Εβδομάδα",
   "month": "Μήνας",
   "quarter": "Τρίμηνο",
-  "incomeVsExpenses": "Έσοδα και έξοδα",
-  "spendingByCategory": "Δαπάνες ανά κατηγορία",
-  "budgetPerformance": "Απόδοση προϋπολογισμών",
-  "insights": "Παρατηρήσεις",
+  "incomeVsExpenses": "Έσοδα έναντι εξόδων",
+  "spendingByCategory": "Έξοδα ανά κατηγορία",
+  "budgetPerformance": "Απόδοση προϋπολογισμού",
+  "insights": "Στατιστικά στοιχεία",
   "savingsRate": "Ποσοστό αποταμίευσης",
   "profile": "Προφίλ",
   "account": "Λογαριασμός",
-  "personalInformation": "Προσωπικά στοιχεία",
-  "changePassword": "Αλλαγή κωδικού",
+  "personalInformation": "Προσωπικές πληροφορίες",
+  "changePassword": "Αλλαγή κωδικού πρόσβασης",
   "notifications": "Ειδοποιήσεις",
   "preferences": "Προτιμήσεις",
   "language": "Γλώσσα",
   "currency": "Νόμισμα",
-  "theme": "Θέμα",
+  "theme": "Εμφάνιση",
   "security": "Ασφάλεια",
-  "privacyAndSecurity": "Απόρρητο και ασφάλεια",
+  "privacyAndSecurity": "Απόρρητο & ασφάλεια",
   "help": "Βοήθεια",
-  "helpAndSupport": "Βοήθεια και υποστήριξη",
-  "termsAndConditions": "Όροι χρήσης",
+  "helpAndSupport": "Βοήθεια & υποστήριξη",
+  "termsAndConditions": "Όροι & προϋποθέσεις",
   "logOut": "Αποσύνδεση",
   "memberSince": "Μέλος από {date}",
-  "themeSystem": "Όπως το σύστημα",
+  "@memberSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "themeSystem": "Σύστημα",
   "themeLight": "Φωτεινό",
-  "themeDark": "Σκούρο",
+  "themeDark": "Σκοτεινό",
   "settings": "Ρυθμίσεις",
-  "noNotificationsTitle": "Τα είδατε όλα",
-  "noNotificationsBody": "Νέες παρατηρήσεις και υπενθυμίσεις θα εμφανίζονται εδώ.",
-  "cancel": "Άκυρο",
+  "noNotificationsTitle": "Δεν υπάρχουν νέες ειδοποιήσεις",
+  "noNotificationsBody": "Νέες αναλύσεις και υπενθυμίσεις θα εμφανίζονται εδώ.",
+  "cancel": "Ακύρωση",
   "save": "Αποθήκευση",
-  "done": "Έτοιμο",
-  "retry": "Δοκιμή ξανά",
+  "done": "Τέλος",
+  "retry": "Δοκιμάστε ξανά",
   "close": "Κλείσιμο",
   "somethingWentWrong": "Κάτι πήγε στραβά",
-  "comingSoon": "Έρχεται στην πλήρη έκδοση",
+  "comingSoon": "Σύντομα διαθέσιμο στην πλήρη έκδοση",
   "edit": "Επεξεργασία",
   "delete": "Διαγραφή",
   "undo": "Αναίρεση",
   "add": "Προσθήκη",
   "create": "Δημιουργία",
-  "nameRequired": "Δώστε του ένα όνομα",
-  "amountAboveZero": "Δώστε ποσό μεγαλύτερο από μηδέν",
-  "editTransaction": "Επεξεργασία κίνησης",
-  "deleteTransaction": "Διαγραφή κίνησης;",
-  "deleteTransactionBody": "Η κίνηση {title} θα αφαιρεθεί από τις εγγραφές σας.",
-  "transactionDeleted": "Η κίνηση διαγράφηκε",
-  "transactionUpdated": "Η κίνηση ενημερώθηκε",
+  "nameRequired": "Δώστε ένα όνομα",
+  "amountAboveZero": "Εισαγάγετε ποσό μεγαλύτερο από μηδέν",
+  "editTransaction": "Επεξεργασία συναλλαγής",
+  "deleteTransaction": "Διαγραφή συναλλαγής;",
+  "deleteTransactionBody": "Η συναλλαγή «{title}» θα αφαιρεθεί από το αρχείο σας.",
+  "@deleteTransactionBody": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "transactionDeleted": "Η συναλλαγή διαγράφηκε",
+  "transactionUpdated": "Η συναλλαγή ενημερώθηκε",
   "newBudget": "Νέος προϋπολογισμός",
   "editBudget": "Επεξεργασία προϋπολογισμού",
   "budgetLimit": "Μηνιαίο όριο",
   "deleteBudget": "Διαγραφή προϋπολογισμού;",
-  "deleteBudgetBody": "Ο προϋπολογισμός {category} θα αφαιρεθεί. Οι κινήσεις σας δεν επηρεάζονται.",
+  "deleteBudgetBody": "Ο προϋπολογισμός για την κατηγορία «{category}» θα αφαιρεθεί. Οι συναλλαγές σας δεν επηρεάζονται.",
+  "@deleteBudgetBody": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
   "budgetSaved": "Ο προϋπολογισμός αποθηκεύτηκε",
   "budgetDeleted": "Ο προϋπολογισμός διαγράφηκε",
-  "allCategoriesBudgeted": "Κάθε κατηγορία έχει ήδη προϋπολογισμό",
+  "allCategoriesBudgeted": "Όλες οι κατηγορίες έχουν ήδη προϋπολογισμό",
   "noBudgetsTitle": "Δεν υπάρχουν ακόμη προϋπολογισμοί",
-  "noBudgetsBody": "Βάλτε μηνιαίο όριο σε μια κατηγορία για να αρχίσετε να την παρακολουθείτε.",
+  "noBudgetsBody": "Ορίστε ένα μηνιαίο όριο σε μια κατηγορία για να ξεκινήσετε την παρακολούθησή της.",
   "newGoal": "Νέος στόχος",
   "editGoal": "Επεξεργασία στόχου",
   "goalName": "Όνομα στόχου",
-  "goalNameHint": "π.χ. ταμείο έκτακτης ανάγκης",
+  "goalNameHint": "π.χ. Ταμείο έκτακτης ανάγκης",
   "targetAmount": "Ποσό στόχου",
   "alreadySaved": "Ήδη αποταμιευμένα",
   "deleteGoal": "Διαγραφή στόχου;",
-  "deleteGoalBody": "Ο στόχος {name} και η πρόοδός του θα αφαιρεθούν.",
+  "deleteGoalBody": "Ο στόχος «{name}» και η πρόοδός του θα αφαιρεθούν.",
+  "@deleteGoalBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "goalSaved": "Ο στόχος αποθηκεύτηκε",
   "goalDeleted": "Ο στόχος διαγράφηκε",
   "noGoalsTitle": "Δεν υπάρχουν ακόμη στόχοι αποταμίευσης",
-  "noGoalsBody": "Βάλτε έναν στόχο και το RainyPenny θα παρακολουθεί την πρόοδό σας.",
+  "noGoalsBody": "Ορίστε έναν στόχο και το RainyPenny θα παρακολουθεί την πρόοδό σας.",
   "fundsAdded": "Τα χρήματα προστέθηκαν",
   "newDebt": "Νέο δάνειο ή κάρτα",
   "editDebt": "Επεξεργασία δανείου",
   "debtName": "Όνομα",
-  "debtNameHint": "π.χ. δάνειο αυτοκινήτου",
+  "debtNameHint": "π.χ. Δάνειο αυτοκινήτου",
   "lender": "Δανειστής",
-  "lenderHint": "π.χ. Εθνική Τράπεζα",
+  "lenderHint": "π.χ. Τράπεζα",
   "originalAmount": "Αρχικό ποσό",
   "creditLimit": "Πιστωτικό όριο",
   "remainingBalance": "Υπόλοιπο οφειλής",
   "interestRatePercent": "Επιτόκιο (%)",
   "kindLoan": "Δάνειο",
   "kindCreditCard": "Πιστωτική κάρτα",
-  "recordPayment": "Καταχώριση πληρωμής",
-  "paymentRecorded": "Η πληρωμή καταχωρήθηκε",
-  "deleteDebt": "Διαγραφή αυτού του χρέους;",
-  "deleteDebtBody": "Το {name} θα αφαιρεθεί από τα χρέη σας.",
+  "recordPayment": "Καταγραφή πληρωμής",
+  "paymentRecorded": "Η πληρωμή καταγράφηκε",
+  "deleteDebt": "Διαγραφή αυτής της οφειλής;",
+  "deleteDebtBody": "Η οφειλή «{name}» θα αφαιρεθεί από τις οφειλές σας.",
+  "@deleteDebtBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "debtSaved": "Αποθηκεύτηκε",
   "debtDeleted": "Διαγράφηκε",
-  "noDebtsTitle": "Δεν παρακολουθείται κανένα χρέος",
-  "noDebtsBody": "Προσθέστε δάνειο ή πιστωτική κάρτα για να έχετε τις δόσεις υπό έλεγχο.",
-  "insightBudgetExceededTitle": "Ο προϋπολογισμός {subject} ξεπεράστηκε",
-  "insightBudgetExceededBody": "Ξεπεράσατε τον προϋπολογισμό {subject} κατά {amount} αυτή την περίοδο.",
-  "insightBudgetApproachingTitle": "Το {subject} πλησιάζει το όριο",
-  "insightBudgetApproachingBody": "Ο προϋπολογισμός {subject} έχει χρησιμοποιηθεί κατά {percent}%, απομένουν {amount}.",
-  "insightOverIncomeTitle": "Τα έξοδα ξεπερνούν τα έσοδα",
-  "insightOverIncomeBody": "Αυτή την περίοδο ξοδέψατε περισσότερα από όσα κερδίσατε. Δείτε τις μεγαλύτερες κατηγορίες για να ισορροπήσετε ξανά.",
-  "insightCategoryUpTitle": "Οι δαπάνες για {subject} αυξήθηκαν",
-  "insightCategoryUpBody": "Οι δαπάνες σας για {subject} είναι {percent}% υψηλότερες από την προηγούμενη περίοδο.",
-  "insightTrendDownTitle": "Οι δαπάνες μειώνονται",
-  "insightTrendDownBody": "Οι συνολικές δαπάνες είναι {percent}% χαμηλότερες από την προηγούμενη περίοδο.",
-  "insightTrendUpTitle": "Οι δαπάνες αυξάνονται",
-  "insightTrendUpBody": "Οι συνολικές δαπάνες είναι {percent}% υψηλότερες από την προηγούμενη περίοδο.",
-  "insightSavingsStrongTitle": "Δυνατή αποταμίευση αυτή την περίοδο",
-  "insightSavingsStrongBody": "Κρατήσατε {percent}% του εισοδήματός σας — αρκετά πάνω από τον στόχο του {target}%.",
+  "noDebtsTitle": "Δεν παρακολουθούνται οφειλές",
+  "noDebtsBody": "Προσθέστε ένα δάνειο ή πιστωτική κάρτα για να παρακολουθείτε τις αποπληρωμές.",
+  "insightBudgetExceededTitle": "Υπέρβαση προϋπολογισμού: {subject}",
+  "@insightBudgetExceededTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetExceededBody": "Ξεπεράσατε κατά {amount} τον προϋπολογισμό σας για την κατηγορία «{subject}» αυτήν την περίοδο.",
+  "@insightBudgetExceededBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingTitle": "Η κατηγορία «{subject}» πλησιάζει το όριο",
+  "@insightBudgetApproachingTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightBudgetApproachingBody": "Ο προϋπολογισμός σας για την κατηγορία «{subject}» έχει χρησιμοποιηθεί κατά {percent}%, με {amount} να απομένουν.",
+  "@insightBudgetApproachingBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "insightOverIncomeTitle": "Τα έξοδα υπερβαίνουν τα έσοδα",
+  "insightOverIncomeBody": "Ξοδέψατε περισσότερα από όσα κερδίσατε αυτήν την περίοδο. Ελέγξτε τις μεγαλύτερες κατηγορίες εξόδων σας για να εξισορροπήσετε τα οικονομικά σας.",
+  "insightCategoryUpTitle": "Αύξηση εξόδων στην κατηγορία «{subject}»",
+  "@insightCategoryUpTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightCategoryUpBody": "Τα έξοδά σας στην κατηγορία «{subject}» είναι κατά {percent}% υψηλότερα από την προηγούμενη περίοδο.",
+  "@insightCategoryUpBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendDownTitle": "Τα έξοδα μειώνονται",
+  "insightTrendDownBody": "Οι συνολικές δαπάνες είναι κατά {percent}% χαμηλότερες από την προηγούμενη περίοδο.",
+  "@insightTrendDownBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightTrendUpTitle": "Τα έξοδα αυξάνονται",
+  "insightTrendUpBody": "Οι συνολικές δαπάνες είναι κατά {percent}% υψηλότερες από την προηγούμενη περίοδο.",
+  "@insightTrendUpBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "insightSavingsStrongTitle": "Εξαιρετική αποταμίευση αυτήν την περίοδο",
+  "insightSavingsStrongBody": "Κρατήσατε το {percent}% του εισοδήματός σας — πολύ πάνω από τον στόχο του {target}%.",
+  "@insightSavingsStrongBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
   "insightSavingsLowTitle": "Το ποσοστό αποταμίευσης είναι κάτω από τον στόχο",
-  "insightSavingsLowBody": "Αυτή την περίοδο κρατήσατε {percent}% του εισοδήματός σας. Στοχεύστε στο {target}%.",
-  "insightGoalNearlyTitle": "Το {subject} σχεδόν συμπληρώθηκε",
-  "insightGoalNearlyBody": "Απομένουν μόνο {amount} για το {subject}.",
-  "insightGoalOnTrackTitle": "Το {subject} πάει καλά",
-  "insightGoalOnTrackBody": "Με {amount} τον μήνα θα φτάσετε αυτόν τον στόχο σε {months, plural, one{{months} μήνα} other{{months} μήνες}}.",
-  "insightDebtOverdueTitle": "Η δόση {subject} είναι ληξιπρόθεσμη",
-  "insightDebtOverdueBody": "Η δόση {amount} για {subject} καθυστερεί {days, plural, one{{days} ημέρα} other{{days} ημέρες}}.",
-  "insightDebtDueTitle": "Πλησιάζει η δόση {subject}",
-  "insightDebtDueBody": "Τα {amount} πρέπει να πληρωθούν {days, plural, =0{σήμερα} one{σε {days} ημέρα} other{σε {days} ημέρες}}.",
+  "insightSavingsLowBody": "Κρατήσατε το {percent}% του εισοδήματός σας αυτήν την περίοδο. Στοχεύστε στο {target}%.",
+  "@insightSavingsLowBody": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "insightGoalNearlyTitle": "Ο στόχος «{subject}» σχεδόν ολοκληρώθηκε",
+  "@insightGoalNearlyTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalNearlyBody": "Απομένουν μόνο {amount} για να φτάσετε τον στόχο «{subject}».",
+  "@insightGoalNearlyBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackTitle": "Εντός στόχου για το «{subject}»",
+  "@insightGoalOnTrackTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightGoalOnTrackBody": "Με {amount} τον μήνα, θα επιτύχετε αυτόν τον στόχο σε {months, plural, =1{1 μήνα} other{{months} μήνες}}.",
+  "@insightGoalOnTrackBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtOverdueTitle": "Εκπρόθεσμη πληρωμή για το «{subject}»",
+  "@insightDebtOverdueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtOverdueBody": "Η πληρωμή {amount} για το «{subject}» έχει καθυστερήσει κατά {days, plural, =1{1 ημέρα} other{{days} ημέρες}}.",
+  "@insightDebtOverdueBody": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "insightDebtDueTitle": "Πλησιάζει πληρωμή για το «{subject}»",
+  "@insightDebtDueTitle": {
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueBody": "Το ποσό {amount} λήγει {days, plural, =0{σήμερα} =1{αύριο} other{σε {days} ημέρες}}.",
+  "@insightDebtDueBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
   "signIn": "Σύνδεση",
   "signUp": "Δημιουργία λογαριασμού",
-  "signInSubtitle": "Καλώς ορίσατε ξανά. Τα χρήματά σας περιμένουν.",
+  "signInSubtitle": "Καλώς ήρθατε πίσω. Τα οικονομικά σας σας περιμένουν.",
   "signUpSubtitle": "Λίγα στοιχεία και είστε έτοιμοι.",
   "emailLabel": "Email",
   "emailHint": "you@email.com",
-  "passwordLabel": "Κωδικός",
+  "passwordLabel": "Κωδικός πρόσβασης",
   "passwordHint": "Τουλάχιστον 8 χαρακτήρες",
   "fullNameLabel": "Ονοματεπώνυμο",
   "fullNameHint": "Γιώργος Παπαδόπουλος",
-  "forgotPassword": "Ξεχάσατε τον κωδικό;",
-  "resetSent": "Δείτε τα εισερχόμενά σας για τον σύνδεσμο επαναφοράς",
-  "noAccountYet": "Πρώτη φορά εδώ;",
+  "forgotPassword": "Ξεχάσατε τον κωδικό πρόσβασης;",
+  "resetSent": "Ελέγξτε τα εισερχόμενά σας για τον σύνδεσμο επαναφοράς",
+  "noAccountYet": "Νέος χρήστης;",
   "haveAccount": "Έχετε ήδη λογαριασμό;",
-  "emailInvalid": "Δώστε έγκυρη διεύθυνση email",
+  "emailInvalid": "Εισαγάγετε μια έγκυρη διεύθυνση email",
   "passwordTooShort": "Χρησιμοποιήστε τουλάχιστον 8 χαρακτήρες",
   "signOutConfirm": "Αποσύνδεση;",
   "signOutBody": "Θα χρειαστεί να συνδεθείτε ξανά για να δείτε τα οικονομικά σας.",
   "dataSource": "Πηγή δεδομένων",
-  "insightWeeklySummaryTitle": "Η εβδομάδα σας με μια ματιά",
-  "insightWeeklySummaryBody": "Δείτε πού πήγαν τα χρήματά σας αυτή την εβδομάδα και πώς κρατούν οι προϋπολογισμοί.",
+  "insightWeeklySummaryTitle": "Η εβδομάδα σας σε ανασκόπηση",
+  "insightWeeklySummaryBody": "Δείτε πού πήγαν τα χρήματά σας αυτήν την εβδομάδα και πώς τα πάνε οι προϋπολογισμοί σας.",
   "notificationSettings": "Ειδοποιήσεις",
   "alertsSection": "Ειδοποιήσεις",
   "budgetAlerts": "Ειδοποιήσεις προϋπολογισμού",
-  "budgetAlertsBody": "Όταν ένας προϋπολογισμός πλησιάζει ή ξεπερνά το όριο",
+  "budgetAlertsBody": "Όταν ένας προϋπολογισμός πλησιάζει ή υπερβαίνει το όριό του",
   "paymentReminders": "Υπενθυμίσεις πληρωμών",
-  "paymentRemindersBody": "Λίγες ημέρες πριν από τη λήξη μιας δόσης",
-  "savingsUpdates": "Νέα αποταμίευσης",
+  "paymentRemindersBody": "Λίγες ημέρες πριν από τη λήξη μιας πληρωμής",
+  "savingsUpdates": "Ενημερώσεις αποταμίευσης",
   "savingsUpdatesBody": "Πρόοδος προς τους στόχους σας",
   "weeklySummaryLabel": "Εβδομαδιαία σύνοψη",
   "weeklySummaryBody": "Μια σύνοψη της εβδομάδας που πέρασε",
@@ -230,15 +487,32 @@
   "reminderTime": "Ώρα υπενθύμισης",
   "quietHours": "Ώρες ησυχίας",
   "quietHoursValue": "{start} – {end}",
+  "@quietHoursValue": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
   "summaryDay": "Ημέρα σύνοψης",
   "permissionRequired": "Οι ειδοποιήσεις είναι απενεργοποιημένες",
-  "permissionRequiredBody": "Επιτρέψτε τις ειδοποιήσεις ώστε το RainyPenny να σας προειδοποιεί πριν ξεφύγει ένας προϋπολογισμός ή μια πληρωμή.",
-  "allowNotifications": "Να επιτρέπονται οι ειδοποιήσεις",
-  "permissionDenied": "Οι ειδοποιήσεις είναι αποκλεισμένες. Μπορείτε να τις ενεργοποιήσετε από τις ρυθμίσεις της συσκευής.",
-  "upcomingAlerts": "Προγραμματισμένα",
-  "noScheduledAlerts": "Δεν υπάρχει τίποτα προγραμματισμένο αυτή τη στιγμή",
-  "noScheduledAlertsBody": "Οι ειδοποιήσεις θα εμφανίζονται εδώ καθώς οι προϋπολογισμοί και οι δόσεις πλησιάζουν τα όριά τους.",
+  "permissionRequiredBody": "Επιτρέψτε τις ειδοποιήσεις ώστε το RainyPenny να σας προειδοποιεί προτού ξεφύγει ένας προϋπολογισμός ή μια πληρωμή.",
+  "allowNotifications": "Ενεργοποίηση ειδοποιήσεων",
+  "permissionDenied": "Οι ειδοποιήσεις είναι αποκλεισμένες. Μπορείτε να τις ενεργοποιήσετε στις ρυθμίσεις της συσκευής σας.",
+  "upcomingAlerts": "Προγραμματισμένες",
+  "noScheduledAlerts": "Τίποτα προγραμματισμένο αυτήν τη στιγμή",
+  "noScheduledAlertsBody": "Οι ειδοποιήσεις θα εμφανίζονται εδώ καθώς οι προϋπολογισμοί και οι πληρωμές σας πλησιάζουν στα όριά τους.",
   "scheduledFor": "Προγραμματισμένο για {date}",
+  "@scheduledFor": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "everyWeek": "Κάθε εβδομάδα",
   "allNotificationsOff": "Όλες οι ειδοποιήσεις είναι απενεργοποιημένες",
   "needsAttention": "Χρειάζεται προσοχή",
@@ -250,246 +524,896 @@
   "addGoalAction": "Προσθήκη στόχου",
   "longPressHint": "Συμβουλή: κρατήστε πατημένο το + για άμεση καταγραφή εξόδου",
   "searchCurrencies": "Αναζήτηση νομισμάτων",
+  "@searchCurrencies": {
+    "description": "Currency picker: searchCurrencies"
+  },
   "noCurrenciesFound": "Δεν βρέθηκαν νομίσματα",
-  "noCurrenciesFoundMessage": "Δοκιμάστε άλλον κωδικό, σύμβολο ή όνομα.",
+  "@noCurrenciesFound": {
+    "description": "Currency picker: noCurrenciesFound"
+  },
+  "noCurrenciesFoundMessage": "Δοκιμάστε διαφορετικό κωδικό, σύμβολο ή όνομα.",
+  "@noCurrenciesFoundMessage": {
+    "description": "Currency picker: noCurrenciesFoundMessage"
+  },
   "popularCurrencies": "Δημοφιλή",
+  "@popularCurrencies": {
+    "description": "Currency picker: popularCurrencies"
+  },
   "allCurrencies": "Όλα τα νομίσματα",
+  "@allCurrencies": {
+    "description": "Currency picker: allCurrencies"
+  },
   "totalLoanAmount": "Συνολικό ποσό δανείου",
+  "@totalLoanAmount": {
+    "description": "Loan detail: the original amount borrowed"
+  },
   "installmentAmount": "Ποσό δόσης",
+  "@installmentAmount": {
+    "description": "Loan detail: what falls due each cycle"
+  },
   "numberOfInstallments": "Αριθμός δόσεων",
+  "@numberOfInstallments": {
+    "description": "Loan editor: length of the repayment plan"
+  },
   "paidInstallments": "Πληρωμένες δόσεις",
-  "remainingInstallments": "Υπόλοιπες δόσεις",
-  "installmentsPaidOf": "{paid} από {total} πληρωμένες",
-  "finalPayment": "Τελευταία δόση",
-  "paymentDueDate": "Ημερομηνία πληρωμής",
-  "dueOnDayOfMonth": "Στις {day} κάθε μήνα",
+  "@paidInstallments": {
+    "description": "Loan detail: installments already settled"
+  },
+  "remainingInstallments": "Υπολειπόμενες δόσεις",
+  "@remainingInstallments": {
+    "description": "Loan detail: installments still to pay"
+  },
+  "installmentsPaidOf": "Πληρώθηκαν {paid} από {total}",
+  "@installmentsPaidOf": {
+    "description": "Loan detail: installment counter",
+    "placeholders": {
+      "paid": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "finalPayment": "Τελευταία πληρωμή",
+  "@finalPayment": {
+    "description": "Loan detail: date of the last installment"
+  },
+  "paymentDueDate": "Ημερομηνία λήξης πληρωμής",
+  "@paymentDueDate": {
+    "description": "Loan detail: the day of the month a payment falls due"
+  },
+  "dueOnDayOfMonth": "Την {day}η κάθε μήνα",
+  "@dueOnDayOfMonth": {
+    "description": "Loan detail: recurring due day",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
   "loanStatus": "Κατάσταση",
-  "statusActive": "Σε καλό δρόμο",
+  "@loanStatus": {
+    "description": "Loan detail: current standing of the debt"
+  },
+  "statusActive": "Ενεργό",
+  "@statusActive": {
+    "description": "Loan status: being repaid normally"
+  },
   "statusDueSoon": "Λήγει σύντομα",
-  "statusOverdue": "Ληξιπρόθεσμο",
+  "@statusDueSoon": {
+    "description": "Loan status: inside the reminder window"
+  },
+  "statusOverdue": "Εκπρόθεσμο",
+  "@statusOverdue": {
+    "description": "Loan status: the due date has passed"
+  },
   "statusCompleted": "Εξοφλήθηκε",
+  "@statusCompleted": {
+    "description": "Loan status: fully repaid"
+  },
   "repaymentProgress": "Πρόοδος αποπληρωμής",
-  "byAmount": "Κατά ποσό",
-  "byInstallments": "Κατά δόσεις",
+  "@repaymentProgress": {
+    "description": "Loan detail: section heading for the progress bars"
+  },
+  "byAmount": "Βάσει ποσού",
+  "@byAmount": {
+    "description": "Loan detail: progress measured in money"
+  },
+  "byInstallments": "Βάσει δόσεων",
+  "@byInstallments": {
+    "description": "Loan detail: progress measured in payments"
+  },
   "startDate": "Ημερομηνία έναρξης",
-  "openEnded": "Χωρίς προθεσμία",
+  "@startDate": {
+    "description": "Loan editor: when repayment began"
+  },
+  "openEnded": "Αορίστου χρόνου",
+  "@openEnded": {
+    "description": "Loan detail: a revolving balance with no fixed term"
+  },
   "loanDetails": "Στοιχεία δανείου",
-  "notSet": "Δεν ορίστηκε",
-  "insightDebtDueTodayTitle": "Το {subject} λήγει σήμερα",
-  "insightDebtDueTodayBody": "Η πληρωμή {amount} λήγει σήμερα. Ένα πάτημα και είναι στην ώρα της.",
+  "@loanDetails": {
+    "description": "Title of the loan detail screen"
+  },
+  "notSet": "Δεν έχει οριστεί",
+  "@notSet": {
+    "description": "Shown where an optional value has not been entered"
+  },
+  "insightDebtDueTodayTitle": "Η πληρωμή για το «{subject}» λήγει σήμερα",
+  "@insightDebtDueTodayTitle": {
+    "description": "Notification: an installment falls due today",
+    "placeholders": {
+      "subject": {
+        "type": "String"
+      }
+    }
+  },
+  "insightDebtDueTodayBody": "Η πληρωμή σας {amount} λήγει σήμερα. Ένα γρήγορο πάτημα την κρατά στην ώρα της.",
+  "@insightDebtDueTodayBody": {
+    "description": "Notification body: installment due today",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "remindMorningTitle": "Καλημέρα ☀️",
-  "remindMorningBody": "Ξεκινήστε τη μέρα με τα χρήματά σας υπό έλεγχο. Έμεινε κάτι από χθες;",
+  "@remindMorningTitle": {
+    "description": "Morning expense reminder title"
+  },
+  "remindMorningBody": "Ξεκινήστε τη μέρα έχοντας τον έλεγχο των χρημάτων σας. Υπάρχει κάτι να προσθέσετε από χθες;",
+  "@remindMorningBody": {
+    "description": "Morning expense reminder body"
+  },
   "remindNoonTitle": "Μεσημεριανός έλεγχος",
-  "remindNoonBody": "Γεύμα, καφές, εισιτήριο; Καταγράφεται σε δευτερόλεπτα.",
-  "remindAfternoonTitle": "Μια γρήγορη συμπλήρωση",
-  "remindAfternoonBody": "Καταγράψτε όσα ξοδέψατε μέχρι τώρα ώστε τα σημερινά νούμερα να είναι σωστά.",
-  "remindEveningTitle": "Κλείνοντας τη μέρα",
-  "remindEveningBody": "Δύο λεπτά τώρα και οι σημερινές εγγραφές είναι πλήρεις.",
+  "@remindNoonTitle": {
+    "description": "Noon expense reminder title"
+  },
+  "remindNoonBody": "Μεσημεριανό, καφές ή εισιτήριο; Προσθέστε το σε λίγα δευτερόλεπτα.",
+  "@remindNoonBody": {
+    "description": "Noon expense reminder body"
+  },
+  "remindAfternoonTitle": "Γρήγορη καταγραφή",
+  "@remindAfternoonTitle": {
+    "description": "Afternoon expense reminder title"
+  },
+  "remindAfternoonBody": "Καταγράψτε όσα ξοδέψατε μέχρι τώρα και κρατήστε τα στοιχεία της ημέρας ακριβή.",
+  "@remindAfternoonBody": {
+    "description": "Afternoon expense reminder body"
+  },
+  "remindEveningTitle": "Κλείσιμο της ημέρας",
+  "@remindEveningTitle": {
+    "description": "Evening expense reminder title"
+  },
+  "remindEveningBody": "Δύο λεπτά τώρα και τα νούμερα της ημέρας είναι πλήρη.",
+  "@remindEveningBody": {
+    "description": "Evening expense reminder body"
+  },
   "happyWeekendTitle": "Καλό σαββατοκύριακο! 🎉",
-  "happyWeekendBody": "Απολαύστε το — και κρατήστε ένα μάτι στα έξοδα του σαββατοκύριακου.",
+  "@happyWeekendTitle": {
+    "description": "Weekend greeting title"
+  },
+  "happyWeekendBody": "Απολαύστε το — και παρακολουθείτε τα έξοδα του σαββατοκύριακου.",
+  "@happyWeekendBody": {
+    "description": "Weekend greeting body"
+  },
   "dailyReminders": "Καθημερινές υπενθυμίσεις εξόδων",
-  "dailyRemindersBody": "Διακριτικές υπενθυμίσεις για να μένουν τα έξοδα ενημερωμένα",
+  "@dailyReminders": {
+    "description": "Notification setting: the daily nudges"
+  },
+  "dailyRemindersBody": "Φιλικές υπενθυμίσεις για να διατηρείτε τα έξοδά σας ενημερωμένα",
+  "@dailyRemindersBody": {
+    "description": "Notification setting description"
+  },
   "weekendGreeting": "Χαιρετισμός σαββατοκύριακου",
+  "@weekendGreeting": {
+    "description": "Notification setting: the weekend greeting"
+  },
   "weekendGreetingBody": "Ένας φιλικός χαιρετισμός στην αρχή του σαββατοκύριακου",
+  "@weekendGreetingBody": {
+    "description": "Notification setting description"
+  },
   "reminderTimesSection": "Ώρες υπενθυμίσεων",
+  "@reminderTimesSection": {
+    "description": "Section heading for the four daily slots"
+  },
   "slotMorning": "Πρωί",
+  "@slotMorning": {
+    "description": "Daily reminder slot"
+  },
   "slotNoon": "Μεσημέρι",
+  "@slotNoon": {
+    "description": "Daily reminder slot"
+  },
   "slotAfternoon": "Απόγευμα",
+  "@slotAfternoon": {
+    "description": "Daily reminder slot"
+  },
   "slotEvening": "Βράδυ",
+  "@slotEvening": {
+    "description": "Daily reminder slot"
+  },
   "everyDay": "Κάθε μέρα",
+  "@everyDay": {
+    "description": "How often a repeating notification arrives"
+  },
   "financialReport": "Οικονομική αναφορά",
-  "preparedFor": "Ετοιμάστηκε για",
+  "@financialReport": {
+    "description": "Title of the exported PDF"
+  },
+  "preparedFor": "Προετοιμάστηκε για",
+  "@preparedFor": {
+    "description": "PDF cover: whose report this is"
+  },
   "generatedOn": "Δημιουργήθηκε στις",
-  "reportDisclaimer": "Δημιουργήθηκε από το RainyPenny με βάση τις δικές σας εγγραφές.",
+  "@generatedOn": {
+    "description": "PDF cover: the date the report was produced"
+  },
+  "reportDisclaimer": "Δημιουργήθηκε από το RainyPenny βάσει των δικών σας καταγραφών.",
+  "@reportDisclaimer": {
+    "description": "PDF footer note"
+  },
   "pageOf": "Σελίδα {page} από {total}",
+  "@pageOf": {
+    "description": "PDF footer page number",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "overview": "Επισκόπηση",
+  "@overview": {
+    "description": "PDF section: the headline totals"
+  },
   "description": "Περιγραφή",
+  "@description": {
+    "description": "Table column heading"
+  },
   "totalIncome": "Συνολικά έσοδα",
+  "@totalIncome": {
+    "description": "Summary table row"
+  },
   "totalExpenses": "Συνολικά έξοδα",
-  "totalSaved": "Σύνολο αποταμίευσης",
+  "@totalExpenses": {
+    "description": "Summary table row"
+  },
+  "totalSaved": "Συνολική αποταμίευση",
+  "@totalSaved": {
+    "description": "Summary table row"
+  },
   "shareOfTotal": "Μερίδιο",
-  "used": "Σε χρήση",
+  "@shareOfTotal": {
+    "description": "Table column: this category's share of all spending"
+  },
+  "used": "Χρήση",
+  "@used": {
+    "description": "Table column: percentage of a budget consumed"
+  },
   "goal": "Στόχος",
+  "@goal": {
+    "description": "Table column heading for a savings goal"
+  },
   "targetDate": "Ημερομηνία στόχου",
+  "@targetDate": {
+    "description": "Table column heading"
+  },
   "progress": "Πρόοδος",
+  "@progress": {
+    "description": "Table column heading"
+  },
   "paidOffShort": "Εξοφλήθηκε",
-  "transactions": "Κινήσεις",
-  "andMoreTransactions": "{count, plural, one{και άλλη {count} κίνηση} other{και άλλες {count} κινήσεις}}",
+  "@paidOffShort": {
+    "description": "Table column: percentage of a debt repaid"
+  },
+  "transactions": "Συναλλαγές",
+  "@transactions": {
+    "description": "PDF section listing individual entries"
+  },
+  "andMoreTransactions": "{count, plural, =1{και 1 ακόμη συναλλαγή} other{και {count} ακόμη συναλλαγές}}",
+  "@andMoreTransactions": {
+    "description": "PDF note when the transaction table is truncated",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
   "exportPdf": "Εξαγωγή PDF",
+  "@exportPdf": {
+    "description": "Button that produces the report"
+  },
   "sharePdf": "Κοινοποίηση αναφοράς",
-  "preparingReport": "Ετοιμάζεται η αναφορά σας…",
+  "@sharePdf": {
+    "description": "Button that opens the share sheet"
+  },
+  "preparingReport": "Προετοιμασία της αναφοράς σας…",
+  "@preparingReport": {
+    "description": "Progress message while the PDF builds"
+  },
   "reportReady": "Η αναφορά είναι έτοιμη",
-  "reportFailed": "Δεν ήταν δυνατή η δημιουργία της αναφοράς",
+  "@reportReady": {
+    "description": "Confirmation once the PDF is produced"
+  },
+  "reportFailed": "Αδυναμία δημιουργίας αναφοράς",
+  "@reportFailed": {
+    "description": "Error message when export fails"
+  },
   "categories": "Κατηγορίες",
-  "categoriesIntro": "Προσθέστε δικές σας κατηγορίες ώστε τα έσοδα και τα έξοδα να μπαίνουν ακριβώς όπως τα σκέφτεστε.",
+  "@categories": {
+    "description": "Title of the category management screen"
+  },
+  "categoriesIntro": "Προσθέστε τις δικές σας κατηγορίες για να ταξινομείτε τα έσοδα και τα έξοδα ακριβώς όπως εσείς θέλετε.",
+  "@categoriesIntro": {
+    "description": "Explains what the screen is for"
+  },
   "expenseCategories": "Κατηγορίες εξόδων",
+  "@expenseCategories": {
+    "description": "Section heading"
+  },
   "incomeCategories": "Κατηγορίες εσόδων",
+  "@incomeCategories": {
+    "description": "Section heading"
+  },
   "newCategory": "Νέα κατηγορία",
+  "@newCategory": {
+    "description": "Title of the create form"
+  },
   "editCategory": "Επεξεργασία κατηγορίας",
+  "@editCategory": {
+    "description": "Title of the edit form"
+  },
   "categoryName": "Όνομα",
-  "categoryNameHint": "π.χ. κατοικίδια",
+  "@categoryName": {
+    "description": "Category form field label"
+  },
+  "categoryNameHint": "π.χ. Φροντίδα κατοικιδίων",
+  "@categoryNameHint": {
+    "description": "Category name placeholder"
+  },
   "icon": "Εικονίδιο",
+  "@icon": {
+    "description": "Category form field label"
+  },
   "categorySaved": "Η κατηγορία αποθηκεύτηκε",
+  "@categorySaved": {
+    "description": "Confirmation"
+  },
   "categoryDeleted": "Η κατηγορία διαγράφηκε",
+  "@categoryDeleted": {
+    "description": "Confirmation"
+  },
   "deleteCategory": "Διαγραφή αυτής της κατηγορίας;",
-  "deleteCategoryBody": "Η κατηγορία {name} θα αφαιρεθεί.",
-  "categoryInUse": "{count, plural, one{{count} εγγραφή χρησιμοποιεί ακόμη αυτή την κατηγορία} other{{count} εγγραφές χρησιμοποιούν ακόμη αυτή την κατηγορία}}",
-  "noCategoriesYet": "Δεν υπάρχει τίποτα εδώ ακόμη.",
+  "@deleteCategory": {
+    "description": "Delete confirmation title"
+  },
+  "deleteCategoryBody": "Η κατηγορία «{name}» θα αφαιρεθεί από τις κατηγορίες σας.",
+  "@deleteCategoryBody": {
+    "description": "Delete confirmation body",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryInUse": "{count, plural, =1{1 εγγραφή χρησιμοποιεί ακόμη αυτήν την κατηγορία} other{{count} εγγραφές χρησιμοποιούν ακόμη αυτήν την κατηγορία}}",
+  "@categoryInUse": {
+    "description": "Explains why a category cannot be deleted",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noCategoriesYet": "Δεν υπάρχει τίποτα εδώ ακόμα.",
+  "@noCategoriesYet": {
+    "description": "Empty group in the category list"
+  },
   "builtIn": "Ενσωματωμένη",
+  "@builtIn": {
+    "description": "Marks a shared, read-only category"
+  },
   "manageCategories": "Διαχείριση κατηγοριών",
+  "@manageCategories": {
+    "description": "Settings row that opens the category screen"
+  },
   "expense": "Έξοδο",
-  "languageNote": "Τα αραβικά, τα ουρντού, τα περσικά και τα εβραϊκά αλλάζουν ολόκληρη τη διεπαφή σε φορά από δεξιά προς τα αριστερά, μαζί με τα γραφήματα και τις αναφορές PDF.",
+  "@expense": {
+    "description": "Singular label for an outgoing transaction"
+  },
+  "languageNote": "Τα αραβικά, τα ούρντου, τα περσικά και τα εβραϊκά αλλάζουν ολόκληρη τη διεπαφή από δεξιά προς τα αριστερά, συμπεριλαμβανομένων των διαγραμμάτων και των αναφορών PDF.",
+  "@languageNote": {
+    "description": "Note under the language picker explaining RTL support"
+  },
   "next": "Επόμενο",
   "back": "Πίσω",
   "skip": "Παράλειψη",
   "continueLabel": "Συνέχεια",
+  "@continueLabel": {
+    "description": "Primary action that advances a multi-step flow. Named with a suffix because \"continue\" is a Dart keyword."
+  },
   "selected": "Επιλεγμένο",
-  "passwordRequired": "Δώστε τον κωδικό σας",
-  "newPasswordLabel": "Νέος κωδικός",
-  "confirmPasswordLabel": "Επιβεβαίωση κωδικού",
-  "passwordsDoNotMatch": "Οι δύο κωδικοί πρέπει να ταιριάζουν",
-  "showPassword": "Εμφάνιση κωδικού",
-  "hidePassword": "Απόκρυψη κωδικού",
-  "savePassword": "Αποθήκευση κωδικού",
+  "passwordRequired": "Εισαγάγετε τον κωδικό πρόσβασής σας",
+  "newPasswordLabel": "Νέος κωδικός πρόσβασης",
+  "confirmPasswordLabel": "Επιβεβαίωση κωδικού πρόσβασης",
+  "passwordsDoNotMatch": "Οι κωδικοί πρόσβασης πρέπει να ταιριάζουν",
+  "showPassword": "Εμφάνιση κωδικού πρόσβασης",
+  "hidePassword": "Απόκρυψη κωδικού πρόσβασης",
+  "savePassword": "Αποθήκευση κωδικού πρόσβασης",
   "backToSignIn": "Επιστροφή στη σύνδεση",
   "alreadyHaveAccount": "Έχω ήδη λογαριασμό",
-  "getStarted": "Ας ξεκινήσουμε",
-  "acceptTerms": "Αποδέχομαι τους Όρους χρήσης και την Πολιτική απορρήτου",
-  "acceptTermsRequired": "Αποδεχτείτε για να συνεχίσετε",
+  "getStarted": "Ξεκινήστε",
+  "acceptTerms": "Συμφωνώ με τους Όρους Χρήσης και την Πολιτική Απορρήτου",
+  "acceptTermsRequired": "Παρακαλούμε αποδεχτείτε για να συνεχίσετε",
   "passwordStrengthTooShort": "Πολύ σύντομος",
   "passwordStrengthWeak": "Αδύναμος",
   "passwordStrengthFair": "Μέτριος",
   "passwordStrengthGood": "Καλός",
   "passwordStrengthStrong": "Ισχυρός",
-  "passwordAdvice": "Μια μεγάλη φράση που θυμάστε είναι καλύτερη από έναν σύντομο κωδικό γεμάτο σύμβολα. Αποφύγετε ό,τι χρησιμοποιείτε ήδη αλλού.",
-  "authInvalidCredentials": "Αυτό το email και ο κωδικός δεν αντιστοιχούν σε κανέναν λογαριασμό",
+  "passwordAdvice": "Μια μεγάλη φράση που θυμάστε είναι καλύτερη από μια σύντομη γεμάτη σύμβολα. Αποφύγετε οτιδήποτε χρησιμοποιείτε ήδη αλλού.",
+  "authInvalidCredentials": "Αυτό το email και ο κωδικός πρόσβασης δεν αντιστοιχούν σε λογαριασμό",
   "authEmailNotConfirmed": "Επιβεβαιώστε τη διεύθυνση email σας πριν συνδεθείτε",
   "authEmailAlreadyRegistered": "Υπάρχει ήδη λογαριασμός με αυτό το email",
-  "authWeakPassword": "Επιλέξτε μεγαλύτερο κωδικό",
+  "authWeakPassword": "Επιλέξτε έναν μεγαλύτερο κωδικό πρόσβασης",
   "authRateLimited": "Πάρα πολλές προσπάθειες. Δοκιμάστε ξανά σε λίγα λεπτά",
-  "authNetworkError": "Δεν υπάρχει σύνδεση. Ελέγξτε το δίκτυο και δοκιμάστε ξανά",
-  "authGenericError": "Κάτι πήγε στραβά. Δοκιμάστε ξανά",
+  "authNetworkError": "Δεν υπάρχει σύνδεση. Ελέγξτε το δίκτυό σας και δοκιμάστε ξανά",
+  "authGenericError": "Κάτι πήγε στραβά. Παρακαλούμε δοκιμάστε ξανά",
   "confirmEmailTitle": "Ελέγξτε το email σας",
-  "confirmEmailBody": "Στείλαμε σύνδεσμο επιβεβαίωσης στο {email}. Ανοίξτε τον για να ολοκληρώσετε τον λογαριασμό σας.",
-  "resendConfirmation": "Νέα αποστολή email επιβεβαίωσης",
+  "confirmEmailBody": "Στείλαμε έναν σύνδεσμο επιβεβαίωσης στο {email}. Ανοίξτε τον για να ολοκληρώσετε τη ρύθμιση του λογαριασμού σας.",
+  "@confirmEmailBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resendConfirmation": "Επαναποστολή email επιβεβαίωσης",
   "confirmationResent": "Το email επιβεβαίωσης στάλθηκε",
-  "forgotPasswordTitle": "Επαναφορά κωδικού",
-  "forgotPasswordSubtitle": "Δώστε το email με το οποίο εγγραφήκατε και θα σας στείλουμε σύνδεσμο για να ορίσετε νέο κωδικό.",
-  "sendResetLink": "Αποστολή συνδέσμου",
-  "resetLinkSentTitle": "Ο σύνδεσμος στάλθηκε",
-  "resetLinkSentBody": "Αν το {email} έχει λογαριασμό, ο σύνδεσμος επαναφοράς είναι καθ' οδόν.",
-  "resetLinkSentHint": "Ο σύνδεσμος λήγει σε μία ώρα. Αν δεν φτάσει, δείτε τον φάκελο ανεπιθύμητων πριν ζητήσετε νέον.",
-  "tryAnotherEmail": "Χρήση άλλου email",
-  "resetPasswordTitle": "Επιλέξτε νέο κωδικό",
-  "resetPasswordSubtitle": "Διαλέξτε κάτι που δεν έχετε ξαναχρησιμοποιήσει σε αυτόν τον λογαριασμό.",
-  "passwordChangedTitle": "Ο κωδικός ενημερώθηκε",
-  "passwordChangedBody": "Ο νέος σας κωδικός αποθηκεύτηκε. Είστε συνδεδεμένοι και έτοιμοι.",
-  "demoModeHint": "Έκδοση επίδειξης — δεν χρειάζεται λογαριασμός",
+  "forgotPasswordTitle": "Επαναφορά κωδικού πρόσβασης",
+  "forgotPasswordSubtitle": "Εισαγάγετε το email με το οποίο εγγραφήκατε και θα σας στείλουμε έναν σύνδεσμο για να επιλέξετε νέο κωδικό πρόσβασης.",
+  "sendResetLink": "Αποστολή συνδέσμου επαναφοράς",
+  "resetLinkSentTitle": "Ο σύνδεσμος επαναφοράς στάλθηκε",
+  "resetLinkSentBody": "Εάν το {email} αντιστοιχεί σε λογαριασμό, ο σύνδεσμος επαναφοράς έχει σταλεί.",
+  "@resetLinkSentBody": {
+    "description": "Deliberately conditional: confirming whether an address is registered would let anyone enumerate the app users.",
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetLinkSentHint": "Ο σύνδεσμος λήγει σε μία ώρα. Αν δεν φτάσει, ελέγξτε τον φάκελο ανεπιθύμητης αλληλογραφίας πριν ζητήσετε άλλον.",
+  "tryAnotherEmail": "Χρησιμοποιήστε άλλο email",
+  "resetPasswordTitle": "Επιλέξτε νέο κωδικό πρόσβασης",
+  "resetPasswordSubtitle": "Επιλέξτε κάτι που δεν έχετε χρησιμοποιήσει ξανά σε αυτόν τον λογαριασμό.",
+  "passwordChangedTitle": "Ο κωδικός πρόσβασης ενημερώθηκε",
+  "passwordChangedBody": "Ο νέος κωδικός πρόσβασής σας αποθηκεύτηκε. Έχετε συνδεθεί και είστε έτοιμοι.",
+  "demoModeHint": "Έκδοση επίδειξης — δεν απαιτείται λογαριασμός",
   "demoModeFill": "Συμπλήρωση",
-  "welcomeTrackTitle": "Δείτε πού πηγαίνουν τα χρήματά σας",
-  "welcomeTrackBody": "Καταγράψτε τι μπαίνει και τι βγαίνει. Το RainyPenny το μετατρέπει σε μια εικόνα που διαβάζεται πραγματικά.",
-  "welcomeBudgetTitle": "Όρια που κρατούν",
-  "welcomeBudgetBody": "Δώστε σε κάθε κομμάτι των δαπανών σας ένα μηνιαίο ανώτατο όριο και μάθετέ το πριν το ξεπεράσετε, όχι μετά.",
-  "welcomeGoalsTitle": "Αποταμιεύστε για ό,τι μετράει",
-  "welcomeGoalsBody": "Δώστε όνομα σε έναν στόχο, ορίστε ποσό και δείτε τον να γεμίζει. Ένα ταμείο για δύσκολες μέρες χτίζεται ευκολότερα όταν το βλέπετε.",
+  "welcomeTrackTitle": "Δείτε πού πάνε τα χρήματά σας",
+  "welcomeTrackBody": "Καταγράψτε τι μπαίνει και τι βγαίνει. Το RainyPenny το μετατρέπει σε μια εικόνα που μπορείτε πραγματικά να κατανοήσετε.",
+  "welcomeBudgetTitle": "Θέστε όρια που αντέχουν",
+  "welcomeBudgetBody": "Δώστε σε κάθε μέρος των εξόδων σας ένα μηνιαίο ανώτατο όριο και ενημερωθείτε πριν το ξεπεράσετε αντί για μετά.",
+  "welcomeGoalsTitle": "Αποταμιεύστε για ό,τι έχει σημασία",
+  "welcomeGoalsBody": "Ονομάστε έναν στόχο, ορίστε ένα ποσό και δείτε το να γεμίζει. Ένα ταμείο έκτακτης ανάγκης δημιουργείται ευκολότερα όταν μπορείτε να το παρακολουθείτε.",
   "welcomePrivacyTitle": "Τα χρήματά σας παραμένουν δικά σας",
-  "welcomePrivacyBody": "Τα νούμερά σας ανήκουν μόνο σε εσάς. Τίποτα δεν πωλείται και τίποτα δεν μοιράζεται με κανέναν.",
+  "welcomePrivacyBody": "Τα στοιχεία σας ανήκουν αποκλειστικά σε εσάς. Τίποτα δεν πωλείται και τίποτα δεν κοινοποιείται σε κανέναν.",
   "stepOf": "Βήμα {step} από {total}",
-  "onboardingNameTitle": "Πώς να σας λέμε;",
-  "onboardingNameBody": "Θα το χρησιμοποιούμε μόνο για να σας χαιρετάμε, πουθενά αλλού.",
-  "onboardingNameHint": "Το μικρό όνομα αρκεί. Μπορείτε να το αλλάξετε αργότερα.",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingNameTitle": "Πώς θα θέλατε να σας αποκαλούμε;",
+  "onboardingNameBody": "Θα το χρησιμοποιήσουμε μόνο για να σας χαιρετάμε και πουθενά αλλού.",
+  "onboardingNameHint": "Ένα μικρό όνομα είναι αρκετό. Μπορείτε να το αλλάξετε αργότερα.",
   "onboardingCurrencyTitle": "Ποιο νόμισμα χρησιμοποιείτε;",
-  "onboardingCurrencyBody": "Όλα τα ποσά στην εφαρμογή εμφανίζονται σε αυτό το νόμισμα. Η επιλογή δεν μετατρέπει τίποτα.",
+  "onboardingCurrencyBody": "Κάθε ποσό στην εφαρμογή εμφανίζεται σε αυτό το νόμισμα. Η επιλογή του δεν μετατρέπει τίποτα.",
   "onboardingCurrencySearch": "Αναζήτηση σε όλα τα νομίσματα",
-  "onboardingAppearanceTitle": "Κάντε την δική σας",
-  "onboardingAppearanceBody": "Διαλέξτε εμφάνιση. Όλα αλλάζουν καθώς πατάτε και μπορείτε να επιστρέψετε όποτε θέλετε.",
-  "onboardingNotificationsTitle": "Μείνετε από πάνω",
-  "onboardingNotificationsBody": "Μια διακριτική υπενθύμιση τη σωστή στιγμή είναι αυτό που το κάνει συνήθεια.",
-  "onboardingNotifyReminders": "Μια ήπια υπενθύμιση να καταγράψετε ό,τι ξοδέψατε",
+  "onboardingAppearanceTitle": "Κάντε το δικό σας",
+  "onboardingAppearanceBody": "Επιλέξτε εμφάνιση. Όλα αλλάζουν καθώς πατάτε και μπορείτε να επιστρέψετε σε αυτό ανά πάσα στιγμή.",
+  "onboardingNotificationsTitle": "Μείνετε ενημερωμένοι",
+  "onboardingNotificationsBody": "Μια διακριτική υπενθύμιση την κατάλληλη στιγμή είναι αυτό που μετατρέπει τη συνήθεια σε τρόπο ζωής.",
+  "onboardingNotifyReminders": "Μια απαλή υπενθύμιση για να καταγράφετε τι ξοδέψατε",
   "onboardingNotifyBudget": "Μια προειδοποίηση πριν εξαντληθεί ένας προϋπολογισμός",
   "onboardingNotifySummary": "Μια εβδομαδιαία σύνοψη για το πού πήγαν τα χρήματά σας",
   "onboardingNotifyEnable": "Ενεργοποίηση ειδοποιήσεων",
   "onboardingNotifyDone": "Οι ρυθμίσεις ειδοποιήσεων αποθηκεύτηκαν",
   "onboardingNotifyLater": "Μπορείτε να τα αλλάξετε όλα αυτά στις Ρυθμίσεις, όποτε θέλετε.",
-  "onboardingReadyTitle": "Όλα έτοιμα",
-  "onboardingReadyTitleNamed": "Όλα έτοιμα, {name}",
-  "onboardingReadyBody": "Η ρύθμιση ολοκληρώθηκε. Θέλετε μια γρήγορη ξενάγηση στο πώς λειτουργούν όλα;",
-  "onboardingTakeTour": "Δείξτε μου",
-  "onboardingGoToApp": "Πηγαίνετέ με στην εφαρμογή",
-  "onboardingTourLater": "Όχι τώρα; Ο οδηγός μένει στις Ρυθμίσεις, για όποτε τον θελήσετε.",
+  "onboardingReadyTitle": "Είστε έτοιμοι",
+  "onboardingReadyTitleNamed": "Είστε έτοιμοι, {name}",
+  "@onboardingReadyTitleNamed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingReadyBody": "Η ρύθμιση ολοκληρώθηκε. Θα θέλατε μια γρήγορη περιήγηση στον τρόπο λειτουργίας;",
+  "onboardingTakeTour": "Ξενάγηση",
+  "onboardingGoToApp": "Μετάβαση στην εφαρμογή",
+  "onboardingTourLater": "Όχι τώρα; Ο οδηγός παραμένει στις Ρυθμίσεις για όποτε τον χρειαστείτε.",
   "beginnersGuide": "Οδηγός για αρχάριους",
   "guideFinish": "Τέλος",
   "chapterOf": "Κεφάλαιο {number} από {total}",
-  "guideOpenScreen": "Άνοιγμα: {screen}",
-  "guideDashboardTitle": "Η αρχική σας",
-  "guideDashboardBody": "Όλα ξεκινούν εδώ. Η κάρτα στην κορυφή δείχνει τι σας απομένει· από κάτω τι μπήκε και τι βγήκε αυτή την περίοδο, και μετά οι δαπάνες, οι προϋπολογισμοί και οι στόχοι σας.",
-  "guideDashboardTip1": "Τραβήξτε την οθόνη προς τα κάτω για να ανανεωθούν όλα μαζί.",
-  "guideDashboardTip2": "Πατήστε την κάρτα εσόδων ή εξόδων για να πάτε κατευθείαν σε εκείνη τη λίστα.",
-  "guideDashboardTip3": "Οι δακτύλιοι και οι παρατηρήσεις ενημερώνονται μόλις καταγράψετε κάτι.",
+  "@chapterOf": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "guideOpenScreen": "Άνοιγμα {screen}",
+  "@guideOpenScreen": {
+    "placeholders": {
+      "screen": {
+        "type": "String"
+      }
+    }
+  },
+  "guideDashboardTitle": "Ο πίνακας ελέγχου σας",
+  "guideDashboardBody": "Όλα ξεκινούν εδώ. Η καρτέλα στην κορυφή δείχνει τι σας απομένει. Από κάτω βρίσκονται τα έσοδα και τα έξοδα της περιόδου, και στη συνέχεια τα έξοδα, οι προϋπολογισμοί και οι στόχοι σας.",
+  "guideDashboardTip1": "Σύρετε την οθόνη προς τα κάτω για να ανανεώσετε τα πάντα ταυτόχρονα.",
+  "guideDashboardTip2": "Πατήστε την καρτέλα εσόδων ή εξόδων για να μεταβείτε στη σχετική λίστα.",
+  "guideDashboardTip3": "Οι κύκλοι και τα στατιστικά ενημερώνονται τη στιγμή που καταγράφετε κάτι.",
   "guideAddTitle": "Καταγραφή χρημάτων",
-  "guideAddBody": "Το κουμπί στη μέση της μπάρας είναι η αφετηρία. Ανοίγει ένα σύντομο μενού: έξοδο, έσοδο, χρέος, προϋπολογισμός ή στόχος αποταμίευσης.",
-  "guideAddTip1": "Πατήστε το μεσαίο κουμπί για να καταγράψετε χρήματα που μπαίνουν ή βγαίνουν.",
-  "guideAddTip2": "Κρατήστε το πατημένο για να πάτε κατευθείαν σε νέο έξοδο, παρακάμπτοντας το μενού.",
-  "guideAddTip3": "Επιλέγετε πάντα κατηγορία — πάνω σε αυτήν στηρίζονται τα γραφήματα και οι προϋπολογισμοί.",
+  "guideAddBody": "Το κουμπί στη μέση της γραμμής είναι το σημείο εκκίνησης. Ανοίγει ένα σύντομο μενού: έξοδο, έσοδο, οφειλή, προϋπολογισμός ή στόχος αποταμίευσης.",
+  "guideAddTip1": "Πατήστε το κεντρικό κουμπί για να καταγράψετε έσοδα ή έξοδα.",
+  "guideAddTip2": "Κρατήστε το πατημένο για να πάτε απευθείας σε νέο έξοδο, παρακάμπτοντας το μενού.",
+  "guideAddTip3": "Επιλέγετε πάντα κατηγορία — αυτό είναι που κάνει τα γραφήματα και τους προϋπολογισμούς να λειτουργούν σωστά.",
   "guideCategoriesTitle": "Κατηγορίες",
-  "guideCategoriesBody": "Οι κατηγορίες ομαδοποιούν τις δαπάνες. Όσες έρχονται με την εφαρμογή αρκούν για τους περισσότερους, και μπορείτε να τις μετονομάσετε ή να προσθέσετε δικές σας.",
-  "guideCategoriesTip1": "Ρυθμίσεις, μετά Διαχείριση κατηγοριών, για αλλαγή ή προσθήκη.",
-  "guideCategoriesTip2": "Ό,τι μένει χωρίς κατηγορία πάει στο «Άλλα», ώστε τα γραφήματα να παραμένουν ειλικρινή.",
+  "guideCategoriesBody": "Οι κατηγορίες είναι ο τρόπος ομαδοποίησης των εξόδων. Αυτές που παρέχονται καλύπτουν τις περισσότερες ανάγκες, αλλά μπορείτε να τις μετονομάσετε ή να προσθέσετε δικές σας.",
+  "guideCategoriesTip1": "Ρυθμίσεις και μετά Διαχείριση κατηγοριών για αλλαγή ή προσθήκη.",
+  "guideCategoriesTip2": "Οτιδήποτε μείνει χωρίς κατηγορία πηγαίνει στα «Διάφορα», ώστε τα γραφήματα να παραμένουν ακριβή.",
   "guideBudgetTitle": "Προϋπολογισμοί",
-  "guideBudgetBody": "Ο προϋπολογισμός είναι ένα μηνιαίο ανώτατο όριο για μία κατηγορία. Η μπάρα γεμίζει καθώς ξοδεύετε και αλλάζει χρώμα όσο πλησιάζει, οπότε το μαθαίνετε πριν το ξεπεράσετε.",
-  "guideBudgetTip1": "Ξεκινήστε με δύο ή τρεις κατηγορίες, όχι με όλες μαζί.",
-  "guideBudgetTip2": "Βάλτε το όριο λίγο πάνω από τη συνηθισμένη σας δαπάνη και μετά σφίξτε το.",
-  "guideBudgetTip3": "Αφήστε τις ειδοποιήσεις ενεργές και η εφαρμογή θα σας προειδοποιήσει όταν ένας προϋπολογισμός λιγοστεύει.",
+  "guideBudgetBody": "Ο προϋπολογισμός είναι ένα μηνιαίο ανώτατο όριο για μία κατηγορία. Η γραμμή γεμίζει καθώς ξοδεύετε και αλλάζει χρώμα όταν πλησιάζει, ώστε να το γνωρίζετε έγκαιρα.",
+  "guideBudgetTip1": "Ξεκινήστε με δύο ή τρεις κατηγορίες, όχι με όλες ταυτόχρονα.",
+  "guideBudgetTip2": "Ορίστε το όριο ελαφρώς πάνω από όσα ξοδεύετε συνήθως και στη συνέχεια προσαρμόστε το.",
+  "guideBudgetTip3": "Αφήστε τις ειδοποιήσεις προϋπολογισμού ενεργές για να προειδοποιείστε εγκαίρως.",
   "guideSavingsTitle": "Στόχοι αποταμίευσης",
-  "guideSavingsBody": "Ονομάστε αυτό για το οποίο αποταμιεύετε, ορίστε ποσό και ημερομηνία, και η εφαρμογή υπολογίζει πόσα πρέπει να βάζετε στην άκρη κάθε μήνα.",
-  "guideSavingsTip1": "Έναν στόχο με όνομα τον κρατάτε ευκολότερα από μια αόριστη πρόθεση να αποταμιεύσετε.",
-  "guideSavingsTip2": "Αρκετοί μικροί στόχοι ολοκληρώνονται συχνότερα από έναν μεγάλο.",
-  "guideLoansTitle": "Χρέη και δάνεια",
-  "guideLoansBody": "Καταγράψτε τι χρωστάτε, πόσο κοστίζει και πότε λήγει η επόμενη δόση. Ό,τι αποπληρώνετε βρίσκεται σε μία λίστα μαζί με το υπόλοιπο.",
-  "guideLoansTip1": "Προσθέστε την ημερομηνία λήξης και οι υπενθυμίσεις θα την κυνηγούν για εσάς.",
-  "guideLoansTip2": "Ένα ληξιπρόθεσμο χρέος εμφανίζεται κόκκινο στην αρχική μέχρι να πληρωθεί.",
+  "guideSavingsBody": "Ονομάστε αυτό για το οποίο αποταμιεύετε, ορίστε στόχο και ημερομηνία, και η εφαρμογή υπολογίζει τι χρειάζεται να βάζετε στην άκρη κάθε μήνα.",
+  "guideSavingsTip1": "Ένας συγκεκριμένος στόχος επιτυγχάνεται ευκολότερα από μια αόριστη πρόθεση για αποταμίευση.",
+  "guideSavingsTip2": "Πολλοί μικροί στόχοι ολοκληρώνονται συχνότερα από έναν μεγάλο.",
+  "guideLoansTitle": "Οφειλές και δάνεια",
+  "guideLoansBody": "Καταγράψτε τι χρωστάτε, ποιο είναι το κόστος και πότε λήγει η επόμενη πληρωμή. Όλα όσα αποπληρώνετε βρίσκονται σε μία λίστα με το συνολικό υπόλοιπο.",
+  "guideLoansTip1": "Προσθέστε την ημερομηνία λήξης και οι υπενθυμίσεις πληρωμών θα φροντίσουν να μην την ξεχάσετε.",
+  "guideLoansTip2": "Μια εκπρόθεσμη οφειλή εμφανίζεται με κόκκινο χρώμα στον πίνακα ελέγχου μέχρι να εξοφληθεί.",
   "guideReportsTitle": "Αναφορές",
-  "guideReportsBody": "Η βαθύτερη ματιά: έσοδα έναντι εξόδων, δαπάνες ανά κατηγορία, πώς κράτησαν οι προϋπολογισμοί σας και τι μερίδιο του εισοδήματος κρατήσατε.",
-  "guideReportsTip1": "Εναλλάξτε εβδομάδα, μήνα και τρίμηνο στο πάνω μέρος της οθόνης.",
-  "guideReportsTip2": "Εξαγάγετε ή μοιραστείτε ένα PDF — βγαίνει στη γλώσσα σας και στη φορά γραφής της.",
+  "guideReportsBody": "Η αναλυτική εικόνα: έσοδα έναντι εξόδων, έξοδα ανά κατηγορία, απόδοση προϋπολογισμών και ποιο ποσοστό του εισοδήματός σας κρατήσατε.",
+  "guideReportsTip1": "Κάντε εναλλαγή μεταξύ εβδομάδας, μήνα και τριμήνου στο επάνω μέρος της οθόνης.",
+  "guideReportsTip2": "Εξαγάγετε ή μοιραστείτε ένα PDF — δημιουργείται στη γλώσσα και τη φορά ανάγνωσής σας.",
   "guideSettingsTitle": "Ρυθμίσεις",
-  "guideSettingsBody": "Γλώσσα, νόμισμα, χρώματα και ειδοποιήσεις βρίσκονται όλα εδώ, και τίποτα δεν κλειδώνει από την αρχική ρύθμιση — αλλάξτε ό,τι θέλετε, όποτε θέλετε.",
-  "guideSettingsTip1": "Σαράντα γλώσσες, και ολόκληρη η διάταξη καθρεφτίζεται για όσες διαβάζονται από δεξιά προς τα αριστερά.",
-  "guideSettingsTip2": "Διαλέξτε ποιες ειδοποιήσεις θέλετε και σε ποιες ώρες επιτρέπεται να φτάνουν.",
-  "guideSettingsTip3": "Οι ώρες ησυχίας κρατούν τα πάντα μέχρι το πρωί.",
+  "guideSettingsBody": "Γλώσσα, νόμισμα, χρώματα και ειδοποιήσεις βρίσκονται εδώ, και τίποτα δεν είναι κλειδωμένο — αλλάξτε τα όποτε θέλετε.",
+  "guideSettingsTip1": "Σαράντα γλώσσες, με πλήρη προσαρμογή διάταξης για γλώσσες δεξιάς-προς-αριστερά γραφής.",
+  "guideSettingsTip2": "Επιλέξτε ποιες ειδοποιήσεις θέλετε και τις ώρες που επιτρέπεται να εμφανίζονται.",
+  "guideSettingsTip3": "Οι ώρες ησυχίας συγκρατούν όλες τις ειδοποιήσεις μέχρι το πρωί.",
   "guideHabitTitle": "Κάντε το συνήθεια",
-  "guideHabitBody": "Η εφαρμογή αξίζει όσα βάζετε μέσα της. Ένα λεπτό την ημέρα είναι καλύτερο από μία ώρα τον μήνα, και μετά από δύο εβδομάδες τα νούμερα αρχίζουν να σας λένε κάτι.",
-  "guideHabitTip1": "Καταγράφετε τα έξοδα τη στιγμή που γίνονται, όχι στο τέλος της εβδομάδας.",
-  "guideHabitTip2": "Ρίξτε μια ματιά στην αρχική μία φορά την ημέρα. Δέκα δευτερόλεπτα αρκούν.",
-  "guideHabitTip3": "Αυτός ο οδηγός μένει στις Ρυθμίσεις — επιστρέψτε όποτε θέλετε.",
+  "guideHabitBody": "Η εφαρμογή είναι τόσο χρήσιμη όσο τα στοιχεία που εισάγετε. Ένα λεπτό την ημέρα αποδίδει καλύτερα από μία ώρα τον μήνα, και μετά από δύο εβδομάδες τα νούμερα αρχίζουν να δείχνουν ξεκάθαρα την εικόνα.",
+  "guideHabitTip1": "Καταγράφετε τα έξοδά σας τη στιγμή που γίνονται, όχι στο τέλος της εβδομάδας.",
+  "guideHabitTip2": "Ρίξτε μια ματιά στον πίνακα ελέγχου μία φορά την ημέρα. Δέκα δευτερόλεπτα αρκούν.",
+  "guideHabitTip3": "Αυτός ο οδηγός παραμένει στις Ρυθμίσεις — επιστρέψτε σε αυτόν όποτε θέλετε.",
   "appearance": "Εμφάνιση",
-  "themeCaption": "Φωτεινό, σκούρο, ή ό,τι κάνει το τηλέφωνό σας.",
-  "accentColor": "Χρώμα τονισμού",
-  "accentColorCaption": "Χρωματίζει τα κουμπιά, τις επισημάνσεις και τα γραφήματα.",
-  "accentSemanticsNote": "Τα χρήματα που μπαίνουν και βγαίνουν κρατούν τα δικά τους χρώματα σε κάθε θέμα, ώστε ένα νούμερο να μην αλλάζει ποτέ νόημα επειδή αλλάξατε τον τονισμό.",
-  "accentTeal": "Τιρκουάζ",
+  "themeCaption": "Φωτεινό, σκοτεινό ή σύμφωνα με τις ρυθμίσεις του τηλεφώνου σας.",
+  "accentColor": "Χρώμα έμφασης",
+  "accentColorCaption": "Χρωματίζει τα κουμπιά, τα επιλεγμένα στοιχεία και τα γραφήματα.",
+  "accentSemanticsNote": "Τα έσοδα και τα έξοδα διατηρούν τα δικά τους χρώματα σε κάθε θέμα, ώστε τα νούμερα να μη χάνουν ποτέ το νόημά τους.",
+  "accentTeal": "Πετρόλ",
   "accentGreen": "Πράσινο",
   "accentSky": "Γαλάζιο",
   "accentBlue": "Μπλε",
   "accentIndigo": "Λουλακί",
   "accentViolet": "Βιολετί",
   "accentPink": "Ροζ",
-  "accentCrimson": "Βαθύ κόκκινο",
+  "accentCrimson": "Βυσσινί",
   "accentOrange": "Πορτοκαλί",
-  "accentSlate": "Ανθρακί",
+  "accentSlate": "Γκρι του σχιστόλιθου",
   "searchLanguages": "Αναζήτηση γλωσσών",
   "suggestedLanguages": "Προτεινόμενες",
   "allLanguages": "Όλες οι γλώσσες",
   "noLanguagesFound": "Δεν βρέθηκαν γλώσσες",
-  "noLanguagesFoundMessage": "Δοκιμάστε το όνομα στα αγγλικά ή τον διγράμματο κωδικό.",
+  "noLanguagesFoundMessage": "Δοκιμάστε το όνομα στα αγγλικά ή τον κωδικό δύο γραμμάτων.",
   "rightToLeft": "Από δεξιά προς τα αριστερά",
-  "replayGuide": "Δείτε ξανά τον οδηγό",
-  "replaySetup": "Επανάληψη της αρχικής ρύθμισης",
-  "replaySetupBody": "Περάστε ξανά από τις αρχικές ερωτήσεις. Τίποτα από όσα έχετε καταγράψει δεν διαγράφεται.",
+  "replayGuide": "Επανάληψη οδηγού",
+  "replaySetup": "Επανάληψη αρχικής ρύθμισης",
+  "replaySetupBody": "Περάστε ξανά από τις αρχικές ερωτήσεις. Τίποτα από όσα έχετε καταγράψει δεν θα διαγραφεί.",
   "rateTitle": "Σας αρέσει το RainyPenny;",
-  "rateBody": "Το χρησιμοποιείτε εδώ και αρκετό καιρό. Μια αξιολόγηση παίρνει μια στιγμή και βοηθά άλλους να βρουν την εφαρμογή.",
-  "rateAction": "Αξιολόγηση εφαρμογής",
+  "rateBody": "Χρησιμοποιείτε την εφαρμογή εδώ και λίγο καιρό. Μια αξιολόγηση παίρνει μόνο μια στιγμή και βοηθά άλλους χρήστες να την ανακαλύψουν.",
+  "rateAction": "Αξιολογήστε την εφαρμογή",
   "rateLater": "Ίσως αργότερα",
   "rateNever": "Όχι, ευχαριστώ",
-  "rateThanks": "Ευχαριστούμε"
+  "rateThanks": "Σας ευχαριστούμε",
+
+  "monthlySalary": "Μηνιαίος μισθός",
+  "remainingAmount": "Απομένουν",
+  "carriedForward": "Μεταφορά υπολοίπου",
+  "carriedForwardHint": "Υπόλοιπο από τον προηγούμενο κύκλο",
+  "totalSpending": "Συνολικά έξοδα",
+  "salaryCycle": "Κύκλος μισθοδοσίας",
+  "payday": "Ημέρα πληρωμής",
+  "paydayDescription": "Η ημέρα που λαμβάνετε τον μισθό σας. Ο οικονομικός σας μήνας ξεκινά αυτήν την ημέρα και διαρκεί μέχρι την ημέρα πριν από την επόμενη πληρωμή.",
+  "paydayUpdated": "Η ημέρα πληρωμής ενημερώθηκε",
+  "paydayDayOfMonth": "{day}η ημέρα",
+  "@paydayDayOfMonth": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "paydayShortMonthNote": "Στους συντομότερους μήνες, ο κύκλος ξεκινά την τελευταία ημέρα του μήνα.",
+  "daysLeftInCycle": "{count, plural, =0{Τελευταία ημέρα του κύκλου} =1{1 ημέρα μέχρι την πληρωμή} other{{count} ημέρες μέχρι την πληρωμή}}",
+  "@daysLeftInCycle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "nextPayday": "Επόμενη ημέρα πληρωμής",
+  "spentSoFar": "Έξοδα μέχρι τώρα",
+  "dailyAllowance": "Ασφαλές ημερήσιο όριο εξόδων",
+  "overspentNotice": "Ξοδέψατε περισσότερα από όσα εισπράξατε σε αυτόν τον κύκλο.",
+  "backToThisMonth": "Επιστροφή σε αυτόν τον μήνα",
+  "cycleRangeLabel": "Κύκλος",
+  "noSalaryRecorded": "Δεν έχει καταγραφεί μισθός ακόμη",
+  "addSalaryAction": "Προσθέστε τον μισθό σας",
+  "cycleOf": "{start} – {end}",
+  "@cycleOf": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "healthExcellent": "Εξαιρετική",
+  "healthGood": "Καλή",
+  "healthFair": "Μέτρια",
+  "healthNeedsWork": "Χρειάζεται βελτίωση",
+  "healthExcellentBody": "Αποταμιεύετε ικανοποιητικά και παραμένετε εντός των προϋπολογισμών σας.",
+  "healthGoodBody": "Είστε εντός στόχου με τα έξοδά σας αυτήν την περίοδο.",
+  "healthFairBody": "Μερικοί προϋπολογισμοί πλησιάζουν στο όριο. Μικρές προσαρμογές θα βοηθήσουν.",
+  "healthNeedsWorkBody": "Τα έξοδα υπερβαίνουν τον σχεδιασμό σας. Ξεκινήστε από τη μεγαλύτερη κατηγορία εξόδων σας.",
+  "factorSavingsRate": "Ποσοστό αποταμίευσης",
+  "factorBudgetControl": "Έλεγχος προϋπολογισμού",
+  "factorDebtLoad": "Βάρος οφειλών",
+  "factorSpendingTrend": "Τάση εξόδων",
+  "factorKept": "{percent}% αποταμιεύτηκε",
+  "@factorKept": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorUsed": "{percent}% χρησιμοποιήθηκε",
+  "@factorUsed": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorOfIncome": "{percent}% του εισοδήματος",
+  "@factorOfIncome": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendUp": "Αύξηση {percent}%",
+  "@factorTrendUp": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "factorTrendDown": "Μείωση {percent}%",
+  "@factorTrendDown": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "howScoreWorks": "Πώς λειτουργεί αυτή η βαθμολογία",
+  "healthScoreExplainer": "Η βαθμολογία σας συνδυάζει τέσσερις παράγοντες: πόσο μέρος του εισοδήματός σας αποταμιεύετε, πόσο πιστά τηρείτε τους προϋπολογισμούς σας, πόσο εισόδημα διατίθεται για οφειλές και αν τα έξοδά σας αυξάνονται ή μειώνονται.",
+  "scoreWeightLabel": "{percent}% της συνολικής βαθμολογίας",
+  "@scoreWeightLabel": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "viewHealthDetails": "Δείτε την αναλυτική εικόνα",
+
+  "saveChanges": "Αποθήκευση αλλαγών",
+  "profileUpdated": "Το προφίλ ενημερώθηκε",
+  "changePhoto": "Αλλαγή φωτογραφίας",
+  "removePhoto": "Αφαίρεση φωτογραφίας",
+  "personalInformationIntro": "Το όνομα και η φωτογραφία σας εμφανίζονται σε όλη την εφαρμογή. Το email σας είναι η διεύθυνση με την οποία συνδέεστε.",
+  "nameRequired": "Εισαγάγετε το όνομά σας",
+  "emailNotEditable": "Επικοινωνήστε με την υποστήριξη για να αλλάξετε τη διεύθυνση σύνδεσης.",
+
+  "pressBackAgainToExit": "Πατήστε ξανά πίσω για έξοδο",
+
+  "categoryHousing": "Στέγαση",
+  "categoryFood": "Φαγητό & εστίαση",
+  "categoryTransport": "Μετακινήσεις",
+  "categoryShopping": "Αγορές",
+  "categoryBills": "Λογαριασμοί & υπηρεσίες",
+  "categoryEntertainment": "Ψυχαγωγία",
+  "categoryHealth": "Υγεία & ευεξία",
+  "categoryEducation": "Εκπαίδευση",
+  "categoryTravel": "Ταξίδια",
+  "categorySalary": "Μισθός",
+  "categoryFreelance": "Ελεύθερο επάγγελμα",
+  "categoryInvestments": "Επενδύσεις",
+  "categoryGift": "Δώρο",
+  "categoryOther": "Διάφορα",
+  "categoryGroceries": "Σούπερ μάρκετ",
+  "categoryDining": "Εστιατόρια",
+  "categoryCoffee": "Καφές",
+  "categoryUtilities": "Κοινόχρηστα & παροχές",
+  "categoryInternet": "Ίντερνετ",
+  "categoryPhone": "Τηλέφωνο",
+  "categoryInsurance": "Ασφάλιση",
+  "categorySubscriptions": "Συνδρομές",
+  "categoryPersonalCare": "Προσωπική φροντίδα",
+  "categoryClothing": "Ένδυση",
+  "categoryElectronics": "Ηλεκτρονικά",
+  "categoryHomeSupplies": "Είδη σπιτιού",
+  "categoryPets": "Κατοικίδια",
+  "categoryChildcare": "Φροντίδα παιδιών",
+  "categoryFamily": "Οικογένεια",
+  "categoryFitness": "Γυμναστική",
+  "categorySports": "Αθλητισμός",
+  "categoryMedicine": "Φάρμακα",
+  "categoryMedical": "Ιατρικά",
+  "categoryCharity": "Φιλανθρωπία",
+  "categoryTaxes": "Φόροι",
+  "categoryFees": "Τραπεζικά έξοδα & τέλη",
+  "categoryDebt": "Οφειλές",
+  "categorySavings": "Αποταμίευση",
+  "categoryRepairs": "Επισκευές",
+  "categoryCarMaintenance": "Συντήρηση αυτοκινήτου",
+  "categoryFuel": "Καύσιμα",
+  "categoryParking": "Στάθμευση",
+  "categoryPublicTransport": "Μέσα μαζικής μεταφοράς",
+  "categoryRent": "Ενοίκιο",
+  "categoryMortgage": "Στεγαστικό δάνειο",
+  "categoryBonus": "Μπόνους",
+  "categoryCommission": "Προμήθεια",
+  "categoryPension": "Σύνταξη",
+  "categoryInterest": "Τόκοι",
+  "categoryDividends": "Μερίσματα",
+  "categoryCashback": "Επιστροφή μετρητών",
+  "categoryRefund": "Επιστροφή χρημάτων",
+  "categoryRentalIncome": "Εισόδημα από ενοίκια",
+
+  "addCategory": "Νέα κατηγορία",
+  "filterByCategory": "Φιλτράρισμα ανά κατηγορία",
+  "allCategories": "Όλες οι κατηγορίες",
+  "clearFilters": "Εκκαθάριση φίλτρων",
+  "spentInCategory": "{category} · {amount}",
+  "@spentInCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "allTime": "Όλων των εποχών",
+  "customRange": "Προσαρμοσμένο",
+  "selectDateRange": "Επιλέξτε περίοδο",
+  "rangeApplied": "Εμφάνιση {start} – {end}",
+  "@rangeApplied": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+
+  "loans": "Δάνεια",
+  "debts": "Οφειλές",
+  "noLoansTitle": "Δεν υπάρχουν δάνεια",
+  "noLoansBody": "Δεν έχετε ενεργά δάνεια.",
+
+  "emptyHealthTitle": "Δεν υπάρχει ακόμη βαθμολογία υγείας",
+  "@emptyHealthTitle": {
+    "description": "Title shown when there is not enough data to compute a health score"
+  },
+  "emptyHealthDescription": "Χρειαζόμαστε λίγη περισσότερη οικονομική δραστηριότητα προτού υπολογίσουμε μια ακριβή βαθμολογία οικονομικής υγείας.",
+  "@emptyHealthDescription": {
+    "description": "Explainer message shown in the empty state on the financial health screen"
+  },
+  "emptyHealthAddTransactions": "Προσθέστε συναλλαγές εσόδων ή εξόδων",
+  "@emptyHealthAddTransactions": {
+    "description": "Checklist item prompting user to add transactions"
+  },
+  "emptyHealthSetBudgets": "Ορίστε τους μηνιαίους προϋπολογισμούς σας",
+  "@emptyHealthSetBudgets": {
+    "description": "Checklist item prompting user to set budgets"
+  },
+  "emptyHealthTrackLoans": "Παρακολουθήστε δάνεια ή οφειλές (προαιρετικό)",
+  "@emptyHealthTrackLoans": {
+    "description": "Checklist item prompting user to track loans"
+  },
+  "emptyHealthCardSubtitle": "Προσθέστε συναλλαγές για να υπολογίσετε τη βαθμολογία σας και να λάβετε αναλύσεις.",
+  "@emptyHealthCardSubtitle": {
+    "description": "Subtitle shown on the dashboard health card when no data is available"
+  },
+  
+  "smartBudgetSplit": "Έξυπνος καταμερισμός προϋπολογισμού",
+  "@smartBudgetSplit": {
+    "description": "Title for smart salary budget split sheet"
+  },
+  "smartBudgetSplitSubtitle": "Εισαγάγετε τον μηνιαίο μισθό σας για να υπολογίσετε προτεινόμενα όρια",
+  "@smartBudgetSplitSubtitle": {
+    "description": "Subtitle explaining how salary budget split works"
+  },
+  "monthlyNetSalary": "Μηνιαίος καθαρός μισθός",
+  "@monthlyNetSalary": {
+    "description": "Label for monthly net salary input field"
+  },
+  "categoryAllocations": "Κατανομή ανά κατηγορία",
+  "@categoryAllocations": {
+    "description": "Header for recommended category allocations list"
+  },
+  "totalBudgeted": "Σύνολο: {amount}",
+  "@totalBudgeted": {
+    "description": "Total amount budgeted across categories",
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "applyAllBudgets": "Εφαρμογή όλων των προϋπολογισμών",
+  "@applyAllBudgets": {
+    "description": "Button label to apply all recommended category limits"
+  },
+  "applyingBudgets": "Εφαρμογή προϋπολογισμών...",
+  "@applyingBudgets": {
+    "description": "Loading state label while applying budgets"
+  },
+  "budgetsCreatedSuccess": "{count, plural, =1{Δημιουργήθηκε 1 προϋπολογισμός κατηγορίας.} other{Δημιουργήθηκαν {count} προϋπολογισμοί κατηγοριών.}}",
+  "@budgetsCreatedSuccess": {
+    "description": "Success snackbar message when budgets are created",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "failedToSaveBudgets": "Αποτυχία αποθήκευσης προϋπολογισμών.",
+  "@failedToSaveBudgets": {
+    "description": "Error message when saving budgets fails"
+  },
+  "recommendedBudget": "Προτεινόμενος προϋπολογισμός"
 }

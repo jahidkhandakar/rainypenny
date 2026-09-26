@@ -1,495 +1,1419 @@
 {
-  "@@locale": "fi",
-  "appName": "RainyPenny",
-  "appTagline": "Säästöä pahan päivän varalle",
-  "navHome": "Etusivu",
-  "navTransactions": "Tapahtumat",
-  "navAdd": "Lisää",
-  "navReports": "Raportit",
-  "navProfile": "Profiili",
-  "greetingMorning": "Hyvää huomenta, {name}",
-  "greetingAfternoon": "Hyvää päivää, {name}",
-  "greetingEvening": "Hyvää iltaa, {name}",
-  "greetingSubtitle": "Näin taloutesi voi",
-  "totalBalance": "Kokonaissaldo",
-  "vsLastPeriod": "edelliseen jaksoon verrattuna",
-  "income": "Tulot",
-  "expenses": "Menot",
-  "netBalance": "Nettosaldo",
-  "lastThirtyDays": "Viimeiset 30 päivää",
-  "quickActions": "Pikatoiminnot",
-  "addIncome": "Lisää tulo",
-  "addExpense": "Lisää meno",
-  "spendingOverview": "Kulutuksen yleiskuva",
-  "recentTransactions": "Viimeisimmät tapahtumat",
-  "seeAll": "Näytä kaikki",
-  "viewAll": "Näytä kaikki",
-  "budgetProgress": "Budjettien tilanne",
-  "savingsGoals": "Säästötavoitteet",
-  "financialInsight": "Talousvinkki",
-  "financialHealth": "Talouden kunto",
-  "ofTotal": "/ {total}",
-  "searchTransactions": "Hae tapahtumia",
-  "filterAll": "Kaikki",
-  "filterIncome": "Tulot",
-  "filterExpenses": "Menot",
-  "today": "Tänään",
-  "yesterday": "Eilen",
-  "noTransactionsTitle": "Tapahtumia ei löytynyt",
-  "noTransactionsBody": "Kokeile toista hakua tai suodatinta nähdäksesi lisää merkintöjä.",
-  "transactionCount": "{count, plural, =0{Ei tapahtumia} one{{count} tapahtuma} other{{count} tapahtumaa}}",
-  "addTransaction": "Lisää tapahtuma",
-  "amount": "Summa",
-  "category": "Luokka",
-  "date": "Päivämäärä",
-  "note": "Muistiinpano",
-  "noteHint": "Muistiinpano (valinnainen)",
-  "saveIncome": "Tallenna tulo",
-  "saveExpense": "Tallenna meno",
-  "selectCategory": "Valitse luokka",
-  "transactionSaved": "Tapahtuma tallennettu",
-  "amountRequired": "Anna nollaa suurempi summa",
-  "titleRequired": "Anna tälle tapahtumalle nimi",
-  "descriptionLabel": "Kuvaus",
-  "descriptionHint": "esim. ruokaostokset",
-  "budget": "Budjetti",
-  "budgets": "Budjetit",
-  "totalBudget": "Budjetti yhteensä",
-  "spent": "Käytetty",
-  "remaining": "Jäljellä",
-  "budgetUsed": "{percent} % käytetty",
-  "onTrack": "Aikataulussa",
-  "approachingLimit": "Lähellä rajaa",
-  "overBudget": "Budjetin yli",
-  "savings": "Säästöt",
-  "yourGoals": "Tavoitteesi",
-  "saved": "Säästetty",
-  "target": "Tavoite",
-  "monthlyContribution": "Kuukaudessa",
-  "addFunds": "Lisää varoja",
-  "goalComplete": "Tavoite saavutettu",
-  "monthsToGo": "{count, plural, one{{count} kuukausi jäljellä} other{{count} kuukautta jäljellä}}",
-  "loansAndDebts": "Lainat ja velat",
-  "totalOutstanding": "Maksamatta yhteensä",
-  "monthlyPayment": "Kuukaudessa",
-  "nextPayment": "Seuraava maksu",
-  "paidOff": "{percent} % maksettu",
-  "interestRate": "Korko",
-  "upcomingPayments": "Tulevat maksut",
-  "dueInDays": "{count, plural, =0{Erääntyy tänään} one{{count} päivän päästä} other{{count} päivän päästä}}",
-  "overdue": "Erääntynyt",
-  "reports": "Raportit",
-  "week": "Viikko",
-  "month": "Kuukausi",
-  "quarter": "Neljännes",
-  "incomeVsExpenses": "Tulot ja menot",
-  "spendingByCategory": "Kulutus luokittain",
-  "budgetPerformance": "Budjettien toteuma",
-  "insights": "Havainnot",
-  "savingsRate": "Säästöaste",
-  "profile": "Profiili",
-  "account": "Tili",
-  "personalInformation": "Henkilötiedot",
-  "changePassword": "Vaihda salasana",
-  "notifications": "Ilmoitukset",
-  "preferences": "Asetukset",
-  "language": "Kieli",
-  "currency": "Valuutta",
-  "theme": "Teema",
-  "security": "Tietoturva",
-  "privacyAndSecurity": "Yksityisyys ja tietoturva",
-  "help": "Ohje",
-  "helpAndSupport": "Ohje ja tuki",
-  "termsAndConditions": "Käyttöehdot",
-  "logOut": "Kirjaudu ulos",
-  "memberSince": "Jäsen {date} alkaen",
-  "themeSystem": "Järjestelmän mukaan",
-  "themeLight": "Vaalea",
-  "themeDark": "Tumma",
-  "settings": "Asetukset",
-  "noNotificationsTitle": "Olet ajan tasalla",
-  "noNotificationsBody": "Uudet havainnot ja muistutukset ilmestyvät tähän.",
-  "cancel": "Peruuta",
-  "save": "Tallenna",
-  "done": "Valmis",
-  "retry": "Yritä uudelleen",
-  "close": "Sulje",
-  "somethingWentWrong": "Jokin meni pieleen",
-  "comingSoon": "Tulossa täysversioon",
-  "edit": "Muokkaa",
-  "delete": "Poista",
-  "undo": "Kumoa",
-  "add": "Lisää",
-  "create": "Luo",
-  "nameRequired": "Anna sille nimi",
-  "amountAboveZero": "Anna nollaa suurempi summa",
-  "editTransaction": "Muokkaa tapahtumaa",
-  "deleteTransaction": "Poistetaanko tämä tapahtuma?",
-  "deleteTransactionBody": "{title} katoaa merkinnöistäsi.",
-  "transactionDeleted": "Tapahtuma poistettu",
-  "transactionUpdated": "Tapahtuma päivitetty",
-  "newBudget": "Uusi budjetti",
-  "editBudget": "Muokkaa budjettia",
-  "budgetLimit": "Kuukausiraja",
-  "deleteBudget": "Poistetaanko tämä budjetti?",
-  "deleteBudgetBody": "Luokan {category} budjetti poistetaan. Tapahtumiisi ei kosketa.",
-  "budgetSaved": "Budjetti tallennettu",
-  "budgetDeleted": "Budjetti poistettu",
-  "allCategoriesBudgeted": "Kaikilla luokilla on jo budjetti",
-  "noBudgetsTitle": "Ei vielä budjetteja",
-  "noBudgetsBody": "Aseta jollekin luokalle kuukausiraja, niin alamme seurata sitä.",
-  "newGoal": "Uusi tavoite",
-  "editGoal": "Muokkaa tavoitetta",
-  "goalName": "Tavoitteen nimi",
-  "goalNameHint": "esim. puskurirahasto",
-  "targetAmount": "Tavoitesumma",
-  "alreadySaved": "Jo säästetty",
-  "deleteGoal": "Poistetaanko tämä tavoite?",
-  "deleteGoalBody": "{name} ja sen edistyminen poistetaan.",
-  "goalSaved": "Tavoite tallennettu",
-  "goalDeleted": "Tavoite poistettu",
-  "noGoalsTitle": "Ei vielä säästötavoitteita",
-  "noGoalsBody": "Aseta tavoite, niin RainyPenny seuraa edistymistäsi.",
-  "fundsAdded": "Varat lisätty",
-  "newDebt": "Uusi laina tai kortti",
-  "editDebt": "Muokkaa lainaa",
-  "debtName": "Nimi",
-  "debtNameHint": "esim. autolaina",
-  "lender": "Lainanantaja",
-  "lenderHint": "esim. Nordea",
-  "originalAmount": "Alkuperäinen summa",
-  "creditLimit": "Luottoraja",
-  "remainingBalance": "Jäljellä oleva velka",
-  "interestRatePercent": "Korko (%)",
-  "kindLoan": "Laina",
-  "kindCreditCard": "Luottokortti",
-  "recordPayment": "Kirjaa maksu",
-  "paymentRecorded": "Maksu kirjattu",
-  "deleteDebt": "Poistetaanko tämä velka?",
-  "deleteDebtBody": "{name} katoaa veloistasi.",
-  "debtSaved": "Tallennettu",
-  "debtDeleted": "Poistettu",
-  "noDebtsTitle": "Ei seurattavia velkoja",
-  "noDebtsBody": "Lisää laina tai luottokortti pysyäksesi kärryillä takaisinmaksusta.",
-  "insightBudgetExceededTitle": "Budjetti {subject} on ylitetty",
-  "insightBudgetExceededBody": "Olet {amount} yli {subject}-budjettisi tällä jaksolla.",
-  "insightBudgetApproachingTitle": "{subject} lähestyy rajaa",
-  "insightBudgetApproachingBody": "{subject}-budjetistasi on käytetty {percent} %, jäljellä {amount}.",
-  "insightOverIncomeTitle": "Menot ylittävät tulot",
-  "insightOverIncomeBody": "Tällä jaksolla käytit enemmän kuin ansaitsit. Käy suurimmat luokat läpi tasapainon palauttamiseksi.",
-  "insightCategoryUpTitle": "Kulutus luokassa {subject} kasvaa",
-  "insightCategoryUpBody": "Käytit {subject}-luokkaan {percent} % enemmän kuin edellisellä jaksolla.",
-  "insightTrendDownTitle": "Kulutus laskee",
-  "insightTrendDownBody": "Kokonaiskulutus on {percent} % pienempi kuin edellisellä jaksolla.",
-  "insightTrendUpTitle": "Kulutus nousee",
-  "insightTrendUpBody": "Kokonaiskulutus on {percent} % suurempi kuin edellisellä jaksolla.",
-  "insightSavingsStrongTitle": "Vahva säästöjakso",
-  "insightSavingsStrongBody": "Pidit {percent} % tuloistasi — selvästi yli {target} %:n tavoitteen.",
-  "insightSavingsLowTitle": "Säästöaste on tavoitteen alle",
-  "insightSavingsLowBody": "Tällä jaksolla pidit {percent} % tuloistasi. Tavoittele {target} %.",
-  "insightGoalNearlyTitle": "{subject} on melkein kasassa",
-  "insightGoalNearlyBody": "Enää {amount} tavoitteeseen {subject}.",
-  "insightGoalOnTrackTitle": "{subject} etenee aikataulussa",
-  "insightGoalOnTrackBody": "Summalla {amount} kuukaudessa saavutat tavoitteen {months, plural, one{{months} kuukaudessa} other{{months} kuukaudessa}}.",
-  "insightDebtOverdueTitle": "Maksu kohteeseen {subject} on myöhässä",
-  "insightDebtOverdueBody": "Maksu {amount} kohteeseen {subject} on {days, plural, one{{days} päivän} other{{days} päivän}} myöhässä.",
-  "insightDebtDueTitle": "Maksu kohteeseen {subject} lähestyy",
-  "insightDebtDueBody": "{amount} erääntyy {days, plural, =0{tänään} one{{days} päivän päästä} other{{days} päivän päästä}}.",
-  "signIn": "Kirjaudu sisään",
-  "signUp": "Luo tili",
-  "signInSubtitle": "Tervetuloa takaisin. Rahasi odottavat.",
-  "signUpSubtitle": "Muutama tieto, niin pääset alkuun.",
-  "emailLabel": "Sähköposti",
-  "emailHint": "sina@email.com",
-  "passwordLabel": "Salasana",
-  "passwordHint": "Vähintään 8 merkkiä",
-  "fullNameLabel": "Koko nimi",
-  "fullNameHint": "Anna Virtanen",
-  "forgotPassword": "Unohtuiko salasana?",
-  "resetSent": "Tarkista sähköpostisi, lähetimme palautuslinkin",
-  "noAccountYet": "Uusi täällä?",
-  "haveAccount": "Onko sinulla jo tili?",
-  "emailInvalid": "Anna kelvollinen sähköpostiosoite",
-  "passwordTooShort": "Käytä vähintään 8 merkkiä",
-  "signOutConfirm": "Kirjaudutaanko ulos?",
-  "signOutBody": "Sinun on kirjauduttava uudelleen nähdäksesi taloutesi.",
-  "dataSource": "Tietolähde",
-  "insightWeeklySummaryTitle": "Viikkosi lyhyesti",
-  "insightWeeklySummaryBody": "Katso, mihin rahat menivät tällä viikolla ja miten budjetit pitävät.",
-  "notificationSettings": "Ilmoitukset",
-  "alertsSection": "Hälytykset",
-  "budgetAlerts": "Budjettihälytykset",
-  "budgetAlertsBody": "Kun budjetti lähestyy rajaansa tai ylittää sen",
-  "paymentReminders": "Maksumuistutukset",
-  "paymentRemindersBody": "Muutama päivä ennen maksun eräpäivää",
-  "savingsUpdates": "Säästöuutiset",
-  "savingsUpdatesBody": "Edistyminen tavoitteitasi kohti",
-  "weeklySummaryLabel": "Viikkokatsaus",
-  "weeklySummaryBody": "Yhteenveto kuluneesta viikosta",
-  "scheduleSection": "Ajoitus",
-  "reminderTime": "Muistutuksen aika",
-  "quietHours": "Hiljaiset tunnit",
-  "quietHoursValue": "{start} – {end}",
-  "summaryDay": "Katsauksen päivä",
-  "permissionRequired": "Ilmoitukset ovat pois päältä",
-  "permissionRequiredBody": "Salli ilmoitukset, niin RainyPenny voi varoittaa ennen kuin budjetti tai maksu karkaa käsistä.",
-  "allowNotifications": "Salli ilmoitukset",
-  "permissionDenied": "Ilmoitukset on estetty. Voit ottaa ne käyttöön laitteen asetuksissa.",
-  "upcomingAlerts": "Ajastettu",
-  "noScheduledAlerts": "Mitään ei ole ajastettuna juuri nyt",
-  "noScheduledAlertsBody": "Hälytykset ilmestyvät tähän, kun budjettisi ja maksusi lähestyvät rajojaan.",
-  "scheduledFor": "Ajastettu: {date}",
-  "everyWeek": "Joka viikko",
-  "allNotificationsOff": "Kaikki ilmoitukset ovat pois päältä",
-  "needsAttention": "Vaatii huomiota",
-  "quickActionsTitle": "Mitä haluat tehdä?",
-  "createSection": "Kirjaa",
-  "jumpToSection": "Siirry",
-  "addLoanAction": "Lisää laina",
-  "addBudgetAction": "Lisää budjetti",
-  "addGoalAction": "Lisää tavoite",
-  "longPressHint": "Vinkki: pidä +-painiketta pohjassa kirjataksesi menon heti",
-  "searchCurrencies": "Hae valuuttoja",
-  "noCurrenciesFound": "Valuuttoja ei löytynyt",
-  "noCurrenciesFoundMessage": "Kokeile toista koodia, symbolia tai nimeä.",
-  "popularCurrencies": "Yleiset",
-  "allCurrencies": "Kaikki valuutat",
-  "totalLoanAmount": "Lainan kokonaismäärä",
-  "installmentAmount": "Erän suuruus",
-  "numberOfInstallments": "Erien määrä",
-  "paidInstallments": "Maksetut erät",
-  "remainingInstallments": "Jäljellä olevat erät",
-  "installmentsPaidOf": "{paid} / {total} maksettu",
-  "finalPayment": "Viimeinen maksu",
-  "paymentDueDate": "Eräpäivä",
-  "dueOnDayOfMonth": "Kuukauden {day}. päivä",
-  "loanStatus": "Tila",
-  "statusActive": "Aikataulussa",
-  "statusDueSoon": "Erääntyy pian",
-  "statusOverdue": "Erääntynyt",
-  "statusCompleted": "Maksettu loppuun",
-  "repaymentProgress": "Takaisinmaksun tilanne",
-  "byAmount": "Summan mukaan",
-  "byInstallments": "Erien mukaan",
-  "startDate": "Alkamispäivä",
-  "openEnded": "Ei päättymispäivää",
-  "loanDetails": "Tietoja lainasta",
-  "notSet": "Ei asetettu",
-  "insightDebtDueTodayTitle": "{subject} erääntyy tänään",
-  "insightDebtDueTodayBody": "Maksu {amount} erääntyy tänään. Yksi napautus, ja se on ajoissa.",
-  "remindMorningTitle": "Hyvää huomenta ☀️",
-  "remindMorningBody": "Aloita päivä selkeällä kuvalla rahoistasi. Onko eiliseltä jotain lisättävää?",
-  "remindNoonTitle": "Päivän puolivälin tarkistus",
-  "remindNoonBody": "Lounas, kahvi, matkalippu? Kirjaaminen vie muutaman sekunnin.",
-  "remindAfternoonTitle": "Nopea täydennys",
-  "remindAfternoonBody": "Kirjaa tähän mennessä käyttämäsi, niin päivän luvut täsmäävät.",
-  "remindEveningTitle": "Päätetään päivä",
-  "remindEveningBody": "Kaksi minuuttia nyt, niin päivän merkinnät ovat valmiit.",
-  "happyWeekendTitle": "Hyvää viikonloppua! 🎉",
-  "happyWeekendBody": "Nauti siitä — ja pidä silmällä viikonlopun menoja.",
-  "dailyReminders": "Päivittäiset menomuistutukset",
-  "dailyRemindersBody": "Ystävällisiä tönäisyjä, jotta menot pysyvät ajan tasalla",
-  "weekendGreeting": "Viikonlopputervehdys",
-  "weekendGreetingBody": "Ystävällinen tervehdys viikonlopun alkaessa",
-  "reminderTimesSection": "Muistutusten ajat",
-  "slotMorning": "Aamu",
-  "slotNoon": "Keskipäivä",
-  "slotAfternoon": "Iltapäivä",
-  "slotEvening": "Ilta",
-  "everyDay": "Joka päivä",
-  "financialReport": "Talousraportti",
-  "preparedFor": "Laadittu käyttäjälle",
-  "generatedOn": "Luotu",
-  "reportDisclaimer": "RainyPennyn laatima omien merkintöjesi pohjalta.",
-  "pageOf": "Sivu {page} / {total}",
-  "overview": "Yleiskuva",
-  "description": "Kuvaus",
-  "totalIncome": "Tulot yhteensä",
-  "totalExpenses": "Menot yhteensä",
-  "totalSaved": "Säästetty yhteensä",
-  "shareOfTotal": "Osuus",
-  "used": "Käytetty",
-  "goal": "Tavoite",
-  "targetDate": "Tavoitepäivä",
-  "progress": "Edistyminen",
-  "paidOffShort": "Maksettu",
-  "transactions": "Tapahtumat",
-  "andMoreTransactions": "{count, plural, one{ja {count} tapahtuma lisää} other{ja {count} tapahtumaa lisää}}",
-  "exportPdf": "Vie PDF",
-  "sharePdf": "Jaa raportti",
-  "preparingReport": "Raporttiasi valmistellaan…",
-  "reportReady": "Raportti on valmis",
-  "reportFailed": "Raportin luonti epäonnistui",
-  "categories": "Luokat",
-  "categoriesIntro": "Lisää omia luokkia, jotta tulot ja menot asettuvat juuri niin kuin itse ajattelet niistä.",
-  "expenseCategories": "Menoluokat",
-  "incomeCategories": "Tuloluokat",
-  "newCategory": "Uusi luokka",
-  "editCategory": "Muokkaa luokkaa",
-  "categoryName": "Nimi",
-  "categoryNameHint": "esim. lemmikit",
-  "icon": "Kuvake",
-  "categorySaved": "Luokka tallennettu",
-  "categoryDeleted": "Luokka poistettu",
-  "deleteCategory": "Poistetaanko tämä luokka?",
-  "deleteCategoryBody": "{name} katoaa luokistasi.",
-  "categoryInUse": "{count, plural, one{{count} merkintä käyttää yhä tätä luokkaa} other{{count} merkintää käyttää yhä tätä luokkaa}}",
-  "noCategoriesYet": "Täällä ei ole vielä mitään.",
-  "builtIn": "Sisäänrakennettu",
-  "manageCategories": "Hallitse luokkia",
-  "expense": "Meno",
-  "languageNote": "Arabia, urdu, persia ja heprea kääntävät koko käyttöliittymän oikealta vasemmalle, mukaan lukien kaaviot ja PDF-raportit.",
-  "next": "Seuraava",
-  "back": "Takaisin",
-  "skip": "Ohita",
-  "continueLabel": "Jatka",
-  "selected": "Valittu",
-  "passwordRequired": "Anna salasanasi",
-  "newPasswordLabel": "Uusi salasana",
-  "confirmPasswordLabel": "Vahvista salasana",
-  "passwordsDoNotMatch": "Salasanojen on oltava samat",
-  "showPassword": "Näytä salasana",
-  "hidePassword": "Piilota salasana",
-  "savePassword": "Tallenna salasana",
-  "backToSignIn": "Takaisin kirjautumiseen",
-  "alreadyHaveAccount": "Minulla on jo tili",
-  "getStarted": "Aloitetaan",
-  "acceptTerms": "Hyväksyn käyttöehdot ja tietosuojakäytännön",
-  "acceptTermsRequired": "Hyväksy jatkaaksesi",
-  "passwordStrengthTooShort": "Liian lyhyt",
-  "passwordStrengthWeak": "Heikko",
-  "passwordStrengthFair": "Kohtalainen",
-  "passwordStrengthGood": "Hyvä",
-  "passwordStrengthStrong": "Vahva",
-  "passwordAdvice": "Pitkä lause, jonka muistat, voittaa lyhyen erikoismerkkejä täynnä olevan salasanan. Vältä sellaista, jota käytät jo muualla.",
-  "authInvalidCredentials": "Tuo sähköposti ja salasana eivät vastaa mitään tiliä",
-  "authEmailNotConfirmed": "Vahvista sähköpostiosoitteesi ennen kirjautumista",
-  "authEmailAlreadyRegistered": "Tällä sähköpostilla on jo tili",
-  "authWeakPassword": "Valitse pidempi salasana",
-  "authRateLimited": "Liian monta yritystä. Yritä uudelleen muutaman minuutin kuluttua",
-  "authNetworkError": "Ei yhteyttä. Tarkista verkko ja yritä uudelleen",
-  "authGenericError": "Jokin meni pieleen. Yritä uudelleen",
-  "confirmEmailTitle": "Tarkista sähköpostisi",
-  "confirmEmailBody": "Lähetimme vahvistuslinkin osoitteeseen {email}. Avaa se viimeistelläksesi tilin.",
-  "resendConfirmation": "Lähetä vahvistus uudelleen",
-  "confirmationResent": "Vahvistusviesti lähetetty",
-  "forgotPasswordTitle": "Palauta salasanasi",
-  "forgotPasswordSubtitle": "Anna sähköpostiosoite, jolla rekisteröidyit, niin lähetämme linkin uuden salasanan valitsemiseen.",
-  "sendResetLink": "Lähetä linkki",
-  "resetLinkSentTitle": "Linkki lähetetty",
-  "resetLinkSentBody": "Jos osoitteella {email} on tili, palautuslinkki on matkalla.",
-  "resetLinkSentHint": "Linkki vanhenee tunnin kuluttua. Jos se ei saavu, tarkista roskaposti ennen kuin pyydät uutta.",
-  "tryAnotherEmail": "Käytä toista osoitetta",
-  "resetPasswordTitle": "Valitse uusi salasana",
-  "resetPasswordSubtitle": "Valitse jotain, jota et ole käyttänyt tällä tilillä aiemmin.",
-  "passwordChangedTitle": "Salasana päivitetty",
-  "passwordChangedBody": "Uusi salasanasi on tallennettu. Olet kirjautuneena ja valmiina.",
-  "demoModeHint": "Demoversio — tiliä ei tarvita",
-  "demoModeFill": "Täytä",
-  "welcomeTrackTitle": "Näe, mihin rahasi menevät",
-  "welcomeTrackBody": "Kirjaa, mitä tulee sisään ja mitä menee ulos. RainyPenny tekee siitä kuvan, jota oikeasti pystyy lukemaan.",
-  "welcomeBudgetTitle": "Rajoja, jotka pitävät",
-  "welcomeBudgetBody": "Anna jokaiselle kulutuksen osalle kuukausikatto ja saat tiedon ennen kuin ylität sen — et jälkikäteen.",
-  "welcomeGoalsTitle": "Säästä siihen, mikä on tärkeää",
-  "welcomeGoalsBody": "Anna tavoitteelle nimi, aseta summa ja katso sen täyttyvän. Puskuria on helpompi kerätä, kun sen näkee.",
-  "welcomePrivacyTitle": "Rahasi pysyvät sinun",
-  "welcomePrivacyBody": "Lukusi kuuluvat vain sinulle. Mitään ei myydä eikä jaeta kenellekään.",
-  "stepOf": "Vaihe {step} / {total}",
-  "onboardingNameTitle": "Miksi sinua kutsutaan?",
-  "onboardingNameBody": "Käytämme sitä vain tervehtimiseen, emme missään muualla.",
-  "onboardingNameHint": "Etunimi riittää hyvin. Voit muuttaa sen myöhemmin.",
-  "onboardingCurrencyTitle": "Mitä valuuttaa käytät?",
-  "onboardingCurrencyBody": "Kaikki summat sovelluksessa näytetään tässä valuutassa. Sen valitseminen ei muunna mitään.",
-  "onboardingCurrencySearch": "Hae kaikista valuutoista",
-  "onboardingAppearanceTitle": "Tee siitä omasi",
-  "onboardingAppearanceBody": "Valitse ulkoasu. Kaikki muuttuu napauttaessasi, ja voit palata milloin tahansa.",
-  "onboardingNotificationsTitle": "Pysy kärryillä",
-  "onboardingNotificationsBody": "Hiljainen tönäisy oikeaan aikaan on se, mikä tekee tästä tavan.",
-  "onboardingNotifyReminders": "Ystävällinen muistutus kirjata, mitä olet käyttänyt",
-  "onboardingNotifyBudget": "Ennakkovaroitus ennen kuin budjetti loppuu",
-  "onboardingNotifySummary": "Viikoittainen katsaus siihen, mihin rahat menivät",
-  "onboardingNotifyEnable": "Ota ilmoitukset käyttöön",
-  "onboardingNotifyDone": "Ilmoitusasetukset tallennettu",
-  "onboardingNotifyLater": "Kaikkea tätä voit muuttaa Asetuksissa milloin tahansa.",
-  "onboardingReadyTitle": "Kaikki on valmista",
-  "onboardingReadyTitleNamed": "Kaikki on valmista, {name}",
-  "onboardingReadyBody": "Asetukset ovat kunnossa. Haluatko nopean kierroksen siitä, miten kaikki toimii?",
-  "onboardingTakeTour": "Näytä minulle",
-  "onboardingGoToApp": "Vie minut sovellukseen",
-  "onboardingTourLater": "Ei nyt? Opas jää Asetuksiin, kun tarvitset sitä.",
-  "beginnersGuide": "Aloittelijan opas",
-  "guideFinish": "Lopeta",
-  "chapterOf": "Luku {number} / {total}",
-  "guideOpenScreen": "Avaa {screen}",
-  "guideDashboardTitle": "Aloitusnäyttösi",
-  "guideDashboardBody": "Kaikki alkaa täältä. Ylimmäinen kortti näyttää, mitä sinulla on jäljellä; sen alla mitä on tullut sisään ja mennyt ulos tällä jaksolla, ja sitten kulutuksesi, budjettisi ja tavoitteesi.",
-  "guideDashboardTip1": "Vedä näyttöä alaspäin päivittääksesi kaiken kerralla.",
-  "guideDashboardTip2": "Napauta tulo- tai menokorttia siirtyäksesi suoraan siihen listaan.",
-  "guideDashboardTip3": "Renkaat ja havainnot päivittyvät samalla hetkellä, kun kirjaat jotain.",
-  "guideAddTitle": "Rahan kirjaaminen",
-  "guideAddBody": "Rivin keskellä oleva painike on paikka, josta kaikki alkaa. Se avaa lyhyen valikon: meno, tulo, velka, budjetti tai säästötavoite.",
-  "guideAddTip1": "Napauta keskimmäistä painiketta kirjataksesi rahaa sisään tai ulos.",
-  "guideAddTip2": "Pidä sitä pohjassa siirtyäksesi suoraan uuteen menoon ja ohittaaksesi valikon.",
-  "guideAddTip3": "Valitse aina luokka — se saa kaaviot ja budjetit toimimaan.",
-  "guideCategoriesTitle": "Luokat",
-  "guideCategoriesBody": "Luokat ovat tapa, jolla kulutus ryhmitellään. Mukana tulevat riittävät useimmille, ja voit nimetä ne uudelleen tai lisätä omia.",
-  "guideCategoriesTip1": "Asetukset ja sitten Hallitse luokkia muuttaaksesi tai lisätäksesi.",
-  "guideCategoriesTip2": "Kaikki ilman luokkaa menee kohtaan ”Muut”, jotta kaaviot pysyvät rehellisinä.",
-  "guideBudgetTitle": "Budjetit",
-  "guideBudgetBody": "Budjetti on yhden luokan kuukausikatto. Palkki täyttyy kuluttaessasi ja vaihtaa väriä rajan lähestyessä, joten saat tiedon ennen kuin ylität sen.",
-  "guideBudgetTip1": "Aloita kahdesta tai kolmesta luokasta, älä kaikista kerralla.",
-  "guideBudgetTip2": "Aseta raja hieman yli sen, mitä yleensä kulutat, ja kiristä sitä sitten vähitellen.",
-  "guideBudgetTip3": "Jätä budjettihälytykset päälle, niin sovellus kertoo, kun budjetti alkaa loppua.",
-  "guideSavingsTitle": "Säästötavoitteet",
-  "guideSavingsBody": "Anna nimi sille, mihin säästät, aseta summa ja päivä, niin sovellus laskee, kuinka paljon sinun on pantava sivuun kuukausittain.",
-  "guideSavingsTip1": "Nimetystä tavoitteesta on helpompi pitää kiinni kuin epämääräisestä aikeesta säästää.",
-  "guideSavingsTip2": "Useampi pieni tavoite tulee valmiiksi useammin kuin yksi suuri.",
-  "guideLoansTitle": "Velat ja lainat",
-  "guideLoansBody": "Kirjaa, mitä olet velkaa, mitä se maksaa ja milloin seuraava maksu erääntyy. Kaikki maksamasi näkyy listana yhdessä jäljellä olevan kanssa.",
-  "guideLoansTip1": "Syötä eräpäivä, niin maksumuistutukset pitävät siitä huolen puolestasi.",
-  "guideLoansTip2": "Erääntynyt velka palaa punaisena aloitusnäytöllä, kunnes se on maksettu.",
-  "guideReportsTitle": "Raportit",
-  "guideReportsBody": "Syvempi kuva: tulot vastaan menot, kulutus luokittain, miten budjetit pitivät ja kuinka suuren osan tuloista säilytit.",
-  "guideReportsTip1": "Vaihda viikon, kuukauden ja neljänneksen välillä näytön yläreunassa.",
-  "guideReportsTip2": "Vie tai jaa PDF — se tulee ulos omalla kielelläsi ja sen lukusuunnassa.",
-  "guideSettingsTitle": "Asetukset",
-  "guideSettingsBody": "Kieli, valuutta, värit ja hälytykset ovat kaikki täällä, eikä mikään niistä lukitu ensimmäisestä valinnasta — muuta mitä haluat, milloin haluat.",
-  "guideSettingsTip1": "Neljäkymmentä kieltä, ja koko asettelu peilataan niille, joita luetaan oikealta vasemmalle.",
-  "guideSettingsTip2": "Valitse, mitkä hälytykset haluat ja mihin aikaan ne saavat saapua.",
-  "guideSettingsTip3": "Hiljaiset tunnit pidättelevät kaiken aamuun asti.",
-  "guideHabitTitle": "Näin siitä tulee tapa",
-  "guideHabitBody": "Sovellus on vain niin hyvä kuin se, mitä siihen syötät. Minuutti päivässä voittaa tunnin kuukaudessa, ja kahden viikon jälkeen luvut alkavat kertoa jotain.",
-  "guideHabitTip1": "Kirjaa menot silloin kun ne tapahtuvat, älä viikon lopussa.",
-  "guideHabitTip2": "Vilkaise aloitusnäyttöä kerran päivässä. Kymmenen sekuntia riittää.",
-  "guideHabitTip3": "Tämä opas jää Asetuksiin — palaa siihen milloin tahansa.",
-  "appearance": "Ulkoasu",
-  "themeCaption": "Vaalea, tumma tai puhelimen mukaan.",
-  "accentColor": "Korostusväri",
-  "accentColorCaption": "Värittää painikkeet, valinnat ja kaaviot.",
-  "accentSemanticsNote": "Sisään tuleva ja ulos menevä raha säilyttävät omat värinsä kaikissa teemoissa, joten luku ei koskaan vaihda merkitystään siksi, että vaihdoit korostusväriä.",
-  "accentTeal": "Sinivihreä",
-  "accentGreen": "Vihreä",
-  "accentSky": "Taivaansininen",
-  "accentBlue": "Sininen",
-  "accentIndigo": "Indigo",
-  "accentViolet": "Violetti",
-  "accentPink": "Pinkki",
-  "accentCrimson": "Karmiini",
-  "accentOrange": "Oranssi",
-  "accentSlate": "Liuskeenharmaa",
-  "searchLanguages": "Hae kieliä",
-  "suggestedLanguages": "Ehdotetut",
-  "allLanguages": "Kaikki kielet",
-  "noLanguagesFound": "Kieliä ei löytynyt",
-  "noLanguagesFoundMessage": "Kokeile nimeä englanniksi tai sen kaksikirjaimista koodia.",
-  "rightToLeft": "Oikealta vasemmalle",
-  "replayGuide": "Katso opas uudelleen",
-  "replaySetup": "Tee käyttöönotto uudelleen",
-  "replaySetupBody": "Käy aloituskysymykset läpi vielä kerran. Mitään kirjaamaasi ei poisteta.",
-  "rateTitle": "Pidätkö RainyPennystä?",
-  "rateBody": "Olet jaksanut tämän parissa jo jonkin aikaa. Arvion antaminen vie hetken ja auttaa muita löytämään sovelluksen.",
-  "rateAction": "Arvioi sovellus",
-  "rateLater": "Ehkä myöhemmin",
-  "rateNever": "Ei kiitos",
-  "rateThanks": "Kiitos"
+"@@locale": "fi",
+"appName": "RainyPenny",
+"appTagline": "Säästä pahan päivän varalle",
+"navHome": "Etusivu",
+"navTransactions": "Tapahtumat",
+"navAdd": "Lisää",
+"navReports": "Raportit",
+"navProfile": "Profiili",
+"greetingMorning": "Hyvää huomenta, {name}",
+"@greetingMorning": {
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"greetingAfternoon": "Hyvää iltapäivää, {name}",
+"@greetingAfternoon": {
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"greetingEvening": "Hyvää iltaa, {name}",
+"@greetingEvening": {
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"greetingSubtitle": "Tässä on taloutesi yhteenveto",
+"totalBalance": "Kokonaissaldo",
+"vsLastPeriod": "edelliseen jaksoon verrattuna",
+"income": "Tulot",
+"expenses": "Menot",
+"netBalance": "Nettosaldo",
+"lastThirtyDays": "Viimeiset 30 päivää",
+"quickActions": "Pikatoiminnot",
+"addIncome": "Lisää tulo",
+"addExpense": "Lisää meno",
+"spendingOverview": "Menojen yleiskatsaus",
+"recentTransactions": "Viimeisimmät tapahtumat",
+"seeAll": "Näytä kaikki",
+"viewAll": "Näytä kaikki",
+"budgetProgress": "Budjetin edistyminen",
+"savingsGoals": "Säästötavoitteet",
+"financialInsight": "Taloudellinen oivallus",
+"financialHealth": "Taloudellinen hyvinvointi",
+"ofTotal": "{total}:sta",
+"@ofTotal": {
+"placeholders": {
+"total": {
+"type": "String"
+}
+}
+},
+"searchTransactions": "Hae tapahtumia",
+"filterAll": "Kaikki",
+"filterIncome": "Tulot",
+"filterExpenses": "Menot",
+"today": "Tänään",
+"yesterday": "Eilen",
+"noTransactionsTitle": "Tapahtumia ei löytynyt",
+"noTransactionsBody": "Kokeile toista hakua tai suodatinta nähdäksesi lisää tapahtumia.",
+"transactionCount": "{count, plural, =0{Ei tapahtumia} =1{1 tapahtuma} other{{count} tapahtumaa}}",
+"@transactionCount": {
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"addTransaction": "Lisää tapahtuma",
+"amount": "Summa",
+"category": "Kategoria",
+"date": "Päivämäärä",
+"note": "Muistiinpano",
+"noteHint": "Valinnainen muistiinpano",
+"saveIncome": "Tallenna tulo",
+"saveExpense": "Tallenna meno",
+"selectCategory": "Valitse kategoria",
+"transactionSaved": "Tapahtuma tallennettu",
+"amountRequired": "Anna nollaa suurempi summa",
+"titleRequired": "Anna tapahtumalle nimi",
+"descriptionLabel": "Kuvaus",
+"descriptionHint": "esim. Ruokaostokset",
+"budget": "Budjetti",
+"budgets": "Budjetit",
+"totalBudget": "Budjetit yhteensä",
+"spent": "Käytetty",
+"remaining": "Jäljellä",
+"budgetUsed": "{percent} % käytetty",
+"@budgetUsed": {
+"placeholders": {
+"percent": {
+"type": "int"
+}
+}
+},
+"onTrack": "Suunnitelman mukainen",
+"approachingLimit": "Lähestyy rajaa",
+"overBudget": "Budjetti ylitetty",
+"savings": "Säästöt",
+"yourGoals": "Tavoitteesi",
+"saved": "Säästetty",
+"target": "Tavoite",
+"monthlyContribution": "Kuukausittain",
+"addFunds": "Lisää varoja",
+"goalComplete": "Tavoite saavutettu",
+"monthsToGo": "{count, plural, =1{1 kuukausi jäljellä} other{{count} kuukautta jäljellä}}",
+"@monthsToGo": {
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"loansAndDebts": "Lainat ja velat",
+"totalOutstanding": "Velkaa jäljellä",
+"monthlyPayment": "Kuukausierä",
+"nextPayment": "Seuraava maksu",
+"paidOff": "{percent} % maksettu",
+"@paidOff": {
+"placeholders": {
+"percent": {
+"type": "int"
+}
+}
+},
+"interestRate": "Korko",
+"upcomingPayments": "Tulevat maksut",
+"dueInDays": "{count, plural, =0{Erääntyy tänään} =1{Erääntyy huomenna} other{Erääntyy {count} päivän kuluttua}}",
+"@dueInDays": {
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"overdue": "Myöhässä",
+"reports": "Raportit",
+"week": "Viikko",
+"month": "Kuukausi",
+"quarter": "Neljännesvuosi",
+"incomeVsExpenses": "Tulot vs. menot",
+"spendingByCategory": "Menot kategorioittain",
+"budgetPerformance": "Budjettien toteutuminen",
+"insights": "Oivallukset",
+"savingsRate": "Säästöaste",
+"profile": "Profiili",
+"account": "Tili",
+"personalInformation": "Henkilötiedot",
+"changePassword": "Vaihda salasana",
+"notifications": "Ilmoitukset",
+"preferences": "Asetukset",
+"language": "Kieli",
+"currency": "Valuutta",
+"theme": "Teema",
+"security": "Turvallisuus",
+"privacyAndSecurity": "Tietosuoja ja turvallisuus",
+"help": "Ohje",
+"helpAndSupport": "Ohje ja tuki",
+"termsAndConditions": "Käyttöehdot",
+"logOut": "Kirjaudu ulos",
+"memberSince": "Jäsen alkaen {date}",
+"@memberSince": {
+"placeholders": {
+"date": {
+"type": "String"
+}
+}
+},
+"themeSystem": "Järjestelmän oletus",
+"themeLight": "Vaalea",
+"themeDark": "Tumma",
+"settings": "Asetukset",
+"noNotificationsTitle": "Kaikki on ajan tasalla",
+"noNotificationsBody": "Uudet oivallukset ja muistutukset näkyvät täällä.",
+"cancel": "Peruuta",
+"save": "Tallenna",
+"done": "Valmis",
+"retry": "Yritä uudelleen",
+"close": "Sulje",
+"somethingWentWrong": "Jokin meni pieleen",
+"comingSoon": "Tulossa täydessä julkaisussa",
+"edit": "Muokkaa",
+"delete": "Poista",
+"undo": "Kumoa",
+"add": "Lisää",
+"create": "Luo",
+"nameRequired": "Anna nimi",
+"amountAboveZero": "Anna nollaa suurempi summa",
+"editTransaction": "Muokkaa tapahtumaa",
+"deleteTransaction": "Poistetaanko tapahtuma?",
+"deleteTransactionBody": "{title} poistetaan tapahtumaluettelostasi.",
+"@deleteTransactionBody": {
+"placeholders": {
+"title": {
+"type": "String"
+}
+}
+},
+"transactionDeleted": "Tapahtuma poistettu",
+"transactionUpdated": "Tapahtuma päivitetty",
+"newBudget": "Uusi budjetti",
+"editBudget": "Muokkaa budjettia",
+"budgetLimit": "Kuukausiraja",
+"deleteBudget": "Poistetaanko budjetti?",
+"deleteBudgetBody": "Kategorian {category} budjetti poistetaan. Tapahtumiisi tämä ei vaikuta.",
+"@deleteBudgetBody": {
+"placeholders": {
+"category": {
+"type": "String"
+}
+}
+},
+"budgetSaved": "Budjetti tallennettu",
+"budgetDeleted": "Budjetti poistettu",
+"allCategoriesBudgeted": "Kaikilla kategorioilla on jo budjetti",
+"noBudgetsTitle": "Ei budjetteja vielä",
+"noBudgetsBody": "Aseta kategorialle kuukausiraja seurataksesi sen käyttöä.",
+"newGoal": "Uusi tavoite",
+"editGoal": "Muokkaa tavoitetta",
+"goalName": "Tavoitteen nimi",
+"goalNameHint": "esim. Hätärahasto",
+"targetAmount": "Tavoitesumma",
+"alreadySaved": "Jo säästetty",
+"deleteGoal": "Poistetaanko tavoite?",
+"deleteGoalBody": "{name} ja sen edistyminen poistetaan.",
+"@deleteGoalBody": {
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"goalSaved": "Tavoite tallennettu",
+"goalDeleted": "Tavoite poistettu",
+"noGoalsTitle": "Ei säästötavoitteita vielä",
+"noGoalsBody": "Aseta tavoite ja RainyPenny seuraa edistymistäsi.",
+"fundsAdded": "Varat lisätty",
+"newDebt": "Uusi laina tai kortti",
+"editDebt": "Muokkaa lainaa",
+"debtName": "Nimi",
+"debtNameHint": "esim. Autolaina",
+"lender": "Lainanantaja",
+"lenderHint": "esim. Meridian Bank",
+"originalAmount": "Alkuperäinen summa",
+"creditLimit": "Luottoraja",
+"remainingBalance": "Jäljellä oleva saldo",
+"interestRatePercent": "Korkoprosentti (%)",
+"kindLoan": "Laina",
+"kindCreditCard": "Luottokortti",
+"recordPayment": "Kirjaa maksu",
+"paymentRecorded": "Maksu kirjattu",
+"deleteDebt": "Poistetaanko tämä velka?",
+"deleteDebtBody": "{name} poistetaan veloistasi.",
+"@deleteDebtBody": {
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"debtSaved": "Tallennettu",
+"debtDeleted": "Poistettu",
+"noDebtsTitle": "Ei seurattavia velkoja",
+"noDebtsBody": "Lisää laina tai luottokortti seurataksesi takaisinmaksuja.",
+"insightBudgetExceededTitle": "{subject}-budjetti ylitetty",
+"@insightBudgetExceededTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightBudgetExceededBody": "Olet {amount} yli kategorian {subject} budjetin tällä jaksolla.",
+"@insightBudgetExceededBody": {
+"placeholders": {
+"amount": {
+"type": "String"
+},
+"subject": {
+"type": "String"
+}
+}
+},
+"insightBudgetApproachingTitle": "{subject} lähestyy budjettirajaansa",
+"@insightBudgetApproachingTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightBudgetApproachingBody": "Kategorian {subject} budjetista on käytetty {percent} %, ja jäljellä on {amount}.",
+"@insightBudgetApproachingBody": {
+"placeholders": {
+"subject": {
+"type": "String"
+},
+"percent": {
+"type": "int"
+},
+"amount": {
+"type": "String"
+}
+}
+},
+"insightOverIncomeTitle": "Menot ylittävät tulot",
+"insightOverIncomeBody": "Olet käyttänyt tällä jaksolla enemmän kuin ansainnut. Tarkista suurimmat menokategoriat saadaksesi tilanteen jälleen tasapainoon.",
+"insightCategoryUpTitle": "{subject}-menot ovat kasvaneet",
+"@insightCategoryUpTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightCategoryUpBody": "Kategorian {subject} menot ovat {percent} % suuremmat kuin edellisellä jaksolla.",
+"@insightCategoryUpBody": {
+"placeholders": {
+"subject": {
+"type": "String"
+},
+"percent": {
+"type": "int"
+}
+}
+},
+"insightTrendDownTitle": "Menot ovat laskusuunnassa",
+"insightTrendDownBody": "Kokonaismenot ovat {percent} % pienemmät kuin edellisellä jaksolla.",
+"@insightTrendDownBody": {
+"placeholders": {
+"percent": {
+"type": "int"
+}
+}
+},
+"insightTrendUpTitle": "Menot ovat noususuunnassa",
+"insightTrendUpBody": "Kokonaismenot ovat {percent} % suuremmat kuin edellisellä jaksolla.",
+"@insightTrendUpBody": {
+"placeholders": {
+"percent": {
+"type": "int"
+}
+}
+},
+"insightSavingsStrongTitle": "Hyvät säästöt tällä jaksolla",
+"insightSavingsStrongBody": "Säästit {percent} % tuloistasi – selvästi yli {target} % tavoitteen.",
+"@insightSavingsStrongBody": {
+"placeholders": {
+"percent": {
+"type": "int"
+},
+"target": {
+"type": "int"
+}
+}
+},
+"insightSavingsLowTitle": "Säästöaste on tavoitteen alapuolella",
+"insightSavingsLowBody": "Säästit tällä jaksolla {percent} % tuloistasi. Tavoittele {target} %:a.",
+"@insightSavingsLowBody": {
+"placeholders": {
+"percent": {
+"type": "int"
+},
+"target": {
+"type": "int"
+}
+}
+},
+"insightGoalNearlyTitle": "{subject} on lähes rahoitettu",
+"@insightGoalNearlyTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightGoalNearlyBody": "Tarvitset enää {amount} saavuttaaksesi tavoitteen {subject}.",
+"@insightGoalNearlyBody": {
+"placeholders": {
+"amount": {
+"type": "String"
+},
+"subject": {
+"type": "String"
+}
+}
+},
+"insightGoalOnTrackTitle": "Tavoite {subject} etenee suunnitelman mukaan",
+"@insightGoalOnTrackTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightGoalOnTrackBody": "Kun säästät {amount} kuukaudessa, saavutat tämän tavoitteen {months, plural, =1{1 kuukaudessa} other{{months} kuukaudessa}}.",
+"@insightGoalOnTrackBody": {
+"placeholders": {
+"amount": {
+"type": "String"
+},
+"months": {
+"type": "int"
+}
+}
+},
+"insightDebtOverdueTitle": "{subject}-maksu on myöhässä",
+"@insightDebtOverdueTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightDebtOverdueBody": "Kategorian {subject} {amount} maksu on myöhässä {days, plural, =1{1 päivän} other{{days} päivää}}.",
+"@insightDebtOverdueBody": {
+"placeholders": {
+"subject": {
+"type": "String"
+},
+"amount": {
+"type": "String"
+},
+"days": {
+"type": "int"
+}
+}
+},
+"insightDebtDueTitle": "{subject}-maksu erääntyy pian",
+"@insightDebtDueTitle": {
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightDebtDueBody": "{amount} erääntyy {days, plural, =0{tänään} =1{huomenna} other{{days} päivän kuluttua}}.",
+"@insightDebtDueBody": {
+"placeholders": {
+"amount": {
+"type": "String"
+},
+"days": {
+"type": "int"
+}
+}
+},
+"signIn": "Kirjaudu sisään",
+"signUp": "Luo tili",
+"signInSubtitle": "Tervetuloa takaisin. Rahasi odottavat.",
+"signUpSubtitle": "Muutama tieto ja olet valmis.",
+"emailLabel": "Sähköposti",
+"emailHint": "sinä@sähköposti.fi",
+"passwordLabel": "Salasana",
+"passwordHint": "Vähintään 8 merkkiä",
+"fullNameLabel": "Koko nimi",
+"fullNameHint": "Matti Meikäläinen",
+"forgotPassword": "Unohditko salasanan?",
+"resetSent": "Tarkista sähköpostisi salasanan palautuslinkin varalta",
+"noAccountYet": "Uusi täällä?",
+"haveAccount": "Onko sinulla jo tili?",
+"emailInvalid": "Anna kelvollinen sähköpostiosoite",
+"passwordTooShort": "Käytä vähintään 8 merkkiä",
+"signOutConfirm": "Kirjaudutaanko ulos?",
+"signOutBody": "Sinun on kirjauduttava uudelleen nähdäksesi taloustietosi.",
+"dataSource": "Tietolähde",
+"insightWeeklySummaryTitle": "Viikkosi katsaus",
+"insightWeeklySummaryBody": "Katso, mihin rahasi menivät tällä viikolla ja miten budjettisi pitivät.",
+"notificationSettings": "Ilmoitukset",
+"alertsSection": "Hälytykset",
+"budgetAlerts": "Budjettihälytykset",
+"budgetAlertsBody": "Kun budjetti lähestyy tai ylittää rajansa",
+"paymentReminders": "Maksumuistutukset",
+"paymentRemindersBody": "Muutama päivä ennen maksun erääntymistä",
+"savingsUpdates": "Säästöpäivitykset",
+"savingsUpdatesBody": "Tavoitteidesi edistyminen",
+"weeklySummaryLabel": "Viikkoyhteenveto",
+"weeklySummaryBody": "Yhteenveto kuluneesta viikosta",
+"scheduleSection": "Ajankohta",
+"reminderTime": "Muistutusaika",
+"quietHours": "Hiljaiset tunnit",
+"quietHoursValue": "{start} – {end}",
+"@quietHoursValue": {
+"placeholders": {
+"start": {
+"type": "String"
+},
+"end": {
+"type": "String"
+}
+}
+},
+"summaryDay": "Yhteenvetopäivä",
+"permissionRequired": "Ilmoitukset ovat pois käytöstä",
+"permissionRequiredBody": "Salli ilmoitukset, jotta RainyPenny voi varoittaa sinua ennen kuin budjetti tai maksu karkaa käsistä.",
+"allowNotifications": "Salli ilmoitukset",
+"permissionDenied": "Ilmoitukset on estetty. Voit ottaa ne käyttöön laitteen asetuksista.",
+"upcomingAlerts": "Ajastetut",
+"noScheduledAlerts": "Mitään ei ole ajastettu",
+"noScheduledAlertsBody": "Hälytykset näkyvät täällä, kun budjetit ja maksut lähestyvät rajojaan tai eräpäiviään.",
+"scheduledFor": "Ajastettu: {date}",
+"@scheduledFor": {
+"placeholders": {
+"date": {
+"type": "String"
+}
+}
+},
+"everyWeek": "Joka viikko",
+"allNotificationsOff": "Kaikki ilmoitukset ovat pois käytöstä",
+"needsAttention": "Vaatii huomiota",
+"quickActionsTitle": "Mitä haluaisit tehdä?",
+"createSection": "Kirjaa",
+"jumpToSection": "Siirry",
+"addLoanAction": "Lisää laina",
+"addBudgetAction": "Lisää budjetti",
+"addGoalAction": "Lisää tavoite",
+"longPressHint": "Vinkki: pidä +-painiketta painettuna kirjataksesi menon heti",
+"searchCurrencies": "Hae valuuttoja",
+"@searchCurrencies": {
+"description": "Valuuttavalitsin: valuuttojen haku"
+},
+"noCurrenciesFound": "Valuuttoja ei löytynyt",
+"@noCurrenciesFound": {
+"description": "Valuuttavalitsin: valuuttoja ei löytynyt"
+},
+"noCurrenciesFoundMessage": "Kokeile toista koodia, symbolia tai nimeä.",
+"@noCurrenciesFoundMessage": {
+"description": "Valuuttavalitsin: ei hakutuloksia"
+},
+"popularCurrencies": "Suositut",
+"@popularCurrencies": {
+"description": "Valuuttavalitsin: suositut valuutat"
+},
+"allCurrencies": "Kaikki valuutat",
+"@allCurrencies": {
+"description": "Valuuttavalitsin: kaikki valuutat"
+},
+"totalLoanAmount": "Lainan kokonaismäärä",
+"@totalLoanAmount": {
+"description": "Lainan tiedot: alun perin lainattu summa"
+},
+"installmentAmount": "Maksuerän määrä",
+"@installmentAmount": {
+"description": "Lainan tiedot: kussakin jaksossa erääntyvä summa"
+},
+"numberOfInstallments": "Maksuerien määrä",
+"@numberOfInstallments": {
+"description": "Lainan muokkaus: takaisinmaksusuunnitelman pituus"
+},
+"paidInstallments": "Maksetut maksuerät",
+"@paidInstallments": {
+"description": "Lainan tiedot: jo maksetut maksuerät"
+},
+"remainingInstallments": "Jäljellä olevat maksuerät",
+"@remainingInstallments": {
+"description": "Lainan tiedot: vielä maksettavat maksuerät"
+},
+"installmentsPaidOf": "{paid}/{total} maksettu",
+"@installmentsPaidOf": {
+"description": "Lainan tiedot: maksuerien laskuri",
+"placeholders": {
+"paid": {
+"type": "int"
+},
+"total": {
+"type": "int"
+}
+}
+},
+"finalPayment": "Viimeinen maksu",
+"@finalPayment": {
+"description": "Lainan tiedot: viimeisen maksuerän päivämäärä"
+},
+"paymentDueDate": "Maksun eräpäivä",
+"@paymentDueDate": {
+"description": "Lainan tiedot: päivä, jolloin maksu erääntyy"
+},
+"dueOnDayOfMonth": "Joka kuukauden {day}. päivä",
+"@dueOnDayOfMonth": {
+"description": "Lainan tiedot: toistuva eräpäivä",
+"placeholders": {
+"day": {
+"type": "int"
+}
+}
+},
+"loanStatus": "Tila",
+"@loanStatus": {
+"description": "Lainan tiedot: velan nykyinen tila"
+},
+"statusActive": "Suunnitelman mukainen",
+"@statusActive": {
+"description": "Lainan tila: takaisinmaksu etenee normaalisti"
+},
+"statusDueSoon": "Erääntyy pian",
+"@statusDueSoon": {
+"description": "Lainan tila: muistutusjakson sisällä"
+},
+"statusOverdue": "Myöhässä",
+"@statusOverdue": {
+"description": "Lainan tila: eräpäivä on ohitettu"
+},
+"statusCompleted": "Maksettu pois",
+"@statusCompleted": {
+"description": "Lainan tila: maksettu kokonaan"
+},
+"repaymentProgress": "Takaisinmaksun edistyminen",
+"@repaymentProgress": {
+"description": "Lainan tiedot: edistymispalkkien osion otsikko"
+},
+"byAmount": "Summan mukaan",
+"@byAmount": {
+"description": "Lainan tiedot: edistyminen rahamäärän perusteella"
+},
+"byInstallments": "Maksuerien mukaan",
+"@byInstallments": {
+"description": "Lainan tiedot: edistyminen maksuerien perusteella"
+},
+"startDate": "Aloituspäivä",
+"@startDate": {
+"description": "Lainan muokkaus: milloin takaisinmaksu alkoi"
+},
+"openEnded": "Toistaiseksi jatkuva",
+"@openEnded": {
+"description": "Lainan tiedot: jatkuva saldo ilman kiinteää laina-aikaa"
+},
+"loanDetails": "Lainan tiedot",
+"@loanDetails": {
+"description": "Lainan tietonäkymän otsikko"
+},
+"notSet": "Ei määritetty",
+"@notSet": {
+"description": "Näytetään, kun valinnaista arvoa ei ole annettu"
+},
+"insightDebtDueTodayTitle": "{subject} erääntyy tänään",
+"@insightDebtDueTodayTitle": {
+"description": "Ilmoitus: maksuerä erääntyy tänään",
+"placeholders": {
+"subject": {
+"type": "String"
+}
+}
+},
+"insightDebtDueTodayBody": "Maksusi {amount} erääntyy tänään. Nopea napautus pitää maksun aikataulussa.",
+"@insightDebtDueTodayBody": {
+"description": "Ilmoituksen teksti: maksuerä erääntyy tänään",
+"placeholders": {
+"amount": {
+"type": "String"
+}
+}
+},
+"remindMorningTitle": "Hyvää huomenta ☀️",
+"@remindMorningTitle": {
+"description": "Aamuisen menomuistutuksen otsikko"
+},
+"remindMorningBody": "Aloita päivä pitämällä taloutesi hallinnassa. Onko eiliseltä jotain lisättävää?",
+"@remindMorningBody": {
+"description": "Aamuisen menomuistutuksen teksti"
+},
+"remindNoonTitle": "Keskipäivän tarkistus",
+"@remindNoonTitle": {
+"description": "Keskipäivän menomuistutuksen otsikko"
+},
+"remindNoonBody": "Lounas, kahvi, matka? Lisää se muutamassa sekunnissa.",
+"@remindNoonBody": {
+"description": "Keskipäivän menomuistutuksen teksti"
+},
+"remindAfternoonTitle": "Nopea päivitys",
+"@remindAfternoonTitle": {
+"description": "Iltapäivän menomuistutuksen otsikko"
+},
+"remindAfternoonBody": "Kirjaa tähän mennessä käyttämäsi rahat ja pidä tämän päivän luvut ajan tasalla.",
+"@remindAfternoonBody": {
+"description": "Iltapäivän menomuistutuksen teksti"
+},
+"remindEveningTitle": "Päivän päätös",
+"@remindEveningTitle": {
+"description": "Iltamenomuistutuksen otsikko"
+},
+"remindEveningBody": "Käytä nyt kaksi minuuttia ja saat tämän päivän luvut valmiiksi.",
+"@remindEveningBody": {
+"description": "Iltamenomuistutuksen teksti"
+},
+"happyWeekendTitle": "Hyvää viikonloppua! 🎉",
+"@happyWeekendTitle": {
+"description": "Viikonloppuviestin otsikko"
+},
+"happyWeekendBody": "Nauti viikonlopusta – ja pidä samalla viikonlopun menot silmällä.",
+"@happyWeekendBody": {
+"description": "Viikonloppuviestin teksti"
+},
+"dailyReminders": "Päivittäiset menomuistutukset",
+"@dailyReminders": {
+"description": "Ilmoitusasetus: päivittäiset muistutukset"
+},
+"dailyRemindersBody": "Ystävällisiä muistutuksia pitääksesi menosi ajan tasalla",
+"@dailyRemindersBody": {
+"description": "Ilmoitusasetuksen kuvaus"
+},
+"weekendGreeting": "Viikonlopputervehdys",
+"@weekendGreeting": {
+"description": "Ilmoitusasetus: viikonlopputervehdys"
+},
+"weekendGreetingBody": "Ystävällinen tervehdys viikonlopun aluksi",
+"@weekendGreetingBody": {
+"description": "Ilmoitusasetuksen kuvaus"
+},
+"reminderTimesSection": "Muistutusajat",
+"@reminderTimesSection": {
+"description": "Neljän päivittäisen ajankohdan osion otsikko"
+},
+"slotMorning": "Aamu",
+"@slotMorning": {
+"description": "Päivittäisen muistutuksen ajankohta"
+},
+"slotNoon": "Keskipäivä",
+"@slotNoon": {
+"description": "Päivittäisen muistutuksen ajankohta"
+},
+"slotAfternoon": "Iltapäivä",
+"@slotAfternoon": {
+"description": "Päivittäisen muistutuksen ajankohta"
+},
+"slotEvening": "Ilta",
+"@slotEvening": {
+"description": "Päivittäisen muistutuksen ajankohta"
+},
+"everyDay": "Joka päivä",
+"@everyDay": {
+"description": "Toistuvan ilmoituksen tiheys"
+},
+"financialReport": "Taloudellinen raportti",
+"@financialReport": {
+"description": "Viedyn PDF:n otsikko"
+},
+"preparedFor": "Laadittu henkilölle",
+"@preparedFor": {
+"description": "PDF-kansi: kenelle raportti kuuluu"
+},
+"generatedOn": "Luotu",
+"@generatedOn": {
+"description": "PDF-kansi: raportin luontipäivä"
+},
+"reportDisclaimer": "RainyPenny loi tämän raportin omien tietojesi perusteella.",
+"@reportDisclaimer": {
+"description": "PDF:n alatunnisteen huomautus"
+},
+"pageOf": "Sivu {page}/{total}",
+"@pageOf": {
+"description": "PDF:n sivunumero",
+"placeholders": {
+"page": {
+"type": "int"
+},
+"total": {
+"type": "int"
+}
+}
+},
+"overview": "Yleiskatsaus",
+"@overview": {
+"description": "PDF-osio: tärkeimmät summat"
+},
+"description": "Kuvaus",
+"@description": {
+"description": "Taulukon sarakeotsikko"
+},
+"totalIncome": "Tulot yhteensä",
+"@totalIncome": {
+"description": "Yhteenvetotaulukon rivi"
+},
+"totalExpenses": "Menot yhteensä",
+"@totalExpenses": {
+"description": "Yhteenvetotaulukon rivi"
+},
+"totalSaved": "Säästetty yhteensä",
+"@totalSaved": {
+"description": "Yhteenvetotaulukon rivi"
+},
+"shareOfTotal": "Osuus",
+"@shareOfTotal": {
+"description": "Taulukon sarake: tämän kategorian osuus kaikista menoista"
+},
+"used": "Käytetty",
+"@used": {
+"description": "Taulukon sarake: käytetyn budjetin prosenttiosuus"
+},
+"goal": "Tavoite",
+"@goal": {
+"description": "Säästötavoitteen taulukon sarakeotsikko"
+},
+"targetDate": "Tavoitepäivä",
+"@targetDate": {
+"description": "Taulukon sarakeotsikko"
+},
+"progress": "Edistyminen",
+"@progress": {
+"description": "Taulukon sarakeotsikko"
+},
+"paidOffShort": "Maksettu",
+"@paidOffShort": {
+"description": "Taulukon sarake: takaisin maksetun velan prosenttiosuus"
+},
+"transactions": "Tapahtumat",
+"@transactions": {
+"description": "PDF-osio, jossa luetellaan yksittäiset tapahtumat"
+},
+"andMoreTransactions": "{count, plural, =1{ja 1 muu tapahtuma} other{ja {count} muuta tapahtumaa}}",
+"@andMoreTransactions": {
+"description": "PDF:n huomautus, kun tapahtumataulukko on rajattu",
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"exportPdf": "Vie PDF",
+"@exportPdf": {
+"description": "Raportin tuottava painike"
+},
+"sharePdf": "Jaa raportti",
+"@sharePdf": {
+"description": "Avaa jakamisvalikon"
+},
+"preparingReport": "Raporttia valmistellaan…",
+"@preparingReport": {
+"description": "PDF:n luonnin aikana näytettävä edistymisviesti"
+},
+"reportReady": "Raportti valmis",
+"@reportReady": {
+"description": "Vahvistus PDF:n valmistuttua"
+},
+"reportFailed": "Raportin luominen epäonnistui",
+"@reportFailed": {
+"description": "Virheviesti viennin epäonnistuessa"
+},
+"categories": "Kategoriat",
+"@categories": {
+"description": "Kategorioiden hallintanäkymän otsikko"
+},
+"categoriesIntro": "Lisää omia kategorioita, jotta voit luokitella tulot ja menot juuri omalla tavallasi.",
+"@categoriesIntro": {
+"description": "Selittää näkymän tarkoituksen"
+},
+"expenseCategories": "Menokategoriat",
+"@expenseCategories": {
+"description": "Osion otsikko"
+},
+"incomeCategories": "Tulokategoriat",
+"@incomeCategories": {
+"description": "Osion otsikko"
+},
+"newCategory": "Uusi kategoria",
+"@newCategory": {
+"description": "Luontilomakkeen otsikko"
+},
+"editCategory": "Muokkaa kategoriaa",
+"@editCategory": {
+"description": "Muokkauslomakkeen otsikko"
+},
+"categoryName": "Nimi",
+"@categoryName": {
+"description": "Kategorian lomakekentän otsikko"
+},
+"categoryNameHint": "esim. Lemmikkien hoito",
+"@categoryNameHint": {
+"description": "Kategorian nimen paikkamerkki"
+},
+"icon": "Kuvake",
+"@icon": {
+"description": "Kategorian lomakekentän otsikko"
+},
+"categorySaved": "Kategoria tallennettu",
+"@categorySaved": {
+"description": "Vahvistusviesti"
+},
+"categoryDeleted": "Kategoria poistettu",
+"@categoryDeleted": {
+"description": "Vahvistusviesti"
+},
+"deleteCategory": "Poistetaanko tämä kategoria?",
+"@deleteCategory": {
+"description": "Poistamisen vahvistuksen otsikko"
+},
+"deleteCategoryBody": "{name} poistetaan kategorioistasi.",
+"@deleteCategoryBody": {
+"description": "Poistamisen vahvistuksen teksti",
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"categoryInUse": "{count, plural, =1{1 tietue käyttää edelleen tätä kategoriaa} other{{count} tietuetta käyttää edelleen tätä kategoriaa}}",
+"@categoryInUse": {
+"description": "Selittää, miksi kategoriaa ei voi poistaa",
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"noCategoriesYet": "Ei vielä mitään.",
+"@noCategoriesYet": {
+"description": "Kategorian tyhjän ryhmän viesti"
+},
+"builtIn": "Sisäänrakennettu",
+"@builtIn": {
+"description": "Merkitsee jaetun, vain luku -muotoisen kategorian"
+},
+"manageCategories": "Hallitse kategorioita",
+"@manageCategories": {
+"description": "Asetusrivi, joka avaa kategorianäkymän"
+},
+"expense": "Meno",
+"@expense": {
+"description": "Yksittäisen lähtevän tapahtuman nimike"
+},
+"languageNote": "Arabia, urdu, persia ja heprea vaihtavat koko käyttöliittymän oikealta vasemmalle, mukaan lukien kaaviot ja PDF-raportit.",
+"@languageNote": {
+"description": "Kielivalitsimen huomautus RTL-tuen selityksestä"
+},
+"next": "Seuraava",
+"back": "Takaisin",
+"skip": "Ohita",
+"continueLabel": "Jatka",
+"@continueLabel": {
+"description": "Monivaiheisen toiminnon seuraavaan vaiheeseen siirtävä ensisijainen toiminto. Nimetty loppuliitteellä, koska "continue" on Dartin avainsana."
+},
+"selected": "Valittu",
+"passwordRequired": "Anna salasanasi",
+"newPasswordLabel": "Uusi salasana",
+"confirmPasswordLabel": "Vahvista salasana",
+"passwordsDoNotMatch": "Salasanojen on vastattava toisiaan",
+"showPassword": "Näytä salasana",
+"hidePassword": "Piilota salasana",
+"savePassword": "Tallenna salasana",
+"backToSignIn": "Takaisin kirjautumiseen",
+"alreadyHaveAccount": "Minulla on jo tili",
+"getStarted": "Aloita",
+"acceptTerms": "Hyväksyn käyttöehdot ja tietosuojakäytännön",
+"acceptTermsRequired": "Hyväksy jatkaaksesi",
+"passwordStrengthTooShort": "Liian lyhyt",
+"passwordStrengthWeak": "Heikko",
+"passwordStrengthFair": "Kohtalainen",
+"passwordStrengthGood": "Hyvä",
+"passwordStrengthStrong": "Vahva",
+"passwordAdvice": "Pitkä, helposti muistettava lause on parempi kuin lyhyt salasana täynnä symboleja. Vältä salasanoja, joita käytät jo muualla.",
+"authInvalidCredentials": "Sähköpostiosoite ja salasana eivät vastaa tiliä",
+"authEmailNotConfirmed": "Vahvista sähköpostiosoitteesi ennen kirjautumista",
+"authEmailAlreadyRegistered": "Tällä sähköpostiosoitteella on jo tili",
+"authWeakPassword": "Valitse pidempi salasana",
+"authRateLimited": "Liian monta yritystä. Yritä uudelleen muutaman minuutin kuluttua",
+"authNetworkError": "Ei yhteyttä. Tarkista verkkoyhteytesi ja yritä uudelleen",
+"authGenericError": "Jokin meni pieleen. Yritä uudelleen",
+"confirmEmailTitle": "Tarkista sähköpostisi",
+"confirmEmailBody": "Lähetimme vahvistuslinkin osoitteeseen {email}. Avaa se viimeistelläksesi tilisi käyttöönoton.",
+"@confirmEmailBody": {
+"placeholders": {
+"email": {
+"type": "String"
+}
+}
+},
+"resendConfirmation": "Lähetä vahvistussähköposti uudelleen",
+"confirmationResent": "Vahvistussähköposti lähetetty",
+"forgotPasswordTitle": "Palauta salasanasi",
+"forgotPasswordSubtitle": "Anna sähköpostiosoite, jolla rekisteröidyit, niin lähetämme sinulle linkin uuden salasanan valitsemiseen.",
+"sendResetLink": "Lähetä palautuslinkki",
+"resetLinkSentTitle": "Palautuslinkki lähetetty",
+"resetLinkSentBody": "Jos osoitteella {email} on tili, palautuslinkki on matkalla.",
+"@resetLinkSentBody": {
+"description": "Tarkoituksella ehdollinen: vahvistus siitä, onko osoite rekisteröity, mahdollistaisi sovelluksen käyttäjien luetteloinnin.",
+"placeholders": {
+"email": {
+"type": "String"
+}
+}
+},
+"resetLinkSentHint": "Linkki vanhenee tunnin kuluttua. Jos se ei saavu, tarkista roskapostikansio ennen uuden pyytämistä.",
+"tryAnotherEmail": "Käytä toista sähköpostiosoitetta",
+"resetPasswordTitle": "Valitse uusi salasana",
+"resetPasswordSubtitle": "Valitse salasana, jota et ole käyttänyt tällä tilillä aiemmin.",
+"passwordChangedTitle": "Salasana päivitetty",
+"passwordChangedBody": "Uusi salasanasi on tallennettu. Olet kirjautunut sisään ja valmis jatkamaan.",
+"demoModeHint": "Demoversio — tiliä ei tarvita",
+"demoModeFill": "Täytä",
+"welcomeTrackTitle": "Näe, mihin rahasi menevät",
+"welcomeTrackBody": "Kirjaa tulot ja menot. RainyPenny muuttaa ne näkymäksi, jota on helppo ymmärtää.",
+"welcomeBudgetTitle": "Aseta rajat, jotka pitävät",
+"welcomeBudgetBody": "Anna kullekin menojen osa-alueelle kuukausittainen yläraja ja saat ilmoituksen ennen rajan ylittämistä sen sijaan, että huomaisit sen vasta jälkeenpäin.",
+"welcomeGoalsTitle": "Säästä siihen, millä on merkitystä",
+"welcomeGoalsBody": "Nimeä tavoite, aseta tavoitesumma ja seuraa sen täyttymistä. Pahan päivän rahastoa on helpompi kasvattaa, kun näet edistymisen.",
+"welcomePrivacyTitle": "Rahasi pysyvät sinunasi",
+"welcomePrivacyBody": "Taloustietosi kuuluvat vain sinulle. Mitään ei myydä eikä jaeta kenenkään kanssa.",
+"stepOf": "Vaihe {step}/{total}",
+"@stepOf": {
+"placeholders": {
+"step": {
+"type": "int"
+},
+"total": {
+"type": "int"
+}
+}
+},
+"onboardingNameTitle": "Millä nimellä kutsumme sinua?",
+"onboardingNameBody": "Käytämme sitä tervehtiessämme sinua emmekä missään muualla.",
+"onboardingNameHint": "Etunimi riittää. Voit vaihtaa sen myöhemmin.",
+"onboardingCurrencyTitle": "Mitä valuuttaa käytät?",
+"onboardingCurrencyBody": "Kaikki sovelluksen summat näytetään tässä valuutassa. Valinta ei muunna mitään.",
+"onboardingCurrencySearch": "Hae kaikista valuutoista",
+"onboardingAppearanceTitle": "Tee siitä omasi",
+"onboardingAppearanceBody": "Valitse ulkoasu. Kaikki muuttuu napauttaessasi, ja voit palata asetukseen milloin tahansa.",
+"onboardingNotificationsTitle": "Pysy ajan tasalla",
+"onboardingNotificationsBody": "Hiljainen muistutus oikealla hetkellä auttaa tekemään tästä tavan.",
+"onboardingNotifyReminders": "Ystävällinen muistutus kirjaamaan käyttämäsi rahat",
+"onboardingNotifyBudget": "Ilmoitus ennen budjetin loppumista",
+"onboardingNotifySummary": "Viikoittainen yhteenveto rahojesi käytöstä",
+"onboardingNotifyEnable": "Ota ilmoitukset käyttöön",
+"onboardingNotifyDone": "Ilmoitusasetukset tallennettu",
+"onboardingNotifyLater": "Voit muuttaa kaikkia näitä asetuksia myöhemmin Asetuksissa.",
+"onboardingReadyTitle": "Kaikki on valmista",
+"onboardingReadyTitleNamed": "Kaikki on valmista, {name}",
+"@onboardingReadyTitleNamed": {
+"placeholders": {
+"name": {
+"type": "String"
+}
+}
+},
+"onboardingReadyBody": "Asetukset ovat nyt valmiit. Haluaisitko nopean kierroksen siitä, miten kaikki toimii?",
+"onboardingTakeTour": "Näytä minulle",
+"onboardingGoToApp": "Siirry sovellukseen",
+"onboardingTourLater": "Ei nyt? Opas säilyy Asetuksissa myöhempää käyttöä varten.",
+"beginnersGuide": "Aloittelijan opas",
+"guideFinish": "Valmis",
+"chapterOf": "Luku {number}/{total}",
+"@chapterOf": {
+"placeholders": {
+"number": {
+"type": "int"
+},
+"total": {
+"type": "int"
+}
+}
+},
+"guideOpenScreen": "Avaa {screen}",
+"@guideOpenScreen": {
+"placeholders": {
+"screen": {
+"type": "String"
+}
+}
+},
+"guideDashboardTitle": "Kojelautasi",
+"guideDashboardBody": "Kaikki alkaa täältä. Yläreunan kortissa näet jäljellä olevan saldon; sen alla ovat tämän jakson tulot ja menot sekä menot, budjetit ja tavoitteet.",
+"guideDashboardTip1": "Vedä näyttöä alaspäin päivittääksesi kaiken kerralla.",
+"guideDashboardTip2": "Napauta tulo- tai menokorttia siirtyäksesi kyseiseen luetteloon.",
+"guideDashboardTip3": "Renkaat ja oivallukset päivittyvät heti, kun kirjaat jotain.",
+"guideAddTitle": "Rahan kirjaaminen",
+"guideAddBody": "Alapalkin keskellä oleva painike on kaiken lähtöpiste. Se avaa lyhyen valikon: meno, tulo, velka, budjetti tai säästötavoite.",
+"guideAddTip1": "Napauta keskimmäistä painiketta kirjataksesi tulon tai menon.",
+"guideAddTip2": "Pidä painiketta painettuna siirtyäksesi suoraan uuden menon kirjaukseen ja ohittaaksesi valikon.",
+"guideAddTip3": "Valitse aina kategoria – sen avulla kaaviot ja budjetit toimivat.",
+"guideCategoriesTitle": "Kategoriat",
+"guideCategoriesBody": "Kategoriat ryhmittelevät menot. Sovelluksen mukana tulevat kategoriat kattavat useimmat tarpeet, ja voit nimetä niitä uudelleen tai lisätä omia.",
+"guideCategoriesTip1": "Avaa Asetukset ja valitse Hallitse kategorioita muokataksesi tai lisätäksesi kategorian.",
+"guideCategoriesTip2": "Luokittelemattomat tapahtumat päätyvät Muut-kategoriaan, jotta kaaviot pysyvät totuudenmukaisina.",
+"guideBudgetTitle": "Budjetit",
+"guideBudgetBody": "Budjetti on yhden kategorian kuukausittainen yläraja. Palkki täyttyy kulutuksen kasvaessa ja muuttuu rajan lähestyessä, joten tiedät tilanteen ennen rajan ylittämistä.",
+"guideBudgetTip1": "Aloita kahdesta tai kolmesta kategoriasta, älä kaikista kerralla.",
+"guideBudgetTip2": "Aseta raja hieman tavallisen kulutuksesi yläpuolelle ja kiristä sitä sitten.",
+"guideBudgetTip3": "Pidä budjettihälytykset päällä, niin sovellus varoittaa budjetin ollessa vähissä.",
+"guideSavingsTitle": "Säästötavoitteet",
+"guideSavingsBody": "Nimeä säästökohde, aseta tavoite ja päivämäärä, niin sovellus laskee, kuinka paljon sinun pitäisi säästää kuukaudessa saavuttaaksesi sen.",
+"guideSavingsTip1": "Nimetty tavoite on helpompi saavuttaa kuin epämääräinen aikomus säästää.",
+"guideSavingsTip2": "Useat pienet tavoitteet saavutetaan useammin kuin yksi suuri tavoite.",
+"guideLoansTitle": "Velat ja lainat",
+"guideLoansBody": "Kirjaa velan määrä, kustannukset ja seuraavan maksun eräpäivä. Kaikki maksettavat velat ovat yhdessä luettelossa, josta näet myös jäljellä olevan kokonaismäärän.",
+"guideLoansTip1": "Lisää eräpäivä, niin maksumuistutukset muistuttavat sinua.",
+"guideLoansTip2": "Myöhässä oleva velka näkyy kojelaudalla punaisena, kunnes se on maksettu.",
+"guideReportsTitle": "Raportit",
+"guideReportsBody": "Syvempi näkymä: tulot suhteessa menoihin, menot kategorioittain, budjettien toteutuminen ja tuloistasi säästämäsi osuus.",
+"guideReportsTip1": "Vaihda viikon, kuukauden ja neljännesvuoden välillä näytön yläreunasta.",
+"guideReportsTip2": "Vie tai jaa PDF-raportti – se luodaan omalla kielelläsi ja kirjoitussuunnallasi.",
+"guideSettingsTitle": "Asetukset",
+"guideSettingsBody": "Kieli, valuutta, värit ja hälytykset löytyvät täältä. Mikään niistä ei ole lukittu käyttöönotossa – voit muuttaa niitä milloin tahansa.",
+"guideSettingsTip1": "Neljäkymmentä kieltä, ja koko asettelu peilautuu oikealta vasemmalle luettavissa kielissä.",
+"guideSettingsTip2": "Valitse haluamasi hälytykset ja ajat, jolloin ne voivat saapua.",
+"guideSettingsTip3": "Hiljaiset tunnit siirtävät kaikki ilmoitukset aamuun.",
+"guideHabitTitle": "Tee siitä tapa",
+"guideHabitBody": "Sovellus on vain niin hyvä kuin sinne syöttämäsi tiedot. Minuutti päivässä voittaa tunnin kerran kuukaudessa, ja kahden viikon jälkeen luvut alkavat kertoa sinulle jotain.",
+"guideHabitTip1": "Kirjaa käyttämäsi rahat heti, älä viikon lopussa.",
+"guideHabitTip2": "Katso kojelautaa kerran päivässä. Kymmenen sekuntia riittää.",
+"guideHabitTip3": "Tämä opas säilyy Asetuksissa – palaa siihen milloin tahansa.",
+"appearance": "Ulkoasu",
+"themeCaption": "Vaalea, tumma tai puhelimesi nykyinen tila.",
+"accentColor": "Korostusväri",
+"accentColorCaption": "Värittää painikkeet, korostukset ja kaaviot.",
+"accentSemanticsNote": "Tulot ja menot säilyttävät omat värinsä kaikissa teemoissa, joten luvun merkitys ei muutu teeman korostusvärin mukana.",
+"accentTeal": "Sinivihreä",
+"accentGreen": "Vihreä",
+"accentSky": "Taivaansininen",
+"accentBlue": "Sininen",
+"accentIndigo": "Indigonsininen",
+"accentViolet": "Violetti",
+"accentPink": "Vaaleanpunainen",
+"accentCrimson": "Karmiininpunainen",
+"accentOrange": "Oranssi",
+"accentSlate": "Liuskeenharmaa",
+"searchLanguages": "Hae kieliä",
+"suggestedLanguages": "Suositellut",
+"allLanguages": "Kaikki kielet",
+"noLanguagesFound": "Kieliä ei löytynyt",
+"noLanguagesFoundMessage": "Kokeile nimeä englanniksi tai kaksikirjaimista koodia.",
+"rightToLeft": "Oikealta vasemmalle",
+"replayGuide": "Näytä opas uudelleen",
+"replaySetup": "Suorita käyttöönotto uudelleen",
+"replaySetupBody": "Käy ensimmäisen käyttökerran kysymykset uudelleen läpi. Mitään kirjaamaasi ei poisteta.",
+"rateTitle": "Pidätkö RainyPennystä?",
+"rateBody": "Olet pitänyt tästä jo jonkin aikaa. Arvostelu vie hetken ja auttaa muita löytämään sovelluksen.",
+"rateAction": "Arvostele sovellus",
+"rateLater": "Ehkä myöhemmin",
+"rateNever": "Ei kiitos",
+"rateThanks": "Kiitos",
+
+"monthlySalary": "Kuukausipalkka",
+"remainingAmount": "Jäljellä",
+"carriedForward": "Siirretty edelliseltä jaksolta",
+"carriedForwardHint": "Edellisestä jaksosta jäljelle jäänyt",
+"totalSpending": "Menot yhteensä",
+"salaryCycle": "Palkkakausi",
+"payday": "Palkkapäivä",
+"paydayDescription": "Päivä, jolloin palkkasi saapuu. Talouskuukautesi alkaa tästä päivästä ja päättyy seuraavaa palkkapäivää edeltävään päivään.",
+"paydayUpdated": "Palkkapäivä päivitetty",
+"paydayDayOfMonth": "Päivä {day}",
+"@paydayDayOfMonth": {
+"placeholders": {
+"day": {
+"type": "int"
+}
+}
+},
+"paydayShortMonthNote": "Lyhyempinä kuukausina jakso alkaa sen sijaan kuukauden viimeisenä päivänä.",
+"daysLeftInCycle": "{count, plural, =0{Jakson viimeinen päivä} =1{1 päivä palkkapäivään} other{{count} päivää palkkapäivään}}",
+"@daysLeftInCycle": {
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"nextPayday": "Seuraava palkkapäivä",
+"spentSoFar": "Käytetty tähän mennessä",
+"dailyAllowance": "Turvallinen päivittäinen käyttövara",
+"overspentNotice": "Olet käyttänyt tällä jaksolla enemmän kuin olet saanut tuloja.",
+"backToThisMonth": "Takaisin tähän kuukauteen",
+"cycleRangeLabel": "Jakso",
+"noSalaryRecorded": "Palkkaa ei ole vielä kirjattu",
+"addSalaryAction": "Lisää palkkasi",
+"cycleOf": "{start} – {end}",
+"@cycleOf": {
+"placeholders": {
+"start": {
+"type": "String"
+},
+"end": {
+"type": "String"
+}
+}
+},
+
+"healthExcellent": "Erinomainen",
+"healthGood": "Hyvä",
+"healthFair": "Kohtalainen",
+"healthNeedsWork": "Vaatii työtä",
+"healthExcellentBody": "Säästät hyvin ja pysyt budjettiesi rajoissa.",
+"healthGoodBody": "Menosi ovat tällä jaksolla suunnitelman mukaiset.",
+"healthFairBody": "Muutama budjetti käy kuumana. Pienet muutokset auttavat.",
+"healthNeedsWorkBody": "Menot kasvavat suunnitelmaasi nopeammin. Aloita suurimmasta kategoriasta.",
+"factorSavingsRate": "Säästöaste",
+"factorBudgetControl": "Budjetin hallinta",
+"factorDebtLoad": "Velkataakka",
+"factorSpendingTrend": "Menojen kehitys",
+"factorKept": "{percent} % pidetty",
+"@factorKept": {
+"placeholders": {
+"percent": {
+"type": "String"
+}
+}
+},
+"factorUsed": "{percent} % käytetty",
+"@factorUsed": {
+"placeholders": {
+"percent": {
+"type": "String"
+}
+}
+},
+"factorOfIncome": "{percent} % tuloista",
+"@factorOfIncome": {
+"placeholders": {
+"percent": {
+"type": "String"
+}
+}
+},
+"factorTrendUp": "Nousua {percent} %",
+"@factorTrendUp": {
+"placeholders": {
+"percent": {
+"type": "String"
+}
+}
+},
+"factorTrendDown": "Laskua {percent} %",
+"@factorTrendDown": {
+"placeholders": {
+"percent": {
+"type": "String"
+}
+}
+},
+"howScoreWorks": "Miten pisteet lasketaan",
+"healthScoreExplainer": "Pisteesi yhdistää neljä asiaa: kuinka paljon tuloistasi pidät, kuinka hyvin pysyt budjeteissasi, kuinka suuri osa tuloistasi menee velkoihin ja ovatko menosi kasvussa vai laskussa.",
+"scoreWeightLabel": "{percent} % pisteistä",
+"@scoreWeightLabel": {
+"placeholders": {
+"percent": {
+"type": "int"
+}
+}
+},
+"viewHealthDetails": "Näytä erittely",
+
+"saveChanges": "Tallenna muutokset",
+"profileUpdated": "Profiili päivitetty",
+"changePhoto": "Vaihda kuva",
+"removePhoto": "Poista kuva",
+"personalInformationIntro": "Nimesi ja kuvasi näkyvät eri puolilla sovellusta. Sähköpostiosoitteesi on osoite, jolla kirjaudut sisään.",
+"nameRequired": "Anna nimesi",
+"emailNotEditable": "Ota yhteyttä tukeen vaihtaaksesi kirjautumiseen käyttämääsi osoitetta.",
+
+"pressBackAgainToExit": "Paina takaisin uudelleen poistuaksesi",
+
+"categoryHousing": "Asuminen",
+"categoryFood": "Ruoka ja ravintolat",
+"categoryTransport": "Liikenne",
+"categoryShopping": "Ostokset",
+"categoryBills": "Laskut ja palvelut",
+"categoryEntertainment": "Viihde",
+"categoryHealth": "Terveys ja hyvinvointi",
+"categoryEducation": "Koulutus",
+"categoryTravel": "Matkailu",
+"categorySalary": "Palkka",
+"categoryFreelance": "Freelance",
+"categoryInvestments": "Sijoitukset",
+"categoryGift": "Lahja",
+"categoryOther": "Muut",
+"categoryGroceries": "Ruokaostokset",
+"categoryDining": "Ravintolat",
+"categoryCoffee": "Kahvi",
+"categoryUtilities": "Palvelumaksut",
+"categoryInternet": "Internet",
+"categoryPhone": "Puhelin",
+"categoryInsurance": "Vakuutukset",
+"categorySubscriptions": "Tilaukset",
+"categoryPersonalCare": "Henkilökohtainen hoito",
+"categoryClothing": "Vaatteet",
+"categoryElectronics": "Elektroniikka",
+"categoryHomeSupplies": "Kodintarvikkeet",
+"categoryPets": "Lemmikit",
+"categoryChildcare": "Lastenhoito",
+"categoryFamily": "Perhe",
+"categoryFitness": "Kuntoilu",
+"categorySports": "Urheilu",
+"categoryMedicine": "Lääkkeet",
+"categoryMedical": "Terveydenhoito",
+"categoryCharity": "Hyväntekeväisyys",
+"categoryTaxes": "Verot",
+"categoryFees": "Maksut",
+"categoryDebt": "Velka",
+"categorySavings": "Säästöt",
+"categoryRepairs": "Korjaukset",
+"categoryCarMaintenance": "Auton huolto",
+"categoryFuel": "Polttoaine",
+"categoryParking": "Pysäköinti",
+"categoryPublicTransport": "Julkinen liikenne",
+"categoryRent": "Vuokra",
+"categoryMortgage": "Asuntolaina",
+"categoryBonus": "Bonus",
+"categoryCommission": "Provisio",
+"categoryPension": "Eläke",
+"categoryInterest": "Korkotuotot",
+"categoryDividends": "Osingot",
+"categoryCashback": "Käteispalautus",
+"categoryRefund": "Hyvitys",
+"categoryRentalIncome": "Vuokratulot",
+
+"addCategory": "Uusi kategoria",
+"filterByCategory": "Suodata kategorian mukaan",
+"allCategories": "Kaikki kategoriat",
+"clearFilters": "Tyhjennä suodattimet",
+"spentInCategory": "{category}  ·  {amount}",
+"@spentInCategory": {
+"placeholders": {
+"category": {
+"type": "String"
+},
+"amount": {
+"type": "String"
+}
+}
+},
+"allTime": "Kaikki ajat",
+"customRange": "Mukautettu",
+"selectDateRange": "Valitse ajanjakso",
+"rangeApplied": "Näytetään {start} – {end}",
+"@rangeApplied": {
+"placeholders": {
+"start": {
+"type": "String"
+},
+"end": {
+"type": "String"
+}
+}
+},
+
+"loans": "Lainat",
+"debts": "Velat",
+"noLoansTitle": "Ei lainoja",
+"noLoansBody": "Sinulla ei ole aktiivisia lainoja.",
+
+"emptyHealthTitle": "Taloudellista pistemäärää ei vielä ole",
+"@emptyHealthTitle": {
+"description": "Otsikko näytetään, kun taloudellisen hyvinvoinnin pisteiden laskemiseen ei ole riittävästi tietoja"
+},
+"emptyHealthDescription": "Tarvitsemme hieman taloudellista aktiivisuutta ennen kuin voimme laskea tarkan hyvinvointipisteesi.",
+"@emptyHealthDescription": {
+"description": "Tyhjän tilan selitys taloudellisen hyvinvoinnin näkymässä"
+},
+"emptyHealthAddTransactions": "Lisää tulo- tai menotapahtumia",
+"@emptyHealthAddTransactions": {
+"description": "Tarkistuslistan kohta, joka kehottaa lisäämään tapahtumia"
+},
+"emptyHealthSetBudgets": "Määritä kuukausibudjettisi",
+"@emptyHealthSetBudgets": {
+"description": "Tarkistuslistan kohta, joka kehottaa määrittämään budjetit"
+},
+"emptyHealthTrackLoans": "Seuraa lainoja tai velkoja (valinnainen)",
+"@emptyHealthTrackLoans": {
+"description": "Tarkistuslistan kohta, joka kehottaa seuraamaan lainoja"
+},
+"emptyHealthCardSubtitle": "Lisää tapahtumia laskeaksesi pisteesi ja saadaksesi oivalluksia.",
+"@emptyHealthCardSubtitle": {
+"description": "Kojelaudan hyvinvointikortin alaotsikko, kun tietoja ei ole saatavilla"
+},
+
+"smartBudgetSplit": "Älykäs budjettijako",
+"@smartBudgetSplit": {
+"description": "Älykkään palkkabudjetin jaon näkymän otsikko"
+},
+"smartBudgetSplitSubtitle": "Syötä kuukausipalkkasi laskeaksesi suositellut rajat",
+"@smartBudgetSplitSubtitle": {
+"description": "Palkkabudjetin jaon selittävä alaotsikko"
+},
+"monthlyNetSalary": "Kuukausittainen nettopalkka",
+"@monthlyNetSalary": {
+"description": "Kuukausittaisen nettopalkan syöttökentän otsikko"
+},
+"categoryAllocations": "Kategoriakohtaiset osuudet",
+"@categoryAllocations": {
+"description": "Suositeltujen kategoriakohtaisten osuuksien luettelon otsikko"
+},
+"totalBudgeted": "Yhteensä: {amount}",
+"@totalBudgeted": {
+"description": "Kaikkiin kategorioihin budjetoitu kokonaismäärä",
+"placeholders": {
+"amount": {
+"type": "String"
+}
+}
+},
+"applyAllBudgets": "Ota kaikki budjetit käyttöön",
+"@applyAllBudgets": {
+"description": "Painikkeen teksti kaikkien suositeltujen kategoriarajojen käyttöönottoon"
+},
+"applyingBudgets": "Budjetteja otetaan käyttöön...",
+"@applyingBudgets": {
+"description": "Latausteksti budjettien käyttöönoton aikana"
+},
+"budgetsCreatedSuccess": "{count, plural, =1{1 kategoriabudjetti luotu.} other{{count} kategoriabudjettia luotu.}}",
+"@budgetsCreatedSuccess": {
+"description": "Onnistumisviesti, kun budjetit on luotu",
+"placeholders": {
+"count": {
+"type": "int"
+}
+}
+},
+"failedToSaveBudgets": "Budjettien tallennus epäonnistui.",
+"@failedToSaveBudgets": {
+"description": "Virheviesti, kun budjettien tallennus epäonnistuu"
+},
+"recommendedBudget": "Suositeltu budjetti"
 }

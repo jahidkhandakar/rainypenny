@@ -305,7 +305,7 @@ class _BudgetSection extends ConsumerWidget {
             final preview = BudgetCalculator.preview(list);
             if (preview.isEmpty) {
               return AppCard(
-                onTap: () => startAddBudget(context, ref),
+                onTap: () => context.push(AppRoutes.budget),
                 child: EmptyState(
                   icon: CupertinoIcons.chart_pie_fill,
                   title: l10n.budget,

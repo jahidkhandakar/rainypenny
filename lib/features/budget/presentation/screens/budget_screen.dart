@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rainypenny/features/financial/presentation/widgets/recommended_budgets_sheet.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -35,6 +36,11 @@ class BudgetScreen extends ConsumerWidget {
         title: Text(l10n.budget),
         actions: [
           IconButton(
+            tooltip: l10n.recommendedBudget,
+            icon: const Icon(Icons.auto_awesome_rounded),
+            onPressed: () => showSalaryBudgetRecommenderSheet(context, ref),
+          ),
+          IconButton(
             tooltip: l10n.newBudget,
             icon: const Icon(Icons.add_rounded),
             onPressed: () => startAddBudget(context, ref),
@@ -61,7 +67,12 @@ class BudgetScreen extends ConsumerWidget {
             const SizedBox(height: AppSpacing.lg),
             ..._warningBanners(context, list),
             const SizedBox(height: AppSpacing.sm),
-            SectionHeader(title: l10n.budgets, subtitle: l10n.spendingByCategory),
+            SectionHeader(
+              title: l10n.budgets,
+              subtitle: l10n.spendingByCategory,
+              actionLabel: l10n.recommendedBudget,
+              onAction: () => showSalaryBudgetRecommenderSheet(context, ref),
+            ),
             for (var i = 0; i < list.length; i++)
               Padding(
                 padding: const EdgeInsets.only(bottom: AppSpacing.md),
@@ -74,13 +85,24 @@ class BudgetScreen extends ConsumerWidget {
                 ),
               ),
             if (list.isEmpty)
-              EmptyState(
-                icon: CupertinoIcons.chart_pie_fill,
-                title: l10n.noBudgetsTitle,
-                message: l10n.noBudgetsBody,
-                actionLabel: l10n.newBudget,
-                onAction: () => startAddBudget(context, ref),
-              ),
+              if (list.isEmpty)
+                Column(
+                  children: [
+                    EmptyState(
+                      icon: CupertinoIcons.chart_pie_fill,
+                      title: l10n.noBudgetsTitle,
+                      message: l10n.noBudgetsBody,
+                      actionLabel: l10n.newBudget,
+                      onAction: () => startAddBudget(context, ref),
+                    ),
+                    const SizedBox(height: AppSpacing.sm),
+                    OutlinedButton.icon(
+                      icon: const Icon(Icons.auto_awesome_rounded, size: 18),
+                      label: Text(l10n.recommendedBudget),
+                      onPressed: () => showSalaryBudgetRecommenderSheet(context, ref),
+                    ),
+                  ],
+                ),
           ],
         ),
         loading: () => ListView(

@@ -2111,4 +2111,45 @@ class AppL10nUr extends AppL10n {
   @override
   String get emptyHealthCardSubtitle =>
       'Add transactions to calculate your score and get insights.';
+
+  @override
+  String get smartBudgetSplit => 'Smart Budget Split';
+
+  @override
+  String get smartBudgetSplitSubtitle =>
+      'Enter your monthly salary to calculate recommended limits';
+
+  @override
+  String get monthlyNetSalary => 'Monthly Net Salary';
+
+  @override
+  String get categoryAllocations => 'Category Allocations';
+
+  @override
+  String totalBudgeted(String amount) {
+    return 'Total: $amount';
+  }
+
+  @override
+  String get applyAllBudgets => 'Apply All Budgets';
+
+  @override
+  String get applyingBudgets => 'Applying budgets...';
+
+  @override
+  String budgetsCreatedSuccess(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count category budgets created.',
+      one: '1 category budget created.',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get failedToSaveBudgets => 'Failed to save budgets.';
+
+  @override
+  String get recommendedBudget => 'Recommended budget';
 }
