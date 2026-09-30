@@ -56,3 +56,5 @@ temp_interactive_push.bat
 .gitignore
 # Widget Preview related
 .widget_preview/
+
+.env
