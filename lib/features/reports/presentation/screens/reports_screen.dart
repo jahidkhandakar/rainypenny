@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
+import '../../../../core/ads/banner_ad_slot.dart';
 import '../../../../core/shell/app_shell.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
@@ -72,6 +73,11 @@ class ReportsScreen extends ConsumerWidget {
               retryLabel: l10n.retry,
               onRetry: () => ref.invalidate(transactionsProvider),
             ),
+          ),
+          // Past the end of the report, where nothing is tappable. It takes no
+          // space at all until an ad has actually loaded.
+          const Center(
+            child: BannerAdSlot(padding: EdgeInsets.only(top: AppSpacing.xl)),
           ),
         ],
       ),

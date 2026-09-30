@@ -11,6 +11,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/ads/banner_ad_slot.dart';
 import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
@@ -149,12 +150,23 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                     AppSpacing.page,
                     AppSpacing.section,
                   ),
-                  itemCount: list.length + 1,
+                  // One row for the summary at the top, one for the banner
+                  // after the last day group.
+                  itemCount: list.length + 2,
                   itemBuilder: (context, index) {
                     if (index == 0) {
                       return const Padding(
                         padding: EdgeInsets.only(bottom: AppSpacing.md),
                         child: _ResultsSummary(),
+                      );
+                    }
+                    if (index == list.length + 1) {
+                      // Below the ledger, where a mis-tap cannot open or
+                      // delete anything. Takes no space until it loads.
+                      return const Center(
+                        child: BannerAdSlot(
+                          padding: EdgeInsets.only(top: AppSpacing.md),
+                        ),
                       );
                     }
                     final group = list[index - 1];

@@ -9,6 +9,19 @@
         android:label="RainyPenny"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- AdMob application id.
+             This is Google's public TEST app id, which serves test ads and
+             earns nothing. Replace it with the real one from the AdMob
+             console before release: an app shipped with this id shows test
+             ads to real users, and an app shipped without any id crashes on
+             launch.
+             The ad *unit* ids are not here - they come from .env at runtime,
+             see lib/core/ads/ad_config.dart. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

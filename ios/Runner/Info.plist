@@ -45,5 +45,15 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- AdMob application id. Google's public TEST id, which serves test ads
+	     and earns nothing. Replace with the real one from the AdMob console
+	     before release; an iOS build with no id at all will not start.
+	     Ad unit ids come from .env at runtime, not from here. -->
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<!-- Required from iOS 14: without it the tracking prompt cannot be shown
+	     and ads fall back to non-personalised, which pays materially less. -->
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This identifier will be used to show you more relevant ads.</string>
 </dict>
 </plist>

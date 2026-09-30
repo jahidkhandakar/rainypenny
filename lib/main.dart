@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -6,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'app.dart';
+import 'core/ads/ad_service.dart';
 import 'core/config/app_config.dart';
 import 'core/settings/settings_store.dart';
 
@@ -31,6 +34,11 @@ Future<void> main() async {
       publishableKey: AppConfig.supabaseAnonKey,
     );
   }
+
+  // Deliberately not awaited. Starting the ads SDK means a consent lookup and
+  // a network round trip, and none of the app depends on the result — making
+  // the first frame wait on it would trade a working launch for an advert.
+  unawaited(AdService.initialize());
 
   runApp(
     ProviderScope(
