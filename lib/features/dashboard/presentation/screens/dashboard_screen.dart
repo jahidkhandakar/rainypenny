@@ -53,7 +53,10 @@ class DashboardScreen extends ConsumerWidget {
           child: RefreshIndicator(
             onRefresh: () async {
               ref.invalidate(transactionsProvider);
-              await ref.read(cycleSummaryProvider.future);
+              // Waits on what the screen actually shows, so the indicator
+              // disappears when the figures below it are ready rather than
+              // when an unrelated provider happens to settle.
+              await ref.read(dashboardSummaryProvider.future);
             },
             child: ListView(
               padding: const EdgeInsets.fromLTRB(

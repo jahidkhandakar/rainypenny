@@ -322,13 +322,20 @@ final dashboardSummaryProvider = FutureProvider<PeriodSummary>((ref) {
   return ref.watch(periodSummaryProvider(ref.watch(dashboardRangeProvider)).future);
 });
 
-/// Budgets joined against the spend for the salary cycle being viewed.
+/// Budgets joined against the spend for the period the dashboard is showing.
 ///
-/// Scoped to the cycle rather than a trailing window: a monthly budget that
-/// resets on payday is the only kind that makes sense to someone paid monthly,
-/// and it means stepping back a month shows that month's budget performance.
+/// The same period as everything else on that screen, and that is the whole
+/// point. These were scoped to the salary cycle while the spending donut above
+/// them moved to the selected range, so the two disagreed about the same
+/// category: with the demo ledger on 1 October, Spending overview put housing
+/// at 1,850 while Budget progress measured it as 950. Two numbers for one
+/// thing, side by side.
+///
+/// The trade-off is that a monthly limit is now compared against whatever
+/// window is selected, so "Today" shows a nearly untouched budget. Reading low
+/// is a smaller problem than reading differently from the chart beside it.
 final budgetsProvider = FutureProvider<List<Budget>>((ref) async {
-  final summary = await ref.watch(cycleSummaryProvider.future);
+  final summary = await ref.watch(dashboardSummaryProvider.future);
   return ref
       .watch(budgetRepositoryProvider)
       .getBudgets(CycleCalculator.spendByCategoryId(summary.spendingByCategory));
