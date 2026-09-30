@@ -97,6 +97,11 @@ abstract final class DemoDataset {
     name: 'Travel',
     icon: CategoryIcon.travel,
   );
+  static const family = Category(
+    id: 'family',
+    name: 'Family',
+    icon: CategoryIcon.family,
+  );
   static const other = Category(
     id: 'other',
     name: 'Other',
@@ -127,6 +132,18 @@ abstract final class DemoDataset {
     icon: CategoryIcon.gift,
     isIncome: true,
   );
+  static const business = Category(
+    id: 'business',
+    name: 'Business',
+    icon: CategoryIcon.business,
+    isIncome: true,
+  );
+  static const otherIncome = Category(
+    id: 'other_income',
+    name: 'Other income',
+    icon: CategoryIcon.other,
+    isIncome: true,
+  );
 
   static const List<Category> expenseCategories = [
     food,
@@ -138,14 +155,17 @@ abstract final class DemoDataset {
     health,
     education,
     travel,
+    family,
     other,
   ];
 
   static const List<Category> incomeCategories = [
     salary,
     freelance,
+    business,
     investments,
     refunds,
+    otherIncome,
   ];
 
   // ---------------------------------------------------------------------------

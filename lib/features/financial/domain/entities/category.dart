@@ -50,6 +50,7 @@ enum CategoryIcon {
   rent,
   mortgage,
   bonus,
+  business,
   commission,
   pension,
   interest,
