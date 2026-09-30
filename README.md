@@ -35,7 +35,17 @@ and that the headline number can never disagree with the list beneath it.
 
 ## Running it
 
-The app runs with no backend at all. With no Supabase credentials it uses a
+**First, after cloning, create your `.env`:**
+
+```bash
+cp .env.example .env
+```
+
+This step is required. `.env` is git-ignored but declared as a Flutter asset,
+so without it the build stops at `No file or variants found for asset: .env`
+rather than at anything that explains itself.
+
+The app runs with no backend at all. Leave both values empty and it uses a
 bundled in-memory dataset, signs a demo user in automatically, and every screen
 behaves exactly as it would against a real database.
 
@@ -43,11 +53,15 @@ behaves exactly as it would against a real database.
 flutter run
 ```
 
-To run against Supabase, pass the credentials at build time:
+To run against Supabase, put your own project's credentials in `.env`:
 
-```bash
-flutter run --dart-define=SUPABASE_URL=https://YOUR-PROJECT.supabase.co --dart-define=SUPABASE_ANON_KEY=YOUR_PUBLISHABLE_KEY
 ```
+SUPABASE_URL=https://YOUR-PROJECT.supabase.co
+SUPABASE_ANON_KEY=YOUR_PUBLISHABLE_KEY
+```
+
+Real credentials must never be committed — `.env` stays git-ignored, and
+`.env.example` is the copy that is safe to share.
 
 Settings → Data source shows which backend the running build is using.
 

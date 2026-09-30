@@ -5,11 +5,24 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 /// With missing or empty credentials, the app runs entirely on the
 /// in-memory mock backend, preserving demo and widget test behavior.
 abstract final class AppConfig {
+  /// A value from the loaded `.env`, or empty when there is nothing to read.
+  ///
+  /// `dotenv.get`'s own `fallback` only covers a key that is missing from a
+  /// file that *has* been loaded. Reading before `dotenv.load` throws
+  /// `NotInitializedError` instead, and only `main` ever calls load — so every
+  /// widget test that built a screen touching this threw, seventeen of them.
+  ///
+  /// Treating "not loaded" as "no credentials" is what the class already
+  /// promises above: with nothing configured, the app runs on the in-memory
+  /// backend, which is exactly what a test wants.
+  static String _read(String key) =>
+      dotenv.isInitialized ? dotenv.get(key, fallback: '') : '';
+
   /// Reads SUPABASE_URL from the .env file at runtime.
-  static String get supabaseUrl => dotenv.get('SUPABASE_URL', fallback: '');
+  static String get supabaseUrl => _read('SUPABASE_URL');
 
   /// Reads SUPABASE_ANON_KEY from the .env file at runtime.
-  static String get supabaseAnonKey => dotenv.get('SUPABASE_ANON_KEY', fallback: '');
+  static String get supabaseAnonKey => _read('SUPABASE_ANON_KEY');
 
   /// True once both credentials are present in the loaded environment.
   static bool get hasBackend => supabaseUrl.isNotEmpty && supabaseAnonKey.isNotEmpty;
