@@ -39,7 +39,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byIcon(Icons.add_rounded).first);
+    await tester.tap(addButtonFinder);
     await tester.pumpAndSettle();
 
     expect(find.text('What would you like to do?'), findsOneWidget);
@@ -71,7 +71,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byIcon(Icons.add_rounded).first);
+    await tester.tap(addButtonFinder);
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Add expense'));
@@ -90,7 +90,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byIcon(Icons.add_rounded).first);
+    await tester.tap(addButtonFinder);
     await tester.pumpAndSettle();
 
     // Add budget chains a category picker after the menu closes; the two must
@@ -107,7 +107,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
 
-    await tester.longPress(find.byIcon(Icons.add_rounded).first);
+    await tester.longPress(addButtonFinder);
     await tester.pumpAndSettle();
 
     expect(find.text('Add transaction'), findsOneWidget);

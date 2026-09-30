@@ -70,7 +70,7 @@ void main() {
     // for every language — so the loop asserts it found each one rather than
     // quietly moving on.
     for (final icon in [
-      CupertinoIcons.doc_plaintext,
+      CupertinoIcons.doc_text,
       CupertinoIcons.chart_bar,
       CupertinoIcons.person,
       CupertinoIcons.house,
@@ -87,6 +87,12 @@ void main() {
       await tester.pumpAndSettle();
     }
 
+    // Restored here rather than only in tearDown. The caller's `expect` runs
+    // before tearDown does, and an `expect` that fires while this override is
+    // still installed corrupts the framework's error handling: the real reason
+    // is replaced by a binding assertion, and every remaining locale in the
+    // file reports "did not complete". That cost an afternoon once already.
+    FlutterError.onError = previous;
     return failures;
   }
 

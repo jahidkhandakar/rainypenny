@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rainypenny/app.dart';
 import 'package:rainypenny/core/di/providers.dart';
 import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/dashboard/presentation/widgets/salary_card.dart';
+import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_header.dart';
 import 'package:rainypenny/features/auth/data/repositories/mock_auth_repository.dart';
 import 'package:rainypenny/features/auth/domain/repositories/auth_repository.dart';
 import 'package:rainypenny/features/auth/presentation/controllers/auth_controller.dart';
@@ -70,8 +71,27 @@ Widget bootApp({
 ///
 /// One finder rather than a text literal repeated across four files. It was
 /// previously the hero card's label, which meant that renaming that one string
-/// broke eleven tests, none of which were about the label.
-final dashboardMarker = find.byType(SalaryCard);
+/// broke eleven tests, none of which were about the label. It then pointed at
+/// the hero card itself, which broke again when that card was replaced.
+///
+/// The header is the steadier anchor: it sits outside the screen's loading
+/// state, so it is there whether the figures have arrived or not, and it is
+/// not a candidate for redesign the way the cards below it are.
+final dashboardMarker = find.byType(DashboardHeader);
+
+/// The centre "add" button in the bottom bar.
+///
+/// `find.byIcon(CupertinoIcons.add).first` used to be enough. The dashboard
+/// now carries its own small add controls (add a budget, add a goal), and the
+/// first match became one of those — a widget below the fold that a tap cannot
+/// reach, which failed as an off-screen hit test rather than as a missing
+/// button. The bar's glyph is the larger one, so matching on its size keeps
+/// this pointed at the button these tests actually mean.
+final addButtonFinder = find.byWidgetPredicate(
+  (widget) =>
+      widget is Icon && widget.icon == CupertinoIcons.add && widget.size == 28,
+  description: 'the centre add button in the bottom bar',
+);
 
 /// Pumps past the splash delay and lets everything settle.
 Future<void> boot(

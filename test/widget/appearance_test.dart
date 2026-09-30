@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rainypenny/core/settings/settings_store.dart';
@@ -15,9 +16,9 @@ void main() {
   /// Profile → Settings, where the accent swatches are repeated inline.
   Future<void> openSettings(WidgetTester tester) async {
     // The bar renders the outlined variant for the tab you are not on.
-    await tester.tap(find.byIcon(Icons.person_outline));
+    await tester.tap(find.byIcon(CupertinoIcons.person));
     await tester.pumpAndSettle();
-    await tester.tap(find.byIcon(Icons.settings_outlined));
+    await tester.tap(find.byIcon(CupertinoIcons.gear));
     await tester.pumpAndSettle();
   }
 

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rainypenny/core/settings/settings_store.dart';
@@ -160,7 +161,7 @@ void main() {
     final store = storeWith(uses: 0);
     await bootAndWait(tester, store: store, review: review);
 
-    await tester.tap(find.byIcon(Icons.person_outline).first);
+    await tester.tap(find.byIcon(CupertinoIcons.person).first);
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
       find.text('Rate the app'),

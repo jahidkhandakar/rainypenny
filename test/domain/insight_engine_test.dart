@@ -104,14 +104,35 @@ void main() {
   });
 
   group('HealthCalculator', () {
+    // `evaluate` returns null when there is too little activity to score
+    // honestly. The seeded ledger always has enough, so the tests below assert
+    // a score rather than handling a null — and the first test is what says so.
     final health = HealthCalculator.evaluate(
       summary: summary,
       budgets: budgets,
       loans: loans,
     );
 
+    test('the seeded picture is scoreable at all', () {
+      expect(health, isNotNull);
+    });
+
+    test('an account with no activity is not scored', () {
+      // Scoring an empty account would put a number on nothing: the screen
+      // shows an empty state instead.
+      expect(
+        HealthCalculator.evaluate(
+          summary: summary,
+          budgets: budgets,
+          loans: loans,
+          hasTransactions: false,
+        ),
+        isNull,
+      );
+    });
+
     test('scores inside 0-100 with all four factors explained', () {
-      expect(health.score, inInclusiveRange(0, 100));
+      expect(health!.score, inInclusiveRange(0, 100));
       expect(health.factors.length, 4);
       // Each factor names which of the four it is and carries the raw figure
       // behind it, so the presentation layer can word it in any language. The
@@ -135,7 +156,7 @@ void main() {
     });
 
     test('the seeded picture lands in a healthy band', () {
-      expect(health.band, anyOf(HealthBand.good, HealthBand.excellent));
+      expect(health!.band, anyOf(HealthBand.good, HealthBand.excellent));
     });
 
     test('band boundaries', () {
