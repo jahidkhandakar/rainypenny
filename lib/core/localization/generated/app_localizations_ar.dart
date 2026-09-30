@@ -1943,6 +1943,12 @@ class AppL10nAr extends AppL10n {
   String get categoryOther => 'أخرى';
 
   @override
+  String get categoryBusiness => 'الأعمال';
+
+  @override
+  String get categoryOtherIncome => 'دخل آخر';
+
+  @override
   String get categoryGroceries => 'مشتريات البقالة';
 
   @override
@@ -2164,8 +2170,8 @@ class AppL10nAr extends AppL10n {
   String get recommendedBudget => 'الميزانية المقترحة';
 
   @override
-  String get due => 'Due';
+  String get due => 'الاستحقاق';
 
   @override
-  String get dueAmount => 'Due amount';
+  String get dueAmount => 'المبلغ المستحق';
 }

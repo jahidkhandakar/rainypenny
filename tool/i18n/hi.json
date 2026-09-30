@@ -441,7 +441,6 @@
   "categorySalary": "वेतन",
   "categoryFreelance": "फ्रीलांस",
   "categoryInvestments": "निवेश",
-  "categoryRefunds": "रिफंड और उपहार",
   "addCategory": "नई श्रेणी",
   "filterByCategory": "श्रेणी से छाँटें",
   "allCategories": "सभी श्रेणियाँ",
@@ -450,5 +449,9 @@
   "customRange": "कस्टम",
   "selectDateRange": "अवधि चुनें",
   "rangeApplied": "{start} – {end} दिखाया जा रहा है",
-  "allTime": "सभी समय"
+  "allTime": "सभी समय",
+  "categoryBusiness": "व्यवसाय",
+  "categoryOtherIncome": "अन्य आय",
+  "due": "देय",
+  "dueAmount": "देय राशि"
 }

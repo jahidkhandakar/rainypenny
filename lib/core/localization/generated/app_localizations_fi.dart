@@ -1944,6 +1944,12 @@ class AppL10nFi extends AppL10n {
   String get categoryOther => 'Muut';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Ruokaostokset';
 
   @override

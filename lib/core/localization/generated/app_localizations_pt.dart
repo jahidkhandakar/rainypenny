@@ -1940,127 +1940,133 @@ class AppL10nPt extends AppL10n {
   String get categoryInvestments => 'Investimentos';
 
   @override
-  String get categoryGift => 'Gift';
+  String get categoryGift => 'Presente';
 
   @override
   String get categoryOther => 'Outros';
 
   @override
-  String get categoryGroceries => 'Groceries';
+  String get categoryBusiness => 'Negócio';
 
   @override
-  String get categoryDining => 'Dining';
+  String get categoryOtherIncome => 'Outros rendimentos';
 
   @override
-  String get categoryCoffee => 'Coffee';
+  String get categoryGroceries => 'Supermercado';
 
   @override
-  String get categoryUtilities => 'Utilities';
+  String get categoryDining => 'Restaurantes';
+
+  @override
+  String get categoryCoffee => 'Café';
+
+  @override
+  String get categoryUtilities => 'Serviços públicos';
 
   @override
   String get categoryInternet => 'Internet';
 
   @override
-  String get categoryPhone => 'Phone';
+  String get categoryPhone => 'Telefone';
 
   @override
-  String get categoryInsurance => 'Insurance';
+  String get categoryInsurance => 'Seguros';
 
   @override
-  String get categorySubscriptions => 'Subscriptions';
+  String get categorySubscriptions => 'Subscrições';
 
   @override
-  String get categoryPersonalCare => 'Personal care';
+  String get categoryPersonalCare => 'Cuidados pessoais';
 
   @override
-  String get categoryClothing => 'Clothing';
+  String get categoryClothing => 'Vestuário';
 
   @override
-  String get categoryElectronics => 'Electronics';
+  String get categoryElectronics => 'Eletrónica';
 
   @override
-  String get categoryHomeSupplies => 'Home supplies';
+  String get categoryHomeSupplies => 'Artigos para casa';
 
   @override
-  String get categoryPets => 'Pets';
+  String get categoryPets => 'Animais de estimação';
 
   @override
-  String get categoryChildcare => 'Childcare';
+  String get categoryChildcare => 'Creche';
 
   @override
-  String get categoryFamily => 'Family';
+  String get categoryFamily => 'Família';
 
   @override
   String get categoryFitness => 'Fitness';
 
   @override
-  String get categorySports => 'Sports';
+  String get categorySports => 'Desporto';
 
   @override
-  String get categoryMedicine => 'Medicine';
+  String get categoryMedicine => 'Medicamentos';
 
   @override
-  String get categoryMedical => 'Medical';
+  String get categoryMedical => 'Saúde';
 
   @override
-  String get categoryCharity => 'Charity';
+  String get categoryCharity => 'Solidariedade';
 
   @override
-  String get categoryTaxes => 'Taxes';
+  String get categoryTaxes => 'Impostos';
 
   @override
-  String get categoryFees => 'Fees';
+  String get categoryFees => 'Taxas';
 
   @override
-  String get categoryDebt => 'Debt';
+  String get categoryDebt => 'Dívida';
 
   @override
-  String get categorySavings => 'Savings';
+  String get categorySavings => 'Poupança';
 
   @override
-  String get categoryRepairs => 'Repairs';
+  String get categoryRepairs => 'Reparações';
 
   @override
-  String get categoryCarMaintenance => 'Car maintenance';
+  String get categoryCarMaintenance => 'Manutenção do carro';
 
   @override
-  String get categoryFuel => 'Fuel';
+  String get categoryFuel => 'Combustível';
 
   @override
-  String get categoryParking => 'Parking';
+  String get categoryParking => 'Estacionamento';
 
   @override
-  String get categoryPublicTransport => 'Public transport';
+  String get categoryPublicTransport => 'Transportes públicos';
 
   @override
-  String get categoryRent => 'Rent';
+  String get categoryRent => 'Renda';
 
   @override
-  String get categoryMortgage => 'Mortgage';
+  String get categoryMortgage => 'Crédito habitação';
 
   @override
-  String get categoryBonus => 'Bonus';
+  String get categoryBonus => 'Bónus';
 
   @override
-  String get categoryCommission => 'Commission';
+  String get categoryCommission => 'Comissão';
 
   @override
-  String get categoryPension => 'Pension';
+  String get categoryPension => 'Pensão';
 
   @override
-  String get categoryInterest => 'Interest';
+  String get categoryInterest => 'Juros';
 
   @override
-  String get categoryDividends => 'Dividends';
+  String get categoryDividends => 'Dividendos';
 
   @override
-  String get categoryCashback => 'Cashback';
+  String get categoryCashback => 'Reembolso em dinheiro';
 
   @override
-  String get categoryRefund => 'Refund';
+  String get categoryRefund => 'Reembolso';
 
   @override
-  String get categoryRentalIncome => 'Rental income';
+  String get categoryRentalIncome => 'Rendimento de arrendamento';
 
   @override
   String get addCategory => 'Nova categoria';
@@ -2094,49 +2100,50 @@ class AppL10nPt extends AppL10n {
   }
 
   @override
-  String get loans => 'Loans';
+  String get loans => 'Empréstimos';
 
   @override
-  String get debts => 'Debts';
+  String get debts => 'Dívidas';
 
   @override
-  String get noLoansTitle => 'No loans';
+  String get noLoansTitle => 'Sem empréstimos';
 
   @override
-  String get noLoansBody => 'You have no active loans.';
+  String get noLoansBody => 'Não tem empréstimos ativos.';
 
   @override
-  String get emptyHealthTitle => 'No Financial Score Yet';
+  String get emptyHealthTitle => 'Ainda sem pontuação financeira';
 
   @override
   String get emptyHealthDescription =>
-      'We need a little financial activity before we can calculate an accurate health score.';
+      'Precisamos de alguma atividade financeira antes de calcular uma pontuação fiável.';
 
   @override
-  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+  String get emptyHealthAddTransactions => 'Adicione receitas ou despesas';
 
   @override
-  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+  String get emptyHealthSetBudgets => 'Defina os seus orçamentos mensais';
 
   @override
-  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+  String get emptyHealthTrackLoans =>
+      'Acompanhe empréstimos ou dívidas (opcional)';
 
   @override
   String get emptyHealthCardSubtitle =>
-      'Add transactions to calculate your score and get insights.';
+      'Adicione transações para calcular a sua pontuação e obter sugestões.';
 
   @override
-  String get smartBudgetSplit => 'Smart Budget Split';
+  String get smartBudgetSplit => 'Divisão inteligente do orçamento';
 
   @override
   String get smartBudgetSplitSubtitle =>
-      'Enter your monthly salary to calculate recommended limits';
+      'Introduza o seu salário mensal para calcular os limites recomendados';
 
   @override
-  String get monthlyNetSalary => 'Monthly Net Salary';
+  String get monthlyNetSalary => 'Salário líquido mensal';
 
   @override
-  String get categoryAllocations => 'Category Allocations';
+  String get categoryAllocations => 'Distribuição por categoria';
 
   @override
   String totalBudgeted(String amount) {
@@ -2144,31 +2151,31 @@ class AppL10nPt extends AppL10n {
   }
 
   @override
-  String get applyAllBudgets => 'Apply All Budgets';
+  String get applyAllBudgets => 'Aplicar todos os orçamentos';
 
   @override
-  String get applyingBudgets => 'Applying budgets...';
+  String get applyingBudgets => 'A aplicar orçamentos...';
 
   @override
   String budgetsCreatedSuccess(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count category budgets created.',
-      one: '1 category budget created.',
+      other: '$count orçamentos de categoria criados.',
+      one: '1 orçamento de categoria criado.',
     );
     return '$_temp0';
   }
 
   @override
-  String get failedToSaveBudgets => 'Failed to save budgets.';
+  String get failedToSaveBudgets => 'Não foi possível guardar os orçamentos.';
 
   @override
-  String get recommendedBudget => 'Recommended budget';
+  String get recommendedBudget => 'Orçamento recomendado';
 
   @override
-  String get due => 'Due';
+  String get due => 'Vencimento';
 
   @override
-  String get dueAmount => 'Due amount';
+  String get dueAmount => 'Valor a pagar';
 }

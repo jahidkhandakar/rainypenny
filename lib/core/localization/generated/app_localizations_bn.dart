@@ -1928,6 +1928,12 @@ class AppL10nBn extends AppL10n {
   String get categoryOther => 'অন্যান্য';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'মুদি বাজার';
 
   @override

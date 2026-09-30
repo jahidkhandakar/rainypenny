@@ -1954,6 +1954,12 @@ class AppL10nCs extends AppL10n {
   String get categoryOther => 'Ostatní';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Potraviny';
 
   @override

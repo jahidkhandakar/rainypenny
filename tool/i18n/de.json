@@ -442,7 +442,6 @@
   "categorySalary": "Gehalt",
   "categoryFreelance": "Freiberuflich",
   "categoryInvestments": "Investitionen",
-  "categoryRefunds": "Erstattungen und Geschenke",
   "addCategory": "Neue Kategorie",
   "filterByCategory": "Nach Kategorie filtern",
   "allCategories": "Alle Kategorien",
@@ -451,5 +450,9 @@
   "allTime": "Gesamter Zeitraum",
   "customRange": "Benutzerdefiniert",
   "selectDateRange": "Zeitraum wählen",
-  "rangeApplied": "Zeigt {start} – {end}"
+  "rangeApplied": "Zeigt {start} – {end}",
+  "categoryBusiness": "Geschäft",
+  "categoryOtherIncome": "Sonstige Einnahmen",
+  "due": "Fällig",
+  "dueAmount": "Fälliger Betrag"
 }

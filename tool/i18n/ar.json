@@ -441,7 +441,6 @@
   "categorySalary": "الراتب",
   "categoryFreelance": "العمل الحر",
   "categoryInvestments": "الاستثمارات",
-  "categoryRefunds": "المستردات والهدايا",
   "addCategory": "فئة جديدة",
   "filterByCategory": "تصفية حسب الفئة",
   "allCategories": "كل الفئات",
@@ -450,5 +449,9 @@
   "customRange": "مخصص",
   "selectDateRange": "اختر فترة",
   "rangeApplied": "عرض {start} – {end}",
-  "allTime": "كل الفترات"
+  "allTime": "كل الفترات",
+  "categoryBusiness": "الأعمال",
+  "categoryOtherIncome": "دخل آخر",
+  "due": "الاستحقاق",
+  "dueAmount": "المبلغ المستحق"
 }

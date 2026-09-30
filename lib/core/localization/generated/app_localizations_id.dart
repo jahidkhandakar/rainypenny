@@ -1933,6 +1933,12 @@ class AppL10nId extends AppL10n {
   String get categoryOther => 'Lainnya';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Belanja kebutuhan';
 
   @override

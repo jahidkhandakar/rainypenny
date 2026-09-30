@@ -555,6 +555,8 @@
   "categoryInvestments": "Investitionen",
   "categoryGift": "Geschenk",
   "categoryOther": "Sonstiges",
+  "categoryBusiness": "Geschäft",
+  "categoryOtherIncome": "Sonstige Einnahmen",
   "categoryGroceries": "Lebensmittel",
   "categoryDining": "Restaurant",
   "categoryCoffee": "Kaffee",
@@ -622,5 +624,7 @@
   "applyingBudgets": "Budgets werden angewendet...",
   "budgetsCreatedSuccess": "{count, plural, =1{1 Kategorie-Budget erstellt.} other{{count} Kategorie-Budgets erstellt.}}",
   "failedToSaveBudgets": "Budgets konnten nicht gespeichert werden.",
-  "recommendedBudget": "Empfohlenes Budget"
+  "recommendedBudget": "Empfohlenes Budget",
+  "due": "Fällig",
+  "dueAmount": "Fälliger Betrag"
 }

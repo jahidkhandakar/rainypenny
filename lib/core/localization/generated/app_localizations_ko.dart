@@ -1868,6 +1868,12 @@ class AppL10nKo extends AppL10n {
   String get categoryOther => '기타';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => '식료품';
 
   @override

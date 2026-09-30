@@ -1949,6 +1949,12 @@ class AppL10nDe extends AppL10n {
   String get categoryOther => 'Sonstiges';
 
   @override
+  String get categoryBusiness => 'Geschäft';
+
+  @override
+  String get categoryOtherIncome => 'Sonstige Einnahmen';
+
+  @override
   String get categoryGroceries => 'Lebensmittel';
 
   @override
@@ -2171,8 +2177,8 @@ class AppL10nDe extends AppL10n {
   String get recommendedBudget => 'Empfohlenes Budget';
 
   @override
-  String get due => 'Due';
+  String get due => 'Fällig';
 
   @override
-  String get dueAmount => 'Due amount';
+  String get dueAmount => 'Fälliger Betrag';
 }

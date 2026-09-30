@@ -555,6 +555,8 @@
   "categoryInvestments": "الاستثمارات",
   "categoryGift": "الهدايا",
   "categoryOther": "أخرى",
+  "categoryBusiness": "الأعمال",
+  "categoryOtherIncome": "دخل آخر",
   "categoryGroceries": "مشتريات البقالة",
   "categoryDining": "المطاعم",
   "categoryCoffee": "القهوة",
@@ -622,5 +624,7 @@
   "applyingBudgets": "جارٍ تطبيق الميزانيات...",
   "budgetsCreatedSuccess": "{count, plural, =1{تم إنشاء ميزانية لفئة واحدة.} other{تم إنشاء ميزانيات لـ {count} فئات.}}",
   "failedToSaveBudgets": "فشل حفظ الميزانيات.",
-  "recommendedBudget": "الميزانية المقترحة"
+  "recommendedBudget": "الميزانية المقترحة",
+  "due": "الاستحقاق",
+  "dueAmount": "المبلغ المستحق"
 }

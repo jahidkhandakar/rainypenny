@@ -1938,6 +1938,12 @@ class AppL10nHu extends AppL10n {
   String get categoryOther => 'Egyéb';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Élelmiszer';
 
   @override

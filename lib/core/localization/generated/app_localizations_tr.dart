@@ -1934,127 +1934,133 @@ class AppL10nTr extends AppL10n {
   String get categoryInvestments => 'Yatırımlar';
 
   @override
-  String get categoryGift => 'Gift';
+  String get categoryGift => 'Hediye';
 
   @override
   String get categoryOther => 'Diğer';
 
   @override
-  String get categoryGroceries => 'Groceries';
+  String get categoryBusiness => 'İşletme';
 
   @override
-  String get categoryDining => 'Dining';
+  String get categoryOtherIncome => 'Diğer gelir';
 
   @override
-  String get categoryCoffee => 'Coffee';
+  String get categoryGroceries => 'Market';
 
   @override
-  String get categoryUtilities => 'Utilities';
+  String get categoryDining => 'Restoran';
 
   @override
-  String get categoryInternet => 'Internet';
+  String get categoryCoffee => 'Kahve';
 
   @override
-  String get categoryPhone => 'Phone';
+  String get categoryUtilities => 'Kamu hizmetleri';
 
   @override
-  String get categoryInsurance => 'Insurance';
+  String get categoryInternet => 'İnternet';
 
   @override
-  String get categorySubscriptions => 'Subscriptions';
+  String get categoryPhone => 'Telefon';
 
   @override
-  String get categoryPersonalCare => 'Personal care';
+  String get categoryInsurance => 'Sigorta';
 
   @override
-  String get categoryClothing => 'Clothing';
+  String get categorySubscriptions => 'Abonelikler';
 
   @override
-  String get categoryElectronics => 'Electronics';
+  String get categoryPersonalCare => 'Kişisel bakım';
 
   @override
-  String get categoryHomeSupplies => 'Home supplies';
+  String get categoryClothing => 'Giyim';
 
   @override
-  String get categoryPets => 'Pets';
+  String get categoryElectronics => 'Elektronik';
 
   @override
-  String get categoryChildcare => 'Childcare';
+  String get categoryHomeSupplies => 'Ev malzemeleri';
 
   @override
-  String get categoryFamily => 'Family';
+  String get categoryPets => 'Evcil hayvanlar';
+
+  @override
+  String get categoryChildcare => 'Çocuk bakımı';
+
+  @override
+  String get categoryFamily => 'Aile';
 
   @override
   String get categoryFitness => 'Fitness';
 
   @override
-  String get categorySports => 'Sports';
+  String get categorySports => 'Spor';
 
   @override
-  String get categoryMedicine => 'Medicine';
+  String get categoryMedicine => 'İlaç';
 
   @override
-  String get categoryMedical => 'Medical';
+  String get categoryMedical => 'Tıbbi';
 
   @override
-  String get categoryCharity => 'Charity';
+  String get categoryCharity => 'Bağış';
 
   @override
-  String get categoryTaxes => 'Taxes';
+  String get categoryTaxes => 'Vergiler';
 
   @override
-  String get categoryFees => 'Fees';
+  String get categoryFees => 'Ücretler';
 
   @override
-  String get categoryDebt => 'Debt';
+  String get categoryDebt => 'Borç';
 
   @override
-  String get categorySavings => 'Savings';
+  String get categorySavings => 'Birikim';
 
   @override
-  String get categoryRepairs => 'Repairs';
+  String get categoryRepairs => 'Onarım';
 
   @override
-  String get categoryCarMaintenance => 'Car maintenance';
+  String get categoryCarMaintenance => 'Araç bakımı';
 
   @override
-  String get categoryFuel => 'Fuel';
+  String get categoryFuel => 'Yakıt';
 
   @override
-  String get categoryParking => 'Parking';
+  String get categoryParking => 'Otopark';
 
   @override
-  String get categoryPublicTransport => 'Public transport';
+  String get categoryPublicTransport => 'Toplu taşıma';
 
   @override
-  String get categoryRent => 'Rent';
+  String get categoryRent => 'Kira';
 
   @override
-  String get categoryMortgage => 'Mortgage';
+  String get categoryMortgage => 'Konut kredisi';
 
   @override
-  String get categoryBonus => 'Bonus';
+  String get categoryBonus => 'Prim';
 
   @override
-  String get categoryCommission => 'Commission';
+  String get categoryCommission => 'Komisyon';
 
   @override
-  String get categoryPension => 'Pension';
+  String get categoryPension => 'Emeklilik';
 
   @override
-  String get categoryInterest => 'Interest';
+  String get categoryInterest => 'Faiz';
 
   @override
-  String get categoryDividends => 'Dividends';
+  String get categoryDividends => 'Temettü';
 
   @override
-  String get categoryCashback => 'Cashback';
+  String get categoryCashback => 'Nakit iade';
 
   @override
-  String get categoryRefund => 'Refund';
+  String get categoryRefund => 'İade';
 
   @override
-  String get categoryRentalIncome => 'Rental income';
+  String get categoryRentalIncome => 'Kira geliri';
 
   @override
   String get addCategory => 'Yeni kategori';
@@ -2088,81 +2094,82 @@ class AppL10nTr extends AppL10n {
   }
 
   @override
-  String get loans => 'Loans';
+  String get loans => 'Krediler';
 
   @override
-  String get debts => 'Debts';
+  String get debts => 'Borçlar';
 
   @override
-  String get noLoansTitle => 'No loans';
+  String get noLoansTitle => 'Kredi yok';
 
   @override
-  String get noLoansBody => 'You have no active loans.';
+  String get noLoansBody => 'Aktif krediniz yok.';
 
   @override
-  String get emptyHealthTitle => 'No Financial Score Yet';
+  String get emptyHealthTitle => 'Henüz finansal puan yok';
 
   @override
   String get emptyHealthDescription =>
-      'We need a little financial activity before we can calculate an accurate health score.';
+      'Doğru bir sağlık puanı hesaplayabilmemiz için biraz finansal hareket gerekiyor.';
 
   @override
-  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+  String get emptyHealthAddTransactions => 'Gelir veya gider ekleyin';
 
   @override
-  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+  String get emptyHealthSetBudgets => 'Aylık bütçelerinizi oluşturun';
 
   @override
-  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+  String get emptyHealthTrackLoans =>
+      'Kredi veya borç takibi yapın (isteğe bağlı)';
 
   @override
   String get emptyHealthCardSubtitle =>
-      'Add transactions to calculate your score and get insights.';
+      'Puanınızı hesaplamak ve öneriler almak için işlem ekleyin.';
 
   @override
-  String get smartBudgetSplit => 'Smart Budget Split';
+  String get smartBudgetSplit => 'Akıllı bütçe dağılımı';
 
   @override
   String get smartBudgetSplitSubtitle =>
-      'Enter your monthly salary to calculate recommended limits';
+      'Önerilen limitleri hesaplamak için aylık maaşınızı girin';
 
   @override
-  String get monthlyNetSalary => 'Monthly Net Salary';
+  String get monthlyNetSalary => 'Aylık net maaş';
 
   @override
-  String get categoryAllocations => 'Category Allocations';
+  String get categoryAllocations => 'Kategori dağılımları';
 
   @override
   String totalBudgeted(String amount) {
-    return 'Total: $amount';
+    return 'Toplam: $amount';
   }
 
   @override
-  String get applyAllBudgets => 'Apply All Budgets';
+  String get applyAllBudgets => 'Tüm bütçeleri uygula';
 
   @override
-  String get applyingBudgets => 'Applying budgets...';
+  String get applyingBudgets => 'Bütçeler uygulanıyor...';
 
   @override
   String budgetsCreatedSuccess(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count category budgets created.',
-      one: '1 category budget created.',
+      other: '$count kategori bütçesi oluşturuldu.',
+      one: '1 kategori bütçesi oluşturuldu.',
     );
     return '$_temp0';
   }
 
   @override
-  String get failedToSaveBudgets => 'Failed to save budgets.';
+  String get failedToSaveBudgets => 'Bütçeler kaydedilemedi.';
 
   @override
-  String get recommendedBudget => 'Recommended budget';
+  String get recommendedBudget => 'Önerilen bütçe';
 
   @override
-  String get due => 'Due';
+  String get due => 'Vade';
 
   @override
-  String get dueAmount => 'Due amount';
+  String get dueAmount => 'Ödenecek tutar';
 }

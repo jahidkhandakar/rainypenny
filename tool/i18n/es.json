@@ -441,7 +441,6 @@
   "categorySalary": "Salario",
   "categoryFreelance": "Autónomo",
   "categoryInvestments": "Inversiones",
-  "categoryRefunds": "Reembolsos y regalos",
   "addCategory": "Nueva categoría",
   "filterByCategory": "Filtrar por categoría",
   "allCategories": "Todas las categorías",
@@ -450,5 +449,9 @@
   "allTime": "Todo el historial",
   "customRange": "Personalizado",
   "selectDateRange": "Elegir un periodo",
-  "rangeApplied": "Mostrando {start} – {end}"
+  "rangeApplied": "Mostrando {start} – {end}",
+  "categoryBusiness": "Negocio",
+  "categoryOtherIncome": "Otros ingresos",
+  "due": "Vencimiento",
+  "dueAmount": "Importe a pagar"
 }

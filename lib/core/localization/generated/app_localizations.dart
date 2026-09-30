@@ -3506,6 +3506,18 @@ abstract class AppL10n {
   /// **'Other'**
   String get categoryOther;
 
+  /// No description provided for @categoryBusiness.
+  ///
+  /// In en, this message translates to:
+  /// **'Business'**
+  String get categoryBusiness;
+
+  /// No description provided for @categoryOtherIncome.
+  ///
+  /// In en, this message translates to:
+  /// **'Other income'**
+  String get categoryOtherIncome;
+
   /// No description provided for @categoryGroceries.
   ///
   /// In en, this message translates to:

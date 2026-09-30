@@ -1942,6 +1942,12 @@ class AppL10nDa extends AppL10n {
   String get categoryOther => 'Andet';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Dagligvarer';
 
   @override

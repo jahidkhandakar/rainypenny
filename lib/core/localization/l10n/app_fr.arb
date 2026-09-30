@@ -555,6 +555,8 @@
   "categoryInvestments": "Investissements",
   "categoryGift": "Cadeau",
   "categoryOther": "Autre",
+  "categoryBusiness": "Entreprise",
+  "categoryOtherIncome": "Autres revenus",
   "categoryGroceries": "Courses",
   "categoryDining": "Restaurants",
   "categoryCoffee": "Café",
@@ -622,5 +624,7 @@
   "applyingBudgets": "Application des budgets...",
   "budgetsCreatedSuccess": "{count, plural, =1{1 budget de catégorie créé.} other{{count} budgets de catégorie créés.}}",
   "failedToSaveBudgets": "Échec de l'enregistrement des budgets.",
-  "recommendedBudget": "Budget recommandé"
+  "recommendedBudget": "Budget recommandé",
+  "due": "Échéance",
+  "dueAmount": "Montant dû"
 }

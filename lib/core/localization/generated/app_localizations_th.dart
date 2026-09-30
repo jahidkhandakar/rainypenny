@@ -1912,6 +1912,12 @@ class AppL10nTh extends AppL10n {
   String get categoryOther => 'Other';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Groceries';
 
   @override

@@ -1927,127 +1927,133 @@ class AppL10nUr extends AppL10n {
   String get categoryInvestments => 'سرمایہ کاری';
 
   @override
-  String get categoryGift => 'Gift';
+  String get categoryGift => 'تحفہ';
 
   @override
   String get categoryOther => 'دیگر';
 
   @override
-  String get categoryGroceries => 'Groceries';
+  String get categoryBusiness => 'کاروبار';
 
   @override
-  String get categoryDining => 'Dining';
+  String get categoryOtherIncome => 'دیگر آمدنی';
 
   @override
-  String get categoryCoffee => 'Coffee';
+  String get categoryGroceries => 'گروسری';
 
   @override
-  String get categoryUtilities => 'Utilities';
+  String get categoryDining => 'باہر کھانا';
 
   @override
-  String get categoryInternet => 'Internet';
+  String get categoryCoffee => 'کافی';
 
   @override
-  String get categoryPhone => 'Phone';
+  String get categoryUtilities => 'یوٹیلیٹیز';
 
   @override
-  String get categoryInsurance => 'Insurance';
+  String get categoryInternet => 'انٹرنیٹ';
 
   @override
-  String get categorySubscriptions => 'Subscriptions';
+  String get categoryPhone => 'فون';
 
   @override
-  String get categoryPersonalCare => 'Personal care';
+  String get categoryInsurance => 'انشورنس';
 
   @override
-  String get categoryClothing => 'Clothing';
+  String get categorySubscriptions => 'سبسکرپشنز';
 
   @override
-  String get categoryElectronics => 'Electronics';
+  String get categoryPersonalCare => 'ذاتی نگہداشت';
 
   @override
-  String get categoryHomeSupplies => 'Home supplies';
+  String get categoryClothing => 'کپڑے';
 
   @override
-  String get categoryPets => 'Pets';
+  String get categoryElectronics => 'الیکٹرانکس';
 
   @override
-  String get categoryChildcare => 'Childcare';
+  String get categoryHomeSupplies => 'گھریلو سامان';
 
   @override
-  String get categoryFamily => 'Family';
+  String get categoryPets => 'پالتو جانور';
 
   @override
-  String get categoryFitness => 'Fitness';
+  String get categoryChildcare => 'بچوں کی دیکھ بھال';
 
   @override
-  String get categorySports => 'Sports';
+  String get categoryFamily => 'خاندان';
 
   @override
-  String get categoryMedicine => 'Medicine';
+  String get categoryFitness => 'فٹنس';
 
   @override
-  String get categoryMedical => 'Medical';
+  String get categorySports => 'کھیل';
 
   @override
-  String get categoryCharity => 'Charity';
+  String get categoryMedicine => 'دوائیں';
 
   @override
-  String get categoryTaxes => 'Taxes';
+  String get categoryMedical => 'طبی';
 
   @override
-  String get categoryFees => 'Fees';
+  String get categoryCharity => 'خیرات';
 
   @override
-  String get categoryDebt => 'Debt';
+  String get categoryTaxes => 'ٹیکس';
 
   @override
-  String get categorySavings => 'Savings';
+  String get categoryFees => 'فیس';
 
   @override
-  String get categoryRepairs => 'Repairs';
+  String get categoryDebt => 'قرض';
 
   @override
-  String get categoryCarMaintenance => 'Car maintenance';
+  String get categorySavings => 'بچت';
 
   @override
-  String get categoryFuel => 'Fuel';
+  String get categoryRepairs => 'مرمت';
 
   @override
-  String get categoryParking => 'Parking';
+  String get categoryCarMaintenance => 'گاڑی کی دیکھ بھال';
 
   @override
-  String get categoryPublicTransport => 'Public transport';
+  String get categoryFuel => 'ایندھن';
 
   @override
-  String get categoryRent => 'Rent';
+  String get categoryParking => 'پارکنگ';
 
   @override
-  String get categoryMortgage => 'Mortgage';
+  String get categoryPublicTransport => 'پبلک ٹرانسپورٹ';
 
   @override
-  String get categoryBonus => 'Bonus';
+  String get categoryRent => 'کرایہ';
 
   @override
-  String get categoryCommission => 'Commission';
+  String get categoryMortgage => 'رہن';
 
   @override
-  String get categoryPension => 'Pension';
+  String get categoryBonus => 'بونس';
 
   @override
-  String get categoryInterest => 'Interest';
+  String get categoryCommission => 'کمیشن';
 
   @override
-  String get categoryDividends => 'Dividends';
+  String get categoryPension => 'پنشن';
 
   @override
-  String get categoryCashback => 'Cashback';
+  String get categoryInterest => 'سود';
 
   @override
-  String get categoryRefund => 'Refund';
+  String get categoryDividends => 'منافع منقسمہ';
 
   @override
-  String get categoryRentalIncome => 'Rental income';
+  String get categoryCashback => 'کیش بیک';
+
+  @override
+  String get categoryRefund => 'رقم کی واپسی';
+
+  @override
+  String get categoryRentalIncome => 'کرائے کی آمدنی';
 
   @override
   String get addCategory => 'نئی قسم';
@@ -2081,81 +2087,81 @@ class AppL10nUr extends AppL10n {
   }
 
   @override
-  String get loans => 'Loans';
+  String get loans => 'قرضے';
 
   @override
-  String get debts => 'Debts';
+  String get debts => 'واجبات';
 
   @override
-  String get noLoansTitle => 'No loans';
+  String get noLoansTitle => 'کوئی قرض نہیں';
 
   @override
-  String get noLoansBody => 'You have no active loans.';
+  String get noLoansBody => 'آپ کا کوئی فعال قرض نہیں ہے۔';
 
   @override
-  String get emptyHealthTitle => 'No Financial Score Yet';
+  String get emptyHealthTitle => 'ابھی کوئی مالی اسکور نہیں';
 
   @override
   String get emptyHealthDescription =>
-      'We need a little financial activity before we can calculate an accurate health score.';
+      'درست اسکور بنانے کے لیے ہمیں کچھ مالی سرگرمی درکار ہے۔';
 
   @override
-  String get emptyHealthAddTransactions => 'Add income or expense transactions';
+  String get emptyHealthAddTransactions => 'آمدنی یا اخراجات شامل کریں';
 
   @override
-  String get emptyHealthSetBudgets => 'Set up your monthly budgets';
+  String get emptyHealthSetBudgets => 'اپنے ماہانہ بجٹ ترتیب دیں';
 
   @override
-  String get emptyHealthTrackLoans => 'Track loans or debts (optional)';
+  String get emptyHealthTrackLoans => 'قرض یا واجبات کا حساب رکھیں (اختیاری)';
 
   @override
   String get emptyHealthCardSubtitle =>
-      'Add transactions to calculate your score and get insights.';
+      'اپنا اسکور جاننے اور مشورے لینے کے لیے لین دین شامل کریں۔';
 
   @override
-  String get smartBudgetSplit => 'Smart Budget Split';
+  String get smartBudgetSplit => 'اسمارٹ بجٹ تقسیم';
 
   @override
   String get smartBudgetSplitSubtitle =>
-      'Enter your monthly salary to calculate recommended limits';
+      'تجویز کردہ حدیں جاننے کے لیے اپنی ماہانہ تنخواہ درج کریں';
 
   @override
-  String get monthlyNetSalary => 'Monthly Net Salary';
+  String get monthlyNetSalary => 'ماہانہ خالص تنخواہ';
 
   @override
-  String get categoryAllocations => 'Category Allocations';
+  String get categoryAllocations => 'اقسام کی تقسیم';
 
   @override
   String totalBudgeted(String amount) {
-    return 'Total: $amount';
+    return 'کل: $amount';
   }
 
   @override
-  String get applyAllBudgets => 'Apply All Budgets';
+  String get applyAllBudgets => 'تمام بجٹ لاگو کریں';
 
   @override
-  String get applyingBudgets => 'Applying budgets...';
+  String get applyingBudgets => 'بجٹ لاگو ہو رہے ہیں...';
 
   @override
   String budgetsCreatedSuccess(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count category budgets created.',
-      one: '1 category budget created.',
+      other: '$count اقسام کے بجٹ بن گئے۔',
+      one: '1 قسم کا بجٹ بن گیا۔',
     );
     return '$_temp0';
   }
 
   @override
-  String get failedToSaveBudgets => 'Failed to save budgets.';
+  String get failedToSaveBudgets => 'بجٹ محفوظ نہیں ہو سکے۔';
 
   @override
-  String get recommendedBudget => 'Recommended budget';
+  String get recommendedBudget => 'تجویز کردہ بجٹ';
 
   @override
-  String get due => 'Due';
+  String get due => 'واجب الادا';
 
   @override
-  String get dueAmount => 'Due amount';
+  String get dueAmount => 'واجب الادا رقم';
 }

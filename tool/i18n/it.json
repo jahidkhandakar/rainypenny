@@ -441,7 +441,6 @@
   "categorySalary": "Stipendio",
   "categoryFreelance": "Libera professione",
   "categoryInvestments": "Investimenti",
-  "categoryRefunds": "Rimborsi e regali",
   "addCategory": "Nuova categoria",
   "filterByCategory": "Filtra per categoria",
   "allCategories": "Tutte le categorie",
@@ -450,5 +449,9 @@
   "allTime": "Tutto lo storico",
   "customRange": "Personalizzato",
   "selectDateRange": "Scegli un periodo",
-  "rangeApplied": "Mostra {start} – {end}"
+  "rangeApplied": "Mostra {start} – {end}",
+  "categoryBusiness": "Impresa",
+  "categoryOtherIncome": "Altri redditi",
+  "due": "Scadenza",
+  "dueAmount": "Importo dovuto"
 }

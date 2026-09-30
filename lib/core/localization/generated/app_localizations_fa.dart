@@ -1936,6 +1936,12 @@ class AppL10nFa extends AppL10n {
   String get categoryOther => 'سایر';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'خواربار';
 
   @override

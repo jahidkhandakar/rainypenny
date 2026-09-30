@@ -1941,6 +1941,12 @@ class AppL10nNb extends AppL10n {
   String get categoryOther => 'Annet';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Dagligvarer';
 
   @override

@@ -1951,6 +1951,12 @@ class AppL10nEl extends AppL10n {
   String get categoryOther => 'Διάφορα';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'Σούπερ μάρκετ';
 
   @override

@@ -1929,6 +1929,12 @@ class AppL10nMr extends AppL10n {
   String get categoryOther => 'इतर';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => 'किराणा';
 
   @override

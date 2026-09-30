@@ -1864,6 +1864,12 @@ class AppL10nJa extends AppL10n {
   String get categoryOther => 'その他';
 
   @override
+  String get categoryBusiness => 'Business';
+
+  @override
+  String get categoryOtherIncome => 'Other income';
+
+  @override
   String get categoryGroceries => '食料品';
 
   @override

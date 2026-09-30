@@ -555,6 +555,8 @@
   "categoryInvestments": "निवेश",
   "categoryGift": "उपहार",
   "categoryOther": "अन्य",
+  "categoryBusiness": "व्यवसाय",
+  "categoryOtherIncome": "अन्य आय",
   "categoryGroceries": "किराने का सामान",
   "categoryDining": "बाहर खाना",
   "categoryCoffee": "कॉफ़ी",
@@ -622,5 +624,7 @@
   "applyingBudgets": "बजट लागू किए जा रहे हैं...",
   "budgetsCreatedSuccess": "{count, plural, =1{1 श्रेणी का बजट बनाया गया।} other{{count} श्रेणियों के बजट बनाए गए।}}",
   "failedToSaveBudgets": "बजट सहेजने में विफल।",
-  "recommendedBudget": "अनुशंसित बजट"
+  "recommendedBudget": "अनुशंसित बजट",
+  "due": "देय",
+  "dueAmount": "देय राशि"
 }
