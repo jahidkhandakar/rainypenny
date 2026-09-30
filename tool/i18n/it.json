@@ -453,5 +453,13 @@
   "categoryBusiness": "Impresa",
   "categoryOtherIncome": "Altri redditi",
   "due": "Scadenza",
-  "dueAmount": "Importo dovuto"
+  "dueAmount": "Importo dovuto",
+  "paymentHistory": "Cronologia pagamenti",
+  "noPaymentsYet": "Nessun pagamento registrato",
+  "noPaymentsYetBody": "I pagamenti che registri compariranno qui.",
+  "lastPayment": "Ultimo pagamento",
+  "paymentsRecorded": "{count, plural, =1{1 pagamento} other{{count} pagamenti}}",
+  "totalPaid": "Totale pagato",
+  "debtNote": "Nota",
+  "debtNoteHint": "Da quale conto esce, chi contattare, perché lo hai acceso"
 }

@@ -3,6 +3,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../domain/entities/budget.dart';
 import '../../domain/entities/category.dart';
 import '../../domain/entities/loan.dart';
+import '../../domain/entities/loan_payment.dart';
 import '../../domain/entities/savings_goal.dart';
 import '../../domain/entities/transaction.dart';
 import '../../domain/entities/user_profile.dart';
@@ -220,6 +221,21 @@ class SupabaseFinanceDataSource implements FinanceDataSource {
       'record_loan_payment',
       params: {'p_loan_id': loanId, 'p_amount': amount},
     );
+  }
+
+  @override
+  Future<List<LoanPayment>> fetchLoanPayments(String loanId) async {
+    // Row-level security already limits this to the signed-in user's rows, so
+    // the loan filter is about which debt, not about whose.
+    final rows = await _client
+        .from('loan_payments')
+        .select()
+        .eq('loan_id', loanId)
+        .order('paid_at', ascending: false);
+
+    return (rows as List)
+        .map((row) => LoanPaymentMapper.fromRow(row as Map<String, dynamic>))
+        .toList();
   }
 
   // ---------------------------------------------------------------------------

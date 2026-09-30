@@ -555,6 +555,14 @@
   "categoryInvestments": "Investimentos",
   "categoryGift": "Presente",
   "categoryOther": "Outros",
+  "paymentHistory": "Histórico de pagamentos",
+  "noPaymentsYet": "Ainda sem pagamentos registados",
+  "noPaymentsYetBody": "Os pagamentos que registar aparecem aqui.",
+  "lastPayment": "Último pagamento",
+  "paymentsRecorded": "{count, plural, =1{1 pagamento} other{{count} pagamentos}}",
+  "totalPaid": "Total pago",
+  "debtNote": "Nota",
+  "debtNoteHint": "De que conta sai, quem contactar, porque o contraiu",
   "categoryBusiness": "Negócio",
   "categoryOtherIncome": "Outros rendimentos",
   "categoryGroceries": "Supermercado",
@@ -626,6 +634,5 @@
   "failedToSaveBudgets": "Não foi possível guardar os orçamentos.",
   "recommendedBudget": "Orçamento recomendado",
   "due": "Vencimento",
-  "dueAmount": "Valor a pagar",
-  "categoryRefunds": "Reembolsos e presentes"
+  "dueAmount": "Valor a pagar"
 }

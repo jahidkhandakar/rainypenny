@@ -453,5 +453,13 @@
   "categoryBusiness": "व्यवसाय",
   "categoryOtherIncome": "अन्य आय",
   "due": "देय",
-  "dueAmount": "देय राशि"
+  "dueAmount": "देय राशि",
+  "paymentHistory": "भुगतान इतिहास",
+  "noPaymentsYet": "अभी कोई भुगतान दर्ज नहीं",
+  "noPaymentsYetBody": "आपके दर्ज किए गए भुगतान यहाँ दिखेंगे।",
+  "lastPayment": "अंतिम भुगतान",
+  "paymentsRecorded": "{count, plural, =1{1 भुगतान} other{{count} भुगतान}}",
+  "totalPaid": "कुल भुगतान",
+  "debtNote": "नोट",
+  "debtNoteHint": "किस खाते से जाता है, किससे संपर्क करें, क्यों लिया"
 }

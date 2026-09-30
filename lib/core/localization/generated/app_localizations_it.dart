@@ -1948,6 +1948,39 @@ class AppL10nIt extends AppL10n {
   String get categoryOther => 'Altro';
 
   @override
+  String get paymentHistory => 'Cronologia pagamenti';
+
+  @override
+  String get noPaymentsYet => 'Nessun pagamento registrato';
+
+  @override
+  String get noPaymentsYetBody => 'I pagamenti che registri compariranno qui.';
+
+  @override
+  String get lastPayment => 'Ultimo pagamento';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count pagamenti',
+      one: '1 pagamento',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'Totale pagato';
+
+  @override
+  String get debtNote => 'Nota';
+
+  @override
+  String get debtNoteHint =>
+      'Da quale conto esce, chi contattare, perché lo hai acceso';
+
+  @override
   String get categoryBusiness => 'Impresa';
 
   @override

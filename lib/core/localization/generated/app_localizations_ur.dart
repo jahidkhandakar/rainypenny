@@ -1933,6 +1933,40 @@ class AppL10nUr extends AppL10n {
   String get categoryOther => 'دیگر';
 
   @override
+  String get paymentHistory => 'ادائیگیوں کی تاریخ';
+
+  @override
+  String get noPaymentsYet => 'ابھی کوئی ادائیگی درج نہیں';
+
+  @override
+  String get noPaymentsYetBody =>
+      'آپ جو ادائیگیاں درج کریں گے وہ یہاں نظر آئیں گی۔';
+
+  @override
+  String get lastPayment => 'آخری ادائیگی';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ادائیگیاں',
+      one: '1 ادائیگی',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'کل ادا شدہ';
+
+  @override
+  String get debtNote => 'نوٹ';
+
+  @override
+  String get debtNoteHint =>
+      'کس کھاتے سے ادا ہوتا ہے، کس سے رابطہ کریں، کیوں لیا';
+
+  @override
   String get categoryBusiness => 'کاروبار';
 
   @override

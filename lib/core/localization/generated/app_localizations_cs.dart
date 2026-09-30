@@ -1954,6 +1954,39 @@ class AppL10nCs extends AppL10n {
   String get categoryOther => 'Ostatní';
 
   @override
+  String get paymentHistory => 'Payment history';
+
+  @override
+  String get noPaymentsYet => 'No payments recorded yet';
+
+  @override
+  String get noPaymentsYetBody => 'Repayments you record will be listed here.';
+
+  @override
+  String get lastPayment => 'Last payment';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count payments',
+      one: '1 payment',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'Total paid';
+
+  @override
+  String get debtNote => 'Note';
+
+  @override
+  String get debtNoteHint =>
+      'Account it comes out of, who to contact, why you took it out';
+
+  @override
   String get categoryBusiness => 'Business';
 
   @override

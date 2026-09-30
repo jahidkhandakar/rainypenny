@@ -454,5 +454,13 @@
   "categoryBusiness": "Geschäft",
   "categoryOtherIncome": "Sonstige Einnahmen",
   "due": "Fällig",
-  "dueAmount": "Fälliger Betrag"
+  "dueAmount": "Fälliger Betrag",
+  "paymentHistory": "Zahlungsverlauf",
+  "noPaymentsYet": "Noch keine Zahlungen erfasst",
+  "noPaymentsYetBody": "Von dir erfasste Zahlungen erscheinen hier.",
+  "lastPayment": "Letzte Zahlung",
+  "paymentsRecorded": "{count, plural, =1{1 Zahlung} other{{count} Zahlungen}}",
+  "totalPaid": "Insgesamt gezahlt",
+  "debtNote": "Notiz",
+  "debtNoteHint": "Von welchem Konto, wen kontaktieren, warum aufgenommen"
 }

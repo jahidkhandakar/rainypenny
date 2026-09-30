@@ -1931,6 +1931,39 @@ class AppL10nHi extends AppL10n {
   String get categoryOther => 'अन्य';
 
   @override
+  String get paymentHistory => 'भुगतान इतिहास';
+
+  @override
+  String get noPaymentsYet => 'अभी कोई भुगतान दर्ज नहीं';
+
+  @override
+  String get noPaymentsYetBody => 'आपके दर्ज किए गए भुगतान यहाँ दिखेंगे।';
+
+  @override
+  String get lastPayment => 'अंतिम भुगतान';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count भुगतान',
+      one: '1 भुगतान',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'कुल भुगतान';
+
+  @override
+  String get debtNote => 'नोट';
+
+  @override
+  String get debtNoteHint =>
+      'किस खाते से जाता है, किससे संपर्क करें, क्यों लिया';
+
+  @override
   String get categoryBusiness => 'व्यवसाय';
 
   @override

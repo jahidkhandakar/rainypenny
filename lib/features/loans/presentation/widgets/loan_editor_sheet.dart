@@ -36,6 +36,7 @@ class _LoanEditorSheet extends ConsumerStatefulWidget {
 class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
   late final TextEditingController _nameController;
   late final TextEditingController _lenderController;
+  late final TextEditingController _noteController;
   late final TextEditingController _principalController;
   late final TextEditingController _remainingController;
   late final TextEditingController _paymentController;
@@ -45,6 +46,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
 
   late String _name;
   late String _lender;
+  late String _note;
   late double _principal;
   late double _remaining;
   late double _payment;
@@ -71,6 +73,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
 
     _name = loan?.name ?? '';
     _lender = loan?.lender ?? '';
+    _note = loan?.note ?? '';
     _principal = loan?.principal ?? 0;
     _remaining = loan?.remaining ?? 0;
     _payment = loan?.installmentAmount ?? 0;
@@ -83,6 +86,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
 
     _nameController = TextEditingController(text: _name);
     _lenderController = TextEditingController(text: _lender);
+    _noteController = TextEditingController(text: _note);
     _principalController = TextEditingController(text: _text(_principal));
     _remainingController = TextEditingController(text: _text(_remaining));
     _paymentController = TextEditingController(text: _text(_payment));
@@ -101,6 +105,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
   void dispose() {
     _nameController.dispose();
     _lenderController.dispose();
+    _noteController.dispose();
     _principalController.dispose();
     _remainingController.dispose();
     _paymentController.dispose();
@@ -142,6 +147,7 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
       id: widget.loan?.id ?? 'loan-${DateTime.now().microsecondsSinceEpoch}',
       name: _name.trim(),
       lender: _lender.trim(),
+      note: _note.trim().isEmpty ? null : _note.trim(),
       kind: _kind,
       // A debt entered without an original amount is treated as fully
       // outstanding, so the payoff bar starts at zero rather than complete.
@@ -351,6 +357,17 @@ class _LoanEditorSheetState extends ConsumerState<_LoanEditorSheet> {
                 ],
               ),
             ),
+          ),
+        ),
+        SheetField(
+          label: l10n.debtNote,
+          child: TextField(
+            controller: _noteController,
+            textCapitalization: TextCapitalization.sentences,
+            maxLines: 3,
+            minLines: 2,
+            decoration: InputDecoration(hintText: l10n.debtNoteHint),
+            onChanged: (value) => _note = value,
           ),
         ),
       ],

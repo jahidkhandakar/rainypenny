@@ -18,6 +18,8 @@ import '../../../../core/widgets/trend_chip.dart';
 import '../../../financial/domain/entities/loan.dart';
 import '../../../financial/domain/rules/debt_rules.dart';
 import '../../../financial/presentation/providers/finance_providers.dart';
+import '../../../financial/domain/entities/loan_payment.dart';
+import '../controllers/loan_controller.dart';
 import '../widgets/loan_editor_sheet.dart';
 import '../widgets/loan_status_visuals.dart';
 
@@ -196,6 +198,21 @@ class _Body extends ConsumerWidget {
                   ],
                 ),
               ),
+              if (loan.note != null && loan.note!.trim().isNotEmpty) ...[
+                const SizedBox(height: AppSpacing.section),
+                SectionHeader(title: l10n.debtNote),
+                AppCard(
+                  child: Text(
+                    loan.note!,
+                    style: AppTypography.body.copyWith(
+                      color: context.textSecondary,
+                      height: 1.5,
+                    ),
+                  ),
+                ),
+              ],
+              const SizedBox(height: AppSpacing.section),
+              _PaymentHistory(loanId: loan.id),
             ],
           ),
         ),
@@ -391,6 +408,89 @@ class _DetailRow extends StatelessWidget {
           ),
         ),
         if (!last) Divider(color: context.borderColor, height: 1),
+      ],
+    );
+  }
+}
+
+/// Every repayment recorded against this debt, newest first.
+///
+/// Section 11 asks for the history, and the rows have been written since the
+/// first migration — nothing read them back, so a user could record a payment
+/// and never see it again. The last payment date sits at the top because it is
+/// the one the next-payment date only makes sense against.
+class _PaymentHistory extends ConsumerWidget {
+  const _PaymentHistory({required this.loanId});
+
+  final String loanId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppL10n.of(context);
+    final money = ref.watch(moneyFormatterProvider);
+    final dates = ref.watch(dateFormatterProvider);
+    final payments = ref.watch(loanPaymentsProvider(loanId));
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SectionHeader(title: l10n.paymentHistory),
+        payments.when(
+          data: (list) {
+            if (list.isEmpty) {
+              return AppCard(
+                child: EmptyState(
+                  icon: CupertinoIcons.doc_text,
+                  title: l10n.noPaymentsYet,
+                  message: l10n.noPaymentsYetBody,
+                  compact: true,
+                ),
+              );
+            }
+
+            final lastPaid = LoanPayments.lastPaidAt(list);
+            return AppCard(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.lg,
+                vertical: AppSpacing.xs,
+              ),
+              child: Column(
+                children: [
+                  if (lastPaid != null)
+                    _DetailRow(
+                      label: l10n.lastPayment,
+                      value: dates.long(lastPaid),
+                      emphasised: true,
+                    ),
+                  _DetailRow(
+                    label: l10n.totalPaid,
+                    value: money.format(LoanPayments.total(list)),
+                  ),
+                  _DetailRow(
+                    label: l10n.paymentsRecorded(list.length),
+                    value: '',
+                    last: true,
+                  ),
+                  Divider(color: context.borderColor, height: 1),
+                  for (var i = 0; i < list.length; i++)
+                    _DetailRow(
+                      label: dates.long(list[i].paidAt),
+                      value: money.format(list[i].amount),
+                      last: i == list.length - 1,
+                    ),
+                ],
+              ),
+            );
+          },
+          loading: () => const SkeletonCard(height: 120, lines: 3),
+          error: (_, _) => AppCard(
+            child: ErrorState(
+              message: l10n.somethingWentWrong,
+              retryLabel: l10n.retry,
+              onRetry: () => ref.invalidate(loanPaymentsProvider(loanId)),
+            ),
+          ),
+        ),
       ],
     );
   }

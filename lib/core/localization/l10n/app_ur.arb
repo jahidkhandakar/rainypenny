@@ -555,6 +555,14 @@
   "categoryInvestments": "سرمایہ کاری",
   "categoryGift": "تحفہ",
   "categoryOther": "دیگر",
+  "paymentHistory": "ادائیگیوں کی تاریخ",
+  "noPaymentsYet": "ابھی کوئی ادائیگی درج نہیں",
+  "noPaymentsYetBody": "آپ جو ادائیگیاں درج کریں گے وہ یہاں نظر آئیں گی۔",
+  "lastPayment": "آخری ادائیگی",
+  "paymentsRecorded": "{count, plural, =1{1 ادائیگی} other{{count} ادائیگیاں}}",
+  "totalPaid": "کل ادا شدہ",
+  "debtNote": "نوٹ",
+  "debtNoteHint": "کس کھاتے سے ادا ہوتا ہے، کس سے رابطہ کریں، کیوں لیا",
   "categoryBusiness": "کاروبار",
   "categoryOtherIncome": "دیگر آمدنی",
   "categoryGroceries": "گروسری",
@@ -626,6 +634,5 @@
   "failedToSaveBudgets": "بجٹ محفوظ نہیں ہو سکے۔",
   "recommendedBudget": "تجویز کردہ بجٹ",
   "due": "واجب الادا",
-  "dueAmount": "واجب الادا رقم",
-  "categoryRefunds": "واپسی اور تحائف"
+  "dueAmount": "واجب الادا رقم"
 }

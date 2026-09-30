@@ -453,5 +453,13 @@
   "categoryBusiness": "Entreprise",
   "categoryOtherIncome": "Autres revenus",
   "due": "Échéance",
-  "dueAmount": "Montant dû"
+  "dueAmount": "Montant dû",
+  "paymentHistory": "Historique des paiements",
+  "noPaymentsYet": "Aucun paiement enregistré",
+  "noPaymentsYetBody": "Les remboursements que vous enregistrez apparaîtront ici.",
+  "lastPayment": "Dernier paiement",
+  "paymentsRecorded": "{count, plural, =1{1 paiement} other{{count} paiements}}",
+  "totalPaid": "Total remboursé",
+  "debtNote": "Note",
+  "debtNoteHint": "Compte débité, qui contacter, pourquoi vous l'avez souscrit"
 }

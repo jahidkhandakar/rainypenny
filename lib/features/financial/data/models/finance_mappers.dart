@@ -1,6 +1,7 @@
 import '../../../../core/settings/world_currencies.dart';
 import '../../domain/entities/category.dart';
 import '../../domain/entities/loan.dart';
+import '../../domain/entities/loan_payment.dart';
 import '../../domain/entities/savings_goal.dart';
 import '../../domain/entities/transaction.dart';
 import '../../domain/entities/user_profile.dart';
@@ -132,6 +133,7 @@ abstract final class LoanMapper {
       totalInstallments: _int(row['total_installments']),
       paidInstallments: _int(row['paid_installments']),
       startDate: row['start_date'] == null ? null : _date(row['start_date']),
+      note: row['note'] as String?,
     );
   }
 
@@ -159,6 +161,7 @@ abstract final class LoanMapper {
       'paid_installments': loan.paidInstallments,
       if (loan.startDate != null)
         'start_date': loan.startDate!.toIso8601String().split('T').first,
+      'note': loan.note,
     };
   }
 }
@@ -187,4 +190,15 @@ abstract final class ProfileMapper {
   /// Delegates to the shared ISO 4217 table so a profile row and the settings
   /// picker can never disagree about what a currency looks like.
   static String symbolFor(String code) => Currencies.symbolFor(code);
+}
+
+abstract final class LoanPaymentMapper {
+  static LoanPayment fromRow(Map<String, dynamic> row) {
+    return LoanPayment(
+      id: row['id'] as String,
+      loanId: row['loan_id'] as String,
+      amount: _num(row['amount']),
+      paidAt: _date(row['paid_at']),
+    );
+  }
 }

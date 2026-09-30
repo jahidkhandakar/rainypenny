@@ -1269,6 +1269,21 @@
   "categoryInvestments": "Investments",
   "categoryGift": "Gift",
   "categoryOther": "Other",
+  "paymentHistory": "Payment history",
+  "noPaymentsYet": "No payments recorded yet",
+  "noPaymentsYetBody": "Repayments you record will be listed here.",
+  "lastPayment": "Last payment",
+  "paymentsRecorded": "{count, plural, =1{1 payment} other{{count} payments}}",
+  "@paymentsRecorded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalPaid": "Total paid",
+  "debtNote": "Note",
+  "debtNoteHint": "Account it comes out of, who to contact, why you took it out",
   "categoryBusiness": "Business",
   "categoryOtherIncome": "Other income",
   "categoryGroceries": "Groceries",

@@ -41,6 +41,7 @@ class Loan {
     this.totalInstallments = 0,
     this.paidInstallments = 0,
     this.startDate,
+    this.note,
   });
 
   final String id;
@@ -69,6 +70,10 @@ class Loan {
   /// When repayment began. Optional: older records may not carry one.
   final DateTime? startDate;
 
+  /// Anything the user wants to remember about this debt — the account it is
+  /// paid from, who to call, why it was taken out.
+  final String? note;
+
   Loan copyWith({
     String? id,
     String? name,
@@ -83,6 +88,7 @@ class Loan {
     int? totalInstallments,
     int? paidInstallments,
     DateTime? startDate,
+    String? note,
   }) {
     return Loan(
       id: id ?? this.id,
@@ -98,6 +104,7 @@ class Loan {
       totalInstallments: totalInstallments ?? this.totalInstallments,
       paidInstallments: paidInstallments ?? this.paidInstallments,
       startDate: startDate ?? this.startDate,
+      note: note ?? this.note,
     );
   }
 

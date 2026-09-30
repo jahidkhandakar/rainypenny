@@ -1943,6 +1943,42 @@ class AppL10nAr extends AppL10n {
   String get categoryOther => 'أخرى';
 
   @override
+  String get paymentHistory => 'سجل الدفعات';
+
+  @override
+  String get noPaymentsYet => 'لم تُسجَّل أي دفعات بعد';
+
+  @override
+  String get noPaymentsYetBody => 'ستظهر هنا الدفعات التي تسجّلها.';
+
+  @override
+  String get lastPayment => 'آخر دفعة';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count دفعة',
+      many: '$count دفعة',
+      few: '$count دفعات',
+      two: 'دفعتان',
+      one: 'دفعة واحدة',
+      zero: 'لا دفعات',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'إجمالي المدفوع';
+
+  @override
+  String get debtNote => 'ملاحظة';
+
+  @override
+  String get debtNoteHint => 'الحساب الذي تُخصم منه، بمن تتصل، سبب الاقتراض';
+
+  @override
   String get categoryBusiness => 'الأعمال';
 
   @override

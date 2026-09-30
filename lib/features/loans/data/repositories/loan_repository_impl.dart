@@ -1,5 +1,6 @@
 import '../../../financial/data/datasources/finance_data_source.dart';
 import '../../../financial/domain/entities/loan.dart';
+import '../../../financial/domain/entities/loan_payment.dart';
 import '../../domain/repositories/loan_repository.dart';
 
 class LoanRepositoryImpl implements LoanRepository {
@@ -22,4 +23,8 @@ class LoanRepositoryImpl implements LoanRepository {
   @override
   Future<void> recordPayment(String loanId, double amount) =>
       _dataSource.recordLoanPayment(loanId, amount);
+
+  @override
+  Future<List<LoanPayment>> getPayments(String loanId) =>
+      _dataSource.fetchLoanPayments(loanId);
 }

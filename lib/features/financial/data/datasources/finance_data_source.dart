@@ -1,6 +1,7 @@
 import '../../domain/entities/budget.dart';
 import '../../domain/entities/category.dart';
 import '../../domain/entities/loan.dart';
+import '../../domain/entities/loan_payment.dart';
 import '../../domain/entities/savings_goal.dart';
 import '../../domain/entities/transaction.dart';
 import '../../domain/entities/user_profile.dart';
@@ -35,6 +36,9 @@ abstract interface class FinanceDataSource {
   Future<void> updateLoan(Loan loan);
   Future<void> deleteLoan(String loanId);
   Future<void> recordLoanPayment(String loanId, double amount);
+
+  /// Every repayment recorded against one debt, newest first.
+  Future<List<LoanPayment>> fetchLoanPayments(String loanId);
 
   // Categories — the seeded set plus whatever the user has added.
   Future<List<Category>> fetchCategories();

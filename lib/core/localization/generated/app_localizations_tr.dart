@@ -1940,6 +1940,39 @@ class AppL10nTr extends AppL10n {
   String get categoryOther => 'Diğer';
 
   @override
+  String get paymentHistory => 'Ödeme geçmişi';
+
+  @override
+  String get noPaymentsYet => 'Henüz ödeme kaydedilmedi';
+
+  @override
+  String get noPaymentsYetBody => 'Kaydettiğiniz ödemeler burada görünecek.';
+
+  @override
+  String get lastPayment => 'Son ödeme';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count ödeme',
+      one: '1 ödeme',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'Toplam ödenen';
+
+  @override
+  String get debtNote => 'Not';
+
+  @override
+  String get debtNoteHint =>
+      'Hangi hesaptan ödeniyor, kiminle görüşülecek, neden alındı';
+
+  @override
   String get categoryBusiness => 'İşletme';
 
   @override

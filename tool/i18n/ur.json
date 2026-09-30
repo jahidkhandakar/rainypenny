@@ -513,5 +513,13 @@
   "failedToSaveBudgets": "بجٹ محفوظ نہیں ہو سکے۔",
   "recommendedBudget": "تجویز کردہ بجٹ",
   "due": "واجب الادا",
-  "dueAmount": "واجب الادا رقم"
+  "dueAmount": "واجب الادا رقم",
+  "paymentHistory": "ادائیگیوں کی تاریخ",
+  "noPaymentsYet": "ابھی کوئی ادائیگی درج نہیں",
+  "noPaymentsYetBody": "آپ جو ادائیگیاں درج کریں گے وہ یہاں نظر آئیں گی۔",
+  "lastPayment": "آخری ادائیگی",
+  "paymentsRecorded": "{count, plural, =1{1 ادائیگی} other{{count} ادائیگیاں}}",
+  "totalPaid": "کل ادا شدہ",
+  "debtNote": "نوٹ",
+  "debtNoteHint": "کس کھاتے سے ادا ہوتا ہے، کس سے رابطہ کریں، کیوں لیا"
 }

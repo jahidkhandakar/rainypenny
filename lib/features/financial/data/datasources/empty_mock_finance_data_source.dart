@@ -3,6 +3,7 @@ import 'package:rainypenny/features/financial/data/empty_demo_dataset.dart';
 import '../../domain/entities/budget.dart';
 import '../../domain/entities/category.dart';
 import '../../domain/entities/loan.dart';
+import '../../domain/entities/loan_payment.dart';
 import '../../domain/entities/savings_goal.dart';
 import '../../domain/entities/transaction.dart';
 import '../../domain/entities/user_profile.dart';
@@ -263,4 +264,9 @@ class EmptyMockFinanceDataSource implements FinanceDataSource {
   @override
   Future<Map<Category, double>> fetchPreviousPeriodSpending() =>
       _withLatency(EmptyDemoDataset.previousSpendingByCategory);
+
+  /// Nothing has been paid in an empty dataset, so there is no history.
+  @override
+  Future<List<LoanPayment>> fetchLoanPayments(String loanId) =>
+      _withLatency(const <LoanPayment>[]);
 }

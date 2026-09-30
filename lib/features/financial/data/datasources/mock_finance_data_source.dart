@@ -1,6 +1,7 @@
 import '../../domain/entities/budget.dart';
 import '../../domain/entities/category.dart';
 import '../../domain/entities/loan.dart';
+import '../../domain/entities/loan_payment.dart';
 import '../../domain/entities/savings_goal.dart';
 import '../../domain/entities/transaction.dart';
 import '../../domain/entities/user_profile.dart';
@@ -203,6 +204,28 @@ class MockFinanceDataSource implements FinanceDataSource {
       paidInstallments: loan.hasSchedule
           ? (loan.paidInstallments + 1).clamp(0, loan.totalInstallments)
           : loan.paidInstallments + 1,
+    );
+
+    // Mirrors the insert inside `record_loan_payment`: the balance moving and
+    // the payment being recorded are one act, so the history cannot disagree
+    // with the figure above it.
+    _payments.add(
+      LoanPayment(
+        id: 'payment-${DateTime.now().microsecondsSinceEpoch}',
+        loanId: loanId,
+        amount: amount,
+        paidAt: DateTime.now(),
+      ),
+    );
+  }
+
+  final _payments = <LoanPayment>[];
+
+  @override
+  Future<List<LoanPayment>> fetchLoanPayments(String loanId) async {
+    await _withLatency(null);
+    return LoanPayments.newestFirst(
+      _payments.where((p) => p.loanId == loanId).toList(),
     );
   }
 

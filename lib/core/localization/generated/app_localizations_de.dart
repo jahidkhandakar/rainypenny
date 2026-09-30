@@ -1949,6 +1949,39 @@ class AppL10nDe extends AppL10n {
   String get categoryOther => 'Sonstiges';
 
   @override
+  String get paymentHistory => 'Zahlungsverlauf';
+
+  @override
+  String get noPaymentsYet => 'Noch keine Zahlungen erfasst';
+
+  @override
+  String get noPaymentsYetBody => 'Von dir erfasste Zahlungen erscheinen hier.';
+
+  @override
+  String get lastPayment => 'Letzte Zahlung';
+
+  @override
+  String paymentsRecorded(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Zahlungen',
+      one: '1 Zahlung',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get totalPaid => 'Insgesamt gezahlt';
+
+  @override
+  String get debtNote => 'Notiz';
+
+  @override
+  String get debtNoteHint =>
+      'Von welchem Konto, wen kontaktieren, warum aufgenommen';
+
+  @override
   String get categoryBusiness => 'Geschäft';
 
   @override

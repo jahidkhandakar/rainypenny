@@ -453,5 +453,13 @@
   "categoryBusiness": "الأعمال",
   "categoryOtherIncome": "دخل آخر",
   "due": "الاستحقاق",
-  "dueAmount": "المبلغ المستحق"
+  "dueAmount": "المبلغ المستحق",
+  "paymentHistory": "سجل الدفعات",
+  "noPaymentsYet": "لم تُسجَّل أي دفعات بعد",
+  "noPaymentsYetBody": "ستظهر هنا الدفعات التي تسجّلها.",
+  "lastPayment": "آخر دفعة",
+  "paymentsRecorded": "{count, plural, =0{لا دفعات} =1{دفعة واحدة} =2{دفعتان} few{{count} دفعات} many{{count} دفعة} other{{count} دفعة}}",
+  "totalPaid": "إجمالي المدفوع",
+  "debtNote": "ملاحظة",
+  "debtNoteHint": "الحساب الذي تُخصم منه، بمن تتصل، سبب الاقتراض"
 }

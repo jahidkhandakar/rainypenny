@@ -513,5 +513,13 @@
   "failedToSaveBudgets": "Bütçeler kaydedilemedi.",
   "recommendedBudget": "Önerilen bütçe",
   "due": "Vade",
-  "dueAmount": "Ödenecek tutar"
+  "dueAmount": "Ödenecek tutar",
+  "paymentHistory": "Ödeme geçmişi",
+  "noPaymentsYet": "Henüz ödeme kaydedilmedi",
+  "noPaymentsYetBody": "Kaydettiğiniz ödemeler burada görünecek.",
+  "lastPayment": "Son ödeme",
+  "paymentsRecorded": "{count, plural, =1{1 ödeme} other{{count} ödeme}}",
+  "totalPaid": "Toplam ödenen",
+  "debtNote": "Not",
+  "debtNoteHint": "Hangi hesaptan ödeniyor, kiminle görüşülecek, neden alındı"
 }

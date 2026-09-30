@@ -3506,6 +3506,54 @@ abstract class AppL10n {
   /// **'Other'**
   String get categoryOther;
 
+  /// No description provided for @paymentHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment history'**
+  String get paymentHistory;
+
+  /// No description provided for @noPaymentsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No payments recorded yet'**
+  String get noPaymentsYet;
+
+  /// No description provided for @noPaymentsYetBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Repayments you record will be listed here.'**
+  String get noPaymentsYetBody;
+
+  /// No description provided for @lastPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Last payment'**
+  String get lastPayment;
+
+  /// No description provided for @paymentsRecorded.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 payment} other{{count} payments}}'**
+  String paymentsRecorded(int count);
+
+  /// No description provided for @totalPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Total paid'**
+  String get totalPaid;
+
+  /// No description provided for @debtNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Note'**
+  String get debtNote;
+
+  /// No description provided for @debtNoteHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Account it comes out of, who to contact, why you took it out'**
+  String get debtNoteHint;
+
   /// No description provided for @categoryBusiness.
   ///
   /// In en, this message translates to:
