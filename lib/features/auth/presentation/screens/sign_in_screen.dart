@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
 
 import '../../../../core/config/app_config.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -67,9 +68,14 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
     }
     // The router redirects once the auth state changes, so there is nothing
     // to navigate to from here.
-    await ref
+    final result = await ref
         .read(authControllerProvider.notifier)
         .signIn(_emailController.text, _passwordController.text);
+
+    // Refresh user info
+    if (result) {
+      ref.invalidate(profileProvider);
+    }
   }
 
   Future<void> _resend() async {

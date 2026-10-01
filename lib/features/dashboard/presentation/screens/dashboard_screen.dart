@@ -57,7 +57,12 @@ class DashboardScreen extends ConsumerWidget {
               // disappears when the figures below it are ready rather than
               // when an unrelated provider happens to settle.
               await ref.read(dashboardSummaryProvider.future);
+              ref.invalidate(profileProvider);
+              ref.invalidate(budgetsProvider);
+              ref.invalidate(savingsGoalsProvider);
+              ref.invalidate(financialHealthProvider);
             },
+
             child: ListView(
               padding: const EdgeInsets.fromLTRB(
                 AppSpacing.page,
