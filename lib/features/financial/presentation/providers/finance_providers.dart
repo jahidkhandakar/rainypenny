@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rainypenny/core/localization/generated/app_localizations.dart';
 
 import '../../../../core/di/providers.dart';
 import '../../../../core/settings/settings_providers.dart';
@@ -361,12 +362,16 @@ final insightsProvider = FutureProvider<List<Insight>>((ref) async {
   final goals = await ref.watch(savingsGoalsProvider.future);
   final loans = await ref.watch(loansProvider.future);
 
+  final locale = ref.watch(localeProvider);
+  final l10n = await AppL10n.delegate.load(locale);
+
   return InsightEngine.generate(
     summary: summary,
     budgets: budgets,
     goals: goals,
     loans: loans,
     now: DateTime.now(),
+    l10n: l10n,
   );
 });
 

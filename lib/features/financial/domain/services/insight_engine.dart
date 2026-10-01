@@ -1,3 +1,6 @@
+import 'package:rainypenny/core/localization/generated/app_localizations.dart';
+import 'package:rainypenny/core/utils/category_visuals.dart';
+
 import '../entities/budget.dart';
 import '../entities/insight.dart';
 import '../entities/loan.dart';
@@ -23,10 +26,11 @@ abstract final class InsightEngine {
     required List<SavingsGoal> goals,
     required List<Loan> loans,
     required DateTime now,
+    required AppL10n l10n,
   }) {
     final insights = <Insight>[
-      ..._budgetInsights(budgets),
-      ..._spendingInsights(summary),
+      ..._budgetInsights(budgets, l10n),
+      ..._spendingInsights(summary, l10n),
       ..._savingsInsights(summary, goals),
       ..._debtInsights(loans, now),
     ];
@@ -36,10 +40,9 @@ abstract final class InsightEngine {
   }
 
   /// The single insight to feature on the dashboard: the most urgent one.
-  static Insight? headline(List<Insight> insights) =>
-      insights.isEmpty ? null : insights.first;
+  static Insight? headline(List<Insight> insights) => insights.isEmpty ? null : insights.first;
 
-  static List<Insight> _budgetInsights(List<Budget> budgets) {
+  static List<Insight> _budgetInsights(List<Budget> budgets, AppL10n l10n) {
     return BudgetCalculator.needingAttention(budgets).take(2).map((budget) {
       if (budget.isExceeded) {
         return Insight(
@@ -47,7 +50,7 @@ abstract final class InsightEngine {
           code: InsightCode.budgetExceeded,
           level: InsightLevel.critical,
           topic: InsightTopic.budget,
-          subject: budget.category.name,
+          subject: budget.category.localizedName(l10n),
           amount: budget.spent - budget.limit,
           percent: budget.percentUsed,
         );
@@ -57,14 +60,14 @@ abstract final class InsightEngine {
         code: InsightCode.budgetApproaching,
         level: InsightLevel.warning,
         topic: InsightTopic.budget,
-        subject: budget.category.name,
+        subject: budget.category.localizedName(l10n),
         amount: budget.remaining,
         percent: budget.percentUsed,
       );
     }).toList();
   }
 
-  static List<Insight> _spendingInsights(PeriodSummary summary) {
+  static List<Insight> _spendingInsights(PeriodSummary summary, AppL10n l10n) {
     final insights = <Insight>[];
 
     if (summary.expenses > summary.income) {
@@ -86,7 +89,7 @@ abstract final class InsightEngine {
       final change = (amount - previous) / previous;
       if (!SpendingRules.isNotableCategoryChange(change) || change <= 0) return;
       if (biggestRise == null || change > biggestRise!.change) {
-        biggestRise = (name: category.name, change: change);
+        biggestRise = (name: category.localizedName(l10n), change: change);
       }
     });
 
@@ -110,9 +113,7 @@ abstract final class InsightEngine {
       insights.add(
         Insight(
           id: 'spending-total-change',
-          code: down
-              ? InsightCode.spendingTrendDown
-              : InsightCode.spendingTrendUp,
+          code: down ? InsightCode.spendingTrendDown : InsightCode.spendingTrendUp,
           level: down ? InsightLevel.positive : InsightLevel.informative,
           topic: InsightTopic.spending,
           percent: (totalChange.abs() * 100).round(),
@@ -123,10 +124,7 @@ abstract final class InsightEngine {
     return insights;
   }
 
-  static List<Insight> _savingsInsights(
-    PeriodSummary summary,
-    List<SavingsGoal> goals,
-  ) {
+  static List<Insight> _savingsInsights(PeriodSummary summary, List<SavingsGoal> goals) {
     final insights = <Insight>[];
     final rate = summary.savingsRate;
     final target = (SavingsRules.targetSavingsRate * 100).round();
@@ -208,9 +206,7 @@ abstract final class InsightEngine {
           Insight(
             id: 'debt-due-${loan.id}',
             code: InsightCode.debtDueSoon,
-            level: DebtRules.isUrgent(days)
-                ? InsightLevel.warning
-                : InsightLevel.informative,
+            level: DebtRules.isUrgent(days) ? InsightLevel.warning : InsightLevel.informative,
             topic: InsightTopic.debt,
             subject: loan.name,
             amount: loan.installmentAmount,
