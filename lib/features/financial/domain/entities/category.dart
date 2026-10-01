@@ -110,7 +110,7 @@ extension CategoryL10n on Category {
   String localizedName(AppL10n l10n) {
     if (isCustom) return name;
 
-    return switch (id) {
+    return switch (name) {
       'groceries' => l10n.categoryGroceries,
       'food' => l10n.categoryFood,
       'transport' => l10n.categoryTransport,
