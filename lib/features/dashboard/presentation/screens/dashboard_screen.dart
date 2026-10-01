@@ -61,6 +61,7 @@ class DashboardScreen extends ConsumerWidget {
               ref.invalidate(budgetsProvider);
               ref.invalidate(savingsGoalsProvider);
               ref.invalidate(financialHealthProvider);
+              ref.invalidate(categoriesProvider);
             },
 
             child: ListView(

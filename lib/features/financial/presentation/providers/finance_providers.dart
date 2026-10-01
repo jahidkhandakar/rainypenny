@@ -83,7 +83,7 @@ final transactionsProvider = FutureProvider<List<Transaction>>((ref) {
   return ref.watch(transactionRepositoryProvider).getTransactions();
 });
 
-final categoriesProvider = FutureProvider<List<Category>>((ref) {
+final categoriesProvider = FutureProvider.autoDispose<List<Category>>((ref) {
   return ref.watch(transactionRepositoryProvider).getCategories();
 });
 
