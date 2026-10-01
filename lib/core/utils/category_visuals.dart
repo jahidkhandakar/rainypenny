@@ -7,76 +7,32 @@ import '../localization/generated/app_localizations.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_theme.dart';
 
-/// The name to show for a category, in the active language.
-///
-/// The seeded categories are shared by every account and stored with an English
-/// name, because a database row cannot be in forty languages at once. Their ids
-/// are stable, so the id is what gets translated and the stored name is only a
-/// fallback. A category the user created themselves is shown exactly as they
-/// typed it — translating someone's own words would be wrong.
-String categoryDisplayName(Category category, AppL10n l10n) {
-  if (category.isCustom) return category.name;
+extension CategoryL10n on Category {
+  String localizedName(AppL10n l10n) {
+    if (isCustom) return name;
 
-  return switch (category.id) {
-    'housing' => l10n.categoryHousing,
-    'food' => l10n.categoryFood,
-    'transport' => l10n.categoryTransport,
-    'shopping' => l10n.categoryShopping,
-    'bills' => l10n.categoryBills,
-    'entertainment' => l10n.categoryEntertainment,
-    'health' => l10n.categoryHealth,
-    'education' => l10n.categoryEducation,
-    'travel' => l10n.categoryTravel,
-    'salary' => l10n.categorySalary,
-    'freelance' => l10n.categoryFreelance,
-    'investments' => l10n.categoryInvestments,
-    'gift' => l10n.categoryGift,
-    'other' => l10n.categoryOther,
-    'other_income' => l10n.categoryOtherIncome,
-    'groceries' => l10n.categoryGroceries,
-    'dining' => l10n.categoryDining,
-    'coffee' => l10n.categoryCoffee,
-    'utilities' => l10n.categoryUtilities,
-    'internet' => l10n.categoryInternet,
-    'phone' => l10n.categoryPhone,
-    'insurance' => l10n.categoryInsurance,
-    'subscriptions' => l10n.categorySubscriptions,
-    'personal_care' => l10n.categoryPersonalCare,
-    'clothing' => l10n.categoryClothing,
-    'electronics' => l10n.categoryElectronics,
-    'home_supplies' => l10n.categoryHomeSupplies,
-    'pets' => l10n.categoryPets,
-    'childcare' => l10n.categoryChildcare,
-    'family' => l10n.categoryFamily,
-    'fitness' => l10n.categoryFitness,
-    'sports' => l10n.categorySports,
-    'medicine' => l10n.categoryMedicine,
-    'medical' => l10n.categoryMedical,
-    'charity' => l10n.categoryCharity,
-    'taxes' => l10n.categoryTaxes,
-    'fees' => l10n.categoryFees,
-    'debt' => l10n.categoryDebt,
-    'savings' => l10n.categorySavings,
-    'repairs' => l10n.categoryRepairs,
-    'car_maintenance' => l10n.categoryCarMaintenance,
-    'fuel' => l10n.categoryFuel,
-    'parking' => l10n.categoryParking,
-    'public_transport' => l10n.categoryPublicTransport,
-    'rent' => l10n.categoryRent,
-    'mortgage' => l10n.categoryMortgage,
-    'bonus' => l10n.categoryBonus,
-    'business' => l10n.categoryBusiness,
-    'commission' => l10n.categoryCommission,
-    'pension' => l10n.categoryPension,
-    'interest' => l10n.categoryInterest,
-    'dividends' => l10n.categoryDividends,
-    'cashback' => l10n.categoryCashback,
-    'refunds' => l10n.categoryRefund,
-    'rental_income' => l10n.categoryRentalIncome,
-    // A seeded category this build does not know about: the stored name is
-    // better than nothing, and better than an empty row.
-    _ => category.name,
-  };
+    return switch (name) {
+      'groceries' => l10n.categoryGroceries,
+      'food' => l10n.categoryFood,
+      'transport' => l10n.categoryTransport,
+      'housing' => l10n.categoryHousing,
+      'utilities' => l10n.categoryUtilities,
+      'entertainment' => l10n.categoryEntertainment,
+      'health' => l10n.categoryHealth,
+      'shopping' => l10n.categoryShopping,
+      'personal_care' => l10n.categoryPersonalCare,
+      'education' => l10n.categoryEducation,
+      'salary' => l10n.categorySalary,
+      'investments' => l10n.categoryInvestments,
+      'bills' => l10n.categoryBills,
+      'travel' => l10n.categoryTravel,
+      'other' => l10n.categoryOther,
+      'freelance' => l10n.categoryFreelance,
+      'refunds' => l10n.categoryRefund,
+      // Fallback to the default name if ID is not recognized
+      _ => name,
+    };
+  }
 }
 
 /// Maps domain enums onto Material icons.

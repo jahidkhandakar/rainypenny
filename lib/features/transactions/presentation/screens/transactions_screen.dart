@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rainypenny/features/dashboard/presentation/widgets/period_selector.dart';
+import 'package:rainypenny/features/financial/domain/entities/category.dart';
 
+import '../../../../core/ads/banner_ad_slot.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
 import '../../../../core/shell/app_shell.dart';
@@ -11,7 +13,6 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_dimens.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/theme/app_typography.dart';
-import '../../../../core/ads/banner_ad_slot.dart';
 import '../../../../core/utils/category_visuals.dart';
 import '../../../../core/utils/format_providers.dart';
 import '../../../../core/widgets/app_card.dart';
@@ -164,9 +165,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                       // Below the ledger, where a mis-tap cannot open or
                       // delete anything. Takes no space until it loads.
                       return const Center(
-                        child: BannerAdSlot(
-                          padding: EdgeInsets.only(top: AppSpacing.md),
-                        ),
+                        child: BannerAdSlot(padding: EdgeInsets.only(top: AppSpacing.md)),
                       );
                     }
                     final group = list[index - 1];
@@ -281,7 +280,7 @@ class _CategoryFilterBar extends ConsumerWidget {
               }
               final category = filteredCategories[index - 1];
               return _Chip(
-                label: categoryDisplayName(category, l10n),
+                label: category.localizedName(l10n),
                 icon: iconForCategory(category.icon),
                 color: categoryColor(context, category),
                 isSelected: selected == category.id,
