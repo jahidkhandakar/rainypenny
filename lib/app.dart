@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rainypenny/core/widgets/error_fallback.dart';
 
 import 'core/localization/generated/app_localizations.dart';
 import 'core/routing/app_router.dart';
@@ -32,6 +33,11 @@ class RainyPennyApp extends ConsumerWidget {
       localizationsDelegates: AppL10n.localizationsDelegates,
       supportedLocales: AppL10n.supportedLocales,
       builder: (context, child) {
+        // Fallback UI for Flutter runtime widget rendering exceptions
+        ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+          return ErrorFallback(errorDetails: errorDetails);
+        };
+
         // Keep the layout readable regardless of the device text-size setting.
         final scale = MediaQuery.textScalerOf(
           context,

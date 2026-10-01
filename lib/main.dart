@@ -13,37 +13,61 @@ import 'core/config/app_config.dart';
 import 'core/settings/settings_store.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  runZonedGuarded<Future<void>>(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
 
-  // Preferences are loaded before the first frame so theme and language are
-  // right from the splash onwards, with no flash of the default appearance.
-  final prefs = await SharedPreferences.getInstance();
+      // Catch errors during Flutter framework rendering
+      FlutterError.onError = (FlutterErrorDetails details) {
+        FlutterError.presentError(details);
 
-  // Load .env file
-  await dotenv.load(fileName: ".env");
+        // TODO: Log to crash reporting service (e.g., Sentry, Crashlytics)
+      };
 
-  // With no credentials the app runs on the in-memory demo backend, so this is
-  // the only line that differs between a demo build and a live one.
-  if (AppConfig.hasBackend) {
-    await Supabase.initialize(
-      url: AppConfig.supabaseUrl,
-      publishableKey: AppConfig.supabaseAnonKey,
-    );
-  }
+      // Restrict orientation
+      await SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
 
-  // Deliberately not awaited. Starting the ads SDK means a consent lookup and
-  // a network round trip, and none of the app depends on the result — making
-  // the first frame wait on it would trade a working launch for an advert.
-  unawaited(AdService.initialize());
+      // Load SharedPreferences
+      final prefs = await SharedPreferences.getInstance();
 
-  runApp(
-    ProviderScope(
-      overrides: [settingsStoreProvider.overrideWithValue(PrefsSettingsStore(prefs))],
-      child: const RainyPennyApp(),
-    ),
+      // Load .env safely (fallback gracefully if missing)
+      try {
+        await dotenv.load(fileName: ".env");
+      } catch (e) {
+        debugPrint('Warning: .env file missing or failed to load: $e');
+      }
+
+      // Initialize Supabase safely
+      if (AppConfig.hasBackend) {
+        try {
+          await Supabase.initialize(
+            url: AppConfig.supabaseUrl,
+            publishableKey: AppConfig.supabaseAnonKey,
+          );
+        } catch (e) {
+          debugPrint('Supabase initialization failed: $e');
+        }
+      }
+
+      // Unawaited AdService initialization wrapped in error handler
+      unawaited(
+        AdService.initialize().catchError((error) {
+          debugPrint('AdService initialization failed: $error');
+        }),
+      );
+
+      runApp(
+        ProviderScope(
+          overrides: [settingsStoreProvider.overrideWithValue(PrefsSettingsStore(prefs))],
+          child: const RainyPennyApp(),
+        ),
+      );
+    },
+    (error, stackTrace) {
+      debugPrint('Uncaught async error: $error\n$stackTrace');
+    },
   );
 }
