@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:rainypenny/core/theme/app_typography.dart';
+import 'package:rainypenny/features/auth/domain/entities/auth_user.dart';
+import 'package:rainypenny/features/auth/presentation/controllers/auth_controller.dart';
 import 'package:rainypenny/features/budget/presentation/widgets/budget_editor_sheet.dart';
 import 'package:rainypenny/features/dashboard/presentation/widgets/period_selector.dart';
 import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
@@ -42,6 +44,19 @@ class DashboardScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppL10n.of(context);
     final summary = ref.watch(periodSummaryProvider(ref.watch(dashboardRangeProvider)));
+
+    // Listen to Auth state changes to automatically invalidate data on login
+    ref.listen<AsyncValue<AuthUser?>>(authStateProvider, (previous, next) {
+      // next.value is non-null when a valid session / user exists
+      if (next.value != null) {
+        ref.invalidate(transactionsProvider);
+        ref.invalidate(profileProvider);
+        ref.invalidate(budgetsProvider);
+        ref.invalidate(savingsGoalsProvider);
+        ref.invalidate(financialHealthProvider);
+        ref.invalidate(categoriesProvider);
+      }
+    });
 
     // Wraps the screen rather than sitting inside it: the prompt counts one
     // use per session and asks on the fifth, and none of that is the
