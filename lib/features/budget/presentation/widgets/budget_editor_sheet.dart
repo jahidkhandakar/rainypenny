@@ -18,22 +18,13 @@ import '../controllers/budget_controller.dart';
 
 /// Opens the budget editor. Pass [budget] to edit, or [category] to create a
 /// new limit for a category that does not have one yet.
-Future<void> showBudgetEditor(
-  BuildContext context, {
-  Budget? budget,
-  Category? category,
-}) {
-  assert(
-    budget != null || category != null,
-    'Editing needs a budget; creating needs a category.',
-  );
+Future<void> showBudgetEditor(BuildContext context, {Budget? budget, Category? category}) {
+  assert(budget != null || category != null, 'Editing needs a budget; creating needs a category.');
   return showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
-    builder: (context) => _BudgetEditorSheet(
-      budget: budget,
-      category: category ?? budget!.category,
-    ),
+    builder: (context) =>
+        _BudgetEditorSheet(budget: budget, category: category ?? budget!.category),
   );
 }
 
@@ -84,9 +75,7 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
   void initState() {
     super.initState();
     _limit = widget.budget?.limit ?? 0;
-    _controller = TextEditingController(
-      text: _limit > 0 ? _limit.toStringAsFixed(0) : '',
-    );
+    _controller = TextEditingController(text: _limit > 0 ? _limit.toStringAsFixed(0) : '');
   }
 
   @override
@@ -101,9 +90,7 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
     final messenger = ScaffoldMessenger.of(context);
     final navigator = Navigator.of(context);
 
-    await ref
-        .read(budgetControllerProvider)
-        .setLimit(widget.category.id, _limit);
+    await ref.read(budgetControllerProvider).setLimit(widget.category.id, _limit);
 
     navigator.pop();
     messenger.showSnackBar(SnackBar(content: Text(l10n.budgetSaved)));
@@ -118,12 +105,9 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
       context: context,
       builder: (context) => AlertDialog(
         title: Text(l10n.deleteBudget),
-        content: Text(l10n.deleteBudgetBody(widget.category.name)),
+        content: Text(l10n.deleteBudgetBody(widget.category.localizedName(l10n))),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text(l10n.cancel),
-          ),
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: Text(l10n.cancel)),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
             style: TextButton.styleFrom(foregroundColor: AppColors.error),
@@ -150,7 +134,7 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
 
     return EditorSheet(
       title: _isEditing ? l10n.editBudget : l10n.newBudget,
-      subtitle: widget.category.name,
+      subtitle: widget.category.localizedName(l10n),
       submitLabel: l10n.save,
       onSubmit: _limit > 0 ? _save : null,
       onDelete: _isEditing ? _delete : null,
@@ -164,27 +148,20 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
             padding: const EdgeInsets.all(AppSpacing.md),
             child: Row(
               children: [
-                IconBadge(
-                  icon: iconForCategory(widget.category.icon),
-                  size: 40,
-                ),
+                IconBadge(icon: iconForCategory(widget.category.icon), size: 40),
                 const SizedBox(width: AppSpacing.md),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        widget.category.name,
-                        style: AppTypography.title.copyWith(
-                          color: context.textPrimary,
-                        ),
+                        widget.category.localizedName(l10n),
+                        style: AppTypography.title.copyWith(color: context.textPrimary),
                       ),
                       const SizedBox(height: 2),
                       Text(
                         '${l10n.spent} ${money.format(spent, decimals: false)}',
-                        style: AppTypography.caption.copyWith(
-                          color: context.textSecondary,
-                        ),
+                        style: AppTypography.caption.copyWith(color: context.textSecondary),
                       ),
                     ],
                   ),
@@ -236,10 +213,11 @@ class _BudgetEditorSheetState extends ConsumerState<_BudgetEditorSheet> {
   /// Round numbers around the current spend, plus a couple of common limits.
   List<double> _presets(double spent) {
     final base = spent <= 0 ? 200.0 : (spent / 50).ceil() * 50.0;
-    return <double>{base, base * 1.25, base * 1.5, 500.0}
-        .map((value) => value.roundToDouble())
-        .where((value) => value > 0)
-        .toList()
-      ..sort();
+    return <double>{
+      base,
+      base * 1.25,
+      base * 1.5,
+      500.0,
+    }.map((value) => value.roundToDouble()).where((value) => value > 0).toList()..sort();
   }
 }

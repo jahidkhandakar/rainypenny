@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:rainypenny/core/utils/category_visuals.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/formatters.dart';
@@ -415,7 +416,7 @@ class PdfReportBuilder {
         rows: [
           for (final Budget budget in report.budgets)
             [
-              budget.category.name,
+              budget.category.localizedName(l10n),
               money.format(budget.limit),
               money.format(budget.spent),
               money.format(budget.remaining),
@@ -487,7 +488,12 @@ class PdfReportBuilder {
         headers: [l10n.date, l10n.description, l10n.category, l10n.amount],
         rows: [
           for (final tx in rows)
-            [dates.short(tx.date), tx.title, tx.category.name, money.formatSigned(tx.signedAmount)],
+            [
+              dates.short(tx.date),
+              tx.title,
+              tx.category.localizedName(l10n),
+              money.formatSigned(tx.signedAmount),
+            ],
         ],
         alignRightLast: true,
       ),

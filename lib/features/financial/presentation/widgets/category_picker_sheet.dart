@@ -131,7 +131,7 @@ class _CategoryTile extends StatelessWidget {
           ),
           const SizedBox(height: AppSpacing.sm),
           Text(
-            categoryDisplayName(category, l10n),
+            category.localizedName(l10n),
             maxLines: 2,
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,

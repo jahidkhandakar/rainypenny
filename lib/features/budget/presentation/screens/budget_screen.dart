@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rainypenny/core/utils/category_visuals.dart';
 import 'package:rainypenny/features/financial/presentation/widgets/recommended_budgets_sheet.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -244,8 +245,8 @@ class _BudgetWarning extends ConsumerWidget {
     final color = budget.isExceeded ? AppColors.error : AppColors.warning;
 
     final message = budget.isExceeded
-        ? '${budget.category.name} is ${money.format(budget.remaining.abs(), decimals: false)} over its limit.'
-        : '${budget.category.name} ${l10n.budgetUsed(budget.percentUsed).toLowerCase()}, '
+        ? '${budget.category.localizedName(l10n)} is ${money.format(budget.remaining.abs(), decimals: false)} over its limit.'
+        : '${budget.category.localizedName(l10n)} ${l10n.budgetUsed(budget.percentUsed).toLowerCase()}, '
               '${money.format(budget.remaining, decimals: false)} ${l10n.remaining.toLowerCase()}.';
 
     return AppCard(
