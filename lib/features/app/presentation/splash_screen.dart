@@ -73,7 +73,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> with SingleTickerPr
                   RichText(
                     text: TextSpan(
                       style: AppTypography.heading.copyWith(fontSize: 28, color: Colors.white),
-                      children: const [TextSpan(text: 'LAVIO')],
+                      children: const [TextSpan(text: 'LAVIO Money Tracker')],
                     ),
                   ),
                   const SizedBox(height: AppSpacing.sm),

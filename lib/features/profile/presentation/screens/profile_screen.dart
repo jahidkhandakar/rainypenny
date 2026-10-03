@@ -203,7 +203,7 @@ class ProfileScreen extends ConsumerWidget {
           const SizedBox(height: AppSpacing.xl),
           Center(
             child: Text(
-              'LAVIO · 1.0.0',
+              'LAVIO Money Tracker · 1.0.0',
               style: AppTypography.caption.copyWith(color: context.textDisabled),
             ),
           ),
