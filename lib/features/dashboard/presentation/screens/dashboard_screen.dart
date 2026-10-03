@@ -8,6 +8,7 @@ import 'package:lavio/features/auth/presentation/controllers/auth_controller.dar
 import 'package:lavio/features/budget/presentation/widgets/budget_editor_sheet.dart';
 import 'package:lavio/features/dashboard/presentation/widgets/period_selector.dart';
 import 'package:lavio/features/financial/domain/entities/period_summary.dart';
+import 'package:lavio/features/financial/presentation/widgets/recommended_budgets_sheet.dart';
 import 'package:lavio/features/savings/presentation/screens/savings_screen.dart';
 import 'package:lavio/features/savings/presentation/widgets/goal_editor_sheet.dart';
 import 'package:lavio/features/transactions/presentation/controllers/transaction_list_controller.dart';
@@ -336,8 +337,8 @@ class _BudgetSection extends ConsumerWidget {
                   title: l10n.budget,
                   message: l10n.noTransactionsBody,
                   compact: true,
-                  actionLabel: l10n.newBudget,
-                  onAction: () => startAddBudget(context, ref),
+                  actionLabel: l10n.recommendedBudget,
+                  onAction: () => showSalaryBudgetRecommenderSheet(context, ref),
                 ),
               );
             }
