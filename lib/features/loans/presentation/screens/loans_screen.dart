@@ -38,12 +38,11 @@ class _LoansScreenState extends ConsumerState<LoansScreen> {
 
   bool _isDebt(Loan loan) {
     final kindName = loan.kind.name.toLowerCase();
-    if (kindName.contains('debt') ||
-        kindName.contains('credit') ||
-        loan.kind == LoanKind.creditCard) {
+    if (kindName.contains('creditcard')) {
       return true;
     }
-    return !loan.hasSchedule;
+
+    return false;
   }
 
   @override
@@ -148,7 +147,8 @@ class _TabSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tabs = ['Loans', 'Debts'];
+    final l10n = AppL10n.of(context);
+    final tabs = [l10n.loans, l10n.kindCreditCard];
 
     return Container(
       padding: const EdgeInsets.all(4),
