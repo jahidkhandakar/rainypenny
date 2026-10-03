@@ -9,7 +9,7 @@ class AppL10nPt extends AppL10n {
   AppL10nPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Poupe para os dias de chuva';
@@ -505,7 +505,7 @@ class AppL10nPt extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Defina um alvo e o RainyPenny acompanhará o seu progresso.';
+      'Defina um alvo e o LAVIO acompanhará o seu progresso.';
 
   @override
   String get fundsAdded => 'Valor adicionado';
@@ -824,7 +824,7 @@ class AppL10nPt extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Permita as notificações para que o RainyPenny o possa avisar antes que um orçamento ou pagamento lhe escape.';
+      'Permita as notificações para que o LAVIO o possa avisar antes que um orçamento ou pagamento lhe escape.';
 
   @override
   String get allowNotifications => 'Permitir notificações';
@@ -1049,7 +1049,7 @@ class AppL10nPt extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Gerado pelo RainyPenny a partir dos seus próprios registos.';
+      'Gerado pelo LAVIO a partir dos seus próprios registos.';
 
   @override
   String pageOf(int page, int total) {
@@ -1348,7 +1348,7 @@ class AppL10nPt extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Registe o que entra e o que sai. O RainyPenny transforma isso numa imagem que dá mesmo para ler.';
+      'Registe o que entra e o que sai. O LAVIO transforma isso numa imagem que dá mesmo para ler.';
 
   @override
   String get welcomeBudgetTitle => 'Limites que se aguentam';
@@ -1704,7 +1704,7 @@ class AppL10nPt extends AppL10n {
       'Volte a passar pelas perguntas iniciais. Nada do que registou é apagado.';
 
   @override
-  String get rateTitle => 'Está a gostar do RainyPenny?';
+  String get rateTitle => 'Está a gostar do LAVIO?';
 
   @override
   String get rateBody =>

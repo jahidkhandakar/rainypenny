@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/di/providers.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
-import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
-import 'package:rainypenny/features/transactions/presentation/controllers/add_transaction_controller.dart';
+import 'package:lavio/core/di/providers.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/financial/presentation/providers/finance_providers.dart';
+import 'package:lavio/features/transactions/presentation/controllers/add_transaction_controller.dart';
 
 /// A source whose category list resolves only when the test says so, standing
 /// in for the real gap between opening the form and the categories arriving.
@@ -54,34 +54,22 @@ void main() {
       await container.read(categoriesProvider.future);
       await Future<void>.delayed(Duration.zero);
 
-      expect(
-        container.read(addTransactionControllerProvider).category.id,
-        'food',
-      );
+      expect(container.read(addTransactionControllerProvider).category.id, 'food');
     });
 
     test('does not overwrite a category the user already picked', () async {
       final source = _SlowCategories();
       final container = _container(source);
-      final notifier = container.read(
-        addTransactionControllerProvider.notifier,
-      );
+      final notifier = container.read(addTransactionControllerProvider.notifier);
 
-      notifier.setCategory(
-        const Category(id: 'travel', name: 'Travel', icon: CategoryIcon.travel),
-      );
+      notifier.setCategory(const Category(id: 'travel', name: 'Travel', icon: CategoryIcon.travel));
 
       container.listen(categoriesProvider, (_, _) {});
-      source.release(const [
-        Category(id: 'food', name: 'Food', icon: CategoryIcon.food),
-      ]);
+      source.release(const [Category(id: 'food', name: 'Food', icon: CategoryIcon.food)]);
       await container.read(categoriesProvider.future);
       await Future<void>.delayed(Duration.zero);
 
-      expect(
-        container.read(addTransactionControllerProvider).category.id,
-        'travel',
-      );
+      expect(container.read(addTransactionControllerProvider).category.id, 'travel');
     });
 
     test('does not overwrite the category of a row being edited', () async {
@@ -97,18 +85,12 @@ void main() {
               amount: 200,
               date: DateTime(2026, 9, 10),
               type: TransactionType.expense,
-              category: const Category(
-                id: 'travel',
-                name: 'Travel',
-                icon: CategoryIcon.travel,
-              ),
+              category: const Category(id: 'travel', name: 'Travel', icon: CategoryIcon.travel),
             ),
           );
 
       container.listen(categoriesProvider, (_, _) {});
-      source.release(const [
-        Category(id: 'food', name: 'Food', icon: CategoryIcon.food),
-      ]);
+      source.release(const [Category(id: 'food', name: 'Food', icon: CategoryIcon.food)]);
       await container.read(categoriesProvider.future);
       await Future<void>.delayed(Duration.zero);
 
@@ -119,17 +101,10 @@ void main() {
 
     test('switching direction clears the chosen flag', () {
       final container = _container(_SlowCategories());
-      final notifier = container.read(
-        addTransactionControllerProvider.notifier,
-      );
+      final notifier = container.read(addTransactionControllerProvider.notifier);
 
-      notifier.setCategory(
-        const Category(id: 'travel', name: 'Travel', icon: CategoryIcon.travel),
-      );
-      expect(
-        container.read(addTransactionControllerProvider).categoryChosen,
-        isTrue,
-      );
+      notifier.setCategory(const Category(id: 'travel', name: 'Travel', icon: CategoryIcon.travel));
+      expect(container.read(addTransactionControllerProvider).categoryChosen, isTrue);
 
       notifier.setType(TransactionType.income);
       final draft = container.read(addTransactionControllerProvider);

@@ -9,7 +9,7 @@ class AppL10nMr extends AppL10n {
   AppL10nMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'अडचणीच्या दिवसासाठी बचत करा';
@@ -504,8 +504,7 @@ class AppL10nMr extends AppL10n {
   String get noGoalsTitle => 'अजून बचतीची ध्येयं नाहीत';
 
   @override
-  String get noGoalsBody =>
-      'एक ध्येय ठेवा, RainyPenny तुमची प्रगती पाहत राहील.';
+  String get noGoalsBody => 'एक ध्येय ठेवा, LAVIO तुमची प्रगती पाहत राहील.';
 
   @override
   String get fundsAdded => 'रक्कम जमा झाली';
@@ -823,7 +822,7 @@ class AppL10nMr extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'अर्थसंकल्प किंवा हप्ता हाताबाहेर जाण्याआधी RainyPenny इशारा देऊ शकेल यासाठी सूचनांना परवानगी द्या.';
+      'अर्थसंकल्प किंवा हप्ता हाताबाहेर जाण्याआधी LAVIO इशारा देऊ शकेल यासाठी सूचनांना परवानगी द्या.';
 
   @override
   String get allowNotifications => 'सूचनांना परवानगी द्या';
@@ -1043,7 +1042,7 @@ class AppL10nMr extends AppL10n {
   String get generatedOn => 'तयार झाल्याची तारीख';
 
   @override
-  String get reportDisclaimer => 'तुमच्याच नोंदींवरून RainyPenny ने तयार केला.';
+  String get reportDisclaimer => 'तुमच्याच नोंदींवरून LAVIO ने तयार केला.';
 
   @override
   String pageOf(int page, int total) {
@@ -1340,7 +1339,7 @@ class AppL10nMr extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'काय येतं आणि काय जातं ते नोंदवा. RainyPenny त्याचं खरोखर वाचता येईल असं चित्र बनवतं.';
+      'काय येतं आणि काय जातं ते नोंदवा. LAVIO त्याचं खरोखर वाचता येईल असं चित्र बनवतं.';
 
   @override
   String get welcomeBudgetTitle => 'टिकणाऱ्या मर्यादा';
@@ -1687,7 +1686,7 @@ class AppL10nMr extends AppL10n {
       'सुरुवातीच्या प्रश्नांमधून पुन्हा जा. तुम्ही नोंदवलेलं काहीही हटवलं जाणार नाही.';
 
   @override
-  String get rateTitle => 'RainyPenny आवडतंय?';
+  String get rateTitle => 'LAVIO आवडतंय?';
 
   @override
   String get rateBody =>

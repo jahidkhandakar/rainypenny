@@ -1,13 +1,13 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/di/providers.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/financial/data/datasources/finance_data_source.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
-import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
-import 'package:rainypenny/features/transactions/presentation/controllers/transaction_list_controller.dart';
+import 'package:lavio/core/di/providers.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/features/financial/data/datasources/finance_data_source.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/financial/presentation/providers/finance_providers.dart';
+import 'package:lavio/features/transactions/presentation/controllers/transaction_list_controller.dart';
 
 /// The search and filtering behaviour the Transactions screen depends on.
 ///

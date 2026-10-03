@@ -9,7 +9,7 @@ class AppL10nRu extends AppL10n {
   AppL10nRu([String locale = 'ru']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Копите на чёрный день';
@@ -512,7 +512,7 @@ class AppL10nRu extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Задайте цель, и RainyPenny будет следить за вашим прогрессом.';
+      'Задайте цель, и LAVIO будет следить за вашим прогрессом.';
 
   @override
   String get fundsAdded => 'Средства добавлены';
@@ -835,7 +835,7 @@ class AppL10nRu extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Разрешите уведомления, чтобы RainyPenny предупреждал вас до того, как бюджет или платёж выйдут из-под контроля.';
+      'Разрешите уведомления, чтобы LAVIO предупреждал вас до того, как бюджет или платёж выйдут из-под контроля.';
 
   @override
   String get allowNotifications => 'Разрешить уведомления';
@@ -1059,7 +1059,7 @@ class AppL10nRu extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Создано RainyPenny на основе ваших собственных записей.';
+      'Создано LAVIO на основе ваших собственных записей.';
 
   @override
   String pageOf(int page, int total) {
@@ -1361,7 +1361,7 @@ class AppL10nRu extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Записывайте, что приходит и что уходит. RainyPenny превращает это в картину, которую действительно можно прочитать.';
+      'Записывайте, что приходит и что уходит. LAVIO превращает это в картину, которую действительно можно прочитать.';
 
   @override
   String get welcomeBudgetTitle => 'Границы, которые держатся';
@@ -1711,7 +1711,7 @@ class AppL10nRu extends AppL10n {
       'Ответьте на первые вопросы ещё раз. Ничто из записанного вами не удаляется.';
 
   @override
-  String get rateTitle => 'Нравится RainyPenny?';
+  String get rateTitle => 'Нравится LAVIO?';
 
   @override
   String get rateBody =>

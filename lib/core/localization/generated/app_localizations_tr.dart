@@ -9,7 +9,7 @@ class AppL10nTr extends AppL10n {
   AppL10nTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Kara gün için biriktir';
@@ -505,7 +505,7 @@ class AppL10nTr extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Bir hedef belirleyin, RainyPenny ilerlemenizi takip etsin.';
+      'Bir hedef belirleyin, LAVIO ilerlemenizi takip etsin.';
 
   @override
   String get fundsAdded => 'Tutar eklendi';
@@ -823,7 +823,7 @@ class AppL10nTr extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'RainyPenny\'nin bir bütçe veya ödeme elinizden kaçmadan sizi uyarabilmesi için bildirimlere izin verin.';
+      'LAVIO\'nin bir bütçe veya ödeme elinizden kaçmadan sizi uyarabilmesi için bildirimlere izin verin.';
 
   @override
   String get allowNotifications => 'Bildirimlere izin ver';
@@ -1048,7 +1048,7 @@ class AppL10nTr extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'RainyPenny tarafından kendi kayıtlarınızdan oluşturuldu.';
+      'LAVIO tarafından kendi kayıtlarınızdan oluşturuldu.';
 
   @override
   String pageOf(int page, int total) {
@@ -1346,7 +1346,7 @@ class AppL10nTr extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Gireni ve çıkanı kaydedin. RainyPenny bunu gerçekten okunabilir bir tabloya dönüştürür.';
+      'Gireni ve çıkanı kaydedin. LAVIO bunu gerçekten okunabilir bir tabloya dönüştürür.';
 
   @override
   String get welcomeBudgetTitle => 'Tutan sınırlar koyun';
@@ -1699,7 +1699,7 @@ class AppL10nTr extends AppL10n {
       'İlk kurulum sorularından yeniden geçin. Kaydettiğiniz hiçbir şey silinmez.';
 
   @override
-  String get rateTitle => 'RainyPenny hoşunuza gidiyor mu?';
+  String get rateTitle => 'LAVIO hoşunuza gidiyor mu?';
 
   @override
   String get rateBody =>

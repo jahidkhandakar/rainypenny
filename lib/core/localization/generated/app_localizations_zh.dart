@@ -9,7 +9,7 @@ class AppL10nZh extends AppL10n {
   AppL10nZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => '为雨天存钱';
@@ -500,7 +500,7 @@ class AppL10nZh extends AppL10n {
   String get noGoalsTitle => '还没有储蓄目标';
 
   @override
-  String get noGoalsBody => '设定一个目标，RainyPenny 会帮你跟踪进度。';
+  String get noGoalsBody => '设定一个目标，LAVIO 会帮你跟踪进度。';
 
   @override
   String get fundsAdded => '已存入';
@@ -810,7 +810,7 @@ class AppL10nZh extends AppL10n {
   String get permissionRequired => '通知已关闭';
 
   @override
-  String get permissionRequiredBody => '允许通知，RainyPenny 才能在预算或还款失控前提醒你。';
+  String get permissionRequiredBody => '允许通知，LAVIO 才能在预算或还款失控前提醒你。';
 
   @override
   String get allowNotifications => '允许通知';
@@ -1024,7 +1024,7 @@ class AppL10nZh extends AppL10n {
   String get generatedOn => '生成时间';
 
   @override
-  String get reportDisclaimer => '由 RainyPenny 根据你自己的记录生成。';
+  String get reportDisclaimer => '由 LAVIO 根据你自己的记录生成。';
 
   @override
   String pageOf(int page, int total) {
@@ -1307,7 +1307,7 @@ class AppL10nZh extends AppL10n {
   String get welcomeTrackTitle => '看清钱花到了哪里';
 
   @override
-  String get welcomeTrackBody => '把进出的每一笔记下来。RainyPenny 会把它变成一幅真正看得懂的图。';
+  String get welcomeTrackBody => '把进出的每一笔记下来。LAVIO 会把它变成一幅真正看得懂的图。';
 
   @override
   String get welcomeBudgetTitle => '设定守得住的上限';
@@ -1615,7 +1615,7 @@ class AppL10nZh extends AppL10n {
   String get replaySetupBody => '再走一遍初始设置的问题。你记录的内容不会被删除。';
 
   @override
-  String get rateTitle => '喜欢 RainyPenny 吗？';
+  String get rateTitle => '喜欢 LAVIO 吗？';
 
   @override
   String get rateBody => '你已经用了一段时间了。评价只需片刻，也能帮助其他人找到这款应用。';
@@ -2127,7 +2127,7 @@ class AppL10nZhHant extends AppL10nZh {
   AppL10nZhHant() : super('zh_Hant');
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => '為雨天存錢';
@@ -2618,7 +2618,7 @@ class AppL10nZhHant extends AppL10nZh {
   String get noGoalsTitle => '還沒有儲蓄目標';
 
   @override
-  String get noGoalsBody => '設定一個目標，RainyPenny 會幫你追蹤進度。';
+  String get noGoalsBody => '設定一個目標，LAVIO 會幫你追蹤進度。';
 
   @override
   String get fundsAdded => '已存入';
@@ -2928,7 +2928,7 @@ class AppL10nZhHant extends AppL10nZh {
   String get permissionRequired => '通知已關閉';
 
   @override
-  String get permissionRequiredBody => '允許通知，RainyPenny 才能在預算或還款失控前提醒你。';
+  String get permissionRequiredBody => '允許通知，LAVIO 才能在預算或還款失控前提醒你。';
 
   @override
   String get allowNotifications => '允許通知';
@@ -3142,7 +3142,7 @@ class AppL10nZhHant extends AppL10nZh {
   String get generatedOn => '產生時間';
 
   @override
-  String get reportDisclaimer => '由 RainyPenny 依據你自己的紀錄產生。';
+  String get reportDisclaimer => '由 LAVIO 依據你自己的紀錄產生。';
 
   @override
   String pageOf(int page, int total) {
@@ -3425,7 +3425,7 @@ class AppL10nZhHant extends AppL10nZh {
   String get welcomeTrackTitle => '看清錢花到了哪裡';
 
   @override
-  String get welcomeTrackBody => '把進出的每一筆記下來。RainyPenny 會把它變成一幅真正看得懂的圖。';
+  String get welcomeTrackBody => '把進出的每一筆記下來。LAVIO 會把它變成一幅真正看得懂的圖。';
 
   @override
   String get welcomeBudgetTitle => '設定守得住的上限';
@@ -3734,7 +3734,7 @@ class AppL10nZhHant extends AppL10nZh {
   String get replaySetupBody => '再走一遍初始設定的問題。你記錄的內容不會被刪除。';
 
   @override
-  String get rateTitle => '喜歡 RainyPenny 嗎？';
+  String get rateTitle => '喜歡 LAVIO 嗎？';
 
   @override
   String get rateBody => '你已經用了一段時間了。評價只需片刻，也能幫助其他人找到這款應用程式。';

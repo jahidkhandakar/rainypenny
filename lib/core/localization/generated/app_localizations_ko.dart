@@ -9,7 +9,7 @@ class AppL10nKo extends AppL10n {
   AppL10nKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => '비 오는 날을 위해 모으세요';
@@ -500,7 +500,7 @@ class AppL10nKo extends AppL10n {
   String get noGoalsTitle => '아직 저축 목표가 없어요';
 
   @override
-  String get noGoalsBody => '목표를 정하면 RainyPenny가 진행 상황을 추적해요.';
+  String get noGoalsBody => '목표를 정하면 LAVIO가 진행 상황을 추적해요.';
 
   @override
   String get fundsAdded => '입금했어요';
@@ -813,7 +813,7 @@ class AppL10nKo extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      '알림을 허용하면 예산이나 상환이 손쓸 수 없게 되기 전에 RainyPenny가 알려 드려요.';
+      '알림을 허용하면 예산이나 상환이 손쓸 수 없게 되기 전에 LAVIO가 알려 드려요.';
 
   @override
   String get allowNotifications => '알림 허용';
@@ -1027,7 +1027,7 @@ class AppL10nKo extends AppL10n {
   String get generatedOn => '생성일';
 
   @override
-  String get reportDisclaimer => 'RainyPenny가 회원님의 기록을 바탕으로 만들었어요.';
+  String get reportDisclaimer => 'LAVIO가 회원님의 기록을 바탕으로 만들었어요.';
 
   @override
   String pageOf(int page, int total) {
@@ -1315,7 +1315,7 @@ class AppL10nKo extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      '들어온 것과 나간 것을 적기만 하세요. RainyPenny가 정말로 읽히는 그림으로 바꿔 드려요.';
+      '들어온 것과 나간 것을 적기만 하세요. LAVIO가 정말로 읽히는 그림으로 바꿔 드려요.';
 
   @override
   String get welcomeBudgetTitle => '지켜지는 한도를 정하세요';
@@ -1633,7 +1633,7 @@ class AppL10nKo extends AppL10n {
   String get replaySetupBody => '처음 질문을 다시 거쳐요. 기록하신 내용은 삭제되지 않아요.';
 
   @override
-  String get rateTitle => 'RainyPenny가 마음에 드시나요?';
+  String get rateTitle => 'LAVIO가 마음에 드시나요?';
 
   @override
   String get rateBody => '꽤 오래 사용해 오셨네요. 평가는 잠깐이면 되고, 다른 분들이 앱을 찾는 데 도움이 됩니다.';

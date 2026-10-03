@@ -1,4 +1,4 @@
-# RainyPenny
+# LAVIO Money Tracker
 
 A monthly salary assistant: what came in, where it went, what is left, and what
 rolls into next month. Budgets, savings goals and debts hang off the same

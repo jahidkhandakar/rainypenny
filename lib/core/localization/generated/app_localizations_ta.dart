@@ -9,7 +9,7 @@ class AppL10nTa extends AppL10n {
   AppL10nTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'மழைக்கால நாளுக்காகச் சேமியுங்கள்';
@@ -507,7 +507,7 @@ class AppL10nTa extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'ஒரு இலக்கை வையுங்கள், RainyPenny உங்கள் முன்னேற்றத்தைக் கண்காணிக்கும்.';
+      'ஒரு இலக்கை வையுங்கள், LAVIO உங்கள் முன்னேற்றத்தைக் கண்காணிக்கும்.';
 
   @override
   String get fundsAdded => 'பணம் சேர்க்கப்பட்டது';
@@ -826,7 +826,7 @@ class AppL10nTa extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'பட்ஜெட்டோ தவணையோ கைமீறிப் போவதற்கு முன் RainyPenny எச்சரிக்க அறிவிப்புகளை அனுமதியுங்கள்.';
+      'பட்ஜெட்டோ தவணையோ கைமீறிப் போவதற்கு முன் LAVIO எச்சரிக்க அறிவிப்புகளை அனுமதியுங்கள்.';
 
   @override
   String get allowNotifications => 'அறிவிப்புகளை அனுமதி';
@@ -1052,7 +1052,7 @@ class AppL10nTa extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'உங்கள் சொந்தப் பதிவுகளிலிருந்து RainyPenny உருவாக்கியது.';
+      'உங்கள் சொந்தப் பதிவுகளிலிருந்து LAVIO உருவாக்கியது.';
 
   @override
   String pageOf(int page, int total) {
@@ -1354,7 +1354,7 @@ class AppL10nTa extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'வருவதையும் போவதையும் பதிவு செய்யுங்கள். RainyPenny அதை உண்மையிலேயே படிக்கக்கூடிய ஒரு படமாக மாற்றுகிறது.';
+      'வருவதையும் போவதையும் பதிவு செய்யுங்கள். LAVIO அதை உண்மையிலேயே படிக்கக்கூடிய ஒரு படமாக மாற்றுகிறது.';
 
   @override
   String get welcomeBudgetTitle => 'நிலைக்கும் வரம்புகள்';
@@ -1710,7 +1710,7 @@ class AppL10nTa extends AppL10n {
       'தொடக்கக் கேள்விகளுக்கு மீண்டும் பதிலளியுங்கள். நீங்கள் பதிவு செய்த எதுவும் நீக்கப்படாது.';
 
   @override
-  String get rateTitle => 'RainyPenny பிடித்திருக்கிறதா?';
+  String get rateTitle => 'LAVIO பிடித்திருக்கிறதா?';
 
   @override
   String get rateBody =>

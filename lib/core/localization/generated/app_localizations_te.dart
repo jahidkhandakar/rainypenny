@@ -9,7 +9,7 @@ class AppL10nTe extends AppL10n {
   AppL10nTe([String locale = 'te']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'కష్టకాలం కోసం పొదుపు చేయండి';
@@ -506,7 +506,7 @@ class AppL10nTe extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'ఒక లక్ష్యం పెట్టండి, RainyPenny మీ పురోగతిని ట్రాక్ చేస్తుంది.';
+      'ఒక లక్ష్యం పెట్టండి, LAVIO మీ పురోగతిని ట్రాక్ చేస్తుంది.';
 
   @override
   String get fundsAdded => 'డబ్బు జోడించబడింది';
@@ -824,7 +824,7 @@ class AppL10nTe extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'బడ్జెట్ లేదా చెల్లింపు చేయి దాటిపోకముందే RainyPenny హెచ్చరించేలా నోటిఫికేషన్లకు అనుమతి ఇవ్వండి.';
+      'బడ్జెట్ లేదా చెల్లింపు చేయి దాటిపోకముందే LAVIO హెచ్చరించేలా నోటిఫికేషన్లకు అనుమతి ఇవ్వండి.';
 
   @override
   String get allowNotifications => 'నోటిఫికేషన్లను అనుమతించు';
@@ -1047,8 +1047,7 @@ class AppL10nTe extends AppL10n {
   String get generatedOn => 'తయారైన తేదీ';
 
   @override
-  String get reportDisclaimer =>
-      'మీ సొంత రికార్డుల నుండి RainyPenny తయారు చేసింది.';
+  String get reportDisclaimer => 'మీ సొంత రికార్డుల నుండి LAVIO తయారు చేసింది.';
 
   @override
   String pageOf(int page, int total) {
@@ -1347,7 +1346,7 @@ class AppL10nTe extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'వచ్చేదీ పోయేదీ నమోదు చేయండి. RainyPenny దాన్ని నిజంగా చదవగలిగే చిత్రంగా మారుస్తుంది.';
+      'వచ్చేదీ పోయేదీ నమోదు చేయండి. LAVIO దాన్ని నిజంగా చదవగలిగే చిత్రంగా మారుస్తుంది.';
 
   @override
   String get welcomeBudgetTitle => 'నిలిచే హద్దులు';
@@ -1699,7 +1698,7 @@ class AppL10nTe extends AppL10n {
       'మొదటి ప్రశ్నల ద్వారా మళ్ళీ వెళ్ళండి. మీరు నమోదు చేసినది ఏదీ తొలగించబడదు.';
 
   @override
-  String get rateTitle => 'RainyPenny నచ్చిందా?';
+  String get rateTitle => 'LAVIO నచ్చిందా?';
 
   @override
   String get rateBody =>

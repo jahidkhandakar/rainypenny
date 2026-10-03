@@ -9,7 +9,7 @@ class AppL10nCs extends AppL10n {
   AppL10nCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Šetřete na horší časy';
@@ -511,8 +511,7 @@ class AppL10nCs extends AppL10n {
   String get noGoalsTitle => 'Zatím žádné spořicí cíle';
 
   @override
-  String get noGoalsBody =>
-      'Nastavte si cíl a RainyPenny bude sledovat váš postup.';
+  String get noGoalsBody => 'Nastavte si cíl a LAVIO bude sledovat váš postup.';
 
   @override
   String get fundsAdded => 'Peníze přidány';
@@ -836,7 +835,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Povolte oznámení, aby vás RainyPenny varoval dřív, než se rozpočet nebo splátka vymkne z rukou.';
+      'Povolte oznámení, aby vás LAVIO varoval dřív, než se rozpočet nebo splátka vymkne z rukou.';
 
   @override
   String get allowNotifications => 'Povolit oznámení';
@@ -1058,8 +1057,7 @@ class AppL10nCs extends AppL10n {
   String get generatedOn => 'Vytvořeno';
 
   @override
-  String get reportDisclaimer =>
-      'Vytvořil RainyPenny z vašich vlastních záznamů.';
+  String get reportDisclaimer => 'Vytvořil LAVIO z vašich vlastních záznamů.';
 
   @override
   String pageOf(int page, int total) {
@@ -1360,7 +1358,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Zapisujte, co přijde a co odejde. RainyPenny z toho udělá obrázek, který se dá opravdu číst.';
+      'Zapisujte, co přijde a co odejde. LAVIO z toho udělá obrázek, který se dá opravdu číst.';
 
   @override
   String get welcomeBudgetTitle => 'Hranice, které vydrží';
@@ -1709,7 +1707,7 @@ class AppL10nCs extends AppL10n {
       'Projděte úvodní otázky ještě jednou. Nic z toho, co jste zapsali, se nesmaže.';
 
   @override
-  String get rateTitle => 'Líbí se vám RainyPenny?';
+  String get rateTitle => 'Líbí se vám LAVIO?';
 
   @override
   String get rateBody =>

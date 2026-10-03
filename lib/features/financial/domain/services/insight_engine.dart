@@ -1,5 +1,5 @@
-import 'package:rainypenny/core/localization/generated/app_localizations.dart';
-import 'package:rainypenny/core/utils/category_visuals.dart';
+import 'package:lavio/core/localization/generated/app_localizations.dart';
+import 'package:lavio/core/utils/category_visuals.dart';
 
 import '../entities/budget.dart';
 import '../entities/insight.dart';

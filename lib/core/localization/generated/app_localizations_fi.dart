@@ -9,7 +9,7 @@ class AppL10nFi extends AppL10n {
   AppL10nFi([String locale = 'fi']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Säästöä pahan päivän varalle';
@@ -505,8 +505,7 @@ class AppL10nFi extends AppL10n {
   String get noGoalsTitle => 'Ei vielä säästötavoitteita';
 
   @override
-  String get noGoalsBody =>
-      'Aseta tavoite, niin RainyPenny seuraa edistymistäsi.';
+  String get noGoalsBody => 'Aseta tavoite, niin LAVIO seuraa edistymistäsi.';
 
   @override
   String get fundsAdded => 'Varat lisätty';
@@ -824,7 +823,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Salli ilmoitukset, niin RainyPenny voi varoittaa ennen kuin budjetti tai maksu karkaa käsistä.';
+      'Salli ilmoitukset, niin LAVIO voi varoittaa ennen kuin budjetti tai maksu karkaa käsistä.';
 
   @override
   String get allowNotifications => 'Salli ilmoitukset';
@@ -1049,8 +1048,7 @@ class AppL10nFi extends AppL10n {
   String get generatedOn => 'Luotu';
 
   @override
-  String get reportDisclaimer =>
-      'RainyPennyn laatima omien merkintöjesi pohjalta.';
+  String get reportDisclaimer => 'LAVIOn laatima omien merkintöjesi pohjalta.';
 
   @override
   String pageOf(int page, int total) {
@@ -1347,7 +1345,7 @@ class AppL10nFi extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Kirjaa, mitä tulee sisään ja mitä menee ulos. RainyPenny tekee siitä kuvan, jota oikeasti pystyy lukemaan.';
+      'Kirjaa, mitä tulee sisään ja mitä menee ulos. LAVIO tekee siitä kuvan, jota oikeasti pystyy lukemaan.';
 
   @override
   String get welcomeBudgetTitle => 'Rajoja, jotka pitävät';
@@ -1701,7 +1699,7 @@ class AppL10nFi extends AppL10n {
       'Käy aloituskysymykset läpi vielä kerran. Mitään kirjaamaasi ei poisteta.';
 
   @override
-  String get rateTitle => 'Pidätkö RainyPennystä?';
+  String get rateTitle => 'Pidätkö LAVIOstä?';
 
   @override
   String get rateBody =>

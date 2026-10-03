@@ -6,10 +6,10 @@ import '../../../core/localization/generated/app_localizations.dart';
 import '../../../core/routing/app_routes.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
+import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/widgets/brand_mark.dart';
 import '../../financial/presentation/providers/finance_providers.dart';
-import '../../../core/theme/app_theme.dart';
 
 /// Brand moment while the first data load is kicked off.
 ///
@@ -22,8 +22,7 @@ class SplashScreen extends ConsumerStatefulWidget {
   ConsumerState<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends ConsumerState<SplashScreen>
-    with SingleTickerProviderStateMixin {
+class _SplashScreenState extends ConsumerState<SplashScreen> with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     vsync: this,
     duration: const Duration(milliseconds: 900),
@@ -73,24 +72,12 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                   const SizedBox(height: AppSpacing.xl),
                   RichText(
                     text: TextSpan(
-                      style: AppTypography.heading.copyWith(
-                        fontSize: 28,
-                        color: Colors.white,
-                      ),
-                      children: const [
-                        TextSpan(text: 'Rainy'),
-                        TextSpan(
-                          text: 'Penny',
-                          style: TextStyle(fontWeight: FontWeight.w400),
-                        ),
-                      ],
+                      style: AppTypography.heading.copyWith(fontSize: 28, color: Colors.white),
+                      children: const [TextSpan(text: 'LAVIO Money Tracker')],
                     ),
                   ),
                   const SizedBox(height: AppSpacing.sm),
-                  Text(
-                    l10n.appTagline,
-                    style: AppTypography.body.copyWith(color: Colors.white70),
-                  ),
+                  Text(l10n.appTagline, style: AppTypography.body.copyWith(color: Colors.white70)),
                 ],
               ),
             ),

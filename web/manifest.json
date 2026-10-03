@@ -1,11 +1,11 @@
 {
-    "name": "RainyPenny",
-    "short_name": "RainyPenny",
+    "name": "LAVIO Money Tracker",
+    "short_name": "LAVIO",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#02B3AA",
-    "description": "RainyPenny — a personal finance app.",
+    "description": "LAVIO Money Tracker — Take Control of Your Money.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

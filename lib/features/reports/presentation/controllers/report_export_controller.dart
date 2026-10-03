@@ -28,11 +28,8 @@ final financialReportProvider = FutureProvider<FinancialReport>((ref) async {
   final dates = ref.watch(dateFormatterProvider);
   // Newest first: a reader scanning the appendix wants the recent entries,
   // and the table is capped before it runs to hundreds of rows.
-  final inRange = BalanceCalculator.inRange(
-    transactions,
-    range.start,
-    range.end,
-  ).toList()..sort((a, b) => b.date.compareTo(a.date));
+  final inRange = BalanceCalculator.inRange(transactions, range.start, range.end).toList()
+    ..sort((a, b) => b.date.compareTo(a.date));
 
   return FinancialReport(
     summary: summary,
@@ -82,19 +79,16 @@ class ReportExportController {
   /// file to their device on both platforms.
   Future<void> printOrSave(AppL10n l10n) async {
     final bytes = await buildPdf(l10n);
-    await Printing.layoutPdf(
-      onLayout: (_) async => bytes,
-      name: fileName(l10n),
-    );
+    await Printing.layoutPdf(onLayout: (_) async => bytes, name: fileName(l10n));
   }
 
-  /// `RainyPenny-Report-2026-09-04.pdf` — sorts chronologically in a file
+  /// `LAVIO-Report-2026-09-04.pdf` — sorts chronologically in a file
   /// listing and says what it is without being opened.
   @visibleForTesting
   String fileName(AppL10n l10n) {
     final now = DateTime.now();
     String two(int value) => value.toString().padLeft(2, '0');
-    return 'RainyPenny-Report-${now.year}-${two(now.month)}-${two(now.day)}.pdf';
+    return 'LAVIO-Report-${now.year}-${two(now.month)}-${two(now.day)}.pdf';
   }
 }
 

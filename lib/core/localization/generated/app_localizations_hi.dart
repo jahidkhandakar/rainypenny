@@ -9,10 +9,10 @@ class AppL10nHi extends AppL10n {
   AppL10nHi([String locale = 'hi']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
-  String get appTagline => 'बुरे समय के लिए बचत करें';
+  String get appTagline => 'अपने पैसों पर नियंत्रण पाएं';
 
   @override
   String get navHome => 'होम';
@@ -505,8 +505,7 @@ class AppL10nHi extends AppL10n {
   String get noGoalsTitle => 'अभी कोई बचत लक्ष्य नहीं';
 
   @override
-  String get noGoalsBody =>
-      'एक लक्ष्य तय करें और RainyPenny आपकी प्रगति देखेगा।';
+  String get noGoalsBody => 'एक लक्ष्य तय करें और LAVIO आपकी प्रगति देखेगा।';
 
   @override
   String get fundsAdded => 'राशि जोड़ी गई';
@@ -825,7 +824,7 @@ class AppL10nHi extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'सूचनाओं की अनुमति दें ताकि RainyPenny आपको बजट या भुगतान हाथ से निकलने से पहले चेता सके।';
+      'सूचनाओं की अनुमति दें ताकि LAVIO आपको बजट या भुगतान हाथ से निकलने से पहले चेता सके।';
 
   @override
   String get allowNotifications => 'सूचनाओं की अनुमति दें';
@@ -1046,7 +1045,7 @@ class AppL10nHi extends AppL10n {
   String get generatedOn => 'तैयार करने की तिथि';
 
   @override
-  String get reportDisclaimer => 'RainyPenny द्वारा आपके ही रिकॉर्ड से तैयार।';
+  String get reportDisclaimer => 'LAVIO द्वारा आपके ही रिकॉर्ड से तैयार।';
 
   @override
   String pageOf(int page, int total) {
@@ -1342,7 +1341,7 @@ class AppL10nHi extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'जो आता है और जो जाता है, दोनों दर्ज करें। RainyPenny उसे ऐसी तस्वीर में बदल देता है जो सचमुच पढ़ी जा सके।';
+      'जो आता है और जो जाता है, दोनों दर्ज करें। LAVIO उसे ऐसी तस्वीर में बदल देता है जो सचमुच पढ़ी जा सके।';
 
   @override
   String get welcomeBudgetTitle => 'ऐसी सीमाएँ जो टिकें';
@@ -1690,7 +1689,7 @@ class AppL10nHi extends AppL10n {
       'शुरुआती सवालों से फिर गुज़रें। आपका दर्ज किया कुछ भी नहीं मिटेगा।';
 
   @override
-  String get rateTitle => 'RainyPenny पसंद आ रहा है?';
+  String get rateTitle => 'LAVIO पसंद आ रहा है?';
 
   @override
   String get rateBody =>

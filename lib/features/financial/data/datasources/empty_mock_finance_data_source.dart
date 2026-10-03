@@ -1,4 +1,4 @@
-import 'package:rainypenny/features/financial/data/empty_demo_dataset.dart';
+import 'package:lavio/features/financial/data/empty_demo_dataset.dart';
 
 import '../../domain/entities/budget.dart';
 import '../../domain/entities/category.dart';
@@ -267,6 +267,5 @@ class EmptyMockFinanceDataSource implements FinanceDataSource {
 
   /// Nothing has been paid in an empty dataset, so there is no history.
   @override
-  Future<List<LoanPayment>> fetchLoanPayments(String loanId) =>
-      _withLatency(const <LoanPayment>[]);
+  Future<List<LoanPayment>> fetchLoanPayments(String loanId) => _withLatency(const <LoanPayment>[]);
 }

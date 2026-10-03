@@ -9,7 +9,7 @@ class AppL10nFa extends AppL10n {
   AppL10nFa([String locale = 'fa']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'برای روز مبادا پس‌انداز کنید';
@@ -505,8 +505,7 @@ class AppL10nFa extends AppL10n {
   String get noGoalsTitle => 'هنوز هدف پس‌اندازی نیست';
 
   @override
-  String get noGoalsBody =>
-      'هدفی بگذارید تا RainyPenny پیشرفت شما را دنبال کند.';
+  String get noGoalsBody => 'هدفی بگذارید تا LAVIO پیشرفت شما را دنبال کند.';
 
   @override
   String get fundsAdded => 'مبلغ واریز شد';
@@ -823,7 +822,7 @@ class AppL10nFa extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'اجازه اعلان بدهید تا RainyPenny پیش از آنکه بودجه یا پرداختی از دستتان در برود به شما هشدار دهد.';
+      'اجازه اعلان بدهید تا LAVIO پیش از آنکه بودجه یا پرداختی از دستتان در برود به شما هشدار دهد.';
 
   @override
   String get allowNotifications => 'اجازه اعلان';
@@ -1046,7 +1045,7 @@ class AppL10nFa extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'RainyPenny این را از روی رکوردهای خود شما ساخته است.';
+      'LAVIO این را از روی رکوردهای خود شما ساخته است.';
 
   @override
   String pageOf(int page, int total) {
@@ -1344,7 +1343,7 @@ class AppL10nFa extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'آنچه می‌آید و آنچه می‌رود را ثبت کنید. RainyPenny آن را به تصویری تبدیل می‌کند که واقعاً خوانده می‌شود.';
+      'آنچه می‌آید و آنچه می‌رود را ثبت کنید. LAVIO آن را به تصویری تبدیل می‌کند که واقعاً خوانده می‌شود.';
 
   @override
   String get welcomeBudgetTitle => 'مرزهایی که دوام می‌آورند';
@@ -1694,7 +1693,7 @@ class AppL10nFa extends AppL10n {
       'دوباره از پرسش‌های آغازین بگذرید. هیچ‌یک از آنچه ثبت کرده‌اید پاک نمی‌شود.';
 
   @override
-  String get rateTitle => 'از RainyPenny راضی هستید؟';
+  String get rateTitle => 'از LAVIO راضی هستید؟';
 
   @override
   String get rateBody =>

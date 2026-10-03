@@ -9,7 +9,7 @@ class AppL10nFil extends AppL10n {
   AppL10nFil([String locale = 'fil']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Mag-ipon para sa maulan na araw';
@@ -506,7 +506,7 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Maglagay ng target at susubaybayan ng RainyPenny ang progreso mo.';
+      'Maglagay ng target at susubaybayan ng LAVIO ang progreso mo.';
 
   @override
   String get fundsAdded => 'Naidagdag ang pondo';
@@ -825,7 +825,7 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Payagan ang mga abiso para mabalaan ka ng RainyPenny bago tuluyang lumampas ang badyet o bayad.';
+      'Payagan ang mga abiso para mabalaan ka ng LAVIO bago tuluyang lumampas ang badyet o bayad.';
 
   @override
   String get allowNotifications => 'Payagan ang mga abiso';
@@ -1051,7 +1051,7 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Ginawa ng RainyPenny mula sa sarili mong mga tala.';
+      'Ginawa ng LAVIO mula sa sarili mong mga tala.';
 
   @override
   String pageOf(int page, int total) {
@@ -1350,7 +1350,7 @@ class AppL10nFil extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Itala kung ano ang pumapasok at ano ang lumalabas. Ginagawa itong larawan ng RainyPenny na kayang-kaya mong basahin.';
+      'Itala kung ano ang pumapasok at ano ang lumalabas. Ginagawa itong larawan ng LAVIO na kayang-kaya mong basahin.';
 
   @override
   String get welcomeBudgetTitle => 'Mga hangganang kayang panindigan';
@@ -1705,7 +1705,7 @@ class AppL10nFil extends AppL10n {
       'Dumaan ulit sa mga unang tanong. Walang mabubura sa mga naitala mo.';
 
   @override
-  String get rateTitle => 'Nagugustuhan mo ba ang RainyPenny?';
+  String get rateTitle => 'Nagugustuhan mo ba ang LAVIO?';
 
   @override
   String get rateBody =>

@@ -9,7 +9,7 @@ class AppL10nPl extends AppL10n {
   AppL10nPl([String locale = 'pl']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Odkładaj na czarną godzinę';
@@ -511,8 +511,7 @@ class AppL10nPl extends AppL10n {
   String get noGoalsTitle => 'Nie ma jeszcze celów oszczędnościowych';
 
   @override
-  String get noGoalsBody =>
-      'Ustaw cel, a RainyPenny będzie śledzić twoje postępy.';
+  String get noGoalsBody => 'Ustaw cel, a LAVIO będzie śledzić twoje postępy.';
 
   @override
   String get fundsAdded => 'Środki dodane';
@@ -835,7 +834,7 @@ class AppL10nPl extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Zezwól na powiadomienia, żeby RainyPenny ostrzegł cię, zanim budżet albo rata wymkną się spod kontroli.';
+      'Zezwól na powiadomienia, żeby LAVIO ostrzegł cię, zanim budżet albo rata wymkną się spod kontroli.';
 
   @override
   String get allowNotifications => 'Zezwól na powiadomienia';
@@ -1060,7 +1059,7 @@ class AppL10nPl extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Utworzone przez RainyPenny na podstawie twoich własnych zapisów.';
+      'Utworzone przez LAVIO na podstawie twoich własnych zapisów.';
 
   @override
   String pageOf(int page, int total) {
@@ -1362,7 +1361,7 @@ class AppL10nPl extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Zapisuj, co wpływa i co wypływa. RainyPenny zamienia to w obraz, który naprawdę da się odczytać.';
+      'Zapisuj, co wpływa i co wypływa. LAVIO zamienia to w obraz, który naprawdę da się odczytać.';
 
   @override
   String get welcomeBudgetTitle => 'Granice, które się trzymają';
@@ -1715,7 +1714,7 @@ class AppL10nPl extends AppL10n {
       'Odpowiedz ponownie na pytania początkowe. Nic z tego, co zapisałeś, nie zostanie usunięte.';
 
   @override
-  String get rateTitle => 'Podoba Ci się RainyPenny?';
+  String get rateTitle => 'Podoba Ci się LAVIO?';
 
   @override
   String get rateBody =>

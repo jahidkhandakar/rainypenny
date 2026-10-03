@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rainypenny/core/theme/app_theme.dart';
-import 'package:rainypenny/core/theme/app_typography.dart';
-import 'package:rainypenny/features/financial/domain/entities/user_profile.dart';
+import 'package:lavio/core/theme/app_theme.dart';
+import 'package:lavio/core/theme/app_typography.dart';
+import 'package:lavio/features/financial/domain/entities/user_profile.dart';
 
 class RoundAvatar extends StatelessWidget {
   const RoundAvatar({super.key, required this.user});

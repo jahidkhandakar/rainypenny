@@ -1,4 +1,4 @@
--- RainyPenny initial schema.
+-- LAVIO initial schema.
 --
 -- Every user-owned table carries user_id and is protected by row-level
 -- security, so a user can only ever read or write their own financial records.

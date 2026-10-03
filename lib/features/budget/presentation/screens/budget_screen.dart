@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/core/utils/category_visuals.dart';
-import 'package:rainypenny/features/financial/presentation/widgets/recommended_budgets_sheet.dart';
+import 'package:lavio/core/utils/category_visuals.dart';
+import 'package:lavio/features/financial/presentation/widgets/recommended_budgets_sheet.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/theme/app_colors.dart';

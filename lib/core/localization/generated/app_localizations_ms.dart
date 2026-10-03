@@ -9,7 +9,7 @@ class AppL10nMs extends AppL10n {
   AppL10nMs([String locale = 'ms']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Simpan untuk hari hujan';
@@ -504,7 +504,7 @@ class AppL10nMs extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Tetapkan sasaran dan RainyPenny akan menjejaki kemajuan anda.';
+      'Tetapkan sasaran dan LAVIO akan menjejaki kemajuan anda.';
 
   @override
   String get fundsAdded => 'Dana ditambah';
@@ -822,7 +822,7 @@ class AppL10nMs extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Benarkan pemberitahuan supaya RainyPenny boleh memberi amaran sebelum bajet atau bayaran terlepas daripada kawalan.';
+      'Benarkan pemberitahuan supaya LAVIO boleh memberi amaran sebelum bajet atau bayaran terlepas daripada kawalan.';
 
   @override
   String get allowNotifications => 'Benarkan pemberitahuan';
@@ -1047,7 +1047,7 @@ class AppL10nMs extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Dijana oleh RainyPenny daripada rekod anda sendiri.';
+      'Dijana oleh LAVIO daripada rekod anda sendiri.';
 
   @override
   String pageOf(int page, int total) {
@@ -1343,7 +1343,7 @@ class AppL10nMs extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Rekod apa yang masuk dan apa yang keluar. RainyPenny menjadikannya gambaran yang benar-benar boleh dibaca.';
+      'Rekod apa yang masuk dan apa yang keluar. LAVIO menjadikannya gambaran yang benar-benar boleh dibaca.';
 
   @override
   String get welcomeBudgetTitle => 'Had yang benar-benar bertahan';
@@ -1696,7 +1696,7 @@ class AppL10nMs extends AppL10n {
       'Lalui semula soalan permulaan. Tiada apa yang anda rekodkan akan dipadam.';
 
   @override
-  String get rateTitle => 'Suka menggunakan RainyPenny?';
+  String get rateTitle => 'Suka menggunakan LAVIO?';
 
   @override
   String get rateBody =>

@@ -9,7 +9,7 @@ class AppL10nSw extends AppL10n {
   AppL10nSw([String locale = 'sw']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Weka akiba kwa siku ya mvua';
@@ -505,8 +505,7 @@ class AppL10nSw extends AppL10n {
   String get noGoalsTitle => 'Bado hakuna malengo ya akiba';
 
   @override
-  String get noGoalsBody =>
-      'Weka lengo na RainyPenny itafuatilia maendeleo yako.';
+  String get noGoalsBody => 'Weka lengo na LAVIO itafuatilia maendeleo yako.';
 
   @override
   String get fundsAdded => 'Fedha zimeongezwa';
@@ -822,7 +821,7 @@ class AppL10nSw extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Ruhusu arifa ili RainyPenny ikuonye kabla bajeti au malipo hayajakutoka mkononi.';
+      'Ruhusu arifa ili LAVIO ikuonye kabla bajeti au malipo hayajakutoka mkononi.';
 
   @override
   String get allowNotifications => 'Ruhusu arifa';
@@ -1048,7 +1047,7 @@ class AppL10nSw extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Imetengenezwa na RainyPenny kutokana na rekodi zako mwenyewe.';
+      'Imetengenezwa na LAVIO kutokana na rekodi zako mwenyewe.';
 
   @override
   String pageOf(int page, int total) {
@@ -1348,7 +1347,7 @@ class AppL10nSw extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Rekodi kinachoingia na kinachotoka. RainyPenny hukigeuza kuwa picha unayoweza kuisoma kweli.';
+      'Rekodi kinachoingia na kinachotoka. LAVIO hukigeuza kuwa picha unayoweza kuisoma kweli.';
 
   @override
   String get welcomeBudgetTitle => 'Mipaka inayoshikilia';
@@ -1701,7 +1700,7 @@ class AppL10nSw extends AppL10n {
       'Pitia tena maswali ya mwanzo. Hakuna ulichokirekodi kinachofutwa.';
 
   @override
-  String get rateTitle => 'Unafurahia RainyPenny?';
+  String get rateTitle => 'Unafurahia LAVIO?';
 
   @override
   String get rateBody =>

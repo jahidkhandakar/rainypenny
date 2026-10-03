@@ -9,10 +9,10 @@ class AppL10nAr extends AppL10n {
   AppL10nAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
-  String get appTagline => 'ادّخر ليوم ممطر';
+  String get appTagline => 'تولَّ زمام أمورك المالية';
 
   @override
   String get navHome => 'الرئيسية';
@@ -512,7 +512,7 @@ class AppL10nAr extends AppL10n {
   String get noGoalsTitle => 'لا توجد أهداف ادخار بعد';
 
   @override
-  String get noGoalsBody => 'حدد هدفًا وسيتابع RainyPenny تقدمك.';
+  String get noGoalsBody => 'حدد هدفًا وسيتابع LAVIO تقدمك.';
 
   @override
   String get fundsAdded => 'تمت إضافة المبلغ';
@@ -836,7 +836,7 @@ class AppL10nAr extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'اسمح بالإشعارات ليتمكن RainyPenny من تنبيهك قبل أن تفلت منك ميزانية أو دفعة.';
+      'اسمح بالإشعارات ليتمكن LAVIO من تنبيهك قبل أن تفلت منك ميزانية أو دفعة.';
 
   @override
   String get allowNotifications => 'السماح بالإشعارات';
@@ -1054,8 +1054,7 @@ class AppL10nAr extends AppL10n {
   String get generatedOn => 'تاريخ الإصدار';
 
   @override
-  String get reportDisclaimer =>
-      'تم إنشاؤه بواسطة RainyPenny من سجلاتك الخاصة.';
+  String get reportDisclaimer => 'تم إنشاؤه بواسطة LAVIO من سجلاتك الخاصة.';
 
   @override
   String pageOf(int page, int total) {
@@ -1356,7 +1355,7 @@ class AppL10nAr extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'سجّل ما يدخل وما يخرج. يحوّل RainyPenny ذلك إلى صورة واضحة يمكنك قراءتها فعلًا.';
+      'سجّل ما يدخل وما يخرج. يحوّل LAVIO ذلك إلى صورة واضحة يمكنك قراءتها فعلًا.';
 
   @override
   String get welcomeBudgetTitle => 'ضع حدودًا تلتزم بها';
@@ -1702,7 +1701,7 @@ class AppL10nAr extends AppL10n {
       'أعد المرور بأسئلة البداية. لن يُحذف أي شيء سجّلته.';
 
   @override
-  String get rateTitle => 'هل تستمتع بـ RainyPenny؟';
+  String get rateTitle => 'هل تستمتع بـ LAVIO؟';
 
   @override
   String get rateBody =>

@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/di/providers.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
-import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
+import 'package:lavio/core/di/providers.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/financial/presentation/providers/finance_providers.dart';
 
 /// Everything on the dashboard reports on one period.
 ///
@@ -17,9 +17,7 @@ void main() {
     final c = ProviderContainer(
       overrides: [
         settingsStoreProvider.overrideWithValue(InMemorySettingsStore()),
-        financeDataSourceProvider.overrideWithValue(
-          MockFinanceDataSource(latency: Duration.zero),
-        ),
+        financeDataSourceProvider.overrideWithValue(MockFinanceDataSource(latency: Duration.zero)),
       ],
     );
     addTearDown(c.dispose);
@@ -34,12 +32,8 @@ void main() {
 
   /// What the spending donut draws, per category.
   Future<Map<String, double>> donutSpend(ProviderContainer c) async {
-    final summary = await c.read(
-      periodSummaryProvider(c.read(dashboardRangeProvider)).future,
-    );
-    return {
-      for (final e in summary.spendingByCategory.entries) e.key.id: e.value,
-    };
+    final summary = await c.read(periodSummaryProvider(c.read(dashboardRangeProvider)).future);
+    return {for (final e in summary.spendingByCategory.entries) e.key.id: e.value};
   }
 
   for (final tab in DashboardPeriodTab.values) {

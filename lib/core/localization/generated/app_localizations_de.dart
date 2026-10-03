@@ -9,10 +9,10 @@ class AppL10nDe extends AppL10n {
   AppL10nDe([String locale = 'de']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
-  String get appTagline => 'Für einen regnerischen Tag sparen';
+  String get appTagline => 'Übernehmen Sie die Kontrolle über Ihre Finanzen';
 
   @override
   String get navHome => 'Startseite';
@@ -506,7 +506,7 @@ class AppL10nDe extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Setze ein Ziel und RainyPenny verfolgt deinen Fortschritt.';
+      'Setze ein Ziel und LAVIO verfolgt deinen Fortschritt.';
 
   @override
   String get fundsAdded => 'Betrag hinzugefügt';
@@ -825,7 +825,7 @@ class AppL10nDe extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Erlaube Mitteilungen, damit RainyPenny dich warnen kann, bevor dir ein Budget oder eine Zahlung entgleitet.';
+      'Erlaube Mitteilungen, damit LAVIO dich warnen kann, bevor dir ein Budget oder eine Zahlung entgleitet.';
 
   @override
   String get allowNotifications => 'Mitteilungen erlauben';
@@ -1051,7 +1051,7 @@ class AppL10nDe extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Von RainyPenny aus deinen eigenen Aufzeichnungen erstellt.';
+      'Von LAVIO aus deinen eigenen Aufzeichnungen erstellt.';
 
   @override
   String pageOf(int page, int total) {
@@ -1351,7 +1351,7 @@ class AppL10nDe extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Halten Sie fest, was hereinkommt und was hinausgeht. RainyPenny macht daraus ein Bild, das man wirklich lesen kann.';
+      'Halten Sie fest, was hereinkommt und was hinausgeht. LAVIO macht daraus ein Bild, das man wirklich lesen kann.';
 
   @override
   String get welcomeBudgetTitle => 'Grenzen, die halten';
@@ -1706,7 +1706,7 @@ class AppL10nDe extends AppL10n {
       'Gehen Sie die Einstiegsfragen noch einmal durch. Nichts von dem, was Sie erfasst haben, wird gelöscht.';
 
   @override
-  String get rateTitle => 'Gefällt dir RainyPenny?';
+  String get rateTitle => 'Gefällt dir LAVIO?';
 
   @override
   String get rateBody =>

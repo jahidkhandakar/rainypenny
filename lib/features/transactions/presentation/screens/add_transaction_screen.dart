@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/settings/settings_providers.dart';

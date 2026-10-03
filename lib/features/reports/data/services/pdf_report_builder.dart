@@ -1,9 +1,9 @@
 import 'dart:typed_data';
 
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:lavio/core/utils/category_visuals.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:rainypenny/core/utils/category_visuals.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/formatters.dart';

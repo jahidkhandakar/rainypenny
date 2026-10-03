@@ -1,16 +1,15 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/app.dart';
-import 'package:rainypenny/core/di/providers.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/dashboard/presentation/widgets/dashboard_header.dart';
-import 'package:rainypenny/features/auth/data/repositories/mock_auth_repository.dart';
-import 'package:rainypenny/features/auth/domain/repositories/auth_repository.dart';
-import 'package:rainypenny/features/auth/presentation/controllers/auth_controller.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
-import 'package:rainypenny/features/review/data/services/review_service.dart';
+import 'package:lavio/app.dart';
+import 'package:lavio/core/di/providers.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/features/auth/data/repositories/mock_auth_repository.dart';
+import 'package:lavio/features/auth/domain/repositories/auth_repository.dart';
+import 'package:lavio/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:lavio/features/dashboard/presentation/widgets/dashboard_header.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/review/data/services/review_service.dart';
 
 /// Booting the real app, with the parts a test needs to control.
 ///
@@ -47,9 +46,7 @@ Widget bootApp({
   return ProviderScope(
     overrides: [
       settingsStoreProvider.overrideWithValue(settings),
-      financeDataSourceProvider.overrideWithValue(
-        MockFinanceDataSource(latency: Duration.zero),
-      ),
+      financeDataSourceProvider.overrideWithValue(MockFinanceDataSource(latency: Duration.zero)),
       // Signed in unless a test says otherwise: most of them are about the
       // app behind the gate, not the gate itself.
       // Off by default: the temporary "just let me in" shortcut must not
@@ -59,11 +56,9 @@ Widget bootApp({
         auth ?? MockAuthRepository(latency: Duration.zero, startSignedIn: true),
       ),
       // Never the real plugin: it would reach for Play Services.
-      reviewServiceProvider.overrideWithValue(
-        review ?? RecordingReviewService(),
-      ),
+      reviewServiceProvider.overrideWithValue(review ?? RecordingReviewService()),
     ],
-    child: const RainyPennyApp(),
+    child: const LavioApp(),
   );
 }
 
@@ -88,8 +83,7 @@ final dashboardMarker = find.byType(DashboardHeader);
 /// button. The bar's glyph is the larger one, so matching on its size keeps
 /// this pointed at the button these tests actually mean.
 final addButtonFinder = find.byWidgetPredicate(
-  (widget) =>
-      widget is Icon && widget.icon == CupertinoIcons.add && widget.size == 28,
+  (widget) => widget is Icon && widget.icon == CupertinoIcons.add && widget.size == 28,
   description: 'the centre add button in the bottom bar',
 );
 

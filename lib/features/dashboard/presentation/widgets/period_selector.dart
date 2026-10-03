@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:rainypenny/core/localization/generated/app_localizations.dart';
-import 'package:rainypenny/core/settings/settings_providers.dart';
-import 'package:rainypenny/features/financial/presentation/providers/finance_providers.dart';
+import 'package:lavio/core/localization/generated/app_localizations.dart';
+import 'package:lavio/core/settings/settings_providers.dart';
+import 'package:lavio/features/financial/presentation/providers/finance_providers.dart';
 
 class PeriodSelector extends ConsumerWidget {
   const PeriodSelector({super.key});

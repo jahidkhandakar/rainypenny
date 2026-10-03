@@ -52,50 +52,66 @@ class CategoryPickerSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppL10n.of(context);
     final showAdd = onAddCategory != null;
+    final maxSheetHeight = MediaQuery.sizeOf(context).height * 0.75;
+
+    // Sort categories alphabetically A to Z by localized name
+    final sortedCategories = List<Category>.from(categories)
+      ..sort(
+        (a, b) =>
+            a.localizedName(l10n).toLowerCase().compareTo(b.localizedName(l10n).toLowerCase()),
+      );
 
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(AppSpacing.page, 0, AppSpacing.page, AppSpacing.xl),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title, style: AppTypography.sectionTitle.copyWith(color: context.textPrimary)),
-            const SizedBox(height: AppSpacing.lg),
-            Flexible(
-              child: GridView.builder(
-                shrinkWrap: true,
-                itemCount: categories.length + (showAdd ? 1 : 0),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: AppSpacing.md,
-                  crossAxisSpacing: AppSpacing.md,
-                  childAspectRatio: 0.86,
-                ),
-                itemBuilder: (context, index) {
-                  if (showAdd && index == categories.length) {
-                    return _AddTile(
-                      label: l10n.addCategory,
-                      onTap: () async {
-                        final created = await onAddCategory!();
-                        if (created != null && context.mounted) {
-                          Navigator.of(context).pop(created);
-                        }
-                      },
-                    );
-                  }
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxHeight: maxSheetHeight),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(
+            AppSpacing.page,
+            AppSpacing.lg,
+            AppSpacing.page,
+            AppSpacing.xl,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title, style: AppTypography.sectionTitle.copyWith(color: context.textPrimary)),
+              const SizedBox(height: AppSpacing.lg),
+              Flexible(
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  itemCount: sortedCategories.length + (showAdd ? 1 : 0),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    mainAxisSpacing: AppSpacing.md,
+                    crossAxisSpacing: AppSpacing.md,
+                    childAspectRatio: 0.86,
+                  ),
+                  itemBuilder: (context, index) {
+                    if (showAdd && index == sortedCategories.length) {
+                      return _AddTile(
+                        label: l10n.addCategory,
+                        onTap: () async {
+                          final created = await onAddCategory!();
+                          if (created != null && context.mounted) {
+                            Navigator.of(context).pop(created);
+                          }
+                        },
+                      );
+                    }
 
-                  final category = categories[index];
-                  final isSelected = category.id == selected?.id;
-                  return _CategoryTile(
-                    category: category,
-                    isSelected: isSelected,
-                    onTap: () => Navigator.of(context).pop(category),
-                  );
-                },
+                    final category = sortedCategories[index];
+                    final isSelected = category.id == selected?.id;
+                    return _CategoryTile(
+                      category: category,
+                      isSelected: isSelected,
+                      onTap: () => Navigator.of(context).pop(category),
+                    );
+                  },
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -121,6 +137,7 @@ class _CategoryTile extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppRadius.md),
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: .center,
         children: [
           IconBadge(
             icon: iconForCategory(category.icon),
@@ -160,6 +177,7 @@ class _AddTile extends StatelessWidget {
       borderRadius: BorderRadius.circular(AppRadius.md),
       child: Column(
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: .center,
         children: [
           DottedOutlineBadge(
             size: 50,

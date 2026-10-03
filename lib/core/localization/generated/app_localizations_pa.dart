@@ -9,7 +9,7 @@ class AppL10nPa extends AppL10n {
   AppL10nPa([String locale = 'pa']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'ਔਖੇ ਦਿਨਾਂ ਲਈ ਬਚਾਓ';
@@ -505,7 +505,7 @@ class AppL10nPa extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'ਇੱਕ ਟੀਚਾ ਰੱਖੋ ਅਤੇ RainyPenny ਤੁਹਾਡੀ ਪ੍ਰਗਤੀ ਦਾ ਹਿਸਾਬ ਰੱਖੇਗਾ।';
+      'ਇੱਕ ਟੀਚਾ ਰੱਖੋ ਅਤੇ LAVIO ਤੁਹਾਡੀ ਪ੍ਰਗਤੀ ਦਾ ਹਿਸਾਬ ਰੱਖੇਗਾ।';
 
   @override
   String get fundsAdded => 'ਪੈਸੇ ਜੋੜੇ ਗਏ';
@@ -822,7 +822,7 @@ class AppL10nPa extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'ਸੂਚਨਾਵਾਂ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ ਤਾਂ ਜੋ ਬਜਟ ਜਾਂ ਕਿਸ਼ਤ ਹੱਥੋਂ ਨਿਕਲਣ ਤੋਂ ਪਹਿਲਾਂ RainyPenny ਤੁਹਾਨੂੰ ਸੁਚੇਤ ਕਰ ਸਕੇ।';
+      'ਸੂਚਨਾਵਾਂ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ ਤਾਂ ਜੋ ਬਜਟ ਜਾਂ ਕਿਸ਼ਤ ਹੱਥੋਂ ਨਿਕਲਣ ਤੋਂ ਪਹਿਲਾਂ LAVIO ਤੁਹਾਨੂੰ ਸੁਚੇਤ ਕਰ ਸਕੇ।';
 
   @override
   String get allowNotifications => 'ਸੂਚਨਾਵਾਂ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ';
@@ -1043,7 +1043,7 @@ class AppL10nPa extends AppL10n {
   String get generatedOn => 'ਕਦੋਂ ਬਣੀ';
 
   @override
-  String get reportDisclaimer => 'RainyPenny ਨੇ ਤੁਹਾਡੇ ਆਪਣੇ ਰਿਕਾਰਡਾਂ ਤੋਂ ਬਣਾਈ।';
+  String get reportDisclaimer => 'LAVIO ਨੇ ਤੁਹਾਡੇ ਆਪਣੇ ਰਿਕਾਰਡਾਂ ਤੋਂ ਬਣਾਈ।';
 
   @override
   String pageOf(int page, int total) {
@@ -1343,7 +1343,7 @@ class AppL10nPa extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'ਜੋ ਆਉਂਦਾ ਹੈ ਅਤੇ ਜੋ ਜਾਂਦਾ ਹੈ, ਦੋਵੇਂ ਦਰਜ ਕਰੋ। RainyPenny ਉਸ ਨੂੰ ਅਜਿਹੀ ਤਸਵੀਰ ਬਣਾ ਦਿੰਦਾ ਹੈ ਜੋ ਸੱਚਮੁੱਚ ਪੜ੍ਹੀ ਜਾ ਸਕੇ।';
+      'ਜੋ ਆਉਂਦਾ ਹੈ ਅਤੇ ਜੋ ਜਾਂਦਾ ਹੈ, ਦੋਵੇਂ ਦਰਜ ਕਰੋ। LAVIO ਉਸ ਨੂੰ ਅਜਿਹੀ ਤਸਵੀਰ ਬਣਾ ਦਿੰਦਾ ਹੈ ਜੋ ਸੱਚਮੁੱਚ ਪੜ੍ਹੀ ਜਾ ਸਕੇ।';
 
   @override
   String get welcomeBudgetTitle => 'ਅਜਿਹੀਆਂ ਹੱਦਾਂ ਜੋ ਟਿਕਣ';
@@ -1691,7 +1691,7 @@ class AppL10nPa extends AppL10n {
       'ਸ਼ੁਰੂ ਵਾਲੇ ਸਵਾਲਾਂ ਵਿੱਚੋਂ ਦੁਬਾਰਾ ਲੰਘੋ। ਤੁਹਾਡਾ ਦਰਜ ਕੀਤਾ ਕੁਝ ਵੀ ਨਹੀਂ ਮਿਟੇਗਾ।';
 
   @override
-  String get rateTitle => 'RainyPenny ਪਸੰਦ ਆ ਰਹੀ ਹੈ?';
+  String get rateTitle => 'LAVIO ਪਸੰਦ ਆ ਰਹੀ ਹੈ?';
 
   @override
   String get rateBody =>

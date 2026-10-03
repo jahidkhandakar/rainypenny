@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rainypenny/features/profile/presentation/widgets/round_avatar.dart';
+import 'package:lavio/features/profile/presentation/widgets/round_avatar.dart';
 
 import '../../../../core/localization/app_locales.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
@@ -203,7 +203,7 @@ class ProfileScreen extends ConsumerWidget {
           const SizedBox(height: AppSpacing.xl),
           Center(
             child: Text(
-              'RainyPenny · 1.0.0',
+              'LAVIO Money Tracker · 1.0.0',
               style: AppTypography.caption.copyWith(color: context.textDisabled),
             ),
           ),

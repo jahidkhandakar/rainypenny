@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
-import 'package:rainypenny/features/financial/data/models/finance_mappers.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/loan.dart';
-import 'package:rainypenny/features/financial/domain/entities/loan_payment.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/financial/data/models/finance_mappers.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/loan.dart';
+import 'package:lavio/features/financial/domain/entities/loan_payment.dart';
 
 /// Repayment history, and the note that travels with a debt.
 ///
@@ -23,10 +23,7 @@ void main() {
 
     test('orders newest first, without disturbing the caller', () {
       final original = [...rows];
-      expect(
-        LoanPayments.newestFirst(rows).map((p) => p.id),
-        ['c', 'b', 'a'],
-      );
+      expect(LoanPayments.newestFirst(rows).map((p) => p.id), ['c', 'b', 'a']);
       expect(rows.map((p) => p.id), original.map((p) => p.id));
     });
 
@@ -68,12 +65,8 @@ void main() {
       await source.recordLoanPayment(loan.id, 100);
       await source.recordLoanPayment(loan.id, 50);
 
-      final after = (await source.fetchLoans())
-          .firstWhere((l) => l.id == loan.id)
-          .remaining;
-      final paid = LoanPayments.total(
-        await source.fetchLoanPayments(loan.id),
-      );
+      final after = (await source.fetchLoans()).firstWhere((l) => l.id == loan.id).remaining;
+      final paid = LoanPayments.total(await source.fetchLoanPayments(loan.id));
 
       expect(paid, closeTo(150, 0.001));
       expect(before - after, closeTo(paid, 0.001));
@@ -108,20 +101,12 @@ void main() {
       final row = LoanMapper.toRow(loan, 'user-1', includeId: false);
       expect(row['note'], 'Paid from the joint account');
 
-      final back = LoanMapper.fromRow({
-        ...row,
-        'id': 'loan-1',
-        'next_payment_date': '2026-10-05',
-      });
+      final back = LoanMapper.fromRow({...row, 'id': 'loan-1', 'next_payment_date': '2026-10-05'});
       expect(back.note, 'Paid from the joint account');
     });
 
     test('a debt without one reads back as null, not an empty string', () {
-      final row = LoanMapper.toRow(
-        loan.copyWith(note: null),
-        'user-1',
-        includeId: false,
-      );
+      final row = LoanMapper.toRow(loan.copyWith(note: null), 'user-1', includeId: false);
       // copyWith cannot clear a null-able field, so this asserts the mapper
       // handles an absent column rather than the entity clearing itself.
       final back = LoanMapper.fromRow({

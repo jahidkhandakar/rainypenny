@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/review/presentation/controllers/review_prompt_controller.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/features/review/presentation/controllers/review_prompt_controller.dart';
 
 /// When the rating prompt is due, and when asking again would be nagging.
 void main() {
@@ -96,10 +96,7 @@ void main() {
       first.read(reviewPromptProvider.notifier).markDismissed();
 
       final second = open();
-      expect(
-        second.read(reviewPromptProvider).decision,
-        ReviewDecision.dismissed,
-      );
+      expect(second.read(reviewPromptProvider).decision, ReviewDecision.dismissed);
       expect(useTimes(second, 10).isDue, isFalse);
     });
 

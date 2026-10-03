@@ -9,7 +9,7 @@ class AppL10nTh extends AppL10n {
   AppL10nTh([String locale = 'th']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'เก็บออมไว้ยามฉุกเฉิน';
@@ -502,8 +502,7 @@ class AppL10nTh extends AppL10n {
   String get noGoalsTitle => 'ยังไม่มีเป้าหมายการออม';
 
   @override
-  String get noGoalsBody =>
-      'ตั้งเป้าหมายไว้ แล้ว RainyPenny จะติดตามความคืบหน้าให้';
+  String get noGoalsBody => 'ตั้งเป้าหมายไว้ แล้ว LAVIO จะติดตามความคืบหน้าให้';
 
   @override
   String get fundsAdded => 'เติมเงินแล้ว';
@@ -816,7 +815,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'อนุญาตการแจ้งเตือน เพื่อให้ RainyPenny เตือนคุณก่อนที่งบหรือการชำระเงินจะหลุดมือ';
+      'อนุญาตการแจ้งเตือน เพื่อให้ LAVIO เตือนคุณก่อนที่งบหรือการชำระเงินจะหลุดมือ';
 
   @override
   String get allowNotifications => 'อนุญาตการแจ้งเตือน';
@@ -1036,7 +1035,7 @@ class AppL10nTh extends AppL10n {
   String get generatedOn => 'สร้างเมื่อ';
 
   @override
-  String get reportDisclaimer => 'RainyPenny สร้างจากบันทึกของคุณเอง';
+  String get reportDisclaimer => 'LAVIO สร้างจากบันทึกของคุณเอง';
 
   @override
   String pageOf(int page, int total) {
@@ -1328,7 +1327,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'บันทึกสิ่งที่เข้ามาและสิ่งที่ออกไป แล้ว RainyPenny จะเปลี่ยนมันเป็นภาพที่อ่านเข้าใจได้จริง';
+      'บันทึกสิ่งที่เข้ามาและสิ่งที่ออกไป แล้ว LAVIO จะเปลี่ยนมันเป็นภาพที่อ่านเข้าใจได้จริง';
 
   @override
   String get welcomeBudgetTitle => 'ตั้งขีดจำกัดที่อยู่มือ';
@@ -1670,7 +1669,7 @@ class AppL10nTh extends AppL10n {
       'ตอบคำถามเริ่มต้นอีกรอบ สิ่งที่คุณบันทึกไว้จะไม่ถูกลบ';
 
   @override
-  String get rateTitle => 'ชอบ RainyPenny ไหม';
+  String get rateTitle => 'ชอบ LAVIO ไหม';
 
   @override
   String get rateBody =>

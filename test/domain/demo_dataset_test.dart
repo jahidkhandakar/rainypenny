@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/data/demo_dataset.dart';
-import 'package:rainypenny/features/financial/domain/entities/salary_cycle.dart';
-import 'package:rainypenny/features/financial/domain/services/balance_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/budget_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/cycle_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/debt_calculator.dart';
+import 'package:lavio/features/financial/data/demo_dataset.dart';
+import 'package:lavio/features/financial/domain/entities/salary_cycle.dart';
+import 'package:lavio/features/financial/domain/services/balance_calculator.dart';
+import 'package:lavio/features/financial/domain/services/budget_calculator.dart';
+import 'package:lavio/features/financial/domain/services/cycle_calculator.dart';
+import 'package:lavio/features/financial/domain/services/debt_calculator.dart';
 
 /// Guards the promise that every headline figure in the UI is derived from the
 /// same ledger. If the seed data drifts, these fail before the demo does.
@@ -67,10 +67,7 @@ void main() {
       // The regression this guards: with the ledger positioned purely relative
       // to today, a cycle starting on the 1st pushed the 3,500 salary into the
       // previous period and the card announced a monthly salary of 450.
-      expect(
-        CycleCalculator.salaryIn(ledger, cycle),
-        closeTo(3500.00, 0.001),
-      );
+      expect(CycleCalculator.salaryIn(ledger, cycle), closeTo(3500.00, 0.001));
     });
 
     test('the previous cycle has its own salary, for the carry-forward', () {
@@ -83,10 +80,7 @@ void main() {
 
     test('follows a payday the user has chosen', () {
       final custom = SalaryCycle.current(25);
-      final salary = CycleCalculator.salaryIn(
-        DemoDataset.transactionsFor(payday: 25),
-        custom,
-      );
+      final salary = CycleCalculator.salaryIn(DemoDataset.transactionsFor(payday: 25), custom);
       expect(salary, closeTo(3500.00, 0.001));
     });
   });
@@ -96,10 +90,7 @@ void main() {
       final byCategory = BalanceCalculator.spendingByCategory(inCycle);
       final total = byCategory.values.fold(0.0, (sum, value) => sum + value);
 
-      expect(
-        total,
-        closeTo(BalanceCalculator.totalExpenses(inCycle), 0.001),
-      );
+      expect(total, closeTo(BalanceCalculator.totalExpenses(inCycle), 0.001));
     });
 
     test('budget limits total 4,000 and spend comes from the ledger', () {
@@ -111,46 +102,30 @@ void main() {
         final expected = byCategory.entries
             .where((e) => e.key.id == budget.category.id)
             .fold(0.0, (sum, e) => sum + e.value);
-        expect(
-          budget.spent,
-          closeTo(expected, 0.001),
-          reason: budget.category.name,
-        );
+        expect(budget.spent, closeTo(expected, 0.001), reason: budget.category.name);
       }
     });
 
     test('the cycle summary reconciles: carried + in - out = remaining', () {
-      final summary = CycleCalculator.evaluate(
-        transactions: ledger,
-        cycle: cycle,
-      );
+      final summary = CycleCalculator.evaluate(transactions: ledger, cycle: cycle);
 
       expect(
         summary.remaining,
-        closeTo(
-          summary.carriedForward + summary.income - summary.expenses,
-          0.001,
-        ),
+        closeTo(summary.carriedForward + summary.income - summary.expenses, 0.001),
       );
     });
 
     test('the demo shows a month with money left in it', () {
       // A demo that opens on an overdrawn account tells the wrong story about
       // what the app is for.
-      final summary = CycleCalculator.evaluate(
-        transactions: ledger,
-        cycle: cycle,
-      );
+      final summary = CycleCalculator.evaluate(transactions: ledger, cycle: cycle);
       expect(summary.remaining, greaterThan(0));
       expect(summary.income, greaterThan(0));
       expect(summary.expenses, greaterThan(0));
     });
 
     test('total outstanding debt is 8,450', () {
-      expect(
-        DebtCalculator.totalOutstanding(DemoDataset.loans),
-        closeTo(8450, 0.001),
-      );
+      expect(DebtCalculator.totalOutstanding(DemoDataset.loans), closeTo(8450, 0.001));
     });
   });
 }

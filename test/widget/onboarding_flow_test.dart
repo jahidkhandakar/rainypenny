@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
+import 'package:lavio/core/settings/settings_store.dart';
 
 import '../support/boot.dart';
 
@@ -30,9 +30,7 @@ void main() {
     }
   }
 
-  testWidgets('setup opens on the name step and shows how far along it is', (
-    tester,
-  ) async {
+  testWidgets('setup opens on the name step and shows how far along it is', (tester) async {
     await boot(tester, onboarded: false);
 
     expect(find.text('Step 1 of 5'), findsOneWidget);
@@ -62,9 +60,7 @@ void main() {
     expect(find.widgetWithText(ElevatedButton, 'Continue'), findsNothing);
   });
 
-  testWidgets('the name typed on step one greets the user on the last', (
-    tester,
-  ) async {
+  testWidgets('the name typed on step one greets the user on the last', (tester) async {
     await boot(tester, onboarded: false);
 
     await tester.enterText(find.byType(TextField).first, 'Priya');
@@ -83,9 +79,7 @@ void main() {
     expect(find.text('Step 1 of 5'), findsNothing);
   });
 
-  testWidgets('choosing to skip the tour goes straight to the app', (
-    tester,
-  ) async {
+  testWidgets('choosing to skip the tour goes straight to the app', (tester) async {
     await boot(tester, onboarded: false);
     await reachReadyStep(tester);
 
@@ -138,9 +132,7 @@ void main() {
       expect(find.widgetWithText(ElevatedButton, 'Finish'), findsOneWidget);
     });
 
-    testWidgets('closing it lands on the dashboard and does not come back', (
-      tester,
-    ) async {
+    testWidgets('closing it lands on the dashboard and does not come back', (tester) async {
       await openGuide(tester);
 
       await tester.tap(find.byIcon(Icons.close_rounded));
@@ -150,9 +142,7 @@ void main() {
       expect(find.text('Beginner’s guide'), findsNothing);
     });
 
-    testWidgets('a chapter can send the reader to the screen it describes', (
-      tester,
-    ) async {
+    testWidgets('a chapter can send the reader to the screen it describes', (tester) async {
       await openGuide(tester);
 
       await tapLabel(tester, 'Open Home');

@@ -9,7 +9,7 @@ class AppL10nHe extends AppL10n {
   AppL10nHe([String locale = 'he']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'לחסוך ליום סגריר';
@@ -504,7 +504,7 @@ class AppL10nHe extends AppL10n {
   String get noGoalsTitle => 'אין עדיין יעדי חיסכון';
 
   @override
-  String get noGoalsBody => 'קבעו יעד ו-RainyPenny יעקוב אחרי ההתקדמות שלכם.';
+  String get noGoalsBody => 'קבעו יעד ו-LAVIO יעקוב אחרי ההתקדמות שלכם.';
 
   @override
   String get fundsAdded => 'הכסף נוסף';
@@ -820,7 +820,7 @@ class AppL10nHe extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'אפשרו התראות כדי ש-RainyPenny יוכל להזהיר אתכם לפני שתקציב או תשלום יוצאים משליטה.';
+      'אפשרו התראות כדי ש-LAVIO יוכל להזהיר אתכם לפני שתקציב או תשלום יוצאים משליטה.';
 
   @override
   String get allowNotifications => 'אפשר התראות';
@@ -1039,7 +1039,7 @@ class AppL10nHe extends AppL10n {
   String get generatedOn => 'נוצר בתאריך';
 
   @override
-  String get reportDisclaimer => 'נוצר על ידי RainyPenny מהרישומים שלכם.';
+  String get reportDisclaimer => 'נוצר על ידי LAVIO מהרישומים שלכם.';
 
   @override
   String pageOf(int page, int total) {
@@ -1332,7 +1332,7 @@ class AppL10nHe extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'רשמו מה נכנס ומה יוצא. RainyPenny הופך את זה לתמונה שאפשר באמת לקרוא.';
+      'רשמו מה נכנס ומה יוצא. LAVIO הופך את זה לתמונה שאפשר באמת לקרוא.';
 
   @override
   String get welcomeBudgetTitle => 'גבולות שמחזיקים';
@@ -1673,7 +1673,7 @@ class AppL10nHe extends AppL10n {
       'עברו שוב על שאלות ההתחלה. שום דבר שרשמתם לא נמחק.';
 
   @override
-  String get rateTitle => 'נהנים מ-RainyPenny?';
+  String get rateTitle => 'נהנים מ-LAVIO?';
 
   @override
   String get rateBody =>

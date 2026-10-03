@@ -5,12 +5,7 @@
 /// it rather than assuming two, so a Kuwaiti user sees `د.ك 1,250.500` and a
 /// Japanese user sees `¥1,250` — both correct for their money.
 class CurrencyOption {
-  const CurrencyOption(
-    this.code,
-    this.symbol,
-    this.name, {
-    this.decimalDigits = 2,
-  });
+  const CurrencyOption(this.code, this.symbol, this.name, {this.decimalDigits = 2});
 
   /// ISO 4217 alphabetic code, e.g. `USD`.
   final String code;
@@ -36,7 +31,7 @@ class CurrencyOption {
   int get hashCode => code.hashCode;
 }
 
-/// Every currency RainyPenny ships with.
+/// Every currency LAVIO ships with.
 ///
 /// The list is the complete set of circulating ISO 4217 currencies, so someone
 /// opening the app in Lagos, Almaty or Santiago finds their own money rather
@@ -217,12 +212,7 @@ abstract final class Currencies {
     CurrencyOption('VND', '₫', 'Vietnamese Dong', decimalDigits: 0),
     CurrencyOption('VUV', 'VT', 'Vanuatu Vatu', decimalDigits: 0),
     CurrencyOption('WST', r'WS$', 'Samoan Tala'),
-    CurrencyOption(
-      'XAF',
-      'FCFA',
-      'Central African CFA Franc',
-      decimalDigits: 0,
-    ),
+    CurrencyOption('XAF', 'FCFA', 'Central African CFA Franc', decimalDigits: 0),
     CurrencyOption('XCD', r'EC$', 'East Caribbean Dollar'),
     CurrencyOption('XCG', 'Cg', 'Caribbean Guilder'),
     CurrencyOption('XOF', 'CFA', 'West African CFA Franc', decimalDigits: 0),
@@ -238,15 +228,12 @@ abstract final class Currencies {
   /// The default when nothing has been chosen yet.
   static const fallback = CurrencyOption('USD', r'$', 'US Dollar');
 
-  static CurrencyOption byCode(String? code) =>
-      _byCode[code?.toUpperCase()] ?? fallback;
+  static CurrencyOption byCode(String? code) => _byCode[code?.toUpperCase()] ?? fallback;
 
   static String symbolFor(String code) => byCode(code).symbol;
 
   /// The popular shortlist, in the order declared above.
-  static List<CurrencyOption> get popular => [
-    for (final code in popularCodes) byCode(code),
-  ];
+  static List<CurrencyOption> get popular => [for (final code in popularCodes) byCode(code)];
 
   /// Case-insensitive search over code, symbol and name.
   static List<CurrencyOption> search(String query) {

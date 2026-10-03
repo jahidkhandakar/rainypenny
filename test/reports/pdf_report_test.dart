@@ -1,27 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:rainypenny/core/localization/generated/app_localizations.dart';
-import 'package:rainypenny/core/utils/formatters.dart';
-import 'package:rainypenny/features/financial/domain/entities/budget.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/loan.dart';
-import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
-import 'package:rainypenny/features/financial/domain/entities/savings_goal.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
-import 'package:rainypenny/features/reports/data/services/pdf_report_builder.dart';
-import 'package:rainypenny/features/reports/domain/entities/financial_report.dart';
+import 'package:lavio/core/localization/generated/app_localizations.dart';
+import 'package:lavio/core/utils/formatters.dart';
+import 'package:lavio/features/financial/domain/entities/budget.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/loan.dart';
+import 'package:lavio/features/financial/domain/entities/period_summary.dart';
+import 'package:lavio/features/financial/domain/entities/savings_goal.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/reports/data/services/pdf_report_builder.dart';
+import 'package:lavio/features/reports/domain/entities/financial_report.dart';
 
-const _food = Category(
-  id: 'food',
-  name: 'Food & Dining',
-  icon: CategoryIcon.food,
-);
-const _rent = Category(
-  id: 'housing',
-  name: 'Housing',
-  icon: CategoryIcon.housing,
-);
+const _food = Category(id: 'food', name: 'Food & Dining', icon: CategoryIcon.food);
+const _rent = Category(id: 'housing', name: 'Housing', icon: CategoryIcon.housing);
 
 FinancialReport _report({String language = 'en', String currency = 'USD'}) {
   final start = DateTime(2026, 8, 5);
@@ -118,8 +110,7 @@ void expectRenderedPdf(List<int> bytes, {int minPages = 1}) {
   );
 }
 
-Future<AppL10n> _l10n(String languageCode) =>
-    AppL10n.delegate.load(Locale(languageCode));
+Future<AppL10n> _l10n(String languageCode) => AppL10n.delegate.load(Locale(languageCode));
 
 void main() {
   // rootBundle needs a binding to resolve the bundled fonts and logo.
@@ -167,44 +158,41 @@ void main() {
       expectRenderedPdf(bytes, minPages: 2);
     });
 
-    test(
-      'a report with nothing in it still produces a cover and summary',
-      () async {
-        final empty = FinancialReport(
-          summary: PeriodSummary(
-            start: DateTime(2026, 9, 1),
-            end: DateTime(2026, 9, 4),
-            income: 0,
-            expenses: 0,
-            balance: 0,
-            previousIncome: 0,
-            previousExpenses: 0,
-            previousBalance: 0,
-            spendingByCategory: const {},
-            previousSpendingByCategory: const {},
-          ),
-          budgets: const [],
-          goals: const [],
-          loans: const [],
-          transactions: const [],
-          rangeLabel: 'Sep 1 – Sep 4',
-          generatedAt: DateTime(2026, 9, 4),
-          currencyCode: 'USD',
-          languageCode: 'en',
-          ownerName: 'Alex Morgan',
-        );
+    test('a report with nothing in it still produces a cover and summary', () async {
+      final empty = FinancialReport(
+        summary: PeriodSummary(
+          start: DateTime(2026, 9, 1),
+          end: DateTime(2026, 9, 4),
+          income: 0,
+          expenses: 0,
+          balance: 0,
+          previousIncome: 0,
+          previousExpenses: 0,
+          previousBalance: 0,
+          spendingByCategory: const {},
+          previousSpendingByCategory: const {},
+        ),
+        budgets: const [],
+        goals: const [],
+        loans: const [],
+        transactions: const [],
+        rangeLabel: 'Sep 1 – Sep 4',
+        generatedAt: DateTime(2026, 9, 4),
+        currencyCode: 'USD',
+        languageCode: 'en',
+        ownerName: 'Alex Morgan',
+      );
 
-        final bytes = await PdfReportBuilder(
-          report: empty,
-          l10n: await _l10n('en'),
-          money: const MoneyFormatter(symbol: r'$', locale: 'en'),
-          dates: const DateFormatter('en'),
-          assets: await ReportAssets.load(),
-        ).build();
+      final bytes = await PdfReportBuilder(
+        report: empty,
+        l10n: await _l10n('en'),
+        money: const MoneyFormatter(symbol: r'$', locale: 'en'),
+        dates: const DateFormatter('en'),
+        assets: await ReportAssets.load(),
+      ).build();
 
-        expectRenderedPdf(bytes);
-      },
-    );
+      expectRenderedPdf(bytes);
+    });
 
     test('the currency and language on the cover follow the report', () async {
       // The figures are formatted by the caller's MoneyFormatter, so a yen
@@ -212,11 +200,7 @@ void main() {
       final bytes = await PdfReportBuilder(
         report: _report(language: 'en', currency: 'JPY'),
         l10n: await _l10n('en'),
-        money: const MoneyFormatter(
-          symbol: '¥',
-          locale: 'en',
-          decimalDigits: 0,
-        ),
+        money: const MoneyFormatter(symbol: '¥', locale: 'en', decimalDigits: 0),
         dates: const DateFormatter('en'),
         assets: await ReportAssets.load(),
       ).build();

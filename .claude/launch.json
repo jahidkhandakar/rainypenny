@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "rainypenny-web",
+      "name": "lavio-web",
       "runtimeExecutable": "F:\\INSTALLED PROGRAMS\\flutter\\flutter\\bin\\flutter.bat",
       "runtimeArgs": [
         "run",

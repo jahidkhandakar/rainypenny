@@ -9,7 +9,7 @@ class AppL10nNl extends AppL10n {
   AppL10nNl([String locale = 'nl']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Sparen voor een regenachtige dag';
@@ -505,8 +505,7 @@ class AppL10nNl extends AppL10n {
   String get noGoalsTitle => 'Nog geen spaardoelen';
 
   @override
-  String get noGoalsBody =>
-      'Stel een doel in en RainyPenny houdt je voortgang bij.';
+  String get noGoalsBody => 'Stel een doel in en LAVIO houdt je voortgang bij.';
 
   @override
   String get fundsAdded => 'Geld toegevoegd';
@@ -823,7 +822,7 @@ class AppL10nNl extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Sta meldingen toe zodat RainyPenny je kan waarschuwen voordat een budget of betaling uit de hand loopt.';
+      'Sta meldingen toe zodat LAVIO je kan waarschuwen voordat een budget of betaling uit de hand loopt.';
 
   @override
   String get allowNotifications => 'Meldingen toestaan';
@@ -1049,7 +1048,7 @@ class AppL10nNl extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Door RainyPenny gemaakt op basis van je eigen gegevens.';
+      'Door LAVIO gemaakt op basis van je eigen gegevens.';
 
   @override
   String pageOf(int page, int total) {
@@ -1348,7 +1347,7 @@ class AppL10nNl extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Leg vast wat binnenkomt en wat eruit gaat. RainyPenny maakt er een beeld van dat je echt kunt lezen.';
+      'Leg vast wat binnenkomt en wat eruit gaat. LAVIO maakt er een beeld van dat je echt kunt lezen.';
 
   @override
   String get welcomeBudgetTitle => 'Grenzen die standhouden';
@@ -1701,7 +1700,7 @@ class AppL10nNl extends AppL10n {
       'Doorloop de eerste vragen nog een keer. Niets van wat je hebt vastgelegd wordt verwijderd.';
 
   @override
-  String get rateTitle => 'Bevalt RainyPenny?';
+  String get rateTitle => 'Bevalt LAVIO?';
 
   @override
   String get rateBody =>

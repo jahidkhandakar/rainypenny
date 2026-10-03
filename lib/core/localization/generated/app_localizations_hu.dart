@@ -9,7 +9,7 @@ class AppL10nHu extends AppL10n {
   AppL10nHu([String locale = 'hu']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Tegyen félre a nehezebb napokra';
@@ -502,8 +502,7 @@ class AppL10nHu extends AppL10n {
   String get noGoalsTitle => 'Még nincs megtakarítási cél';
 
   @override
-  String get noGoalsBody =>
-      'Tűzzön ki célt, és a RainyPenny követi a haladását.';
+  String get noGoalsBody => 'Tűzzön ki célt, és a LAVIO követi a haladását.';
 
   @override
   String get fundsAdded => 'Az összeg hozzáadva';
@@ -820,7 +819,7 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Engedélyezze az értesítéseket, hogy a RainyPenny szólhasson, mielőtt egy keret vagy egy részlet kicsúszna a kezéből.';
+      'Engedélyezze az értesítéseket, hogy a LAVIO szólhasson, mielőtt egy keret vagy egy részlet kicsúszna a kezéből.';
 
   @override
   String get allowNotifications => 'Értesítések engedélyezése';
@@ -1045,7 +1044,7 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'A RainyPenny készítette az Ön saját bejegyzéseiből.';
+      'A LAVIO készítette az Ön saját bejegyzéseiből.';
 
   @override
   String pageOf(int page, int total) {
@@ -1342,7 +1341,7 @@ class AppL10nHu extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Rögzítse, mi jön be és mi megy ki. A RainyPenny olyan képet csinál belőle, amit tényleg el lehet olvasni.';
+      'Rögzítse, mi jön be és mi megy ki. A LAVIO olyan képet csinál belőle, amit tényleg el lehet olvasni.';
 
   @override
   String get welcomeBudgetTitle => 'Határok, amik tartanak';
@@ -1694,7 +1693,7 @@ class AppL10nHu extends AppL10n {
       'Menjen végig újra a kezdeti kérdéseken. Semmi nem törlődik abból, amit rögzített.';
 
   @override
-  String get rateTitle => 'Tetszik a RainyPenny?';
+  String get rateTitle => 'Tetszik a LAVIO?';
 
   @override
   String get rateBody =>

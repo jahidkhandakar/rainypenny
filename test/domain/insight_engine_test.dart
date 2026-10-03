@@ -1,23 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/data/demo_dataset.dart';
-import 'package:rainypenny/features/financial/domain/entities/financial_health.dart';
-import 'package:rainypenny/features/financial/domain/entities/insight.dart';
-import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
-import 'package:rainypenny/features/financial/domain/entities/salary_cycle.dart';
-import 'package:rainypenny/features/financial/domain/services/balance_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/health_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/insight_engine.dart';
+import 'package:lavio/features/financial/data/demo_dataset.dart';
+import 'package:lavio/features/financial/domain/entities/financial_health.dart';
+import 'package:lavio/features/financial/domain/entities/insight.dart';
+import 'package:lavio/features/financial/domain/entities/period_summary.dart';
+import 'package:lavio/features/financial/domain/entities/salary_cycle.dart';
+import 'package:lavio/features/financial/domain/services/balance_calculator.dart';
+import 'package:lavio/features/financial/domain/services/health_calculator.dart';
+import 'package:lavio/features/financial/domain/services/insight_engine.dart';
 
 PeriodSummary _summary() {
   // Scoped to the salary cycle, which is the period the app reports on. A
   // trailing thirty-day window now straddles two cycles and would pull in part
   // of the previous month's spending alongside this one's.
   final cycle = SalaryCycle.current(1);
-  final inPeriod = BalanceCalculator.inRange(
-    DemoDataset.transactionsFor(),
-    cycle.start,
-    cycle.end,
-  );
+  final inPeriod = BalanceCalculator.inRange(DemoDataset.transactionsFor(), cycle.start, cycle.end);
 
   return PeriodSummary(
     start: cycle.start,
@@ -63,9 +59,7 @@ void main() {
 
     test('flags the exceeded budget as critical, with the overspend', () {
       final exceeded = budgets.firstWhere((b) => b.isExceeded);
-      final match = insights.firstWhere(
-        (i) => i.id == 'budget-exceeded-${exceeded.id}',
-      );
+      final match = insights.firstWhere((i) => i.id == 'budget-exceeded-${exceeded.id}');
       expect(match.code, InsightCode.budgetExceeded);
       expect(match.level, InsightLevel.critical);
       expect(match.topic, InsightTopic.budget);
@@ -107,11 +101,7 @@ void main() {
     // `evaluate` returns null when there is too little activity to score
     // honestly. The seeded ledger always has enough, so the tests below assert
     // a score rather than handling a null — and the first test is what says so.
-    final health = HealthCalculator.evaluate(
-      summary: summary,
-      budgets: budgets,
-      loans: loans,
-    );
+    final health = HealthCalculator.evaluate(summary: summary, budgets: budgets, loans: loans);
 
     test('the seeded picture is scoreable at all', () {
       expect(health, isNotNull);
@@ -138,10 +128,7 @@ void main() {
       // behind it, so the presentation layer can word it in any language. The
       // calculator used to emit English prose here, which is why the health
       // card stayed in English in all forty locales.
-      expect(
-        health.factors.map((f) => f.kind).toSet(),
-        HealthFactorKind.values.toSet(),
-      );
+      expect(health.factors.map((f) => f.kind).toSet(), HealthFactorKind.values.toSet());
       for (final factor in health.factors) {
         expect(factor.score, inInclusiveRange(0, 100));
         expect(factor.value, isA<double>());
@@ -149,10 +136,7 @@ void main() {
       }
       // The weights are what the score is actually blended from, so they have
       // to add up to exactly one.
-      expect(
-        health.factors.fold(0.0, (sum, f) => sum + f.weight),
-        closeTo(1.0, 0.0001),
-      );
+      expect(health.factors.fold(0.0, (sum, f) => sum + f.weight), closeTo(1.0, 0.0001));
     });
 
     test('the seeded picture lands in a healthy band', () {

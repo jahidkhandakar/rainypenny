@@ -9,7 +9,7 @@ class AppL10nRo extends AppL10n {
   AppL10nRo([String locale = 'ro']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Pune deoparte pentru zile negre';
@@ -508,8 +508,7 @@ class AppL10nRo extends AppL10n {
   String get noGoalsTitle => 'Încă niciun obiectiv de economisire';
 
   @override
-  String get noGoalsBody =>
-      'Pune-ți o țintă și RainyPenny îți urmărește progresul.';
+  String get noGoalsBody => 'Pune-ți o țintă și LAVIO îți urmărește progresul.';
 
   @override
   String get fundsAdded => 'Bani adăugați';
@@ -830,7 +829,7 @@ class AppL10nRo extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Permite notificările ca RainyPenny să te avertizeze înainte ca un buget sau o rată să-ți scape de sub control.';
+      'Permite notificările ca LAVIO să te avertizeze înainte ca un buget sau o rată să-ți scape de sub control.';
 
   @override
   String get allowNotifications => 'Permite notificările';
@@ -1055,7 +1054,7 @@ class AppL10nRo extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Generat de RainyPenny din propriile tale înregistrări.';
+      'Generat de LAVIO din propriile tale înregistrări.';
 
   @override
   String pageOf(int page, int total) {
@@ -1356,7 +1355,7 @@ class AppL10nRo extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Notează ce intră și ce iese. RainyPenny transformă totul într-o imagine pe care chiar o poți citi.';
+      'Notează ce intră și ce iese. LAVIO transformă totul într-o imagine pe care chiar o poți citi.';
 
   @override
   String get welcomeBudgetTitle => 'Limite care chiar țin';
@@ -1709,7 +1708,7 @@ class AppL10nRo extends AppL10n {
       'Treci din nou prin întrebările de la început. Nimic din ce ai înregistrat nu se șterge.';
 
   @override
-  String get rateTitle => 'Îți place RainyPenny?';
+  String get rateTitle => 'Îți place LAVIO?';
 
   @override
   String get rateBody =>

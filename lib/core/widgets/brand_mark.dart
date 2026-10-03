@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-/// The RainyPenny mark: the R monogram holding a raindrop above a coin stack,
-/// filled with the brand gradient.
+/// The LAVIO mark
 ///
 /// Rendered from the supplied vector artwork so it stays crisp at any size.
 /// `assets/logo/logo.svg` is the untouched source file; `logo_mark.svg` is the
@@ -30,9 +29,7 @@ class BrandMark extends StatelessWidget {
       asset,
       height: size,
       fit: BoxFit.contain,
-      colorFilter: monochrome == null
-          ? null
-          : ColorFilter.mode(monochrome!, BlendMode.srcIn),
+      colorFilter: monochrome == null ? null : ColorFilter.mode(monochrome!, BlendMode.srcIn),
     );
   }
 }

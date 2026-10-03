@@ -2,15 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rainypenny/core/theme/app_typography.dart';
-import 'package:rainypenny/features/auth/domain/entities/auth_user.dart';
-import 'package:rainypenny/features/auth/presentation/controllers/auth_controller.dart';
-import 'package:rainypenny/features/budget/presentation/widgets/budget_editor_sheet.dart';
-import 'package:rainypenny/features/dashboard/presentation/widgets/period_selector.dart';
-import 'package:rainypenny/features/financial/domain/entities/period_summary.dart';
-import 'package:rainypenny/features/savings/presentation/screens/savings_screen.dart';
-import 'package:rainypenny/features/savings/presentation/widgets/goal_editor_sheet.dart';
-import 'package:rainypenny/features/transactions/presentation/controllers/transaction_list_controller.dart';
+import 'package:lavio/core/theme/app_typography.dart';
+import 'package:lavio/features/auth/domain/entities/auth_user.dart';
+import 'package:lavio/features/auth/presentation/controllers/auth_controller.dart';
+import 'package:lavio/features/budget/presentation/widgets/budget_editor_sheet.dart';
+import 'package:lavio/features/dashboard/presentation/widgets/period_selector.dart';
+import 'package:lavio/features/financial/domain/entities/period_summary.dart';
+import 'package:lavio/features/financial/presentation/widgets/recommended_budgets_sheet.dart';
+import 'package:lavio/features/savings/presentation/screens/savings_screen.dart';
+import 'package:lavio/features/savings/presentation/widgets/goal_editor_sheet.dart';
+import 'package:lavio/features/transactions/presentation/controllers/transaction_list_controller.dart';
 
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/routing/app_routes.dart';
@@ -272,6 +273,7 @@ class _RecentTransactionsSection extends ConsumerWidget {
         ),
         AppCard(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: AppSpacing.xs),
+          onTap: () => context.go(AppRoutes.transactions),
           child: transactions.when(
             skipLoadingOnReload: true,
             data: (list) {
@@ -335,6 +337,8 @@ class _BudgetSection extends ConsumerWidget {
                   title: l10n.budget,
                   message: l10n.noTransactionsBody,
                   compact: true,
+                  actionLabel: l10n.recommendedBudget,
+                  onAction: () => showSalaryBudgetRecommenderSheet(context, ref),
                 ),
               );
             }
@@ -394,12 +398,14 @@ class _SavingsSection extends ConsumerWidget {
         goals.when(
           data: (list) {
             if (list.isEmpty) {
-              return EmptyState(
-                icon: Icons.savings_rounded,
-                title: l10n.noGoalsTitle,
-                message: l10n.noGoalsBody,
-                actionLabel: l10n.newGoal,
-                onAction: () => showGoalEditor(context),
+              return AppCard(
+                child: EmptyState(
+                  icon: Icons.savings_rounded,
+                  title: l10n.noGoalsTitle,
+                  message: l10n.noGoalsBody,
+                  actionLabel: l10n.newGoal,
+                  onAction: () => showGoalEditor(context),
+                ),
               );
             }
 

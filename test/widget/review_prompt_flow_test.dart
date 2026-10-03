@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/review/data/services/review_service.dart';
-import 'package:rainypenny/features/review/presentation/controllers/review_prompt_controller.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/features/review/data/services/review_service.dart';
+import 'package:lavio/features/review/presentation/controllers/review_prompt_controller.dart';
 
 import '../support/boot.dart';
 
@@ -34,7 +33,7 @@ void main() {
     final review = RecordingReviewService();
     await bootAndWait(tester, store: storeWith(uses: 0), review: review);
 
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
     expect(dashboardMarker, findsOneWidget);
     expect(review.reviewRequests, 0);
   });
@@ -43,14 +42,14 @@ void main() {
     final review = RecordingReviewService();
     await bootAndWait(tester, store: storeWith(uses: 3), review: review);
 
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
   });
 
   testWidgets('the fifth session brings up the prompt', (tester) async {
     final store = storeWith(uses: 4);
     await bootAndWait(tester, store: store, review: RecordingReviewService());
 
-    expect(find.text('Enjoying RainyPenny?'), findsOneWidget);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsOneWidget);
     expect(find.text('Rate the app'), findsOneWidget);
     expect(find.text('Maybe later'), findsOneWidget);
     expect(find.text('No thanks'), findsOneWidget);
@@ -64,13 +63,11 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
 
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
     expect(store.read(SettingsKeys.reviewUses), '4');
   });
 
-  testWidgets('tapping Rate hands off to the store review sheet', (
-    tester,
-  ) async {
+  testWidgets('tapping Rate hands off to the store review sheet', (tester) async {
     final review = RecordingReviewService();
     final store = storeWith(uses: 4);
     await bootAndWait(tester, store: store, review: review);
@@ -80,13 +77,11 @@ void main() {
 
     expect(review.reviewRequests, 1);
     expect(review.storeOpens, 0);
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
     expect(store.read(SettingsKeys.reviewDecision), ReviewDecision.rated.name);
   });
 
-  testWidgets('without the in-app sheet it falls back to the store page', (
-    tester,
-  ) async {
+  testWidgets('without the in-app sheet it falls back to the store page', (tester) async {
     final review = RecordingReviewService(available: false);
     await bootAndWait(tester, store: storeWith(uses: 4), review: review);
 
@@ -97,25 +92,21 @@ void main() {
     expect(review.storeOpens, 1);
   });
 
-  testWidgets('No thanks is final — a later session does not ask again', (
-    tester,
-  ) async {
+  testWidgets('No thanks is final — a later session does not ask again', (tester) async {
     final store = storeWith(uses: 4);
     await bootAndWait(tester, store: store, review: RecordingReviewService());
 
     await tester.tap(find.text('No thanks'));
     await tester.pumpAndSettle();
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
 
     // Relaunch, many sessions later.
     await tester.pumpWidget(const SizedBox.shrink());
     await bootAndWait(tester, store: store, review: RecordingReviewService());
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
   });
 
-  testWidgets('Maybe later asks again five sessions on, not on the next one', (
-    tester,
-  ) async {
+  testWidgets('Maybe later asks again five sessions on, not on the next one', (tester) async {
     final store = storeWith(uses: 4);
     await bootAndWait(tester, store: store, review: RecordingReviewService());
 
@@ -125,24 +116,18 @@ void main() {
     // The very next session must stay quiet.
     await tester.pumpWidget(const SizedBox.shrink());
     await bootAndWait(tester, store: store, review: RecordingReviewService());
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
 
     // Four more sessions and it is due again.
     store.write(SettingsKeys.reviewUses, '9');
     await tester.pumpWidget(const SizedBox.shrink());
     await bootAndWait(tester, store: store, review: RecordingReviewService());
-    expect(find.text('Enjoying RainyPenny?'), findsOneWidget);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsOneWidget);
   });
 
-  testWidgets('the prompt is translated rather than falling back to English', (
-    tester,
-  ) async {
-    await bootAndWait(
-      tester,
-      store: storeWith(uses: 4),
-      review: RecordingReviewService(),
-    );
-    expect(find.text('Enjoying RainyPenny?'), findsOneWidget);
+  testWidgets('the prompt is translated rather than falling back to English', (tester) async {
+    await bootAndWait(tester, store: storeWith(uses: 4), review: RecordingReviewService());
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsOneWidget);
 
     await tester.pumpWidget(const SizedBox.shrink());
     final spanish = storeWith(uses: 4);
@@ -151,8 +136,8 @@ void main() {
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
 
-    expect(find.text('¿Te gusta RainyPenny?'), findsOneWidget);
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('¿Te gusta LAVIO Money Tracker?'), findsOneWidget);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
   });
 
   testWidgets('rating from Settings works without waiting to be asked, and '
@@ -182,6 +167,6 @@ void main() {
     store.write(SettingsKeys.reviewUses, '9');
     await tester.pumpWidget(const SizedBox.shrink());
     await bootAndWait(tester, store: store, review: RecordingReviewService());
-    expect(find.text('Enjoying RainyPenny?'), findsNothing);
+    expect(find.text('Enjoying LAVIO Money Tracker?'), findsNothing);
   });
 }
