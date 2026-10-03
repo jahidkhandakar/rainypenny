@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -233,7 +232,11 @@ class AppL10nJa extends AppL10n {
 
   @override
   String monthsToGo(int count) {
-    String _temp0 = intl.Intl.pluralLogic(count, locale: localeName, other: 'あと$countか月');
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'あと$countか月',
+    );
     return '$_temp0';
   }
 
@@ -580,7 +583,11 @@ class AppL10nJa extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(String subject, int percent, String amount) {
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  ) {
     return '$subject の予算は $percent% 使用済みで、残りは $amount です。';
   }
 
@@ -588,7 +595,8 @@ class AppL10nJa extends AppL10n {
   String get insightOverIncomeTitle => '支出が収入を上回っています';
 
   @override
-  String get insightOverIncomeBody => '今期は稼いだ以上に使っています。金額の大きいカテゴリを見直して立て直しましょう。';
+  String get insightOverIncomeBody =>
+      '今期は稼いだ以上に使っています。金額の大きいカテゴリを見直して立て直しましょう。';
 
   @override
   String insightCategoryUpTitle(String subject) {
@@ -649,7 +657,11 @@ class AppL10nJa extends AppL10n {
 
   @override
   String insightGoalOnTrackBody(String amount, int months) {
-    String _temp0 = intl.Intl.pluralLogic(months, locale: localeName, other: '$monthsか月');
+    String _temp0 = intl.Intl.pluralLogic(
+      months,
+      locale: localeName,
+      other: '$monthsか月',
+    );
     return '毎月 $amount なら、$_temp0でこの目標に届きます。';
   }
 
@@ -660,7 +672,11 @@ class AppL10nJa extends AppL10n {
 
   @override
   String insightDebtOverdueBody(String subject, String amount, int days) {
-    String _temp0 = intl.Intl.pluralLogic(days, locale: localeName, other: '$days日');
+    String _temp0 = intl.Intl.pluralLogic(
+      days,
+      locale: localeName,
+      other: '$days日',
+    );
     return '$subject の $amount の支払いが $_temp0延滞しています。';
   }
 
@@ -795,7 +811,8 @@ class AppL10nJa extends AppL10n {
   String get permissionRequired => '通知がオフになっています';
 
   @override
-  String get permissionRequiredBody => '通知を許可すると、予算や支払いが手に負えなくなる前に LAVIO が知らせます。';
+  String get permissionRequiredBody =>
+      '通知を許可すると、予算や支払いが手に負えなくなる前に LAVIO が知らせます。';
 
   @override
   String get allowNotifications => '通知を許可';
@@ -1054,7 +1071,11 @@ class AppL10nJa extends AppL10n {
 
   @override
   String andMoreTransactions(int count) {
-    String _temp0 = intl.Intl.pluralLogic(count, locale: localeName, other: 'ほか $count 件の記録');
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'ほか $count 件の記録',
+    );
     return '$_temp0';
   }
 
@@ -1137,7 +1158,8 @@ class AppL10nJa extends AppL10n {
   String get expense => '支出';
 
   @override
-  String get languageNote => 'アラビア語・ウルドゥー語・ペルシア語・ヘブライ語では、グラフや PDF レポートを含め、画面全体が右から左になります。';
+  String get languageNote =>
+      'アラビア語・ウルドゥー語・ペルシア語・ヘブライ語では、グラフや PDF レポートを含め、画面全体が右から左になります。';
 
   @override
   String get next => '次へ';
@@ -1206,7 +1228,8 @@ class AppL10nJa extends AppL10n {
   String get passwordStrengthStrong => '強い';
 
   @override
-  String get passwordAdvice => '記号だらけの短いパスワードより、覚えていられる長い文のほうが安全です。ほかで使っているものは避けてください。';
+  String get passwordAdvice =>
+      '記号だらけの短いパスワードより、覚えていられる長い文のほうが安全です。ほかで使っているものは避けてください。';
 
   @override
   String get authInvalidCredentials => 'このメールアドレスとパスワードに一致するアカウントはありません';
@@ -1247,7 +1270,8 @@ class AppL10nJa extends AppL10n {
   String get forgotPasswordTitle => 'パスワードの再設定';
 
   @override
-  String get forgotPasswordSubtitle => '登録に使ったメールアドレスを入力してください。新しいパスワードを決めるリンクをお送りします。';
+  String get forgotPasswordSubtitle =>
+      '登録に使ったメールアドレスを入力してください。新しいパスワードを決めるリンクをお送りします。';
 
   @override
   String get sendResetLink => 'リンクを送る';
@@ -1261,7 +1285,8 @@ class AppL10nJa extends AppL10n {
   }
 
   @override
-  String get resetLinkSentHint => 'リンクは1時間で期限切れになります。届かない場合は、再送を頼む前に迷惑メールをご確認ください。';
+  String get resetLinkSentHint =>
+      'リンクは1時間で期限切れになります。届かない場合は、再送を頼む前に迷惑メールをご確認ください。';
 
   @override
   String get tryAnotherEmail => '別のメールアドレスを使う';
@@ -1288,7 +1313,8 @@ class AppL10nJa extends AppL10n {
   String get welcomeTrackTitle => 'お金の行き先が見えます';
 
   @override
-  String get welcomeTrackBody => '入ってきたものと出ていったものを記録するだけ。LAVIO がそれを、ちゃんと読める一枚の絵に変えます。';
+  String get welcomeTrackBody =>
+      '入ってきたものと出ていったものを記録するだけ。LAVIO がそれを、ちゃんと読める一枚の絵に変えます。';
 
   @override
   String get welcomeBudgetTitle => '守れる上限を決める';
@@ -1300,7 +1326,8 @@ class AppL10nJa extends AppL10n {
   String get welcomeGoalsTitle => '大切なことのために貯める';
 
   @override
-  String get welcomeGoalsBody => '目標に名前を付け、金額を決め、貯まっていくのを眺める。もしもの備えは、目に見えるほうが続きます。';
+  String get welcomeGoalsBody =>
+      '目標に名前を付け、金額を決め、貯まっていくのを眺める。もしもの備えは、目に見えるほうが続きます。';
 
   @override
   String get welcomePrivacyTitle => 'あなたのお金は、あなたのもの';
@@ -1417,7 +1444,8 @@ class AppL10nJa extends AppL10n {
   String get guideAddTitle => 'お金を記録する';
 
   @override
-  String get guideAddBody => 'バーの真ん中のボタンがすべての起点です。短いメニューが開き、支出・収入・負債・予算・貯蓄目標を選べます。';
+  String get guideAddBody =>
+      'バーの真ん中のボタンがすべての起点です。短いメニューが開き、支出・収入・負債・予算・貯蓄目標を選べます。';
 
   @override
   String get guideAddTip1 => '真ん中のボタンを押して、収入か支出を記録します。';
@@ -1432,7 +1460,8 @@ class AppL10nJa extends AppL10n {
   String get guideCategoriesTitle => 'カテゴリ';
 
   @override
-  String get guideCategoriesBody => 'カテゴリは支出のまとめ方です。最初から入っているもので大半の人には足りますが、名前を変えたり自分で追加したりもできます。';
+  String get guideCategoriesBody =>
+      'カテゴリは支出のまとめ方です。最初から入っているもので大半の人には足りますが、名前を変えたり自分で追加したりもできます。';
 
   @override
   String get guideCategoriesTip1 => '設定から「カテゴリの管理」で、変更も追加もできます。';
@@ -1444,7 +1473,8 @@ class AppL10nJa extends AppL10n {
   String get guideBudgetTitle => '予算';
 
   @override
-  String get guideBudgetBody => '予算はカテゴリごとの月の上限です。使うほどバーが伸び、上限が近づくと色が変わるので、超える前に気づけます。';
+  String get guideBudgetBody =>
+      '予算はカテゴリごとの月の上限です。使うほどバーが伸び、上限が近づくと色が変わるので、超える前に気づけます。';
 
   @override
   String get guideBudgetTip1 => '全部いっぺんにではなく、2つか3つのカテゴリから始めましょう。';
@@ -1459,7 +1489,8 @@ class AppL10nJa extends AppL10n {
   String get guideSavingsTitle => '貯蓄目標';
 
   @override
-  String get guideSavingsBody => '何のために貯めるのかに名前を付け、金額と期日を決めれば、毎月いくら取り分ければ届くかをアプリが計算します。';
+  String get guideSavingsBody =>
+      '何のために貯めるのかに名前を付け、金額と期日を決めれば、毎月いくら取り分ければ届くかをアプリが計算します。';
 
   @override
   String get guideSavingsTip1 => '名前のある目標は、漠然と「貯めたい」より続きます。';
@@ -1471,7 +1502,8 @@ class AppL10nJa extends AppL10n {
   String get guideLoansTitle => '負債とローン';
 
   @override
-  String get guideLoansBody => 'いくら借りていて、いくらかかり、次の支払いがいつかを記録します。返済中のものはすべて、残額とともに一覧に並びます。';
+  String get guideLoansBody =>
+      'いくら借りていて、いくらかかり、次の支払いがいつかを記録します。返済中のものはすべて、残額とともに一覧に並びます。';
 
   @override
   String get guideLoansTip1 => '期日を入れておけば、支払いリマインダーが追いかけてくれます。';
@@ -1483,7 +1515,8 @@ class AppL10nJa extends AppL10n {
   String get guideReportsTitle => 'レポート';
 
   @override
-  String get guideReportsBody => 'もう一段深い眺め。収入と支出の対比、カテゴリ別の支出、予算がどれだけ守れたか、そして収入のうちどれだけ手元に残ったか。';
+  String get guideReportsBody =>
+      'もう一段深い眺め。収入と支出の対比、カテゴリ別の支出、予算がどれだけ守れたか、そして収入のうちどれだけ手元に残ったか。';
 
   @override
   String get guideReportsTip1 => '画面上部で、週・月・四半期を切り替えられます。';
@@ -1495,7 +1528,8 @@ class AppL10nJa extends AppL10n {
   String get guideSettingsTitle => '設定';
 
   @override
-  String get guideSettingsBody => '言語、通貨、色、お知らせはすべてここにあります。初期設定で固定されるものは何もありません — いつでも変えられます。';
+  String get guideSettingsBody =>
+      '言語、通貨、色、お知らせはすべてここにあります。初期設定で固定されるものは何もありません — いつでも変えられます。';
 
   @override
   String get guideSettingsTip1 => '40の言語に対応し、右から左に読む言語では画面全体が反転します。';
@@ -1510,7 +1544,8 @@ class AppL10nJa extends AppL10n {
   String get guideHabitTitle => '続けるために';
 
   @override
-  String get guideHabitBody => 'アプリは、入れたものの分だけ役に立ちます。月に1時間より1日1分。2週間続ければ、数字が何かを語り始めます。';
+  String get guideHabitBody =>
+      'アプリは、入れたものの分だけ役に立ちます。月に1時間より1日1分。2週間続ければ、数字が何かを語り始めます。';
 
   @override
   String get guideHabitTip1 => '週末にまとめてではなく、使ったその場で記録しましょう。';
@@ -1534,7 +1569,8 @@ class AppL10nJa extends AppL10n {
   String get accentColorCaption => 'ボタン、強調表示、グラフの色になります。';
 
   @override
-  String get accentSemanticsNote => '収入と支出はどのテーマでも自分の色を保つので、アクセントを変えても数字の意味は変わりません。';
+  String get accentSemanticsNote =>
+      '収入と支出はどのテーマでも自分の色を保つので、アクセントを変えても数字の意味は変わりません。';
 
   @override
   String get accentTeal => 'ティール';
@@ -1776,7 +1812,8 @@ class AppL10nJa extends AppL10n {
   String get removePhoto => '写真を削除';
 
   @override
-  String get personalInformationIntro => '名前と写真はアプリ全体に表示されます。メールアドレスはサインインに使用するアドレスです。';
+  String get personalInformationIntro =>
+      '名前と写真はアプリ全体に表示されます。メールアドレスはサインインに使用するアドレスです。';
 
   @override
   String get emailNotEditable => 'サインインに使用するメールアドレスを変更するには、サポートにお問い合わせください。';
@@ -1856,7 +1893,8 @@ class AppL10nJa extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint =>
+      'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';

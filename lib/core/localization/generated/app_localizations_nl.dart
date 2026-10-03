@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -126,7 +125,8 @@ class AppL10nNl extends AppL10n {
   String get noTransactionsTitle => 'Geen transacties gevonden';
 
   @override
-  String get noTransactionsBody => 'Probeer een andere zoekterm of filter om meer te zien.';
+  String get noTransactionsBody =>
+      'Probeer een andere zoekterm of filter om meer te zien.';
 
   @override
   String transactionCount(int count) {
@@ -374,7 +374,8 @@ class AppL10nNl extends AppL10n {
   String get noNotificationsTitle => 'Je bent helemaal bij';
 
   @override
-  String get noNotificationsBody => 'Nieuwe inzichten en herinneringen verschijnen hier.';
+  String get noNotificationsBody =>
+      'Nieuwe inzichten en herinneringen verschijnen hier.';
 
   @override
   String get cancel => 'Annuleren';
@@ -465,7 +466,8 @@ class AppL10nNl extends AppL10n {
   String get noBudgetsTitle => 'Nog geen budgetten';
 
   @override
-  String get noBudgetsBody => 'Stel een maandlimiet in op een categorie om die te gaan volgen.';
+  String get noBudgetsBody =>
+      'Stel een maandlimiet in op een categorie om die te gaan volgen.';
 
   @override
   String get newGoal => 'Nieuw doel';
@@ -587,7 +589,11 @@ class AppL10nNl extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(String subject, int percent, String amount) {
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  ) {
     return 'Je budget voor $subject is voor $percent% gebruikt, er is nog $amount over.';
   }
 
@@ -773,7 +779,8 @@ class AppL10nNl extends AppL10n {
   String get budgetAlerts => 'Budgetwaarschuwingen';
 
   @override
-  String get budgetAlertsBody => 'Als een budget bijna op is of overschreden wordt';
+  String get budgetAlertsBody =>
+      'Als een budget bijna op is of overschreden wordt';
 
   @override
   String get paymentReminders => 'Betalingsherinneringen';
@@ -867,7 +874,8 @@ class AppL10nNl extends AppL10n {
   String get addGoalAction => 'Doel toevoegen';
 
   @override
-  String get longPressHint => 'Tip: houd + ingedrukt om meteen een uitgave vast te leggen';
+  String get longPressHint =>
+      'Tip: houd + ingedrukt om meteen een uitgave vast te leggen';
 
   @override
   String get searchCurrencies => 'Valuta zoeken';
@@ -876,7 +884,8 @@ class AppL10nNl extends AppL10n {
   String get noCurrenciesFound => 'Geen valuta gevonden';
 
   @override
-  String get noCurrenciesFoundMessage => 'Probeer een andere code, symbool of naam.';
+  String get noCurrenciesFoundMessage =>
+      'Probeer een andere code, symbool of naam.';
 
   @override
   String get popularCurrencies => 'Populair';
@@ -972,19 +981,22 @@ class AppL10nNl extends AppL10n {
   String get remindNoonTitle => 'Even bijwerken';
 
   @override
-  String get remindNoonBody => 'Lunch, koffie, een ritje? In een paar seconden vastgelegd.';
+  String get remindNoonBody =>
+      'Lunch, koffie, een ritje? In een paar seconden vastgelegd.';
 
   @override
   String get remindAfternoonTitle => 'Snelle inhaalslag';
 
   @override
-  String get remindAfternoonBody => 'Leg vast wat je tot nu toe uitgaf, dan klopt vandaag.';
+  String get remindAfternoonBody =>
+      'Leg vast wat je tot nu toe uitgaf, dan klopt vandaag.';
 
   @override
   String get remindEveningTitle => 'De dag afronden';
 
   @override
-  String get remindEveningBody => 'Twee minuten nu en de cijfers van vandaag zijn compleet.';
+  String get remindEveningBody =>
+      'Twee minuten nu en de cijfers van vandaag zijn compleet.';
 
   @override
   String get happyWeekendTitle => 'Fijn weekend! 🎉';
@@ -997,13 +1009,15 @@ class AppL10nNl extends AppL10n {
   String get dailyReminders => 'Dagelijkse uitgavenherinneringen';
 
   @override
-  String get dailyRemindersBody => 'Vriendelijke duwtjes om je uitgaven bij te houden';
+  String get dailyRemindersBody =>
+      'Vriendelijke duwtjes om je uitgaven bij te houden';
 
   @override
   String get weekendGreeting => 'Weekendgroet';
 
   @override
-  String get weekendGreetingBody => 'Een vriendelijke groet aan het begin van je weekend';
+  String get weekendGreetingBody =>
+      'Een vriendelijke groet aan het begin van je weekend';
 
   @override
   String get reminderTimesSection => 'Momenten van herinnering';
@@ -1033,7 +1047,8 @@ class AppL10nNl extends AppL10n {
   String get generatedOn => 'Gemaakt op';
 
   @override
-  String get reportDisclaimer => 'Door LAVIO gemaakt op basis van je eigen gegevens.';
+  String get reportDisclaimer =>
+      'Door LAVIO gemaakt op basis van je eigen gegevens.';
 
   @override
   String pageOf(int page, int total) {
@@ -1217,7 +1232,8 @@ class AppL10nNl extends AppL10n {
   String get getStarted => 'Beginnen';
 
   @override
-  String get acceptTerms => 'Ik ga akkoord met de Servicevoorwaarden en het Privacybeleid';
+  String get acceptTerms =>
+      'Ik ga akkoord met de Servicevoorwaarden en het Privacybeleid';
 
   @override
   String get acceptTermsRequired => 'Ga akkoord om door te gaan';
@@ -1242,22 +1258,27 @@ class AppL10nNl extends AppL10n {
       'Een lange zin die je onthoudt is beter dan een kort wachtwoord vol tekens. Gebruik niets dat je ergens anders al gebruikt.';
 
   @override
-  String get authInvalidCredentials => 'Dit e-mailadres en wachtwoord horen bij geen enkel account';
+  String get authInvalidCredentials =>
+      'Dit e-mailadres en wachtwoord horen bij geen enkel account';
 
   @override
-  String get authEmailNotConfirmed => 'Bevestig je e-mailadres voordat je inlogt';
+  String get authEmailNotConfirmed =>
+      'Bevestig je e-mailadres voordat je inlogt';
 
   @override
-  String get authEmailAlreadyRegistered => 'Er bestaat al een account met dit e-mailadres';
+  String get authEmailAlreadyRegistered =>
+      'Er bestaat al een account met dit e-mailadres';
 
   @override
   String get authWeakPassword => 'Kies een langer wachtwoord';
 
   @override
-  String get authRateLimited => 'Te veel pogingen. Probeer het over een paar minuten opnieuw';
+  String get authRateLimited =>
+      'Te veel pogingen. Probeer het over een paar minuten opnieuw';
 
   @override
-  String get authNetworkError => 'Geen verbinding. Controleer je netwerk en probeer opnieuw';
+  String get authNetworkError =>
+      'Geen verbinding. Controleer je netwerk en probeer opnieuw';
 
   @override
   String get authGenericError => 'Er ging iets mis. Probeer het opnieuw';
@@ -1305,7 +1326,8 @@ class AppL10nNl extends AppL10n {
   String get resetPasswordTitle => 'Kies een nieuw wachtwoord';
 
   @override
-  String get resetPasswordSubtitle => 'Kies iets dat je op dit account nog niet hebt gebruikt.';
+  String get resetPasswordSubtitle =>
+      'Kies iets dat je op dit account nog niet hebt gebruikt.';
 
   @override
   String get passwordChangedTitle => 'Wachtwoord bijgewerkt';
@@ -1357,10 +1379,12 @@ class AppL10nNl extends AppL10n {
   String get onboardingNameTitle => 'Hoe zullen we je noemen?';
 
   @override
-  String get onboardingNameBody => 'Alleen om je te begroeten, nergens anders voor.';
+  String get onboardingNameBody =>
+      'Alleen om je te begroeten, nergens anders voor.';
 
   @override
-  String get onboardingNameHint => 'Een voornaam is genoeg. Je kunt het later wijzigen.';
+  String get onboardingNameHint =>
+      'Een voornaam is genoeg. Je kunt het later wijzigen.';
 
   @override
   String get onboardingCurrencyTitle => 'Welke valuta gebruik je?';
@@ -1387,13 +1411,15 @@ class AppL10nNl extends AppL10n {
       'Een rustig duwtje op het juiste moment maakt hier een gewoonte van.';
 
   @override
-  String get onboardingNotifyReminders => 'Een vriendelijke herinnering om uitgaven vast te leggen';
+  String get onboardingNotifyReminders =>
+      'Een vriendelijke herinnering om uitgaven vast te leggen';
 
   @override
   String get onboardingNotifyBudget => 'Een seintje voordat een budget op is';
 
   @override
-  String get onboardingNotifySummary => 'Een weekoverzicht van waar je geld heen ging';
+  String get onboardingNotifySummary =>
+      'Een weekoverzicht van waar je geld heen ging';
 
   @override
   String get onboardingNotifyEnable => 'Meldingen aanzetten';
@@ -1424,7 +1450,8 @@ class AppL10nNl extends AppL10n {
   String get onboardingGoToApp => 'Naar de app';
 
   @override
-  String get onboardingTourLater => 'Nu even niet? De gids blijft in Instellingen staan.';
+  String get onboardingTourLater =>
+      'Nu even niet? De gids blijft in Instellingen staan.';
 
   @override
   String get beginnersGuide => 'Beginnersgids';
@@ -1450,14 +1477,16 @@ class AppL10nNl extends AppL10n {
       'Alles begint hier. De kaart bovenaan is wat je overhoudt; daaronder wat er deze periode binnenkwam en uitging, en daarna je uitgaven, budgetten en doelen.';
 
   @override
-  String get guideDashboardTip1 => 'Trek het scherm omlaag om alles in één keer te verversen.';
+  String get guideDashboardTip1 =>
+      'Trek het scherm omlaag om alles in één keer te verversen.';
 
   @override
   String get guideDashboardTip2 =>
       'Tik op de kaart met inkomsten of uitgaven om meteen naar die lijst te gaan.';
 
   @override
-  String get guideDashboardTip3 => 'De ringen en inzichten werken bij zodra je iets vastlegt.';
+  String get guideDashboardTip3 =>
+      'De ringen en inzichten werken bij zodra je iets vastlegt.';
 
   @override
   String get guideAddTitle => 'Geld vastleggen';
@@ -1467,7 +1496,8 @@ class AppL10nNl extends AppL10n {
       'De knop in het midden van de balk is waar alles begint. Die opent een kort menu: uitgave, inkomsten, schuld, budget of spaardoel.';
 
   @override
-  String get guideAddTip1 => 'Tik op de middelste knop om geld in of uit vast te leggen.';
+  String get guideAddTip1 =>
+      'Tik op de middelste knop om geld in of uit vast te leggen.';
 
   @override
   String get guideAddTip2 =>
@@ -1500,7 +1530,8 @@ class AppL10nNl extends AppL10n {
       'Een budget is een maandplafond voor één categorie. De balk loopt vol terwijl je uitgeeft en verkleurt als het krap wordt, dus je weet het voordat je erdoorheen bent.';
 
   @override
-  String get guideBudgetTip1 => 'Begin met twee of drie categorieën, niet met alles tegelijk.';
+  String get guideBudgetTip1 =>
+      'Begin met twee of drie categorieën, niet met alles tegelijk.';
 
   @override
   String get guideBudgetTip2 =>
@@ -1522,7 +1553,8 @@ class AppL10nNl extends AppL10n {
       'Een doel met een naam houd je makkelijker vol dan een vaag voornemen om te sparen.';
 
   @override
-  String get guideSavingsTip2 => 'Meerdere kleine doelen worden vaker gehaald dan één groot doel.';
+  String get guideSavingsTip2 =>
+      'Meerdere kleine doelen worden vaker gehaald dan één groot doel.';
 
   @override
   String get guideLoansTitle => 'Schulden en leningen';
@@ -1547,7 +1579,8 @@ class AppL10nNl extends AppL10n {
       'De diepere blik: inkomsten tegenover uitgaven, uitgaven per categorie, hoe je budgetten het hielden en welk deel van je inkomsten je overhield.';
 
   @override
-  String get guideReportsTip1 => 'Wissel bovenaan het scherm tussen week, maand en kwartaal.';
+  String get guideReportsTip1 =>
+      'Wissel bovenaan het scherm tussen week, maand en kwartaal.';
 
   @override
   String get guideReportsTip2 =>
@@ -1569,7 +1602,8 @@ class AppL10nNl extends AppL10n {
       'Kies welke waarschuwingen je wilt en op welke uren ze mogen komen.';
 
   @override
-  String get guideSettingsTip3 => 'Stille uren houden alles tegen tot de ochtend.';
+  String get guideSettingsTip3 =>
+      'Stille uren houden alles tegen tot de ochtend.';
 
   @override
   String get guideHabitTitle => 'Houd het vol';
@@ -1583,10 +1617,12 @@ class AppL10nNl extends AppL10n {
       'Leg uitgaven vast op het moment zelf, niet aan het eind van de week.';
 
   @override
-  String get guideHabitTip2 => 'Kijk één keer per dag op het startscherm. Tien seconden is genoeg.';
+  String get guideHabitTip2 =>
+      'Kijk één keer per dag op het startscherm. Tien seconden is genoeg.';
 
   @override
-  String get guideHabitTip3 => 'Deze gids blijft in Instellingen staan — kom gerust terug.';
+  String get guideHabitTip3 =>
+      'Deze gids blijft in Instellingen staan — kom gerust terug.';
 
   @override
   String get appearance => 'Weergave';
@@ -1647,7 +1683,8 @@ class AppL10nNl extends AppL10n {
   String get noLanguagesFound => 'Geen talen gevonden';
 
   @override
-  String get noLanguagesFoundMessage => 'Probeer de Engelse naam of de tweeletterige code.';
+  String get noLanguagesFoundMessage =>
+      'Probeer de Engelse naam of de tweeletterige code.';
 
   @override
   String get rightToLeft => 'Rechts naar links';
@@ -1715,7 +1752,8 @@ class AppL10nNl extends AppL10n {
   }
 
   @override
-  String get paydayShortMonthNote => 'In shorter months the cycle starts on the last day instead.';
+  String get paydayShortMonthNote =>
+      'In shorter months the cycle starts on the last day instead.';
 
   @override
   String daysLeftInCycle(int count) {
@@ -1771,13 +1809,16 @@ class AppL10nNl extends AppL10n {
   String get healthNeedsWork => 'Needs work';
 
   @override
-  String get healthExcellentBody => 'You are saving well and staying inside your budgets.';
+  String get healthExcellentBody =>
+      'You are saving well and staying inside your budgets.';
 
   @override
-  String get healthGoodBody => 'You are on track with your spending this period.';
+  String get healthGoodBody =>
+      'You are on track with your spending this period.';
 
   @override
-  String get healthFairBody => 'A few budgets are running hot. Small changes will help.';
+  String get healthFairBody =>
+      'A few budgets are running hot. Small changes will help.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1852,7 +1893,8 @@ class AppL10nNl extends AppL10n {
       'Your name and photo appear across the app. Your email is the address you sign in with.';
 
   @override
-  String get emailNotEditable => 'Contact support to change the address you sign in with.';
+  String get emailNotEditable =>
+      'Contact support to change the address you sign in with.';
 
   @override
   String get pressBackAgainToExit => 'Press back again to exit';
@@ -1929,7 +1971,8 @@ class AppL10nNl extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint =>
+      'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';

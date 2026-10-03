@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -378,7 +377,8 @@ class AppL10nRo extends AppL10n {
   String get noNotificationsTitle => 'Ești la zi';
 
   @override
-  String get noNotificationsBody => 'Observațiile și mementourile noi apar aici.';
+  String get noNotificationsBody =>
+      'Observațiile și mementourile noi apar aici.';
 
   @override
   String get cancel => 'Anulează';
@@ -469,7 +469,8 @@ class AppL10nRo extends AppL10n {
   String get noBudgetsTitle => 'Încă niciun buget';
 
   @override
-  String get noBudgetsBody => 'Pune o limită lunară pe o categorie ca să începi s-o urmărești.';
+  String get noBudgetsBody =>
+      'Pune o limită lunară pe o categorie ca să începi s-o urmărești.';
 
   @override
   String get newGoal => 'Obiectiv nou';
@@ -572,7 +573,8 @@ class AppL10nRo extends AppL10n {
   String get noDebtsTitle => 'Nicio datorie urmărită';
 
   @override
-  String get noDebtsBody => 'Adaugă un credit sau un card ca să ții ratele sub ochi.';
+  String get noDebtsBody =>
+      'Adaugă un credit sau un card ca să ții ratele sub ochi.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
@@ -590,7 +592,11 @@ class AppL10nRo extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(String subject, int percent, String amount) {
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  ) {
     return 'Bugetul $subject e folosit în proporție de $percent%, au mai rămas $amount.';
   }
 
@@ -757,7 +763,8 @@ class AppL10nRo extends AppL10n {
   String get signOutConfirm => 'Te deconectezi?';
 
   @override
-  String get signOutBody => 'Va trebui să te conectezi din nou ca să-ți vezi finanțele.';
+  String get signOutBody =>
+      'Va trebui să te conectezi din nou ca să-ți vezi finanțele.';
 
   @override
   String get dataSource => 'Sursa datelor';
@@ -779,7 +786,8 @@ class AppL10nRo extends AppL10n {
   String get budgetAlerts => 'Alerte de buget';
 
   @override
-  String get budgetAlertsBody => 'Când un buget se apropie de limită sau o depășește';
+  String get budgetAlertsBody =>
+      'Când un buget se apropie de limită sau o depășește';
 
   @override
   String get paymentReminders => 'Mementouri de plată';
@@ -873,7 +881,8 @@ class AppL10nRo extends AppL10n {
   String get addGoalAction => 'Adaugă obiectiv';
 
   @override
-  String get longPressHint => 'Sfat: ține apăsat + ca să notezi direct o cheltuială';
+  String get longPressHint =>
+      'Sfat: ține apăsat + ca să notezi direct o cheltuială';
 
   @override
   String get searchCurrencies => 'Caută monede';
@@ -978,7 +987,8 @@ class AppL10nRo extends AppL10n {
   String get remindNoonTitle => 'Verificare de prânz';
 
   @override
-  String get remindNoonBody => 'Prânz, cafea, un bilet? Le notezi în câteva secunde.';
+  String get remindNoonBody =>
+      'Prânz, cafea, un bilet? Le notezi în câteva secunde.';
 
   @override
   String get remindAfternoonTitle => 'O completare rapidă';
@@ -991,25 +1001,29 @@ class AppL10nRo extends AppL10n {
   String get remindEveningTitle => 'Încheiem ziua';
 
   @override
-  String get remindEveningBody => 'Două minute acum și cifrele de azi sunt complete.';
+  String get remindEveningBody =>
+      'Două minute acum și cifrele de azi sunt complete.';
 
   @override
   String get happyWeekendTitle => 'Weekend plăcut! 🎉';
 
   @override
-  String get happyWeekendBody => 'Bucură-te — și mai aruncă un ochi pe cheltuielile de weekend.';
+  String get happyWeekendBody =>
+      'Bucură-te — și mai aruncă un ochi pe cheltuielile de weekend.';
 
   @override
   String get dailyReminders => 'Mementouri zilnice pentru cheltuieli';
 
   @override
-  String get dailyRemindersBody => 'Îndemnuri blânde ca să-ți ții cheltuielile la zi';
+  String get dailyRemindersBody =>
+      'Îndemnuri blânde ca să-ți ții cheltuielile la zi';
 
   @override
   String get weekendGreeting => 'Salut de weekend';
 
   @override
-  String get weekendGreetingBody => 'Un salut prietenos la începutul weekendului';
+  String get weekendGreetingBody =>
+      'Un salut prietenos la începutul weekendului';
 
   @override
   String get reminderTimesSection => 'Orele mementourilor';
@@ -1039,7 +1053,8 @@ class AppL10nRo extends AppL10n {
   String get generatedOn => 'Generat la';
 
   @override
-  String get reportDisclaimer => 'Generat de LAVIO din propriile tale înregistrări.';
+  String get reportDisclaimer =>
+      'Generat de LAVIO din propriile tale înregistrări.';
 
   @override
   String pageOf(int page, int total) {
@@ -1255,19 +1270,23 @@ class AppL10nRo extends AppL10n {
       'Acest e-mail și această parolă nu se potrivesc cu niciun cont';
 
   @override
-  String get authEmailNotConfirmed => 'Confirmă-ți adresa de e-mail înainte de conectare';
+  String get authEmailNotConfirmed =>
+      'Confirmă-ți adresa de e-mail înainte de conectare';
 
   @override
-  String get authEmailAlreadyRegistered => 'Există deja un cont cu acest e-mail';
+  String get authEmailAlreadyRegistered =>
+      'Există deja un cont cu acest e-mail';
 
   @override
   String get authWeakPassword => 'Alege o parolă mai lungă';
 
   @override
-  String get authRateLimited => 'Prea multe încercări. Reîncearcă peste câteva minute';
+  String get authRateLimited =>
+      'Prea multe încercări. Reîncearcă peste câteva minute';
 
   @override
-  String get authNetworkError => 'Fără conexiune. Verifică rețeaua și reîncearcă';
+  String get authNetworkError =>
+      'Fără conexiune. Verifică rețeaua și reîncearcă';
 
   @override
   String get authGenericError => 'Ceva n-a mers bine. Te rugăm să reîncerci';
@@ -1315,13 +1334,15 @@ class AppL10nRo extends AppL10n {
   String get resetPasswordTitle => 'Alege o parolă nouă';
 
   @override
-  String get resetPasswordSubtitle => 'Alege ceva ce n-ai mai folosit pe acest cont.';
+  String get resetPasswordSubtitle =>
+      'Alege ceva ce n-ai mai folosit pe acest cont.';
 
   @override
   String get passwordChangedTitle => 'Parolă actualizată';
 
   @override
-  String get passwordChangedBody => 'Noua parolă e salvată. Ești conectat și gata de treabă.';
+  String get passwordChangedBody =>
+      'Noua parolă e salvată. Ești conectat și gata de treabă.';
 
   @override
   String get demoModeHint => 'Versiune demo — nu e nevoie de cont';
@@ -1366,10 +1387,12 @@ class AppL10nRo extends AppL10n {
   String get onboardingNameTitle => 'Cum să-ți spunem?';
 
   @override
-  String get onboardingNameBody => 'Îl folosim doar ca să te salutăm, nicăieri altundeva.';
+  String get onboardingNameBody =>
+      'Îl folosim doar ca să te salutăm, nicăieri altundeva.';
 
   @override
-  String get onboardingNameHint => 'Prenumele e de ajuns. Îl poți schimba mai târziu.';
+  String get onboardingNameHint =>
+      'Prenumele e de ajuns. Îl poți schimba mai târziu.';
 
   @override
   String get onboardingCurrencyTitle => 'Ce monedă folosești?';
@@ -1396,13 +1419,16 @@ class AppL10nRo extends AppL10n {
       'Un semnal discret la momentul potrivit e ceea ce transformă asta într-un obicei.';
 
   @override
-  String get onboardingNotifyReminders => 'Un memento blând ca să notezi ce ai cheltuit';
+  String get onboardingNotifyReminders =>
+      'Un memento blând ca să notezi ce ai cheltuit';
 
   @override
-  String get onboardingNotifyBudget => 'Un avertisment înainte să se termine un buget';
+  String get onboardingNotifyBudget =>
+      'Un avertisment înainte să se termine un buget';
 
   @override
-  String get onboardingNotifySummary => 'Un rezumat săptămânal despre unde s-au dus banii';
+  String get onboardingNotifySummary =>
+      'Un rezumat săptămânal despre unde s-au dus banii';
 
   @override
   String get onboardingNotifyEnable => 'Activează notificările';
@@ -1411,7 +1437,8 @@ class AppL10nRo extends AppL10n {
   String get onboardingNotifyDone => 'Setările de notificare au fost salvate';
 
   @override
-  String get onboardingNotifyLater => 'Poți schimba toate astea în Setări, oricând.';
+  String get onboardingNotifyLater =>
+      'Poți schimba toate astea în Setări, oricând.';
 
   @override
   String get onboardingReadyTitle => 'Totul e pregătit';
@@ -1422,7 +1449,8 @@ class AppL10nRo extends AppL10n {
   }
 
   @override
-  String get onboardingReadyBody => 'Configurarea s-a încheiat. Vrei un tur rapid prin aplicație?';
+  String get onboardingReadyBody =>
+      'Configurarea s-a încheiat. Vrei un tur rapid prin aplicație?';
 
   @override
   String get onboardingTakeTour => 'Arată-mi';
@@ -1431,7 +1459,8 @@ class AppL10nRo extends AppL10n {
   String get onboardingGoToApp => 'Du-mă în aplicație';
 
   @override
-  String get onboardingTourLater => 'Nu acum? Ghidul rămâne în Setări, pentru când vrei.';
+  String get onboardingTourLater =>
+      'Nu acum? Ghidul rămâne în Setări, pentru când vrei.';
 
   @override
   String get beginnersGuide => 'Ghidul începătorului';
@@ -1457,7 +1486,8 @@ class AppL10nRo extends AppL10n {
       'Totul începe aici. Cardul de sus arată cât ți-a rămas; sub el ce a intrat și ce a ieșit în perioada asta, apoi cheltuielile, bugetele și obiectivele.';
 
   @override
-  String get guideDashboardTip1 => 'Trage ecranul în jos ca să reîmprospătezi tot dintr-o dată.';
+  String get guideDashboardTip1 =>
+      'Trage ecranul în jos ca să reîmprospătezi tot dintr-o dată.';
 
   @override
   String get guideDashboardTip2 =>
@@ -1475,7 +1505,8 @@ class AppL10nRo extends AppL10n {
       'Butonul din mijlocul barei e punctul de plecare. Deschide un meniu scurt: cheltuială, venit, datorie, buget sau obiectiv de economisire.';
 
   @override
-  String get guideAddTip1 => 'Atinge butonul din mijloc ca să notezi bani intrați sau ieșiți.';
+  String get guideAddTip1 =>
+      'Atinge butonul din mijloc ca să notezi bani intrați sau ieșiți.';
 
   @override
   String get guideAddTip2 =>
@@ -1508,10 +1539,12 @@ class AppL10nRo extends AppL10n {
       'Un buget e un plafon lunar pentru o categorie. Bara se umple pe măsură ce cheltuiești și își schimbă culoarea când se apropie, deci afli înainte să-l depășești.';
 
   @override
-  String get guideBudgetTip1 => 'Începe cu două-trei categorii, nu cu toate deodată.';
+  String get guideBudgetTip1 =>
+      'Începe cu două-trei categorii, nu cu toate deodată.';
 
   @override
-  String get guideBudgetTip2 => 'Pune limita puțin peste cheltuiala obișnuită, apoi strânge-o.';
+  String get guideBudgetTip2 =>
+      'Pune limita puțin peste cheltuiala obișnuită, apoi strânge-o.';
 
   @override
   String get guideBudgetTip3 =>
@@ -1529,7 +1562,8 @@ class AppL10nRo extends AppL10n {
       'Un obiectiv cu nume se ține mai ușor decât o intenție vagă de a economisi.';
 
   @override
-  String get guideSavingsTip2 => 'Mai multe obiective mici se termină mai des decât unul mare.';
+  String get guideSavingsTip2 =>
+      'Mai multe obiective mici se termină mai des decât unul mare.';
 
   @override
   String get guideLoansTitle => 'Datorii și credite';
@@ -1539,7 +1573,8 @@ class AppL10nRo extends AppL10n {
       'Notează cât datorezi, cât te costă și când vine următoarea rată. Tot ce achiți stă într-o singură listă, cu soldul rămas.';
 
   @override
-  String get guideLoansTip1 => 'Adaugă data scadenței și mementourile o urmăresc în locul tău.';
+  String get guideLoansTip1 =>
+      'Adaugă data scadenței și mementourile o urmăresc în locul tău.';
 
   @override
   String get guideLoansTip2 =>
@@ -1572,7 +1607,8 @@ class AppL10nRo extends AppL10n {
       'Patruzeci de limbi, iar întregul aranjament se oglindește pentru cele care se citesc de la dreapta la stânga.';
 
   @override
-  String get guideSettingsTip2 => 'Alege ce alerte vrei și la ce ore au voie să sosească.';
+  String get guideSettingsTip2 =>
+      'Alege ce alerte vrei și la ce ore au voie să sosească.';
 
   @override
   String get guideSettingsTip3 => 'Orele liniștite rețin totul până dimineața.';
@@ -1585,7 +1621,8 @@ class AppL10nRo extends AppL10n {
       'Aplicația face cât pui tu în ea. Un minut pe zi bate o oră pe lună, iar după două săptămâni cifrele încep să-ți spună ceva.';
 
   @override
-  String get guideHabitTip1 => 'Notează cheltuielile pe loc, nu la sfârșitul săptămânii.';
+  String get guideHabitTip1 =>
+      'Notează cheltuielile pe loc, nu la sfârșitul săptămânii.';
 
   @override
   String get guideHabitTip2 =>
@@ -1604,7 +1641,8 @@ class AppL10nRo extends AppL10n {
   String get accentColor => 'Culoare de accent';
 
   @override
-  String get accentColorCaption => 'Colorează butoanele, evidențierile și graficele.';
+  String get accentColorCaption =>
+      'Colorează butoanele, evidențierile și graficele.';
 
   @override
   String get accentSemanticsNote =>
@@ -1653,7 +1691,8 @@ class AppL10nRo extends AppL10n {
   String get noLanguagesFound => 'Nicio limbă găsită';
 
   @override
-  String get noLanguagesFoundMessage => 'Încearcă numele în engleză sau codul din două litere.';
+  String get noLanguagesFoundMessage =>
+      'Încearcă numele în engleză sau codul din două litere.';
 
   @override
   String get rightToLeft => 'De la dreapta la stânga';
@@ -1721,7 +1760,8 @@ class AppL10nRo extends AppL10n {
   }
 
   @override
-  String get paydayShortMonthNote => 'In shorter months the cycle starts on the last day instead.';
+  String get paydayShortMonthNote =>
+      'In shorter months the cycle starts on the last day instead.';
 
   @override
   String daysLeftInCycle(int count) {
@@ -1777,13 +1817,16 @@ class AppL10nRo extends AppL10n {
   String get healthNeedsWork => 'Needs work';
 
   @override
-  String get healthExcellentBody => 'You are saving well and staying inside your budgets.';
+  String get healthExcellentBody =>
+      'You are saving well and staying inside your budgets.';
 
   @override
-  String get healthGoodBody => 'You are on track with your spending this period.';
+  String get healthGoodBody =>
+      'You are on track with your spending this period.';
 
   @override
-  String get healthFairBody => 'A few budgets are running hot. Small changes will help.';
+  String get healthFairBody =>
+      'A few budgets are running hot. Small changes will help.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1858,7 +1901,8 @@ class AppL10nRo extends AppL10n {
       'Your name and photo appear across the app. Your email is the address you sign in with.';
 
   @override
-  String get emailNotEditable => 'Contact support to change the address you sign in with.';
+  String get emailNotEditable =>
+      'Contact support to change the address you sign in with.';
 
   @override
   String get pressBackAgainToExit => 'Press back again to exit';
@@ -1935,7 +1979,8 @@ class AppL10nRo extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint =>
+      'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';

@@ -99,7 +99,8 @@ import 'app_localizations_zh.dart';
 /// be consistent with the languages listed in the AppL10n.supportedLocales
 /// property.
 abstract class AppL10n {
-  AppL10n(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppL10n(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -180,7 +181,7 @@ abstract class AppL10n {
   /// No description provided for @appTagline.
   ///
   /// In en, this message translates to:
-  /// **'Save for a rainy day'**
+  /// **'Take Control of Your Money'**
   String get appTagline;
 
   /// No description provided for @navHome.
@@ -1219,7 +1220,11 @@ abstract class AppL10n {
   ///
   /// In en, this message translates to:
   /// **'Your {subject} budget is {percent}% used, with {amount} left.'**
-  String insightBudgetApproachingBody(String subject, int percent, String amount);
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  );
 
   /// No description provided for @insightOverIncomeTitle.
   ///

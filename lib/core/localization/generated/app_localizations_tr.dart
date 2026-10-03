@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -374,7 +373,8 @@ class AppL10nTr extends AppL10n {
   String get noNotificationsTitle => 'Her şey güncel';
 
   @override
-  String get noNotificationsBody => 'Yeni içgörüler ve hatırlatmalar burada görünecek.';
+  String get noNotificationsBody =>
+      'Yeni içgörüler ve hatırlatmalar burada görünecek.';
 
   @override
   String get cancel => 'İptal';
@@ -465,7 +465,8 @@ class AppL10nTr extends AppL10n {
   String get noBudgetsTitle => 'Henüz bütçe yok';
 
   @override
-  String get noBudgetsBody => 'Takibe başlamak için bir kategoriye aylık limit belirleyin.';
+  String get noBudgetsBody =>
+      'Takibe başlamak için bir kategoriye aylık limit belirleyin.';
 
   @override
   String get newGoal => 'Yeni hedef';
@@ -503,7 +504,8 @@ class AppL10nTr extends AppL10n {
   String get noGoalsTitle => 'Henüz birikim hedefi yok';
 
   @override
-  String get noGoalsBody => 'Bir hedef belirleyin, LAVIO ilerlemenizi takip etsin.';
+  String get noGoalsBody =>
+      'Bir hedef belirleyin, LAVIO ilerlemenizi takip etsin.';
 
   @override
   String get fundsAdded => 'Tutar eklendi';
@@ -568,7 +570,8 @@ class AppL10nTr extends AppL10n {
   String get noDebtsTitle => 'Takip edilen borç yok';
 
   @override
-  String get noDebtsBody => 'Geri ödemeleri takip etmek için bir kredi veya kredi kartı ekleyin.';
+  String get noDebtsBody =>
+      'Geri ödemeleri takip etmek için bir kredi veya kredi kartı ekleyin.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
@@ -586,7 +589,11 @@ class AppL10nTr extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(String subject, int percent, String amount) {
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  ) {
     return '$subject bütçenizin %$percent kadarı kullanıldı, $amount kaldı.';
   }
 
@@ -750,7 +757,8 @@ class AppL10nTr extends AppL10n {
   String get signOutConfirm => 'Çıkış yapılsın mı?';
 
   @override
-  String get signOutBody => 'Finanslarınızı görmek için tekrar giriş yapmanız gerekecek.';
+  String get signOutBody =>
+      'Finanslarınızı görmek için tekrar giriş yapmanız gerekecek.';
 
   @override
   String get dataSource => 'Veri kaynağı';
@@ -772,7 +780,8 @@ class AppL10nTr extends AppL10n {
   String get budgetAlerts => 'Bütçe uyarıları';
 
   @override
-  String get budgetAlertsBody => 'Bir bütçe limitine yaklaştığında veya aştığında';
+  String get budgetAlertsBody =>
+      'Bir bütçe limitine yaklaştığında veya aştığında';
 
   @override
   String get paymentReminders => 'Ödeme hatırlatmaları';
@@ -820,7 +829,8 @@ class AppL10nTr extends AppL10n {
   String get allowNotifications => 'Bildirimlere izin ver';
 
   @override
-  String get permissionDenied => 'Bildirimler engellenmiş. Cihaz ayarlarınızdan açabilirsiniz.';
+  String get permissionDenied =>
+      'Bildirimler engellenmiş. Cihaz ayarlarınızdan açabilirsiniz.';
 
   @override
   String get upcomingAlerts => 'Planlanan';
@@ -865,7 +875,8 @@ class AppL10nTr extends AppL10n {
   String get addGoalAction => 'Hedef ekle';
 
   @override
-  String get longPressHint => 'İpucu: bir harcamayı hemen kaydetmek için + tuşunu basılı tutun';
+  String get longPressHint =>
+      'İpucu: bir harcamayı hemen kaydetmek için + tuşunu basılı tutun';
 
   @override
   String get searchCurrencies => 'Para birimi ara';
@@ -874,7 +885,8 @@ class AppL10nTr extends AppL10n {
   String get noCurrenciesFound => 'Para birimi bulunamadı';
 
   @override
-  String get noCurrenciesFoundMessage => 'Farklı bir kod, simge veya ad deneyin.';
+  String get noCurrenciesFoundMessage =>
+      'Farklı bir kod, simge veya ad deneyin.';
 
   @override
   String get popularCurrencies => 'Yaygın';
@@ -963,37 +975,43 @@ class AppL10nTr extends AppL10n {
   String get remindMorningTitle => 'Günaydın ☀️';
 
   @override
-  String get remindMorningBody => 'Güne paranıza hâkim başlayın. Dünden eklenecek bir şey var mı?';
+  String get remindMorningBody =>
+      'Güne paranıza hâkim başlayın. Dünden eklenecek bir şey var mı?';
 
   @override
   String get remindNoonTitle => 'Öğle kontrolü';
 
   @override
-  String get remindNoonBody => 'Yemek, kahve, bir bilet? Saniyeler içinde ekleyin.';
+  String get remindNoonBody =>
+      'Yemek, kahve, bir bilet? Saniyeler içinde ekleyin.';
 
   @override
   String get remindAfternoonTitle => 'Kısa bir gözden geçirme';
 
   @override
-  String get remindAfternoonBody => 'Şimdiye kadar harcadıklarınızı girin, gün doğru kalsın.';
+  String get remindAfternoonBody =>
+      'Şimdiye kadar harcadıklarınızı girin, gün doğru kalsın.';
 
   @override
   String get remindEveningTitle => 'Günü kapatırken';
 
   @override
-  String get remindEveningBody => 'Şimdi iki dakika ve bugünün rakamları tamamlanır.';
+  String get remindEveningBody =>
+      'Şimdi iki dakika ve bugünün rakamları tamamlanır.';
 
   @override
   String get happyWeekendTitle => 'İyi hafta sonları! 🎉';
 
   @override
-  String get happyWeekendBody => 'Keyfini çıkarın — ve hafta sonu harcamalarına göz atın.';
+  String get happyWeekendBody =>
+      'Keyfini çıkarın — ve hafta sonu harcamalarına göz atın.';
 
   @override
   String get dailyReminders => 'Günlük harcama hatırlatmaları';
 
   @override
-  String get dailyRemindersBody => 'Harcamalarınızı güncel tutmanız için dostça hatırlatmalar';
+  String get dailyRemindersBody =>
+      'Harcamalarınızı güncel tutmanız için dostça hatırlatmalar';
 
   @override
   String get weekendGreeting => 'İyi hafta sonları';
@@ -1029,7 +1047,8 @@ class AppL10nTr extends AppL10n {
   String get generatedOn => 'Oluşturulma tarihi';
 
   @override
-  String get reportDisclaimer => 'LAVIO tarafından kendi kayıtlarınızdan oluşturuldu.';
+  String get reportDisclaimer =>
+      'LAVIO tarafından kendi kayıtlarınızdan oluşturuldu.';
 
   @override
   String pageOf(int page, int total) {
@@ -1213,7 +1232,8 @@ class AppL10nTr extends AppL10n {
   String get getStarted => 'Başlayalım';
 
   @override
-  String get acceptTerms => 'Hizmet Şartları’nı ve Gizlilik Politikası’nı kabul ediyorum';
+  String get acceptTerms =>
+      'Hizmet Şartları’nı ve Gizlilik Politikası’nı kabul ediyorum';
 
   @override
   String get acceptTermsRequired => 'Devam etmek için kabul edin';
@@ -1238,10 +1258,12 @@ class AppL10nTr extends AppL10n {
       'Hatırlayacağınız uzun bir ifade, sembollerle dolu kısa bir paroladan iyidir. Başka bir yerde kullandığınız hiçbir şeyi seçmeyin.';
 
   @override
-  String get authInvalidCredentials => 'Bu e-posta ve parola hiçbir hesapla eşleşmiyor';
+  String get authInvalidCredentials =>
+      'Bu e-posta ve parola hiçbir hesapla eşleşmiyor';
 
   @override
-  String get authEmailNotConfirmed => 'Giriş yapmadan önce e-posta adresinizi doğrulayın';
+  String get authEmailNotConfirmed =>
+      'Giriş yapmadan önce e-posta adresinizi doğrulayın';
 
   @override
   String get authEmailAlreadyRegistered => 'Bu e-posta ile bir hesap zaten var';
@@ -1250,10 +1272,12 @@ class AppL10nTr extends AppL10n {
   String get authWeakPassword => 'Daha uzun bir parola seçin';
 
   @override
-  String get authRateLimited => 'Çok fazla deneme. Birkaç dakika sonra tekrar deneyin';
+  String get authRateLimited =>
+      'Çok fazla deneme. Birkaç dakika sonra tekrar deneyin';
 
   @override
-  String get authNetworkError => 'Bağlantı yok. Ağınızı kontrol edip tekrar deneyin';
+  String get authNetworkError =>
+      'Bağlantı yok. Ağınızı kontrol edip tekrar deneyin';
 
   @override
   String get authGenericError => 'Bir şeyler ters gitti. Lütfen tekrar deneyin';
@@ -1301,13 +1325,15 @@ class AppL10nTr extends AppL10n {
   String get resetPasswordTitle => 'Yeni bir parola seçin';
 
   @override
-  String get resetPasswordSubtitle => 'Bu hesapta daha önce kullanmadığınız bir şey seçin.';
+  String get resetPasswordSubtitle =>
+      'Bu hesapta daha önce kullanmadığınız bir şey seçin.';
 
   @override
   String get passwordChangedTitle => 'Parola güncellendi';
 
   @override
-  String get passwordChangedBody => 'Yeni parolanız kaydedildi. Giriş yaptınız, her şey hazır.';
+  String get passwordChangedBody =>
+      'Yeni parolanız kaydedildi. Giriş yaptınız, her şey hazır.';
 
   @override
   String get demoModeHint => 'Demo sürüm — hesap gerekmez';
@@ -1383,13 +1409,15 @@ class AppL10nTr extends AppL10n {
       'Doğru anda gelen sessiz bir hatırlatma, bunu alışkanlığa dönüştüren şeydir.';
 
   @override
-  String get onboardingNotifyReminders => 'Harcamanızı kaydetmeniz için nazik bir hatırlatma';
+  String get onboardingNotifyReminders =>
+      'Harcamanızı kaydetmeniz için nazik bir hatırlatma';
 
   @override
   String get onboardingNotifyBudget => 'Bir bütçe bitmeden önce uyarı';
 
   @override
-  String get onboardingNotifySummary => 'Paranızın nereye gittiğine dair haftalık özet';
+  String get onboardingNotifySummary =>
+      'Paranızın nereye gittiğine dair haftalık özet';
 
   @override
   String get onboardingNotifyEnable => 'Bildirimleri aç';
@@ -1447,14 +1475,16 @@ class AppL10nTr extends AppL10n {
       'Her şey burada başlar. Üstteki kart elinizde kalanı gösterir; altında bu dönem giren ve çıkan, ardından harcamalarınız, bütçeleriniz ve hedefleriniz.';
 
   @override
-  String get guideDashboardTip1 => 'Her şeyi tek seferde yenilemek için ekranı aşağı çekin.';
+  String get guideDashboardTip1 =>
+      'Her şeyi tek seferde yenilemek için ekranı aşağı çekin.';
 
   @override
   String get guideDashboardTip2 =>
       'O listeye doğrudan gitmek için gelir veya gider kartına dokunun.';
 
   @override
-  String get guideDashboardTip3 => 'Bir şey kaydettiğiniz anda halkalar ve içgörüler güncellenir.';
+  String get guideDashboardTip3 =>
+      'Bir şey kaydettiğiniz anda halkalar ve içgörüler güncellenir.';
 
   @override
   String get guideAddTitle => 'Para kaydetmek';
@@ -1464,10 +1494,12 @@ class AppL10nTr extends AppL10n {
       'Çubuğun ortasındaki düğme her şeyin başladığı yerdir. Kısa bir menü açar: gider, gelir, borç, bütçe veya birikim hedefi.';
 
   @override
-  String get guideAddTip1 => 'Gelir veya gider kaydetmek için ortadaki düğmeye dokunun.';
+  String get guideAddTip1 =>
+      'Gelir veya gider kaydetmek için ortadaki düğmeye dokunun.';
 
   @override
-  String get guideAddTip2 => 'Menüyü atlayıp doğrudan yeni bir gidere geçmek için basılı tutun.';
+  String get guideAddTip2 =>
+      'Menüyü atlayıp doğrudan yeni bir gidere geçmek için basılı tutun.';
 
   @override
   String get guideAddTip3 =>
@@ -1496,7 +1528,8 @@ class AppL10nTr extends AppL10n {
       'Bütçe, tek bir kategori için aylık tavandır. Harcadıkça çubuk dolar, sınıra yaklaşınca rengi değişir; yani aşmadan önce haberiniz olur.';
 
   @override
-  String get guideBudgetTip1 => 'Hepsiyle birden değil, iki üç kategoriyle başlayın.';
+  String get guideBudgetTip1 =>
+      'Hepsiyle birden değil, iki üç kategoriyle başlayın.';
 
   @override
   String get guideBudgetTip2 =>
@@ -1518,7 +1551,8 @@ class AppL10nTr extends AppL10n {
       'Adı olan bir hedefi sürdürmek, belirsiz bir birikim niyetinden kolaydır.';
 
   @override
-  String get guideSavingsTip2 => 'Birkaç küçük hedef, tek bir büyük hedeften daha sık tamamlanır.';
+  String get guideSavingsTip2 =>
+      'Birkaç küçük hedef, tek bir büyük hedeften daha sık tamamlanır.';
 
   @override
   String get guideLoansTitle => 'Borçlar ve krediler';
@@ -1532,7 +1566,8 @@ class AppL10nTr extends AppL10n {
       'Vade tarihini ekleyin, ödeme hatırlatmaları takibini sizin yerinize yapsın.';
 
   @override
-  String get guideLoansTip2 => 'Geciken bir borç, ödenene kadar panoda kırmızı görünür.';
+  String get guideLoansTip2 =>
+      'Geciken bir borç, ödenene kadar panoda kırmızı görünür.';
 
   @override
   String get guideReportsTitle => 'Raporlar';
@@ -1542,7 +1577,8 @@ class AppL10nTr extends AppL10n {
       'Daha derin bakış: gelire karşı gider, kategoriye göre harcama, bütçelerinizin nasıl tuttuğu ve gelirinizin ne kadarını elinizde tuttuğunuz.';
 
   @override
-  String get guideReportsTip1 => 'Ekranın üstünden hafta, ay ve çeyrek arasında geçiş yapın.';
+  String get guideReportsTip1 =>
+      'Ekranın üstünden hafta, ay ve çeyrek arasında geçiş yapın.';
 
   @override
   String get guideReportsTip2 =>
@@ -1564,7 +1600,8 @@ class AppL10nTr extends AppL10n {
       'Hangi uyarıları istediğinizi ve hangi saatlerde gelebileceğini seçin.';
 
   @override
-  String get guideSettingsTip3 => 'Sessiz saatler her şeyi sabaha kadar bekletir.';
+  String get guideSettingsTip3 =>
+      'Sessiz saatler her şeyi sabaha kadar bekletir.';
 
   @override
   String get guideHabitTitle => 'Alışkanlığa dönüştürün';
@@ -1574,13 +1611,16 @@ class AppL10nTr extends AppL10n {
       'Uygulama, içine koyduğunuz kadar iyidir. Günde bir dakika, ayda bir saatten iyidir; iki hafta sonra rakamlar size bir şey söylemeye başlar.';
 
   @override
-  String get guideHabitTip1 => 'Harcamayı o anda kaydedin, hafta sonunda değil.';
+  String get guideHabitTip1 =>
+      'Harcamayı o anda kaydedin, hafta sonunda değil.';
 
   @override
-  String get guideHabitTip2 => 'Günde bir kez panoya göz atın. On saniye yeter.';
+  String get guideHabitTip2 =>
+      'Günde bir kez panoya göz atın. On saniye yeter.';
 
   @override
-  String get guideHabitTip3 => 'Bu rehber Ayarlar’da kalır — istediğiniz zaman dönün.';
+  String get guideHabitTip3 =>
+      'Bu rehber Ayarlar’da kalır — istediğiniz zaman dönün.';
 
   @override
   String get appearance => 'Görünüm';
@@ -1592,7 +1632,8 @@ class AppL10nTr extends AppL10n {
   String get accentColor => 'Vurgu rengi';
 
   @override
-  String get accentColorCaption => 'Düğmeleri, vurguları ve grafikleri renklendirir.';
+  String get accentColorCaption =>
+      'Düğmeleri, vurguları ve grafikleri renklendirir.';
 
   @override
   String get accentSemanticsNote =>
@@ -1641,7 +1682,8 @@ class AppL10nTr extends AppL10n {
   String get noLanguagesFound => 'Dil bulunamadı';
 
   @override
-  String get noLanguagesFoundMessage => 'İngilizce adını ya da iki harfli kodu deneyin.';
+  String get noLanguagesFoundMessage =>
+      'İngilizce adını ya da iki harfli kodu deneyin.';
 
   @override
   String get rightToLeft => 'Sağdan sola';
@@ -1709,7 +1751,8 @@ class AppL10nTr extends AppL10n {
   }
 
   @override
-  String get paydayShortMonthNote => 'Kısa aylarda döngü ayın son gününde başlar.';
+  String get paydayShortMonthNote =>
+      'Kısa aylarda döngü ayın son gününde başlar.';
 
   @override
   String daysLeftInCycle(int count) {
@@ -1765,13 +1808,15 @@ class AppL10nTr extends AppL10n {
   String get healthNeedsWork => 'Geliştirilmeli';
 
   @override
-  String get healthExcellentBody => 'İyi birikim yapıyor ve bütçelerinizin içinde kalıyorsunuz.';
+  String get healthExcellentBody =>
+      'İyi birikim yapıyor ve bütçelerinizin içinde kalıyorsunuz.';
 
   @override
   String get healthGoodBody => 'Bu dönemde harcamalarınız yolunda.';
 
   @override
-  String get healthFairBody => 'Bazı bütçeler sınıra yaklaşıyor. Küçük değişiklikler yeterli olur.';
+  String get healthFairBody =>
+      'Bazı bütçeler sınıra yaklaşıyor. Küçük değişiklikler yeterli olur.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1846,7 +1891,8 @@ class AppL10nTr extends AppL10n {
       'Adınız ve fotoğrafınız uygulamanın her yerinde görünür. E-postanız giriş yaptığınız adrestir.';
 
   @override
-  String get emailNotEditable => 'Giriş adresinizi değiştirmek için destek ile iletişime geçin.';
+  String get emailNotEditable =>
+      'Giriş adresinizi değiştirmek için destek ile iletişime geçin.';
 
   @override
   String get pressBackAgainToExit => 'Çıkmak için tekrar geri tuşuna basın';
@@ -1923,7 +1969,8 @@ class AppL10nTr extends AppL10n {
   String get debtNote => 'Not';
 
   @override
-  String get debtNoteHint => 'Hangi hesaptan ödeniyor, kiminle görüşülecek, neden alındı';
+  String get debtNoteHint =>
+      'Hangi hesaptan ödeniyor, kiminle görüşülecek, neden alındı';
 
   @override
   String get categoryBusiness => 'İşletme';
@@ -2105,7 +2152,8 @@ class AppL10nTr extends AppL10n {
   String get emptyHealthSetBudgets => 'Aylık bütçelerinizi oluşturun';
 
   @override
-  String get emptyHealthTrackLoans => 'Kredi veya borç takibi yapın (isteğe bağlı)';
+  String get emptyHealthTrackLoans =>
+      'Kredi veya borç takibi yapın (isteğe bağlı)';
 
   @override
   String get emptyHealthCardSubtitle =>
@@ -2115,7 +2163,8 @@ class AppL10nTr extends AppL10n {
   String get smartBudgetSplit => 'Akıllı bütçe dağılımı';
 
   @override
-  String get smartBudgetSplitSubtitle => 'Önerilen limitleri hesaplamak için aylık maaşınızı girin';
+  String get smartBudgetSplitSubtitle =>
+      'Önerilen limitleri hesaplamak için aylık maaşınızı girin';
 
   @override
   String get monthlyNetSalary => 'Aylık net maaş';

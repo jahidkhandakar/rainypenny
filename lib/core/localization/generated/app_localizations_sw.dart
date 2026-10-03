@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -126,7 +125,8 @@ class AppL10nSw extends AppL10n {
   String get noTransactionsTitle => 'Hakuna miamala iliyopatikana';
 
   @override
-  String get noTransactionsBody => 'Jaribu utafutaji au kichujio kingine ili kuona rekodi zaidi.';
+  String get noTransactionsBody =>
+      'Jaribu utafutaji au kichujio kingine ili kuona rekodi zaidi.';
 
   @override
   String transactionCount(int count) {
@@ -374,7 +374,8 @@ class AppL10nSw extends AppL10n {
   String get noNotificationsTitle => 'Umesoma kila kitu';
 
   @override
-  String get noNotificationsBody => 'Ufahamu na vikumbusho vipya vitaonekana hapa.';
+  String get noNotificationsBody =>
+      'Ufahamu na vikumbusho vipya vitaonekana hapa.';
 
   @override
   String get cancel => 'Ghairi';
@@ -465,7 +466,8 @@ class AppL10nSw extends AppL10n {
   String get noBudgetsTitle => 'Bado hakuna bajeti';
 
   @override
-  String get noBudgetsBody => 'Weka kikomo cha mwezi kwenye kategoria ili kuanza kuifuatilia.';
+  String get noBudgetsBody =>
+      'Weka kikomo cha mwezi kwenye kategoria ili kuanza kuifuatilia.';
 
   @override
   String get newGoal => 'Lengo jipya';
@@ -568,7 +570,8 @@ class AppL10nSw extends AppL10n {
   String get noDebtsTitle => 'Hakuna deni linalofuatiliwa';
 
   @override
-  String get noDebtsBody => 'Ongeza mkopo au kadi ya mkopo ili kufuatilia marejesho.';
+  String get noDebtsBody =>
+      'Ongeza mkopo au kadi ya mkopo ili kufuatilia marejesho.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
@@ -586,7 +589,11 @@ class AppL10nSw extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(String subject, int percent, String amount) {
+  String insightBudgetApproachingBody(
+    String subject,
+    int percent,
+    String amount,
+  ) {
     return 'Bajeti yako ya $subject imetumika $percent%, zimebaki $amount.';
   }
 
@@ -866,7 +873,8 @@ class AppL10nSw extends AppL10n {
   String get addGoalAction => 'Ongeza lengo';
 
   @override
-  String get longPressHint => 'Kidokezo: shikilia + ili kurekodi matumizi moja kwa moja';
+  String get longPressHint =>
+      'Kidokezo: shikilia + ili kurekodi matumizi moja kwa moja';
 
   @override
   String get searchCurrencies => 'Tafuta sarafu';
@@ -875,7 +883,8 @@ class AppL10nSw extends AppL10n {
   String get noCurrenciesFound => 'Hakuna sarafu iliyopatikana';
 
   @override
-  String get noCurrenciesFoundMessage => 'Jaribu msimbo, alama au jina lingine.';
+  String get noCurrenciesFoundMessage =>
+      'Jaribu msimbo, alama au jina lingine.';
 
   @override
   String get popularCurrencies => 'Maarufu';
@@ -971,37 +980,43 @@ class AppL10nSw extends AppL10n {
   String get remindNoonTitle => 'Ukaguzi wa mchana';
 
   @override
-  String get remindNoonBody => 'Chakula cha mchana, kahawa, nauli? Rekodi kwa sekunde chache.';
+  String get remindNoonBody =>
+      'Chakula cha mchana, kahawa, nauli? Rekodi kwa sekunde chache.';
 
   @override
   String get remindAfternoonTitle => 'Kufidia haraka';
 
   @override
-  String get remindAfternoonBody => 'Rekodi ulichotumia hadi sasa ili namba za leo ziwe sahihi.';
+  String get remindAfternoonBody =>
+      'Rekodi ulichotumia hadi sasa ili namba za leo ziwe sahihi.';
 
   @override
   String get remindEveningTitle => 'Tunafunga siku';
 
   @override
-  String get remindEveningBody => 'Dakika mbili sasa na rekodi za leo zitakuwa kamili.';
+  String get remindEveningBody =>
+      'Dakika mbili sasa na rekodi za leo zitakuwa kamili.';
 
   @override
   String get happyWeekendTitle => 'Wikendi njema! 🎉';
 
   @override
-  String get happyWeekendBody => 'Ifurahie — na uangalie kidogo matumizi ya wikendi.';
+  String get happyWeekendBody =>
+      'Ifurahie — na uangalie kidogo matumizi ya wikendi.';
 
   @override
   String get dailyReminders => 'Vikumbusho vya matumizi ya kila siku';
 
   @override
-  String get dailyRemindersBody => 'Misukumo ya upole ili matumizi yako yawe ya sasa';
+  String get dailyRemindersBody =>
+      'Misukumo ya upole ili matumizi yako yawe ya sasa';
 
   @override
   String get weekendGreeting => 'Salamu za wikendi';
 
   @override
-  String get weekendGreetingBody => 'Salamu ya kirafiki mwanzoni mwa wikendi yako';
+  String get weekendGreetingBody =>
+      'Salamu ya kirafiki mwanzoni mwa wikendi yako';
 
   @override
   String get reminderTimesSection => 'Nyakati za vikumbusho';
@@ -1031,7 +1046,8 @@ class AppL10nSw extends AppL10n {
   String get generatedOn => 'Imetengenezwa';
 
   @override
-  String get reportDisclaimer => 'Imetengenezwa na LAVIO kutokana na rekodi zako mwenyewe.';
+  String get reportDisclaimer =>
+      'Imetengenezwa na LAVIO kutokana na rekodi zako mwenyewe.';
 
   @override
   String pageOf(int page, int total) {
@@ -1240,25 +1256,31 @@ class AppL10nSw extends AppL10n {
       'Sentensi ndefu unayoikumbuka ni bora kuliko nenosiri fupi lenye alama nyingi. Epuka lolote unalotumia mahali pengine.';
 
   @override
-  String get authInvalidCredentials => 'Barua pepe na nenosiri hilo halilingani na akaunti yoyote';
+  String get authInvalidCredentials =>
+      'Barua pepe na nenosiri hilo halilingani na akaunti yoyote';
 
   @override
-  String get authEmailNotConfirmed => 'Thibitisha anwani yako ya barua pepe kabla ya kuingia';
+  String get authEmailNotConfirmed =>
+      'Thibitisha anwani yako ya barua pepe kabla ya kuingia';
 
   @override
-  String get authEmailAlreadyRegistered => 'Akaunti yenye barua pepe hii tayari ipo';
+  String get authEmailAlreadyRegistered =>
+      'Akaunti yenye barua pepe hii tayari ipo';
 
   @override
   String get authWeakPassword => 'Chagua nenosiri refu zaidi';
 
   @override
-  String get authRateLimited => 'Majaribio mengi mno. Jaribu tena baada ya dakika chache';
+  String get authRateLimited =>
+      'Majaribio mengi mno. Jaribu tena baada ya dakika chache';
 
   @override
-  String get authNetworkError => 'Hakuna muunganisho. Angalia mtandao wako kisha ujaribu tena';
+  String get authNetworkError =>
+      'Hakuna muunganisho. Angalia mtandao wako kisha ujaribu tena';
 
   @override
-  String get authGenericError => 'Kuna kitu kimeenda vibaya. Tafadhali jaribu tena';
+  String get authGenericError =>
+      'Kuna kitu kimeenda vibaya. Tafadhali jaribu tena';
 
   @override
   String get confirmEmailTitle => 'Angalia barua pepe yako';
@@ -1303,7 +1325,8 @@ class AppL10nSw extends AppL10n {
   String get resetPasswordTitle => 'Chagua nenosiri jipya';
 
   @override
-  String get resetPasswordSubtitle => 'Chagua kitu ambacho hujawahi kutumia kwenye akaunti hii.';
+  String get resetPasswordSubtitle =>
+      'Chagua kitu ambacho hujawahi kutumia kwenye akaunti hii.';
 
   @override
   String get passwordChangedTitle => 'Nenosiri limesasishwa';
@@ -1313,7 +1336,8 @@ class AppL10nSw extends AppL10n {
       'Nenosiri lako jipya limehifadhiwa. Umeingia na uko tayari kuendelea.';
 
   @override
-  String get demoModeHint => 'Toleo la majaribio — hakuna akaunti inayohitajika';
+  String get demoModeHint =>
+      'Toleo la majaribio — hakuna akaunti inayohitajika';
 
   @override
   String get demoModeFill => 'Jaza';
@@ -1355,10 +1379,12 @@ class AppL10nSw extends AppL10n {
   String get onboardingNameTitle => 'Tukuite nani?';
 
   @override
-  String get onboardingNameBody => 'Tutalitumia kukusalimu tu, si mahali pengine.';
+  String get onboardingNameBody =>
+      'Tutalitumia kukusalimu tu, si mahali pengine.';
 
   @override
-  String get onboardingNameHint => 'Jina la kwanza linatosha. Unaweza kulibadilisha baadaye.';
+  String get onboardingNameHint =>
+      'Jina la kwanza linatosha. Unaweza kulibadilisha baadaye.';
 
   @override
   String get onboardingCurrencyTitle => 'Unatumia sarafu gani?';
@@ -1385,13 +1411,15 @@ class AppL10nSw extends AppL10n {
       'Kikumbusho kidogo kwa wakati sahihi ndicho kinachogeuza hili kuwa mazoea.';
 
   @override
-  String get onboardingNotifyReminders => 'Kikumbusho cha upole cha kurekodi ulichotumia';
+  String get onboardingNotifyReminders =>
+      'Kikumbusho cha upole cha kurekodi ulichotumia';
 
   @override
   String get onboardingNotifyBudget => 'Taarifa kabla bajeti haijaisha';
 
   @override
-  String get onboardingNotifySummary => 'Muhtasari wa wiki wa fedha zako zilikoenda';
+  String get onboardingNotifySummary =>
+      'Muhtasari wa wiki wa fedha zako zilikoenda';
 
   @override
   String get onboardingNotifyEnable => 'Washa arifa';
@@ -1449,14 +1477,16 @@ class AppL10nSw extends AppL10n {
       'Kila kitu huanzia hapa. Kadi ya juu ni kile kilichokubakia; chini yake ni kilichoingia na kilichotoka kipindi hiki, kisha matumizi, bajeti na malengo yako.';
 
   @override
-  String get guideDashboardTip1 => 'Vuta skrini chini ili kuonyesha upya kila kitu kwa mara moja.';
+  String get guideDashboardTip1 =>
+      'Vuta skrini chini ili kuonyesha upya kila kitu kwa mara moja.';
 
   @override
   String get guideDashboardTip2 =>
       'Gusa kadi ya mapato au matumizi ili kwenda moja kwa moja kwenye orodha hiyo.';
 
   @override
-  String get guideDashboardTip3 => 'Pete na ufahamu husasishwa mara tu unaporekodi kitu.';
+  String get guideDashboardTip3 =>
+      'Pete na ufahamu husasishwa mara tu unaporekodi kitu.';
 
   @override
   String get guideAddTitle => 'Kurekodi fedha';
@@ -1466,7 +1496,8 @@ class AppL10nSw extends AppL10n {
       'Kitufe kilicho katikati ya upau ndicho mwanzo wa kila kitu. Kinafungua menyu fupi: matumizi, mapato, deni, bajeti au lengo la akiba.';
 
   @override
-  String get guideAddTip1 => 'Gusa kitufe cha katikati ili kurekodi fedha zinazoingia au kutoka.';
+  String get guideAddTip1 =>
+      'Gusa kitufe cha katikati ili kurekodi fedha zinazoingia au kutoka.';
 
   @override
   String get guideAddTip2 =>
@@ -1499,7 +1530,8 @@ class AppL10nSw extends AppL10n {
       'Bajeti ni kikomo cha mwezi kwa kategoria moja. Upau hujaa unapotumia na hubadilika rangi unapokaribia, hivyo unajua kabla hujavuka.';
 
   @override
-  String get guideBudgetTip1 => 'Anza na kategoria mbili au tatu, si zote kwa mara moja.';
+  String get guideBudgetTip1 =>
+      'Anza na kategoria mbili au tatu, si zote kwa mara moja.';
 
   @override
   String get guideBudgetTip2 =>
@@ -1532,7 +1564,8 @@ class AppL10nSw extends AppL10n {
       'Rekodi unachodaiwa, gharama yake na wakati malipo yajayo yanapofika. Kila unachokilipa kiko kwenye orodha moja pamoja na kilichobaki.';
 
   @override
-  String get guideLoansTip1 => 'Ongeza tarehe ya malipo nayo vikumbusho vitakufuatilia.';
+  String get guideLoansTip1 =>
+      'Ongeza tarehe ya malipo nayo vikumbusho vitakufuatilia.';
 
   @override
   String get guideLoansTip2 =>
@@ -1546,10 +1579,12 @@ class AppL10nSw extends AppL10n {
       'Mtazamo wa kina: mapato dhidi ya matumizi, matumizi kwa kategoria, jinsi bajeti zako zilivyoshikilia, na sehemu ipi ya mapato yako uliyoibakiza.';
 
   @override
-  String get guideReportsTip1 => 'Badilisha kati ya wiki, mwezi na robo mwaka juu ya skrini.';
+  String get guideReportsTip1 =>
+      'Badilisha kati ya wiki, mwezi na robo mwaka juu ya skrini.';
 
   @override
-  String get guideReportsTip2 => 'Hamisha au shiriki PDF — hutoka kwa lugha yako na mwelekeo wake.';
+  String get guideReportsTip2 =>
+      'Hamisha au shiriki PDF — hutoka kwa lugha yako na mwelekeo wake.';
 
   @override
   String get guideSettingsTitle => 'Mipangilio';
@@ -1563,10 +1598,12 @@ class AppL10nSw extends AppL10n {
       'Lugha arobaini, na mpangilio wote hugeuzwa kwa zile za kulia-kwenda-kushoto.';
 
   @override
-  String get guideSettingsTip2 => 'Chagua tahadhari unazotaka na saa ambazo zinaweza kufika.';
+  String get guideSettingsTip2 =>
+      'Chagua tahadhari unazotaka na saa ambazo zinaweza kufika.';
 
   @override
-  String get guideSettingsTip3 => 'Saa za utulivu huzuia kila kitu hadi asubuhi.';
+  String get guideSettingsTip3 =>
+      'Saa za utulivu huzuia kila kitu hadi asubuhi.';
 
   @override
   String get guideHabitTitle => 'Ifanye iwe mazoea';
@@ -1576,14 +1613,16 @@ class AppL10nSw extends AppL10n {
       'Programu ni nzuri kwa kadiri ya unachoweka ndani yake. Dakika moja kwa siku ni bora kuliko saa moja kwa mwezi, na baada ya wiki mbili namba huanza kukuambia kitu.';
 
   @override
-  String get guideHabitTip1 => 'Rekodi matumizi yanapotokea, si mwishoni mwa wiki.';
+  String get guideHabitTip1 =>
+      'Rekodi matumizi yanapotokea, si mwishoni mwa wiki.';
 
   @override
   String get guideHabitTip2 =>
       'Tazama ukurasa wa mwanzo mara moja kwa siku. Sekunde kumi zinatosha.';
 
   @override
-  String get guideHabitTip3 => 'Mwongozo huu unabaki kwenye Mipangilio — rudi wakati wowote.';
+  String get guideHabitTip3 =>
+      'Mwongozo huu unabaki kwenye Mipangilio — rudi wakati wowote.';
 
   @override
   String get appearance => 'Mwonekano';
@@ -1644,7 +1683,8 @@ class AppL10nSw extends AppL10n {
   String get noLanguagesFound => 'Hakuna lugha iliyopatikana';
 
   @override
-  String get noLanguagesFoundMessage => 'Jaribu jina kwa Kiingereza, au msimbo wa herufi mbili.';
+  String get noLanguagesFoundMessage =>
+      'Jaribu jina kwa Kiingereza, au msimbo wa herufi mbili.';
 
   @override
   String get rightToLeft => 'Kulia kwenda kushoto';
@@ -1656,7 +1696,8 @@ class AppL10nSw extends AppL10n {
   String get replaySetup => 'Rudia uwekaji';
 
   @override
-  String get replaySetupBody => 'Pitia tena maswali ya mwanzo. Hakuna ulichokirekodi kinachofutwa.';
+  String get replaySetupBody =>
+      'Pitia tena maswali ya mwanzo. Hakuna ulichokirekodi kinachofutwa.';
 
   @override
   String get rateTitle => 'Unafurahia LAVIO?';
@@ -1711,7 +1752,8 @@ class AppL10nSw extends AppL10n {
   }
 
   @override
-  String get paydayShortMonthNote => 'In shorter months the cycle starts on the last day instead.';
+  String get paydayShortMonthNote =>
+      'In shorter months the cycle starts on the last day instead.';
 
   @override
   String daysLeftInCycle(int count) {
@@ -1767,13 +1809,16 @@ class AppL10nSw extends AppL10n {
   String get healthNeedsWork => 'Needs work';
 
   @override
-  String get healthExcellentBody => 'You are saving well and staying inside your budgets.';
+  String get healthExcellentBody =>
+      'You are saving well and staying inside your budgets.';
 
   @override
-  String get healthGoodBody => 'You are on track with your spending this period.';
+  String get healthGoodBody =>
+      'You are on track with your spending this period.';
 
   @override
-  String get healthFairBody => 'A few budgets are running hot. Small changes will help.';
+  String get healthFairBody =>
+      'A few budgets are running hot. Small changes will help.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1848,7 +1893,8 @@ class AppL10nSw extends AppL10n {
       'Your name and photo appear across the app. Your email is the address you sign in with.';
 
   @override
-  String get emailNotEditable => 'Contact support to change the address you sign in with.';
+  String get emailNotEditable =>
+      'Contact support to change the address you sign in with.';
 
   @override
   String get pressBackAgainToExit => 'Press back again to exit';
@@ -1925,7 +1971,8 @@ class AppL10nSw extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint =>
+      'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';
