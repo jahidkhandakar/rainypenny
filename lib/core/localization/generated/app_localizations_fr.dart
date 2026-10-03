@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppL10nFr extends AppL10n {
   AppL10nFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Épargnez pour les jours difficiles';
@@ -374,8 +375,7 @@ class AppL10nFr extends AppL10n {
   String get noNotificationsTitle => 'Vous êtes à jour';
 
   @override
-  String get noNotificationsBody =>
-      'Les nouvelles analyses et rappels apparaîtront ici.';
+  String get noNotificationsBody => 'Les nouvelles analyses et rappels apparaîtront ici.';
 
   @override
   String get cancel => 'Annuler';
@@ -505,8 +505,7 @@ class AppL10nFr extends AppL10n {
   String get noGoalsTitle => 'Aucun objectif d\'épargne';
 
   @override
-  String get noGoalsBody =>
-      'Fixez un objectif et RainyPenny suivra votre progression.';
+  String get noGoalsBody => 'Fixez un objectif et LAVIO suivra votre progression.';
 
   @override
   String get fundsAdded => 'Montant ajouté';
@@ -590,11 +589,7 @@ class AppL10nFr extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(
-    String subject,
-    int percent,
-    String amount,
-  ) {
+  String insightBudgetApproachingBody(String subject, int percent, String amount) {
     return 'Votre budget $subject est utilisé à $percent%, il reste $amount.';
   }
 
@@ -713,8 +708,7 @@ class AppL10nFr extends AppL10n {
   String get signUp => 'Créer un compte';
 
   @override
-  String get signInSubtitle =>
-      'Content de vous revoir. Votre argent vous attend.';
+  String get signInSubtitle => 'Content de vous revoir. Votre argent vous attend.';
 
   @override
   String get signUpSubtitle => 'Quelques informations et c\'est parti.';
@@ -741,8 +735,7 @@ class AppL10nFr extends AppL10n {
   String get forgotPassword => 'Mot de passe oublié ?';
 
   @override
-  String get resetSent =>
-      'Consultez votre boîte mail pour le lien de réinitialisation';
+  String get resetSent => 'Consultez votre boîte mail pour le lien de réinitialisation';
 
   @override
   String get noAccountYet => 'Nouveau ici ?';
@@ -760,8 +753,7 @@ class AppL10nFr extends AppL10n {
   String get signOutConfirm => 'Se déconnecter ?';
 
   @override
-  String get signOutBody =>
-      'Vous devrez vous reconnecter pour revoir vos finances.';
+  String get signOutBody => 'Vous devrez vous reconnecter pour revoir vos finances.';
 
   @override
   String get dataSource => 'Source des données';
@@ -783,15 +775,13 @@ class AppL10nFr extends AppL10n {
   String get budgetAlerts => 'Alertes de budget';
 
   @override
-  String get budgetAlertsBody =>
-      'Quand un budget approche de sa limite ou la dépasse';
+  String get budgetAlertsBody => 'Quand un budget approche de sa limite ou la dépasse';
 
   @override
   String get paymentReminders => 'Rappels de paiement';
 
   @override
-  String get paymentRemindersBody =>
-      'Quelques jours avant l\'échéance d\'un paiement';
+  String get paymentRemindersBody => 'Quelques jours avant l\'échéance d\'un paiement';
 
   @override
   String get savingsUpdates => 'Point épargne';
@@ -827,7 +817,7 @@ class AppL10nFr extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Autorisez les notifications pour que RainyPenny puisse vous alerter avant qu\'un budget ou un paiement ne vous échappe.';
+      'Autorisez les notifications pour que LAVIO puisse vous alerter avant qu\'un budget ou un paiement ne vous échappe.';
 
   @override
   String get allowNotifications => 'Autoriser les notifications';
@@ -879,8 +869,7 @@ class AppL10nFr extends AppL10n {
   String get addGoalAction => 'Ajouter un objectif';
 
   @override
-  String get longPressHint =>
-      'Astuce : maintenez + pour enregistrer une dépense tout de suite';
+  String get longPressHint => 'Astuce : maintenez + pour enregistrer une dépense tout de suite';
 
   @override
   String get searchCurrencies => 'Rechercher une devise';
@@ -889,8 +878,7 @@ class AppL10nFr extends AppL10n {
   String get noCurrenciesFound => 'Aucune devise trouvée';
 
   @override
-  String get noCurrenciesFoundMessage =>
-      'Essayez un autre code, symbole ou nom.';
+  String get noCurrenciesFoundMessage => 'Essayez un autre code, symbole ou nom.';
 
   @override
   String get popularCurrencies => 'Courantes';
@@ -986,43 +974,37 @@ class AppL10nFr extends AppL10n {
   String get remindNoonTitle => 'Point de midi';
 
   @override
-  String get remindNoonBody =>
-      'Déjeuner, café, un ticket ? Ajoutez-le en quelques secondes.';
+  String get remindNoonBody => 'Déjeuner, café, un ticket ? Ajoutez-le en quelques secondes.';
 
   @override
   String get remindAfternoonTitle => 'Petit point';
 
   @override
-  String get remindAfternoonBody =>
-      'Notez ce que vous avez dépensé et gardez la journée exacte.';
+  String get remindAfternoonBody => 'Notez ce que vous avez dépensé et gardez la journée exacte.';
 
   @override
   String get remindEveningTitle => 'On boucle la journée';
 
   @override
-  String get remindEveningBody =>
-      'Deux minutes maintenant et les chiffres du jour sont complets.';
+  String get remindEveningBody => 'Deux minutes maintenant et les chiffres du jour sont complets.';
 
   @override
   String get happyWeekendTitle => 'Bon week-end ! 🎉';
 
   @override
-  String get happyWeekendBody =>
-      'Profitez-en — et gardez un œil sur les dépenses du week-end.';
+  String get happyWeekendBody => 'Profitez-en — et gardez un œil sur les dépenses du week-end.';
 
   @override
   String get dailyReminders => 'Rappels de dépenses quotidiens';
 
   @override
-  String get dailyRemindersBody =>
-      'De petits rappels pour garder vos dépenses à jour';
+  String get dailyRemindersBody => 'De petits rappels pour garder vos dépenses à jour';
 
   @override
   String get weekendGreeting => 'Bon week-end';
 
   @override
-  String get weekendGreetingBody =>
-      'Un mot sympathique au début de votre week-end';
+  String get weekendGreetingBody => 'Un mot sympathique au début de votre week-end';
 
   @override
   String get reminderTimesSection => 'Heures de rappel';
@@ -1052,8 +1034,7 @@ class AppL10nFr extends AppL10n {
   String get generatedOn => 'Généré le';
 
   @override
-  String get reportDisclaimer =>
-      'Généré par RainyPenny à partir de vos propres données.';
+  String get reportDisclaimer => 'Généré par LAVIO à partir de vos propres données.';
 
   @override
   String pageOf(int page, int total) {
@@ -1216,8 +1197,7 @@ class AppL10nFr extends AppL10n {
   String get confirmPasswordLabel => 'Confirmer le mot de passe';
 
   @override
-  String get passwordsDoNotMatch =>
-      'Les deux mots de passe doivent être identiques';
+  String get passwordsDoNotMatch => 'Les deux mots de passe doivent être identiques';
 
   @override
   String get showPassword => 'Afficher le mot de passe';
@@ -1268,23 +1248,19 @@ class AppL10nFr extends AppL10n {
       'Cet e-mail et ce mot de passe ne correspondent à aucun compte';
 
   @override
-  String get authEmailNotConfirmed =>
-      'Confirmez votre adresse e-mail avant de vous connecter';
+  String get authEmailNotConfirmed => 'Confirmez votre adresse e-mail avant de vous connecter';
 
   @override
-  String get authEmailAlreadyRegistered =>
-      'Un compte existe déjà avec cette adresse';
+  String get authEmailAlreadyRegistered => 'Un compte existe déjà avec cette adresse';
 
   @override
   String get authWeakPassword => 'Choisissez un mot de passe plus long';
 
   @override
-  String get authRateLimited =>
-      'Trop de tentatives. Réessayez dans quelques minutes';
+  String get authRateLimited => 'Trop de tentatives. Réessayez dans quelques minutes';
 
   @override
-  String get authNetworkError =>
-      'Pas de connexion. Vérifiez votre réseau et réessayez';
+  String get authNetworkError => 'Pas de connexion. Vérifiez votre réseau et réessayez';
 
   @override
   String get authGenericError => 'Une erreur est survenue. Veuillez réessayer';
@@ -1343,8 +1319,7 @@ class AppL10nFr extends AppL10n {
       'Votre nouveau mot de passe est enregistré. Vous êtes connecté, tout est prêt.';
 
   @override
-  String get demoModeHint =>
-      'Version de démonstration — aucun compte nécessaire';
+  String get demoModeHint => 'Version de démonstration — aucun compte nécessaire';
 
   @override
   String get demoModeFill => 'Remplir';
@@ -1354,7 +1329,7 @@ class AppL10nFr extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Notez ce qui rentre et ce qui sort. RainyPenny en fait une image que l’on peut vraiment lire.';
+      'Notez ce qui rentre et ce qui sort. LAVIO en fait une image que l’on peut vraiment lire.';
 
   @override
   String get welcomeBudgetTitle => 'Des limites qui tiennent';
@@ -1386,12 +1361,10 @@ class AppL10nFr extends AppL10n {
   String get onboardingNameTitle => 'Comment vous appeler ?';
 
   @override
-  String get onboardingNameBody =>
-      'Uniquement pour vous saluer, nulle part ailleurs.';
+  String get onboardingNameBody => 'Uniquement pour vous saluer, nulle part ailleurs.';
 
   @override
-  String get onboardingNameHint =>
-      'Un prénom suffit. Vous pourrez le changer plus tard.';
+  String get onboardingNameHint => 'Un prénom suffit. Vous pourrez le changer plus tard.';
 
   @override
   String get onboardingCurrencyTitle => 'Quelle devise utilisez-vous ?';
@@ -1418,16 +1391,13 @@ class AppL10nFr extends AppL10n {
       'Un rappel discret au bon moment, c’est ce qui transforme cela en habitude.';
 
   @override
-  String get onboardingNotifyReminders =>
-      'Un rappel léger pour noter vos dépenses';
+  String get onboardingNotifyReminders => 'Un rappel léger pour noter vos dépenses';
 
   @override
-  String get onboardingNotifyBudget =>
-      'Une alerte avant qu’un budget ne soit épuisé';
+  String get onboardingNotifyBudget => 'Une alerte avant qu’un budget ne soit épuisé';
 
   @override
-  String get onboardingNotifySummary =>
-      'Un récapitulatif hebdomadaire de vos dépenses';
+  String get onboardingNotifySummary => 'Un récapitulatif hebdomadaire de vos dépenses';
 
   @override
   String get onboardingNotifyEnable => 'Activer les notifications';
@@ -1485,8 +1455,7 @@ class AppL10nFr extends AppL10n {
       'Tout commence ici. La carte du haut indique ce qu’il vous reste ; en dessous, ce qui est entré et sorti sur la période, puis vos dépenses, budgets et objectifs.';
 
   @override
-  String get guideDashboardTip1 =>
-      'Tirez l’écran vers le bas pour tout actualiser d’un coup.';
+  String get guideDashboardTip1 => 'Tirez l’écran vers le bas pour tout actualiser d’un coup.';
 
   @override
   String get guideDashboardTip2 =>
@@ -1504,8 +1473,7 @@ class AppL10nFr extends AppL10n {
       'Le bouton au centre de la barre est le point de départ. Il ouvre un court menu : dépense, revenu, dette, budget ou objectif d’épargne.';
 
   @override
-  String get guideAddTip1 =>
-      'Touchez le bouton central pour noter une entrée ou une sortie.';
+  String get guideAddTip1 => 'Touchez le bouton central pour noter une entrée ou une sortie.';
 
   @override
   String get guideAddTip2 =>
@@ -1538,8 +1506,7 @@ class AppL10nFr extends AppL10n {
       'Un budget est un plafond mensuel pour une catégorie. La barre se remplit à mesure que vous dépensez et change de couleur en approchant, vous êtes donc prévenu avant.';
 
   @override
-  String get guideBudgetTip1 =>
-      'Commencez par deux ou trois catégories, pas toutes d’un coup.';
+  String get guideBudgetTip1 => 'Commencez par deux ou trois catégories, pas toutes d’un coup.';
 
   @override
   String get guideBudgetTip2 =>
@@ -1587,8 +1554,7 @@ class AppL10nFr extends AppL10n {
       'La vue de fond : revenus contre dépenses, dépenses par catégorie, tenue de vos budgets et part de vos revenus conservée.';
 
   @override
-  String get guideReportsTip1 =>
-      'Basculez entre semaine, mois et trimestre en haut de l’écran.';
+  String get guideReportsTip1 => 'Basculez entre semaine, mois et trimestre en haut de l’écran.';
 
   @override
   String get guideReportsTip2 =>
@@ -1610,8 +1576,7 @@ class AppL10nFr extends AppL10n {
       'Choisissez les alertes voulues et les heures auxquelles elles peuvent arriver.';
 
   @override
-  String get guideSettingsTip3 =>
-      'Les heures calmes retiennent tout jusqu’au matin.';
+  String get guideSettingsTip3 => 'Les heures calmes retiennent tout jusqu’au matin.';
 
   @override
   String get guideHabitTitle => 'Tenir dans la durée';
@@ -1621,16 +1586,13 @@ class AppL10nFr extends AppL10n {
       'L’application ne vaut que ce que vous y mettez. Une minute par jour vaut mieux qu’une heure par mois, et au bout de quinze jours les chiffres commencent à parler.';
 
   @override
-  String get guideHabitTip1 =>
-      'Notez vos dépenses sur le moment, pas en fin de semaine.';
+  String get guideHabitTip1 => 'Notez vos dépenses sur le moment, pas en fin de semaine.';
 
   @override
-  String get guideHabitTip2 =>
-      'Un coup d’œil au tableau de bord par jour. Dix secondes suffisent.';
+  String get guideHabitTip2 => 'Un coup d’œil au tableau de bord par jour. Dix secondes suffisent.';
 
   @override
-  String get guideHabitTip3 =>
-      'Ce guide reste dans les réglages — revenez-y quand vous voulez.';
+  String get guideHabitTip3 => 'Ce guide reste dans les réglages — revenez-y quand vous voulez.';
 
   @override
   String get appearance => 'Apparence';
@@ -1642,8 +1604,7 @@ class AppL10nFr extends AppL10n {
   String get accentColor => 'Couleur d’accent';
 
   @override
-  String get accentColorCaption =>
-      'Colore les boutons, les mises en avant et les graphiques.';
+  String get accentColorCaption => 'Colore les boutons, les mises en avant et les graphiques.';
 
   @override
   String get accentSemanticsNote =>
@@ -1692,8 +1653,7 @@ class AppL10nFr extends AppL10n {
   String get noLanguagesFound => 'Aucune langue trouvée';
 
   @override
-  String get noLanguagesFoundMessage =>
-      'Essayez le nom en anglais ou le code à deux lettres.';
+  String get noLanguagesFoundMessage => 'Essayez le nom en anglais ou le code à deux lettres.';
 
   @override
   String get rightToLeft => 'De droite à gauche';
@@ -1709,7 +1669,7 @@ class AppL10nFr extends AppL10n {
       'Repassez par les questions de départ. Rien de ce que vous avez enregistré n’est supprimé.';
 
   @override
-  String get rateTitle => 'RainyPenny vous plaît ?';
+  String get rateTitle => 'LAVIO vous plaît ?';
 
   @override
   String get rateBody =>
@@ -1786,8 +1746,7 @@ class AppL10nFr extends AppL10n {
   String get dailyAllowance => 'Budget quotidien sûr';
 
   @override
-  String get overspentNotice =>
-      'Vous avez dépensé plus que vos entrées sur ce cycle.';
+  String get overspentNotice => 'Vous avez dépensé plus que vos entrées sur ce cycle.';
 
   @override
   String get backToThisMonth => 'Revenir à ce mois';
@@ -1819,16 +1778,13 @@ class AppL10nFr extends AppL10n {
   String get healthNeedsWork => 'À améliorer';
 
   @override
-  String get healthExcellentBody =>
-      'Vous épargnez bien et respectez vos budgets.';
+  String get healthExcellentBody => 'Vous épargnez bien et respectez vos budgets.';
 
   @override
-  String get healthGoodBody =>
-      'Vos dépenses sont sur la bonne voie cette période.';
+  String get healthGoodBody => 'Vos dépenses sont sur la bonne voie cette période.';
 
   @override
-  String get healthFairBody =>
-      'Quelques budgets sont tendus. De petits ajustements suffiront.';
+  String get healthFairBody => 'Quelques budgets sont tendus. De petits ajustements suffiront.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1903,8 +1859,7 @@ class AppL10nFr extends AppL10n {
       'Votre nom et votre photo apparaissent dans toute l\'application. Votre e-mail est l\'adresse de connexion.';
 
   @override
-  String get emailNotEditable =>
-      'Contactez le support pour changer l\'adresse de connexion.';
+  String get emailNotEditable => 'Contactez le support pour changer l\'adresse de connexion.';
 
   @override
   String get pressBackAgainToExit => 'Appuyez à nouveau pour quitter';
@@ -1958,8 +1913,7 @@ class AppL10nFr extends AppL10n {
   String get noPaymentsYet => 'Aucun paiement enregistré';
 
   @override
-  String get noPaymentsYetBody =>
-      'Les remboursements que vous enregistrez apparaîtront ici.';
+  String get noPaymentsYetBody => 'Les remboursements que vous enregistrez apparaîtront ici.';
 
   @override
   String get lastPayment => 'Dernier paiement';
@@ -1982,8 +1936,7 @@ class AppL10nFr extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint =>
-      'Compte débité, qui contacter, pourquoi vous l\'avez souscrit';
+  String get debtNoteHint => 'Compte débité, qui contacter, pourquoi vous l\'avez souscrit';
 
   @override
   String get categoryBusiness => 'Entreprise';
@@ -2159,8 +2112,7 @@ class AppL10nFr extends AppL10n {
       'Nous avons besoin d\'un peu d\'activité financière avant de pouvoir calculer un score de santé fiable.';
 
   @override
-  String get emptyHealthAddTransactions =>
-      'Ajouter des transactions de revenus ou de dépenses';
+  String get emptyHealthAddTransactions => 'Ajouter des transactions de revenus ou de dépenses';
 
   @override
   String get emptyHealthSetBudgets => 'Configurer vos budgets mensuels';

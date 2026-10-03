@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../features/auth/data/repositories/mock_auth_repository.dart';

@@ -1,16 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/salary_cycle.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
-import 'package:rainypenny/features/financial/domain/services/balance_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/cycle_calculator.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/salary_cycle.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/financial/domain/services/balance_calculator.dart';
+import 'package:lavio/features/financial/domain/services/cycle_calculator.dart';
 
-const _salary = Category(
-  id: 'salary',
-  name: 'Salary',
-  icon: CategoryIcon.salary,
-  isIncome: true,
-);
+const _salary = Category(id: 'salary', name: 'Salary', icon: CategoryIcon.salary, isIncome: true);
 const _food = Category(id: 'food', name: 'Food', icon: CategoryIcon.food);
 const _rent = Category(id: 'housing', name: 'Rent', icon: CategoryIcon.housing);
 
@@ -23,19 +18,15 @@ Transaction _income(String id, double amount, DateTime date) => Transaction(
   category: _salary,
 );
 
-Transaction _expense(
-  String id,
-  double amount,
-  DateTime date, {
-  Category category = _food,
-}) => Transaction(
-  id: id,
-  title: id,
-  amount: amount,
-  date: date,
-  type: TransactionType.expense,
-  category: category,
-);
+Transaction _expense(String id, double amount, DateTime date, {Category category = _food}) =>
+    Transaction(
+      id: id,
+      title: id,
+      amount: amount,
+      date: date,
+      type: TransactionType.expense,
+      category: category,
+    );
 
 void main() {
   // Paid on the 25th: the cycle under test runs 25 Sep - 24 Oct 2026.
@@ -53,10 +44,7 @@ void main() {
       _expense('lunch', 250, DateTime(2026, 10, 3, 13)),
     ];
 
-    final summary = CycleCalculator.evaluate(
-      transactions: ledger,
-      cycle: cycle,
-    );
+    final summary = CycleCalculator.evaluate(transactions: ledger, cycle: cycle);
 
     test('income and expenses cover only this cycle', () {
       expect(summary.income, closeTo(3200, 0.001));
@@ -78,9 +66,7 @@ void main() {
     });
 
     test('category spend is scoped to the cycle', () {
-      final byId = CycleCalculator.spendByCategoryId(
-        summary.spendingByCategory,
-      );
+      final byId = CycleCalculator.spendByCategoryId(summary.spendingByCategory);
       expect(byId['housing'], closeTo(900, 0.001));
       expect(byId['food'], closeTo(250, 0.001));
     });
@@ -96,16 +82,10 @@ void main() {
     ];
 
     test('an expense reduces remaining by its own amount', () {
-      final start = CycleCalculator.evaluate(
-        transactions: before,
-        cycle: cycle,
-      ).remaining;
+      final start = CycleCalculator.evaluate(transactions: before, cycle: cycle).remaining;
 
       final after = CycleCalculator.evaluate(
-        transactions: [
-          ...before,
-          _expense('coffee', 12.50, DateTime(2026, 10, 1, 8)),
-        ],
+        transactions: [...before, _expense('coffee', 12.50, DateTime(2026, 10, 1, 8))],
         cycle: cycle,
       ).remaining;
 
@@ -113,16 +93,10 @@ void main() {
     });
 
     test('income increases remaining by its own amount', () {
-      final start = CycleCalculator.evaluate(
-        transactions: before,
-        cycle: cycle,
-      ).remaining;
+      final start = CycleCalculator.evaluate(transactions: before, cycle: cycle).remaining;
 
       final after = CycleCalculator.evaluate(
-        transactions: [
-          ...before,
-          _income('bonus', 400, DateTime(2026, 10, 1, 8)),
-        ],
+        transactions: [...before, _income('bonus', 400, DateTime(2026, 10, 1, 8))],
         cycle: cycle,
       ).remaining;
 
@@ -166,19 +140,11 @@ void main() {
         DateTime(2026, 9, 29),
       );
 
-      expect(days, [
-        DateTime(2026, 9, 26),
-        DateTime(2026, 9, 27),
-        DateTime(2026, 9, 29),
-      ]);
+      expect(days, [DateTime(2026, 9, 26), DateTime(2026, 9, 27), DateTime(2026, 9, 29)]);
     });
 
     test('future days in the cycle are not counted as quiet', () {
-      final days = CycleCalculator.daysWithoutExpenses(
-        const [],
-        cycle,
-        DateTime(2026, 9, 26),
-      );
+      final days = CycleCalculator.daysWithoutExpenses(const [], cycle, DateTime(2026, 9, 26));
 
       expect(days, [DateTime(2026, 9, 25), DateTime(2026, 9, 26)]);
     });
@@ -228,11 +194,7 @@ void main() {
     });
 
     test('an empty ledger still offers the current cycle', () {
-      final cycles = CycleCalculator.cyclesCovering(
-        const [],
-        25,
-        now: DateTime(2026, 9, 30),
-      );
+      final cycles = CycleCalculator.cyclesCovering(const [], 25, now: DateTime(2026, 9, 30));
 
       expect(cycles.length, 1);
       expect(cycles.single.start, DateTime(2026, 9, 25));
@@ -247,22 +209,15 @@ void main() {
         _expense('c', 200, DateTime(2026, 9, 20, 9)),
       ];
 
-      expect(
-        BalanceCalculator.balanceAt(ledger, DateTime(2026, 9, 15)),
-        closeTo(700, 0.001),
-      );
-      expect(
-        BalanceCalculator.balanceAt(ledger, DateTime(2026, 9, 30)),
-        closeTo(500, 0.001),
-      );
+      expect(BalanceCalculator.balanceAt(ledger, DateTime(2026, 9, 15)), closeTo(700, 0.001));
+      expect(BalanceCalculator.balanceAt(ledger, DateTime(2026, 9, 30)), closeTo(500, 0.001));
     });
 
     test('a balance before any activity is zero', () {
       expect(
-        BalanceCalculator.balanceAt(
-          [_income('a', 1000, DateTime(2026, 9, 1, 9))],
-          DateTime(2026, 8, 1),
-        ),
+        BalanceCalculator.balanceAt([
+          _income('a', 1000, DateTime(2026, 9, 1, 9)),
+        ], DateTime(2026, 8, 1)),
         0,
       );
     });

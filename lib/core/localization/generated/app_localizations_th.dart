@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppL10nTh extends AppL10n {
   AppL10nTh([String locale = 'th']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'เก็บออมไว้ยามฉุกเฉิน';
@@ -125,8 +126,7 @@ class AppL10nTh extends AppL10n {
   String get noTransactionsTitle => 'ไม่พบรายการ';
 
   @override
-  String get noTransactionsBody =>
-      'ลองเปลี่ยนคำค้นหรือตัวกรองเพื่อดูรายการเพิ่มเติม';
+  String get noTransactionsBody => 'ลองเปลี่ยนคำค้นหรือตัวกรองเพื่อดูรายการเพิ่มเติม';
 
   @override
   String transactionCount(int count) {
@@ -233,11 +233,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String monthsToGo(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'อีก $count เดือน',
-    );
+    String _temp0 = intl.Intl.pluralLogic(count, locale: localeName, other: 'อีก $count เดือน');
     return '$_temp0';
   }
 
@@ -463,8 +459,7 @@ class AppL10nTh extends AppL10n {
   String get noBudgetsTitle => 'ยังไม่มีงบประมาณ';
 
   @override
-  String get noBudgetsBody =>
-      'ตั้งวงเงินต่อเดือนให้หมวดหมู่หนึ่งเพื่อเริ่มติดตาม';
+  String get noBudgetsBody => 'ตั้งวงเงินต่อเดือนให้หมวดหมู่หนึ่งเพื่อเริ่มติดตาม';
 
   @override
   String get newGoal => 'เป้าหมายใหม่';
@@ -502,8 +497,7 @@ class AppL10nTh extends AppL10n {
   String get noGoalsTitle => 'ยังไม่มีเป้าหมายการออม';
 
   @override
-  String get noGoalsBody =>
-      'ตั้งเป้าหมายไว้ แล้ว RainyPenny จะติดตามความคืบหน้าให้';
+  String get noGoalsBody => 'ตั้งเป้าหมายไว้ แล้ว LAVIO จะติดตามความคืบหน้าให้';
 
   @override
   String get fundsAdded => 'เติมเงินแล้ว';
@@ -586,11 +580,7 @@ class AppL10nTh extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(
-    String subject,
-    int percent,
-    String amount,
-  ) {
+  String insightBudgetApproachingBody(String subject, int percent, String amount) {
     return 'งบ $subject ใช้ไปแล้ว $percent% เหลืออีก $amount';
   }
 
@@ -660,11 +650,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String insightGoalOnTrackBody(String amount, int months) {
-    String _temp0 = intl.Intl.pluralLogic(
-      months,
-      locale: localeName,
-      other: '$months เดือน',
-    );
+    String _temp0 = intl.Intl.pluralLogic(months, locale: localeName, other: '$months เดือน');
     return 'ที่เดือนละ $amount คุณจะถึงเป้าหมายนี้ใน $_temp0';
   }
 
@@ -675,11 +661,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String insightDebtOverdueBody(String subject, String amount, int days) {
-    String _temp0 = intl.Intl.pluralLogic(
-      days,
-      locale: localeName,
-      other: '$days วัน',
-    );
+    String _temp0 = intl.Intl.pluralLogic(days, locale: localeName, other: '$days วัน');
     return 'การชำระ $amount ของ $subject เลยกำหนดมา $_temp0 แล้ว';
   }
 
@@ -816,14 +798,13 @@ class AppL10nTh extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'อนุญาตการแจ้งเตือน เพื่อให้ RainyPenny เตือนคุณก่อนที่งบหรือการชำระเงินจะหลุดมือ';
+      'อนุญาตการแจ้งเตือน เพื่อให้ LAVIO เตือนคุณก่อนที่งบหรือการชำระเงินจะหลุดมือ';
 
   @override
   String get allowNotifications => 'อนุญาตการแจ้งเตือน';
 
   @override
-  String get permissionDenied =>
-      'การแจ้งเตือนถูกบล็อก คุณเปิดใหม่ได้ในการตั้งค่าเครื่อง';
+  String get permissionDenied => 'การแจ้งเตือนถูกบล็อก คุณเปิดใหม่ได้ในการตั้งค่าเครื่อง';
 
   @override
   String get upcomingAlerts => 'ตั้งเวลาไว้';
@@ -832,8 +813,7 @@ class AppL10nTh extends AppL10n {
   String get noScheduledAlerts => 'ตอนนี้ยังไม่มีอะไรตั้งเวลาไว้';
 
   @override
-  String get noScheduledAlertsBody =>
-      'การเตือนจะปรากฏที่นี่เมื่องบและการชำระเงินใกล้ถึงกำหนด';
+  String get noScheduledAlertsBody => 'การเตือนจะปรากฏที่นี่เมื่องบและการชำระเงินใกล้ถึงกำหนด';
 
   @override
   String scheduledFor(String date) {
@@ -966,22 +946,19 @@ class AppL10nTh extends AppL10n {
   String get remindMorningTitle => 'อรุณสวัสดิ์ ☀️';
 
   @override
-  String get remindMorningBody =>
-      'เริ่มวันด้วยการรู้ทันเงินของคุณ มีอะไรจากเมื่อวานต้องเพิ่มไหม';
+  String get remindMorningBody => 'เริ่มวันด้วยการรู้ทันเงินของคุณ มีอะไรจากเมื่อวานต้องเพิ่มไหม';
 
   @override
   String get remindNoonTitle => 'เช็กตอนเที่ยง';
 
   @override
-  String get remindNoonBody =>
-      'มื้อกลางวัน กาแฟ ค่ารถ? บันทึกได้ในไม่กี่วินาที';
+  String get remindNoonBody => 'มื้อกลางวัน กาแฟ ค่ารถ? บันทึกได้ในไม่กี่วินาที';
 
   @override
   String get remindAfternoonTitle => 'ตามเก็บสักหน่อย';
 
   @override
-  String get remindAfternoonBody =>
-      'บันทึกที่ใช้ไปถึงตอนนี้ ตัวเลขของวันนี้จะได้ตรง';
+  String get remindAfternoonBody => 'บันทึกที่ใช้ไปถึงตอนนี้ ตัวเลขของวันนี้จะได้ตรง';
 
   @override
   String get remindEveningTitle => 'ปิดท้ายวันนี้';
@@ -993,8 +970,7 @@ class AppL10nTh extends AppL10n {
   String get happyWeekendTitle => 'สุขสันต์วันหยุด! 🎉';
 
   @override
-  String get happyWeekendBody =>
-      'พักผ่อนให้เต็มที่ — และคอยดูรายจ่ายช่วงวันหยุดสักนิด';
+  String get happyWeekendBody => 'พักผ่อนให้เต็มที่ — และคอยดูรายจ่ายช่วงวันหยุดสักนิด';
 
   @override
   String get dailyReminders => 'เตือนบันทึกรายจ่ายรายวัน';
@@ -1036,7 +1012,7 @@ class AppL10nTh extends AppL10n {
   String get generatedOn => 'สร้างเมื่อ';
 
   @override
-  String get reportDisclaimer => 'RainyPenny สร้างจากบันทึกของคุณเอง';
+  String get reportDisclaimer => 'LAVIO สร้างจากบันทึกของคุณเอง';
 
   @override
   String pageOf(int page, int total) {
@@ -1081,11 +1057,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String andMoreTransactions(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: 'และอีก $count รายการ',
-    );
+    String _temp0 = intl.Intl.pluralLogic(count, locale: localeName, other: 'และอีก $count รายการ');
     return '$_temp0';
   }
 
@@ -1218,8 +1190,7 @@ class AppL10nTh extends AppL10n {
   String get getStarted => 'เริ่มกันเลย';
 
   @override
-  String get acceptTerms =>
-      'ฉันยอมรับข้อกำหนดการให้บริการและนโยบายความเป็นส่วนตัว';
+  String get acceptTerms => 'ฉันยอมรับข้อกำหนดการให้บริการและนโยบายความเป็นส่วนตัว';
 
   @override
   String get acceptTermsRequired => 'โปรดยอมรับเพื่อไปต่อ';
@@ -1307,15 +1278,13 @@ class AppL10nTh extends AppL10n {
   String get resetPasswordTitle => 'เลือกรหัสผ่านใหม่';
 
   @override
-  String get resetPasswordSubtitle =>
-      'เลือกสิ่งที่คุณไม่เคยใช้กับบัญชีนี้มาก่อน';
+  String get resetPasswordSubtitle => 'เลือกสิ่งที่คุณไม่เคยใช้กับบัญชีนี้มาก่อน';
 
   @override
   String get passwordChangedTitle => 'อัปเดตรหัสผ่านแล้ว';
 
   @override
-  String get passwordChangedBody =>
-      'บันทึกรหัสผ่านใหม่แล้ว คุณเข้าสู่ระบบอยู่และพร้อมใช้งาน';
+  String get passwordChangedBody => 'บันทึกรหัสผ่านใหม่แล้ว คุณเข้าสู่ระบบอยู่และพร้อมใช้งาน';
 
   @override
   String get demoModeHint => 'รุ่นทดลอง — ไม่ต้องมีบัญชี';
@@ -1328,7 +1297,7 @@ class AppL10nTh extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'บันทึกสิ่งที่เข้ามาและสิ่งที่ออกไป แล้ว RainyPenny จะเปลี่ยนมันเป็นภาพที่อ่านเข้าใจได้จริง';
+      'บันทึกสิ่งที่เข้ามาและสิ่งที่ออกไป แล้ว LAVIO จะเปลี่ยนมันเป็นภาพที่อ่านเข้าใจได้จริง';
 
   @override
   String get welcomeBudgetTitle => 'ตั้งขีดจำกัดที่อยู่มือ';
@@ -1405,8 +1374,7 @@ class AppL10nTh extends AppL10n {
   String get onboardingNotifyDone => 'บันทึกการตั้งค่าแจ้งเตือนแล้ว';
 
   @override
-  String get onboardingNotifyLater =>
-      'ทั้งหมดนี้เปลี่ยนได้ในการตั้งค่าเมื่อไรก็ได้';
+  String get onboardingNotifyLater => 'ทั้งหมดนี้เปลี่ยนได้ในการตั้งค่าเมื่อไรก็ได้';
 
   @override
   String get onboardingReadyTitle => 'พร้อมแล้ว';
@@ -1427,8 +1395,7 @@ class AppL10nTh extends AppL10n {
   String get onboardingGoToApp => 'พาไปที่แอปเลย';
 
   @override
-  String get onboardingTourLater =>
-      'ยังไม่ตอนนี้? คู่มืออยู่ในการตั้งค่า เปิดดูได้ตลอด';
+  String get onboardingTourLater => 'ยังไม่ตอนนี้? คู่มืออยู่ในการตั้งค่า เปิดดูได้ตลอด';
 
   @override
   String get beginnersGuide => 'คู่มือสำหรับผู้เริ่มต้น';
@@ -1457,12 +1424,10 @@ class AppL10nTh extends AppL10n {
   String get guideDashboardTip1 => 'ดึงหน้าจอลงเพื่อรีเฟรชทุกอย่างพร้อมกัน';
 
   @override
-  String get guideDashboardTip2 =>
-      'แตะการ์ดรายรับหรือรายจ่ายเพื่อไปยังรายการนั้นทันที';
+  String get guideDashboardTip2 => 'แตะการ์ดรายรับหรือรายจ่ายเพื่อไปยังรายการนั้นทันที';
 
   @override
-  String get guideDashboardTip3 =>
-      'วงแหวนและข้อสังเกตจะอัปเดตทันทีที่คุณบันทึกอะไรลงไป';
+  String get guideDashboardTip3 => 'วงแหวนและข้อสังเกตจะอัปเดตทันทีที่คุณบันทึกอะไรลงไป';
 
   @override
   String get guideAddTitle => 'การบันทึกเงิน';
@@ -1475,12 +1440,10 @@ class AppL10nTh extends AppL10n {
   String get guideAddTip1 => 'แตะปุ่มกลางเพื่อบันทึกเงินเข้าหรือเงินออก';
 
   @override
-  String get guideAddTip2 =>
-      'กดค้างไว้เพื่อไปที่รายจ่ายใหม่ทันที ข้ามเมนูไปเลย';
+  String get guideAddTip2 => 'กดค้างไว้เพื่อไปที่รายจ่ายใหม่ทันที ข้ามเมนูไปเลย';
 
   @override
-  String get guideAddTip3 =>
-      'เลือกหมวดหมู่เสมอ — นั่นคือสิ่งที่ทำให้กราฟและงบประมาณทำงานได้';
+  String get guideAddTip3 => 'เลือกหมวดหมู่เสมอ — นั่นคือสิ่งที่ทำให้กราฟและงบประมาณทำงานได้';
 
   @override
   String get guideCategoriesTitle => 'หมวดหมู่';
@@ -1490,8 +1453,7 @@ class AppL10nTh extends AppL10n {
       'หมวดหมู่คือวิธีจัดกลุ่มรายจ่าย ชุดที่มาพร้อมแอปเพียงพอสำหรับคนส่วนใหญ่ และคุณเปลี่ยนชื่อหรือเพิ่มของตัวเองได้';
 
   @override
-  String get guideCategoriesTip1 =>
-      'ตั้งค่า แล้วเลือกจัดการหมวดหมู่ เพื่อแก้ไขหรือเพิ่ม';
+  String get guideCategoriesTip1 => 'ตั้งค่า แล้วเลือกจัดการหมวดหมู่ เพื่อแก้ไขหรือเพิ่ม';
 
   @override
   String get guideCategoriesTip2 =>
@@ -1505,12 +1467,10 @@ class AppL10nTh extends AppL10n {
       'งบประมาณคือเพดานรายเดือนของหมวดหนึ่ง แถบจะเต็มขึ้นตามที่คุณใช้และเปลี่ยนสีเมื่อใกล้ถึง คุณจึงรู้ตัวก่อนจะเกิน';
 
   @override
-  String get guideBudgetTip1 =>
-      'เริ่มจากสองหรือสามหมวด ไม่ต้องทำทั้งหมดพร้อมกัน';
+  String get guideBudgetTip1 => 'เริ่มจากสองหรือสามหมวด ไม่ต้องทำทั้งหมดพร้อมกัน';
 
   @override
-  String get guideBudgetTip2 =>
-      'ตั้งขีดจำกัดสูงกว่าที่ใช้ปกติเล็กน้อย แล้วค่อย ๆ รัดเข้า';
+  String get guideBudgetTip2 => 'ตั้งขีดจำกัดสูงกว่าที่ใช้ปกติเล็กน้อย แล้วค่อย ๆ รัดเข้า';
 
   @override
   String get guideBudgetTip3 => 'เปิดการเตือนงบไว้ แอปจะบอกเมื่องบใกล้หมด';
@@ -1523,12 +1483,10 @@ class AppL10nTh extends AppL10n {
       'ตั้งชื่อสิ่งที่คุณกำลังออมเพื่อ กำหนดจำนวนและวันที่ แล้วแอปจะคำนวณว่าต้องกันไว้เดือนละเท่าไร';
 
   @override
-  String get guideSavingsTip1 =>
-      'เป้าหมายที่มีชื่อรักษาไว้ได้ง่ายกว่าความตั้งใจลอย ๆ ว่าจะออม';
+  String get guideSavingsTip1 => 'เป้าหมายที่มีชื่อรักษาไว้ได้ง่ายกว่าความตั้งใจลอย ๆ ว่าจะออม';
 
   @override
-  String get guideSavingsTip2 =>
-      'เป้าหมายเล็ก ๆ หลายอันมักสำเร็จบ่อยกว่าเป้าหมายใหญ่อันเดียว';
+  String get guideSavingsTip2 => 'เป้าหมายเล็ก ๆ หลายอันมักสำเร็จบ่อยกว่าเป้าหมายใหญ่อันเดียว';
 
   @override
   String get guideLoansTitle => 'หนี้สินและสินเชื่อ';
@@ -1538,12 +1496,10 @@ class AppL10nTh extends AppL10n {
       'บันทึกว่าคุณเป็นหนี้เท่าไร มีต้นทุนเท่าไร และงวดถัดไปครบกำหนดเมื่อไร ทุกอย่างที่กำลังผ่อนอยู่รวมในรายการเดียวพร้อมยอดคงเหลือ';
 
   @override
-  String get guideLoansTip1 =>
-      'ใส่วันครบกำหนดไว้ แล้วการเตือนชำระเงินจะคอยตามให้';
+  String get guideLoansTip1 => 'ใส่วันครบกำหนดไว้ แล้วการเตือนชำระเงินจะคอยตามให้';
 
   @override
-  String get guideLoansTip2 =>
-      'หนี้ที่เลยกำหนดจะขึ้นสีแดงบนหน้าหลักจนกว่าจะชำระ';
+  String get guideLoansTip2 => 'หนี้ที่เลยกำหนดจะขึ้นสีแดงบนหน้าหลักจนกว่าจะชำระ';
 
   @override
   String get guideReportsTitle => 'รายงาน';
@@ -1553,12 +1509,10 @@ class AppL10nTh extends AppL10n {
       'มุมมองที่ลึกขึ้น: รายรับเทียบรายจ่าย รายจ่ายตามหมวด งบประมาณอยู่ในกรอบแค่ไหน และคุณเก็บรายได้ไว้ได้กี่ส่วน';
 
   @override
-  String get guideReportsTip1 =>
-      'สลับระหว่างสัปดาห์ เดือน และไตรมาสได้ที่ด้านบนของหน้าจอ';
+  String get guideReportsTip1 => 'สลับระหว่างสัปดาห์ เดือน และไตรมาสได้ที่ด้านบนของหน้าจอ';
 
   @override
-  String get guideReportsTip2 =>
-      'ส่งออกหรือแชร์เป็น PDF — ออกมาเป็นภาษาและทิศทางการอ่านของคุณ';
+  String get guideReportsTip2 => 'ส่งออกหรือแชร์เป็น PDF — ออกมาเป็นภาษาและทิศทางการอ่านของคุณ';
 
   @override
   String get guideSettingsTitle => 'ตั้งค่า';
@@ -1568,12 +1522,10 @@ class AppL10nTh extends AppL10n {
       'ภาษา สกุลเงิน สี และการเตือน อยู่ที่นี่ทั้งหมด และไม่มีอะไรถูกล็อกจากการตั้งค่าครั้งแรก — เปลี่ยนได้ทุกเมื่อ';
 
   @override
-  String get guideSettingsTip1 =>
-      'สี่สิบภาษา และทั้งหน้าจอจะสลับด้านสำหรับภาษาที่อ่านจากขวาไปซ้าย';
+  String get guideSettingsTip1 => 'สี่สิบภาษา และทั้งหน้าจอจะสลับด้านสำหรับภาษาที่อ่านจากขวาไปซ้าย';
 
   @override
-  String get guideSettingsTip2 =>
-      'เลือกว่าต้องการการเตือนแบบไหน และให้มาถึงในช่วงเวลาใดได้';
+  String get guideSettingsTip2 => 'เลือกว่าต้องการการเตือนแบบไหน และให้มาถึงในช่วงเวลาใดได้';
 
   @override
   String get guideSettingsTip3 => 'ช่วงเวลาเงียบจะกลั้นทุกอย่างไว้จนถึงเช้า';
@@ -1592,8 +1544,7 @@ class AppL10nTh extends AppL10n {
   String get guideHabitTip2 => 'ดูหน้าหลักวันละครั้ง สิบวินาทีก็พอ';
 
   @override
-  String get guideHabitTip3 =>
-      'คู่มือนี้อยู่ในการตั้งค่าเสมอ — กลับมาดูได้ทุกเมื่อ';
+  String get guideHabitTip3 => 'คู่มือนี้อยู่ในการตั้งค่าเสมอ — กลับมาดูได้ทุกเมื่อ';
 
   @override
   String get appearance => 'รูปลักษณ์';
@@ -1666,11 +1617,10 @@ class AppL10nTh extends AppL10n {
   String get replaySetup => 'ตั้งค่าใหม่อีกครั้ง';
 
   @override
-  String get replaySetupBody =>
-      'ตอบคำถามเริ่มต้นอีกรอบ สิ่งที่คุณบันทึกไว้จะไม่ถูกลบ';
+  String get replaySetupBody => 'ตอบคำถามเริ่มต้นอีกรอบ สิ่งที่คุณบันทึกไว้จะไม่ถูกลบ';
 
   @override
-  String get rateTitle => 'ชอบ RainyPenny ไหม';
+  String get rateTitle => 'ชอบ LAVIO ไหม';
 
   @override
   String get rateBody =>
@@ -1722,8 +1672,7 @@ class AppL10nTh extends AppL10n {
   }
 
   @override
-  String get paydayShortMonthNote =>
-      'In shorter months the cycle starts on the last day instead.';
+  String get paydayShortMonthNote => 'In shorter months the cycle starts on the last day instead.';
 
   @override
   String daysLeftInCycle(int count) {
@@ -1779,16 +1728,13 @@ class AppL10nTh extends AppL10n {
   String get healthNeedsWork => 'Needs work';
 
   @override
-  String get healthExcellentBody =>
-      'You are saving well and staying inside your budgets.';
+  String get healthExcellentBody => 'You are saving well and staying inside your budgets.';
 
   @override
-  String get healthGoodBody =>
-      'You are on track with your spending this period.';
+  String get healthGoodBody => 'You are on track with your spending this period.';
 
   @override
-  String get healthFairBody =>
-      'A few budgets are running hot. Small changes will help.';
+  String get healthFairBody => 'A few budgets are running hot. Small changes will help.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1863,8 +1809,7 @@ class AppL10nTh extends AppL10n {
       'Your name and photo appear across the app. Your email is the address you sign in with.';
 
   @override
-  String get emailNotEditable =>
-      'Contact support to change the address you sign in with.';
+  String get emailNotEditable => 'Contact support to change the address you sign in with.';
 
   @override
   String get pressBackAgainToExit => 'Press back again to exit';
@@ -1941,8 +1886,7 @@ class AppL10nTh extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint =>
-      'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';

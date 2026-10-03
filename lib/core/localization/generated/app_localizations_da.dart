@@ -9,7 +9,7 @@ class AppL10nDa extends AppL10n {
   AppL10nDa([String locale = 'da']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Spar op til regnvejrsdage';
@@ -505,7 +505,7 @@ class AppL10nDa extends AppL10n {
   String get noGoalsTitle => 'Ingen opsparingsmål endnu';
 
   @override
-  String get noGoalsBody => 'Sæt et mål, så følger RainyPenny din fremgang.';
+  String get noGoalsBody => 'Sæt et mål, så følger LAVIO din fremgang.';
 
   @override
   String get fundsAdded => 'Beløbet er indbetalt';
@@ -822,7 +822,7 @@ class AppL10nDa extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Tillad notifikationer, så kan RainyPenny advare dig, før et budget eller en betaling løber løbsk.';
+      'Tillad notifikationer, så kan LAVIO advare dig, før et budget eller en betaling løber løbsk.';
 
   @override
   String get allowNotifications => 'Tillad notifikationer';
@@ -1046,8 +1046,7 @@ class AppL10nDa extends AppL10n {
   String get generatedOn => 'Oprettet';
 
   @override
-  String get reportDisclaimer =>
-      'Lavet af RainyPenny ud fra dine egne noteringer.';
+  String get reportDisclaimer => 'Lavet af LAVIO ud fra dine egne noteringer.';
 
   @override
   String pageOf(int page, int total) {
@@ -1346,7 +1345,7 @@ class AppL10nDa extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Notér, hvad der kommer ind, og hvad der går ud. RainyPenny gør det til et billede, man rent faktisk kan læse.';
+      'Notér, hvad der kommer ind, og hvad der går ud. LAVIO gør det til et billede, man rent faktisk kan læse.';
 
   @override
   String get welcomeBudgetTitle => 'Grænser, der holder';
@@ -1699,7 +1698,7 @@ class AppL10nDa extends AppL10n {
       'Gå de første spørgsmål igennem én gang til. Intet af det, du har noteret, bliver slettet.';
 
   @override
-  String get rateTitle => 'Er du glad for RainyPenny?';
+  String get rateTitle => 'Er du glad for LAVIO?';
 
   @override
   String get rateBody =>

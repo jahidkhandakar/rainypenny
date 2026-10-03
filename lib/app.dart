@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/core/widgets/error_fallback.dart';
+import 'package:lavio/core/widgets/error_fallback.dart';
 
 import 'core/localization/generated/app_localizations.dart';
 import 'core/routing/app_router.dart';
@@ -9,8 +9,8 @@ import 'core/theme/app_theme.dart';
 import 'features/notifications/data/services/local_notification_service.dart';
 import 'features/notifications/presentation/widgets/notification_sync.dart';
 
-class RainyPennyApp extends ConsumerWidget {
-  const RainyPennyApp({super.key});
+class LavioApp extends ConsumerWidget {
+  const LavioApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -23,7 +23,7 @@ class RainyPennyApp extends ConsumerWidget {
     LocalNotificationService.onNotificationTapped = router.go;
 
     return MaterialApp.router(
-      title: 'RainyPenny',
+      title: 'LAVIO Money Tracker',
       debugShowCheckedModeBanner: false,
       routerConfig: router,
       theme: AppTheme.light(accent),

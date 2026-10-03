@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rainypenny/features/dashboard/presentation/widgets/period_selector.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/dashboard/presentation/widgets/period_selector.dart';
 
 import '../../../../core/ads/banner_ad_slot.dart';
 import '../../../../core/localization/generated/app_localizations.dart';

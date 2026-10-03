@@ -62,7 +62,7 @@ Future<void> main() async {
       runApp(
         ProviderScope(
           overrides: [settingsStoreProvider.overrideWithValue(PrefsSettingsStore(prefs))],
-          child: const RainyPennyApp(),
+          child: const LavioApp(),
         ),
       );
     },

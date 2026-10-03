@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppL10nNb extends AppL10n {
   AppL10nNb([String locale = 'nb']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Spar til en regnværsdag';
@@ -125,8 +126,7 @@ class AppL10nNb extends AppL10n {
   String get noTransactionsTitle => 'Fant ingen transaksjoner';
 
   @override
-  String get noTransactionsBody =>
-      'Prøv et annet søk eller filter for å se flere oppføringer.';
+  String get noTransactionsBody => 'Prøv et annet søk eller filter for å se flere oppføringer.';
 
   @override
   String transactionCount(int count) {
@@ -374,8 +374,7 @@ class AppL10nNb extends AppL10n {
   String get noNotificationsTitle => 'Du er helt oppdatert';
 
   @override
-  String get noNotificationsBody =>
-      'Nye innsikter og påminnelser dukker opp her.';
+  String get noNotificationsBody => 'Nye innsikter og påminnelser dukker opp her.';
 
   @override
   String get cancel => 'Avbryt';
@@ -460,15 +459,13 @@ class AppL10nNb extends AppL10n {
   String get budgetDeleted => 'Budsjettet er slettet';
 
   @override
-  String get allCategoriesBudgeted =>
-      'Alle kategorier har allerede et budsjett';
+  String get allCategoriesBudgeted => 'Alle kategorier har allerede et budsjett';
 
   @override
   String get noBudgetsTitle => 'Ingen budsjetter ennå';
 
   @override
-  String get noBudgetsBody =>
-      'Sett en månedlig grense på en kategori, så begynner vi å følge den.';
+  String get noBudgetsBody => 'Sett en månedlig grense på en kategori, så begynner vi å følge den.';
 
   @override
   String get newGoal => 'Nytt mål';
@@ -506,7 +503,7 @@ class AppL10nNb extends AppL10n {
   String get noGoalsTitle => 'Ingen sparemål ennå';
 
   @override
-  String get noGoalsBody => 'Sett et mål, så følger RainyPenny fremgangen din.';
+  String get noGoalsBody => 'Sett et mål, så følger LAVIO fremgangen din.';
 
   @override
   String get fundsAdded => 'Pengene er satt inn';
@@ -590,11 +587,7 @@ class AppL10nNb extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(
-    String subject,
-    int percent,
-    String amount,
-  ) {
+  String insightBudgetApproachingBody(String subject, int percent, String amount) {
     return '$subject-budsjettet ditt er brukt $percent%, $amount står igjen.';
   }
 
@@ -780,8 +773,7 @@ class AppL10nNb extends AppL10n {
   String get budgetAlerts => 'Budsjettvarsler';
 
   @override
-  String get budgetAlertsBody =>
-      'Når et budsjett nærmer seg eller passerer grensen sin';
+  String get budgetAlertsBody => 'Når et budsjett nærmer seg eller passerer grensen sin';
 
   @override
   String get paymentReminders => 'Betalingspåminnelser';
@@ -823,7 +815,7 @@ class AppL10nNb extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Tillat varsler, så kan RainyPenny si fra før et budsjett eller en betaling løper løpsk.';
+      'Tillat varsler, så kan LAVIO si fra før et budsjett eller en betaling løper løpsk.';
 
   @override
   String get allowNotifications => 'Tillat varsler';
@@ -875,8 +867,7 @@ class AppL10nNb extends AppL10n {
   String get addGoalAction => 'Legg til mål';
 
   @override
-  String get longPressHint =>
-      'Tips: hold inne + for å registrere en utgift med én gang';
+  String get longPressHint => 'Tips: hold inne + for å registrere en utgift med én gang';
 
   @override
   String get searchCurrencies => 'Søk etter valutaer';
@@ -885,8 +876,7 @@ class AppL10nNb extends AppL10n {
   String get noCurrenciesFound => 'Fant ingen valutaer';
 
   @override
-  String get noCurrenciesFoundMessage =>
-      'Prøv en annen kode, et annet symbol eller navn.';
+  String get noCurrenciesFoundMessage => 'Prøv en annen kode, et annet symbol eller navn.';
 
   @override
   String get popularCurrencies => 'Vanlige';
@@ -982,22 +972,19 @@ class AppL10nNb extends AppL10n {
   String get remindNoonTitle => 'En sjekk midt på dagen';
 
   @override
-  String get remindNoonBody =>
-      'Lunsj, kaffe, en billett? Det tar noen sekunder å få det inn.';
+  String get remindNoonBody => 'Lunsj, kaffe, en billett? Det tar noen sekunder å få det inn.';
 
   @override
   String get remindAfternoonTitle => 'En rask oppdatering';
 
   @override
-  String get remindAfternoonBody =>
-      'Registrer det du har brukt så langt, så stemmer dagens tall.';
+  String get remindAfternoonBody => 'Registrer det du har brukt så langt, så stemmer dagens tall.';
 
   @override
   String get remindEveningTitle => 'La oss runde av dagen';
 
   @override
-  String get remindEveningBody =>
-      'To minutter nå, så er dagens oversikt komplett.';
+  String get remindEveningBody => 'To minutter nå, så er dagens oversikt komplett.';
 
   @override
   String get happyWeekendTitle => 'God helg! 🎉';
@@ -1009,8 +996,7 @@ class AppL10nNb extends AppL10n {
   String get dailyReminders => 'Daglige utgiftspåminnelser';
 
   @override
-  String get dailyRemindersBody =>
-      'Vennlige dytt så utgiftene holdes oppdatert';
+  String get dailyRemindersBody => 'Vennlige dytt så utgiftene holdes oppdatert';
 
   @override
   String get weekendGreeting => 'Helgehilsen';
@@ -1046,8 +1032,7 @@ class AppL10nNb extends AppL10n {
   String get generatedOn => 'Laget';
 
   @override
-  String get reportDisclaimer =>
-      'Laget av RainyPenny ut fra dine egne registreringer.';
+  String get reportDisclaimer => 'Laget av LAVIO ut fra dine egne registreringer.';
 
   @override
   String pageOf(int page, int total) {
@@ -1231,8 +1216,7 @@ class AppL10nNb extends AppL10n {
   String get getStarted => 'Kom i gang';
 
   @override
-  String get acceptTerms =>
-      'Jeg godtar vilkårene for bruk og personvernerklæringen';
+  String get acceptTerms => 'Jeg godtar vilkårene for bruk og personvernerklæringen';
 
   @override
   String get acceptTermsRequired => 'Godta for å fortsette';
@@ -1261,12 +1245,10 @@ class AppL10nNb extends AppL10n {
       'Den e-postadressen og det passordet passer ikke til noen konto';
 
   @override
-  String get authEmailNotConfirmed =>
-      'Bekreft e-postadressen din før du logger inn';
+  String get authEmailNotConfirmed => 'Bekreft e-postadressen din før du logger inn';
 
   @override
-  String get authEmailAlreadyRegistered =>
-      'Det finnes allerede en konto med denne e-postadressen';
+  String get authEmailAlreadyRegistered => 'Det finnes allerede en konto med denne e-postadressen';
 
   @override
   String get authWeakPassword => 'Velg et lengre passord';
@@ -1275,8 +1257,7 @@ class AppL10nNb extends AppL10n {
   String get authRateLimited => 'For mange forsøk. Prøv igjen om noen minutter';
 
   @override
-  String get authNetworkError =>
-      'Ingen forbindelse. Sjekk nettverket og prøv igjen';
+  String get authNetworkError => 'Ingen forbindelse. Sjekk nettverket og prøv igjen';
 
   @override
   String get authGenericError => 'Noe gikk galt. Prøv igjen';
@@ -1324,15 +1305,13 @@ class AppL10nNb extends AppL10n {
   String get resetPasswordTitle => 'Velg et nytt passord';
 
   @override
-  String get resetPasswordSubtitle =>
-      'Velg noe du ikke har brukt på denne kontoen før.';
+  String get resetPasswordSubtitle => 'Velg noe du ikke har brukt på denne kontoen før.';
 
   @override
   String get passwordChangedTitle => 'Passordet er oppdatert';
 
   @override
-  String get passwordChangedBody =>
-      'Det nye passordet ditt er lagret. Du er logget inn og klar.';
+  String get passwordChangedBody => 'Det nye passordet ditt er lagret. Du er logget inn og klar.';
 
   @override
   String get demoModeHint => 'Demoversjon — ingen konto nødvendig';
@@ -1345,7 +1324,7 @@ class AppL10nNb extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Noter hva som kommer inn og hva som går ut. RainyPenny gjør det om til et bilde du faktisk kan lese.';
+      'Noter hva som kommer inn og hva som går ut. LAVIO gjør det om til et bilde du faktisk kan lese.';
 
   @override
   String get welcomeBudgetTitle => 'Grenser som holder';
@@ -1377,12 +1356,10 @@ class AppL10nNb extends AppL10n {
   String get onboardingNameTitle => 'Hva skal vi kalle deg?';
 
   @override
-  String get onboardingNameBody =>
-      'Vi bruker det bare til å si hei, ingen andre steder.';
+  String get onboardingNameBody => 'Vi bruker det bare til å si hei, ingen andre steder.';
 
   @override
-  String get onboardingNameHint =>
-      'Fornavnet holder lenge. Du kan endre det senere.';
+  String get onboardingNameHint => 'Fornavnet holder lenge. Du kan endre det senere.';
 
   @override
   String get onboardingCurrencyTitle => 'Hvilken valuta bruker du?';
@@ -1409,15 +1386,13 @@ class AppL10nNb extends AppL10n {
       'Et stille dytt til rett tid er det som gjør dette til en vane.';
 
   @override
-  String get onboardingNotifyReminders =>
-      'En vennlig påminnelse om å notere hva du har brukt';
+  String get onboardingNotifyReminders => 'En vennlig påminnelse om å notere hva du har brukt';
 
   @override
   String get onboardingNotifyBudget => 'Et varsel før et budsjett tar slutt';
 
   @override
-  String get onboardingNotifySummary =>
-      'En ukentlig oppsummering av hvor pengene tok veien';
+  String get onboardingNotifySummary => 'En ukentlig oppsummering av hvor pengene tok veien';
 
   @override
   String get onboardingNotifyEnable => 'Slå på varsler';
@@ -1426,8 +1401,7 @@ class AppL10nNb extends AppL10n {
   String get onboardingNotifyDone => 'Varselinnstillingene er lagret';
 
   @override
-  String get onboardingNotifyLater =>
-      'Alt dette kan du endre i Innstillinger når du vil.';
+  String get onboardingNotifyLater => 'Alt dette kan du endre i Innstillinger når du vil.';
 
   @override
   String get onboardingReadyTitle => 'Alt er klart';
@@ -1475,8 +1449,7 @@ class AppL10nNb extends AppL10n {
       'Alt begynner her. Kortet øverst viser hva du har igjen; under det hva som har kommet inn og gått ut denne perioden, og deretter forbruket, budsjettene og målene dine.';
 
   @override
-  String get guideDashboardTip1 =>
-      'Dra skjermen nedover for å oppdatere alt på én gang.';
+  String get guideDashboardTip1 => 'Dra skjermen nedover for å oppdatere alt på én gang.';
 
   @override
   String get guideDashboardTip2 =>
@@ -1494,12 +1467,10 @@ class AppL10nNb extends AppL10n {
       'Knappen midt i raden er der alt begynner. Den åpner en kort meny: utgift, inntekt, gjeld, budsjett eller sparemål.';
 
   @override
-  String get guideAddTip1 =>
-      'Trykk på midtknappen for å registrere penger inn eller ut.';
+  String get guideAddTip1 => 'Trykk på midtknappen for å registrere penger inn eller ut.';
 
   @override
-  String get guideAddTip2 =>
-      'Hold den inne for å gå rett til en ny utgift og hoppe over menyen.';
+  String get guideAddTip2 => 'Hold den inne for å gå rett til en ny utgift og hoppe over menyen.';
 
   @override
   String get guideAddTip3 =>
@@ -1528,8 +1499,7 @@ class AppL10nNb extends AppL10n {
       'Et budsjett er et månedlig tak for én kategori. Stolpen fylles mens du bruker penger og skifter farge når det nærmer seg, så du får vite det før du er over.';
 
   @override
-  String get guideBudgetTip1 =>
-      'Start med to eller tre kategorier, ikke alle på én gang.';
+  String get guideBudgetTip1 => 'Start med to eller tre kategorier, ikke alle på én gang.';
 
   @override
   String get guideBudgetTip2 =>
@@ -1551,8 +1521,7 @@ class AppL10nNb extends AppL10n {
       'Et mål med navn er lettere å holde fast ved enn en vag intensjon om å spare.';
 
   @override
-  String get guideSavingsTip2 =>
-      'Flere små mål blir oftere fullført enn ett stort.';
+  String get guideSavingsTip2 => 'Flere små mål blir oftere fullført enn ett stort.';
 
   @override
   String get guideLoansTitle => 'Gjeld og lån';
@@ -1566,8 +1535,7 @@ class AppL10nNb extends AppL10n {
       'Legg inn forfallsdatoen, så holder betalingspåminnelsene styr på den for deg.';
 
   @override
-  String get guideLoansTip2 =>
-      'En forfalt gjeld lyser rødt på startskjermen til den er betalt.';
+  String get guideLoansTip2 => 'En forfalt gjeld lyser rødt på startskjermen til den er betalt.';
 
   @override
   String get guideReportsTitle => 'Rapporter';
@@ -1577,8 +1545,7 @@ class AppL10nNb extends AppL10n {
       'Det dypere bildet: inntekter mot utgifter, forbruk etter kategori, hvordan budsjettene holdt, og hvor stor del av inntekten du beholdt.';
 
   @override
-  String get guideReportsTip1 =>
-      'Bytt mellom uke, måned og kvartal øverst på skjermen.';
+  String get guideReportsTip1 => 'Bytt mellom uke, måned og kvartal øverst på skjermen.';
 
   @override
   String get guideReportsTip2 =>
@@ -1596,12 +1563,10 @@ class AppL10nNb extends AppL10n {
       'Førti språk, og hele oppsettet speilvendes for dem som leses fra høyre mot venstre.';
 
   @override
-  String get guideSettingsTip2 =>
-      'Velg hvilke varsler du vil ha, og hvilke timer de får komme i.';
+  String get guideSettingsTip2 => 'Velg hvilke varsler du vil ha, og hvilke timer de får komme i.';
 
   @override
-  String get guideSettingsTip3 =>
-      'Stille timer holder alt tilbake til morgenen.';
+  String get guideSettingsTip3 => 'Stille timer holder alt tilbake til morgenen.';
 
   @override
   String get guideHabitTitle => 'Få det til å sitte';
@@ -1611,8 +1576,7 @@ class AppL10nNb extends AppL10n {
       'Appen er bare så god som det du legger inn i den. Ett minutt om dagen slår en time i måneden, og etter to uker begynner tallene å si noe.';
 
   @override
-  String get guideHabitTip1 =>
-      'Registrer utgifter når de skjer, ikke på slutten av uken.';
+  String get guideHabitTip1 => 'Registrer utgifter når de skjer, ikke på slutten av uken.';
 
   @override
   String get guideHabitTip2 =>
@@ -1681,8 +1645,7 @@ class AppL10nNb extends AppL10n {
   String get noLanguagesFound => 'Fant ingen språk';
 
   @override
-  String get noLanguagesFoundMessage =>
-      'Prøv navnet på engelsk eller den tobokstavskoden.';
+  String get noLanguagesFoundMessage => 'Prøv navnet på engelsk eller den tobokstavskoden.';
 
   @override
   String get rightToLeft => 'Høyre mot venstre';
@@ -1698,7 +1661,7 @@ class AppL10nNb extends AppL10n {
       'Gå gjennom de første spørsmålene en gang til. Ingenting av det du har registrert blir slettet.';
 
   @override
-  String get rateTitle => 'Liker du RainyPenny?';
+  String get rateTitle => 'Liker du LAVIO?';
 
   @override
   String get rateBody =>
@@ -1775,8 +1738,7 @@ class AppL10nNb extends AppL10n {
   String get dailyAllowance => 'Trygt å bruke per dag';
 
   @override
-  String get overspentNotice =>
-      'Du har brukt mer enn det som kom inn i denne syklusen.';
+  String get overspentNotice => 'Du har brukt mer enn det som kom inn i denne syklusen.';
 
   @override
   String get backToThisMonth => 'Tilbake til denne måneden';
@@ -1808,16 +1770,13 @@ class AppL10nNb extends AppL10n {
   String get healthNeedsWork => 'Bør forbedres';
 
   @override
-  String get healthExcellentBody =>
-      'Du sparer godt og holder deg innenfor budsjettene dine.';
+  String get healthExcellentBody => 'Du sparer godt og holder deg innenfor budsjettene dine.';
 
   @override
-  String get healthGoodBody =>
-      'Du er på rett spor med forbruket ditt denne perioden.';
+  String get healthGoodBody => 'Du er på rett spor med forbruket ditt denne perioden.';
 
   @override
-  String get healthFairBody =>
-      'Noen budsjetter begynner å bli presset. Små endringer vil hjelpe.';
+  String get healthFairBody => 'Noen budsjetter begynner å bli presset. Små endringer vil hjelpe.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1892,8 +1851,7 @@ class AppL10nNb extends AppL10n {
       'Navnet og bildet ditt vises i hele appen. E-postadressen er adressen du logger inn med.';
 
   @override
-  String get emailNotEditable =>
-      'Kontakt kundestøtte for å endre adressen du logger inn med.';
+  String get emailNotEditable => 'Kontakt kundestøtte for å endre adressen du logger inn med.';
 
   @override
   String get pressBackAgainToExit => 'Trykk tilbake igjen for å avslutte';
@@ -1970,8 +1928,7 @@ class AppL10nNb extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint =>
-      'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';
@@ -2147,8 +2104,7 @@ class AppL10nNb extends AppL10n {
       'Vi trenger litt økonomisk aktivitet før vi kan beregne en nøyaktig økonomisk poengsum.';
 
   @override
-  String get emptyHealthAddTransactions =>
-      'Legg til inntekts- eller utgiftstransaksjoner';
+  String get emptyHealthAddTransactions => 'Legg til inntekts- eller utgiftstransaksjoner';
 
   @override
   String get emptyHealthSetBudgets => 'Sett opp månedlige budsjetter';

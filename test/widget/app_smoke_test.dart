@@ -12,7 +12,7 @@ void main() {
   testWidgets('splash hands off to the dashboard', (tester) async {
     await tester.pumpWidget(bootApp());
 
-    expect(find.text('Save for a rainy day'), findsOneWidget);
+    expect(find.text('Take Control of Your Money'), findsOneWidget);
 
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
@@ -45,10 +45,8 @@ void main() {
     expect(find.text('What would you like to do?'), findsOneWidget);
 
     // Scoped to the sheet: "Reports" also labels a bottom-nav tab.
-    Finder inSheet(String label) => find.descendant(
-      of: find.byType(BottomSheet),
-      matching: find.text(label),
-    );
+    Finder inSheet(String label) =>
+        find.descendant(of: find.byType(BottomSheet), matching: find.text(label));
 
     for (final label in [
       'Add expense',
@@ -64,9 +62,7 @@ void main() {
     }
   });
 
-  testWidgets('choosing Add expense reaches the transaction form', (
-    tester,
-  ) async {
+  testWidgets('choosing Add expense reaches the transaction form', (tester) async {
     await tester.pumpWidget(bootApp());
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();
@@ -83,9 +79,7 @@ void main() {
     expect(find.text('What would you like to do?'), findsNothing);
   });
 
-  testWidgets('choosing an editor closes the menu before opening it', (
-    tester,
-  ) async {
+  testWidgets('choosing an editor closes the menu before opening it', (tester) async {
     await tester.pumpWidget(bootApp());
     await tester.pump(const Duration(milliseconds: 1500));
     await tester.pumpAndSettle();

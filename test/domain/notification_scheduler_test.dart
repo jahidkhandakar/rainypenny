@@ -1,18 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/insight.dart';
-import 'package:rainypenny/features/financial/domain/entities/loan.dart';
-import 'package:rainypenny/features/notifications/domain/entities/notification_preferences.dart';
-import 'package:rainypenny/features/notifications/domain/entities/scheduled_notification.dart';
-import 'package:rainypenny/features/notifications/domain/rules/notification_rules.dart';
-import 'package:rainypenny/features/notifications/domain/services/notification_scheduler.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/insight.dart';
+import 'package:lavio/features/financial/domain/entities/loan.dart';
+import 'package:lavio/features/notifications/domain/entities/notification_preferences.dart';
+import 'package:lavio/features/notifications/domain/entities/scheduled_notification.dart';
+import 'package:lavio/features/notifications/domain/rules/notification_rules.dart';
+import 'package:lavio/features/notifications/domain/services/notification_scheduler.dart';
 
-Insight _insight(
-  String id,
-  InsightCode code,
-  InsightLevel level,
-  InsightTopic topic,
-) {
+Insight _insight(String id, InsightCode code, InsightLevel level, InsightTopic topic) {
   return Insight(id: id, code: code, level: level, topic: topic);
 }
 
@@ -37,32 +32,19 @@ void main() {
   // The engagement nudges — daily reminders and the weekend greeting — fire on
   // a clock rather than off the ledger, so the tests that count ledger-driven
   // alerts switch them off. They get a group of their own further down.
-  const preferences = NotificationPreferences(
-    dailyReminders: false,
-    weekendGreeting: false,
-  );
+  const preferences = NotificationPreferences(dailyReminders: false, weekendGreeting: false);
 
   group('NotificationRules', () {
     test('critical and warning insights are worth an interruption', () {
       expect(
         NotificationRules.isWorthDelivering(
-          _insight(
-            'a',
-            InsightCode.budgetExceeded,
-            InsightLevel.critical,
-            InsightTopic.budget,
-          ),
+          _insight('a', InsightCode.budgetExceeded, InsightLevel.critical, InsightTopic.budget),
         ),
         isTrue,
       );
       expect(
         NotificationRules.isWorthDelivering(
-          _insight(
-            'b',
-            InsightCode.budgetApproaching,
-            InsightLevel.warning,
-            InsightTopic.budget,
-          ),
+          _insight('b', InsightCode.budgetApproaching, InsightLevel.warning, InsightTopic.budget),
         ),
         isTrue,
       );
@@ -85,23 +67,13 @@ void main() {
     test('only a nearly-funded goal is worth a positive interruption', () {
       expect(
         NotificationRules.isWorthDelivering(
-          _insight(
-            'd',
-            InsightCode.goalNearlyFunded,
-            InsightLevel.positive,
-            InsightTopic.savings,
-          ),
+          _insight('d', InsightCode.goalNearlyFunded, InsightLevel.positive, InsightTopic.savings),
         ),
         isTrue,
       );
       expect(
         NotificationRules.isWorthDelivering(
-          _insight(
-            'e',
-            InsightCode.savingsRateStrong,
-            InsightLevel.positive,
-            InsightTopic.savings,
-          ),
+          _insight('e', InsightCode.savingsRateStrong, InsightLevel.positive, InsightTopic.savings),
         ),
         isFalse,
       );
@@ -121,12 +93,7 @@ void main() {
     test('silencing every channel schedules nothing', () {
       final schedule = NotificationScheduler.build(
         insights: [
-          _insight(
-            'a',
-            InsightCode.budgetExceeded,
-            InsightLevel.critical,
-            InsightTopic.budget,
-          ),
+          _insight('a', InsightCode.budgetExceeded, InsightLevel.critical, InsightTopic.budget),
         ],
         loans: [_loan('car', now.add(const Duration(days: 10)))],
         preferences: const NotificationPreferences(
@@ -146,26 +113,15 @@ void main() {
     test('a disabled channel drops only its own alerts', () {
       final schedule = NotificationScheduler.build(
         insights: [
-          _insight(
-            'a',
-            InsightCode.budgetExceeded,
-            InsightLevel.critical,
-            InsightTopic.budget,
-          ),
+          _insight('a', InsightCode.budgetExceeded, InsightLevel.critical, InsightTopic.budget),
         ],
         loans: const [],
-        preferences: const NotificationPreferences(
-          budgetAlerts: false,
-          weeklySummary: true,
-        ),
+        preferences: const NotificationPreferences(budgetAlerts: false, weeklySummary: true),
         now: now,
       );
 
       expect(schedule.any((n) => n.insight.id == 'a'), isFalse);
-      expect(
-        schedule.any((n) => n.insight.code == InsightCode.weeklySummary),
-        isTrue,
-      );
+      expect(schedule.any((n) => n.insight.code == InsightCode.weeklySummary), isTrue);
     });
 
     test('informative insights never reach the schedule', () {
@@ -205,27 +161,20 @@ void main() {
 
       expect(schedule, hasLength(2));
 
-      final lead = schedule.firstWhere(
-        (n) => n.insight.code == InsightCode.debtDueSoon,
-      );
+      final lead = schedule.firstWhere((n) => n.insight.code == InsightCode.debtDueSoon);
       expect(lead.insight.subject, 'Car Loan');
       expect(lead.scheduledFor.day, 17);
       expect(lead.scheduledFor.hour, preferences.reminderHour);
       expect(lead.route, '/loans');
 
-      final onTheDay = schedule.firstWhere(
-        (n) => n.insight.code == InsightCode.debtDueToday,
-      );
+      final onTheDay = schedule.firstWhere((n) => n.insight.code == InsightCode.debtDueToday);
       expect(onTheDay.scheduledFor.day, 20);
       expect(onTheDay.scheduledFor.hour, preferences.reminderHour);
       expect(onTheDay.route, '/loans');
     });
 
     test('a settled debt is never reminded about', () {
-      final settled = _loan(
-        'car',
-        DateTime(2026, 9, 20),
-      ).copyWith(remaining: 0);
+      final settled = _loan('car', DateTime(2026, 9, 20)).copyWith(remaining: 0);
       final schedule = NotificationScheduler.build(
         insights: const [],
         loans: [settled],
@@ -261,12 +210,7 @@ void main() {
     test('nothing is ever scheduled in the past', () {
       final schedule = NotificationScheduler.build(
         insights: [
-          _insight(
-            'a',
-            InsightCode.budgetExceeded,
-            InsightLevel.critical,
-            InsightTopic.budget,
-          ),
+          _insight('a', InsightCode.budgetExceeded, InsightLevel.critical, InsightTopic.budget),
         ],
         loans: [_loan('car', now.add(const Duration(days: 30)))],
         preferences: preferences,
@@ -282,12 +226,7 @@ void main() {
     test('the schedule is ordered soonest first', () {
       final schedule = NotificationScheduler.build(
         insights: [
-          _insight(
-            'a',
-            InsightCode.budgetExceeded,
-            InsightLevel.critical,
-            InsightTopic.budget,
-          ),
+          _insight('a', InsightCode.budgetExceeded, InsightLevel.critical, InsightTopic.budget),
         ],
         loans: [
           _loan('car', now.add(const Duration(days: 30))),
@@ -326,18 +265,8 @@ void main() {
     test('insights deep-link to the screen they are about', () {
       final schedule = NotificationScheduler.build(
         insights: [
-          _insight(
-            'b',
-            InsightCode.budgetExceeded,
-            InsightLevel.critical,
-            InsightTopic.budget,
-          ),
-          _insight(
-            's',
-            InsightCode.goalNearlyFunded,
-            InsightLevel.positive,
-            InsightTopic.savings,
-          ),
+          _insight('b', InsightCode.budgetExceeded, InsightLevel.critical, InsightTopic.budget),
+          _insight('s', InsightCode.goalNearlyFunded, InsightLevel.positive, InsightTopic.savings),
         ],
         loans: const [],
         preferences: const NotificationPreferences(
@@ -355,38 +284,23 @@ void main() {
 
   group('quiet hours', () {
     test('a late-evening alert rolls into the next morning', () {
-      const prefs = NotificationPreferences(
-        quietHourStart: 22,
-        quietHourEnd: 8,
-      );
-      final moved = NotificationScheduler.applyQuietHours(
-        DateTime(2026, 9, 8, 23),
-        prefs,
-      );
+      const prefs = NotificationPreferences(quietHourStart: 22, quietHourEnd: 8);
+      final moved = NotificationScheduler.applyQuietHours(DateTime(2026, 9, 8, 23), prefs);
 
       expect(moved.day, 9);
       expect(moved.hour, 8);
     });
 
     test('an early-morning alert waits for the window to end the same day', () {
-      const prefs = NotificationPreferences(
-        quietHourStart: 22,
-        quietHourEnd: 8,
-      );
-      final moved = NotificationScheduler.applyQuietHours(
-        DateTime(2026, 9, 8, 3),
-        prefs,
-      );
+      const prefs = NotificationPreferences(quietHourStart: 22, quietHourEnd: 8);
+      final moved = NotificationScheduler.applyQuietHours(DateTime(2026, 9, 8, 3), prefs);
 
       expect(moved.day, 8);
       expect(moved.hour, 8);
     });
 
     test('a daytime alert is left alone', () {
-      const prefs = NotificationPreferences(
-        quietHourStart: 22,
-        quietHourEnd: 8,
-      );
+      const prefs = NotificationPreferences(quietHourStart: 22, quietHourEnd: 8);
       final time = DateTime(2026, 9, 8, 14, 30);
       expect(NotificationScheduler.applyQuietHours(time, prefs), time);
     });
@@ -410,11 +324,7 @@ void main() {
 
     test('today, but already past the hour, rolls a full week', () {
       final sundayEvening = DateTime(2026, 9, 13, 20);
-      final next = NotificationScheduler.nextWeekday(
-        sundayEvening,
-        DateTime.sunday,
-        18,
-      );
+      final next = NotificationScheduler.nextWeekday(sundayEvening, DateTime.sunday, 18);
 
       expect(next.weekday, DateTime.sunday);
       expect(next.difference(sundayEvening).inDays, greaterThanOrEqualTo(6));
@@ -428,9 +338,7 @@ void main() {
         now: now,
       );
 
-      final summary = schedule.firstWhere(
-        (n) => n.insight.code == InsightCode.weeklySummary,
-      );
+      final summary = schedule.firstWhere((n) => n.insight.code == InsightCode.weeklySummary);
       expect(summary.repeat, NotificationRepeat.weekly);
       expect(summary.route, '/reports');
     });
@@ -449,17 +357,12 @@ void main() {
       final schedule = NotificationScheduler.build(
         insights: const [],
         loans: const [],
-        preferences: onlyNudges.copyWith(
-          enabledSlots: DailyReminderSlot.values.toSet(),
-        ),
+        preferences: onlyNudges.copyWith(enabledSlots: DailyReminderSlot.values.toSet()),
         now: now,
       );
 
       expect(schedule, hasLength(DailyReminderSlot.values.length));
-      expect(
-        schedule.every((n) => n.repeat == NotificationRepeat.daily),
-        isTrue,
-      );
+      expect(schedule.every((n) => n.repeat == NotificationRepeat.daily), isTrue);
       // A reminder to record an expense opens the form that records one.
       expect(schedule.every((n) => n.route == '/add'), isTrue);
     });
@@ -468,9 +371,7 @@ void main() {
       final schedule = NotificationScheduler.build(
         insights: const [],
         loans: const [],
-        preferences: onlyNudges.copyWith(
-          enabledSlots: DailyReminderSlot.values.toSet(),
-        ),
+        preferences: onlyNudges.copyWith(enabledSlots: DailyReminderSlot.values.toSet()),
         now: now,
       );
 
@@ -484,9 +385,7 @@ void main() {
       final schedule = NotificationScheduler.build(
         insights: const [],
         loans: const [],
-        preferences: onlyNudges.copyWith(
-          enabledSlots: const {DailyReminderSlot.morning},
-        ),
+        preferences: onlyNudges.copyWith(enabledSlots: const {DailyReminderSlot.morning}),
         now: now,
       );
 
@@ -521,10 +420,7 @@ void main() {
         preferences: onlyNudges.copyWith(
           quietHourStart: 19,
           quietHourEnd: 8,
-          enabledSlots: const {
-            DailyReminderSlot.morning,
-            DailyReminderSlot.evening,
-          },
+          enabledSlots: const {DailyReminderSlot.morning, DailyReminderSlot.evening},
         ),
         now: now,
       );

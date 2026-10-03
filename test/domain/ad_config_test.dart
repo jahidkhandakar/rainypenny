@@ -1,6 +1,6 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/ads/ad_config.dart';
+import 'package:lavio/core/ads/ad_config.dart';
 
 /// Which ad unit a build asks for.
 ///
@@ -62,9 +62,7 @@ void main() {
 
   group('blank values', () {
     setUp(() {
-      dotenv.loadFromString(
-        envString: 'ADMOB_BANNER_ANDROID=   \nADMOB_BANNER_IOS=',
-      );
+      dotenv.loadFromString(envString: 'ADMOB_BANNER_ANDROID=   \nADMOB_BANNER_IOS=');
       AdConfig.debugPlatformOverride = 'android';
     });
 

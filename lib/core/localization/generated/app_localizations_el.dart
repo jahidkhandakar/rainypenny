@@ -9,7 +9,7 @@ class AppL10nEl extends AppL10n {
   AppL10nEl([String locale = 'el']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Αποταμιεύστε για δύσκολες μέρες';
@@ -506,7 +506,7 @@ class AppL10nEl extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Βάλτε έναν στόχο και το RainyPenny θα παρακολουθεί την πρόοδό σας.';
+      'Βάλτε έναν στόχο και το LAVIO θα παρακολουθεί την πρόοδό σας.';
 
   @override
   String get fundsAdded => 'Τα χρήματα προστέθηκαν';
@@ -826,7 +826,7 @@ class AppL10nEl extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Επιτρέψτε τις ειδοποιήσεις ώστε το RainyPenny να σας προειδοποιεί πριν ξεφύγει ένας προϋπολογισμός ή μια πληρωμή.';
+      'Επιτρέψτε τις ειδοποιήσεις ώστε το LAVIO να σας προειδοποιεί πριν ξεφύγει ένας προϋπολογισμός ή μια πληρωμή.';
 
   @override
   String get allowNotifications => 'Να επιτρέπονται οι ειδοποιήσεις';
@@ -1054,7 +1054,7 @@ class AppL10nEl extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Δημιουργήθηκε από το RainyPenny με βάση τις δικές σας εγγραφές.';
+      'Δημιουργήθηκε από το LAVIO με βάση τις δικές σας εγγραφές.';
 
   @override
   String pageOf(int page, int total) {
@@ -1353,7 +1353,7 @@ class AppL10nEl extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Καταγράψτε τι μπαίνει και τι βγαίνει. Το RainyPenny το μετατρέπει σε μια εικόνα που διαβάζεται πραγματικά.';
+      'Καταγράψτε τι μπαίνει και τι βγαίνει. Το LAVIO το μετατρέπει σε μια εικόνα που διαβάζεται πραγματικά.';
 
   @override
   String get welcomeBudgetTitle => 'Όρια που κρατούν';
@@ -1708,7 +1708,7 @@ class AppL10nEl extends AppL10n {
       'Περάστε ξανά από τις αρχικές ερωτήσεις. Τίποτα από όσα έχετε καταγράψει δεν διαγράφεται.';
 
   @override
-  String get rateTitle => 'Σας αρέσει το RainyPenny;';
+  String get rateTitle => 'Σας αρέσει το LAVIO;';
 
   @override
   String get rateBody =>

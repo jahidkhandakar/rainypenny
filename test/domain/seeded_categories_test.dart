@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/data/demo_dataset.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/data/demo_dataset.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
 
 /// Guards the category list the specification names.
 ///

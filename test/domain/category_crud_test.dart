@@ -1,13 +1,12 @@
 import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/categories/presentation/controllers/category_controller.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/categories/presentation/controllers/category_controller.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
 
-MockFinanceDataSource _source() =>
-    MockFinanceDataSource(latency: Duration.zero);
+MockFinanceDataSource _source() => MockFinanceDataSource(latency: Duration.zero);
 
 void main() {
   group('CategoryController.idFor', () {
@@ -16,11 +15,7 @@ void main() {
     Random seeded() => Random(7);
 
     test('slugifies the name', () {
-      final id = CategoryController.idFor(
-        'Pet Care & Vet',
-        const [],
-        random: seeded(),
-      );
+      final id = CategoryController.idFor('Pet Care & Vet', const [], random: seeded());
 
       expect(id, startsWith('pet-care-vet-'));
       // stem plus a six-character token.
@@ -31,16 +26,8 @@ void main() {
       // Each user's client generates its own token, and `categories.id` is a
       // single global primary key — so this is the case that would break an
       // insert if the id were the bare slug.
-      final first = CategoryController.idFor(
-        'Pet care',
-        const [],
-        random: Random(1),
-      );
-      final second = CategoryController.idFor(
-        'Pet care',
-        const [],
-        random: Random(2),
-      );
+      final first = CategoryController.idFor('Pet care', const [], random: Random(1));
+      final second = CategoryController.idFor('Pet care', const [], random: Random(2));
 
       expect(first, isNot(second));
     });
@@ -62,11 +49,7 @@ void main() {
 
       // The same seed reproduces the same token, which is exactly the clash the
       // numeric suffix exists to resolve.
-      final id = CategoryController.idFor(
-        'Pet care',
-        existing,
-        random: seeded(),
-      );
+      final id = CategoryController.idFor('Pet care', existing, random: seeded());
 
       expect(id, '${existing.single.id}-2');
     });
@@ -91,21 +74,18 @@ void main() {
       expect(after.any((c) => c.id == 'pet-care-abc123'), isTrue);
     });
 
-    test(
-      'renaming a category updates the transactions filed under it',
-      () async {
-        final source = _source();
-        final transactions = await source.fetchTransactions();
-        final used = transactions.first.category;
+    test('renaming a category updates the transactions filed under it', () async {
+      final source = _source();
+      final transactions = await source.fetchTransactions();
+      final used = transactions.first.category;
 
-        await source.updateCategory(used.copyWith(name: 'Renamed'));
+      await source.updateCategory(used.copyWith(name: 'Renamed'));
 
-        final after = await source.fetchTransactions();
-        final touched = after.where((t) => t.category.id == used.id);
-        expect(touched, isNotEmpty);
-        expect(touched.every((t) => t.category.name == 'Renamed'), isTrue);
-      },
-    );
+      final after = await source.fetchTransactions();
+      final touched = after.where((t) => t.category.id == used.id);
+      expect(touched, isNotEmpty);
+      expect(touched.every((t) => t.category.name == 'Renamed'), isTrue);
+    });
 
     test('an unused category can be deleted', () async {
       final source = _source();
@@ -149,10 +129,7 @@ void main() {
       await source.upsertBudgetLimit('budgeted-only', 250);
 
       expect(await source.countCategoryUsage('budgeted-only'), 1);
-      expect(
-        () => source.deleteCategory('budgeted-only'),
-        throwsA(isA<StateError>()),
-      );
+      expect(() => source.deleteCategory('budgeted-only'), throwsA(isA<StateError>()));
     });
 
     test('the seeded set is marked as not custom', () async {
@@ -166,11 +143,7 @@ void main() {
 
   group('Category', () {
     test('equality is by id, so a rename is still the same category', () {
-      const before = Category(
-        id: 'food',
-        name: 'Food',
-        icon: CategoryIcon.food,
-      );
+      const before = Category(id: 'food', name: 'Food', icon: CategoryIcon.food);
       final after = before.copyWith(name: 'Food & Dining');
 
       expect(after, before);
@@ -186,16 +159,10 @@ void main() {
         amount: 12,
         date: DateTime(2026, 9, 4),
         type: TransactionType.expense,
-        category: const Category(
-          id: 'food',
-          name: 'Food',
-          icon: CategoryIcon.food,
-        ),
+        category: const Category(id: 'food', name: 'Food', icon: CategoryIcon.food),
       );
 
-      final renamed = tx.copyWith(
-        category: tx.category.copyWith(name: 'Food & Dining'),
-      );
+      final renamed = tx.copyWith(category: tx.category.copyWith(name: 'Food & Dining'));
 
       expect(renamed.category.name, 'Food & Dining');
       expect(renamed.amount, 12);

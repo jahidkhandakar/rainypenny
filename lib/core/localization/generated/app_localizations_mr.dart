@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppL10nMr extends AppL10n {
   AppL10nMr([String locale = 'mr']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'अडचणीच्या दिवसासाठी बचत करा';
@@ -125,8 +126,7 @@ class AppL10nMr extends AppL10n {
   String get noTransactionsTitle => 'कोणतेही व्यवहार सापडले नाहीत';
 
   @override
-  String get noTransactionsBody =>
-      'आणखी नोंदी पाहण्यासाठी वेगळा शोध किंवा फिल्टर वापरून पाहा.';
+  String get noTransactionsBody => 'आणखी नोंदी पाहण्यासाठी वेगळा शोध किंवा फिल्टर वापरून पाहा.';
 
   @override
   String transactionCount(int count) {
@@ -504,8 +504,7 @@ class AppL10nMr extends AppL10n {
   String get noGoalsTitle => 'अजून बचतीची ध्येयं नाहीत';
 
   @override
-  String get noGoalsBody =>
-      'एक ध्येय ठेवा, RainyPenny तुमची प्रगती पाहत राहील.';
+  String get noGoalsBody => 'एक ध्येय ठेवा, LAVIO तुमची प्रगती पाहत राहील.';
 
   @override
   String get fundsAdded => 'रक्कम जमा झाली';
@@ -570,8 +569,7 @@ class AppL10nMr extends AppL10n {
   String get noDebtsTitle => 'कोणतंही देणं नोंदवलेलं नाही';
 
   @override
-  String get noDebtsBody =>
-      'हप्त्यांवर लक्ष ठेवण्यासाठी कर्ज किंवा क्रेडिट कार्ड जोडा.';
+  String get noDebtsBody => 'हप्त्यांवर लक्ष ठेवण्यासाठी कर्ज किंवा क्रेडिट कार्ड जोडा.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
@@ -589,11 +587,7 @@ class AppL10nMr extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(
-    String subject,
-    int percent,
-    String amount,
-  ) {
+  String insightBudgetApproachingBody(String subject, int percent, String amount) {
     return 'तुमचा $subject अर्थसंकल्प $percent% वापरला गेला आहे, $amount शिल्लक.';
   }
 
@@ -757,8 +751,7 @@ class AppL10nMr extends AppL10n {
   String get signOutConfirm => 'बाहेर पडायचं?';
 
   @override
-  String get signOutBody =>
-      'तुमचा हिशेब पुन्हा पाहण्यासाठी पुन्हा साइन इन करावं लागेल.';
+  String get signOutBody => 'तुमचा हिशेब पुन्हा पाहण्यासाठी पुन्हा साइन इन करावं लागेल.';
 
   @override
   String get dataSource => 'डेटा स्रोत';
@@ -780,8 +773,7 @@ class AppL10nMr extends AppL10n {
   String get budgetAlerts => 'अर्थसंकल्पाचे इशारे';
 
   @override
-  String get budgetAlertsBody =>
-      'अर्थसंकल्प मर्यादेजवळ आल्यावर किंवा ओलांडल्यावर';
+  String get budgetAlertsBody => 'अर्थसंकल्प मर्यादेजवळ आल्यावर किंवा ओलांडल्यावर';
 
   @override
   String get paymentReminders => 'हप्त्याच्या आठवणी';
@@ -823,7 +815,7 @@ class AppL10nMr extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'अर्थसंकल्प किंवा हप्ता हाताबाहेर जाण्याआधी RainyPenny इशारा देऊ शकेल यासाठी सूचनांना परवानगी द्या.';
+      'अर्थसंकल्प किंवा हप्ता हाताबाहेर जाण्याआधी LAVIO इशारा देऊ शकेल यासाठी सूचनांना परवानगी द्या.';
 
   @override
   String get allowNotifications => 'सूचनांना परवानगी द्या';
@@ -884,8 +876,7 @@ class AppL10nMr extends AppL10n {
   String get noCurrenciesFound => 'कोणतंही चलन सापडलं नाही';
 
   @override
-  String get noCurrenciesFoundMessage =>
-      'वेगळा कोड, चिन्ह किंवा नाव वापरून पाहा.';
+  String get noCurrenciesFoundMessage => 'वेगळा कोड, चिन्ह किंवा नाव वापरून पाहा.';
 
   @override
   String get popularCurrencies => 'लोकप्रिय';
@@ -987,8 +978,7 @@ class AppL10nMr extends AppL10n {
   String get remindAfternoonTitle => 'पटकन भरून काढा';
 
   @override
-  String get remindAfternoonBody =>
-      'आतापर्यंतचा खर्च नोंदवा, म्हणजे आजचा हिशेब अचूक राहील.';
+  String get remindAfternoonBody => 'आतापर्यंतचा खर्च नोंदवा, म्हणजे आजचा हिशेब अचूक राहील.';
 
   @override
   String get remindEveningTitle => 'दिवस आटोपताना';
@@ -1000,8 +990,7 @@ class AppL10nMr extends AppL10n {
   String get happyWeekendTitle => 'सुट्टी छान जावो! 🎉';
 
   @override
-  String get happyWeekendBody =>
-      'मजा करा — आणि सुट्टीतल्या खर्चावरही थोडं लक्ष ठेवा.';
+  String get happyWeekendBody => 'मजा करा — आणि सुट्टीतल्या खर्चावरही थोडं लक्ष ठेवा.';
 
   @override
   String get dailyReminders => 'रोजच्या खर्चाच्या आठवणी';
@@ -1043,7 +1032,7 @@ class AppL10nMr extends AppL10n {
   String get generatedOn => 'तयार झाल्याची तारीख';
 
   @override
-  String get reportDisclaimer => 'तुमच्याच नोंदींवरून RainyPenny ने तयार केला.';
+  String get reportDisclaimer => 'तुमच्याच नोंदींवरून LAVIO ने तयार केला.';
 
   @override
   String pageOf(int page, int total) {
@@ -1252,12 +1241,10 @@ class AppL10nMr extends AppL10n {
       'लक्षात राहणारं लांब वाक्य, चिन्हांनी भरलेल्या छोट्या पासवर्डपेक्षा चांगलं. दुसरीकडे वापरत असलेलं काहीही निवडू नका.';
 
   @override
-  String get authInvalidCredentials =>
-      'हा ईमेल आणि पासवर्ड कोणत्याही खात्याशी जुळत नाही';
+  String get authInvalidCredentials => 'हा ईमेल आणि पासवर्ड कोणत्याही खात्याशी जुळत नाही';
 
   @override
-  String get authEmailNotConfirmed =>
-      'साइन इन करण्याआधी तुमचा ईमेल पत्ता निश्चित करा';
+  String get authEmailNotConfirmed => 'साइन इन करण्याआधी तुमचा ईमेल पत्ता निश्चित करा';
 
   @override
   String get authEmailAlreadyRegistered => 'या ईमेलचं खातं आधीच अस्तित्वात आहे';
@@ -1266,12 +1253,10 @@ class AppL10nMr extends AppL10n {
   String get authWeakPassword => 'अधिक लांब पासवर्ड निवडा';
 
   @override
-  String get authRateLimited =>
-      'खूप वेळा प्रयत्न झाले. काही मिनिटांनी पुन्हा प्रयत्न करा';
+  String get authRateLimited => 'खूप वेळा प्रयत्न झाले. काही मिनिटांनी पुन्हा प्रयत्न करा';
 
   @override
-  String get authNetworkError =>
-      'जोडणी नाही. नेटवर्क तपासून पुन्हा प्रयत्न करा';
+  String get authNetworkError => 'जोडणी नाही. नेटवर्क तपासून पुन्हा प्रयत्न करा';
 
   @override
   String get authGenericError => 'काहीतरी चुकलं. कृपया पुन्हा प्रयत्न करा';
@@ -1319,8 +1304,7 @@ class AppL10nMr extends AppL10n {
   String get resetPasswordTitle => 'नवा पासवर्ड निवडा';
 
   @override
-  String get resetPasswordSubtitle =>
-      'या खात्यावर आधी न वापरलेलं काहीतरी निवडा.';
+  String get resetPasswordSubtitle => 'या खात्यावर आधी न वापरलेलं काहीतरी निवडा.';
 
   @override
   String get passwordChangedTitle => 'पासवर्ड अद्ययावत झाला';
@@ -1340,7 +1324,7 @@ class AppL10nMr extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'काय येतं आणि काय जातं ते नोंदवा. RainyPenny त्याचं खरोखर वाचता येईल असं चित्र बनवतं.';
+      'काय येतं आणि काय जातं ते नोंदवा. LAVIO त्याचं खरोखर वाचता येईल असं चित्र बनवतं.';
 
   @override
   String get welcomeBudgetTitle => 'टिकणाऱ्या मर्यादा';
@@ -1372,8 +1356,7 @@ class AppL10nMr extends AppL10n {
   String get onboardingNameTitle => 'तुम्हाला काय हाक मारू?';
 
   @override
-  String get onboardingNameBody =>
-      'फक्त स्वागतासाठी वापरू, दुसरीकडे कुठेही नाही.';
+  String get onboardingNameBody => 'फक्त स्वागतासाठी वापरू, दुसरीकडे कुठेही नाही.';
 
   @override
   String get onboardingNameHint => 'पहिलं नाव पुरे. नंतर बदलता येईल.';
@@ -1418,8 +1401,7 @@ class AppL10nMr extends AppL10n {
   String get onboardingNotifyDone => 'सूचनांच्या सेटिंग्ज जतन झाल्या';
 
   @override
-  String get onboardingNotifyLater =>
-      'हे सगळं तुम्ही सेटिंग्जमध्ये कधीही बदलू शकता.';
+  String get onboardingNotifyLater => 'हे सगळं तुम्ही सेटिंग्जमध्ये कधीही बदलू शकता.';
 
   @override
   String get onboardingReadyTitle => 'सगळं तयार आहे';
@@ -1430,8 +1412,7 @@ class AppL10nMr extends AppL10n {
   }
 
   @override
-  String get onboardingReadyBody =>
-      'सेटअप झालं. सगळं कसं चालतं याची झटपट फेरी घ्यायची?';
+  String get onboardingReadyBody => 'सेटअप झालं. सगळं कसं चालतं याची झटपट फेरी घ्यायची?';
 
   @override
   String get onboardingTakeTour => 'मला दाखवा';
@@ -1440,8 +1421,7 @@ class AppL10nMr extends AppL10n {
   String get onboardingGoToApp => 'अ‍ॅपकडे न्या';
 
   @override
-  String get onboardingTourLater =>
-      'आत्ता नको? मार्गदर्शिका सेटिंग्जमध्ये राहील, हवी तेव्हा पाहा.';
+  String get onboardingTourLater => 'आत्ता नको? मार्गदर्शिका सेटिंग्जमध्ये राहील, हवी तेव्हा पाहा.';
 
   @override
   String get beginnersGuide => 'नवशिक्यांसाठी मार्गदर्शिका';
@@ -1467,16 +1447,14 @@ class AppL10nMr extends AppL10n {
       'सगळं इथूनच सुरू होतं. वरचं कार्ड तुमच्याकडे काय शिल्लक आहे ते सांगतं; त्याखाली या कालावधीतलं उत्पन्न आणि खर्च, मग तुमचा खर्च, अर्थसंकल्प आणि ध्येयं.';
 
   @override
-  String get guideDashboardTip1 =>
-      'सगळं एकाच वेळी ताजं करण्यासाठी स्क्रीन खाली ओढा.';
+  String get guideDashboardTip1 => 'सगळं एकाच वेळी ताजं करण्यासाठी स्क्रीन खाली ओढा.';
 
   @override
   String get guideDashboardTip2 =>
       'त्या यादीवर थेट जाण्यासाठी उत्पन्न किंवा खर्चाच्या कार्डला स्पर्श करा.';
 
   @override
-  String get guideDashboardTip3 =>
-      'तुम्ही काही नोंदवताच वर्तुळं आणि निरीक्षणं अद्ययावत होतात.';
+  String get guideDashboardTip3 => 'तुम्ही काही नोंदवताच वर्तुळं आणि निरीक्षणं अद्ययावत होतात.';
 
   @override
   String get guideAddTitle => 'पैसे नोंदवणं';
@@ -1489,12 +1467,10 @@ class AppL10nMr extends AppL10n {
   String get guideAddTip1 => 'उत्पन्न किंवा खर्च नोंदवण्यासाठी मधलं बटण दाबा.';
 
   @override
-  String get guideAddTip2 =>
-      'यादी वगळून थेट नव्या खर्चावर जाण्यासाठी ते दाबून धरा.';
+  String get guideAddTip2 => 'यादी वगळून थेट नव्या खर्चावर जाण्यासाठी ते दाबून धरा.';
 
   @override
-  String get guideAddTip3 =>
-      'नेहमी प्रवर्ग निवडा — तक्ते आणि अर्थसंकल्प त्यावरच चालतात.';
+  String get guideAddTip3 => 'नेहमी प्रवर्ग निवडा — तक्ते आणि अर्थसंकल्प त्यावरच चालतात.';
 
   @override
   String get guideCategoriesTitle => 'प्रवर्ग';
@@ -1519,16 +1495,13 @@ class AppL10nMr extends AppL10n {
       'अर्थसंकल्प म्हणजे एका प्रवर्गाची मासिक कमाल मर्यादा. खर्च होताच पट्टी भरत जाते आणि मर्यादा जवळ आली की रंग बदलतो, त्यामुळे ओलांडण्याआधीच कळतं.';
 
   @override
-  String get guideBudgetTip1 =>
-      'एकदम सगळे नको — दोन-तीन प्रवर्गांपासून सुरुवात करा.';
+  String get guideBudgetTip1 => 'एकदम सगळे नको — दोन-तीन प्रवर्गांपासून सुरुवात करा.';
 
   @override
-  String get guideBudgetTip2 =>
-      'मर्यादा नेहमीच्या खर्चापेक्षा थोडी वर ठेवा, मग हळूहळू आवळा.';
+  String get guideBudgetTip2 => 'मर्यादा नेहमीच्या खर्चापेक्षा थोडी वर ठेवा, मग हळूहळू आवळा.';
 
   @override
-  String get guideBudgetTip3 =>
-      'अर्थसंकल्पाचे इशारे चालू ठेवा, संपत आल्यावर अ‍ॅप सांगेल.';
+  String get guideBudgetTip3 => 'अर्थसंकल्पाचे इशारे चालू ठेवा, संपत आल्यावर अ‍ॅप सांगेल.';
 
   @override
   String get guideSavingsTitle => 'बचतीची ध्येयं';
@@ -1538,12 +1511,10 @@ class AppL10nMr extends AppL10n {
       'कशासाठी बचत करताय त्याला नाव द्या, रक्कम आणि तारीख ठरवा — दरमहा किती बाजूला ठेवायचं ते अ‍ॅप काढून देईल.';
 
   @override
-  String get guideSavingsTip1 =>
-      'नाव असलेलं ध्येय, बचतीच्या धूसर इच्छेपेक्षा सहज टिकतं.';
+  String get guideSavingsTip1 => 'नाव असलेलं ध्येय, बचतीच्या धूसर इच्छेपेक्षा सहज टिकतं.';
 
   @override
-  String get guideSavingsTip2 =>
-      'एका मोठ्या ध्येयापेक्षा काही छोटी ध्येयं अधिक वेळा पूर्ण होतात.';
+  String get guideSavingsTip2 => 'एका मोठ्या ध्येयापेक्षा काही छोटी ध्येयं अधिक वेळा पूर्ण होतात.';
 
   @override
   String get guideLoansTitle => 'देणी आणि कर्जे';
@@ -1553,12 +1524,10 @@ class AppL10nMr extends AppL10n {
       'किती देणं आहे, त्याचा खर्च किती आणि पुढचा हप्ता कधी ते नोंदवा. तुम्ही फेडत असलेलं सगळं उरलेल्या रकमेसह एकाच यादीत राहतं.';
 
   @override
-  String get guideLoansTip1 =>
-      'देय तारीख भरा, हप्त्याच्या आठवणी तुमच्यावतीने पाठपुरावा करतील.';
+  String get guideLoansTip1 => 'देय तारीख भरा, हप्त्याच्या आठवणी तुमच्यावतीने पाठपुरावा करतील.';
 
   @override
-  String get guideLoansTip2 =>
-      'मुदत उलटलेलं देणं फेडेपर्यंत मुख्यपृष्ठावर लाल दिसतं.';
+  String get guideLoansTip2 => 'मुदत उलटलेलं देणं फेडेपर्यंत मुख्यपृष्ठावर लाल दिसतं.';
 
   @override
   String get guideReportsTitle => 'अहवाल';
@@ -1568,8 +1537,7 @@ class AppL10nMr extends AppL10n {
       'अधिक खोल नजर: उत्पन्न विरुद्ध खर्च, प्रवर्गानुसार खर्च, अर्थसंकल्प किती टिकले आणि उत्पन्नाचा किती वाटा तुमच्याकडे राहिला.';
 
   @override
-  String get guideReportsTip1 =>
-      'स्क्रीनच्या वर आठवडा, महिना आणि तिमाही यांमध्ये बदला.';
+  String get guideReportsTip1 => 'स्क्रीनच्या वर आठवडा, महिना आणि तिमाही यांमध्ये बदला.';
 
   @override
   String get guideReportsTip2 =>
@@ -1587,8 +1555,7 @@ class AppL10nMr extends AppL10n {
       'चाळीस भाषा, आणि उजवीकडून डावीकडे वाचल्या जाणाऱ्या भाषांसाठी संपूर्ण मांडणी उलटते.';
 
   @override
-  String get guideSettingsTip2 =>
-      'कोणते इशारे हवेत आणि ते कोणत्या तासांत येऊ शकतात ते निवडा.';
+  String get guideSettingsTip2 => 'कोणते इशारे हवेत आणि ते कोणत्या तासांत येऊ शकतात ते निवडा.';
 
   @override
   String get guideSettingsTip3 => 'शांत तास सगळं सकाळपर्यंत थांबवून ठेवतात.';
@@ -1604,12 +1571,10 @@ class AppL10nMr extends AppL10n {
   String get guideHabitTip1 => 'आठवड्याच्या शेवटी नव्हे, खर्च होताच नोंदवा.';
 
   @override
-  String get guideHabitTip2 =>
-      'दिवसातून एकदा मुख्यपृष्ठ पाहा. दहा सेकंद पुरेत.';
+  String get guideHabitTip2 => 'दिवसातून एकदा मुख्यपृष्ठ पाहा. दहा सेकंद पुरेत.';
 
   @override
-  String get guideHabitTip3 =>
-      'ही मार्गदर्शिका सेटिंग्जमध्येच राहते — हवं तेव्हा परत या.';
+  String get guideHabitTip3 => 'ही मार्गदर्शिका सेटिंग्जमध्येच राहते — हवं तेव्हा परत या.';
 
   @override
   String get appearance => 'स्वरूप';
@@ -1670,8 +1635,7 @@ class AppL10nMr extends AppL10n {
   String get noLanguagesFound => 'कोणतीही भाषा सापडली नाही';
 
   @override
-  String get noLanguagesFoundMessage =>
-      'इंग्रजी नाव किंवा दोन अक्षरी कोड वापरून पाहा.';
+  String get noLanguagesFoundMessage => 'इंग्रजी नाव किंवा दोन अक्षरी कोड वापरून पाहा.';
 
   @override
   String get rightToLeft => 'उजवीकडून डावीकडे';
@@ -1687,7 +1651,7 @@ class AppL10nMr extends AppL10n {
       'सुरुवातीच्या प्रश्नांमधून पुन्हा जा. तुम्ही नोंदवलेलं काहीही हटवलं जाणार नाही.';
 
   @override
-  String get rateTitle => 'RainyPenny आवडतंय?';
+  String get rateTitle => 'LAVIO आवडतंय?';
 
   @override
   String get rateBody =>
@@ -1764,8 +1728,7 @@ class AppL10nMr extends AppL10n {
   String get dailyAllowance => 'दररोज सुरक्षितपणे खर्च करता येणारी रक्कम';
 
   @override
-  String get overspentNotice =>
-      'या चक्रात आलेल्या रकमेपेक्षा तुम्ही जास्त खर्च केला आहे.';
+  String get overspentNotice => 'या चक्रात आलेल्या रकमेपेक्षा तुम्ही जास्त खर्च केला आहे.';
 
   @override
   String get backToThisMonth => 'या महिन्यावर परत जा';
@@ -1804,8 +1767,7 @@ class AppL10nMr extends AppL10n {
   String get healthGoodBody => 'या कालावधीत तुमचा खर्च योग्य मार्गावर आहे.';
 
   @override
-  String get healthFairBody =>
-      'काही अर्थसंकल्पांमध्ये खर्च वेगाने वाढत आहे. छोटे बदल मदत करतील.';
+  String get healthFairBody => 'काही अर्थसंकल्पांमध्ये खर्च वेगाने वाढत आहे. छोटे बदल मदत करतील.';
 
   @override
   String get healthNeedsWorkBody =>
@@ -1958,8 +1920,7 @@ class AppL10nMr extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint =>
-      'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';
@@ -2151,8 +2112,7 @@ class AppL10nMr extends AppL10n {
   String get smartBudgetSplit => 'स्मार्ट अर्थसंकल्प विभागणी';
 
   @override
-  String get smartBudgetSplitSubtitle =>
-      'शिफारस केलेल्या मर्यादा मोजण्यासाठी तुमचा मासिक पगार भरा';
+  String get smartBudgetSplitSubtitle => 'शिफारस केलेल्या मर्यादा मोजण्यासाठी तुमचा मासिक पगार भरा';
 
   @override
   String get monthlyNetSalary => 'मासिक निव्वळ पगार';

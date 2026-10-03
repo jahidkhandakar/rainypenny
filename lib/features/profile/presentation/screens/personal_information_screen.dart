@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/features/profile/presentation/widgets/round_avatar.dart';
+import 'package:lavio/features/profile/presentation/widgets/round_avatar.dart';
 
 import '../../../../core/di/providers.dart';
 import '../../../../core/localization/generated/app_localizations.dart';

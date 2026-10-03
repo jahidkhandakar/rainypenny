@@ -9,7 +9,7 @@ class AppL10nVi extends AppL10n {
   AppL10nVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Dành dụm cho ngày mưa';
@@ -503,7 +503,7 @@ class AppL10nVi extends AppL10n {
 
   @override
   String get noGoalsBody =>
-      'Đặt một mục tiêu và RainyPenny sẽ theo dõi tiến độ giúp bạn.';
+      'Đặt một mục tiêu và LAVIO sẽ theo dõi tiến độ giúp bạn.';
 
   @override
   String get fundsAdded => 'Đã nạp thêm';
@@ -818,7 +818,7 @@ class AppL10nVi extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Cho phép thông báo để RainyPenny kịp nhắc trước khi ngân sách hay khoản trả vuột khỏi tầm tay.';
+      'Cho phép thông báo để LAVIO kịp nhắc trước khi ngân sách hay khoản trả vuột khỏi tầm tay.';
 
   @override
   String get allowNotifications => 'Cho phép thông báo';
@@ -1040,7 +1040,7 @@ class AppL10nVi extends AppL10n {
   String get generatedOn => 'Tạo ngày';
 
   @override
-  String get reportDisclaimer => 'Do RainyPenny lập từ chính bản ghi của bạn.';
+  String get reportDisclaimer => 'Do LAVIO lập từ chính bản ghi của bạn.';
 
   @override
   String pageOf(int page, int total) {
@@ -1334,7 +1334,7 @@ class AppL10nVi extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Chỉ cần ghi thứ vào và thứ ra. RainyPenny biến nó thành một bức tranh thật sự đọc được.';
+      'Chỉ cần ghi thứ vào và thứ ra. LAVIO biến nó thành một bức tranh thật sự đọc được.';
 
   @override
   String get welcomeBudgetTitle => 'Những giới hạn giữ được';
@@ -1683,7 +1683,7 @@ class AppL10nVi extends AppL10n {
       'Trả lời lại các câu hỏi ban đầu. Không có gì bạn đã ghi bị xóa.';
 
   @override
-  String get rateTitle => 'Bạn thấy RainyPenny thế nào?';
+  String get rateTitle => 'Bạn thấy LAVIO thế nào?';
 
   @override
   String get rateBody =>

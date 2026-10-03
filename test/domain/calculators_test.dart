@@ -1,44 +1,22 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/domain/entities/budget.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/loan.dart';
-import 'package:rainypenny/features/financial/domain/entities/savings_goal.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
-import 'package:rainypenny/features/financial/domain/rules/budget_rules.dart';
-import 'package:rainypenny/features/financial/domain/rules/debt_rules.dart';
-import 'package:rainypenny/features/financial/domain/services/balance_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/budget_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/debt_calculator.dart';
-import 'package:rainypenny/features/financial/domain/services/savings_calculator.dart';
+import 'package:lavio/features/financial/domain/entities/budget.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/loan.dart';
+import 'package:lavio/features/financial/domain/entities/savings_goal.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/financial/domain/rules/budget_rules.dart';
+import 'package:lavio/features/financial/domain/rules/debt_rules.dart';
+import 'package:lavio/features/financial/domain/services/balance_calculator.dart';
+import 'package:lavio/features/financial/domain/services/budget_calculator.dart';
+import 'package:lavio/features/financial/domain/services/debt_calculator.dart';
+import 'package:lavio/features/financial/domain/services/savings_calculator.dart';
 
 const _food = Category(id: 'food', name: 'Food', icon: CategoryIcon.food);
-const _rent = Category(
-  id: 'housing',
-  name: 'Housing',
-  icon: CategoryIcon.housing,
-);
-const _pay = Category(
-  id: 'salary',
-  name: 'Salary',
-  icon: CategoryIcon.salary,
-  isIncome: true,
-);
+const _rent = Category(id: 'housing', name: 'Housing', icon: CategoryIcon.housing);
+const _pay = Category(id: 'salary', name: 'Salary', icon: CategoryIcon.salary, isIncome: true);
 
-Transaction _tx(
-  String id,
-  double amount,
-  DateTime date,
-  TransactionType type,
-  Category category,
-) {
-  return Transaction(
-    id: id,
-    title: id,
-    amount: amount,
-    date: date,
-    type: type,
-    category: category,
-  );
+Transaction _tx(String id, double amount, DateTime date, TransactionType type, Category category) {
+  return Transaction(id: id, title: id, amount: amount, date: date, type: type, category: category);
 }
 
 void main() {

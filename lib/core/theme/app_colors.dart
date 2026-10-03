@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Central colour tokens for the RainyPenny brand.
+/// Central colour tokens for the LAVIO brand.
 ///
 /// Nothing in the widget tree should ever hardcode a hex value — every colour
 /// used by the UI is named here so the whole visual identity can be re-tuned

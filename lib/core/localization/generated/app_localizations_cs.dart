@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppL10nCs extends AppL10n {
   AppL10nCs([String locale = 'cs']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Šetřete na horší časy';
@@ -125,8 +126,7 @@ class AppL10nCs extends AppL10n {
   String get noTransactionsTitle => 'Žádné pohyby nenalezeny';
 
   @override
-  String get noTransactionsBody =>
-      'Zkuste jiné hledání nebo filtr, ať uvidíte více záznamů.';
+  String get noTransactionsBody => 'Zkuste jiné hledání nebo filtr, ať uvidíte více záznamů.';
 
   @override
   String transactionCount(int count) {
@@ -380,8 +380,7 @@ class AppL10nCs extends AppL10n {
   String get noNotificationsTitle => 'Máte vše přečtené';
 
   @override
-  String get noNotificationsBody =>
-      'Nové postřehy a připomínky se objeví tady.';
+  String get noNotificationsBody => 'Nové postřehy a připomínky se objeví tady.';
 
   @override
   String get cancel => 'Zrušit';
@@ -472,8 +471,7 @@ class AppL10nCs extends AppL10n {
   String get noBudgetsTitle => 'Zatím žádné rozpočty';
 
   @override
-  String get noBudgetsBody =>
-      'Nastavte kategorii měsíční limit a začneme ji sledovat.';
+  String get noBudgetsBody => 'Nastavte kategorii měsíční limit a začneme ji sledovat.';
 
   @override
   String get newGoal => 'Nový cíl';
@@ -511,8 +509,7 @@ class AppL10nCs extends AppL10n {
   String get noGoalsTitle => 'Zatím žádné spořicí cíle';
 
   @override
-  String get noGoalsBody =>
-      'Nastavte si cíl a RainyPenny bude sledovat váš postup.';
+  String get noGoalsBody => 'Nastavte si cíl a LAVIO bude sledovat váš postup.';
 
   @override
   String get fundsAdded => 'Peníze přidány';
@@ -577,8 +574,7 @@ class AppL10nCs extends AppL10n {
   String get noDebtsTitle => 'Žádné sledované dluhy';
 
   @override
-  String get noDebtsBody =>
-      'Přidejte půjčku nebo kreditní kartu, ať máte splátky na očích.';
+  String get noDebtsBody => 'Přidejte půjčku nebo kreditní kartu, ať máte splátky na očích.';
 
   @override
   String insightBudgetExceededTitle(String subject) {
@@ -596,11 +592,7 @@ class AppL10nCs extends AppL10n {
   }
 
   @override
-  String insightBudgetApproachingBody(
-    String subject,
-    int percent,
-    String amount,
-  ) {
+  String insightBudgetApproachingBody(String subject, int percent, String amount) {
     return 'Rozpočet $subject je využitý na $percent%, zbývá $amount.';
   }
 
@@ -770,8 +762,7 @@ class AppL10nCs extends AppL10n {
   String get signOutConfirm => 'Odhlásit se?';
 
   @override
-  String get signOutBody =>
-      'Abyste své finance viděli znovu, budete se muset přihlásit.';
+  String get signOutBody => 'Abyste své finance viděli znovu, budete se muset přihlásit.';
 
   @override
   String get dataSource => 'Zdroj dat';
@@ -793,8 +784,7 @@ class AppL10nCs extends AppL10n {
   String get budgetAlerts => 'Upozornění na rozpočet';
 
   @override
-  String get budgetAlertsBody =>
-      'Když se rozpočet blíží limitu nebo ho překročí';
+  String get budgetAlertsBody => 'Když se rozpočet blíží limitu nebo ho překročí';
 
   @override
   String get paymentReminders => 'Připomínky splátek';
@@ -836,14 +826,13 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Povolte oznámení, aby vás RainyPenny varoval dřív, než se rozpočet nebo splátka vymkne z rukou.';
+      'Povolte oznámení, aby vás LAVIO varoval dřív, než se rozpočet nebo splátka vymkne z rukou.';
 
   @override
   String get allowNotifications => 'Povolit oznámení';
 
   @override
-  String get permissionDenied =>
-      'Oznámení jsou blokovaná. Zapnout je můžete v nastavení zařízení.';
+  String get permissionDenied => 'Oznámení jsou blokovaná. Zapnout je můžete v nastavení zařízení.';
 
   @override
   String get upcomingAlerts => 'Naplánováno';
@@ -986,43 +975,37 @@ class AppL10nCs extends AppL10n {
   String get remindMorningTitle => 'Dobré ráno ☀️';
 
   @override
-  String get remindMorningBody =>
-      'Začněte den s penězi pod kontrolou. Zbylo něco ze včerejška?';
+  String get remindMorningBody => 'Začněte den s penězi pod kontrolou. Zbylo něco ze včerejška?';
 
   @override
   String get remindNoonTitle => 'Polední kontrola';
 
   @override
-  String get remindNoonBody =>
-      'Oběd, káva, jízdenka? Zapíšete to za pár vteřin.';
+  String get remindNoonBody => 'Oběd, káva, jízdenka? Zapíšete to za pár vteřin.';
 
   @override
   String get remindAfternoonTitle => 'Rychlé doplnění';
 
   @override
-  String get remindAfternoonBody =>
-      'Zapište, co jste zatím utratili, ať dnešní čísla sedí.';
+  String get remindAfternoonBody => 'Zapište, co jste zatím utratili, ať dnešní čísla sedí.';
 
   @override
   String get remindEveningTitle => 'Uzavíráme den';
 
   @override
-  String get remindEveningBody =>
-      'Dvě minuty teď a dnešní záznamy jsou kompletní.';
+  String get remindEveningBody => 'Dvě minuty teď a dnešní záznamy jsou kompletní.';
 
   @override
   String get happyWeekendTitle => 'Hezký víkend! 🎉';
 
   @override
-  String get happyWeekendBody =>
-      'Užijte si ho — a mějte oko i na víkendových výdajích.';
+  String get happyWeekendBody => 'Užijte si ho — a mějte oko i na víkendových výdajích.';
 
   @override
   String get dailyReminders => 'Denní připomínky výdajů';
 
   @override
-  String get dailyRemindersBody =>
-      'Jemná pošťouchnutí, ať jsou výdaje pořád aktuální';
+  String get dailyRemindersBody => 'Jemná pošťouchnutí, ať jsou výdaje pořád aktuální';
 
   @override
   String get weekendGreeting => 'Víkendový pozdrav';
@@ -1058,8 +1041,7 @@ class AppL10nCs extends AppL10n {
   String get generatedOn => 'Vytvořeno';
 
   @override
-  String get reportDisclaimer =>
-      'Vytvořil RainyPenny z vašich vlastních záznamů.';
+  String get reportDisclaimer => 'Vytvořil LAVIO z vašich vlastních záznamů.';
 
   @override
   String pageOf(int page, int total) {
@@ -1247,8 +1229,7 @@ class AppL10nCs extends AppL10n {
   String get getStarted => 'Pojďme na to';
 
   @override
-  String get acceptTerms =>
-      'Souhlasím s podmínkami použití a zásadami ochrany soukromí';
+  String get acceptTerms => 'Souhlasím s podmínkami použití a zásadami ochrany soukromí';
 
   @override
   String get acceptTermsRequired => 'Pro pokračování prosím souhlaste';
@@ -1273,12 +1254,10 @@ class AppL10nCs extends AppL10n {
       'Dlouhá věta, kterou si zapamatujete, je lepší než krátké heslo plné znaků. Vyhněte se čemukoli, co už používáte jinde.';
 
   @override
-  String get authInvalidCredentials =>
-      'Tento e-mail a heslo neodpovídají žádnému účtu';
+  String get authInvalidCredentials => 'Tento e-mail a heslo neodpovídají žádnému účtu';
 
   @override
-  String get authEmailNotConfirmed =>
-      'Před přihlášením potvrďte svou e-mailovou adresu';
+  String get authEmailNotConfirmed => 'Před přihlášením potvrďte svou e-mailovou adresu';
 
   @override
   String get authEmailAlreadyRegistered => 'Účet s tímto e-mailem už existuje';
@@ -1290,8 +1269,7 @@ class AppL10nCs extends AppL10n {
   String get authRateLimited => 'Příliš mnoho pokusů. Zkuste to za pár minut';
 
   @override
-  String get authNetworkError =>
-      'Žádné připojení. Zkontrolujte síť a zkuste to znovu';
+  String get authNetworkError => 'Žádné připojení. Zkontrolujte síť a zkuste to znovu';
 
   @override
   String get authGenericError => 'Něco se pokazilo. Zkuste to prosím znovu';
@@ -1339,8 +1317,7 @@ class AppL10nCs extends AppL10n {
   String get resetPasswordTitle => 'Zvolte nové heslo';
 
   @override
-  String get resetPasswordSubtitle =>
-      'Vyberte něco, co jste u tohoto účtu ještě nepoužili.';
+  String get resetPasswordSubtitle => 'Vyberte něco, co jste u tohoto účtu ještě nepoužili.';
 
   @override
   String get passwordChangedTitle => 'Heslo aktualizováno';
@@ -1360,7 +1337,7 @@ class AppL10nCs extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Zapisujte, co přijde a co odejde. RainyPenny z toho udělá obrázek, který se dá opravdu číst.';
+      'Zapisujte, co přijde a co odejde. LAVIO z toho udělá obrázek, který se dá opravdu číst.';
 
   @override
   String get welcomeBudgetTitle => 'Hranice, které vydrží';
@@ -1395,8 +1372,7 @@ class AppL10nCs extends AppL10n {
   String get onboardingNameBody => 'Použijeme to jen k pozdravu, nikde jinde.';
 
   @override
-  String get onboardingNameHint =>
-      'Křestní jméno stačí. Později ho můžete změnit.';
+  String get onboardingNameHint => 'Křestní jméno stačí. Později ho můžete změnit.';
 
   @override
   String get onboardingCurrencyTitle => 'Jakou měnu používáte?';
@@ -1423,8 +1399,7 @@ class AppL10nCs extends AppL10n {
       'Tiché pošťouchnutí ve správnou chvíli je to, co z toho udělá zvyk.';
 
   @override
-  String get onboardingNotifyReminders =>
-      'Jemná připomínka, ať si zapíšete, co jste utratili';
+  String get onboardingNotifyReminders => 'Jemná připomínka, ať si zapíšete, co jste utratili';
 
   @override
   String get onboardingNotifyBudget => 'Upozornění dřív, než dojde rozpočet';
@@ -1439,8 +1414,7 @@ class AppL10nCs extends AppL10n {
   String get onboardingNotifyDone => 'Nastavení oznámení uloženo';
 
   @override
-  String get onboardingNotifyLater =>
-      'Všechno tohle můžete kdykoli změnit v Nastavení.';
+  String get onboardingNotifyLater => 'Všechno tohle můžete kdykoli změnit v Nastavení.';
 
   @override
   String get onboardingReadyTitle => 'Vše je připraveno';
@@ -1461,8 +1435,7 @@ class AppL10nCs extends AppL10n {
   String get onboardingGoToApp => 'Vezměte mě do aplikace';
 
   @override
-  String get onboardingTourLater =>
-      'Teď ne? Průvodce zůstává v Nastavení, kdykoli budete chtít.';
+  String get onboardingTourLater => 'Teď ne? Průvodce zůstává v Nastavení, kdykoli budete chtít.';
 
   @override
   String get beginnersGuide => 'Průvodce pro začátečníky';
@@ -1488,16 +1461,14 @@ class AppL10nCs extends AppL10n {
       'Všechno začíná tady. Karta nahoře ukazuje, co vám zbývá; pod ní je, co v tomto období přišlo a odešlo, a dál vaše výdaje, rozpočty a cíle.';
 
   @override
-  String get guideDashboardTip1 =>
-      'Stáhněte obrazovku dolů, ať se všechno naráz obnoví.';
+  String get guideDashboardTip1 => 'Stáhněte obrazovku dolů, ať se všechno naráz obnoví.';
 
   @override
   String get guideDashboardTip2 =>
       'Klepněte na kartu příjmů nebo výdajů a skočíte rovnou na ten seznam.';
 
   @override
-  String get guideDashboardTip3 =>
-      'Kroužky i postřehy se obnoví ve chvíli, kdy něco zapíšete.';
+  String get guideDashboardTip3 => 'Kroužky i postřehy se obnoví ve chvíli, kdy něco zapíšete.';
 
   @override
   String get guideAddTitle => 'Zapisování peněz';
@@ -1507,16 +1478,13 @@ class AppL10nCs extends AppL10n {
       'Tlačítko uprostřed lišty je začátek všeho. Otevře krátkou nabídku: výdaj, příjem, dluh, rozpočet nebo spořicí cíl.';
 
   @override
-  String get guideAddTip1 =>
-      'Klepněte na prostřední tlačítko a zapište příjem nebo výdaj.';
+  String get guideAddTip1 => 'Klepněte na prostřední tlačítko a zapište příjem nebo výdaj.';
 
   @override
-  String get guideAddTip2 =>
-      'Podržte ho a přejdete rovnou k novému výdaji bez nabídky.';
+  String get guideAddTip2 => 'Podržte ho a přejdete rovnou k novému výdaji bez nabídky.';
 
   @override
-  String get guideAddTip3 =>
-      'Vždy vyberte kategorii — na ní stojí grafy i rozpočty.';
+  String get guideAddTip3 => 'Vždy vyberte kategorii — na ní stojí grafy i rozpočty.';
 
   @override
   String get guideCategoriesTitle => 'Kategorie';
@@ -1526,8 +1494,7 @@ class AppL10nCs extends AppL10n {
       'Kategorie seskupují výdaje. Ty vestavěné většině lidí stačí, ale můžete je přejmenovat nebo si přidat vlastní.';
 
   @override
-  String get guideCategoriesTip1 =>
-      'Nastavení, pak Správa kategorií — tam se upravuje i přidává.';
+  String get guideCategoriesTip1 => 'Nastavení, pak Správa kategorií — tam se upravuje i přidává.';
 
   @override
   String get guideCategoriesTip2 =>
@@ -1541,12 +1508,10 @@ class AppL10nCs extends AppL10n {
       'Rozpočet je měsíční strop pro jednu kategorii. Pruh se plní, jak utrácíte, a u hranice mění barvu, takže to zjistíte dřív, než ho překročíte.';
 
   @override
-  String get guideBudgetTip1 =>
-      'Začněte dvěma třemi kategoriemi, ne všemi najednou.';
+  String get guideBudgetTip1 => 'Začněte dvěma třemi kategoriemi, ne všemi najednou.';
 
   @override
-  String get guideBudgetTip2 =>
-      'Nastavte limit kousek nad své obvyklé výdaje a pak ho utahujte.';
+  String get guideBudgetTip2 => 'Nastavte limit kousek nad své obvyklé výdaje a pak ho utahujte.';
 
   @override
   String get guideBudgetTip3 =>
@@ -1560,12 +1525,10 @@ class AppL10nCs extends AppL10n {
       'Pojmenujte, na co spoříte, nastavte částku a datum, a aplikace spočítá, kolik je potřeba měsíčně odkládat.';
 
   @override
-  String get guideSavingsTip1 =>
-      'Pojmenovaný cíl se drží líp než mlhavý úmysl něco ušetřit.';
+  String get guideSavingsTip1 => 'Pojmenovaný cíl se drží líp než mlhavý úmysl něco ušetřit.';
 
   @override
-  String get guideSavingsTip2 =>
-      'Několik malých cílů se dotáhne do konce častěji než jeden velký.';
+  String get guideSavingsTip2 => 'Několik malých cílů se dotáhne do konce častěji než jeden velký.';
 
   @override
   String get guideLoansTitle => 'Dluhy a půjčky';
@@ -1575,8 +1538,7 @@ class AppL10nCs extends AppL10n {
       'Zapište, kolik dlužíte, kolik to stojí a kdy je další splátka. Všechno, co splácíte, je v jednom seznamu i se zbývající částkou.';
 
   @override
-  String get guideLoansTip1 =>
-      'Doplňte datum splatnosti a připomínky ho pohlídají za vás.';
+  String get guideLoansTip1 => 'Doplňte datum splatnosti a připomínky ho pohlídají za vás.';
 
   @override
   String get guideLoansTip2 =>
@@ -1590,8 +1552,7 @@ class AppL10nCs extends AppL10n {
       'Pohled do hloubky: příjmy proti výdajům, výdaje podle kategorií, jak držely rozpočty a jaká část příjmu vám zůstala.';
 
   @override
-  String get guideReportsTip1 =>
-      'Nahoře přepínáte mezi týdnem, měsícem a čtvrtletím.';
+  String get guideReportsTip1 => 'Nahoře přepínáte mezi týdnem, měsícem a čtvrtletím.';
 
   @override
   String get guideReportsTip2 =>
@@ -1609,8 +1570,7 @@ class AppL10nCs extends AppL10n {
       'Čtyřicet jazyků a celé rozvržení se u těch psaných zprava doleva zrcadlí.';
 
   @override
-  String get guideSettingsTip2 =>
-      'Vyberte, jaká upozornění chcete a v jakých hodinách smí chodit.';
+  String get guideSettingsTip2 => 'Vyberte, jaká upozornění chcete a v jakých hodinách smí chodit.';
 
   @override
   String get guideSettingsTip3 => 'Tiché hodiny zadrží všechno až do rána.';
@@ -1626,12 +1586,10 @@ class AppL10nCs extends AppL10n {
   String get guideHabitTip1 => 'Zapisujte výdaje hned, ne až na konci týdne.';
 
   @override
-  String get guideHabitTip2 =>
-      'Mrkněte na domovskou obrazovku jednou denně. Deset vteřin stačí.';
+  String get guideHabitTip2 => 'Mrkněte na domovskou obrazovku jednou denně. Deset vteřin stačí.';
 
   @override
-  String get guideHabitTip3 =>
-      'Tento průvodce zůstává v Nastavení — vraťte se kdykoli.';
+  String get guideHabitTip3 => 'Tento průvodce zůstává v Nastavení — vraťte se kdykoli.';
 
   @override
   String get appearance => 'Vzhled';
@@ -1692,8 +1650,7 @@ class AppL10nCs extends AppL10n {
   String get noLanguagesFound => 'Žádné jazyky nenalezeny';
 
   @override
-  String get noLanguagesFoundMessage =>
-      'Zkuste název anglicky nebo dvoupísmenný kód.';
+  String get noLanguagesFoundMessage => 'Zkuste název anglicky nebo dvoupísmenný kód.';
 
   @override
   String get rightToLeft => 'Zprava doleva';
@@ -1709,7 +1666,7 @@ class AppL10nCs extends AppL10n {
       'Projděte úvodní otázky ještě jednou. Nic z toho, co jste zapsali, se nesmaže.';
 
   @override
-  String get rateTitle => 'Líbí se vám RainyPenny?';
+  String get rateTitle => 'Líbí se vám LAVIO?';
 
   @override
   String get rateBody =>
@@ -1761,8 +1718,7 @@ class AppL10nCs extends AppL10n {
   }
 
   @override
-  String get paydayShortMonthNote =>
-      'V kratších měsících cyklus začíná místo toho posledním dnem.';
+  String get paydayShortMonthNote => 'V kratších měsících cyklus začíná místo toho posledním dnem.';
 
   @override
   String daysLeftInCycle(int count) {
@@ -1788,8 +1744,7 @@ class AppL10nCs extends AppL10n {
   String get dailyAllowance => 'Bezpečná denní útrata';
 
   @override
-  String get overspentNotice =>
-      'V tomto cyklu jste utratili více, než kolik přišlo.';
+  String get overspentNotice => 'V tomto cyklu jste utratili více, než kolik přišlo.';
 
   @override
   String get backToThisMonth => 'Zpět na tento měsíc';
@@ -1821,19 +1776,16 @@ class AppL10nCs extends AppL10n {
   String get healthNeedsWork => 'Vyžaduje zlepšení';
 
   @override
-  String get healthExcellentBody =>
-      'Dobře spoříte a držíte se v rámci svých rozpočtů.';
+  String get healthExcellentBody => 'Dobře spoříte a držíte se v rámci svých rozpočtů.';
 
   @override
   String get healthGoodBody => 'Vaše výdaje jsou za toto období podle plánu.';
 
   @override
-  String get healthFairBody =>
-      'Několik rozpočtů je napjatých. Pomohou malé změny.';
+  String get healthFairBody => 'Několik rozpočtů je napjatých. Pomohou malé změny.';
 
   @override
-  String get healthNeedsWorkBody =>
-      'Výdaje převyšují váš plán. Začněte největší kategorií.';
+  String get healthNeedsWorkBody => 'Výdaje převyšují váš plán. Začněte největší kategorií.';
 
   @override
   String get factorSavingsRate => 'Míra úspor';
@@ -1908,8 +1860,7 @@ class AppL10nCs extends AppL10n {
       'Pro změnu adresy, kterou používáte k přihlášení, kontaktujte podporu.';
 
   @override
-  String get pressBackAgainToExit =>
-      'Dalším stisknutím tlačítka Zpět aplikaci ukončíte';
+  String get pressBackAgainToExit => 'Dalším stisknutím tlačítka Zpět aplikaci ukončíte';
 
   @override
   String get categoryHousing => 'Bydlení';
@@ -1983,8 +1934,7 @@ class AppL10nCs extends AppL10n {
   String get debtNote => 'Note';
 
   @override
-  String get debtNoteHint =>
-      'Account it comes out of, who to contact, why you took it out';
+  String get debtNoteHint => 'Account it comes out of, who to contact, why you took it out';
 
   @override
   String get categoryBusiness => 'Business';
@@ -2160,8 +2110,7 @@ class AppL10nCs extends AppL10n {
       'Potřebujeme trochu finanční aktivity, abychom mohli vypočítat přesné skóre finanční kondice.';
 
   @override
-  String get emptyHealthAddTransactions =>
-      'Přidejte příjmové nebo výdajové transakce';
+  String get emptyHealthAddTransactions => 'Přidejte příjmové nebo výdajové transakce';
 
   @override
   String get emptyHealthSetBudgets => 'Nastavte své měsíční rozpočty';

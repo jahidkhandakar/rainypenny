@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/theme/app_accents.dart';
-import 'package:rainypenny/core/theme/app_colors.dart';
-import 'package:rainypenny/core/theme/app_theme.dart';
+import 'package:lavio/core/theme/app_accents.dart';
+import 'package:lavio/core/theme/app_colors.dart';
+import 'package:lavio/core/theme/app_theme.dart';
 
 /// The accent has to be more than a colour swap: it must reach the theme, it
 /// must stay readable in both brightnesses, and it must leave the financial
@@ -32,11 +32,7 @@ void main() {
       for (final accent in AppAccents.values) {
         for (final theme in [AppTheme.light(accent), AppTheme.dark(accent)]) {
           expect(theme.colorScheme.primary, accent.base, reason: accent.id);
-          expect(
-            theme.extension<AppPalette>()?.accent,
-            accent,
-            reason: accent.id,
-          );
+          expect(theme.extension<AppPalette>()?.accent, accent, reason: accent.id);
         }
       }
     });
@@ -84,11 +80,7 @@ void main() {
         for (final isDark in [false, true]) {
           final series = accent.chartSeries(isDark: isDark);
           expect(series.length, 6);
-          expect(
-            series.toSet().length,
-            6,
-            reason: '${accent.id} repeats a chart colour',
-          );
+          expect(series.toSet().length, 6, reason: '${accent.id} repeats a chart colour');
         }
       }
     });
@@ -102,9 +94,7 @@ void main() {
     expect(teal.lerp(crimson, 0.9).accent, AppAccents.crimson);
   });
 
-  testWidgets('money in and money out keep their colours under every accent', (
-    tester,
-  ) async {
+  testWidgets('money in and money out keep their colours under every accent', (tester) async {
     // The whole point of the semantic split: changing the accent is a matter
     // of taste and must never change what a figure means.
     final incomeByAccent = <Color>{};
@@ -125,22 +115,12 @@ void main() {
       );
     }
 
-    expect(
-      incomeByAccent.length,
-      1,
-      reason: 'income colour follows the accent',
-    );
-    expect(
-      expenseByAccent.length,
-      1,
-      reason: 'expense colour follows the accent',
-    );
+    expect(incomeByAccent.length, 1, reason: 'income colour follows the accent');
+    expect(expenseByAccent.length, 1, reason: 'expense colour follows the accent');
     expect(expenseByAccent.single, AppColors.secondary);
   });
 
-  testWidgets('a theme with no palette still resolves to the brand teal', (
-    tester,
-  ) async {
+  testWidgets('a theme with no palette still resolves to the brand teal', (tester) async {
     // Bare MaterialApps show up in tests, previews and the PDF preview.
     late AccentPalette resolved;
     await tester.pumpWidget(

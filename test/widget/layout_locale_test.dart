@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/app.dart';
-import 'package:rainypenny/core/di/providers.dart';
-import 'package:rainypenny/core/localization/app_locales.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/features/auth/data/repositories/mock_auth_repository.dart';
-import 'package:rainypenny/features/financial/data/datasources/mock_finance_data_source.dart';
+import 'package:lavio/app.dart';
+import 'package:lavio/core/di/providers.dart';
+import 'package:lavio/core/localization/app_locales.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/features/auth/data/repositories/mock_auth_repository.dart';
+import 'package:lavio/features/financial/data/datasources/mock_finance_data_source.dart';
 
 /// Boots the real app in every shipped language, at the size of an actual
 /// phone, and fails on any layout overflow.
@@ -41,7 +41,7 @@ void main() {
           MockAuthRepository(latency: Duration.zero, startSignedIn: true),
         ),
       ],
-      child: const RainyPennyApp(),
+      child: const LavioApp(),
     );
   }
 

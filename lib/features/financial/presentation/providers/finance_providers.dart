@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rainypenny/core/localization/generated/app_localizations.dart';
+import 'package:lavio/core/localization/generated/app_localizations.dart';
 
 import '../../../../core/di/providers.dart';
 import '../../../../core/settings/settings_providers.dart';

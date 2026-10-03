@@ -1,4 +1,4 @@
-/// The financial period RainyPenny is built around.
+/// The financial period LAVIO is built around.
 ///
 /// The app is not a rolling-30-day expense tracker; it is a salary assistant.
 /// Someone paid on the 25th thinks in terms of "the 25th until the 24th", and
@@ -10,11 +10,7 @@
 /// asked about. Nothing about a cycle is persisted: storing them would let the
 /// stored copy drift from the payday the user actually chose.
 class SalaryCycle {
-  const SalaryCycle({
-    required this.start,
-    required this.end,
-    required this.payday,
-  });
+  const SalaryCycle({required this.start, required this.end, required this.payday});
 
   /// The cycle that contains [date], for a user paid on [payday].
   ///
@@ -69,18 +65,11 @@ class SalaryCycle {
       _paydayIn(start.year, start.month + 1, payday);
 
   /// One second before midnight on the day preceding [nextStart].
-  static DateTime _endBefore(DateTime nextStart) =>
-      nextStart.subtract(const Duration(seconds: 1));
+  static DateTime _endBefore(DateTime nextStart) => nextStart.subtract(const Duration(seconds: 1));
 
-  SalaryCycle get next => SalaryCycle.forDate(
-    _nextAfter(start, payday),
-    payday,
-  );
+  SalaryCycle get next => SalaryCycle.forDate(_nextAfter(start, payday), payday);
 
-  SalaryCycle get previous => SalaryCycle.forDate(
-    start.subtract(const Duration(days: 1)),
-    payday,
-  );
+  SalaryCycle get previous => SalaryCycle.forDate(start.subtract(const Duration(days: 1)), payday);
 
   /// Steps [count] cycles forward, or backward when negative.
   SalaryCycle shifted(int count) {
@@ -104,8 +93,7 @@ class SalaryCycle {
   double progressAt(DateTime now) {
     if (now.isBefore(start)) return 0;
     if (now.isAfter(end)) return 1;
-    return (now.difference(start).inSeconds / end.difference(start).inSeconds)
-        .clamp(0.0, 1.0);
+    return (now.difference(start).inSeconds / end.difference(start).inSeconds).clamp(0.0, 1.0);
   }
 
   /// Days left before the next payday. Zero on the final day.
@@ -126,15 +114,13 @@ class SalaryCycle {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is SalaryCycle &&
-          other.start == start &&
-          other.end == end &&
-          other.payday == payday);
+      (other is SalaryCycle && other.start == start && other.end == end && other.payday == payday);
 
   @override
   int get hashCode => Object.hash(start, end, payday);
 
   @override
-  String toString() => 'SalaryCycle(${start.toIso8601String()} → '
+  String toString() =>
+      'SalaryCycle(${start.toIso8601String()} → '
       '${end.toIso8601String()}, payday $payday)';
 }

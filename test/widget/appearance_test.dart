@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/settings/settings_store.dart';
-import 'package:rainypenny/core/theme/app_accents.dart';
+import 'package:lavio/core/settings/settings_store.dart';
+import 'package:lavio/core/theme/app_accents.dart';
 
 import '../support/boot.dart';
 
@@ -42,9 +42,7 @@ void main() {
     expect(currentTheme(tester).colorScheme.primary, AppAccents.teal.base);
   });
 
-  testWidgets('picking an accent in Settings repaints the app immediately', (
-    tester,
-  ) async {
+  testWidgets('picking an accent in Settings repaints the app immediately', (tester) async {
     await boot(tester);
     await openSettings(tester);
 
@@ -74,9 +72,7 @@ void main() {
     expect(currentTheme(tester).colorScheme.primary, AppAccents.violet.base);
   });
 
-  testWidgets('dark mode can be chosen independently of the accent', (
-    tester,
-  ) async {
+  testWidgets('dark mode can be chosen independently of the accent', (tester) async {
     final store = InMemorySettingsStore();
     await boot(tester, store: store);
     await openAppearanceScreen(tester);
@@ -96,13 +92,10 @@ void main() {
     expect(store.read(SettingsKeys.accent), 'orange');
   });
 
-  testWidgets('an unknown stored accent falls back instead of crashing', (
-    tester,
-  ) async {
+  testWidgets('an unknown stored accent falls back instead of crashing', (tester) async {
     // A build that drops an accent must not brick the app for anyone who
     // happened to have it selected.
-    final store = InMemorySettingsStore()
-      ..write(SettingsKeys.accent, 'chartreuse');
+    final store = InMemorySettingsStore()..write(SettingsKeys.accent, 'chartreuse');
 
     await boot(tester, store: store);
 

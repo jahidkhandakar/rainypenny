@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,7 +10,7 @@ class AppL10nSr extends AppL10n {
   AppL10nSr([String locale = 'sr']) : super(locale);
 
   @override
-  String get appName => 'RainyPenny';
+  String get appName => 'LAVIO';
 
   @override
   String get appTagline => 'Штедња за кишне дане';
@@ -507,8 +508,7 @@ class AppL10nSr extends AppL10n {
   String get noGoalsTitle => 'Још нема циљева штедње';
 
   @override
-  String get noGoalsBody =>
-      'Поставите циљ и RainyPenny ће пратити ваш напредак.';
+  String get noGoalsBody => 'Поставите циљ и LAVIO ће пратити ваш напредак.';
 
   @override
   String get fundsAdded => 'Средства су уплаћена';
@@ -828,7 +828,7 @@ class AppL10nSr extends AppL10n {
 
   @override
   String get permissionRequiredBody =>
-      'Дозволите обавештења да би вас RainyPenny упозорио пре него што буџет или уплата измакну контроли.';
+      'Дозволите обавештења да би вас LAVIO упозорио пре него што буџет или уплата измакну контроли.';
 
   @override
   String get allowNotifications => 'Дозволи обавештења';
@@ -1052,7 +1052,7 @@ class AppL10nSr extends AppL10n {
 
   @override
   String get reportDisclaimer =>
-      'Направио RainyPenny на основу ваше сопствене евиденције.';
+      'Направио LAVIO на основу ваше сопствене евиденције.';
 
   @override
   String pageOf(int page, int total) {
@@ -1352,7 +1352,7 @@ class AppL10nSr extends AppL10n {
 
   @override
   String get welcomeTrackBody =>
-      'Бележите шта улази и шта излази. RainyPenny то претвара у слику коју заиста можете да прочитате.';
+      'Бележите шта улази и шта излази. LAVIO то претвара у слику коју заиста можете да прочитате.';
 
   @override
   String get welcomeBudgetTitle => 'Лимити који држе';
@@ -1703,7 +1703,7 @@ class AppL10nSr extends AppL10n {
       'Прођите поново кроз почетна питања. Ништа од онога што сте забележили неће бити обрисано.';
 
   @override
-  String get rateTitle => 'Свиђа вам се RainyPenny?';
+  String get rateTitle => 'Свиђа вам се LAVIO?';
 
   @override
   String get rateBody =>

@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/core/localization/app_locales.dart';
-import 'package:rainypenny/core/localization/generated/app_localizations.dart';
+import 'package:lavio/core/localization/app_locales.dart';
+import 'package:lavio/core/localization/generated/app_localizations.dart';
 
 /// Guards the language list against the three ways it can quietly break:
 /// a locale with no translations, a locale Flutter itself cannot localise,
@@ -14,10 +14,7 @@ void main() {
     test('has an ARB file of its own', () {
       final missing = [
         for (final locale in AppLocales.values)
-          if (!File(
-            'lib/core/localization/l10n/app_${locale.code}.arb',
-          ).existsSync())
-            locale.code,
+          if (!File('lib/core/localization/l10n/app_${locale.code}.arb').existsSync()) locale.code,
       ];
       expect(
         missing,
@@ -43,14 +40,9 @@ void main() {
       // know throws at startup rather than falling back.
       final missing = [
         for (final locale in AppLocales.values)
-          if (!GlobalMaterialLocalizations.delegate.isSupported(locale.locale))
-            locale.code,
+          if (!GlobalMaterialLocalizations.delegate.isSupported(locale.locale)) locale.code,
       ];
-      expect(
-        missing,
-        isEmpty,
-        reason: 'unsupported by GlobalMaterialLocalizations',
-      );
+      expect(missing, isEmpty, reason: 'unsupported by GlobalMaterialLocalizations');
     });
   });
 
@@ -68,10 +60,7 @@ void main() {
       // entry up into `values`, which would leave it hidden from the picker.
       final translated = [
         for (final locale in AppLocales.pending)
-          if (File(
-            'lib/core/localization/l10n/app_${locale.code}.arb',
-          ).existsSync())
-            locale.code,
+          if (File('lib/core/localization/l10n/app_${locale.code}.arb').existsSync()) locale.code,
       ];
       expect(
         translated,
@@ -113,17 +102,12 @@ void main() {
 
   test('search finds a language by native name, English name and code', () {
     for (final query in ['deutsch', 'german', 'de']) {
-      expect(
-        AppLocales.search(query).map((l) => l.code),
-        contains('de'),
-        reason: query,
-      );
+      expect(AppLocales.search(query).map((l) => l.code), contains('de'), reason: query);
     }
     expect(AppLocales.search('klingon'), isEmpty);
   });
 }
 
 /// Locales compare by identity, not value, once a script code is involved.
-String _key(Locale locale) => locale.scriptCode == null
-    ? locale.languageCode
-    : '${locale.languageCode}_${locale.scriptCode}';
+String _key(Locale locale) =>
+    locale.scriptCode == null ? locale.languageCode : '${locale.languageCode}_${locale.scriptCode}';

@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/data/models/finance_mappers.dart';
-import 'package:rainypenny/features/financial/domain/entities/category.dart';
-import 'package:rainypenny/features/financial/domain/entities/loan.dart';
-import 'package:rainypenny/features/financial/domain/entities/savings_goal.dart';
-import 'package:rainypenny/features/financial/domain/entities/transaction.dart';
+import 'package:lavio/features/financial/data/models/finance_mappers.dart';
+import 'package:lavio/features/financial/domain/entities/category.dart';
+import 'package:lavio/features/financial/domain/entities/loan.dart';
+import 'package:lavio/features/financial/domain/entities/savings_goal.dart';
+import 'package:lavio/features/financial/domain/entities/transaction.dart';
 
 /// The mappers are the seam between PostgreSQL rows and the domain model, so
 /// they are worth pinning down before the backend is live.
@@ -32,11 +32,7 @@ void main() {
 
   group('TransactionMapper', () {
     final categories = {
-      'food': const Category(
-        id: 'food',
-        name: 'Food & Dining',
-        icon: CategoryIcon.food,
-      ),
+      'food': const Category(id: 'food', name: 'Food & Dining', icon: CategoryIcon.food),
     };
 
     test('maps an expense row', () {

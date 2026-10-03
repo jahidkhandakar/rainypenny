@@ -1,4 +1,4 @@
-package com.lumiosoft.rainypenny
+package com.lumiosoft.lavio
 
 import io.flutter.embedding.android.FlutterActivity
 

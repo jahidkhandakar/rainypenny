@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/financial/domain/entities/salary_cycle.dart';
+import 'package:lavio/features/financial/domain/entities/salary_cycle.dart';
 
 /// The salary cycle is the period every other figure in the app is scoped to,
 /// so its edges have to be exact: an off-by-one here moves real money between

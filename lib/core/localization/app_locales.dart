@@ -34,15 +34,14 @@ class AppLocale {
 
   /// Matched against the search box: native name, English name and code
   /// together, so `german`, `deutsch` and `de` all find the same row.
-  String get searchIndex =>
-      '$nativeName $englishName $code ${regionHint ?? ''}'.toLowerCase();
+  String get searchIndex => '$nativeName $englishName $code ${regionHint ?? ''}'.toLowerCase();
 
   /// Arabic, Urdu, Persian and Hebrew. The app mirrors its whole layout for
   /// these rather than shipping separate screens.
   static const _rtlLanguages = {'ar', 'ur', 'fa', 'he'};
 }
 
-/// Every language RainyPenny ships with.
+/// Every language LAVIO ships with.
 ///
 /// Ordered by how many people can read it, not alphabetically: the picker is
 /// long enough that the first screenful should cover most users, and search
@@ -54,11 +53,7 @@ class AppLocale {
 /// rather than falling back.
 abstract final class AppLocales {
   static const values = <AppLocale>[
-    AppLocale(
-      locale: Locale('en'),
-      englishName: 'English',
-      nativeName: 'English',
-    ),
+    AppLocale(locale: Locale('en'), englishName: 'English', nativeName: 'English'),
     // Simplified is the bare 'zh': Flutter's generator requires a base locale
     // as the fallback for any scripted one, and CLDR already treats plain
     // Chinese as Simplified. Writing it as zh_Hans as well would mean
@@ -76,158 +71,42 @@ abstract final class AppLocales {
       regionHint: 'Traditional',
     ),
     AppLocale(locale: Locale('hi'), englishName: 'Hindi', nativeName: 'हिन्दी'),
-    AppLocale(
-      locale: Locale('es'),
-      englishName: 'Spanish',
-      nativeName: 'Español',
-    ),
-    AppLocale(
-      locale: Locale('ar'),
-      englishName: 'Arabic',
-      nativeName: 'العربية',
-    ),
-    AppLocale(
-      locale: Locale('fr'),
-      englishName: 'French',
-      nativeName: 'Français',
-    ),
-    AppLocale(
-      locale: Locale('bn'),
-      englishName: 'Bengali',
-      nativeName: 'বাংলা',
-    ),
-    AppLocale(
-      locale: Locale('pt'),
-      englishName: 'Portuguese',
-      nativeName: 'Português',
-    ),
-    AppLocale(
-      locale: Locale('ru'),
-      englishName: 'Russian',
-      nativeName: 'Русский',
-    ),
+    AppLocale(locale: Locale('es'), englishName: 'Spanish', nativeName: 'Español'),
+    AppLocale(locale: Locale('ar'), englishName: 'Arabic', nativeName: 'العربية'),
+    AppLocale(locale: Locale('fr'), englishName: 'French', nativeName: 'Français'),
+    AppLocale(locale: Locale('bn'), englishName: 'Bengali', nativeName: 'বাংলা'),
+    AppLocale(locale: Locale('pt'), englishName: 'Portuguese', nativeName: 'Português'),
+    AppLocale(locale: Locale('ru'), englishName: 'Russian', nativeName: 'Русский'),
     AppLocale(locale: Locale('ur'), englishName: 'Urdu', nativeName: 'اردو'),
-    AppLocale(
-      locale: Locale('id'),
-      englishName: 'Indonesian',
-      nativeName: 'Bahasa Indonesia',
-    ),
-    AppLocale(
-      locale: Locale('de'),
-      englishName: 'German',
-      nativeName: 'Deutsch',
-    ),
+    AppLocale(locale: Locale('id'), englishName: 'Indonesian', nativeName: 'Bahasa Indonesia'),
+    AppLocale(locale: Locale('de'), englishName: 'German', nativeName: 'Deutsch'),
     AppLocale(locale: Locale('ja'), englishName: 'Japanese', nativeName: '日本語'),
-    AppLocale(
-      locale: Locale('sw'),
-      englishName: 'Swahili',
-      nativeName: 'Kiswahili',
-    ),
-    AppLocale(
-      locale: Locale('mr'),
-      englishName: 'Marathi',
-      nativeName: 'मराठी',
-    ),
-    AppLocale(
-      locale: Locale('te'),
-      englishName: 'Telugu',
-      nativeName: 'తెలుగు',
-    ),
-    AppLocale(
-      locale: Locale('tr'),
-      englishName: 'Turkish',
-      nativeName: 'Türkçe',
-    ),
+    AppLocale(locale: Locale('sw'), englishName: 'Swahili', nativeName: 'Kiswahili'),
+    AppLocale(locale: Locale('mr'), englishName: 'Marathi', nativeName: 'मराठी'),
+    AppLocale(locale: Locale('te'), englishName: 'Telugu', nativeName: 'తెలుగు'),
+    AppLocale(locale: Locale('tr'), englishName: 'Turkish', nativeName: 'Türkçe'),
     AppLocale(locale: Locale('ta'), englishName: 'Tamil', nativeName: 'தமிழ்'),
-    AppLocale(
-      locale: Locale('vi'),
-      englishName: 'Vietnamese',
-      nativeName: 'Tiếng Việt',
-    ),
+    AppLocale(locale: Locale('vi'), englishName: 'Vietnamese', nativeName: 'Tiếng Việt'),
     AppLocale(locale: Locale('ko'), englishName: 'Korean', nativeName: '한국어'),
-    AppLocale(
-      locale: Locale('fa'),
-      englishName: 'Persian',
-      nativeName: 'فارسی',
-    ),
-    AppLocale(
-      locale: Locale('it'),
-      englishName: 'Italian',
-      nativeName: 'Italiano',
-    ),
+    AppLocale(locale: Locale('fa'), englishName: 'Persian', nativeName: 'فارسی'),
+    AppLocale(locale: Locale('it'), englishName: 'Italian', nativeName: 'Italiano'),
     AppLocale(locale: Locale('th'), englishName: 'Thai', nativeName: 'ไทย'),
-    AppLocale(
-      locale: Locale('pa'),
-      englishName: 'Punjabi',
-      nativeName: 'ਪੰਜਾਬੀ',
-    ),
-    AppLocale(
-      locale: Locale('pl'),
-      englishName: 'Polish',
-      nativeName: 'Polski',
-    ),
-    AppLocale(
-      locale: Locale('uk'),
-      englishName: 'Ukrainian',
-      nativeName: 'Українська',
-    ),
-    AppLocale(
-      locale: Locale('ms'),
-      englishName: 'Malay',
-      nativeName: 'Bahasa Melayu',
-    ),
-    AppLocale(
-      locale: Locale('fil'),
-      englishName: 'Filipino',
-      nativeName: 'Filipino',
-    ),
-    AppLocale(
-      locale: Locale('nl'),
-      englishName: 'Dutch',
-      nativeName: 'Nederlands',
-    ),
-    AppLocale(
-      locale: Locale('ro'),
-      englishName: 'Romanian',
-      nativeName: 'Română',
-    ),
+    AppLocale(locale: Locale('pa'), englishName: 'Punjabi', nativeName: 'ਪੰਜਾਬੀ'),
+    AppLocale(locale: Locale('pl'), englishName: 'Polish', nativeName: 'Polski'),
+    AppLocale(locale: Locale('uk'), englishName: 'Ukrainian', nativeName: 'Українська'),
+    AppLocale(locale: Locale('ms'), englishName: 'Malay', nativeName: 'Bahasa Melayu'),
+    AppLocale(locale: Locale('fil'), englishName: 'Filipino', nativeName: 'Filipino'),
+    AppLocale(locale: Locale('nl'), englishName: 'Dutch', nativeName: 'Nederlands'),
+    AppLocale(locale: Locale('ro'), englishName: 'Romanian', nativeName: 'Română'),
     AppLocale(locale: Locale('he'), englishName: 'Hebrew', nativeName: 'עברית'),
-    AppLocale(
-      locale: Locale('el'),
-      englishName: 'Greek',
-      nativeName: 'Ελληνικά',
-    ),
-    AppLocale(
-      locale: Locale('hu'),
-      englishName: 'Hungarian',
-      nativeName: 'Magyar',
-    ),
-    AppLocale(
-      locale: Locale('cs'),
-      englishName: 'Czech',
-      nativeName: 'Čeština',
-    ),
-    AppLocale(
-      locale: Locale('sv'),
-      englishName: 'Swedish',
-      nativeName: 'Svenska',
-    ),
-    AppLocale(
-      locale: Locale('sr'),
-      englishName: 'Serbian',
-      nativeName: 'Српски',
-    ),
+    AppLocale(locale: Locale('el'), englishName: 'Greek', nativeName: 'Ελληνικά'),
+    AppLocale(locale: Locale('hu'), englishName: 'Hungarian', nativeName: 'Magyar'),
+    AppLocale(locale: Locale('cs'), englishName: 'Czech', nativeName: 'Čeština'),
+    AppLocale(locale: Locale('sv'), englishName: 'Swedish', nativeName: 'Svenska'),
+    AppLocale(locale: Locale('sr'), englishName: 'Serbian', nativeName: 'Српски'),
     AppLocale(locale: Locale('da'), englishName: 'Danish', nativeName: 'Dansk'),
-    AppLocale(
-      locale: Locale('nb'),
-      englishName: 'Norwegian',
-      nativeName: 'Norsk bokmål',
-    ),
-    AppLocale(
-      locale: Locale('fi'),
-      englishName: 'Finnish',
-      nativeName: 'Suomi',
-    ),
+    AppLocale(locale: Locale('nb'), englishName: 'Norwegian', nativeName: 'Norsk bokmål'),
+    AppLocale(locale: Locale('fi'), englishName: 'Finnish', nativeName: 'Suomi'),
   ];
 
   /// Languages the app knows about but does not yet have translations for.
@@ -270,21 +149,14 @@ abstract final class AppLocales {
     if (exact != null) return exact;
 
     final language = code.split(RegExp('[_-]')).first;
-    return values.firstWhere(
-      (l) => l.locale.languageCode == language,
-      orElse: () => fallback,
-    );
+    return values.firstWhere((l) => l.locale.languageCode == language, orElse: () => fallback);
   }
 
   static AppLocale byLocale(Locale locale) => byCode(
-    locale.scriptCode == null
-        ? locale.languageCode
-        : '${locale.languageCode}_${locale.scriptCode}',
+    locale.scriptCode == null ? locale.languageCode : '${locale.languageCode}_${locale.scriptCode}',
   );
 
-  static List<AppLocale> get suggested => [
-    for (final code in suggestedCodes) byCode(code),
-  ];
+  static List<AppLocale> get suggested => [for (final code in suggestedCodes) byCode(code)];
 
   /// Case-insensitive search over native name, English name and code.
   static List<AppLocale> search(String query) {

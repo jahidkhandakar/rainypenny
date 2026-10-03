@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rainypenny/features/auth/domain/entities/password_strength.dart';
+import 'package:lavio/features/auth/domain/entities/password_strength.dart';
 
 void main() {
   group('scorePassword', () {
