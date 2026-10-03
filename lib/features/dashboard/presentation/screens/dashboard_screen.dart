@@ -272,6 +272,7 @@ class _RecentTransactionsSection extends ConsumerWidget {
         ),
         AppCard(
           padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm, vertical: AppSpacing.xs),
+          onTap: () => context.go(AppRoutes.transactions),
           child: transactions.when(
             skipLoadingOnReload: true,
             data: (list) {
@@ -335,6 +336,8 @@ class _BudgetSection extends ConsumerWidget {
                   title: l10n.budget,
                   message: l10n.noTransactionsBody,
                   compact: true,
+                  actionLabel: l10n.newBudget,
+                  onAction: () => startAddBudget(context, ref),
                 ),
               );
             }
@@ -394,12 +397,14 @@ class _SavingsSection extends ConsumerWidget {
         goals.when(
           data: (list) {
             if (list.isEmpty) {
-              return EmptyState(
-                icon: Icons.savings_rounded,
-                title: l10n.noGoalsTitle,
-                message: l10n.noGoalsBody,
-                actionLabel: l10n.newGoal,
-                onAction: () => showGoalEditor(context),
+              return AppCard(
+                child: EmptyState(
+                  icon: Icons.savings_rounded,
+                  title: l10n.noGoalsTitle,
+                  message: l10n.noGoalsBody,
+                  actionLabel: l10n.newGoal,
+                  onAction: () => showGoalEditor(context),
+                ),
               );
             }
 
